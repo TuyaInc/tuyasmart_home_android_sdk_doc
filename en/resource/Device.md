@@ -9,7 +9,6 @@ Tuya Smart provides a lot of interfaces for developers to realize the acquisitio
 **[Notes]**
 
 - For the device control, the data must be initialized first; namely, TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail(ITuyaHomeResultCallback callback) must be invoked first.
-- Introduction to schema dp data [see related concepts of function points for details][3]
 
 ![pastedGraphic.png](images/pastedGraphic-1064908.png)
 
@@ -357,7 +356,7 @@ mDevice.requestWifiSignal(new WifiSignalListener() {
 |Field | Type | Description |
 | :--:| :--:| :--:|
 | iconUrl |String|device icon|
-IsOnline | Boolean | Whether the device is online (LAN or Cloud Online)|
+|IsOnline | Boolean | Whether the device is online (LAN or Cloud Online)|
 | name |String|device's name|
 | schema |String|Device Control Data Point Type Information |
 | productId |String|Product ID, the same product ID, Schema information consistent|
@@ -367,8 +366,8 @@ IsOnline | Boolean | Whether the device is online (LAN or Cloud Online)|
 |bv | String | Gateway Universal Firmware Version |
 |schemaMap | Map | Schema Cached Data |
 |dps | Map | Device Data |
-|isShare | Boolean | a shared device |?
-|virtual | Boolean | is it a virtual device |?
+|isShare | Boolean | a shared device |
+|virtual | Boolean | is it a virtual device |
 |lon, lat | String | Longitude and Latitude Information |
 |IsLocalOnline | Boolean | Device LAN Online Status |
 |nodeId | String | Device for gateway and subdevice type, which is an attribute of the subdevice and identifies its short address ID which one gateway have a unique nodeId for each subdevice|

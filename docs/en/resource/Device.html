@@ -582,7 +582,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="Gateway.html">
+        <li class="chapter " data-level="1.15" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -647,7 +660,6 @@
 <p><strong>[Notes]</strong></p>
 <ul>
 <li>For the device control, the data must be initialized first; namely, TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail(ITuyaHomeResultCallback callback) must be invoked first.</li>
-<li>Introduction to schema dp data [see related concepts of function points for details][3]</li>
 </ul>
 <p><img src="images/pastedGraphic-1064908.png" alt="pastedGraphic.png"></p>
 <p><strong>Device Operation Control</strong></p>
@@ -941,26 +953,98 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
 <td style="text-align:center">String</td>
 <td style="text-align:center">device icon</td>
 </tr>
+<tr>
+<td style="text-align:center">IsOnline</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">Whether the device is online (LAN or Cloud Online)</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">device&apos;s name</td>
+</tr>
+<tr>
+<td style="text-align:center">schema</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Device Control Data Point Type Information</td>
+</tr>
+<tr>
+<td style="text-align:center">productId</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Product ID, the same product ID, Schema information consistent</td>
+</tr>
+<tr>
+<td style="text-align:center">supportGroup</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">whether the device support groups? If not, you can go to the open platform to turn on this feature</td>
+</tr>
+<tr>
+<td style="text-align:center">Time</td>
+<td style="text-align:center">Long</td>
+<td style="text-align:center">Device Activation Time</td>
+</tr>
+<tr>
+<td style="text-align:center">pv</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Gateway Protocol Version</td>
+</tr>
+<tr>
+<td style="text-align:center">bv</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Gateway Universal Firmware Version</td>
+</tr>
+<tr>
+<td style="text-align:center">schemaMap</td>
+<td style="text-align:center">Map</td>
+<td style="text-align:center">Schema Cached Data</td>
+</tr>
+<tr>
+<td style="text-align:center">dps</td>
+<td style="text-align:center">Map</td>
+<td style="text-align:center">Device Data</td>
+</tr>
+<tr>
+<td style="text-align:center">isShare</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">a shared device</td>
+</tr>
+<tr>
+<td style="text-align:center">virtual</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">is it a virtual device</td>
+</tr>
+<tr>
+<td style="text-align:center">lon, lat</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Longitude and Latitude Information</td>
+</tr>
+<tr>
+<td style="text-align:center">IsLocalOnline</td>
+<td style="text-align:center">Boolean</td>
+<td style="text-align:center">Device LAN Online Status</td>
+</tr>
+<tr>
+<td style="text-align:center">nodeId</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Device for gateway and subdevice type, which is an attribute of the subdevice and identifies its short address ID which one gateway have a unique nodeId for each subdevice</td>
+</tr>
+<tr>
+<td style="text-align:center">timezoneId</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Device time zone</td>
+</tr>
+<tr>
+<td style="text-align:center">category</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Device Type</td>
+</tr>
+<tr>
+<td style="text-align:center">MeshId</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Device for gateway and subdevice type, which is an attribute of subdevice and identifies its gateway ID</td>
+</tr>
 </tbody>
 </table>
-<p>IsOnline | Boolean | Whether the device is online (LAN or Cloud Online)|
-| name |String|device&apos;s name|
-| schema |String|Device Control Data Point Type Information |
-| productId |String|Product ID, the same product ID, Schema information consistent|
-| supportGroup |Boolean|whether the device support groups? If not, you can go to the open platform to turn on this feature|
-|Time | Long | Device Activation Time |
-|pv | String | Gateway Protocol Version |
-|bv | String | Gateway Universal Firmware Version |
-|schemaMap | Map | Schema Cached Data |
-|dps | Map | Device Data |
-|isShare | Boolean | a shared device |?
-|virtual | Boolean | is it a virtual device |?
-|lon, lat | String | Longitude and Latitude Information |
-|IsLocalOnline | Boolean | Device LAN Online Status |
-|nodeId | String | Device for gateway and subdevice type, which is an attribute of the subdevice and identifies its short address ID which one gateway have a unique nodeId for each subdevice|
-|timezoneId | String | Device time zone |
-| category | String | Device Type |
-|MeshId | String | Device for gateway and subdevice type, which is an attribute of subdevice and identifies its gateway ID |</p>
 
                                 
                                 </section>
@@ -1000,7 +1084,7 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.8.1","depth":2,"next":{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},"previous":{"title":"Device Control","level":"1.8","depth":1,"ref":"","articles":[{"title":"Device Control","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"Data Model","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Device.md","mtime":"2018-12-26T03:42:27.932Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T05:52:34.853Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.8.1","depth":2,"next":{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},"previous":{"title":"Device Control","level":"1.8","depth":1,"ref":"","articles":[{"title":"Device Control","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"Data Model","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Device.md","mtime":"2018-12-26T13:19:28.311Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1015,10 +1099,6 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

@@ -62,7 +62,7 @@
 
     
     
-    <link rel="prev" href="Feedback.html" />
+    <link rel="prev" href="Push.html" />
     
 
     </head>
@@ -582,7 +582,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.15" data-path="Gateway.html">
+        <li class="chapter " data-level="1.15" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -644,41 +657,41 @@
 <p>The gateway class encapsulates the operations of the ZigBee gateway, including control, querying sub-devices and monitoring sub-device status. The gateway can be initialized via TuyaHomeSdk.newGatewayInstance().</p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ITuyaGateway</span> <span class="token punctuation">{</span>
      <span class="token comment">/**
-      \* Send command
+      * Send command
       * 
-      \* @param dps
-      \* @param callback
+      * @param dps
+      * @param callback
       */</span>
      <span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span>String nodeId<span class="token punctuation">,</span> String dps<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment">/**
-      \* Broadcast control device
+      * Broadcast control device
       *
-      \* @param dps
-      \* @param callback
+      * @param dps
+      * @param callback
       */</span>
      <span class="token keyword">void</span> <span class="token function">broadcastDps</span><span class="token punctuation">(</span>String dps<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
      <span class="token comment">/**
-      \* Multicast control device
+      * Multicast control device
       *
-      \* @param localId
-      \* @param dps
-      \* @param callback
+      * @param localId
+      * @param dps
+      * @param callback
       */</span>
      <span class="token keyword">void</span> <span class="token function">multicastDps</span><span class="token punctuation">(</span>String localId<span class="token punctuation">,</span> String dps<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
      <span class="token comment">/**
-      \* Obtain the sub-device of a gateway from cloud
+      * Obtain the sub-device of a gateway from cloud
       *
-      \* @param callback
+      * @param callback
       */</span>
      <span class="token keyword">void</span> <span class="token function">getSubDevList</span><span class="token punctuation">(</span>ITuyaDataCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
      <span class="token comment">/**
-      \* Change of registered sub-device information 
+      * Change of registered sub-device information 
       *
-      \* @param listener
+      * @param listener
       */</span>
      <span class="token keyword">void</span> <span class="token function">registerSubDevListener</span><span class="token punctuation">(</span>ISubDevListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
      <span class="token comment">/**
-     \* Change of logout sub-device information
+     * Change of logout sub-device information
       */</span>
      <span class="token keyword">void</span> <span class="token function">unRegisterSubDevListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -747,7 +760,7 @@
 
             
                 
-                <a href="Feedback.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Feedback">
+                <a href="Push.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Integrate Push">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -759,7 +772,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Gateway","level":"1.15","depth":1,"previous":{"title":"Feedback","level":"1.14","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Gateway.md","mtime":"2018-12-26T03:23:22.676Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T05:52:34.853Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Gateway","level":"1.16","depth":1,"previous":{"title":"Integrate Push","level":"1.15","depth":1,"path":"resource/Push.md","ref":"./resource/Push.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Gateway.md","mtime":"2018-12-26T13:27:32.189Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -774,10 +787,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

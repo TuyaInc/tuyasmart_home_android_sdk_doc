@@ -9,4 +9,5 @@
 - email ——Email
 - uid ——Unique user identifier
 - Sid —— Login generates the unique identification id.
-- headPic —— Directory of user picture.
+- headPic —— Url of the User Account Picture.
+

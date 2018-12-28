@@ -17,29 +17,28 @@ Add one timer.
 **[Method Invocation]**
 
 ```java
-\*  Add a single dp point of timer (default: true); the sub-device is supported.
-\*  @param taskName     name of timer task
-\*  @param loops        number of loops: "0000000”; 0 denotes off, and 1 denotes on. Each 0 from the left to the right denotes: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday, respectively.
-\*  @param devId        device Id or group Id
-
-\*  @param dpId  			id of dp point
-
-\*  @param time         time clock in a timer task
-
-\*  @param callback     callback
-
+/**
+*  Add a single dp point of timer (default: true); the sub-device is supported.
+*  @param taskName     name of timer task
+*  @param loops        number of loops: "0000000”; 0 denotes off, and 1 denotes on. Each 0 from the left to the right denotes: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday, respectively.
+*  @param devId        device Id or group Id
+*  @param dpId  			id of dp point
+*  @param time         time clock in a timer task
+*  @param callback     callback
+*/
 void addTimerWithTask(String taskName, String loops, String devId, String dpId, String time, final IResultStatusCallback callback);
 
 
 /**
- \* Add a timer          the new interface of a device is supported.
- \* Meanings of other parameter values are the same as above.
- \* @param dps    key-value pair of dp point; key: dpId; value: dpValue (only a single dp point is supported)
- \* @param callback
+ * Add a timer          the new interface of a device is supported.
+ * Meanings of other parameter values are the same as above.
+ * @param dps    key-value pair of dp point; key: dpId; value: dpValue (only a single dp point is supported)
+ * @param callback
  */
 void addTimerWithTask(String taskName, String devId, String loops, Map<String, Object> dps, String time, final IResultStatusCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().addTimerWithTask("task01", "1111111",mDevId,  "1", "14:29", new IResultStatusCallback() {
     @Override
@@ -60,15 +59,18 @@ TuyaHomeSdk.getTimerManagerInstance().addTimerWithTask("task01", "1111111",mDevI
 Obtain states of all timer tasks of a certain device.
 
 **[Method Invocation]**
-```java
-\* Obtain states of all timer tasks of a certain device.
-*
-\* @param devId    device Id
-\* @param 	 callback
 
+```java
+/**
+* Obtain states of all timer tasks of a certain device.
+*
+* @param devId    device Id
+* @param 	 callback
+*/
 void getTimerTaskStatusWithDeviceId(String devId, final IGetDeviceTimerStatusCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().getTimerTaskStatusWithDeviceId(mDevId, new IGetDeviceTimerStatusCallback() {
     @Override
@@ -89,15 +91,19 @@ TuyaHomeSdk.getTimerManagerInstance().getTimerTaskStatusWithDeviceId(mDevId, new
 Control switch status of all timers in a timer task.
 
 **[Method Invocation]**
+
 ```java
-\* Control switch status of all timers in a timer task.
-\* @param taskName	name of timer task
-\* @param devId    device Id or group I
-\* @param status   status value 1: on; 0: off
-\* @param 	 callback
+/**
+* Control switch status of all timers in a timer task.
+* @param taskName	name of timer task
+* @param devId    device Id or group I
+* @param status   status value 1: on; 0: off
+* @param 	 callback
+*/
 void updateTimerTaskStatusWithTask(String taskName, String devId, int status, final IResultStatusCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().updateTimerTaskStatusWithTask(taskName, mDevId, 1, new IResultStatusCallback() {
     @Override
@@ -118,17 +124,21 @@ TuyaHomeSdk.getTimerManagerInstance().updateTimerTaskStatusWithTask(taskName, mD
 Control switch status of a timer.
 
 **[Method Invocation]**
-```java
-\* Control switch status of a timer.
-\* @param taskName	name of timer task
 
-\* @param devId    device Id or group Id
-\* @param timerId  time clock Id
-\* @param isOpen   switch
-\* @param 	 callback
+```java
+/**
+* Control switch status of a timer.
+* @param taskName	name of timer task
+
+* @param devId    device Id or group Id
+* @param timerId  time clock Id
+* @param isOpen   switch
+* @param 	 callback
+**/
 void updateTimerStatusWithTask(String taskName, String devId, String timerId, boolean isOpen, IResultStatusCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().updateTimerStatusWithTask(taskName, mDevId, timeId, false, new IResultStatusCallback() {
         @Override
@@ -149,15 +159,19 @@ TuyaHomeSdk.getTimerManagerInstance().updateTimerStatusWithTask(taskName, mDevId
 Removing timer
 
 **[Method Invocation]**
+
 ```java
-\* Remove timer
-\* @param taskName	name of timer task
-\* @param devId    device Id or group Id
-\* @param timerId  time clock Id
-\* @param 	 callback
+/**
+* Remove timer
+* @param taskName	name of timer task
+* @param devId    device Id or group Id
+* @param timerId  time clock Id
+* @param 	 callback
+*/
 void removeTimerWithTask(String taskName, String devId, String timerId, IResultStatusCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().removeTimerWithTask(taskName, mDevId, timeId, new IResultStatusCallback() {
     @Override
@@ -180,49 +194,53 @@ TuyaHomeSdk.getTimerManagerInstance().removeTimerWithTask(taskName, mDevId, time
 Updating timer status (this interface can modify all attributes of a timer)
 
 **[Method Invocation]**
+
 ```java
-\* Update timer status.
-\* @param taskName	name of timer task
-\* @param loops    number of loops (daily and weekly transmission: ”1111111”)
-\* @param devId    device Id or group Id
-\* @param timerId  time clock Id
-\* @param dpId     id of dp point
-\* @param time     timing time
-\* @param isOpen	  switching on or off 
-\* @param 	 callback
+/**
+* Update timer status.
+* @param taskName	name of timer task
+* @param loops    number of loops (daily and weekly transmission: ”1111111”)
+* @param devId    device Id or group Id
+* @param timerId  time clock Id
+* @param dpId     id of dp point
+* @param time     timing time
+* @param isOpen	  switching on or off 
+* @param 	 callback
+*/
 void updateTimerWithTask(String taskName, String loops, String devId, String timerId, String dpId, String time, boolean isOpen, final IResultStatusCallback callback);
 
 
 
 /**
 
- \* Updating timer status
+ * Updating timer status
 
- \* @param taskName	name of timer task
+ * @param taskName	name of timer task
 
- \* @param devId    device id or group Id
+ * @param devId    device id or group Id
 
- \* @param timerId  time clock Id
+ * @param timerId  time clock Id
 
- \* @param loops    number of loops
+ * @param loops    number of loops
 
- \* @param instruct	dp point data for timing; only a single dp point is supported (json format); for example:   [{
+ * @param instruct	dp point data for timing; only a single dp point is supported (json format); for example:   [{
 
- \*                 "time": "20:00",
+ *                 "time": "20:00",
 
- \*                 "dps": {
+ *                 "dps": {
 
- \*                 "1": true
+ *                 "1": true
 
- \*                 }]
+ *                 }]
 
- \* @param callback
+ * @param callback
 
  */
 
 void updateTimerWithTask(String taskName, String loops, String devId, String timerId, String instruct, final IResultStatusCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().updateTimerWithTask(taskName,"0011001", mDevId, timeId,  "[{"time": "20:00", "dps": { "1": true},{"time": "22:00","dps": {"2": true}]",  new IResultStatusCallback() {
     @Override
@@ -242,14 +260,18 @@ TuyaHomeSdk.getTimerManagerInstance().updateTimerWithTask(taskName,"0011001", mD
 Obtain all timers of timer task.
 
 **[Method Invocation]**
+
 ```java
-\* Obtaining all timers of timer task.
-\* @param taskName	name of timer task
-\* @param devId    device Id or group Id
-\* @param 	 callback
+/**
+* Obtaining all timers of timer task.
+* @param taskName	name of timer task
+* @param devId    device Id or group Id
+* @param 	 callback
+*/
 void getTimerWithTask(String taskName, String devId, final IGetTimerWithTaskCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().getTimerWithTask(taskName, mDevId, new IGetTimerWithTaskCallback() {
     @Override
@@ -269,13 +291,17 @@ TuyaHomeSdk.getTimerManagerInstance().getTimerWithTask(taskName, mDevId, new IGe
 Obtain all timers of all timer tasks for a device.
 
 **[Method Invocation]**
+
 ```java
-\* Obtaining all timers of all timer tasks for a device.
-\* @param devId    device Id or group Id
-\* @param 	 callback
+/**
+* Obtaining all timers of all timer tasks for a device.
+* @param devId    device Id or group Id
+* @param 	 callback
+*/
 void getAllTimerWithDeviceId(String devId, final IGetAllTimerWithDevIdCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getTimerManagerInstance().getAllTimerWithDeviceId(mDevId, new IGetAllTimerWithDevIdCallback() {
     @Override

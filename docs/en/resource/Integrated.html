@@ -584,7 +584,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="Gateway.html">
+        <li class="chapter " data-level="1.15" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -649,7 +662,7 @@
 <h3 id="2-introduce-the-aar-package"><a name="2-introduce-the-aar-package" class="plugin-anchor" href="#2-introduce-the-aar-package"><i class="fa fa-link" aria-hidden="true"></i></a>(2) Introduce the aar Package</h3>
 <p><img src="images/android_import_aar.jpg" alt="pastedGraphic.png"></p>
 <h3 id="3-configure-the-buildgradle"><a name="3-configure-the-buildgradle" class="plugin-anchor" href="#3-configure-the-buildgradle"><i class="fa fa-link" aria-hidden="true"></i></a>(3) Configure the build.gradle</h3>
-<p>Add the following codes in the build.gradle file.</p>
+<p>Add the following codes to the build.gradle file.</p>
 <pre class="language-"><code class="lang-groovy">defaultConfig <span class="token punctuation">{</span>
     ndk <span class="token punctuation">{</span>
         abiFilters <span class="token string">&quot;armeabi-v7a&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;x86&quot;</span>
@@ -797,7 +810,7 @@ Add necessary service and receiver.
 </code></pre>
 <p><strong>Note:</strong></p>
 <p>The appId and appSecret need to be configured in the AndroidManifest.xml file or the build environment or the codes. </p>
-<h3 id="2-lou-out-of-the-tuya-smart-cloud-connection"><a name="2-lou-out-of-the-tuya-smart-cloud-connection" class="plugin-anchor" href="#2-lou-out-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a>(2) Lou out of the Tuya Smart Cloud connection</h3>
+<h3 id="2-logout-of-the-tuya-smart-cloud-connection"><a name="2-logout-of-the-tuya-smart-cloud-connection" class="plugin-anchor" href="#2-logout-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a>(2) Logout of the Tuya Smart Cloud connection</h3>
 <p>The following interface needs to be invoked to log out of the App. </p>
 <pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -870,7 +883,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.4","depth":1,"next":{"title":"User Management","level":"1.5","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"Migration of a Series of SDK Accounts","level":"1.5.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.5.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.5.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User uid Login System","level":"1.5.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.5.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Lougout, Disable account","level":"1.5.6","depth":2,"path":"resource/User_Logout.md","ref":"./resource/User_Logout.md","articles":[]},{"title":"Data Model","level":"1.5.7","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]}]},"previous":{"title":"Preparation for integration","level":"1.3","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Integrated.md","mtime":"2018-12-22T07:35:54.498Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T05:52:34.853Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.4","depth":1,"next":{"title":"User Management","level":"1.5","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"Migration of a Series of SDK Accounts","level":"1.5.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.5.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.5.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User uid Login System","level":"1.5.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.5.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Lougout, Disable account","level":"1.5.6","depth":2,"path":"resource/User_Logout.md","ref":"./resource/User_Logout.md","articles":[]},{"title":"Data Model","level":"1.5.7","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]}]},"previous":{"title":"Preparation for integration","level":"1.3","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Integrated.md","mtime":"2018-12-26T12:06:04.908Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -885,10 +898,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

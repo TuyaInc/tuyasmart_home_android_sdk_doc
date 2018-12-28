@@ -12,16 +12,12 @@ User uid registration
 
 ```java
 
-// User uid registration
-
-\* @param countryCode Country code
-
-\* @param uid         User uid
-
-\* @param password    Password
-
-\* @param callback    uid uid registration callback interface. 
-
+/** User uid registration
+* @param countryCode Country code
+* @param uid         User uid
+* @param password    Password
+* @param callback    uid uid registration callback interface. 
+**/
 TuyaHomeSdk.getUserInstance().registerAccountWithUid(String countryCode, String uid, String password, IRegisterCallback callback);
 ```
 **[Example Codes]**

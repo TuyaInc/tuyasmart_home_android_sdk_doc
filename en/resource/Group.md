@@ -105,16 +105,20 @@ TuyaHomeSdk.newGroupInstance(groupId).renameGroup(titleName, new IResultCallback
 #### Instantiation
 
 ```java
+/**
 * Instantiation of groups
 * @param groupId	group Id
+*/
 ITuyaGroup mITuyaGroup= TuyaHomeSdk.newGroupInstance(groupId);
 ```
 
 #### Group callback event
 
 ```java
+/**
 * Registering group callback event
 * @param listener callback
+*/
 mITuyaGroup.registerGroupListener(new IGroupListener() {
             @Override
             public void onDpUpdate(long l, String s) {
@@ -139,9 +143,11 @@ mITuyaGroup.unRegisterGroupListener();
 #### Sending group control command
 
 ```java
+/**
 * Sending group control command
 * @param command	control command
 * @param listener callback
+*/
 mTuyaGroup.publishDps(String command,IControlCallback listener);
 ```
 Example Codes
@@ -164,13 +170,16 @@ For obtaining the group data locally, the data cannot be obtained before the ini
 
 
 ```java
+/**
 * Obtaining group data bean locally
 * @param groupId    group Id
 * @return GroupBean  class of group data
+*/
 TuyaHomeDataManager.getInstance().getGroupBean(long groupId);
-
+/**
 * Obtaining a list of group data locally
 * @return  List<GroupBean>  group list
+*/
 TuyaHomeDataManager.getInstance().getGroupDeviceList(long groupId);
 ```
 #### Group data destruction

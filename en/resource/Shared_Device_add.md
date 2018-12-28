@@ -9,21 +9,19 @@ Sharing multiple devices with a specified user will overwrite all his devices pr
 **[Method Invocation]**
 
 ```java
-
+/**
 @param homeId	home id
 @param countryCode	area code of mobile phone number (for example, the area code in China is “86”)
 @param userAccount	account number
 @param ShareIdBean	content to be shared (currently, the device or mesh is supported)
 @param autoSharing	does it automatically share new devices? (if true, the device added by the sharer in the future will be automatically shared to the specified user (mesh does not support this option for the time being)
-
-
+**/
 void addShare(long homeId, String countryCode, String userAccount, ShareIdBean bean, boolean autoSharing, ITuyaResultCallback<SharedUserInfoBean> callback);
 ```
 
 **[Example Codes]**
 
 ```java
-
 TuyaHomeSdk.getDeviceShareInstance.addShare(homeId, countryCode, userAccount, bean, true, new ITuyaResultCallback<SharedUserInfoBean>() {
             @Override
             public void onSuccess(SharedUserInfoBean bean) {
@@ -42,11 +40,12 @@ Sharing multiple devices with a specified user will result in that the device to
 
 **[Method Invocation]**
 ```java
+/**
 @param homeId		home id of the sharer
 @param countryCode	area code of mobile phone number (for example, the area code in China is “86”)
 @param phoneNumber   mobile phone number
 @param devIds 	list of device ids of the sharer
-
+**/
 TuyaHomeSdk.getDeviceShareInstance().addShareWithHomeId(long homeId,String countryCode, String userAccount, List<String> devIds, ITuyaResultCallback<SharedUserInfoBean> callback);
 ```
 
@@ -78,8 +77,7 @@ void addShareWithMemberId(long memberId,List<String> devIds,IResultCallback call
 Batch add device sharing by MemberId
 
 ```java
-
-    /**
+	/**
      * Batch add device sharing by MemberId(supplementing)
      *
      * @param memberId Share the target user id
@@ -235,8 +233,9 @@ The sharer obtains the list of shared users of a certain device.
 
 **[Method Invocation]**
 ```java
-@param devId	device Id
-
+/**
+* @param devId	device Id
+**/
 void queryDevShareUserList(String devId, ITuyaResultCallback<List<SharedUserInfoBean>> callback);
 ```
 **[Example Codes]**
@@ -261,8 +260,9 @@ The receiver queries the sharer of a specified device.
 
 **[Method Invocation]**
 ```java
-@param devId	device Id
-
+/**
+* @param devId	device Id
+*/
 void queryShareDevFromInfo(String devId, ITuyaResultCallback<SharedUserInfoBean> callback);
 ```
 **[Example Codes]**
@@ -288,8 +288,9 @@ The sharer obtains all shared device information shared to this relationship use
 
 **[Method Invocation]**
 ```java
-@param memberId	user member Id (obtained from SharedUserInfoBean)
-
+/**
+* @param memberId	user member Id (obtained from SharedUserInfoBean)
+*/
 void getUserShareInfo(long memberId, ITuyaResultCallback<ShareSentUserDetailBean> callback);
 ```
 
@@ -319,8 +320,9 @@ The receiver obtains information about receipt of all shared devices of this rel
 
 **[Method Invocation]**
 ```java
-@param memberId 	user member Id (obtained from SharedUserInfoBean)
-
+/**
+* @param memberId 	user member Id (obtained from SharedUserInfoBean)
+*/
 void getReceivedShareInfo(long memberId, ITuyaResultCallback<ShareReceivedUserDetailBean> callback);
 ```
 **[Example Codes]**
@@ -333,6 +335,5 @@ TuyaHomeSdk.getDeviceShareInstance().getReceivedShareInfo(memberId, new ITuyaRes
     @Override
     public void onSuccess(ShareReceivedUserDetailBean result) {
     }
-
 });
 ```

@@ -1,4 +1,4 @@
-## Upload the user account picture
+## Upload the User Account Picture
 
 **[Description]**
 

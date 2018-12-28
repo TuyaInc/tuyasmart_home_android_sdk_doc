@@ -12,7 +12,7 @@ Build your project in the Android Studio.
 
 ### (3) Configure the build.gradle
 
-Add the following codes in the build.gradle file.
+Add the following codes to the build.gradle file.
 
 ```groovy
 defaultConfig {
@@ -185,7 +185,7 @@ public class TuyaSmartApp extends Application {
 
 The appId and appSecret need to be configured in the AndroidManifest.xml file or the build environment or the codes. 
 
-### (2) Lou out of the Tuya Smart Cloud connection
+### (2) Logout of the Tuya Smart Cloud connection
 
 The following interface needs to be invoked to log out of the App. 
 ```java

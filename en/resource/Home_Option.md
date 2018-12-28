@@ -136,7 +136,7 @@ public interface ITuyaHomeStatusListener {
 void unRegisterHomeStatusListener(ITuyaHomeStatusListener listener);
 ```
 
-## Query the Same Products of User and the List of Devices that Support Groups.
+## Query the Device List of the Same Product and Supports Group Under the User.
 ```java
 void queryDeviceListToAddGroup(String productId, final ITuyaResultCallback<List<GroupDeviceBean>> callback);
 ```

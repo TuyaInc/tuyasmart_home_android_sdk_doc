@@ -4,12 +4,12 @@
 
 ##### 【描述】
 
-涂鸦智能提供了丰富的接口供开发者实现设备信息的获取和管理能力(移除等)。设备相关的返回数据都采用异步消息的方式通知接受者.
+涂鸦智能提供了丰富的接口供开发者实现设备信息的获取和管理能力(移除等)。设备相关的返回数据都采用异步消息的方式通知接受者。
 
 ##### 【注意事项】
 
 - 设备控制必须先初始化数据，即先调用TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail(ITuyaHomeResultCallback callback)
-- schema dp数据相关介绍[详见功能点相关概念][3]
+
 
 ------
 
@@ -63,8 +63,8 @@ mDevice.publishDps(dps, new IControlCallback() {
 public void onError(String code, String error) {
 //错误码11001 
 //有下面几种情况：
-//1、类型不对导致，例如，string类型格式，发成boolean类型数据
-//2、只读类型dp数据不能下发，参考SchemaBean getMode "ro"是只读类型，
+//1、类型不对导致，例如，string类型格式，发成boolean类型数据。
+//2、只读类型dp数据不能下发，参考SchemaBean getMode "ro"是只读类型。
 //3、raw格式发送数据格式不是16进制字符串。
 }
 @Override
@@ -159,7 +159,7 @@ public class LampBean {
 /**
  * 设备对象。该设备的所有dp变化都会通过callback返回。
  *
- * 初始化设备之前，请确保已经初始化连接服务端，否则无法获取到服务端返回信息
+ * 初始化设备之前，请确保已经初始化连接服务端，否则无法获取到服务端返回信息。
  */
 mDevice = new TuyaHomeSdk.newDeviceInstance(mDevId);
 

@@ -584,7 +584,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="Gateway.html">
+        <li class="chapter " data-level="1.15" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -647,19 +660,17 @@
 <p><strong>[Description]</strong></p>
 <p>Sharing multiple devices with a specified user will overwrite all his devices previously shared.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">
-<span class="token annotation punctuation">@param</span> homeId    home id
-<span class="token annotation punctuation">@param</span> countryCode    area code of mobile phone number <span class="token punctuation">(</span><span class="token keyword">for</span> example<span class="token punctuation">,</span> the area code in China is &#x201C;<span class="token number">86</span>&#x201D;<span class="token punctuation">)</span>
-<span class="token annotation punctuation">@param</span> userAccount    account number
-<span class="token annotation punctuation">@param</span> ShareIdBean    content to be shared <span class="token punctuation">(</span>currently<span class="token punctuation">,</span> the device or mesh is supported<span class="token punctuation">)</span>
-<span class="token annotation punctuation">@param</span> autoSharing    does it automatically share <span class="token keyword">new</span> <span class="token class-name">devices</span><span class="token operator">?</span> <span class="token punctuation">(</span><span class="token keyword">if</span> <span class="token boolean">true</span><span class="token punctuation">,</span> the device added by the sharer in the future will be automatically shared to the specified user <span class="token punctuation">(</span>mesh does not support <span class="token keyword">this</span> option <span class="token keyword">for</span> the time being<span class="token punctuation">)</span>
-
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+@param homeId    home id
+@param countryCode    area code of mobile phone number (for example, the area code in China is &#x201C;86&#x201D;)
+@param userAccount    account number
+@param ShareIdBean    content to be shared (currently, the device or mesh is supported)
+@param autoSharing    does it automatically share new devices? (if true, the device added by the sharer in the future will be automatically shared to the specified user (mesh does not support this option for the time being)
+**/</span>
 <span class="token keyword">void</span> <span class="token function">addShare</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String countryCode<span class="token punctuation">,</span> String userAccount<span class="token punctuation">,</span> ShareIdBean bean<span class="token punctuation">,</span> <span class="token keyword">boolean</span> autoSharing<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
-<pre class="language-"><code class="lang-java">
-TuyaHomeSdk<span class="token punctuation">.</span>getDeviceShareInstance<span class="token punctuation">.</span><span class="token function">addShare</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> countryCode<span class="token punctuation">,</span> userAccount<span class="token punctuation">,</span> bean<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span>getDeviceShareInstance<span class="token punctuation">.</span><span class="token function">addShare</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> countryCode<span class="token punctuation">,</span> userAccount<span class="token punctuation">,</span> bean<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
             <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>SharedUserInfoBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
@@ -672,11 +683,12 @@ TuyaHomeSdk<span class="token punctuation">.</span>getDeviceShareInstance<span c
 <p><strong>[Description]</strong></p>
 <p>Sharing multiple devices with a specified user will result in that the device to be shared will be added to the list of all his shared devices.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@param</span> homeId        home id of the sharer
-<span class="token annotation punctuation">@param</span> countryCode    area code of mobile phone number <span class="token punctuation">(</span><span class="token keyword">for</span> example<span class="token punctuation">,</span> the area code in China is &#x201C;<span class="token number">86</span>&#x201D;<span class="token punctuation">)</span>
-<span class="token annotation punctuation">@param</span> phoneNumber   mobile phone number
-<span class="token annotation punctuation">@param</span> devIds     list of device ids of the sharer
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+@param homeId        home id of the sharer
+@param countryCode    area code of mobile phone number (for example, the area code in China is &#x201C;86&#x201D;)
+@param phoneNumber   mobile phone number
+@param devIds     list of device ids of the sharer
+**/</span>
 TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDeviceShareInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addShareWithHomeId</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span>String countryCode<span class="token punctuation">,</span> String userAccount<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> devIds<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -700,8 +712,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <h2 id="3-batch-add-device-sharingsupplementing"><a name="3-batch-add-device-sharingsupplementing" class="plugin-anchor" href="#3-batch-add-device-sharingsupplementing"><i class="fa fa-link" aria-hidden="true"></i></a>(3) Batch add device sharing(supplementing)</h2>
 <p><strong>[Description]</strong></p>
 <p>Batch add device sharing by MemberId</p>
-<pre class="language-"><code class="lang-java">
-    <span class="token comment">/**
+<pre class="language-"><code class="lang-java">    <span class="token comment">/**
      * Batch add device sharing by MemberId(supplementing)
      *
      * @param memberId Share the target user id
@@ -814,8 +825,9 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <p><strong>[Description]</strong></p>
 <p>The sharer obtains the list of shared users of a certain device.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@param</span> devId    device Id
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* @param devId    device Id
+**/</span>
 <span class="token keyword">void</span> <span class="token function">queryDevShareUserList</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -835,8 +847,9 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <p><strong>[Description]</strong></p>
 <p>The receiver queries the sharer of a specified device.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@param</span> devId    device Id
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* @param devId    device Id
+*/</span>
 <span class="token keyword">void</span> <span class="token function">queryShareDevFromInfo</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -857,8 +870,9 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <p><strong>[Description]</strong></p>
 <p>The sharer obtains all shared device information shared to this relationship user via memberId.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@param</span> memberId    user member Id <span class="token punctuation">(</span>obtained from SharedUserInfoBean<span class="token punctuation">)</span>
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* @param memberId    user member Id (obtained from SharedUserInfoBean)
+*/</span>
 <span class="token keyword">void</span> <span class="token function">getUserShareInfo</span><span class="token punctuation">(</span><span class="token keyword">long</span> memberId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>ShareSentUserDetailBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -881,8 +895,9 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <p><strong>[Description]</strong></p>
 <p>The receiver obtains information about receipt of all shared devices of this relationship user via memberId.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@param</span> memberId     user member Id <span class="token punctuation">(</span>obtained from SharedUserInfoBean<span class="token punctuation">)</span>
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* @param memberId     user member Id (obtained from SharedUserInfoBean)
+*/</span>
 <span class="token keyword">void</span> <span class="token function">getReceivedShareInfo</span><span class="token punctuation">(</span><span class="token keyword">long</span> memberId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>ShareReceivedUserDetailBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -894,7 +909,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>ShareReceivedUserDetailBean result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
-
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
@@ -940,7 +954,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Add for Sharing","level":"1.9.1","depth":2,"next":{"title":"Removing Sharing","level":"1.9.2","depth":2,"path":"resource/Shared_Device_Remove.md","ref":"./resource/Shared_Device_Remove.md","articles":[]},"previous":{"title":"Shared devices","level":"1.9","depth":1,"path":"resource/Shared.md","ref":"./resource/Shared.md","articles":[{"title":"Add for Sharing","level":"1.9.1","depth":2,"path":"resource/Shared_Device_add.md","ref":"./resource/Shared_Device_add.md","articles":[]},{"title":"Removing Sharing","level":"1.9.2","depth":2,"path":"resource/Shared_Device_Remove.md","ref":"./resource/Shared_Device_Remove.md","articles":[]},{"title":"Modifying Remark Name","level":"1.9.3","depth":2,"path":"resource/Shared_Device_Rename.md","ref":"./resource/Shared_Device_Rename.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Shared_Device_add.md","mtime":"2018-12-22T06:04:24.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T05:52:34.853Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Add for Sharing","level":"1.9.1","depth":2,"next":{"title":"Removing Sharing","level":"1.9.2","depth":2,"path":"resource/Shared_Device_Remove.md","ref":"./resource/Shared_Device_Remove.md","articles":[]},"previous":{"title":"Shared devices","level":"1.9","depth":1,"path":"resource/Shared.md","ref":"./resource/Shared.md","articles":[{"title":"Add for Sharing","level":"1.9.1","depth":2,"path":"resource/Shared_Device_add.md","ref":"./resource/Shared_Device_add.md","articles":[]},{"title":"Removing Sharing","level":"1.9.2","depth":2,"path":"resource/Shared_Device_Remove.md","ref":"./resource/Shared_Device_Remove.md","articles":[]},{"title":"Modifying Remark Name","level":"1.9.3","depth":2,"path":"resource/Shared_Device_Rename.md","ref":"./resource/Shared_Device_Rename.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Shared_Device_add.md","mtime":"2018-12-26T13:22:19.598Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -955,10 +969,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

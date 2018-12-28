@@ -33,7 +33,9 @@ UpgradeInfoBean returns information about the firmware upgrade, including:
     private long lastUpgradeTime;// last upgrade time (unit: ms)
 ```
 **[Example Codes]**
+
 ```java
+
 iTuyaOta.getOtaInfo(new IGetOtaInfoCallback() {
     @Override
     public void onSuccess(List<UpgradeInfoBean> list) {
@@ -54,6 +56,7 @@ iTuyaOta.getOtaInfo(new IGetOtaInfoCallback() {
 Before ota, registration of listener is required to obtain the upgrade status in real time.
 
 **[Method Invocation]**
+
 ```java
 
 // otaType: type of device to be upgraded (identical to the type field of ‘UpgradeInfoBean’)
@@ -80,9 +83,11 @@ iTuyaOta.setOtaListener(new IOtaListener() {
 Invoke to start the upgrade, and the registered ota listener after the invoking will return the upgrade status to facilitate the developer building UI.
 
 **[Method Invocation]**
+
 ```java
 iTuyaOta.startOta();
 ```
+
 **Destroy**
 
 **[Description]**

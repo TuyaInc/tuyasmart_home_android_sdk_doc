@@ -584,7 +584,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="Gateway.html">
+        <li class="chapter " data-level="1.15" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -651,25 +664,23 @@
 <p><strong>[Description]</strong></p>
 <p>Add one timer.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span>  Add a single dp point of timer <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> the sub<span class="token operator">-</span>device is supported<span class="token punctuation">.</span>
-\<span class="token operator">*</span>  <span class="token annotation punctuation">@param</span> taskName     name of timer task
-\<span class="token operator">*</span>  <span class="token annotation punctuation">@param</span> loops        number of loops<span class="token operator">:</span> &quot;<span class="token number">0000000</span>&#x201D;<span class="token punctuation">;</span> <span class="token number">0</span> denotes off<span class="token punctuation">,</span> and <span class="token number">1</span> denotes on<span class="token punctuation">.</span> Each <span class="token number">0</span> from the left to the right denotes<span class="token operator">:</span> Sunday<span class="token punctuation">,</span> Monday<span class="token punctuation">,</span> Tuesday<span class="token punctuation">,</span> Wednesday<span class="token punctuation">,</span> Thursday<span class="token punctuation">,</span> Friday and Saturday<span class="token punctuation">,</span> respectively<span class="token punctuation">.</span>
-\<span class="token operator">*</span>  <span class="token annotation punctuation">@param</span> devId        device Id or group Id
-
-\<span class="token operator">*</span>  <span class="token annotation punctuation">@param</span> dpId              id of dp point
-
-\<span class="token operator">*</span>  <span class="token annotation punctuation">@param</span> time         time clock in a timer task
-
-\<span class="token operator">*</span>  <span class="token annotation punctuation">@param</span> callback     callback
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+*  Add a single dp point of timer (default: true); the sub-device is supported.
+*  @param taskName     name of timer task
+*  @param loops        number of loops: &quot;0000000&#x201D;; 0 denotes off, and 1 denotes on. Each 0 from the left to the right denotes: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday, respectively.
+*  @param devId        device Id or group Id
+*  @param dpId              id of dp point
+*  @param time         time clock in a timer task
+*  @param callback     callback
+*/</span>
 <span class="token keyword">void</span> <span class="token function">addTimerWithTask</span><span class="token punctuation">(</span>String taskName<span class="token punctuation">,</span> String loops<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String dpId<span class="token punctuation">,</span> String time<span class="token punctuation">,</span> <span class="token keyword">final</span> IResultStatusCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
 <span class="token comment">/**
- \* Add a timer          the new interface of a device is supported.
- \* Meanings of other parameter values are the same as above.
- \* @param dps    key-value pair of dp point; key: dpId; value: dpValue (only a single dp point is supported)
- \* @param callback
+ * Add a timer          the new interface of a device is supported.
+ * Meanings of other parameter values are the same as above.
+ * @param dps    key-value pair of dp point; key: dpId; value: dpValue (only a single dp point is supported)
+ * @param callback
  */</span>
 <span class="token keyword">void</span> <span class="token function">addTimerWithTask</span><span class="token punctuation">(</span>String taskName<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String loops<span class="token punctuation">,</span> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> dps<span class="token punctuation">,</span> String time<span class="token punctuation">,</span> <span class="token keyword">final</span> IResultStatusCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -690,11 +701,12 @@
 <p><strong>[Description]</strong></p>
 <p>Obtain states of all timer tasks of a certain device.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span> Obtain states of all timer tasks of a certain device<span class="token punctuation">.</span>
-<span class="token operator">*</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId    device Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span>      callback
-
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Obtain states of all timer tasks of a certain device.
+*
+* @param devId    device Id
+* @param      callback
+*/</span>
 <span class="token keyword">void</span> <span class="token function">getTimerTaskStatusWithDeviceId</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> <span class="token keyword">final</span> IGetDeviceTimerStatusCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -714,11 +726,13 @@
 <p><strong>[Description]</strong></p>
 <p>Control switch status of all timers in a timer task.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span> Control <span class="token keyword">switch</span> status of all timers in a timer task<span class="token punctuation">.</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> taskName    name of timer task
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId    device Id or group I
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> status   status value <span class="token number">1</span><span class="token operator">:</span> on<span class="token punctuation">;</span> <span class="token number">0</span><span class="token operator">:</span> off
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span>      callback
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Control switch status of all timers in a timer task.
+* @param taskName    name of timer task
+* @param devId    device Id or group I
+* @param status   status value 1: on; 0: off
+* @param      callback
+*/</span>
 <span class="token keyword">void</span> <span class="token function">updateTimerTaskStatusWithTask</span><span class="token punctuation">(</span>String taskName<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> <span class="token keyword">int</span> status<span class="token punctuation">,</span> <span class="token keyword">final</span> IResultStatusCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -738,13 +752,15 @@
 <p><strong>[Description]</strong></p>
 <p>Control switch status of a timer.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span> Control <span class="token keyword">switch</span> status of a timer<span class="token punctuation">.</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> taskName    name of timer task
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Control switch status of a timer.
+* @param taskName    name of timer task
 
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId    device Id or group Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> timerId  time clock Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> isOpen   <span class="token keyword">switch</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span>      callback
+* @param devId    device Id or group Id
+* @param timerId  time clock Id
+* @param isOpen   switch
+* @param      callback
+**/</span>
 <span class="token keyword">void</span> <span class="token function">updateTimerStatusWithTask</span><span class="token punctuation">(</span>String taskName<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String timerId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isOpen<span class="token punctuation">,</span> IResultStatusCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -764,11 +780,13 @@
 <p><strong>[Description]</strong></p>
 <p>Removing timer</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span> Remove timer
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> taskName    name of timer task
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId    device Id or group Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> timerId  time clock Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span>      callback
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Remove timer
+* @param taskName    name of timer task
+* @param devId    device Id or group Id
+* @param timerId  time clock Id
+* @param      callback
+*/</span>
 <span class="token keyword">void</span> <span class="token function">removeTimerWithTask</span><span class="token punctuation">(</span>String taskName<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String timerId<span class="token punctuation">,</span> IResultStatusCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -790,42 +808,44 @@
 <p><strong>[Description]</strong></p>
 <p>Updating timer status (this interface can modify all attributes of a timer)</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span> Update timer status<span class="token punctuation">.</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> taskName    name of timer task
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> loops    number of loops <span class="token punctuation">(</span>daily and weekly transmission<span class="token operator">:</span> &#x201D;<span class="token number">1111111</span>&#x201D;<span class="token punctuation">)</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId    device Id or group Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> timerId  time clock Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> dpId     id of dp point
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> time     timing time
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> isOpen      switching on or off 
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span>      callback
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Update timer status.
+* @param taskName    name of timer task
+* @param loops    number of loops (daily and weekly transmission: &#x201D;1111111&#x201D;)
+* @param devId    device Id or group Id
+* @param timerId  time clock Id
+* @param dpId     id of dp point
+* @param time     timing time
+* @param isOpen      switching on or off 
+* @param      callback
+*/</span>
 <span class="token keyword">void</span> <span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span>String taskName<span class="token punctuation">,</span> String loops<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String timerId<span class="token punctuation">,</span> String dpId<span class="token punctuation">,</span> String time<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isOpen<span class="token punctuation">,</span> <span class="token keyword">final</span> IResultStatusCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
 
 <span class="token comment">/**
 
- \* Updating timer status
+ * Updating timer status
 
- \* @param taskName    name of timer task
+ * @param taskName    name of timer task
 
- \* @param devId    device id or group Id
+ * @param devId    device id or group Id
 
- \* @param timerId  time clock Id
+ * @param timerId  time clock Id
 
- \* @param loops    number of loops
+ * @param loops    number of loops
 
- \* @param instruct    dp point data for timing; only a single dp point is supported (json format); for example:   [{
+ * @param instruct    dp point data for timing; only a single dp point is supported (json format); for example:   [{
 
- \*                 &quot;time&quot;: &quot;20:00&quot;,
+ *                 &quot;time&quot;: &quot;20:00&quot;,
 
- \*                 &quot;dps&quot;: {
+ *                 &quot;dps&quot;: {
 
- \*                 &quot;1&quot;: true
+ *                 &quot;1&quot;: true
 
- \*                 }]
+ *                 }]
 
- \* @param callback
+ * @param callback
 
  */</span>
 
@@ -847,10 +867,12 @@
 <p><strong>[Description]</strong></p>
 <p>Obtain all timers of timer task.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span> Obtaining all timers of timer task<span class="token punctuation">.</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> taskName    name of timer task
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId    device Id or group Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span>      callback
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Obtaining all timers of timer task.
+* @param taskName    name of timer task
+* @param devId    device Id or group Id
+* @param      callback
+*/</span>
 <span class="token keyword">void</span> <span class="token function">getTimerWithTask</span><span class="token punctuation">(</span>String taskName<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> <span class="token keyword">final</span> IGetTimerWithTaskCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -869,9 +891,11 @@
 <p><strong>[Description]</strong></p>
 <p>Obtain all timers of all timer tasks for a device.</p>
 <p><strong>[Method Invocation]</strong></p>
-<pre class="language-"><code class="lang-java">\<span class="token operator">*</span> Obtaining all timers of all timer tasks <span class="token keyword">for</span> a device<span class="token punctuation">.</span>
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId    device Id or group Id
-\<span class="token operator">*</span> <span class="token annotation punctuation">@param</span>      callback
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Obtaining all timers of all timer tasks for a device.
+* @param devId    device Id or group Id
+* @param      callback
+*/</span>
 <span class="token keyword">void</span> <span class="token function">getAllTimerWithDeviceId</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> <span class="token keyword">final</span> IGetAllTimerWithDevIdCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
@@ -929,7 +953,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Timer task","level":"1.10","depth":1,"next":{"title":"Group Management","level":"1.11","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[]},"previous":{"title":"Modifying Remark Name","level":"1.9.3","depth":2,"path":"resource/Shared_Device_Rename.md","ref":"./resource/Shared_Device_Rename.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Timer.md","mtime":"2018-11-20T10:43:01.812Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T05:52:34.853Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Timer task","level":"1.10","depth":1,"next":{"title":"Group Management","level":"1.11","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[]},"previous":{"title":"Modifying Remark Name","level":"1.9.3","depth":2,"path":"resource/Shared_Device_Rename.md","ref":"./resource/Shared_Device_Rename.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Timer.md","mtime":"2018-12-28T07:35:06.541Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -944,10 +968,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

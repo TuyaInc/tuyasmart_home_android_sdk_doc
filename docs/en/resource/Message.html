@@ -584,7 +584,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="Gateway.html">
+        <li class="chapter " data-level="1.15" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -648,43 +661,43 @@
 <p>It is used to obtain lists of all messages.</p>
 <p><strong>[Method Prototype]</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
- \* Obtain message list
+ * Obtain message list
  *
- \* @param callback
+ * @param callback
  */</span>
 <span class="token keyword">void</span> <span class="token function">getMessageList</span><span class="token punctuation">(</span>ITuyaDataCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>MessageBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 Among<span class="token punctuation">,</span>  MessageBeanprovides the following interfaces<span class="token operator">:</span>
 
 <span class="token comment">/**
- \* Obtain date and time  Format: 2017-09-08 17:12:45
+ * Obtain date and time  Format: 2017-09-08 17:12:45
  *
- \* @return date and time
+ * @return date and time
  */</span>
 <span class="token keyword">public</span> String <span class="token function">getDateTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> dateTime<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment">/**
- \* Obtain message icon URL
+ * Obtain message icon URL
  *
- \* @return Message icon URL
+ * @return Message icon URL
  */</span>
 <span class="token keyword">public</span> String <span class="token function">getIcon</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> icon<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment">/**
- \* Obtain the message type name (if it is alarm type message, then dp points name are available.)
+ * Obtain the message type name (if it is alarm type message, then dp points name are available.)
  *
- \* @return message class name 
+ * @return message class name 
  */</span>
 <span class="token keyword">public</span> String <span class="token function">getMsgTypeContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> msgTypeContent<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">/**
- \* Obtain the message content for interface display.
+ * Obtain the message content for interface display.
  *
- \* @return Message content 
+ * @return Message content 
  */</span>
 <span class="token keyword">public</span> String <span class="token function">getMsgContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
@@ -693,13 +706,13 @@ Among<span class="token punctuation">,</span>  MessageBeanprovides the following
 <span class="token punctuation">}</span>
 
 <span class="token comment">/**
- \* obtain message type
- \* 0: System Messages
- \* 1: With new device
- \* 2: With new friends
- \* 4: Device alarm
+ * obtain message type
+ * 0: System Messages
+ * 1: With new device
+ * 2: With new friends
+ * 4: Device alarm
  *
- \* @return message class 
+ * @return message class 
  */</span>
 
 <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getMsgType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -707,19 +720,19 @@ Among<span class="token punctuation">,</span>  MessageBeanprovides the following
 <span class="token punctuation">}</span>
 
 <span class="token comment">/**
- \*  Obtain id of device
+ *  Obtain id of device
  Note: This field is only available for alarm type messages.
  *
- \* @return device ID
+ * @return device ID
  */</span>
 <span class="token keyword">public</span> String <span class="token function">getMsgSrcId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> msgSrcId<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">/**
- \* obtain message id
+ * obtain message id
  *
- \* @return message id
+ * @return message id
  */</span>
 <span class="token keyword">public</span> String <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> id<span class="token punctuation">;</span>
@@ -740,10 +753,10 @@ Among<span class="token punctuation">,</span>  MessageBeanprovides the following
 <p>It is used to delete messages in bulk.</p>
 <p><strong>[Method Prototype]</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
- \*  Delete messages
+ *  Delete messages
  *
- \* @param mIds to be deleted message id list
- \* @param callback
+ * @param mIds to be deleted message id list
+ * @param callback
  */</span>
 <span class="token keyword">void</span> <span class="token function">deleteMessage</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> mIds<span class="token punctuation">,</span> IBooleanCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -831,7 +844,7 @@ TuyaMessage<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Message Center","level":"1.13","depth":1,"next":{"title":"Feedback","level":"1.14","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"previous":{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Message.md","mtime":"2018-12-22T07:06:06.242Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T05:52:34.853Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Message Center","level":"1.13","depth":1,"next":{"title":"Feedback","level":"1.14","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"previous":{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Message.md","mtime":"2018-12-26T13:26:44.853Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -846,10 +859,6 @@ TuyaMessage<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

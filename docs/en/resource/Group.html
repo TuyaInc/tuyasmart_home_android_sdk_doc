@@ -582,7 +582,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="Gateway.html">
+        <li class="chapter " data-level="1.15" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -724,13 +737,17 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 </code></pre>
 <h3 id="group-operation"><a name="group-operation" class="plugin-anchor" href="#group-operation"><i class="fa fa-link" aria-hidden="true"></i></a>Group Operation</h3>
 <h4 id="instantiation"><a name="instantiation" class="plugin-anchor" href="#instantiation"><i class="fa fa-link" aria-hidden="true"></i></a>Instantiation</h4>
-<pre class="language-"><code class="lang-java"><span class="token operator">*</span> Instantiation of groups
-<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> groupId    group Id
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Instantiation of groups
+* @param groupId    group Id
+*/</span>
 ITuyaGroup mITuyaGroup<span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="group-callback-event"><a name="group-callback-event" class="plugin-anchor" href="#group-callback-event"><i class="fa fa-link" aria-hidden="true"></i></a>Group callback event</h4>
-<pre class="language-"><code class="lang-java"><span class="token operator">*</span> Registering group callback event
-<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> listener callback
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Registering group callback event
+* @param listener callback
+*/</span>
 mITuyaGroup<span class="token punctuation">.</span><span class="token function">registerGroupListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGroupListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
             <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span><span class="token keyword">long</span> l<span class="token punctuation">,</span> String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -752,9 +769,11 @@ mITuyaGroup<span class="token punctuation">.</span><span class="token function">
 mITuyaGroup<span class="token punctuation">.</span><span class="token function">unRegisterGroupListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="sending-group-control-command"><a name="sending-group-control-command" class="plugin-anchor" href="#sending-group-control-command"><i class="fa fa-link" aria-hidden="true"></i></a>Sending group control command</h4>
-<pre class="language-"><code class="lang-java"><span class="token operator">*</span> Sending group control command
-<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> command    control command
-<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> listener callback
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Sending group control command
+* @param command    control command
+* @param listener callback
+*/</span>
 mTuyaGroup<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>String command<span class="token punctuation">,</span>IControlCallback listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Example Codes</p>
@@ -769,13 +788,16 @@ mTuyaGroup<span class="token punctuation">.</span><span class="token function">p
 <p>The returned result of a command sent from a group means that the command is sent to the cloud successfully, and it does not mean that the device has been actually controlled.</p>
 <h4 id="group-data-acquisition"><a name="group-data-acquisition" class="plugin-anchor" href="#group-data-acquisition"><i class="fa fa-link" aria-hidden="true"></i></a>Group data acquisition</h4>
 <p>For obtaining the group data locally, the data cannot be obtained before the initialization of Home (invoking getHomeDetail() or getHomeLocalCache).</p>
-<pre class="language-"><code class="lang-java"><span class="token operator">*</span> Obtaining group data bean locally
-<span class="token operator">*</span> <span class="token annotation punctuation">@param</span> groupId    group Id
-<span class="token operator">*</span> @<span class="token keyword">return</span> GroupBean  <span class="token keyword">class</span> <span class="token class-name">of</span> group data
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Obtaining group data bean locally
+* @param groupId    group Id
+* @return GroupBean  class of group data
+*/</span>
 TuyaHomeDataManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token operator">*</span> Obtaining a list of group data locally
-<span class="token operator">*</span> @<span class="token keyword">return</span>  List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span>  group list
+<span class="token comment">/**
+* Obtaining a list of group data locally
+* @return  List&lt;GroupBean&gt;  group list
+*/</span>
 TuyaHomeDataManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="group-data-destruction"><a name="group-data-destruction" class="plugin-anchor" href="#group-data-destruction"><i class="fa fa-link" aria-hidden="true"></i></a>Group data destruction</h4>
@@ -821,7 +843,7 @@ mITuyaGroup<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Group Management","level":"1.11","depth":1,"next":{"title":"Smart scene","level":"1.12","depth":1,"ref":"","articles":[{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"previous":{"title":"Timer task","level":"1.10","depth":1,"path":"resource/Timer.md","ref":"./resource/Timer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Group.md","mtime":"2018-12-22T09:56:01.664Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-26T05:52:34.853Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Group Management","level":"1.11","depth":1,"next":{"title":"Smart scene","level":"1.12","depth":1,"ref":"","articles":[{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"previous":{"title":"Timer task","level":"1.10","depth":1,"path":"resource/Timer.md","ref":"./resource/Timer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Group.md","mtime":"2018-12-26T13:25:46.655Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -836,10 +858,6 @@ mITuyaGroup<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
