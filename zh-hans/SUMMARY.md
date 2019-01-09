@@ -42,5 +42,6 @@
 * [意见反馈](./resource/Feedback.md)
 * [集成Push](./resource/Push.md)
 * [网关](./resource/Gateway.md)	
+* [错误码](./resource/ErrorCode.md)
 * [常见问题](./resource/FAQ.md)
 * [更新日志](./resource/Update_Log.md)

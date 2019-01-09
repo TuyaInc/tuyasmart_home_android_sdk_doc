@@ -623,7 +623,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17" data-path="FAQ.html">
+        <li class="chapter " data-level="1.17" data-path="ErrorCode.html">
+            
+                <a href="ErrorCode.html">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="FAQ.html">
             
                 <a href="FAQ.html">
             
@@ -636,7 +649,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="Update_Log.html">
+        <li class="chapter " data-level="1.19" data-path="Update_Log.html">
             
                 <a href="Update_Log.html">
             
@@ -696,13 +709,20 @@
                                 
                                 <h3 id="&#x5BB6;&#x5EAD;&#x64CD;&#x4F5C;&#x7C7B;"><a name="&#x5BB6;&#x5EAD;&#x64CD;&#x4F5C;&#x7C7B;" class="plugin-anchor" href="#&#x5BB6;&#x5EAD;&#x64CD;&#x4F5C;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BB6;&#x5EAD;&#x64CD;&#x4F5C;&#x7C7B;</h3>
 <p>ITuyaHome &#x63D0;&#x4F9B;&#x4E86;&#x5BB6;&#x5EAD;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x7C7B;&#xFF0C;&#x8D1F;&#x8D23;&#x5904;&#x7406;&#x5BB6;&#x5EAD;&#x7684;&#x6570;&#x636E;&#x548C;&#x4FE1;&#x606F;&#x7684;&#x66F4;&#x65B0;&#x3002;
-ITuyaHome &#x9700;&#x8981;&#x901A;&#x8FC7;TuyaHomeSdk.newHomeInstance(homeId) &#x521D;&#x59CB;&#x5316;</p>
+&#x63A5;&#x53E3;&#x5165;&#x53E3;&#xFF1A;<code>TuyaHomeSdk.newHomeInstance(homeId)</code>&#x3002;</p>
 <h4 id="&#x521D;&#x59CB;&#x5316;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;"><a name="&#x521D;&#x59CB;&#x5316;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;</h4>
-<pre class="language-"><code class="lang-java">    <span class="token keyword">void</span> <span class="token function">getHomeDetail</span><span class="token punctuation">(</span>ITuyaHomeResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">    <span class="token comment">/**
+     * &#x4ECE;&#x4E91;&#x7AEF;&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;
+     * @param callback
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">getHomeDetail</span><span class="token punctuation">(</span>ITuyaHomeResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;"><a name="&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;</h4>
 <pre class="language-"><code class="lang-java">
-    &#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x672C;&#x5730;cache
+    <span class="token comment">/**
+     * &#x4ECE;cache&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;
+     * @param callback
+     */</span>
     <span class="token keyword">void</span> <span class="token function">getHomeLocalCache</span><span class="token punctuation">(</span>ITuyaHomeResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="&#x66F4;&#x65B0;&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;"><a name="&#x66F4;&#x65B0;&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x66F4;&#x65B0;&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x65B0;&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;</h4>
@@ -746,14 +766,15 @@ ITuyaHome &#x9700;&#x8981;&#x901A;&#x8FC7;TuyaHomeSdk.newHomeInstance(homeId) &#
     <span class="token keyword">void</span> <span class="token function">addRoom</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> ITuyaRoomResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="&#x79FB;&#x9664;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;"><a name="&#x79FB;&#x9664;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;" class="plugin-anchor" href="#&#x79FB;&#x9664;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79FB;&#x9664;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;</h4>
-<pre class="language-"><code> /**
+<pre class="language-"><code class="lang-java">   <span class="token comment">/**
      * &#x79FB;&#x9664;&#x623F;&#x95F4;
      *
      * @param roomId
      * @param callback
-     */
-    void removeRoom(long roomId, IResultCallback callback);
-</code></pre><h4 id="&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;"><a name="&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;" class="plugin-anchor" href="#&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;</h4>
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">removeRoom</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;"><a name="&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;" class="plugin-anchor" href="#&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6392;&#x5E8F;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x623F;&#x95F4;</h4>
 <pre class="language-"><code class="lang-java">
  <span class="token comment">/**
      * &#x6392;&#x5E8F;&#x623F;&#x95F4;
@@ -874,7 +895,7 @@ ITuyaHome &#x9700;&#x8981;&#x901A;&#x8FC7;TuyaHomeSdk.newHomeInstance(homeId) &#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"家庭操作","level":"1.6.2","depth":2,"next":{"title":"家庭成员管理","level":"1.6.3","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"previous":{"title":"家庭管理","level":"1.6.1","depth":2,"path":"resource/HomeManager.md","ref":"./resource/HomeManager.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/HomeOption.md","mtime":"2018-11-20T10:43:01.821Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"家庭操作","level":"1.6.2","depth":2,"next":{"title":"家庭成员管理","level":"1.6.3","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"previous":{"title":"家庭管理","level":"1.6.1","depth":2,"path":"resource/HomeManager.md","ref":"./resource/HomeManager.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/HomeOption.md","mtime":"2019-01-08T02:07:52.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T13:18:00.707Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -889,6 +910,10 @@ ITuyaHome &#x9700;&#x8981;&#x901A;&#x8FC7;TuyaHomeSdk.newHomeInstance(homeId) &#
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

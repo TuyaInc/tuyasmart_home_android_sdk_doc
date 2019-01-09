@@ -1,15 +1,18 @@
 ## Home Member Management Class
 
-The ITuyaHomeMember provides the family member management interfaces including adding member, removing member, updating the control permission of member and obtaining home member list, etc. The invocation method is TuyaHomeSdk.getMemberInstance().  
-```java
-private long homeId; //Home id
-private String nickName;//Name 
-private boolean admin;//Administrator or not
-private long memberId;//Member id
-private String headPic;//Directory of account picture
-private String account;//Account of member
-private String uid;//Unique id of members
-```
+The ITuyaHomeMember provides the family member management interfaces including adding member, removing member, update the control permission of member and obtaining home member list ,etc. The invocation method is `TuyaHomeSdk.getMemberInstance()`.  
+
+## MemberBean Field Information
+| field | type | describe |
+| --- | --- | --- |
+| homeId | long  | Unique id of Home |
+| nickName | String |The member nickName  |
+| admin | boolean | Administrator or not |
+| memberId | long | Member id |
+| headPic | String | Directory of account picture|
+| account | String  | AccountName of member |
+| uid | String | Unique id of member |
+
 ## Add Members in a Home
 ```java
 /**

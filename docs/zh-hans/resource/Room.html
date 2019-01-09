@@ -621,7 +621,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17" data-path="FAQ.html">
+        <li class="chapter " data-level="1.17" data-path="ErrorCode.html">
+            
+                <a href="ErrorCode.html">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="FAQ.html">
             
                 <a href="FAQ.html">
             
@@ -634,7 +647,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="Update_Log.html">
+        <li class="chapter " data-level="1.19" data-path="Update_Log.html">
             
                 <a href="Update_Log.html">
             
@@ -694,17 +707,46 @@
                                 
                                 <h3 id="&#x623F;&#x95F4;&#x7BA1;&#x7406;&#x7C7B;"><a name="&#x623F;&#x95F4;&#x7BA1;&#x7406;&#x7C7B;" class="plugin-anchor" href="#&#x623F;&#x95F4;&#x7BA1;&#x7406;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x623F;&#x95F4;&#x7BA1;&#x7406;&#x7C7B;</h3>
 <p>ITuyaRoom &#x63D0;&#x4F9B;&#x623F;&#x95F4;&#x7684;&#x7BA1;&#x7406;&#x7C7B;&#xFF0C;&#x8D1F;&#x8D23;&#x623F;&#x95F4;&#x7684;&#x65B0;&#x589E;&#x3001;&#x5220;&#x9664;&#x8BBE;&#x5907;&#x6216;&#x7FA4;&#x7EC4;
-&#x53EF;&#x4EE5;&#x901A;&#x8FC7; TuyaHomeSdk.newRoomInstance(&quot;homeId&quot;) &#x53BB;&#x521B;&#x5EFA;</p>
-<p><strong>RoomBean&#x5B57;&#x6BB5;&#x4FE1;&#x606F;:</strong></p>
-<pre class="language-"><code class="lang-java">    <span class="token keyword">private</span> <span class="token keyword">long</span> roomId<span class="token punctuation">;</span><span class="token comment">//&#x623F;&#x95F4;id</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span><span class="token comment">//&#x623F;&#x95F4;&#x540D;&#x5B57;</span>
-    <span class="token keyword">private</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> deviceList<span class="token punctuation">;</span> <span class="token comment">//&#x623F;&#x95F4;&#x4E0B;&#x9762;&#x7684;&#x8BBE;&#x5907;</span>
-    <span class="token keyword">private</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> groupList<span class="token punctuation">;</span>   <span class="token comment">//&#x623F;&#x95F4;&#x4E0B;&#x9762;&#x7684;&#x7FA4;&#x7EC4;</span>
-    <span class="token keyword">private</span> <span class="token keyword">int</span> displayOrder<span class="token punctuation">;</span><span class="token comment">//&#x623F;&#x95F4;&#x987A;&#x5E8F;</span>
-</code></pre>
-<p><strong>&#x63A5;&#x53E3;:</strong></p>
+&#x8C03;&#x7528;&#x5165;&#x53E3;: <code>TuyaHomeSdk.newRoomInstance(&quot;homeId&quot;)</code>&#x3002;</p>
+<h4 id="roombean&#x5B57;&#x6BB5;&#x4FE1;&#x606F;"><a name="roombean&#x5B57;&#x6BB5;&#x4FE1;&#x606F;" class="plugin-anchor" href="#roombean&#x5B57;&#x6BB5;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>RoomBean&#x5B57;&#x6BB5;&#x4FE1;&#x606F;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>roomId</td>
+<td>long</td>
+<td>&#x623F;&#x95F4;id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>&#x623F;&#x95F4;&#x540D;&#x5B57;</td>
+</tr>
+<tr>
+<td>deviceList</td>
+<td>List &lt;DeviceBean&gt;</td>
+<td>&#x623F;&#x95F4;&#x4E0B;&#x9762;&#x7684;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td>groupList</td>
+<td>List &lt;GroupBean&gt;</td>
+<td>&#x623F;&#x95F4;&#x4E0B;&#x9762;&#x7684;&#x7FA4;&#x7EC4;</td>
+</tr>
+<tr>
+<td>displayOrder</td>
+<td>int</td>
+<td>&#x623F;&#x95F4;&#x987A;&#x5E8F;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x63A5;&#x53E3;&#x6E05;&#x5355;"><a name="&#x63A5;&#x53E3;&#x6E05;&#x5355;" class="plugin-anchor" href="#&#x63A5;&#x53E3;&#x6E05;&#x5355;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;&#x6E05;&#x5355;:</h4>
 <pre class="language-"><code class="lang-java">
-
     <span class="token comment">/**
      * &#x66F4;&#x65B0;&#x623F;&#x95F4;&#x540D;&#x79F0;
      *
@@ -799,7 +841,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"家庭房间管理","level":"1.6.4","depth":2,"next":{"title":"设备配网","level":"1.7","depth":1,"ref":"","articles":[{"title":"WIFI配网","level":"1.7.1","depth":2,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[]},{"title":"ZigBee网关配网","level":"1.7.2","depth":2,"path":"resource/Activator_Zigbee.md","ref":"./resource/Activator_Zigbee.md","articles":[]},{"title":"ZigBee子设备配网","level":"1.7.3","depth":2,"path":"resource/Activator_ZigbeeSub.md","ref":"./resource/Activator_ZigbeeSub.md","articles":[]}]},"previous":{"title":"家庭成员管理","level":"1.6.3","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Room.md","mtime":"2018-12-26T04:24:30.429Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-28T07:42:07.509Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"家庭房间管理","level":"1.6.4","depth":2,"next":{"title":"设备配网","level":"1.7","depth":1,"ref":"","articles":[{"title":"WIFI配网","level":"1.7.1","depth":2,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[]},{"title":"ZigBee网关配网","level":"1.7.2","depth":2,"path":"resource/Activator_Zigbee.md","ref":"./resource/Activator_Zigbee.md","articles":[]},{"title":"ZigBee子设备配网","level":"1.7.3","depth":2,"path":"resource/Activator_ZigbeeSub.md","ref":"./resource/Activator_ZigbeeSub.md","articles":[]}]},"previous":{"title":"家庭成员管理","level":"1.6.3","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Room.md","mtime":"2018-12-28T08:21:49.157Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T13:18:00.707Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -814,6 +856,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

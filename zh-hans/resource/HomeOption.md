@@ -1,11 +1,15 @@
 ### 家庭操作类
 
 ITuyaHome 提供了家庭相关的操作类，负责处理家庭的数据和信息的更新。
-ITuyaHome 需要通过TuyaHomeSdk.newHomeInstance(homeId) 初始化
+接口入口：`TuyaHomeSdk.newHomeInstance(homeId)`。
 
 #### 初始化家庭下的所有数据
 
 ```java 
+    /**
+     * 从云端获取家庭的所有信息
+     * @param callback
+     */
     void getHomeDetail(ITuyaHomeResultCallback callback);
 
 ```
@@ -15,7 +19,10 @@ ITuyaHome 需要通过TuyaHomeSdk.newHomeInstance(homeId) 初始化
 
 ```java 
 	
-	获取家庭下面的本地cache
+	/**
+     * 从cache获取家庭的所有信息
+     * @param callback
+     */
     void getHomeLocalCache(ITuyaHomeResultCallback callback);
 
 ```
@@ -74,8 +81,8 @@ ITuyaHome 需要通过TuyaHomeSdk.newHomeInstance(homeId) 初始化
 
 #### 移除家庭下面的房间
 
-```
- /**
+```java
+   /**
      * 移除房间
      *
      * @param roomId

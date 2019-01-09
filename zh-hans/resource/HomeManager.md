@@ -1,30 +1,27 @@
 ### 家庭管理类
-ITuyaHomeManager 提供了创建家庭、获取家庭列表以及监听家庭相关的变更
+ITuyaHomeManager 提供了创建家庭、获取家庭列表以及监听家庭相关的变更,
+接口入口`TuyaHomeSdk.getHomeManagerInstance()`。
 
-可以通过TuyaHomeSdk.getHomeManagerInstance()获取
-
-####HomeBean字段信息
-```java
-    private String name;//家庭名称
-    private double lon;//经度
-    private double lat;//纬度
-    private String geoName;//家庭地理位置名称
-    private long homeId;//家庭Id
-    private boolean admin;//管理员身份
-    private List<RoomBean> rooms = new ArrayList<>();//所有房间列表
-    private List<DeviceBean> deviceList = new ArrayList<>();//所有设备列表
-    private List<GroupBean> groupList = new ArrayList<>();//所有群组
-    private List<BlueMeshBean> meshList = new ArrayList<>();//网关设备
-    private List<DeviceBean> sharedDeviceList = new ArrayList<>();//收到的共享设备
-    private List<GroupBean> sharedGroupList = new ArrayList<>();//收到的共享群组
-
-```
-
+#### HomeBean字段信息
+| 字段 | 类型 | 描述 |
+| --- | --- | --- |
+| name | String  | 家庭名称|
+| lon | double   | 经度 |
+| lat | double | 纬度|
+| geoName | String |家庭地理位置名称 |
+| homeId | long | 家庭Id |
+| admin | boolean  | 管理员身份 |
+| rooms | List&lt;RoomBean&gt;  | 所有房间列表 |
+| deviceList | List&lt;DeviceBean&gt;  | 所有设备列表 |
+| groupList | List&lt;GroupBean&gt;  |所有群组 |
+| meshList | List&lt;BlueMeshBean&gt; |网关设备 |
+| sharedDeviceList | List&lt;DeviceBean&gt; |收到的共享设备 |
+| sharedGroupList | List&lt;GroupBean&gt; |收到的共享群组|
 
 #### 创建家庭
 
 ```java
- /**
+    /**
      *
      * @param name     家庭名称
      * @param lon      经度
@@ -43,17 +40,18 @@ ITuyaHomeManager 提供了创建家庭、获取家庭列表以及监听家庭相
 
 ```java
 
-/**
-     * @param callback
-     */
+   /**
+    *
+    * @param callback
+    */
     void queryHomeList(ITuyaGetHomeListCallback callback);
 ```
 
 #### 家庭信息的变更
-
+1.注册与注销监听
 ```java
 
-	 /**
+    /**
      * 注册家庭信息的变更
      * 有：家庭的增加、删除、信息变更、分享列表的变更和服务器连接成功的监听
      *
@@ -69,6 +67,10 @@ ITuyaHomeManager 提供了创建家庭、获取家庭列表以及监听家庭相
      */
     void unRegisterTuyaHomeChangeListener(ITuyaHomeChangeListener listener);
     
+```
+    
+2.事件清单
+```java
     
 public interface ITuyaHomeChangeListener {
     /**
@@ -105,8 +107,9 @@ public interface ITuyaHomeChangeListener {
 
     /**
      *
-     * 手机连接涂鸦云服务器成功，特别注意接收到此通知，本地数据与服务端数据可能会不一致或者无法控制设备，可以调用Home下面getHomeDetail接口重新初始化数据。
-     *
+     * 手机连接涂鸦云服务器成功，接收到此通知，
+     * 本地数据与服务端数据可能会不一致或者无法控制设备，
+     * 可以调用Home下getHomeDetail接口重新初始化数据。
      */
     void onServerConnectSuccess();
 }
@@ -115,8 +118,7 @@ public interface ITuyaHomeChangeListener {
 
 
 ### 对家庭的缓存数据操作
-**注意**: 获取此数据前，应该调用家庭的初始化接口 TuyaHomeSdk.newHomeInstance("homeId").getHomeDetail()或者TuyaHomeSdk.newHomeInstance("homeId").getHomeLocalCache 之后下面的接口才会有缓存数据。  
-接口入口:TuyaHomeSdk.getDataInstance()
+**注意**: 获取此数据前，应该调用家庭的初始化接口 TuyaHomeSdk.newHomeInstance("homeId").getHomeDetail()或者TuyaHomeSdk.newHomeInstance("homeId").getHomeLocalCache()之后下面的接口才会有缓存数据,调用入口:`TuyaHomeSdk.getDataInstance()`
 
 ```java
 
@@ -124,72 +126,115 @@ public interface ITuyaHomeDataManager {
 
     /**
      * 家庭下面的设备、群组、房间列表
+     *
+     * @param homeId 家庭ID
+     * @return List<RoomBean>
      */
-
     List<RoomBean> getHomeRoomList(long homeId);
 
     /**
      * 获取家庭下面的设备列表
      *
      * @param homeId 家庭ID
-     * @return
+     * @return List<DeviceBean>
      */
     List<DeviceBean> getHomeDeviceList(long homeId);
 
     /**
      * 获取家庭下面的群组列表
      *
-     * @param homeId
-     * @return
+     * @param homeId 家庭ID
+     * @return List<DeviceBean>
      */
     List<GroupBean> getHomeGroupList(long homeId);
 
-    //获取群组
+    /**
+     * 获取群组
+     *
+     * @param groupId 群组ID
+     * @return GroupBean
+     */
     GroupBean getGroupBean(long groupId);
 
-    //获取设备
+    /**
+     * 获取设备
+     *
+     * @param devId 设备ID
+     * @return DeviceBean
+     */
     DeviceBean getDeviceBean(String devId);
 
-    //根据群组ID获取房间
+    /**
+     * 根据群组ID获取房间
+     *
+     * @param groupId 群组ID
+     * @return RoomBean
+     */
     RoomBean getGroupRoomBean(long groupId);
 
-    //获取房间
+    /**
+     * 获取房间
+     *
+     * @param roomId 房间ID
+     * @return RoomBean
+     */
     RoomBean getRoomBean(long roomId);
 
-    //根据设备获取房间信息
+    /**
+     * 根据设备获取房间信息
+     *
+     * @param devId 设备ID
+     * @return RoomBean
+     */
     RoomBean getDeviceRoomBean(String devId);
 
-    //获取群组下面的设备列表
+    /**
+     * 获取群组下面的设备列表
+     *
+     * @param groupId 群组ID
+     * @return List<DeviceBean>
+     */
     List<DeviceBean> getGroupDeviceList(long groupId);
 
-    //获取mesh下面的群组列表
+    /**
+     * 获取mesh下面的群组列表
+     *
+     * @param meshId meshId
+     * @return List<GroupBean>
+     */
     List<GroupBean> getMeshGroupList(String meshId);
 
+    /**
+     * 获取mesh设备列表
+     * @param meshId 
+     * @return List<DeviceBean>
+     */
     List<DeviceBean> getMeshDeviceList(String meshId);
 
     /**
      * 根据房间ID获取房间下面的设备列表
      *
-     * @param roomId
-     * @return
+     * @param roomId 房间ID
+     * @return List<DeviceBean>
      */
     List<DeviceBean> getRoomDeviceList(long roomId);
 
     /**
      * 根据房间ID获取房间下面的群组列表
      *
-     * @param roomId
-     * @return
+     * @param roomId 房间ID
+     * @return List<GroupBean>
      */
     List<GroupBean> getRoomGroupList(long roomId);
 
     /**
      * 获取Home数据
      *
-     * @param homeId
-     * @return
+     * @param homeId homeId
+     * @return HomeBean
      */
     HomeBean getHomeBean(long homeId);
+    
 }
 
 ```

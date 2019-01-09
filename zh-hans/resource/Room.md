@@ -1,19 +1,20 @@
 ###  房间管理类
 ITuyaRoom 提供房间的管理类，负责房间的新增、删除设备或群组
-可以通过 TuyaHomeSdk.newRoomInstance("homeId") 去创建
+调用入口: `TuyaHomeSdk.newRoomInstance("homeId")`。
 
-**RoomBean字段信息:**
+#### RoomBean字段信息
+
+| 字段 | 类型 | 描述 |
+| --- | --- | --- |
+| roomId | long  | 房间id|
+| name | String   | 房间名字|
+| deviceList | List &lt;DeviceBean&gt;   | 房间下面的设备|
+| groupList | List &lt;GroupBean&gt;  | 房间下面的群组|
+| displayOrder | int | 房间顺序|
+
+
+#### 接口清单:
 ```java
-    private long roomId;//房间id
-    private String name;//房间名字
-    private List<DeviceBean> deviceList; //房间下面的设备
-    private List<GroupBean> groupList;   //房间下面的群组
-    private int displayOrder;//房间顺序
-```
-
-**接口:**
-```java
-
 
     /**
      * 更新房间名称

@@ -4,66 +4,36 @@
 
 在Android Studio中建立你的工程。
 
-### 二、引入aar包
-
-![cmd-markdown-logo](images/1522484439507.jpg) 
-
-### 三、build.gradle 配置
+### 二、build.gradle 配置
 
 build.gradle 文件里添加如下配置
 
 ```groovy
 defaultConfig {
     ndk {
-        abiFilters "armeabi-v7a", "x86"
+        abiFilters "armeabi-v7a"
     }
-
-    gradle
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
+ }
     dependencies {
-
-        compile 'com.alibaba:fastjson:1.1.67.android'
-        compile 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
-
-// compile 'de.greenrobot:eventbus:2.4.0'  Deprecated in 2.7.2
-
-        compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-        compile 'io.reactivex.rxjava2:rxjava:2.1.7'
-        compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-// compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1' Deprecated in 2.7.2
-        compile(name: 'tuyasmart-x.x.x', ext: 'aar')
+        implementation 'com.alibaba:fastjson:1.1.67.android'
+        implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
+        implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+        implementation 'com.tuya.smart:tuyasmart:2.9.1'
     }
+    
+repositories {
+    mavenLocal()
+    jcenter()
+    google()
+}
 
-
-    android {
-        lintOptions {
-            abortOnError false
-            disable 'InvalidPackage'
-        }
-
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_7
-            targetCompatibility JavaVersion.VERSION_1_7
-        }
-        packagingOptions {
-            exclude 'META-INF/LICENSE.txt'
-            exclude 'META-INF/NOTICE'
-            exclude 'META-INF/LICENSE'
-            exclude 'META-INF/NOTICE.txt'
-            exclude 'META-INF/INDEX.LIST'
-            exclude 'META-INF/services/javax.annotation.processing.Processor'
-        }
-    }
 ```
 
-> 【注意事项】
->涂鸦智能sdk默认只支持armeabi-v7a和x86架构的平台，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_android_sdk/tree/master/library)获取
 
-### 四、AndroidManifest.xml 设置
+> 【注意事项】
+>涂鸦智能sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_android_sdk/tree/master/library)获取
+
+### 三、AndroidManifest.xml 设置
 
 在AndroidManifest.xml文件里配置appkey和appSecret，在配置相应的权限等
 
@@ -75,57 +45,9 @@ android:value="应用id" />
 android:name="TUYA_SMART_SECRET"
 android:value="应用密钥" />
 
-添加必要的权限支持
-<!-- sdcard -->
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" android:required="false"/>
-<!-- 网络 -->
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.WAKE_LOCK"android:required="false" />
-<!-- added from 2.7.2 -->
-  <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" android:required="false"/>
-
-
-
-添加必要的service和receiver
-//<service android:name="org.eclipse.paho.android.service.MqttService" />
-//from 2.6.3 com.tuya.smart.mqtt.MqttService replace the org.eclipse.paho.android.service.mqttservice
-    <service android:name="com.tuya.smart.mqtt.MqttService" android:stopWithTask="true"/>
-
-<receiver android:name="com.tuya.smart.android.base.broadcast.NetworkBroadcastReceiver">
-<intent-filter>
-<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-</intent-filter>
-</receiver>
-
-<service
-android:name="com.tuya.smart.android.hardware.service.GwBroadcastMonitorService"
-android:exported="true"
-android:label="UDPService"
-android:process=":monitor">
-<intent-filter>
-<action android:name="tuya.intent.action.udp" />
-
-<category android:name="tuya" />
-</intent-filter>
-</service>
-<service
-    android:name="com.tuya.smart.android.hardware.service.DevTransferService"
-    android:label="TCPService">
-    <intent-filter>
-    	<action android:name="tuya.intent.action.tcp" />
-           <category android:name="tuya" />
-        </intent-filter>
-</service>
-
 ```
 
-### 五、混淆配置
+### 四、混淆配置
 
 在proguard-rules.pro文件配置相应混淆配置
 
@@ -134,21 +56,16 @@ android:process=":monitor">
 -keep class com.alibaba.fastjson.**{*;}
 -dontwarn com.alibaba.fastjson.**
 
-#netty
--keep class io.netty.** { *; }
--dontwarn io.netty.**
-
 #mqtt
 -keep class org.eclipse.paho.client.mqttv3.** { *; }
 -dontwarn org.eclipse.paho.client.mqttv3.**
 
--dontwarn okio.**
--dontwarn rx.**
--dontwarn javax.annotation.**
 -keep class com.squareup.okhttp.** { *; }
 -keep interface com.squareup.okhttp.** { *; }
--keep class okio.** { *; }
 -dontwarn com.squareup.okhttp.**
+
+-keep class okio.** { *; }
+-dontwarn okio.**
 
 -keep class com.tuya.**{*;}
 -dontwarn com.tuya.**
