@@ -18,7 +18,7 @@ defaultConfig {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
         implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:2.9.1'
+        implementation 'com.tuya.smart:tuyasmart:2.9.2'
     }
     
 repositories {
@@ -31,7 +31,7 @@ repositories {
 
 
 > 【注意事项】
->涂鸦智能sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_android_sdk/tree/master/library)获取
+>涂鸦智能sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs)获取
 
 ### 三、AndroidManifest.xml 设置
 
@@ -101,4 +101,15 @@ public class TuyaSmartApp extends Application {
 ```java
 TuyaHomeSdk.onDestroy();
 ```
+
+### 三、debug开关
+
+在debug模式下可以开启sdk的日志开关，查看更多的日志信息，帮助快速定位问题。在release模式下建议关闭日志开关
+
+```java
+TuyaHomeSdk.setDebugMode(true);
+```
+
+
+
 

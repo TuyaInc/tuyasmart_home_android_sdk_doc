@@ -709,11 +709,38 @@
                                 
                                 <h4 id="&#x56FA;&#x4EF6;&#x5347;&#x7EA7;"><a name="&#x56FA;&#x4EF6;&#x5347;&#x7EA7;" class="plugin-anchor" href="#&#x56FA;&#x4EF6;&#x5347;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FA;&#x4EF6;&#x5347;&#x7EA7;</h4>
 <h5 id="&#x3010;&#x63CF;&#x8FF0;&#x3011;"><a name="&#x3010;&#x63CF;&#x8FF0;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x63CF;&#x8FF0;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x63CF;&#x8FF0;&#x3011;</h5>
-<p>&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4FEE;&#x590D;&#x8BBE;&#x5907;bug&#x548C;&#x589E;&#x52A0;&#x8BBE;&#x5907;&#x65B0;&#x529F;&#x80FD;&#x3002;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4E3B;&#x8981;&#x5206;&#x4E24;&#x79CD;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x662F;&#x8BBE;&#x5907;&#x5347;&#x7EA7;&#xFF0C;&#x7B2C;&#x4E8C;&#x79CD;&#x662F;MCU&#x5347;&#x7EA7;&#x3002;&#x5347;&#x7EA7;&#x7684;&#x63A5;&#x53E3;&#x4F4D;&#x4E8E;ITuyaOta&#x4E2D;&#x3002;</p>
+<p>&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4FEE;&#x590D;&#x8BBE;&#x5907;bug&#x548C;&#x589E;&#x52A0;&#x8BBE;&#x5907;&#x65B0;&#x529F;&#x80FD;&#x3002;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4E3B;&#x8981;&#x5206;&#x4E24;&#x79CD;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x662F;&#x8BBE;&#x5907;&#x5347;&#x7EA7;&#xFF0C;&#x7B2C;&#x4E8C;&#x79CD;&#x662F;MCU&#x5347;&#x7EA7;&#x3002;&#x5347;&#x7EA7;&#x7684;&#x63A5;&#x53E3;&#x4F4D;&#x4E8E;ITuyaOta&#x4E2D;&#x3002;
+&#x4ECE;SDK 2.9.1&#x7248;&#x672C;&#x8D77;&#x652F;&#x6301;zigbe &#x5B50;&#x8BBE;&#x5907;&#x5347;&#x7EA7;&#x3002;</p>
 <h4 id="&#x67E5;&#x8BE2;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x8BE2;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x67E5;&#x8BE2;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4FE1;&#x606F;</h4>
 <h5 id="&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;"><a name="&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;</h5>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ *    wifi&#x3001;zigbee&#x7F51;&#x5173;&#x3001;&#x6444;&#x50CF;&#x5934;&#x7B49;&#x8BBE;&#x5907;&#x521D;&#x59CB;&#x5316;&#x63A5;&#x53E3;
+ * @param devId &#x8BBE;&#x5907;id
+ * @return
+ */</span>
+ITuyaOta <span class="token function">newOTAInstance</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * zigbee &#x5B50;&#x8BBE;&#x5907;&#x521D;&#x59CB;&#x5316;&#x63A5;&#x53E3;
+ * @param meshId zigbee&#x7F51;&#x5173;id
+ * @param devId zigbee&#x5B50;&#x8BBE;&#x5907;id
+ * @param nodeId zigbee&#x5B50;&#x8BBE;&#x5907;mac&#x5730;&#x5740;&#xFF08;&#x4ECE;&#x5B50;&#x8BBE;&#x5907;&#x7684;DeviceBean&#x83B7;&#x53D6;&#xFF09;
+ * @return
+ */</span>
+ITuyaOta <span class="token function">newOTAInstance</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <pre class="language-"><code class="lang-java"><span class="token comment">//&#x83B7;&#x53D6;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x4FE1;&#x606F;</span>
 TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newOTAInstance</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getOtaInfo</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>UpgradeInfoBean<span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">void</span> <span class="token function">onFailure</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newOTAInstance</span><span class="token punctuation">(</span><span class="token string">&quot;xxxmeshId&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;xxxdevId&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;xxxmac address&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getOtaInfo</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>UpgradeInfoBean<span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
 
@@ -729,7 +756,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <span class="token keyword">private</span> String currentVersion<span class="token punctuation">;</span><span class="token comment">//&#x5F53;&#x524D;&#x7248;&#x672C;</span>
     <span class="token keyword">private</span> <span class="token keyword">int</span> timeout<span class="token punctuation">;</span><span class="token comment">//&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;</span>
     <span class="token keyword">private</span> <span class="token keyword">int</span> upgradeType<span class="token punctuation">;</span><span class="token comment">//0:app&#x63D0;&#x9192;&#x5347;&#x7EA7; 2-app&#x5F3A;&#x5236;&#x5347;&#x7EA7; 3-&#x68C0;&#x6D4B;&#x5347;&#x7EA7;</span>
-    <span class="token keyword">private</span> <span class="token keyword">int</span> type<span class="token punctuation">;</span><span class="token comment">//0:wifi&#x8BBE;&#x5907; 1:&#x84DD;&#x7259;&#x8BBE;&#x5907; 2:GPRS&#x8BBE;&#x5907; 3:zigbee&#x8BBE;&#x5907;&#xFF08;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;zigbee&#x7F51;&#x5173;&#xFF09;9:MCU</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> type<span class="token punctuation">;</span><span class="token comment">//0:wifi&#x8BBE;&#x5907; 1:&#x84DD;&#x7259;&#x8BBE;&#x5907; 2:GPRS&#x8BBE;&#x5907; 3:zigbee&#x8BBE;&#x5907; 9:MCU</span>
     <span class="token keyword">private</span> String typeDesc<span class="token punctuation">;</span><span class="token comment">//&#x6A21;&#x5757;&#x63CF;&#x8FF0;</span>
     <span class="token keyword">private</span> <span class="token keyword">long</span> lastUpgradeTime<span class="token punctuation">;</span><span class="token comment">//&#x4E0A;&#x6B21;&#x5347;&#x7EA7;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x6BEB;&#x79D2;</span>
 </code></pre>
@@ -825,7 +852,7 @@ iTuyaOta<span class="token punctuation">.</span><span class="token function">set
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"固件升级","level":"1.8.2","depth":2,"next":{"title":"设备数据流通道","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]},"previous":{"title":"设备控制","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/OTA.md","mtime":"2018-12-28T07:35:06.541Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T13:18:00.707Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"固件升级","level":"1.8.2","depth":2,"next":{"title":"设备数据流通道","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]},"previous":{"title":"设备控制","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/OTA.md","mtime":"2019-01-16T01:59:49.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-22T03:21:12.524Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -840,10 +867,6 @@ iTuyaOta<span class="token punctuation">.</span><span class="token function">set
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

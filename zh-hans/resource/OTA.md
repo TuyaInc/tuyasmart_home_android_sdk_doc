@@ -3,10 +3,32 @@
 ##### 【描述】
 
 固件升级主要用于修复设备bug和增加设备新功能。固件升级主要分两种，第一种是设备升级，第二种是MCU升级。升级的接口位于ITuyaOta中。
+从SDK 2.9.1版本起支持zigbe 子设备升级。
 
 #### 查询固件升级信息
 
 ##### 【方法调用】
+
+
+
+```java
+/**
+ *	wifi、zigbee网关、摄像头等设备初始化接口
+ * @param devId 设备id
+ * @return
+ */
+ITuyaOta newOTAInstance(String devId)
+
+/**
+ * zigbee 子设备初始化接口
+ * @param meshId zigbee网关id
+ * @param devId zigbee子设备id
+ * @param nodeId zigbee子设备mac地址（从子设备的DeviceBean获取）
+ * @return
+ */
+ITuyaOta newOTAInstance(String meshId, String devId, String nodeId);
+
+```
 
 ```java
 //获取固件升级信息
@@ -20,7 +42,18 @@ TuyaHomeSdk.newOTAInstance(mDevId).getOtaInfo(new IGetOtaInfoCallback({
 	
 });
 
+TuyaHomeSdk.newOTAInstance("xxxmeshId","xxxdevId","xxxmac address").getOtaInfo(new IGetOtaInfoCallback({
+	@Override
+	void onSuccess(List<UpgradeInfoBean> list){
+	
+	}
+	@Override
+	void onFailure(String code, String error);
+	
+});
+
 ```
+
 
 `UpgradeInfoBean`返回固件升级的信息，提供以下信息
 
@@ -30,7 +63,7 @@ TuyaHomeSdk.newOTAInstance(mDevId).getOtaInfo(new IGetOtaInfoCallback({
     private String currentVersion;//当前版本
     private int timeout;//超时时间，单位：秒
     private int upgradeType;//0:app提醒升级 2-app强制升级 3-检测升级
-    private int type;//0:wifi设备 1:蓝牙设备 2:GPRS设备 3:zigbee设备（目前只支持zigbee网关）9:MCU
+    private int type;//0:wifi设备 1:蓝牙设备 2:GPRS设备 3:zigbee设备 9:MCU
     private String typeDesc;//模块描述
     private long lastUpgradeTime;//上次升级时间，单位：毫秒
 ```

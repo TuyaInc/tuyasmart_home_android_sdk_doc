@@ -10,7 +10,6 @@
 
 - 设备控制必须先初始化数据，即先调用TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail(ITuyaHomeResultCallback callback)
 
-
 ------
 
 ### 设备操作控制
@@ -205,7 +204,7 @@ mDevice.registerDevListener(new IDevListener() {
 
         @Override
         public void onSuccess() {
-            Toast.makeText(mContext, "开灯失败", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "开灯成功", Toast.LENGTH_SHORT).show();
         }
     });
 }

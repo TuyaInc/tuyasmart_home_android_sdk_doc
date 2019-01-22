@@ -216,7 +216,7 @@ mDevice.registerDevListener(new IDevListener() {
         }
         @Override
         public void onSuccess() {
-            Toast.makeText(mContext, "turning on the light failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "turning on the light success", Toast.LENGTH_SHORT).show();
         }
     });
 }

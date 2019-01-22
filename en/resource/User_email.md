@@ -23,9 +23,10 @@ void getRegisterEmailValidateCode(String countryCode, String email, IResultCallb
 * @param countryCode Country code
 * @param email       Email account
 * @param passwd      Password
+* @param code        Email verification code
 * @param callback    Email registration callback interface. 
 */
-TuyaHomeSdk.getUserInstance().registerAccountWithEmail(final String countryCode, final String email, final String passwd, final IRegisterCallback callback);
+TuyaHomeSdk.getUserInstance().registerAccountWithPhone(final String countryCode, final String phone, final String passwd, final String code, final IRegisterCallback callback);
 ```
 **[Example Codes]**
 

@@ -20,7 +20,7 @@ defaultConfig {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
         implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:2.9.1'
+        implementation 'com.tuya.smart:tuyasmart:2.9.2'
     }
     
 repositories {
@@ -34,7 +34,7 @@ repositories {
 
 **[Note]**
 
-The Tuya Smart sdk solely supports the platform of armeabi-v7a and x86 architecture by default. Developer may refer to the [GitHub](https://github.com/TuyaInc/tuyasmart_android_sdk/tree/master/library) if you need other platforms. 
+The Tuya Smart sdk solely supports the platform of armeabi-v7a and x86 architecture by default. Developer may refer to the [GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs) if you need other platforms. 
 
 ### (3) Set the AndroidManifest.xml
 
@@ -77,7 +77,7 @@ Arrange aliasing configuration in corresponding proguard-rules.pro files.
 
 
 
-## Use the ADK function in codes
+## Use the SDK function in codes
 
 The TuyaHomeSdk is the outbound interface of the Smart Home, and the operations include network configuration, initiation, control, room, group and ZigBee.
 
@@ -144,5 +144,13 @@ public class TuyaSmartApp extends Application {
 ```
 [**Note**]
 
-- In case of this kind of callback, please go to the login page and require the user to log in again. 
----
+> - In case of this kind of callback, please go to the login page and require the user to log in again. 
+
+### (4) Use Debug mode
+
+In the debug mode, you can enable the sdk log switch to view more log information and help you locate the problem quickly. It is recommended to turn off the log switch in release mode.
+
+```java
+TuyaHomeSdk.setDebugMode(true);
+```
+

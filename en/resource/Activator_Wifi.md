@@ -7,7 +7,7 @@ The Wifi network configuration mainly includes two network configuration modes, 
 #### Get Network Configuration Token
 
 Before the wifi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
-The term of validity of Token is 5 minutes, and the Token become invalid once the network configuration succeeds.
+The term of validity of Token is 10 minutes, and the Token become invalid once the network configuration succeeds.
 A new Token has to be obtained if you have to reconfigure network.
 
 ```java

@@ -670,9 +670,25 @@
                                 
                                 <h1 id="firmware-upgrade"><a name="firmware-upgrade" class="plugin-anchor" href="#firmware-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a>Firmware Upgrade</h1>
 <p><strong>[Description]</strong></p>
-<p>The firmware upgrade is mainly used to fix device bugs and add new device functions. There are two main types of firmware upgrades, i.e., device upgrade and MCU upgrade. The interface for upgrade is located in ITuyaOta.</p>
+<p>The firmware upgrade is mainly used to fix device bugs and add new device functions. There are two main types of firmware upgrades, i.e., device upgrade and MCU upgrade. The interface for upgrade is located in ITuyaOta.Zigbee sub-device OTA is available on 2.9.1 and the follow-up version.</p>
 <h2 id="querying-firmware-upgrade-information"><a name="querying-firmware-upgrade-information" class="plugin-anchor" href="#querying-firmware-upgrade-information"><i class="fa fa-link" aria-hidden="true"></i></a>Querying Firmware Upgrade Information**</h2>
 <p><strong>[Method Invocation]</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ *    the init OTA method of wifi&#x3001;zigbee gateway&#x3001;camera ect.  Attention:This two constructor methods are not Singleton Pattern
+ * @param devId  device id
+ * @return
+ */</span>
+ITuyaOta <span class="token function">newOTAInstance</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+
+<span class="token comment">/**
+ * the init OTA method of zigbee sub-device
+ * @param meshId zigbee gateway id
+ * @param devId zigbee sub-device id
+ * @param nodeId zigbee sub-device mac address&#xFF08;get from the DeviceBean of zigbee sub-device&#xFF09;
+ * @return
+ */</span>
+ITuyaOta <span class="token function">newOTAInstance</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <pre class="language-"><code class="lang-java">
 <span class="token comment">// Obtain firmware upgrade information</span>
 
@@ -685,6 +701,17 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <span class="token keyword">void</span> <span class="token function">onFailure</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span><span class="token punctuation">;</span>    
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newOTAInstance</span><span class="token punctuation">(</span><span class="token string">&quot;xxxmeshId&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;xxxdevId&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;xxxmac address&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getOtaInfo</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>UpgradeInfoBean<span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">void</span> <span class="token function">onFailure</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
 
 UpgradeInfoBean returns information about the firmware upgrade<span class="token punctuation">,</span> including<span class="token operator">:</span>
     <span class="token keyword">private</span> <span class="token keyword">int</span> upgradeStatus<span class="token punctuation">;</span><span class="token comment">// upgrade status (0: no new version 1: new version available 2: upgrading)</span>
@@ -788,7 +815,7 @@ iTuyaOta<span class="token punctuation">.</span><span class="token function">set
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Firmware upgrade","level":"1.8.2","depth":2,"next":{"title":"Data Model","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]},"previous":{"title":"Device Control","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/OTA.md","mtime":"2018-12-28T07:35:06.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T13:18:00.707Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Firmware upgrade","level":"1.8.2","depth":2,"next":{"title":"Data Model","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]},"previous":{"title":"Device Control","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/OTA.md","mtime":"2019-01-16T01:59:49.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-22T03:21:12.524Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -803,10 +830,6 @@ iTuyaOta<span class="token punctuation">.</span><span class="token function">set
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
