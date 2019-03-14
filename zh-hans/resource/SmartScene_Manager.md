@@ -1105,6 +1105,37 @@ TuyaHomeSdk.getSceneManagerInstance().sortSceneList(
         }
 });
 ```
+### 场景图片获取
+
+##### 【描述】
+
+获取场景背景图片列表
+
+##### 【方法原型】
+
+```java
+/**
+* 获取场景背景图片列表
+* @param callback 回调
+*/
+ void getSceneBgs(ITuyaResultCallback<ArrayList<String>> callback);
+```
+
+##### 【代码范例】
+
+```java
+TuyaHomeSdk.getSceneManagerInstance().getSceneBgs(new ITuyaResultCallback<ArrayList<String>>() {
+        @Override
+        public void onSuccess(ArrayList<String> strings) {
+            
+        }
+
+        @Override
+        public void onError(String s, String s1) {
+
+        }
+    });
+```
 
 ### 销毁
 

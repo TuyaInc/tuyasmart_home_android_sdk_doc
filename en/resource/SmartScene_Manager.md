@@ -289,6 +289,7 @@ public static TimerRule newInstance(String timeZoneId,String loops,String time,S
 
  )
 
+
 ```
 
 ### Obtain condition list
@@ -1036,6 +1037,39 @@ TuyaHomeSdk.getSceneManagerInstance().sortSceneList(
 
 });
 ```
+### Scene Background Images
+
+**[Description]**
+
+Get scene background images
+
+
+**[Method Prototype]**
+
+```java
+/**
+* 
+* @param callback callback
+*/
+ void getSceneBgs(ITuyaResultCallback<ArrayList<String>> callback);
+```
+
+**[Example Codes]**
+
+```java
+TuyaHomeSdk.getSceneManagerInstance().getSceneBgs(new ITuyaResultCallback<ArrayList<String>>() {
+        @Override
+        public void onSuccess(ArrayList<String> strings) {
+            
+        }
+
+        @Override
+        public void onError(String s, String s1) {
+
+        }
+    });
+```
+
 ### Erase
 
 **[Description]**

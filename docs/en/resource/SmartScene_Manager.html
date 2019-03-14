@@ -1605,6 +1605,29 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h3 id="scene-background-images"><a name="scene-background-images" class="plugin-anchor" href="#scene-background-images"><i class="fa fa-link" aria-hidden="true"></i></a>Scene Background Images</h3>
+<p><strong>[Description]</strong></p>
+<p>Get scene background images</p>
+<p><strong>[Method Prototype]</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* 
+* @param callback callback
+*/</span>
+ <span class="token keyword">void</span> <span class="token function">getSceneBgs</span><span class="token punctuation">(</span>ITuyaResultCallback<span class="token operator">&lt;</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>[Example Codes]</strong></p>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSceneBgs</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> strings<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String s<span class="token punctuation">,</span> String s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <h3 id="erase"><a name="erase" class="plugin-anchor" href="#erase"><i class="fa fa-link" aria-hidden="true"></i></a>Erase</h3>
 <p><strong>[Description]</strong></p>
 <p>If the user exits the activity of the scene, the scene destruction method should be invoked to reclaim the memory and enhance the experience.</p>
@@ -1651,7 +1674,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Smart scene","level":"1.12.1","depth":2,"next":{"title":"Message Center","level":"1.13","depth":1,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"previous":{"title":"Smart scene","level":"1.12","depth":1,"ref":"","articles":[{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2018-12-26T13:28:31.224Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-24T12:23:58.284Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Smart scene","level":"1.12.1","depth":2,"next":{"title":"Message Center","level":"1.13","depth":1,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"previous":{"title":"Smart scene","level":"1.12","depth":1,"ref":"","articles":[{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2019-03-14T11:30:13.553Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-14T12:08:06.696Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

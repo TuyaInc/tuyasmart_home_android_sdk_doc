@@ -20,7 +20,7 @@ defaultConfig {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
         implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:2.9.3'
+        implementation 'com.tuya.smart:tuyasmart:3.0.0'
     }
     
 repositories {
@@ -31,11 +31,22 @@ repositories {
 
 ```
 
+
 **[Note]**
 
 The Tuya Smart sdk solely supports the platform of armeabi-v7a and x86 architecture by default. Developer may refer to the [GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs) if you need other platforms. 
 
-### (3) Set the AndroidManifest.xml
+### (3) Integrated security image
+
+Click the download button to download the security image.
+
+![](./images/download_t_s.png)
+
+Rename the downloaded security image to "t_s.bmp" and move it to the assets/ folder in the project directory.
+
+![](./images/addt_s.png)
+
+### (4) Set the AndroidManifest.xml
 
 Set appkey and appSecret in the AndroidManifest.xml file, and configure corresponding permissions, etc.
 
@@ -43,12 +54,12 @@ Set appkey and appSecret in the AndroidManifest.xml file, and configure correspo
 
 <meta-data
 	android:name="TUYA_SMART_APPKEY"
-	android:value="App id" />
+	android:value="Appkey" />
 <meta-data
 	android:name="TUYA_SMART_SECRET"
-	android:value="App key" />
+	android:value="AppSecret" />
 ```
-### (4) Aliasing Configuration
+### (5) Aliasing Configuration
 
 Arrange aliasing configuration in corresponding proguard-rules.pro files. 
 
@@ -152,4 +163,3 @@ In the debug mode, you can enable the sdk log switch to view more log informatio
 ```java
 TuyaHomeSdk.setDebugMode(true);
 ```
-

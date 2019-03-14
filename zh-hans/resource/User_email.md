@@ -14,14 +14,13 @@
 void getRegisterEmailValidateCode(String countryCode, String email, IResultCallback callback);
 
 /**
-* 手机密码注册
+* 邮箱密码注册
 * @param countryCode 国家区号
-* @param phone       手机号码
+* @param email       邮箱账户
 * @param passwd      登陆密码
-* @param code        手机验证码
-* @param callback    手机密码注册回调接口
+* @param callback    邮箱注册回调接口
 */
-TuyaHomeSdk.getUserInstance().registerAccountWithPhone(final String countryCode, final String phone, final String passwd, final String code, final IRegisterCallback callback);
+TuyaHomeSdk.getUserInstance().registerAccountWithEmail(final String countryCode, final String email, final String passwd, final IRegisterCallback callback);
 ```
 **代码范例**
 

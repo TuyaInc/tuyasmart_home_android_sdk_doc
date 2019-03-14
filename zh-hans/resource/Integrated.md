@@ -1,12 +1,11 @@
 # 集成SDK
-## 集成准备
 ### 一、创建工程
 
 在Android Studio中建立你的工程。
 
 ### 二、build.gradle 配置
 
-build.gradle 文件里添加如下配置
+build.gradle 文件里添加集成准备中下载的dependencies 依赖库。
 
 ```groovy
 defaultConfig {
@@ -18,10 +17,10 @@ defaultConfig {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
         implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:2.9.3'
+        implementation 'com.tuya.smart:tuyasmart:3.0.0'
     }
     
-repositories 
+repositories {
     mavenLocal()
     jcenter()
     google()
@@ -31,23 +30,37 @@ repositories
 
 
 > 【注意事项】
->涂鸦智能sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs)获取
+> 涂鸦智能sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs)获取
 
-### 三、AndroidManifest.xml 设置
+### 三、集成安全图片
+
+点击"下载安全图片" ——"安全图片下载" 下载安全图片。
+
+![](./images/download_t_s.png)
+
+![](./images/download_t_s_1.png)
+
+在集成准备中点击“下载安全图片”。将下载的安全图片命名为“t_s.bmp”，放置到工程目录的assets/文件夹下。
+
+![](./images/addt_s.png)
+
+
+
+### 四、AndroidManifest.xml 设置Appkey和AppSecret
 
 在AndroidManifest.xml文件里配置appkey和appSecret，在配置相应的权限等
 
 ```xml
 <meta-data
 android:name="TUYA_SMART_APPKEY"
-android:value="应用id" />
+android:value="应用Appkey" />
 <meta-data
 android:name="TUYA_SMART_SECRET"
-android:value="应用密钥" />
+android:value="应用密钥AppSecret" />
 
 ```
 
-### 四、混淆配置
+### 五、混淆配置
 
 在proguard-rules.pro文件配置相应混淆配置
 
@@ -109,7 +122,3 @@ TuyaHomeSdk.onDestroy();
 ```java
 TuyaHomeSdk.setDebugMode(true);
 ```
-
-
-
-

@@ -22,7 +22,7 @@ After Umeng has been ensured to integrate into the project, the user id is set t
 * @param ALIAS_TYPE		fill in"TUYA_SMART"
 
 */
-mPushAgent.addAlias("zhangsan@sina.com", "TUYA_SMART", new UTrack.ICallBack() {
+mPushAgent.setAlias("zhangsan@sina.com", "TUYA_SMART", new UTrack.ICallBack() {
      @Override
      public void onMessage(boolean isSuccess, String message) {
 
