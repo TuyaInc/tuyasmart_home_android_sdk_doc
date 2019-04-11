@@ -5,7 +5,7 @@
 * [集成准备](./resource/Preparation.md)
 * [集成SDK](./resource/Integrated.md)
 * [用户管理](./resource/User.md)
-  * [1系列SDK账户迁移](./resource/User_sdk_update.md)
+  * [SDK账户升级](./resource/User_sdk_update.md)
   * [手机帐号](./resource/User_mobile.md)
   * [邮箱帐号](./resource/User_email.md)
   * [用户uid登陆体系](./resource/User_uid.md)
@@ -29,6 +29,7 @@
   * [设备控制](./resource/Device.md)
   * [固件升级](./resource/OTA.md)
   * [设备数据流通道](./resource/Device_Data_Channel.md)
+  * [获取数据点的历史统计数据](./resource/Device.md#获取数据点的历史统计数据)
 * [共享设备](./resource/Shared.md)
 
   * [添加共享](./resource/Shared_Device_add.md)

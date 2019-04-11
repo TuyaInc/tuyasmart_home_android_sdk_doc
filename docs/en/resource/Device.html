@@ -162,7 +162,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    Migration of a Series of SDK Accounts
+                    SDK account upgrade
             
                 </a>
             
@@ -428,6 +428,19 @@
             
                     
                     Data Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Device.html">
+            
+                <a href="Device.html#get-historical-statistics-of-dp">
+            
+                    
+                    Get historical statistics of DP
             
                 </a>
             
@@ -1058,6 +1071,43 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
 </tr>
 </tbody>
 </table>
+<h4 id="get-historical-statistics-of-dp"><a name="get-historical-statistics-of-dp" class="plugin-anchor" href="#get-historical-statistics-of-dp"><i class="fa fa-link" aria-hidden="true"></i></a>Get historical statistics of DP</h4>
+<h5 id="get-historical-statistics-of-dp-such-as-battery-statistics-and-other-information"><a name="get-historical-statistics-of-dp-such-as-battery-statistics-and-other-information" class="plugin-anchor" href="#get-historical-statistics-of-dp-such-as-battery-statistics-and-other-information"><i class="fa fa-link" aria-hidden="true"></i></a>Get historical statistics of DP such as battery statistics and other information.</h5>
+<h4 id="get-all-historical-statistics-of-dp"><a name="get-all-historical-statistics-of-dp" class="plugin-anchor" href="#get-all-historical-statistics-of-dp"><i class="fa fa-link" aria-hidden="true"></i></a>Get all historical statistics of DP</h4>
+<pre class="language-"><code class="lang-java">Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;devId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;your_devId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;dpId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;your_device_dpId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getRequestInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestWithApiName</span><span class="token punctuation">(</span><span class="token string">&quot;m.smart.dp.his.stat.get.all&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span> map<span class="token punctuation">,</span> JSONObject<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>JSONObject<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>JSONObject jsonObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String s<span class="token punctuation">,</span> String s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="get-historical-statistics-of-dp-for-one-month"><a name="get-historical-statistics-of-dp-for-one-month" class="plugin-anchor" href="#get-historical-statistics-of-dp-for-one-month"><i class="fa fa-link" aria-hidden="true"></i></a>Get historical statistics of DP for one month</h4>
+<pre class="language-"><code class="lang-java">Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;devId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;your_devId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;month&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;201809&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;dpId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;your_device_dpId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getRequestInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestWithApiName</span><span class="token punctuation">(</span><span class="token string">&quot;m.smart.dp.his.stat.get.month&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span> map<span class="token punctuation">,</span> JSONObject<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>JSONObject<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>JSONObject jsonObject<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String s<span class="token punctuation">,</span> String s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -1097,7 +1147,7 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.8.1","depth":2,"next":{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},"previous":{"title":"Device Control","level":"1.8","depth":1,"ref":"","articles":[{"title":"Device Control","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"Data Model","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Device.md","mtime":"2019-03-12T02:03:54.257Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-16T02:03:08.677Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.8.1","depth":2,"next":{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},"previous":{"title":"Device Control","level":"1.8","depth":1,"ref":"","articles":[{"title":"Device Control","level":"1.8.1","depth":2,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[]},{"title":"Firmware upgrade","level":"1.8.2","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"Data Model","level":"1.8.3","depth":2,"path":"resource/Device_Data_Channel.md","ref":"./resource/Device_Data_Channel.md","articles":[]},{"title":"Get historical statistics of DP","level":"1.8.4","depth":2,"anchor":"#get-historical-statistics-of-dp","path":"resource/Device.md","ref":"./resource/Device.md#get-historical-statistics-of-dp","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Device.md","mtime":"2019-04-11T11:48:52.517Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-11T11:52:47.694Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
