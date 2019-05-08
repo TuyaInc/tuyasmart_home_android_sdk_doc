@@ -767,6 +767,11 @@
 <td>String</td>
 <td>&#x6210;&#x5458;&#x552F;&#x4E00;&#x6807;&#x8BC6;id</td>
 </tr>
+<tr>
+<td>memberStatus</td>
+<td>int</td>
+<td>&#x6210;&#x5458;&#x72B6;&#x6001; &#xFF08;1:&#x7B49;&#x5F85;&#x63A5;&#x53D7; 2:&#x63A5;&#x53D7; 3:&#x62D2;&#x7EDD;&#xFF09;</td>
+</tr>
 </tbody>
 </table>
 <h4 id="home&#x4E0B;&#x9762;&#x6DFB;&#x52A0;&#x6210;&#x5458;"><a name="home&#x4E0B;&#x9762;&#x6DFB;&#x52A0;&#x6210;&#x5458;" class="plugin-anchor" href="#home&#x4E0B;&#x9762;&#x6DFB;&#x52A0;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a>Home&#x4E0B;&#x9762;&#x6DFB;&#x52A0;&#x6210;&#x5458;</h4>
@@ -806,6 +811,15 @@
  * @param callback
 */</span>
 <span class="token keyword">void</span> <span class="token function">queryMemberList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span>ITuyaGetMemberListCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x63A5;&#x53D7;&#x6216;&#x8005;&#x62D2;&#x7EDD;&#x5BB6;&#x5EAD;&#x9080;&#x8BF7;"><a name="&#x63A5;&#x53D7;&#x6216;&#x8005;&#x62D2;&#x7EDD;&#x5BB6;&#x5EAD;&#x9080;&#x8BF7;" class="plugin-anchor" href="#&#x63A5;&#x53D7;&#x6216;&#x8005;&#x62D2;&#x7EDD;&#x5BB6;&#x5EAD;&#x9080;&#x8BF7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53D7;&#x6216;&#x8005;&#x62D2;&#x7EDD;&#x5BB6;&#x5EAD;&#x9080;&#x8BF7;</h4>
+<pre class="language-"><code class="lang-java"> <span class="token comment">/**
+ * &#x63A5;&#x53D7;&#x6216;&#x62D2;&#x7EDD;&#x52A0;&#x2F0A;&#x5165;&#x5BB6;&#x5EAD;
+ * @param homeId    &#x5BB6;&#x5EAD;Id
+ * @param action    &#x63A5;&#x53D7;/&#x62D2;&#x7EDD;
+ * @param callBack
+*/</span>
+<span class="token keyword">void</span> <span class="token function">processInvitation</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> action<span class="token punctuation">,</span> <span class="token keyword">final</span> IResultCallback callBack<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                                 
@@ -850,7 +864,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"家庭成员管理","level":"1.6.3","depth":2,"next":{"title":"家庭房间管理","level":"1.6.4","depth":2,"path":"resource/Room.md","ref":"./resource/Room.md","articles":[]},"previous":{"title":"家庭操作","level":"1.6.2","depth":2,"path":"resource/HomeOption.md","ref":"./resource/HomeOption.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/HomeMember.md","mtime":"2019-03-12T02:03:54.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-11T11:52:47.694Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"家庭成员管理","level":"1.6.3","depth":2,"next":{"title":"家庭房间管理","level":"1.6.4","depth":2,"path":"resource/Room.md","ref":"./resource/Room.md","articles":[]},"previous":{"title":"家庭操作","level":"1.6.2","depth":2,"path":"resource/HomeOption.md","ref":"./resource/HomeOption.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/HomeMember.md","mtime":"2019-05-07T09:38:00.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-07T09:50:22.183Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -865,6 +879,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

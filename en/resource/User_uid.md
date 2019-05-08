@@ -73,7 +73,7 @@ TuyaHomeSdk.getUserInstance().loginWithUid("86", "1234", "123456", new ILoginCal
 
 **[Description]**
 
-The user uid password resetting requires Cloud-Cloud connection. Please refer to the Cloud API documents for details.
+The user uid password resetting requires Cloud-Cloud connection. Please refer to the Cloud API documents for details.[https://docs.tuya.com/en/openapi/api/post_apps.schema.user_1.0.html](<https://docs.tuya.com/en/openapi/api/post_apps.schema.user_1.0.html>)
 
 ## (4) User uid Login Interface and Registration Interface
 

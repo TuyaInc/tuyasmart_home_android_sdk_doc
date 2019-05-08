@@ -17,6 +17,7 @@ ITuyaHomeManager 提供了创建家庭、获取家庭列表以及监听家庭相
 | meshList | List&lt;BlueMeshBean&gt; |网关设备 |
 | sharedDeviceList | List&lt;DeviceBean&gt; |收到的共享设备 |
 | sharedGroupList | List&lt;GroupBean&gt; |收到的共享群组|
+| homeStatus | int | 家庭状态（1:等待接受 2:接受 3:拒绝）|
 
 #### 创建家庭
 
@@ -81,6 +82,13 @@ public interface ITuyaHomeChangeListener {
      */
     void onHomeAdded(long homeId);
 
+    /**
+     * 家庭邀请
+     * @param homeId    家庭ID
+     * @param homeName  家庭名称
+     */
+    void onHomeInvite(long homeId,String homeName);
+    
     /**
      * 家庭删除成功
      * 用于多设备数据同步

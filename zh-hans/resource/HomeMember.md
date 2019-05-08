@@ -13,6 +13,7 @@ ITuyaHomeMember提供了家庭成员管理接口，包括添加、删除成员�
 | headPic | String | 头像url地址 |
 | account | String  | 成员账户名称 |
 | uid | String | 成员唯一标识id |
+| memberStatus | int| 成员状态 （1:等待接受 2:接受 3:拒绝）|
 
 #### Home下面添加成员
 
@@ -62,4 +63,16 @@ void updateMember(long memberId,String name, boolean admin, IResultCallback call
  * @param callback
 */
 void queryMemberList(long homeId,ITuyaGetMemberListCallback callback);
+```
+
+#### 接受或者拒绝家庭邀请
+
+```java
+ /**
+ * 接受或拒绝加⼊入家庭
+ * @param homeId    家庭Id
+ * @param action    接受/拒绝
+ * @param callBack
+*/
+void processInvitation(long homeId, boolean action, final IResultCallback callBack);
 ```

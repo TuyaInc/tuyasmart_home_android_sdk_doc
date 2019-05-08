@@ -64,7 +64,7 @@ TuyaHomeSdk.getUserInstance().loginWithUid("86", "1234", "123456", new ILoginCal
 ## 三、用户uid重置密码
 用户uid重置密码，需要通过云云对接的方式进行重置密码。详看云端API文档
 
-
+[https://docs.tuya.com/cn/openapi/api/post_apps.schema.user_1.0.html](https://docs.tuya.com/cn/openapi/api/post_apps.schema.user_1.0.html)
 
 ## 四、用户uid登陆注册接口
 **接口描述**

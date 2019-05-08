@@ -12,6 +12,7 @@ The ITuyaHomeMember provides the family member management interfaces including a
 | headPic | String | Directory of account picture|
 | account | String  | AccountName of member |
 | uid | String | Unique id of member |
+| memberStatus | int| The member status （1:to be accepted 2:accepted 3:reject）|
 
 ## Add Members in a Home
 ```java
@@ -55,4 +56,16 @@ void updateMember(long memberId,String name, boolean admin, IResultCallback call
 * @param callback
 */
 void queryMemberList(long homeId,ITuyaGetMemberListCallback callback);
+```
+
+## To accept or reject family invitation
+
+```java
+ /**
+ * To accept or reject family invitation
+ * @param homeId    
+ * @param action    true:accept,false:reject
+ * @param callBack
+*/
+void processInvitation(long homeId, boolean action, final IResultCallback callBack);
 ```

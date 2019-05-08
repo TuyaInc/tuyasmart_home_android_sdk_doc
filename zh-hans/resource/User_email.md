@@ -18,9 +18,11 @@ void getRegisterEmailValidateCode(String countryCode, String email, IResultCallb
 * @param countryCode 国家区号
 * @param email       邮箱账户
 * @param passwd      登陆密码
+* @param code        验证码
 * @param callback    邮箱注册回调接口
 */
-TuyaHomeSdk.getUserInstance().registerAccountWithEmail(final String countryCode, final String email, final String passwd, final IRegisterCallback callback);
+TuyaHomeSdk.getUserInstance().registerAccountWithEmail(final String countryCode, final String email, final String passwd, final String code, final IRegisterCallback callback);
+
 ```
 **代码范例**
 

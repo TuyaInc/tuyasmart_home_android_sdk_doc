@@ -17,6 +17,7 @@ The ITuyaHomeManager provides changes related to creating home, obtaining the ho
 | meshList | List&lt;BlueMeshBean&gt; |All of the mesh devices |
 | sharedDeviceList | List&lt;DeviceBean&gt;|Shared devices received |
 | sharedGroupList | List&lt;GroupBean&gt; |Shared groups received |
+| homeStatus | int| The home status （1:to be accepted 2:accepted 3:reject）|
     
 ## Create Home
 
@@ -74,6 +75,14 @@ public interface ITuyaHomeChangeListener {
     * @param homeId
     */
     void onHomeAdded(long homeId);
+   
+    /**
+     * Receive the family invitation 
+     * @param homeId    
+     * @param homeName  
+     */
+    void onHomeInvite(long homeId,String homeName);
+
     /**
     * Removing home succeeds Used for data decarbonization of multiple devices
     *
