@@ -685,11 +685,11 @@
 <p>It is used to provide a communication channel between users and businesses/developers.</p>
 <p>ITuyaFeedbackManager is classified into a feedback management class, and provides interfaces like adding feedback and obtaining feedback lists. Invoked method: </p>
 <pre class="language-"><code class="lang-java">
-ITuyaFeedbackManager <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token class-name">ITuyaFeedbackManager</span> <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p>ITuyaFeedbackMag is classified as a feedback management class for some conversation, and also provides new feedback and obtain a list of messages from the current conversation. Invoked method:</p>
 <pre class="language-"><code class="lang-java">
-ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackMsg</span><span class="token punctuation">(</span>String hdId<span class="token punctuation">,</span> <span class="token keyword">int</span> hdType<span class="token punctuation">)</span>
+<span class="token class-name">ITuyaFeedbackMag</span> <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackMsg</span><span class="token punctuation">(</span><span class="token class-name">String</span> hdId<span class="token punctuation">,</span> <span class="token keyword">int</span> hdType<span class="token punctuation">)</span>
 </code></pre>
 <h2 id="obtain-feedback-list"><a name="obtain-feedback-list" class="plugin-anchor" href="#obtain-feedback-list"><i class="fa fa-link" aria-hidden="true"></i></a>Obtain feedback list</h2>
 <p><strong>[Description]</strong></p>
@@ -700,7 +700,7 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  *
  * @param callback
  */</span>
-<span class="token keyword">void</span> <span class="token function">getFeedbackList</span><span class="token punctuation">(</span><span class="token keyword">final</span> ITuyaDataCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getFeedbackList</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Among, FeedbackBean class provides the following interfaces:</p>
 <pre class="language-"><code class="lang-java">
@@ -709,7 +709,7 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  * 
  * @return date and time
  */</span>
-<span class="token keyword">public</span> String <span class="token function">getDateTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDateTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> dateTime<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -718,7 +718,7 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  *
  * @return Feedback content 
  */</span> 
-<span class="token keyword">public</span> String <span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> content<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -727,7 +727,7 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  *
  * @return Feedback category id
  */</span>
-<span class="token keyword">public</span> String <span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> hdId<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -747,7 +747,7 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  * @return category title
  */</span>
 
-<span class="token keyword">public</span> String <span class="token function">getTitle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getTitle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> title<span class="token punctuation">;</span>
 
 <span class="token punctuation">}</span>
@@ -759,7 +759,7 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  *
  * @return Feedback class id
  */</span>
-<span class="token keyword">public</span> String <span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> hdId<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -779,17 +779,17 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  *
  * @return class title
  */</span>
-<span class="token keyword">public</span> String <span class="token function">getTitle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getTitle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> title<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackBean<span class="token punctuation">&gt;</span></span> feedbackTalkBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackBean</span><span class="token punctuation">&gt;</span></span> feedbackTalkBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -802,31 +802,31 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  *
  * @param callback
  */</span>
-<span class="token keyword">void</span> <span class="token function">getFeedbackType</span><span class="token punctuation">(</span><span class="token keyword">final</span> ITuyaDataCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackTypeRespBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getFeedbackType</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackTypeRespBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Among, FeedbackTypeRespBean class provides the following interfaces:</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
  * Obtain a list of feedback type (device list and other lists)
  * @return class list
  */</span>
-<span class="token keyword">public</span> ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackTypeBean<span class="token punctuation">&gt;</span></span> <span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackTypeBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> list<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment">/**
  * Obtain list category (Currently, only device and other lists are available)
  * @return list category
  */</span>
-<span class="token keyword">public</span> String <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> type<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackType</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackTypeRespBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackType</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackTypeRespBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackTypeRespBean<span class="token punctuation">&gt;</span></span> feedbackTypeRespBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackTypeRespBean</span><span class="token punctuation">&gt;</span></span> feedbackTypeRespBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
      <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -845,29 +845,29 @@ ITuyaFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="t
  * @param callback
  */</span>
 
-<span class="token keyword">void</span> <span class="token function">addFeedback</span><span class="token punctuation">(</span><span class="token keyword">final</span> String message<span class="token punctuation">,</span>String contact<span class="token punctuation">,</span> String hdId<span class="token punctuation">,</span> <span class="token keyword">int</span> hdType<span class="token punctuation">,</span> <span class="token keyword">final</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackMsgBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">addFeedback</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> message<span class="token punctuation">,</span><span class="token class-name">String</span> contact<span class="token punctuation">,</span> <span class="token class-name">String</span> hdId<span class="token punctuation">,</span> <span class="token keyword">int</span> hdType<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Note hdId, hdTypevariable can be obtained from the FeedbackTypeBean class fed back by<a href="https://github.com/TuyaInc/tuyasmart_home_android_sdk/blob/master/TuyaSmartHomeSdkDemo/doc" target="_blank"> Obtain a List of Feedback Type</a> interface.</p>
 <p><strong>[Example Codes]</strong></p>
 <pre class="language-"><code class="lang-java">
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addFeedback</span><span class="token punctuation">(</span>
-     &#x201C;Thedevice fails &quot;<span class="token punctuation">,</span> <span class="token comment">//feedback</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addFeedback</span><span class="token punctuation">(</span>
+     &#x201C;<span class="token class-name">Thedevice</span> fails &quot;<span class="token punctuation">,</span> <span class="token comment">//feedback</span>
      <span class="token string">&quot;abc@qq.com&quot;</span><span class="token punctuation">,</span>
      feebackTypeBean<span class="token punctuation">.</span><span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
      feebackTypeBean<span class="token punctuation">.</span><span class="token function">getHdType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
-     <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackMsgBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
          <span class="token annotation punctuation">@Override</span>
-         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>FeedbackMsgBean feedbackMsgBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">FeedbackMsgBean</span> feedbackMsgBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
          <span class="token punctuation">}</span>
          <span class="token annotation punctuation">@Override</span>
-         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
          <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="message-management-feedback"><a name="message-management-feedback" class="plugin-anchor" href="#message-management-feedback"><i class="fa fa-link" aria-hidden="true"></i></a>Message management feedback</h2>
 <p>From the feedback list fed by<a href="https://github.com/TuyaInc/tuyasmart_home_android_sdk/blob/master/TuyaSmartHomeSdkDemo/doc/tuyahome.md#%23%23" target="_blank">Obtain Feedback List</a>interface, Each feedback object corresponds to a group of messages (conversations). Please use parameters of FeedbackBean object fed back by the interface to invoke TuyaHomeSdk.getTuyaFeekback().getFeedbackMsg(String hdId, int hdType) for initializing the message management class.</p>
 <p>For example:</p>
-<pre class="language-"><code class="lang-java">ITuyaFeedbackMag mFeedbackMag <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackMsg</span><span class="token punctuation">(</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaFeedbackMag</span> mFeedbackMag <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackMsg</span><span class="token punctuation">(</span>
      feedbackBean<span class="token punctuation">.</span><span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
      feedbackBean<span class="token punctuation">.</span><span class="token function">getHdType</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -877,7 +877,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
  *  Obtain message content
  * @return Message content 
  */</span>
-<span class="token keyword">public</span> String <span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> content<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -901,7 +901,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
  *
  * @return Feedback category id
  */</span>
-<span class="token keyword">public</span> String <span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> hdId<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -925,15 +925,15 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
  *  @param callback callback
  */</span>
 
-<span class="token keyword">void</span> <span class="token function">getMsgList</span><span class="token punctuation">(</span>ITuyaDataCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackMsgBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getMsgList</span><span class="token punctuation">(</span><span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
-<pre class="language-"><code class="lang-java">mFeedbackMsg<span class="token punctuation">.</span><span class="token function">getMsgList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackMsgBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">mFeedbackMsg<span class="token punctuation">.</span><span class="token function">getMsgList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackMsgBean<span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -948,18 +948,18 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
  * @param contact  contact 
  * @param callback
  */</span>
-<span class="token keyword">void</span> <span class="token function">addMsg</span><span class="token punctuation">(</span>String msg<span class="token punctuation">,</span> String  contact<span class="token punctuation">,</span>ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackMsgBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">addMsg</span><span class="token punctuation">(</span><span class="token class-name">String</span> msg<span class="token punctuation">,</span> <span class="token class-name">String</span>  contact<span class="token punctuation">,</span><span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
 <pre class="language-"><code class="lang-java">mFeedbackMsg<span class="token punctuation">.</span><span class="token function">addMsg</span><span class="token punctuation">(</span>
-    &#x201C;Question feedback again<span class="token string">&quot;,&quot;</span>abc<span class="token annotation punctuation">@qq</span><span class="token punctuation">.</span>com&quot;<span class="token punctuation">,</span> 
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>FeedbackMsgBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    &#x201C;<span class="token class-name">Question</span> feedback again<span class="token string">&quot;,&quot;</span>abc<span class="token annotation punctuation">@qq</span><span class="token punctuation">.</span>com&quot;<span class="token punctuation">,</span> 
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>FeedbackMsgBean result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">FeedbackMsgBean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1006,7 +1006,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Feedback","level":"1.14","depth":1,"next":{"title":"Integrate Push","level":"1.15","depth":1,"path":"resource/Push.md","ref":"./resource/Push.md","articles":[]},"previous":{"title":"Message Center","level":"1.13","depth":1,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Feedback.md","mtime":"2019-03-12T02:03:54.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:11:59.422Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Feedback","level":"1.14","depth":1,"next":{"title":"Integrate Push","level":"1.15","depth":1,"path":"resource/Push.md","ref":"./resource/Push.md","articles":[]},"previous":{"title":"Message Center","level":"1.13","depth":1,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Feedback.md","mtime":"2019-03-12T02:03:54.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:29:05.138Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

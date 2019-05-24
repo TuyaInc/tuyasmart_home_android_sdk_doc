@@ -808,7 +808,7 @@
      * @param rooms    &#x623F;&#x95F4;&#x5217;&#x8868;
      * @param callback
      */</span>
-    <span class="token keyword">void</span> <span class="token function">createHome</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> String geoName<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> rooms<span class="token punctuation">,</span> ITuyaHomeResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">createHome</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> <span class="token class-name">String</span> geoName<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> rooms<span class="token punctuation">,</span> <span class="token class-name">ITuyaHomeResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x5217;&#x8868;"><a name="&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x5217;&#x8868;</h4>
 <pre class="language-"><code class="lang-java">
@@ -816,7 +816,7 @@
     *
     * @param callback
     */</span>
-    <span class="token keyword">void</span> <span class="token function">queryHomeList</span><span class="token punctuation">(</span>ITuyaGetHomeListCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">queryHomeList</span><span class="token punctuation">(</span><span class="token class-name">ITuyaGetHomeListCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;&#x7684;&#x53D8;&#x66F4;"><a name="&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;&#x7684;&#x53D8;&#x66F4;" class="plugin-anchor" href="#&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;&#x7684;&#x53D8;&#x66F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BB6;&#x5EAD;&#x4FE1;&#x606F;&#x7684;&#x53D8;&#x66F4;</h4>
 <p>1.&#x6CE8;&#x518C;&#x4E0E;&#x6CE8;&#x9500;&#x76D1;&#x542C;</p>
@@ -827,7 +827,7 @@
      *
      * @param listener
      */</span>
-    <span class="token keyword">void</span> <span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span>ITuyaHomeChangeListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token class-name">ITuyaHomeChangeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
     <span class="token comment">/**
@@ -835,7 +835,7 @@
      *
      * @param listener
      */</span>
-    <span class="token keyword">void</span> <span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span>ITuyaHomeChangeListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token class-name">ITuyaHomeChangeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>2.&#x4E8B;&#x4EF6;&#x6E05;&#x5355;</p>
 <pre class="language-"><code class="lang-java">
@@ -853,7 +853,7 @@
      * @param homeId    &#x5BB6;&#x5EAD;ID
      * @param homeName  &#x5BB6;&#x5EAD;&#x540D;&#x79F0;
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span>String homeName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span><span class="token class-name">String</span> homeName<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x5BB6;&#x5EAD;&#x5220;&#x9664;&#x6210;&#x529F;
@@ -877,7 +877,7 @@
      *
      * @param sharedDeviceList
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      *
@@ -899,7 +899,7 @@
      * @param homeId &#x5BB6;&#x5EAD;ID
      * @return List&lt;RoomBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>RoomBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeRoomList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RoomBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeRoomList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;
@@ -907,7 +907,7 @@
      * @param homeId &#x5BB6;&#x5EAD;ID
      * @return List&lt;DeviceBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x9762;&#x7684;&#x7FA4;&#x7EC4;&#x5217;&#x8868;
@@ -915,7 +915,7 @@
      * @param homeId &#x5BB6;&#x5EAD;ID
      * @return List&lt;DeviceBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;&#x7FA4;&#x7EC4;
@@ -923,7 +923,7 @@
      * @param groupId &#x7FA4;&#x7EC4;ID
      * @return GroupBean
      */</span>
-    GroupBean <span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">GroupBean</span> <span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;&#x8BBE;&#x5907;
@@ -931,7 +931,7 @@
      * @param devId &#x8BBE;&#x5907;ID
      * @return DeviceBean
      */</span>
-    DeviceBean <span class="token function">getDeviceBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">DeviceBean</span> <span class="token function">getDeviceBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x6839;&#x636E;&#x7FA4;&#x7EC4;ID&#x83B7;&#x53D6;&#x623F;&#x95F4;
@@ -939,7 +939,7 @@
      * @param groupId &#x7FA4;&#x7EC4;ID
      * @return RoomBean
      */</span>
-    RoomBean <span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">RoomBean</span> <span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;&#x623F;&#x95F4;
@@ -947,7 +947,7 @@
      * @param roomId &#x623F;&#x95F4;ID
      * @return RoomBean
      */</span>
-    RoomBean <span class="token function">getRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">RoomBean</span> <span class="token function">getRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x6839;&#x636E;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x623F;&#x95F4;&#x4FE1;&#x606F;
@@ -955,7 +955,7 @@
      * @param devId &#x8BBE;&#x5907;ID
      * @return RoomBean
      */</span>
-    RoomBean <span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">RoomBean</span> <span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;&#x7FA4;&#x7EC4;&#x4E0B;&#x9762;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;
@@ -963,7 +963,7 @@
      * @param groupId &#x7FA4;&#x7EC4;ID
      * @return List&lt;DeviceBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;mesh&#x4E0B;&#x9762;&#x7684;&#x7FA4;&#x7EC4;&#x5217;&#x8868;
@@ -971,14 +971,14 @@
      * @param meshId meshId
      * @return List&lt;GroupBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getMeshGroupList</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshGroupList</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;mesh&#x8BBE;&#x5907;&#x5217;&#x8868;
      * @param meshId 
      * @return List&lt;DeviceBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x6839;&#x636E;&#x623F;&#x95F4;ID&#x83B7;&#x53D6;&#x623F;&#x95F4;&#x4E0B;&#x9762;&#x7684;&#x8BBE;&#x5907;&#x5217;&#x8868;
@@ -986,7 +986,7 @@
      * @param roomId &#x623F;&#x95F4;ID
      * @return List&lt;DeviceBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x6839;&#x636E;&#x623F;&#x95F4;ID&#x83B7;&#x53D6;&#x623F;&#x95F4;&#x4E0B;&#x9762;&#x7684;&#x7FA4;&#x7EC4;&#x5217;&#x8868;
@@ -994,7 +994,7 @@
      * @param roomId &#x623F;&#x95F4;ID
      * @return List&lt;GroupBean&gt;
      */</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getRoomGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRoomGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * &#x83B7;&#x53D6;Home&#x6570;&#x636E;
@@ -1002,7 +1002,7 @@
      * @param homeId homeId
      * @return HomeBean
      */</span>
-    HomeBean <span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">HomeBean</span> <span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token punctuation">}</span>
 </code></pre>
@@ -1045,7 +1045,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"家庭管理","level":"1.6.1","depth":2,"next":{"title":"家庭操作","level":"1.6.2","depth":2,"path":"resource/HomeOption.md","ref":"./resource/HomeOption.md","articles":[]},"previous":{"title":"家庭管理","level":"1.6","depth":1,"ref":"","articles":[{"title":"家庭管理","level":"1.6.1","depth":2,"path":"resource/HomeManager.md","ref":"./resource/HomeManager.md","articles":[]},{"title":"家庭操作","level":"1.6.2","depth":2,"path":"resource/HomeOption.md","ref":"./resource/HomeOption.md","articles":[]},{"title":"家庭成员管理","level":"1.6.3","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},{"title":"家庭房间管理","level":"1.6.4","depth":2,"path":"resource/Room.md","ref":"./resource/Room.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/HomeManager.md","mtime":"2019-05-07T09:38:00.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:11:59.422Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"家庭管理","level":"1.6.1","depth":2,"next":{"title":"家庭操作","level":"1.6.2","depth":2,"path":"resource/HomeOption.md","ref":"./resource/HomeOption.md","articles":[]},"previous":{"title":"家庭管理","level":"1.6","depth":1,"ref":"","articles":[{"title":"家庭管理","level":"1.6.1","depth":2,"path":"resource/HomeManager.md","ref":"./resource/HomeManager.md","articles":[]},{"title":"家庭操作","level":"1.6.2","depth":2,"path":"resource/HomeOption.md","ref":"./resource/HomeOption.md","articles":[]},{"title":"家庭成员管理","level":"1.6.3","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},{"title":"家庭房间管理","level":"1.6.4","depth":2,"path":"resource/Room.md","ref":"./resource/Room.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/HomeManager.md","mtime":"2019-05-07T09:38:00.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:29:05.138Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
