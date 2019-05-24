@@ -17,7 +17,7 @@
 * 3.也可以使用涂鸦SDK中的方法获取唯一的id，PhoneUtil.getDeviceID(context),PhoneUtil位于com.tuya.smart.android.common.utils包中
 * @param ALIAS_TYPE		需要填"TUYA_SMART"
 */
-mPushAgent.addAlias("zhangsan@sina.com", "TUYA_SMART", new UTrack.ICallBack() {
+mPushAgent.addAlias("可以使用友盟获取的token", "TUYA_SMART", new UTrack.ICallBack() {
     @Override
     public void onMessage(boolean isSuccess, String message) {
     }
@@ -78,7 +78,7 @@ public class MyPushIntentService extends UmengMessageService {
 >说明
 > - msg.custom中的内容就是收到的推送信息
 > - msg.custom的具体协议格式：
->	custom=tuya://message?a=view&ct=${title}&cc=​${content}&p=>{}&link=tuyaSmart%3A%2F%2Fbrowser%3Furl%3Dhttp%253A%252F%252Fwww.baidu.com;
+>	custom=tuya://message?a=view&ct=${title}&cc=${content}&p=>{}&link=tuyaSmart%3A%2F%2Fbrowser%3Furl%3Dhttp%253A%252F%252Fwww.baidu.com;
 >- 通过PushBean.formatMessage()来对数据进行解析得到PushBean
 
 ### 用户解绑
