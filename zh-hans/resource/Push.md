@@ -17,7 +17,7 @@
 * 3.也可以使用涂鸦SDK中的方法获取唯一的id，PhoneUtil.getDeviceID(context),PhoneUtil位于com.tuya.smart.android.common.utils包中
 * @param ALIAS_TYPE		需要填"TUYA_SMART"
 */
-mPushAgent.addAlias("可以使用友盟获取的token", "TUYA_SMART", new UTrack.ICallBack() {
+mPushAgent.setAlias("可以使用友盟获取的token", "TUYA_SMART", new UTrack.ICallBack() {
     @Override
     public void onMessage(boolean isSuccess, String message) {
     }

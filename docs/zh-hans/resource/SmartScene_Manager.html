@@ -735,39 +735,39 @@
  * @param homeId &#x5BB6;&#x5EAD;Id
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getSceneList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span><span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getSceneList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span>ITuyaDataCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;&#xFF0C;<code>SceneBean</code>&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
  *  &#x83B7;&#x53D6;&#x573A;&#x666F;id
  * @return &#x573A;&#x666F;id
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> String <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token comment">/**
  *  &#x83B7;&#x53D6;&#x573A;&#x666F;&#x540D;&#x79F0;
  * @return &#x573A;&#x666F;&#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token comment">/**
  *  &#x83B7;&#x53D6;&#x573A;&#x666F;&#x6761;&#x4EF6; 
  * @return &#x573A;&#x666F;&#x6761;&#x4EF6;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneCondition</span><span class="token punctuation">&gt;</span></span> <span class="token function">getConditions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneCondition<span class="token punctuation">&gt;</span></span> <span class="token function">getConditions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 
 <span class="token comment">/**
  *  &#x83B7;&#x53D6;&#x573A;&#x666F;&#x4EFB;&#x52A1;
  * @return &#x573A;&#x666F;&#x4EFB;&#x52A1;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneTask</span><span class="token punctuation">&gt;</span></span> <span class="token function">getActions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneTask<span class="token punctuation">&gt;</span></span> <span class="token function">getActions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token comment">/**
  * &#x83B7;&#x53D6;&#x573A;&#x666F;id
  * @return &#x573A;&#x666F;id
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> String <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token comment">/**
  * &#x83B7;&#x53D6;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x7C7B;&#x578B;
@@ -783,13 +783,13 @@
 <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSceneList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSceneList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -807,10 +807,10 @@
      * @param rule  &#x6761;&#x4EF6;&#x89C4;&#x5219;
      * @return
      */</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SceneCondition</span> <span class="token function">createWeatherCondition</span><span class="token punctuation">(</span>
-        <span class="token class-name">PlaceFacadeBean</span> place<span class="token punctuation">,</span> 
-        <span class="token class-name">String</span> type<span class="token punctuation">,</span>
-        <span class="token class-name">Rule</span> rule<span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> SceneCondition <span class="token function">createWeatherCondition</span><span class="token punctuation">(</span>
+        PlaceFacadeBean place<span class="token punctuation">,</span> 
+        String type<span class="token punctuation">,</span>
+        Rule rule<span class="token punctuation">)</span>
 </code></pre>
 </li>
 </ul>
@@ -827,10 +827,10 @@
      * @param rule    &#x6761;&#x4EF6;&#x89C4;&#x5219;
      * @return
      */</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SceneCondition</span> <span class="token function">createDevCondition</span><span class="token punctuation">(</span>
-        <span class="token class-name">DeviceBean</span> devBean<span class="token punctuation">,</span>
-        <span class="token class-name">String</span> dpId<span class="token punctuation">,</span>
-        <span class="token class-name">Rule</span> rule<span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> SceneCondition <span class="token function">createDevCondition</span><span class="token punctuation">(</span>
+        DeviceBean devBean<span class="token punctuation">,</span>
+        String dpId<span class="token punctuation">,</span>
+        Rule rule<span class="token punctuation">)</span>
 </code></pre>
 </li>
 </ul>
@@ -846,7 +846,7 @@
     * @param rule  &#x6761;&#x4EF6;&#x89C4;&#x5219;
     * @return
     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SceneCondition</span> <span class="token function">createTimerCondition</span><span class="token punctuation">(</span><span class="token class-name">String</span> display<span class="token punctuation">,</span><span class="token class-name">String</span> name<span class="token punctuation">,</span><span class="token class-name">String</span> type<span class="token punctuation">,</span><span class="token class-name">Rule</span> rule<span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> SceneCondition <span class="token function">createTimerCondition</span><span class="token punctuation">(</span>String display<span class="token punctuation">,</span>String name<span class="token punctuation">,</span>String type<span class="token punctuation">,</span>Rule rule<span class="token punctuation">)</span>
 </code></pre>
 </li>
 </ul>
@@ -856,20 +856,20 @@
 <p>  &#x4EE5;&#x6E29;&#x5EA6;&#x4E3A;&#x4F8B;&#xFF0C;&#x6570;&#x503C;&#x578B;&#x6761;&#x4EF6;&#x7684;&#x6700;&#x7EC8;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&quot;temp &gt; 20&quot;&#x7684;&#x683C;&#x5F0F;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4ECE;&#x83B7;&#x53D6;&#x6761;&#x4EF6;&#x5217;&#x8868;&#x63A5;&#x53E3;&#x83B7;&#x5F97;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x6E29;&#x5EA6;&#x6700;&#x5927;&#x503C;&#x3001;&#x6700;&#x5C0F;&#x503C;&#x3001;&#x7C92;&#x5EA6;&#xFF08;&#x6B65;&#x8FDB;)&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4ECE;&#x83B7;&#x53D6;&#x6761;&#x4EF6;&#x5217;&#x8868;&#x83B7;&#x53D6;&#x652F;&#x6301;&#x7684;&#x6E29;&#x5EA6;&#x7B49;&#x3002;&#x5728;&#x7528;&#x6237;&#x754C;&#x9762;&#x4E0A;&#x5B8C;&#x6210;&#x914D;&#x7F6E;&#x540E;&#xFF0C; &#x8C03;&#x7528;<code>ValueRule.newInstance</code>&#x65B9;&#x6CD5;&#x6784;&#x5EFA;&#x89C4;&#x5219;&#xFF0C;&#x5E76;&#x7528;&#x89C4;&#x5219;&#x6784;&#x6210;&#x6761;&#x4EF6;&#x3002;</p>
 <p>  &#x4F8B;:</p>
 <pre class="language-"><code class="lang-java">
-    <span class="token class-name">ValueProperty</span> tempProperty <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">ValueProperty</span><span class="token punctuation">)</span> conditionListBean<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">//&#x6570;&#x503C;&#x578B;Property</span>
+    ValueProperty tempProperty <span class="token operator">=</span> <span class="token punctuation">(</span>ValueProperty<span class="token punctuation">)</span> conditionListBean<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">//&#x6570;&#x503C;&#x578B;Property</span>
 
     <span class="token keyword">int</span> max <span class="token operator">=</span> tempProperty<span class="token punctuation">.</span><span class="token function">getMax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">//&#x6700;&#x5927;&#x503C;</span>
     <span class="token keyword">int</span> min <span class="token operator">=</span> tempProperty<span class="token punctuation">.</span><span class="token function">getMin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">//&#x6700;&#x5C0F;&#x503C;</span>
     <span class="token keyword">int</span> step <span class="token operator">=</span> tempProperty<span class="token punctuation">.</span><span class="token function">getStep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">//&#x7C92;&#x5EA6;</span>
-    <span class="token class-name">String</span> unit <span class="token operator">=</span> tempProperty<span class="token punctuation">.</span><span class="token function">getUnit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x5355;&#x4F4D;</span>
+    String unit <span class="token operator">=</span> tempProperty<span class="token punctuation">.</span><span class="token function">getUnit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x5355;&#x4F4D;</span>
 
   <span class="token comment">//&#x6E29;&#x5EA6;&#x5927;&#x4E8E;20&#x5EA6;</span>
-    <span class="token class-name">ValueRule</span> tempRule <span class="token operator">=</span> <span class="token class-name">ValueRule</span><span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>
+    ValueRule tempRule <span class="token operator">=</span> ValueRule<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>
         <span class="token string">&quot;temp&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//&#x7C7B;&#x522B;</span>
         <span class="token string">&quot;&gt;&quot;</span><span class="token punctuation">,</span>     <span class="token comment">//&#x8FD0;&#x7B97;&#x89C4;&#x5219;(&quot;&gt;&quot;, &quot;==&quot;, &quot;&lt;&quot;)</span>
         <span class="token number">20</span>       <span class="token comment">//&#x4E34;&#x754C;&#x503C;</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span> 
-  <span class="token class-name">SceneCondition</span> tempCondition <span class="token operator">=</span> <span class="token class-name">SceneCondition</span><span class="token punctuation">.</span><span class="token function">createWeatherCondition</span><span class="token punctuation">(</span>
+  SceneCondition tempCondition <span class="token operator">=</span> SceneCondition<span class="token punctuation">.</span><span class="token function">createWeatherCondition</span><span class="token punctuation">(</span>
         placeFacadeBean<span class="token punctuation">,</span>   <span class="token comment">//&#x57CE;&#x5E02;</span>
         <span class="token string">&quot;temp&quot;</span><span class="token punctuation">,</span>            <span class="token comment">//&#x7C7B;&#x522B;</span>
         tempRule           <span class="token comment">//&#x89C4;&#x5219;</span>
@@ -881,7 +881,7 @@
 <li><p>&#x679A;&#x4E3E;&#x578B;</p>
 <p>  &#x4EE5;&#x5929;&#x6C14;&#x72B6;&#x51B5;&#x4E3A;&#x4F8B;, &#x679A;&#x4E3E;&#x578B;&#x6761;&#x4EF6;&#x7684;&#x6700;&#x7EC8;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&quot;condition == rainy&quot;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4ECE;&#x83B7;&#x53D6;&#x6761;&#x4EF6;&#x5217;&#x8868;&#x63A5;&#x53E3;&#x83B7;&#x5F97;&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x5929;&#x6C14;&#x72B6;&#x51B5;&#xFF0C;&#x5305;&#x62EC;&#x6BCF;&#x79CD;&#x5929;&#x6C14;&#x72B6;&#x51B5;&#x7684;code&#x548C;&#x540D;&#x79F0;&#x3002;&#x5728;&#x7528;&#x6237;&#x754C;&#x9762;&#x4E0A;&#x5B8C;&#x6210;&#x914D;&#x7F6E;&#x540E;&#xFF0C; &#x8C03;&#x7528;<code>EnumRule.newInstance</code>&#x65B9;&#x6CD5;&#x6784;&#x5EFA;&#x89C4;&#x5219;&#xFF0C;&#x5E76;&#x7528;&#x89C4;&#x5219;&#x6784;&#x6210;&#x6761;&#x4EF6;&#x3002;</p>
 <p>  &#x4F8B;:</p>
-<pre class="language-"><code class="lang-java">    <span class="token class-name">EnumProperty</span> weatherProperty <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">EnumProperty</span><span class="token punctuation">)</span> conditionListBean<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x679A;&#x4E3E;&#x578B;Property</span>
+<pre class="language-"><code class="lang-java">    EnumProperty weatherProperty <span class="token operator">=</span> <span class="token punctuation">(</span>EnumProperty<span class="token punctuation">)</span> conditionListBean<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x679A;&#x4E3E;&#x578B;Property</span>
 
     <span class="token comment">/** 
     {
@@ -889,14 +889,14 @@
        {&quot;rainy&quot;, &quot;&#x96E8;&#x5929;&quot;}
     } 
     */</span>
-    <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> enums <span class="token operator">=</span> weatherProperty<span class="token punctuation">.</span><span class="token function">getEnums</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>Object<span class="token punctuation">,</span> String<span class="token punctuation">&gt;</span></span> enums <span class="token operator">=</span> weatherProperty<span class="token punctuation">.</span><span class="token function">getEnums</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">//&#x5929;&#x6C14;&#x4E3A;&#x4E0B;&#x96E8;</span>
-  <span class="token class-name">EnumRule</span> enumRule <span class="token operator">=</span> <span class="token class-name">EnumRule</span><span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>
+  EnumRule enumRule <span class="token operator">=</span> EnumRule<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>
                 <span class="token string">&quot;condition&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//&#x7C7B;&#x522B; </span>
                 <span class="token string">&quot;rainy&quot;</span>        <span class="token comment">//&#x9009;&#x5B9A;&#x7684;&#x679A;&#x4E3E;&#x503C;</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">SceneCondition</span> weatherCondition <span class="token operator">=</span> <span class="token class-name">SceneCondition</span><span class="token punctuation">.</span><span class="token function">createWeatherCondition</span><span class="token punctuation">(</span>
+    SceneCondition weatherCondition <span class="token operator">=</span> SceneCondition<span class="token punctuation">.</span><span class="token function">createWeatherCondition</span><span class="token punctuation">(</span>
                 placeFacadeBean<span class="token punctuation">,</span>    <span class="token comment">//&#x57CE;&#x5E02;</span>
                 <span class="token string">&quot;condition&quot;</span><span class="token punctuation">,</span>        <span class="token comment">//&#x7C7B;&#x522B;</span>
                 enumRule            <span class="token comment">//&#x89C4;&#x5219;</span>
@@ -906,7 +906,7 @@
 <li><p>&#x5E03;&#x5C14;&#x578B;</p>
 <p>  &#x5E03;&#x5C14;&#x578B;&#x5E38;&#x89C1;&#x4E8E;&#x8BBE;&#x5907;&#x578B;&#x6761;&#x4EF6;, &#x6700;&#x7EC8;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&quot;dp1 == true&quot;&#x7684;&#x683C;&#x5F0F;, &#x60A8;&#x9700;&#x8981;&#x8C03;&#x7528;<a href="#GetConditionDeviceList">&#x83B7;&#x53D6;&#x6761;&#x4EF6;&#x8BBE;&#x5907;&#x5217;&#x8868;</a>&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x652F;&#x6301;&#x914D;&#x7F6E;&#x667A;&#x80FD;&#x573A;&#x666F;&#x7684;&#x8BBE;&#x5907;&#xFF0C; &#x7136;&#x540E;&#x6839;&#x636E;&#x8BBE;&#x5907;id&#x67E5;&#x8BE2;&#x8BE5;&#x8BBE;&#x5907;&#x53EF;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8BE6;&#x89C1;&#x83B7;&#x53D6;&#x8BBE;&#x5907;&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5728;&#x7528;&#x6237;&#x754C;&#x9762;&#x4E0A;&#x5B8C;&#x6210;&#x914D;&#x7F6E;&#x540E;&#xFF0C; &#x8C03;&#x7528;<code>BoolRule.newInstance</code>&#x65B9;&#x6CD5;&#x6784;&#x5EFA;&#x89C4;&#x5219;&#xFF0C;&#x5E76;&#x7528;&#x89C4;&#x5219;&#x6784;&#x6210;&#x6761;&#x4EF6;&#x3002;</p>
 <p>  &#x4F8B;:</p>
-<pre class="language-"><code class="lang-java">  <span class="token class-name">BoolProperty</span> devProperty <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">BoolProperty</span><span class="token punctuation">)</span> conditionListBean<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x5E03;&#x5C14;&#x578B;Property</span>
+<pre class="language-"><code class="lang-java">  BoolProperty devProperty <span class="token operator">=</span> <span class="token punctuation">(</span>BoolProperty<span class="token punctuation">)</span> conditionListBean<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x5E03;&#x5C14;&#x578B;Property</span>
 
   <span class="token comment">/**
   {
@@ -914,14 +914,14 @@
     {false, &quot;&#x5DF2;&#x5173;&#x95ED;&quot;}
   }
   */</span>
-  <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> boolMap <span class="token operator">=</span> devProperty<span class="token punctuation">.</span><span class="token function">getBoolMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>Boolean<span class="token punctuation">,</span> String<span class="token punctuation">&gt;</span></span> boolMap <span class="token operator">=</span> devProperty<span class="token punctuation">.</span><span class="token function">getBoolMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 
   <span class="token comment">//&#x5F53;&#x8BBE;&#x5907;&#x5F00;&#x542F;&#x65F6;</span>
-  <span class="token class-name">BoolRule</span> boolRule <span class="token operator">=</span> <span class="token class-name">BoolRule</span><span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>
+  BoolRule boolRule <span class="token operator">=</span> BoolRule<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>
       <span class="token string">&quot;dp1&quot;</span><span class="token punctuation">,</span>    <span class="token comment">//&quot;dp&quot; + dpId</span>
       <span class="token boolean">true</span>    <span class="token comment">//&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x7684;bool</span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token class-name">SceneCondition</span> devCondition <span class="token operator">=</span> <span class="token class-name">SceneCondition</span><span class="token punctuation">.</span><span class="token function">createDevCondition</span><span class="token punctuation">(</span>
+  SceneCondition devCondition <span class="token operator">=</span> SceneCondition<span class="token punctuation">.</span><span class="token function">createDevCondition</span><span class="token punctuation">(</span>
       devBean<span class="token punctuation">,</span>    <span class="token comment">//&#x8BBE;&#x5907;</span>
       <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>        <span class="token comment">//dpId</span>
       boolRule    <span class="token comment">//&#x89C4;&#x5219;</span>
@@ -934,7 +934,7 @@
 </li>
 </ul>
 <pre class="language-"><code class="lang-java">
-    <span class="token class-name">TimerProperty</span> timerProperty <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">TimerProperty</span><span class="token punctuation">)</span>conditionListBean<span class="token punctuation">.</span>
+    TimerProperty timerProperty <span class="token operator">=</span> <span class="token punctuation">(</span>TimerProperty<span class="token punctuation">)</span>conditionListBean<span class="token punctuation">.</span>
     <span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//&#x5B9A;&#x65F6;&#x578B;property</span>
 
     <span class="token comment">//TimerRule.newInstance &#x63D0;&#x4F9B;&#x4E24;&#x4E2A;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x533A;&#x522B;&#x662F;&#x662F;&#x5426;&#x4F20;&#x5165;&#x65F6;&#x533A;&#x3002;</span>
@@ -950,10 +950,10 @@
        * @param date &#x65E5;&#x671F;&#xFF0C;&#x683C;&#x5F0F;&#x4F8B;&#x5982;&quot;20180310&quot;
        * @return
        */</span>
-      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">TimerRule</span> <span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token class-name">String</span> timeZoneId<span class="token punctuation">,</span><span class="token class-name">String</span> loops<span class="token punctuation">,</span><span class="token class-name">String</span> time<span class="token punctuation">,</span><span class="token class-name">String</span> date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> TimerRule <span class="token function">newInstance</span><span class="token punctuation">(</span>String timeZoneId<span class="token punctuation">,</span>String loops<span class="token punctuation">,</span>String time<span class="token punctuation">,</span>String date<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
       <span class="token comment">//&#x6784;&#x5EFA;&#x5B9A;&#x65F6;&#x89C4;&#x5219;</span>
-      <span class="token class-name">TimerRule</span> timerRule <span class="token operator">=</span> <span class="token class-name">TimerRule</span><span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token string">&quot;Asia/Shanghai&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;0111110&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;16:00&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;20180310&quot;</span><span class="token punctuation">)</span>
+      TimerRule timerRule <span class="token operator">=</span> TimerRule<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token string">&quot;Asia/Shanghai&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;0111110&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;16:00&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;20180310&quot;</span><span class="token punctuation">)</span>
 
 
       <span class="token comment">/**
@@ -963,7 +963,7 @@
        * @param date
        * @return
        */</span>
-      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">TimerRule</span> <span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token class-name">String</span> loops<span class="token punctuation">,</span><span class="token class-name">String</span> time<span class="token punctuation">,</span><span class="token class-name">String</span> date<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> TimerRule <span class="token function">newInstance</span><span class="token punctuation">(</span>String loops<span class="token punctuation">,</span>String time<span class="token punctuation">,</span>String date<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
       <span class="token comment">/**
        * &#x521B;&#x5EFA;&#x5B9A;&#x65F6;&#x6761;&#x4EF6;
@@ -973,10 +973,10 @@
        * @param rule  &#x6761;&#x4EF6;&#x89C4;&#x5219;
        * @return
        */</span>
-      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SceneCondition</span> <span class="token function">createTimerCondition</span><span class="token punctuation">(</span><span class="token class-name">String</span> display<span class="token punctuation">,</span><span class="token class-name">String</span> name<span class="token punctuation">,</span><span class="token class-name">String</span> type<span class="token punctuation">,</span><span class="token class-name">Rule</span> rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> SceneCondition <span class="token function">createTimerCondition</span><span class="token punctuation">(</span>String display<span class="token punctuation">,</span>String name<span class="token punctuation">,</span>String type<span class="token punctuation">,</span>Rule rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
       <span class="token comment">//&#x521B;&#x5EFA;&#x5B9A;&#x65F6;&#x6761;&#x4EF6;,&#x4EE5;&#x4E0A;&#x9762;&#x6784;&#x5EFA;&#x7684;&#x5B9A;&#x65F6;&#x89C4;&#x5219;&#x4E3A;&#x4F8B;</span>
-      <span class="token class-name">SceneCondition</span><span class="token punctuation">.</span><span class="token function">createTimerCondition</span><span class="token punctuation">(</span>
+      SceneCondition<span class="token punctuation">.</span><span class="token function">createTimerCondition</span><span class="token punctuation">(</span>
       <span class="token string">&quot;&#x5468;&#x4E00;&#x5468;&#x4E8C;&#x5468;&#x4E09;&#x5468;&#x56DB;&#x5468;&#x4E94;&quot;</span><span class="token punctuation">,</span>
       <span class="token string">&quot;&#x5DE5;&#x4F5C;&#x65E5;&#x5B9A;&#x65F6;&quot;</span><span class="token punctuation">,</span>
       <span class="token string">&quot;timer&quot;</span><span class="token punctuation">,</span>
@@ -992,7 +992,7 @@
  * @param showFahrenheit &#x662F;&#x5426;&#x663E;&#x793A;&#x534E;&#x6C0F;&#x5EA6;
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">getConditionList</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> showFahrenheit<span class="token punctuation">,</span><span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">ConditionListBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getConditionList</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> showFahrenheit<span class="token punctuation">,</span>ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>ConditionListBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;&#xFF0C; <code>ConditionListBean</code>&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x4E3A;</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
@@ -1000,7 +1000,7 @@
  *
  * @return &#x7C7B;&#x522B; [1]
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> type<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>&#xB7;
 
@@ -1009,7 +1009,7 @@
  *
  * @return &#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> name<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1018,7 +1018,7 @@
  *
  * @return Property 
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">IProperty</span> <span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> IProperty <span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> property<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -1072,13 +1072,13 @@
 </table>
 <p>2&#x3001; Property&#x662F;&#x6D82;&#x9E26;&#x667A;&#x80FD;&#x4E2D;&#x4E00;&#x79CD;&#x5E38;&#x7528;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x63A7;&#x5236;&#x8BBE;&#x5907;&#x548C;&#x5176;&#x4ED6;&#x529F;&#x80FD;&#x3002;&#x76EE;&#x524D;&#x63D0;&#x4F9B;&#x56DB;&#x79CD;Property: &#x6570;&#x503C;&#x578B;&#xFF0C;&#x679A;&#x4E3E;&#x578B;&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x548C;&#x7528;&#x4E8E;&#x5B9A;&#x65F6;&#x7684;&#x7C7B;&#x578B;(&#x4E0E;&#x6761;&#x4EF6;&#x4E2D;&#x7684;&#x6570;&#x503C;&#x578B;&#xFF0C;&#x679A;&#x4E3E;&#x578B;&#xFF0C;&#x5E03;&#x5C14;&#x578B;&#x76F8;&#x5BF9;&#x5E94;), &#x6BCF;&#x79CD;Property&#x63D0;&#x4F9B;&#x4E0D;&#x540C;&#x7684;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;&#x3002;&#x8BE6;&#x89C1;<a href="#rules">&#x524D;&#x6587;&#x89C4;&#x5219;&#x4ECB;&#x7ECD;&#x5904;</a>&#x3002;</p>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getConditionList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">ConditionListBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getConditionList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>ConditionListBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ConditionListBean</span><span class="token punctuation">&gt;</span></span> conditionActionBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>ConditionListBean<span class="token punctuation">&gt;</span></span> conditionActionBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1091,16 +1091,16 @@
  * @param homeId &#x5BB6;&#x5EAD;&#x7684;id
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">getConditionDevList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getConditionDevList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getConditionDevList</span><span class="token punctuation">(</span>homeId <span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getConditionDevList</span><span class="token punctuation">(</span>homeId <span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> deviceBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> deviceBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1114,7 +1114,7 @@
      * @param devId    &#x8BBE;&#x5907;id
      * @param callback &#x56DE;&#x8C03;
      */</span>
-    <span class="token keyword">void</span> <span class="token function">getDeviceConditionOperationList</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">TaskListBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">getDeviceConditionOperationList</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>TaskListBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;, <code>TaskListBean</code>&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x63A5;&#x53E3;:</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
@@ -1122,7 +1122,7 @@
  *
  * @return dp&#x70B9;&#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> name<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1146,26 +1146,26 @@
  *
  * @return 
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token function">getTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>Object<span class="token punctuation">,</span> String<span class="token punctuation">&gt;</span></span> <span class="token function">getTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> tasks<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment">/**
  *  &#x83B7;&#x53D6;&#x8BE5;&#x6761;&#x4EF6;&#x7684;&#x7C7B;&#x578B;bool&#x3001;value&#x3001;enum&#x7B49;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> type<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceConditionOperationList</span><span class="token punctuation">(</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceConditionOperationList</span><span class="token punctuation">(</span>
     devId<span class="token punctuation">,</span> <span class="token comment">//&#x8BBE;&#x5907;id</span>
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">TaskListBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>TaskListBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TaskListBean</span><span class="token punctuation">&gt;</span></span> conditionActionBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>TaskListBean<span class="token punctuation">&gt;</span></span> conditionActionBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -1181,7 +1181,7 @@
  * @param countryCode &#x56FD;&#x5BB6;&#x7801;
  * @param callback    &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">getCityListByCountryCode</span><span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">PlaceFacadeBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getCityListByCountryCode</span><span class="token punctuation">(</span>String countryCode<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>PlaceFacadeBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;, <code>PlaceFacadeBean</code>&#x7C7B;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x63A5;&#x53E3;:</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
@@ -1189,7 +1189,7 @@
  *
  * @return &#x533A;&#x57DF;&#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> area<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1198,7 +1198,7 @@
  *
  * @return &#x7701;&#x4EFD;&#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getProvince</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getProvince</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> province<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1207,7 +1207,7 @@
  *
  * @return &#x57CE;&#x5E02;&#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getCity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getCity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> city<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1221,15 +1221,15 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCityListByCountryCode</span><span class="token punctuation">(</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCityListByCountryCode</span><span class="token punctuation">(</span>
     <span class="token string">&quot;cn&quot;</span><span class="token punctuation">,</span>  <span class="token comment">//&#x4E2D;&#x56FD;</span>
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">PlaceFacadeBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>PlaceFacadeBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PlaceFacadeBean</span><span class="token punctuation">&gt;</span></span> placeFacadeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>PlaceFacadeBean<span class="token punctuation">&gt;</span></span> placeFacadeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1243,18 +1243,18 @@
  * @param cityId   &#x57CE;&#x5E02;id{@link PlaceFacadeBean}
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">getCityByCityIndex</span><span class="token punctuation">(</span><span class="token keyword">long</span> cityId<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PlaceFacadeBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getCityByCityIndex</span><span class="token punctuation">(</span><span class="token keyword">long</span> cityId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>PlaceFacadeBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h4>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCityByCityIndex</span><span class="token punctuation">(</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCityByCityIndex</span><span class="token punctuation">(</span>
     cityId<span class="token punctuation">,</span> <span class="token comment">//&#x57CE;&#x5E02;id</span>
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PlaceFacadeBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>PlaceFacadeBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">PlaceFacadeBean</span> placeFacadeBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>PlaceFacadeBean placeFacadeBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1269,19 +1269,19 @@
  * @param lat      &#x7EAC;&#x5EA6;
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">getCityByLatLng</span><span class="token punctuation">(</span><span class="token class-name">String</span> lon<span class="token punctuation">,</span> <span class="token class-name">String</span> lat<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PlaceFacadeBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getCityByLatLng</span><span class="token punctuation">(</span>String lon<span class="token punctuation">,</span> String lat<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>PlaceFacadeBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCityByLatLng</span><span class="token punctuation">(</span>
-    <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>longitude<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">//&#x7ECF;&#x5EA6;</span>
-    <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>latitude<span class="token punctuation">)</span><span class="token punctuation">,</span>   <span class="token comment">//&#x7EAC;&#x5EA6;</span>
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PlaceFacadeBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getCityByLatLng</span><span class="token punctuation">(</span>
+    String<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>longitude<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">//&#x7ECF;&#x5EA6;</span>
+    String<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>latitude<span class="token punctuation">)</span><span class="token punctuation">,</span>   <span class="token comment">//&#x7EAC;&#x5EA6;</span>
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>PlaceFacadeBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">PlaceFacadeBean</span> placeFacadeBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>PlaceFacadeBean placeFacadeBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1302,12 +1302,12 @@
  *                          }
  * @return &#x573A;&#x666F;&#x52A8;&#x4F5C;
  */</span>
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">SceneTask</span> <span class="token function">createDpTask</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> SceneTask <span class="token function">createDpTask</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> String devId<span class="token punctuation">,</span> HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">)</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> taskMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> taskMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 taskMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x5F00;&#x542F;&#x8BBE;&#x5907;</span>
-<span class="token class-name">SceneTask</span> task <span class="token operator">=</span> <span class="token class-name">SceneTask</span><span class="token punctuation">.</span><span class="token function">createDpTask</span><span class="token punctuation">(</span>
+SceneTask task <span class="token operator">=</span> SceneTask<span class="token punctuation">.</span><span class="token function">createDpTask</span><span class="token punctuation">(</span>
     devId<span class="token punctuation">,</span>      <span class="token comment">//&#x8BBE;&#x5907;id</span>
     taskMap     <span class="token comment">//&#x8BBE;&#x5907;&#x52A8;&#x4F5C;</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1321,7 +1321,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * @param homeId &#x5BB6;&#x5EAD;id
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">getTaskDevList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getTaskDevList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;&#xFF0C; <code>DeviceBean</code>&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x63A5;&#x53E3;:</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
@@ -1329,7 +1329,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * 
  * @return &#x8BBE;&#x5907;&#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> name<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1338,7 +1338,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * 
  * @return &#x4EA7;&#x54C1;id
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getProductId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getProductId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> productId<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1347,7 +1347,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * 
  * @return &#x8BBE;&#x5907;id
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> devId<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1356,7 +1356,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * 
  * @return &#x56FE;&#x6807;&#x5730;&#x5740;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getIconUrl</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getIconUrl</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token keyword">return</span> iconUrl<span class="token punctuation">;</span>
  <span class="token punctuation">}</span>
 
@@ -1365,16 +1365,16 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  *
  * @return &#x8BBE;&#x5907;&#x662F;&#x5426;&#x5728;&#x7EBF;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">Boolean</span> <span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> Boolean <span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTaskDevList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTaskDevList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> deviceBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> deviceBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1388,7 +1388,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
 * @param devId    &#x8BBE;&#x5907;id
 * @param callback &#x56DE;&#x8C03;
 */</span>
-<span class="token keyword">void</span> <span class="token function">getDeviceTaskOperationList</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">TaskListBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">getDeviceTaskOperationList</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>TaskListBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x5176;&#x4E2D;, <code>TaskListBean</code>&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x63A5;&#x53E3;:</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
@@ -1396,7 +1396,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  *
  * @return dp&#x70B9;&#x540D;&#x79F0;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> name<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
@@ -1420,26 +1420,26 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  *
  * @return 
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> <span class="token function">getTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>Object<span class="token punctuation">,</span> String<span class="token punctuation">&gt;</span></span> <span class="token function">getTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> tasks<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment">/**
  *  &#x83B7;&#x53D6;&#x8BE5;&#x6761;&#x4EF6;&#x7684;&#x7C7B;&#x578B;bool&#x3001;value&#x3001;enum&#x7B49;
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> String <span class="token function">getType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> type<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceTaskOperationList</span><span class="token punctuation">(</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceTaskOperationList</span><span class="token punctuation">(</span>
     devId<span class="token punctuation">,</span> <span class="token comment">//&#x8BBE;&#x5907;id</span>
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">TaskListBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>TaskListBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TaskListBean</span><span class="token punctuation">&gt;</span></span> conditionActionBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>TaskListBean<span class="token punctuation">&gt;</span></span> conditionActionBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1459,7 +1459,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * @param matchType  &#x573A;&#x666F;&#x6761;&#x4EF6;&#x4E0E;&#x6216;&#x5173;&#x7CFB;  SceneBean.MATCH_TYPE_OR &#x8868;&#x793A;&#x6EE1;&#x8DB3;&#x4EFB;&#x610F;&#x6761;&#x4EF6;&#x6267;&#x884C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#xFF1B;SceneBean.MATCH_TYPE_AND &#x8868;&#x793A;&#x6EE1;&#x8DB3;&#x6240;&#x6709;&#x6761;&#x4EF6;
  * @param callback   &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createScene</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">boolean</span> stickyOnTop<span class="token punctuation">,</span> <span class="token class-name">String</span> background<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneCondition</span><span class="token punctuation">&gt;</span></span> conditions<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneTask</span><span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">,</span><span class="token keyword">int</span> matchType<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createScene</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String name<span class="token punctuation">,</span> <span class="token keyword">boolean</span> stickyOnTop<span class="token punctuation">,</span> String background<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneCondition<span class="token punctuation">&gt;</span></span> conditions<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneTask<span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">,</span><span class="token keyword">int</span> matchType<span class="token punctuation">,</span> <span class="token keyword">final</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span> <span class="token punctuation">;</span>
 </code></pre>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
  * &#x521B;&#x5EFA;&#x573A;&#x666F;
@@ -1471,24 +1471,24 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * @param matchType  &#x573A;&#x666F;&#x6761;&#x4EF6;&#x4E0E;&#x6216;&#x5173;&#x7CFB;  SceneBean.MATCH_TYPE_OR &#x8868;&#x793A;&#x6EE1;&#x8DB3;&#x4EFB;&#x610F;&#x6761;&#x4EF6;&#x6267;&#x884C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#xFF1B;SceneBean.MATCH_TYPE_AND &#x8868;&#x793A;&#x6EE1;&#x8DB3;&#x6240;&#x6709;&#x6761;&#x4EF6;
  * @param callback   &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createScene</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> background<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneCondition</span><span class="token punctuation">&gt;</span></span> conditions<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneTask</span><span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">,</span><span class="token keyword">int</span> matchType<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span> <span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createScene</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String name<span class="token punctuation">,</span> String background<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneCondition<span class="token punctuation">&gt;</span></span> conditions<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>SceneTask<span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">,</span><span class="token keyword">int</span> matchType<span class="token punctuation">,</span> <span class="token keyword">final</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span> <span class="token punctuation">;</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createScene</span><span class="token punctuation">(</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createScene</span><span class="token punctuation">(</span>
      <span class="token string">&quot;100001&quot;</span>
     <span class="token string">&quot;Morning&quot;</span><span class="token punctuation">,</span> <span class="token comment">//&#x573A;&#x666F;&#x540D;&#x79F0;</span>
     <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">//&#x662F;&#x5426;&#x663E;&#x793A;&#x5728;&#x9996;&#x9875;</span>
     conditions<span class="token punctuation">,</span> <span class="token comment">//&#x6761;&#x4EF6;</span>
     tasks<span class="token punctuation">,</span>     <span class="token comment">//&#x4EFB;&#x52A1;</span>
-    <span class="token class-name">SceneBean</span><span class="token punctuation">.</span>MATCH_TYPE_AND<span class="token punctuation">,</span> <span class="token comment">//&#x6267;&#x884C;&#x6761;&#x4EF6;&#x7C7B;&#x578B;</span>
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    SceneBean<span class="token punctuation">.</span>MATCH_TYPE_AND<span class="token punctuation">,</span> <span class="token comment">//&#x6267;&#x884C;&#x6761;&#x4EF6;&#x7C7B;&#x578B;</span>
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">SceneBean</span> sceneBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;createScene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>SceneBean sceneBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;createScene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1502,26 +1502,26 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
  * @param sceneReqBean &#x573A;&#x666F;&#x6570;&#x636E;&#x7C7B;
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">modifyScene</span><span class="token punctuation">(</span><span class="token class-name">SceneBean</span> sceneReqBean<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">modifyScene</span><span class="token punctuation">(</span>SceneBean sceneReqBean<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x6CE8;&#xFF1A;
 &#x8BE5;&#x63A5;&#x53E3;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x573A;&#x666F;&#xFF0C;&#x8BF7;&#x52FF;&#x4F20;&#x5165;&#x65B0;&#x5EFA;&#x7684;SceneBean&#x5BF9;&#x8C61;&#x3002;</p>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
 <pre class="language-"><code class="lang-java">sceneBean<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">&quot;New name&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x66F4;&#x6539;&#x573A;&#x666F;&#x540D;&#x79F0;</span>
-sceneBean<span class="token punctuation">.</span><span class="token function">setConditions</span><span class="token punctuation">(</span><span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">singletonList</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x66F4;&#x6539;&#x573A;&#x666F;&#x6761;&#x4EF6;</span>
+sceneBean<span class="token punctuation">.</span><span class="token function">setConditions</span><span class="token punctuation">(</span>Collections<span class="token punctuation">.</span><span class="token function">singletonList</span><span class="token punctuation">(</span>condition<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x66F4;&#x6539;&#x573A;&#x666F;&#x6761;&#x4EF6;</span>
 sceneBean<span class="token punctuation">.</span><span class="token function">setActions</span><span class="token punctuation">(</span>tasks<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x66F4;&#x6539;&#x573A;&#x666F;&#x52A8;&#x4F5C;</span>
 
-<span class="token class-name">String</span> sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x83B7;&#x53D6;&#x573A;&#x666F;id&#x4EE5;&#x521D;&#x59CB;&#x5316;</span>
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">modifyScene</span><span class="token punctuation">(</span>
+String sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//&#x83B7;&#x53D6;&#x573A;&#x666F;id&#x4EE5;&#x521D;&#x59CB;&#x5316;</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">modifyScene</span><span class="token punctuation">(</span>
     sceneBean<span class="token punctuation">,</span>  <span class="token comment">//&#x4FEE;&#x6539;&#x540E;&#x7684;&#x573A;&#x666F;&#x6570;&#x636E;&#x7C7B;</span>
-    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SceneBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>SceneBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">SceneBean</span> sceneBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Modify Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>SceneBean sceneBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Modify Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1535,19 +1535,19 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
  *
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">executeScene</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">executeScene</span><span class="token punctuation">(</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<pre class="language-"><code class="lang-java">String sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">executeScene</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">executeScene</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Excute Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Excute Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1560,20 +1560,20 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
  *
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">deleteScene</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">deleteScene</span><span class="token punctuation">(</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<pre class="language-"><code class="lang-java">String sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteScene</span><span class="token punctuation">(</span><span class="token keyword">new</span> 
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteScene</span><span class="token punctuation">(</span><span class="token keyword">new</span> 
 <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Delete Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Delete Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1586,39 +1586,39 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
  * @param sceneId  
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">enableScene</span><span class="token punctuation">(</span><span class="token class-name">String</span> sceneId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">enableScene</span><span class="token punctuation">(</span>String sceneId<span class="token punctuation">,</span> <span class="token keyword">final</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
  * &#x5173;&#x95ED;&#x81EA;&#x52A8;&#x5316;&#x573A;&#x666F;
  * @param sceneId  
  * @param callback &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">disableScene</span><span class="token punctuation">(</span><span class="token class-name">String</span> sceneId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">disableScene</span><span class="token punctuation">(</span>String sceneId<span class="token punctuation">,</span> <span class="token keyword">final</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<pre class="language-"><code class="lang-java">String sceneId <span class="token operator">=</span> sceneBean<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
 
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">enableScene</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">,</span><span class="token keyword">new</span> 
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">enableScene</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">,</span><span class="token keyword">new</span> 
 <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;enable Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;enable Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">disableScene</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">,</span><span class="token keyword">new</span> 
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">disableScene</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">,</span><span class="token keyword">new</span> 
 <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;disable Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;disable Scene Success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1632,10 +1632,10 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
  * @param sceneIds &#x624B;&#x52A8;&#x573A;&#x666F;&#x6216;&#x81EA;&#x52A8;&#x5316;&#x573A;&#x666F;&#x5DF2;&#x6392;&#x5E8F;&#x597D;&#x7684;&#x7684;id&#x5217;&#x8868;
  * @param callback    &#x56DE;&#x8C03;
  */</span>
-<span class="token keyword">void</span> <span class="token function">sortSceneList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> sceneIds<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
+<span class="token keyword">void</span> <span class="token function">sortSceneList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> sceneIds<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sortSceneList</span><span class="token punctuation">(</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sortSceneList</span><span class="token punctuation">(</span>
     homeId<span class="token punctuation">,</span> <span class="token comment">//&#x5BB6;&#x5EAD;&#x5217;&#x8868;</span>
     sceneIds<span class="token punctuation">,</span><span class="token comment">//&#x573A;&#x666F;id&#x5217;&#x8868;</span>
     <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1644,7 +1644,7 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1656,17 +1656,17 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
 * &#x83B7;&#x53D6;&#x573A;&#x666F;&#x80CC;&#x666F;&#x56FE;&#x7247;&#x5217;&#x8868;
 * @param callback &#x56DE;&#x8C03;
 */</span>
- <span class="token keyword">void</span> <span class="token function">getSceneBgs</span><span class="token punctuation">(</span><span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">void</span> <span class="token function">getSceneBgs</span><span class="token punctuation">(</span>ITuyaResultCallback<span class="token operator">&lt;</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSceneBgs</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSceneBgs</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> strings<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> strings<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String s<span class="token punctuation">,</span> String s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1675,9 +1675,9 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
 <h5 id="&#x3010;&#x63CF;&#x8FF0;&#x3011;"><a name="&#x3010;&#x63CF;&#x8FF0;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x63CF;&#x8FF0;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x63CF;&#x8FF0;&#x3011;</h5>
 <p>&#x5982;&#x679C;&#x9000;&#x51FA;&#x573A;&#x666F;&#x7684;activity&#xFF0C;&#x5E94;&#x8BE5;&#x8C03;&#x7528;&#x573A;&#x666F;&#x7684;&#x9500;&#x6BC1;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x56DE;&#x6536;&#x5185;&#x5B58;&#xFF0C;&#x63D0;&#x5347;&#x4F53;&#x9A8C;</p>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSceneManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSceneInstance</span><span class="token punctuation">(</span>sceneId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h2>
 
@@ -1719,7 +1719,7 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"智能场景","level":"1.12.1","depth":2,"next":{"title":"消息中心","level":"1.13","depth":1,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"previous":{"title":"智能场景","level":"1.12","depth":1,"ref":"","articles":[{"title":"智能场景","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2019-03-14T11:30:13.554Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:29:05.138Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"智能场景","level":"1.12.1","depth":2,"next":{"title":"消息中心","level":"1.13","depth":1,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"previous":{"title":"智能场景","level":"1.12","depth":1,"ref":"","articles":[{"title":"智能场景","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2019-03-14T11:30:13.554Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:39:32.956Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>

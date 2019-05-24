@@ -769,7 +769,7 @@
     * @param callback
     */</span>
 
-    <span class="token keyword">void</span> <span class="token function">createHome</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> <span class="token class-name">String</span> geoName<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> rooms<span class="token punctuation">,</span> <span class="token class-name">ITuyaHomeResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">createHome</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> String geoName<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> rooms<span class="token punctuation">,</span> ITuyaHomeResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="obtain-home-list"><a name="obtain-home-list" class="plugin-anchor" href="#obtain-home-list"><i class="fa fa-link" aria-hidden="true"></i></a>Obtain Home List</h2>
 <pre class="language-"><code class="lang-java">    <span class="token comment">/**
@@ -777,7 +777,7 @@
     * @param callback
     */</span>
 
-    <span class="token keyword">void</span> <span class="token function">queryHomeList</span><span class="token punctuation">(</span><span class="token class-name">ITuyaGetHomeListCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">queryHomeList</span><span class="token punctuation">(</span>ITuyaGetHomeListCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="change-of-home-information"><a name="change-of-home-information" class="plugin-anchor" href="#change-of-home-information"><i class="fa fa-link" aria-hidden="true"></i></a>Change of home information</h2>
 <p>1.register or unRegister Listener</p>
@@ -788,14 +788,14 @@
     * @param listener
     */</span>
 
-    <span class="token keyword">void</span> <span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token class-name">ITuyaHomeChangeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span>ITuyaHomeChangeListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
     * Deregistered the information Change of a home.
     *
     * @param listener
     */</span>
-    <span class="token keyword">void</span> <span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token class-name">ITuyaHomeChangeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span>ITuyaHomeChangeListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>2.list of events</p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ITuyaHomeChangeListener</span> <span class="token punctuation">{</span>
@@ -811,7 +811,7 @@
      * @param homeId    
      * @param homeName  
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span><span class="token class-name">String</span> homeName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span>String homeName<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
     * Removing home succeeds Used for data decarbonization of multiple devices
@@ -831,7 +831,7 @@
     *
     * @param sharedDeviceList
     */</span>
-    <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment">/**
     *
     * The mobile phone has been connected successfully to the Tuya Cloud Server. Special attention shall be paid to this message. In some cases, the local data may be inconsistent with the data of servers, the getHomeDetail interface of Home can be invoked to update data. 
@@ -850,7 +850,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param homeId 
      * @return List&lt;RoomBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RoomBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeRoomList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>RoomBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeRoomList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain the device list of a home.
@@ -858,7 +858,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param homeId 
      * @return List&lt;DeviceBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain the group list of a home.
@@ -866,7 +866,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param homeId 
      * @return List&lt;DeviceBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain group
@@ -874,7 +874,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param groupId 
      * @return GroupBean
      */</span>
-    <span class="token class-name">GroupBean</span> <span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    GroupBean <span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain device
@@ -882,7 +882,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param devId 
      * @return DeviceBean
      */</span>
-    <span class="token class-name">DeviceBean</span> <span class="token function">getDeviceBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    DeviceBean <span class="token function">getDeviceBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain room according to the group ID
@@ -890,7 +890,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param groupId 
      * @return RoomBean
      */</span>
-    <span class="token class-name">RoomBean</span> <span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    RoomBean <span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain room
@@ -898,7 +898,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param roomId 
      * @return RoomBean
      */</span>
-    <span class="token class-name">RoomBean</span> <span class="token function">getRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    RoomBean <span class="token function">getRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain room information based on devices
@@ -906,7 +906,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param devId 
      * @return RoomBean
      */</span>
-    <span class="token class-name">RoomBean</span> <span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    RoomBean <span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain device list of a group
@@ -914,7 +914,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param groupId 
      * @return List&lt;DeviceBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain the group list of a mesh
@@ -922,14 +922,14 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param meshId meshId
      * @return List&lt;GroupBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshGroupList</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getMeshGroupList</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain the device list of a mesh
      * @param meshId 
      * @return List&lt;DeviceBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain the following device list of a room according to the room ID.
@@ -937,7 +937,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param roomId 
      * @return List&lt;DeviceBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain the following group list of a room according to the room ID.
@@ -945,7 +945,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param roomId &#x623F;&#x95F4;ID
      * @return List&lt;GroupBean&gt;
      */</span>
-    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRoomGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getRoomGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Obtain the data of home.
@@ -953,7 +953,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
      * @param homeId homeId
      * @return HomeBean
      */</span>
-    <span class="token class-name">HomeBean</span> <span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    HomeBean <span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                                 
@@ -994,7 +994,7 @@ Interface entry:<code>TuyaHomeSdk.getDataInstance()</code></p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Home Management Class","level":"1.6.1","depth":2,"next":{"title":"Operation Class of Home","level":"1.6.2","depth":2,"path":"resource/Home_Option.md","ref":"./resource/Home_Option.md","articles":[]},"previous":{"title":"Home management","level":"1.6","depth":1,"ref":"","articles":[{"title":"Home Management Class","level":"1.6.1","depth":2,"path":"resource/Home_Manager.md","ref":"./resource/Home_Manager.md","articles":[]},{"title":"Operation Class of Home","level":"1.6.2","depth":2,"path":"resource/Home_Option.md","ref":"./resource/Home_Option.md","articles":[]},{"title":"Home Member Management Class","level":"1.6.3","depth":2,"path":"resource/Home_Member.md","ref":"./resource/Home_Member.md","articles":[]},{"title":"Room information management","level":"1.6.4","depth":2,"path":"resource/Room.md","ref":"./resource/Room.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Home_Manager.md","mtime":"2019-05-07T09:38:00.567Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:29:05.138Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Home Management Class","level":"1.6.1","depth":2,"next":{"title":"Operation Class of Home","level":"1.6.2","depth":2,"path":"resource/Home_Option.md","ref":"./resource/Home_Option.md","articles":[]},"previous":{"title":"Home management","level":"1.6","depth":1,"ref":"","articles":[{"title":"Home Management Class","level":"1.6.1","depth":2,"path":"resource/Home_Manager.md","ref":"./resource/Home_Manager.md","articles":[]},{"title":"Operation Class of Home","level":"1.6.2","depth":2,"path":"resource/Home_Option.md","ref":"./resource/Home_Option.md","articles":[]},{"title":"Home Member Management Class","level":"1.6.3","depth":2,"path":"resource/Home_Member.md","ref":"./resource/Home_Member.md","articles":[]},{"title":"Room information management","level":"1.6.4","depth":2,"path":"resource/Room.md","ref":"./resource/Room.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Home_Manager.md","mtime":"2019-05-07T09:38:00.567Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-24T08:39:32.956Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
