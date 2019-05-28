@@ -39,3 +39,4 @@
 * [Integrate Push](./resource/Push.md)
 * [Gateway](./resource/Gateway.md)
 * [Error Code](./resource/ErrorCode.md)
+* [Change Log](./resource/ChangeLog.md)
