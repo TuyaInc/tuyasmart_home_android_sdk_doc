@@ -61,8 +61,6 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Message.html" />
-    
     
 
     </head>
@@ -569,16 +567,48 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="Message.html">
+        <li class="chapter " data-level="1.13" >
             
-                <a href="Message.html">
+                <span>
             
                     
                     Message Center
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="Message.html">
+            
+                <a href="Message.html">
+            
+                    
+                    Message list
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="MessagePush.html">
+            
+                <a href="MessagePush.html">
+            
+                    
+                    Message push switch
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -985,7 +1015,7 @@ Among<span class="token punctuation">,</span>  the <span class="token keyword">i
 <span class="token punctuation">}</span>
 </code></pre>
 <p><strong>Note:</strong></p>
-<p>1.Currently supported weather condition categories &#x3001; names and Property types</p>
+<p>1.Currently supported weather condition categories, names and Property types</p>
 <table>
 <thead>
 <tr>
@@ -1136,7 +1166,8 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <p><strong>[Description]</strong></p>
 <p>It is used to select a city when creating weather conditions. Note: Only Chinese cities are supported in the current city list for the time being.</p>
 <p><strong>[Method Prototype]</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token comment">/**
+<pre class="language-"><code class="lang-java">
+<span class="token comment">/**
  Obtain the city list according to the country code.
  *
  * @param countryCode Country code
@@ -1250,13 +1281,14 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="scene-action"><a name="scene-action" class="plugin-anchor" href="#scene-action"><i class="fa fa-link" aria-hidden="true"></i></a>Scene action</h3>
-<p>A scene action refers to a control device action executed when a condition is triggered. Actions that can be executed by manual scene include automated scene and smart device, and actions that can be executed by automated scene include manual scene, other automated scene and smart devices. The tasks that users can set vary depending on the user&#x2019;s device. Please note that not every product supports the scene.</p>
-<p><strong>Create action</strong></p>
+<p>Scene actions refer to control actions performed when conditions trigger. Actions executable in manual scenarios include <a href="#Device_Type">smart device type</a>, <a href="#Group_Type">group device type</a>, <a href="#Scene_Type">automation scenario type</a> and <a href="#Delay_Type">delay type</a>. The executable actions of automation scenario include <a href="#Device_Type">smart device type</a>, <a href="#Group_Type">group device type</a>, <a href="#Scene_Type">manual scene type</a>, <a href="#Scene_Type">automation scene type</a>, <a href="#Delay_Type">delay type</a> and <a href="#Message_Type">message type</a>. The tasks that users can set vary depending on the user&#x2019;s device. Please note that not every product supports the scene.</p>
+<h4 id="1create-device-type-action"><a name="1create-device-type-action" class="plugin-anchor" href="#1create-device-type-action"><i class="fa fa-link" aria-hidden="true"></i></a><span id="Device_Type">1.Create device type action</span></h4>
 <p><strong>[Description]</strong></p>
-<p>It is used to create scene actions.</p>
+<p>It is used to create device type actions.</p>
 <p><strong>[Method Prototype]</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token comment">/**
- * It is used to create scene actions.
+<pre class="language-"><code class="lang-java">
+<span class="token comment">/**
+ * It is used to create device type actions.
  *
  * @param devId device id
  * @param tasks to be implemented task format: { dpId: dp point value}
@@ -1266,12 +1298,12 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
  *   }
  * @returnScene action
  */</span>
-<span class="token keyword">public</span> <span class="token keyword">static</span> SceneTask <span class="token function">createDpTask</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> String devId<span class="token punctuation">,</span> HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">)</span>
+SceneTask <span class="token function">createDpTask</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> String devId<span class="token punctuation">,</span> HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>[Example Codes]</strong></p>
 <pre class="language-"><code class="lang-java">HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> taskMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 taskMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Turn on the device</span>
-SceneTask task <span class="token operator">=</span> SceneTask<span class="token punctuation">.</span><span class="token function">createDpTask</span><span class="token punctuation">(</span>
+SceneTask task <span class="token operator">=</span> TuyaHomeSceneManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createDpTask</span><span class="token punctuation">(</span>
       devId<span class="token punctuation">,</span>      <span class="token comment">//Device id</span>
       taskMap     <span class="token comment">//Device action</span>
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1286,8 +1318,9 @@ SceneTask task <span class="token operator">=</span> SceneTask<span class="token
  * @param callback
  */</span>
 <span class="token keyword">void</span> <span class="token function">getTaskDevList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-Among<span class="token punctuation">,</span> <span class="token operator">*</span><span class="token operator">*</span>DeviceBean<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span><span class="token operator">*</span>provides interfaces as follows<span class="token operator">:</span><span class="token operator">*</span><span class="token operator">*</span>
-<span class="token comment">/**
+</code></pre>
+<p>Among, <strong>DeviceBean**</strong>provides interfaces as follows:**</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
  *  Obtain name of Device
  * 
  * @return Device name 
@@ -1426,6 +1459,117 @@ Among<span class="token punctuation">,</span> TaskListBean provides interfaces a
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h4 id="2create-group-device-type-action"><a name="2create-group-device-type-action" class="plugin-anchor" href="#2create-group-device-type-action"><i class="fa fa-link" aria-hidden="true"></i></a><span id="Group_Type">2.Create group device type action</span></h4>
+<p><strong>[Description]</strong></p>
+<p>It is used to create group device type actions.</p>
+<p><strong>[Method Prototype]</strong></p>
+<pre class="language-"><code class="lang-java">
+<span class="token comment">/**
+ * It is used to create group device type actions.
+ *
+ * @param group id
+ * @param tasks to be implemented task format: { dpId: dp point value}
+ *   For example:
+ *   {
+ *     &quot;1&quot;: true,
+ *   }
+ * @returnScene action
+ */</span>
+SceneTask <span class="token function">createDpTask</span><span class="token punctuation">(</span><span class="token annotation punctuation">@NonNull</span> <span class="token keyword">long</span> groupId<span class="token punctuation">,</span> HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> tasks<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>[Example Codes]</strong></p>
+<pre class="language-"><code class="lang-java">HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> taskMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+taskMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Turn on the device</span>
+TuyaHomeSceneManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createDpGroupTask</span><span class="token punctuation">(</span>
+    groupId<span class="token punctuation">,</span>     <span class="token comment">//group id</span>
+    taskMap     <span class="token comment">//Device action</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="a-list-of-group-devices-to-get-execution-action-support"><a name="a-list-of-group-devices-to-get-execution-action-support" class="plugin-anchor" href="#a-list-of-group-devices-to-get-execution-action-support"><i class="fa fa-link" aria-hidden="true"></i></a><span id="GetGroupActionDevList">A List of Group Devices to Get Execution Action Support</span></h4>
+<p><strong>[Description]</strong></p>
+<p>Obtain a list of devices that support scenario actions, including common devices and group devices, for selecting the actions to be added to.</p>
+<p><strong>[Method Prototype]</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Obtain a list of devices that support scenario actions, including groups and common devices
+* @param homeId
+* @param callback 
+*/</span>
+<span class="token function">getTaskDevAndGoupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SceneTaskGroupDevice<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p>Among, <code>SceneTaskGroupDevice</code> provides interfaces as follows:</p>
+<pre class="language-"><code class="lang-java">
+<span class="token comment">/**
+*  obtain a list of common devices
+*/</span>
+<span class="token keyword">public</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getDevices</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> devices<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+*  obtain a list of group devices
+*/</span>
+<span class="token keyword">public</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getGoups</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> goups<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="obtain-executable-actions-based-on-group-id"><a name="obtain-executable-actions-based-on-group-id" class="plugin-anchor" href="#obtain-executable-actions-based-on-group-id"><i class="fa fa-link" aria-hidden="true"></i></a>Obtain executable actions based on group id</h4>
+<p><strong>[Description]</strong></p>
+<p>It is used to obtain the tasks executed by the group device when creating an action. The group id can be obtained from the <a href="#GetGroupActionDevList">a list of group devices to get execution action support</a></p>
+<p><strong>[Method Prototype]</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+* Obtain executable actions based on group id
+*
+* @param goupId   
+* @param callback
+*/</span>
+<span class="token keyword">void</span> <span class="token function">getDeviceTaskOperationListByGroup</span><span class="token punctuation">(</span>String goupId<span class="token punctuation">,</span> ITuyaResultCallback<span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>TaskListBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span> callback<span class="token punctuation">)</span>
+</code></pre>
+<h4 id="3create-scenario-type-action"><a name="3create-scenario-type-action" class="plugin-anchor" href="#3create-scenario-type-action"><i class="fa fa-link" aria-hidden="true"></i></a><span id="Scene_Type">3.Create scenario type action</span></h4>
+<p><strong>[Description]</strong></p>
+<p>Scenario type actions are used to create scene type actions, including manual and automated scenarios. Parameters can be obtained through the <a href="#ObtainSceneList">scenario list interface</a></p>
+<p><strong>[Method Prototype]</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * create scene type action
+ * @sceneBean scene object
+ * @return sceneTask
+ */</span>
+SceneTask <span class="token function">createSceneTask</span><span class="token punctuation">(</span>SceneBean sceneBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>[Example Codes]</strong></p>
+<pre class="language-"><code class="lang-java">TuyaHomeSceneManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createSceneTask</span><span class="token punctuation">(</span>scnenBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="4create-delay-type-action"><a name="4create-delay-type-action" class="plugin-anchor" href="#4create-delay-type-action"><i class="fa fa-link" aria-hidden="true"></i></a><span id="Delay_Type">4.Create delay type action</span></h4>
+<p><strong>[Description]</strong></p>
+<p>It is used to create delay type actions.</p>
+<p><strong>[Method Prototype]</strong></p>
+<pre class="language-"><code class="lang-java">
+<span class="token comment">/**
+ * Create delay type action
+ * Maximum support for 59m59s
+ * @param minute minutes
+ * @param second seconds
+ * @return sceneTask
+ */</span>
+SceneTask <span class="token function">createDelayTask</span><span class="token punctuation">(</span><span class="token keyword">int</span> minute<span class="token punctuation">,</span> <span class="token keyword">int</span> second<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>[Example Codes]</strong></p>
+<pre class="language-"><code class="lang-java">TuyaHomeSceneManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createDelayTask</span><span class="token punctuation">(</span>
+    <span class="token number">2</span><span class="token punctuation">,</span>  <span class="token comment">//minutes</span>
+    <span class="token number">2</span>    <span class="token comment">//seconds</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="5create-message-type-action"><a name="5create-message-type-action" class="plugin-anchor" href="#5create-message-type-action"><i class="fa fa-link" aria-hidden="true"></i></a><span id="Message_Type">5.Create message type action</span></h4>
+<p><strong>[Description]</strong></p>
+<p>It is used to create message type actions.</p>
+<p><strong>[Method Prototype]</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * create message type action
+ * @return
+ */</span>
+SceneTask <span class="token function">createPushMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>[Example Codes]</strong></p>
+<pre class="language-"><code class="lang-java">TuyaHomeSceneManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createPushMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <h3 id="create-scene"><a name="create-scene" class="plugin-anchor" href="#create-scene"><i class="fa fa-link" aria-hidden="true"></i></a>Create Scene</h3>
 <p><strong>[Description]</strong></p>
 <p>It is used to assemble conditions and actions into a scene and create a new scene, and then returns the scene data after success. There are two creation methods, and the only difference is whether there are stickyOnTop parameters.</p>
@@ -1478,8 +1622,8 @@ Among<span class="token punctuation">,</span> TaskListBean provides interfaces a
 </code></pre>
 <h3 id="modify-the-scene"><a name="modify-the-scene" class="plugin-anchor" href="#modify-the-scene"><i class="fa fa-link" aria-hidden="true"></i></a>Modify the scene</h3>
 <p><strong>[Description]</strong></p>
-<p>It is used to modify the scene. After it succeeded, it will return to new scene data.
-<strong>[Method Prototype]</strong></p>
+<p>It is used to modify the scene. After it succeeded, it will return to new scene data.</p>
+<p><strong>[Method Prototype]</strong></p>
 <pre class="language-"><code class="lang-java">
 <span class="token comment">/**
  * Modify the scene
@@ -1689,10 +1833,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
             
                 
                 
-                <a href="Message.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Message Center">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
             
         
     </div>
@@ -1700,7 +1840,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Smart scene","level":"1.12.1","depth":2,"next":{"title":"Message Center","level":"1.13","depth":1,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"previous":{"title":"Smart scene","level":"1.12","depth":1,"ref":"","articles":[{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2019-03-14T11:30:13.553Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-28T07:35:08.073Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Smart scene","level":"1.12.1","depth":2,"next":{"title":"Message Center","level":"1.13","depth":1,"ref":"","articles":[{"title":"Message list","level":"1.13.1","depth":2,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},{"title":"Message push switch","level":"1.13.2","depth":2,"path":"resource/MessagePush.md","ref":"./resource/MessagePush.md","articles":[]}]},"previous":{"title":"Smart scene","level":"1.12","depth":1,"ref":"","articles":[{"title":"Smart scene","level":"1.12.1","depth":2,"path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2019-07-02T07:52:36.283Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-23T01:42:58.309Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

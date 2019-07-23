@@ -17,7 +17,7 @@ defaultConfig {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
         implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:3.9.6'
+        implementation 'com.tuya.smart:tuyasmart:3.11.0-bata1'
     }
     
 repositories {
@@ -30,7 +30,10 @@ repositories {
 
 
 > 【注意事项】
-> 涂鸦智能sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs)获取
+>
+> * 涂鸦智能3.10.0之前的版本的sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs)获取。
+>
+> * 3.10.0版本已经将armeabi-v7a、arm64-v8a、armeabi、x86、x86_64集成进sdk，请将本地手动放入的sdk的相关so库移除，使用sdk中提供的。
 
 ### 三、集成安全图片
 
@@ -117,7 +120,7 @@ TuyaHomeSdk.onDestroy();
 
 ### 三、debug开关
 
-在debug模式下可以开启sdk的日志开关，查看更多的日志信息，帮助快速定位问题。在release模式下建议关闭日志开关
+在debug模式下可以开启sdk的日志开关，查看更多的日志信息，帮助快速定位问题。在release模式下建议关闭日志开关。
 
 ```java
 TuyaHomeSdk.setDebugMode(true);

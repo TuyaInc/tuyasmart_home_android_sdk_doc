@@ -1,3 +1,10 @@
+###  3.10.0
+
+- Change the integration of the so library, sdk provides the so library of armeabi-v7a, arm64-v8a, armeabi developers use as needed
+- Added Bluetooth mesh function
+- New message center features
+- bugfix
+
 ### 3.9.6
 
 Interface change

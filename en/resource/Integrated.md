@@ -20,7 +20,7 @@ defaultConfig {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
         implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:3.9.6'
+        implementation 'com.tuya.smart:tuyasmart:3.11.0-bata1'
     }
     
 repositories {
@@ -32,10 +32,10 @@ repositories {
 ```
 
 
-
-**[Note]**
-
-The Tuya Smart sdk solely supports the platform of armeabi-v7a and x86 architecture by default. Developer may refer to the [GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs) if you need other platforms. 
+> **[Note]**
+>
+> * The Tuya Smart sdk solely supports the platform of armeabi-v7a architecture by default. Developer may refer to the [GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs) if you need other platforms. 
+> * After version 3.10.0, the so libraries of armeabi-v7a, arm64-v8a, armeabi, x86, x86_64 platforms have been integrated into sdk. Please remove the relevant so-banks of sdk manually placed in the local, and use the default provided by sdk.
 
 ### (3) Integrated security image
 

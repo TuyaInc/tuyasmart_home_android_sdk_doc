@@ -5,7 +5,7 @@ ITuyaGroup类提供了对Mesh群组的操作
 可以通过群组中是否具备MeshId来区分Mesh群组和普通wifi群组
 #####  【代码范例】
 
-```
+```java
 GroupBean groupBean=TuyaHomeSdk.getDataInstance().getGroupBean("groupId");
 if(!TextUtils.isEmpty(groupBean.getMeshId())){    
 	L.d(TAG, "This group is mesh group");
@@ -18,14 +18,14 @@ if(!TextUtils.isEmpty(groupBean.getMeshId())){
 ### 添加子设备到群组
 
 ##### 【方法调用】
-```
+```java
 * @param devId		设备Id
 * @param callback	回调
 public void addDevice(String devId,IResultCallback callback);
 ```
 ##### 【代码范例】
 
-```
+```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
 mGroup.addDevice("devId", new IResultCallback() {
             @Override
@@ -43,7 +43,7 @@ mGroup.addDevice("devId", new IResultCallback() {
 
 ### 从群组中移除子设备
 ##### 【方法调用】
-```
+```java
 * @param devId		设备Id
 * @param callback	回调
 public void removeDevice(String devId,IResultCallback callback);
@@ -51,7 +51,7 @@ public void removeDevice(String devId,IResultCallback callback);
 ```
 
 ##### 【代码范例】
-```
+```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
 mGroup.removeDevice("devId", new IResultCallback() {
             @Override
@@ -69,12 +69,12 @@ mGroup.removeDevice("devId", new IResultCallback() {
 
 ### 解散群组
 ##### 【方法调用】
-```
+```java
 * @param callback	回调
 public void dismissGroup(IResultCallback callback);
 ```
 ##### 【代码范例】
-```
+```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
 mGroup.dismissGroup(new IResultCallback() {
             @Override
@@ -93,13 +93,13 @@ mGroup.dismissGroup(new IResultCallback() {
 
 ### 重命名群组
 ##### 【方法调用】
-```
+```java
 * @param groupName	重命名名称
 * @param callback	回调
 public void renameGroup(String groupName,IResultCallback callback);
 ```
 ##### 【代码范例】
-```
+```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
 mGroup.renameGroup("群组名称",new IResultCallback() {
             @Override

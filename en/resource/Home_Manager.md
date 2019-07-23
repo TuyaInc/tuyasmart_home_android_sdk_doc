@@ -18,7 +18,7 @@ The ITuyaHomeManager provides changes related to creating home, obtaining the ho
 | sharedDeviceList | List&lt;DeviceBean&gt;|Shared devices received |
 | sharedGroupList | List&lt;GroupBean&gt; |Shared groups received |
 | homeStatus | int| The home status （1:to be accepted 2:accepted 3:reject）|
-    
+
 ## Create Home
 
 ```java
@@ -216,7 +216,7 @@ Interface entry:`TuyaHomeSdk.getDataInstance()`
     /**
      * Obtain the following group list of a room according to the room ID.
      *
-     * @param roomId 房间ID
+     * @param roomId room id
      * @return List<GroupBean>
      */
     List<GroupBean> getRoomGroupList(long roomId);

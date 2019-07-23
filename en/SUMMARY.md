@@ -33,8 +33,10 @@
 * [Timer task](./resource/Timer.md)
 * [Group Management](./resource/Group.md)
 * Smart scene
-  - [Smart scene](./resource/SmartScene_Manager.md)
-* [Message Center](./resource/Message.md)
+  * [Smart scene](./resource/SmartScene_Manager.md)
+* Message Center
+   * [Message list](./resource/Message.md)
+   * [Message push switch](./resource/MessagePush.md)
 * [Feedback](./resource/Feedback.md)
 * [Integrate Push](./resource/Push.md)
 * [Gateway](./resource/Gateway.md)

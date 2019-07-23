@@ -645,19 +645,19 @@ TuyaHomeSdk.getSceneManagerInstance().getCityByLatLng(
 
 ### 场景动作
 
-场景动作指当条件触发时执行的控制设备动作。手动场景可执行的动作包含自动化场景和智能设备，自动化场景可执行的动作包含手动场景、其他自动化场景和智能设备。用户可设定的任务视用户的设备而定，请注意，并不是每一款产品都支持场景。
+场景动作指当条件触发时执行的控制动作。手动场景可执行的动作包含[智能设备类型](#Device_Type)、[群组设备类型](#Group_Type)、[自动化场景类型](#Scene_Type)、[延时类型](#Delay_Type)。自动化场景可执行的动作包含[智能设备类型](#Device_Type)、[群组设备类型](#Group_Type)、[手动场景类型](#Scene_Type)、[自动化场景类型](#Scene_Type)、[延时类型](#Delay_Type)和[消息类型](#Message_Type)。用户可设定的任务视用户的设备而定，请注意，并不是每一款产品都支持场景。
 
-#### 创建动作
+#### <span id="Device_Type">1、创建设备类型动作</span>
 
 ##### 【描述】
 
-用于创建场景动作。
+用于创建设备类型场景动作。
 
 ##### 【方法原型】
 
 ```java
 /**
- * 创建场景动作
+ * 创建设备类型场景动作
  *
  * @param devId 设备id
  * @param tasks 要执行的任务 格式: { dpId: dp点值 }
@@ -667,7 +667,7 @@ TuyaHomeSdk.getSceneManagerInstance().getCityByLatLng(
  *                          }
  * @return 场景动作
  */
-public static SceneTask createDpTask(@NonNull String devId, HashMap<String, Object> tasks)
+SceneTask createDpTask(@NonNull String devId, HashMap<String, Object> tasks)
 
 ```
 
@@ -676,7 +676,7 @@ public static SceneTask createDpTask(@NonNull String devId, HashMap<String, Obje
 ```java
 HashMap<String, Object> taskMap = new HashMap<>();
 taskMap.put("1", true); //开启设备
-SceneTask task = SceneTask.createDpTask(
+SceneTask task = TuyaHomeSceneManager.getInstance().createDpTask(
     devId,      //设备id
     taskMap     //设备动作
 );
@@ -838,6 +838,169 @@ TuyaHomeSdk.getSceneManagerInstance().getDeviceTaskOperationList(
         }
 });
 ```
+#### <span id="Group_Type">2、创建群组设备类型动作</span>
+
+##### 【描述】
+
+用于创建群组设备类型动作
+
+##### 【方法原型】
+
+```java
+/**
+ * 创建硬件群组控制任务
+ * @param groupId 群组id
+ * @param tasks 要执行的任务 格式: { dpId: dp点值 }
+ *              例：
+ *              {
+ *              "1": true,
+ *              }
+ * @return 场景任务
+ */
+SceneTask createDpGroupTask(@NonNull long groupId, HashMap<String, Object> tasks);
+
+```
+
+##### 【代码范例】
+
+```java
+HashMap<String, Object> taskMap = new HashMap<>();
+taskMap.put("1", true); //开启设备
+TuyaHomeSceneManager.getInstance().createDpGroupTask(
+	groupId, 	//群组id
+	taskMap 	//设备动作
+);
+```
+#### <span id="GetGroupActionDevList">获取执行动作支持的带着群组设备的列表</span>
+
+##### 【描述】
+
+获取支持场景动作的设备列表，包含普通设备和群组设备， 用于选择添加到要执行的动作中。
+
+##### 【方法原型】
+
+```java
+/**
+* 获取动作中的可选设备列表，包含群组和普通设备
+* @param homeId 家庭id
+* @param callback 回调
+*/
+getTaskDevAndGoupList(long homeId, ITuyaResultCallback<SceneTaskGroupDevice> callback)
+```
+
+其中, `SceneTaskGroupDevice`提供以下接口:
+
+```java
+
+/**
+*  获取普通设备列表
+*/
+public List<DeviceBean> getDevices() {
+    return devices;
+}
+/**
+*  获取群组设备列表
+*/
+public List<GroupBean> getGoups() {
+    return goups;
+}
+
+```
+
+
+#### 根据群组id获取可执行的动作
+
+##### 【描述】
+
+用于在创建动作时， 获取群组可执行的任务。群组id可以从[获取执行动作支持的带着群组设备的列表](#GetGroupActionDevList)获取
+
+##### 【方法原型】
+
+```java
+/**
+* 获取群组设备可以执行的操作
+*
+* @param group    群组id
+* @param callback 回调
+*/
+void getDeviceTaskOperationListByGroup(String goupId, ITuyaResultCallback<List<TaskListBean>> callback)
+```
+
+#### <span id="Scene_Type">3、创建场景类型动作</span>
+
+##### 【描述】
+
+用于创建场景类型动作，包含手动场景和自动化场景。
+参数可以通过 [场景列表接口](#GetSceneList) 获取
+
+##### 【方法原型】
+
+```java
+/**
+ * 创建场景控制任务
+ * @sceneBean 场景对象
+ * @return 场景任务
+ */
+SceneTask createSceneTask(SceneBean sceneBean);
+
+```
+
+##### 【代码范例】
+
+```java
+TuyaHomeSceneManager.getInstance().createSceneTask(scnenBean);
+```
+#### <span id="Delay_Type">4、创建延时类型动作</span>
+
+##### 【描述】
+
+用于创建延时类型动作。
+
+##### 【方法原型】
+
+```java
+/**
+ * 创建延时任务
+ * 目前最大支持 59m59s
+ * @param minute 分钟数
+ * @param second 秒数
+ * @return
+ */
+SceneTask createDelayTask(int minute, int second);
+
+```
+
+##### 【代码范例】
+
+```java
+TuyaHomeSceneManager.getInstance().createDelayTask(
+	2,  //分钟
+	2	//秒
+);
+```
+#### <span id="Message_Type">5、创建消息类型动作</span>
+
+##### 【描述】
+
+用于创建消息类型动作。
+
+##### 【方法原型】
+
+```java
+/**
+ * 创建消息推送任务
+ * @return
+ */
+SceneTask createPushMessage();
+
+```
+
+##### 【代码范例】
+
+```java
+TuyaHomeSceneManager.getInstance().createPushMessage();
+```
+
 
 ### 创建场景
 

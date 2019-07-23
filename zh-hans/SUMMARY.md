@@ -39,10 +39,21 @@
 * [群组管理](./resource/Group.md)
 * 智能场景
   * [智能场景](./resource/SmartScene_Manager.md)
-* [消息中心](./resource/Message.md)
+
+* 消息中心
+  * [消息列表](./resource/Message.md)
+  * [消息推送设置](./resource/MessagePush.md)
 * [意见反馈](./resource/Feedback.md)
 * [集成Push](./resource/Push.md)
 * [网关](./resource/Gateway.md)	
+* [蓝牙Mesh](./resource/Mesh.md)
+
+  * [准备](./resource/Mesh_Prepare.md)
+  * [Mesh管理](./resource/Mesh_Admin.md)
+  * [设备配网](./resource/Mesh_Config.md)
+  * [设备操作](./resource/Mesh_Device_Operate.md)
+  * [群组操作](./resource/Mesh_Group_Operate.md)
+  * [设备升级](./resource/Mesh_OTA.md)	
 * [错误码](./resource/ErrorCode.md)
 * [常见问题](./resource/FAQ.md)
 * [更新日志](./resource/Update_Log.md)

@@ -336,7 +336,7 @@ public IProperty getProperty() {
 ```
 **Note:**
 
-1.Currently supported weather condition categories 、 names and Property types
+1.Currently supported weather condition categories, names and Property types
 
 | **Description**  | **Type**   | **Property Type** |
 | ---------------- | ---------- | ----------------- |
@@ -477,7 +477,9 @@ TuyaHomeSdk.getSceneManagerInstance().getDeviceConditionOperationList(
 It is used to select a city when creating weather conditions. Note: Only Chinese cities are supported in the current city list for the time being.
 
 **[Method Prototype]**
+
 ```java
+
 /**
  Obtain the city list according to the country code.
  *
@@ -485,9 +487,11 @@ It is used to select a city when creating weather conditions. Note: Only Chinese
  * @param callback    callback
  */
 void getCityListByCountryCode(String countryCode, ITuyaResultCallback<List<PlaceFacadeBean>> callback);
+
 ```
 
 Among, PlaceFacadeBean category provides interfaces as follows:
+
 ```java
 /**
  * Obtain area name
@@ -606,18 +610,20 @@ TuyaHomeSdk.getSceneManagerInstance().getCityByLatLng(
 ```
 ### Scene action
 
-A scene action refers to a control device action executed when a condition is triggered. Actions that can be executed by manual scene include automated scene and smart device, and actions that can be executed by automated scene include manual scene, other automated scene and smart devices. The tasks that users can set vary depending on the user’s device. Please note that not every product supports the scene.
+Scene actions refer to control actions performed when conditions trigger. Actions executable in manual scenarios include [smart device type](#Device_Type), [group device type](#Group_Type), [automation scenario type](#Scene_Type) and [delay type](#Delay_Type). The executable actions of automation scenario include [smart device type](#Device_Type), [group device type](#Group_Type), [manual scene type](#Scene_Type), [automation scene type](#Scene_Type), [delay type](#Delay_Type) and [message type](#Message_Type). The tasks that users can set vary depending on the user’s device. Please note that not every product supports the scene.
 
-**Create action**
+#### <span id="Device_Type">1.Create device type action</span>
 
 **[Description]**
 
-It is used to create scene actions.
+It is used to create device type actions.
 
 **[Method Prototype]**
+
 ```java
+
 /**
- * It is used to create scene actions.
+ * It is used to create device type actions.
  *
  * @param devId device id
  * @param tasks to be implemented task format: { dpId: dp point value}
@@ -627,17 +633,21 @@ It is used to create scene actions.
  *   }
  * @returnScene action
  */
-public static SceneTask createDpTask(@NonNull String devId, HashMap<String, Object> tasks)
+SceneTask createDpTask(@NonNull String devId, HashMap<String, Object> tasks)
+
 ```
 **[Example Codes]**
+
 ```java
 HashMap<String, Object> taskMap = new HashMap<>();
 taskMap.put("1", true); //Turn on the device
-SceneTask task = SceneTask.createDpTask(
+SceneTask task = TuyaHomeSceneManager.getInstance().createDpTask(
       devId,      //Device id
       taskMap     //Device action
 );
 ```
+
+
 ### <span id="ObtainExecutionAction">A list of devices supported by obtaining execution action</span>
 
 **[Description]**
@@ -653,7 +663,11 @@ Obtain a list of devices supporting scene actions for selecting to add to the ac
  * @param callback
  */
 void getTaskDevList(long homeId, ITuyaResultCallback<List<DeviceBean>> callback);
+```
+
 Among, **DeviceBean****provides interfaces as follows:**
+
+```java
 /**
  *  Obtain name of Device
  * 
@@ -712,6 +726,7 @@ public Boolean getIsOnline()
 
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getSceneManagerInstance().getTaskDevList(new ITuyaResultCallback<List<DeviceBean>>() {
       @Override
@@ -730,6 +745,7 @@ TuyaHomeSdk.getSceneManagerInstance().getTaskDevList(new ITuyaResultCallback<Lis
 It is used to obtain the tasks executed by the device when creating an action. The device id can be obtained from the [a list of devices supported by obtaining execution action](#ObtainExecutionAction)
 
 **[Method Prototype]**
+
 ```java
 /**
 * Obtain what the device can execute
@@ -787,6 +803,7 @@ public String getType() {
 }
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getSceneManagerInstance().getDeviceTaskOperationList(
     devId,      //Device id
@@ -800,6 +817,175 @@ TuyaHomeSdk.getSceneManagerInstance().getDeviceTaskOperationList(
 
 });
 ```
+#### <span id="Group_Type">2.Create group device type action</span>
+
+**[Description]**
+
+It is used to create group device type actions.
+
+**[Method Prototype]**
+
+```java
+
+/**
+ * It is used to create group device type actions.
+ *
+ * @param group id
+ * @param tasks to be implemented task format: { dpId: dp point value}
+ *   For example:
+ *   {
+ *     "1": true,
+ *   }
+ * @returnScene action
+ */
+SceneTask createDpTask(@NonNull long groupId, HashMap<String, Object> tasks)
+
+```
+
+**[Example Codes]**
+
+```java
+HashMap<String, Object> taskMap = new HashMap<>();
+taskMap.put("1", true); //Turn on the device
+TuyaHomeSceneManager.getInstance().createDpGroupTask(
+	groupId, 	//group id
+	taskMap 	//Device action
+);
+```
+
+#### <span id="GetGroupActionDevList">A List of Group Devices to Get Execution Action Support</span>
+
+**[Description]**
+
+Obtain a list of devices that support scenario actions, including common devices and group devices, for selecting the actions to be added to.
+
+**[Method Prototype]**
+
+```java
+/**
+* Obtain a list of devices that support scenario actions, including groups and common devices
+* @param homeId
+* @param callback 
+*/
+getTaskDevAndGoupList(long homeId, ITuyaResultCallback<SceneTaskGroupDevice> callback)
+```
+Among, `SceneTaskGroupDevice` provides interfaces as follows:
+
+
+```java
+
+/**
+*  obtain a list of common devices
+*/
+public List<DeviceBean> getDevices() {
+    return devices;
+}
+/**
+*  obtain a list of group devices
+*/
+public List<GroupBean> getGoups() {
+    return goups;
+}
+
+```
+
+
+#### Obtain executable actions based on group id
+
+**[Description]**
+
+It is used to obtain the tasks executed by the group device when creating an action. The group id can be obtained from the [a list of group devices to get execution action support](#GetGroupActionDevList)
+
+**[Method Prototype]**
+
+```java
+/**
+* Obtain executable actions based on group id
+*
+* @param goupId   
+* @param callback
+*/
+void getDeviceTaskOperationListByGroup(String goupId, ITuyaResultCallback<List<TaskListBean>> callback)
+```
+
+#### <span id="Scene_Type">3.Create scenario type action</span>
+
+**[Description]**
+
+Scenario type actions are used to create scene type actions, including manual and automated scenarios. Parameters can be obtained through the [scenario list interface](#ObtainSceneList)
+
+**[Method Prototype]**
+
+```java
+/**
+ * create scene type action
+ * @sceneBean scene object
+ * @return sceneTask
+ */
+SceneTask createSceneTask(SceneBean sceneBean);
+
+```
+
+**[Example Codes]**
+
+```java
+TuyaHomeSceneManager.getInstance().createSceneTask(scnenBean);
+```
+
+#### <span id="Delay_Type">4.Create delay type action</span>
+
+**[Description]**
+
+It is used to create delay type actions.
+
+**[Method Prototype]**
+
+```java
+
+/**
+ * Create delay type action
+ * Maximum support for 59m59s
+ * @param minute minutes
+ * @param second seconds
+ * @return sceneTask
+ */
+SceneTask createDelayTask(int minute, int second);
+
+```
+
+**[Example Codes]**
+
+```java
+TuyaHomeSceneManager.getInstance().createDelayTask(
+	2,  //minutes
+	2	//seconds
+);
+```
+
+
+#### <span id="Message_Type">5.Create message type action</span>
+
+**[Description]**
+
+It is used to create message type actions.
+
+**[Method Prototype]**
+
+```java
+/**
+ * create message type action
+ * @return
+ */
+SceneTask createPushMessage();
+
+```
+
+**[Example Codes]**
+
+```java
+TuyaHomeSceneManager.getInstance().createPushMessage();
+```
+
 ### Create Scene
 
 **[Description]**
@@ -807,6 +993,7 @@ TuyaHomeSdk.getSceneManagerInstance().getDeviceTaskOperationList(
 It is used to assemble conditions and actions into a scene and create a new scene, and then returns the scene data after success. There are two creation methods, and the only difference is whether there are stickyOnTop parameters.
 
 **[Method Prototype]**
+
 ```java
 /**
  * Create Scene
@@ -837,6 +1024,7 @@ public void createScene(long homeId, String name, boolean stickyOnTop, String ba
 public void createScene(long homeId, String name, String background, List<SceneCondition> conditions, List<SceneTask> tasks,int matchType, final ITuyaResultCallback<SceneBean> callback) ;
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getSceneManagerInstance().createScene(
 	 "100001"
@@ -860,7 +1048,9 @@ TuyaHomeSdk.getSceneManagerInstance().createScene(
 **[Description]**
 
 It is used to modify the scene. After it succeeded, it will return to new scene data.
+
 **[Method Prototype]**
+
 ```java
 
 /**
@@ -875,6 +1065,7 @@ void modifyScene(SceneBean sceneReqBean, ITuyaResultCallback<SceneBean> callback
 Note: The interface can only be used to modify the scene. Do not transmit into the newly created SceneBean object.
 
 **[Example Codes]**
+
 ```java
 sceneBean.setName("New name");  //Change Scene name 
 sceneBean.setConditions(Collections.singletonList(condition)); //Change Scene condition
@@ -903,6 +1094,7 @@ It is used to execute manual scene.
 Note: This method only sends commands to the cloud execution scenario. If the specific device is executed successfully, you need to monitor the device's dp point change through TuyaHomeSdk.newDeviceInstance(devId).registerDevListener().
 
 **[Method Prototype]**
+
 ```java
 /**
  * Perform scene actions
@@ -912,6 +1104,7 @@ Note: This method only sends commands to the cloud execution scenario. If the sp
 void executeScene(IResultCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 String sceneId = sceneBean.getId();  
 TuyaHomeSdk.newSceneInstance(sceneId).executeScene(new IResultCallback() {
@@ -931,6 +1124,7 @@ TuyaHomeSdk.newSceneInstance(sceneId).executeScene(new IResultCallback() {
 For deleting scene
 
 **[Method Prototype]**
+
 ```java
 /**
  * Delete Scene
@@ -940,6 +1134,7 @@ For deleting scene
 void deleteScene(IResultCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 String sceneId = sceneBean.getId();  
 TuyaHomeSdk.newSceneInstance(sceneId).deleteScene(new 
@@ -961,6 +1156,7 @@ IResultCallback() {
 It is used to turn on or off the automatic scene.
 
 **[Method Prototype]**
+
 ```java
 /**
  * Turn on automation scene
@@ -977,6 +1173,7 @@ void enableScene(String sceneId, final IResultCallback callback);
 void disableScene(String sceneId, final IResultCallback callback);
 ```
 **[Example Codes]**
+
 ```java
 String sceneId = sceneBean.getId();  
 TuyaHomeSdk.newSceneInstance(sceneId).enableScene(sceneId,new 
@@ -1013,6 +1210,7 @@ IResultCallback() {
 Manual scene or automation scene sorting. Note: Manual or automation scenes can only be sorted separately and cannot be shuffled.
 
 **[Method Prototype]**
+
 ```java
 /**
  * Scene sorting
@@ -1023,6 +1221,7 @@ Manual scene or automation scene sorting. Note: Manual or automation scenes can 
 void sortSceneList(long homeId, List<String> sceneIds, IResultCallback callback)
 ```
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getSceneManagerInstance().sortSceneList(
     homeId, //Home list
@@ -1077,6 +1276,7 @@ TuyaHomeSdk.getSceneManagerInstance().getSceneBgs(new ITuyaResultCallback<ArrayL
 If the user exits the activity of the scene, the scene destruction method should be invoked to reclaim the memory and enhance the experience.
 
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getSceneManagerInstance().onDestroy();
 TuyaHomeSdk.newSceneInstance(sceneId).onDestroy();

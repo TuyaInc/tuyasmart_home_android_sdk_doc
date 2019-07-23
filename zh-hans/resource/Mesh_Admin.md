@@ -2,7 +2,7 @@
 ### 创建Mesh
 
 ##### 【方法调用】
-```
+```java
 * @param meshName   mesh的名称（不超过16字节）
 * @param callback   回调
 void createBlueMesh(String meshName, ITuyaResultCallback<BlueMeshBean> callback);
@@ -26,7 +26,7 @@ TuyaHomeSdk.newHomeInstance("homeId").createBlueMesh("meshName", new ITuyaResult
 ### 删除Mesh
 
 ##### 【代码范例】
-```
+```java
 TuyaHomeSdk.newBlueMeshDeviceInstance(meshId).removeMesh(new IResultCallback() {
     @Override
     public void onError(String errorCode, String errorMsg) {
@@ -43,11 +43,11 @@ TuyaHomeSdk.newBlueMeshDeviceInstance(meshId).removeMesh(new IResultCallback() {
 
 ### 从缓存中获取Mesh数据
 ##### 【方法调用】
-```
+```java
 TuyaHomeSdk.newHomeInstance("homeId").getHomeBean().getMeshList()
 ```
 ##### 【代码范例】
-```
+```java
 ITuyaHome mTuyaHome = TuyaHomeSdk.newHomeInstance("homeId");
 if (mTuyaHome.getHomeBean() != null){
 	List<BlueMeshBean> meshList = mTuyaHome.getHomeBean().getMeshList();
@@ -57,7 +57,7 @@ if (mTuyaHome.getHomeBean() != null){
 
 ### 从缓存中获取Mesh下的子设备数据
 ##### 【代码范例】
-```
+```java
 List<DeviceBean> meshSubDevList = TuyaHomeSdk.newBlueMeshDeviceInstance("meshId").getMeshSubDevList();
     
 ```
@@ -67,7 +67,7 @@ List<DeviceBean> meshSubDevList = TuyaHomeSdk.newBlueMeshDeviceInstance("meshId"
 建议在家庭切换的时候 销毁当前mesh  然后重新初始化家庭中的mesh
 
 ##### 【方法调用】
-```
+```java
 //初始化mesh
 TuyaHomeSdk.getTuyaBlueMeshClient().initMesh(String meshId);       
 
@@ -81,7 +81,7 @@ TuyaHomeSdk.getTuyaBlueMeshClient().destroyMesh();
 ITuyaBlueMeshClient 提供 开始连接、断开连接、开启扫描、停止扫描
 
 ##### 【方法调用】
-```
+```java
 // 开启连接
 TuyaHomeSdk.getTuyaBlueMeshClient().startClient(mBlueMeshBean);
 
