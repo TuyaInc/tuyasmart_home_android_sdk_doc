@@ -765,7 +765,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="ErrorCode.html">
+        <li class="chapter " data-level="1.18" data-path="CommonInterface.html">
+            
+                <a href="CommonInterface.html">
+            
+                    
+                    通用接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="ErrorCode.html">
             
                 <a href="ErrorCode.html">
             
@@ -778,7 +791,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="FAQ.html">
+        <li class="chapter " data-level="1.20" data-path="FAQ.html">
             
                 <a href="FAQ.html">
             
@@ -791,7 +804,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20" data-path="Update_Log.html">
+        <li class="chapter " data-level="1.21" data-path="Update_Log.html">
             
                 <a href="Update_Log.html">
             
@@ -873,7 +886,7 @@ mPushAgent<span class="token punctuation">.</span><span class="token function">s
 * @param aliasId   &#x7528;&#x6237;&#x522B;&#x540D; &#x4E3A;&#x7B2C;&#x4E8C;&#x6B65;&#x5411;&#x53CB;&#x76DF;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x522B;&#x540D;&#x7684;alias
 * @param pushProvider   &#x6CE8;&#x518C;push&#x7684;&#x7C7B;&#x522B;  &#x53CB;&#x76DF;&#x586B;&quot;umeng&quot; 
 */</span>        
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span>String aliasId<span class="token punctuation">,</span> String pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span>String aliasId<span class="token punctuation">,</span> String pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
@@ -943,7 +956,7 @@ mPushAgent<span class="token punctuation">.</span><span class="token function">d
 * @param aliasId   &#x7528;&#x6237;&#x522B;&#x540D; &#x5373;fcm&#x751F;&#x6210;&#x7684;token
 * @param pushProvider   &#x6CE8;&#x518C;push&#x7684;&#x7C7B;&#x522B;  fcm&#x586B;&quot;gcm&quot;
 */</span>        
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span>String aliasId<span class="token punctuation">,</span> String pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span>String aliasId<span class="token punctuation">,</span> String pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
@@ -1002,7 +1015,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"集成Push","level":"1.15","depth":1,"next":{"title":"网关","level":"1.16","depth":1,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]},"previous":{"title":"意见反馈","level":"1.14","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Push.md","mtime":"2019-05-28T07:21:41.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-23T06:15:54.016Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"集成Push","level":"1.15","depth":1,"next":{"title":"网关","level":"1.16","depth":1,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]},"previous":{"title":"意见反馈","level":"1.14","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Push.md","mtime":"2019-07-26T02:52:03.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-26T12:23:58.374Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>

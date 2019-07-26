@@ -54,6 +54,7 @@
   * [设备操作](./resource/Mesh_Device_Operate.md)
   * [群组操作](./resource/Mesh_Group_Operate.md)
   * [设备升级](./resource/Mesh_OTA.md)	
+* [通用接口](./resource/CommonInterface.md)
 * [错误码](./resource/ErrorCode.md)
 * [常见问题](./resource/FAQ.md)
 * [更新日志](./resource/Update_Log.md)

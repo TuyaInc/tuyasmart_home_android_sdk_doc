@@ -53,27 +53,25 @@ ActivatorModelEnum.TY_AP: The AP mode network configuration is enabled is this p
 Title: EZ Mode
 
 participant APP
-participant SDK
 participant Device
 participant Service
 
 Note over APP: Connect to the Wifi of router
 Note over Device: Switch to the EZ mode
 
-APP->SDK: Get Token
-SDK->Service: Get Token
-Service-->SDK: Response Token
-SDK-->APP: Response Token
+APP-->Service: Get Token
+Service-->APP: Response Token
 
-APP->SDK: Start network configuration (send configuration data)
-Note over SDK: broadcast configuration data
+Note over APP: Start network configuration (send configuration data), broadcast configuration data
 Device->Device: Get configuration data
+
+APP-->Server: Use the token to poll the list of network activation devices every 2 seconds (the total duration is 100s by default)
 
 Device->Service: Activate the device
 Service-->Device: Network configuration succeeds
 
-Device-->SDK: Network configuration succeeds
-SDK-->APP: Network configuration succeeds
+Server-->APP: Network configuration succeeds
+
 
 ```
 
@@ -94,29 +92,27 @@ mTuyaActivator = TuyaHomeSdk.getActivatorInstance().newMultiActivator(new Activa
 Title: AP Mode
 
 participant APP
-participant SDK
 participant Device
 participant Service
 
 Note over Device: Switch to the AP mode
-APP->SDK: Get Token
-SDK->Service: Get Token
-Service-->SDK: Response Token
-SDK-->APP: Response Token
+
+APP-->Service: Get Token
+Service-->APP: Response Token
 
 Note over APP: Connect the hotspot device
 
-APP->SDK: Start network configuration (send configuration data)
-SDK->Device: send configuration data
-Note over Device: Device turns off hotspot automatically
+APP->Device: Start network configuration (send configuration data), send configuration data
 
+APP-->Server: Use the token to poll the list of network activation devices every 2 seconds (the total duration is 100s by default)
+
+Note over Device: Device turns off hotspot automatically
 Note over Device: The device is connected to the Wifi of router
 
 Device->Service: Activate the device
 Service-->Device: Network configuration succeeds
 
-Device-->SDK: Network configuration succeeds
-SDK-->APP: Network configuration succeeds
+Server-->APP: Network configuration succeeds
 
 ```
 

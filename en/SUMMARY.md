@@ -40,5 +40,6 @@
 * [Feedback](./resource/Feedback.md)
 * [Integrate Push](./resource/Push.md)
 * [Gateway](./resource/Gateway.md)
+* [Common Interface](./resource/CommonInterface.md)
 * [Error Code](./resource/ErrorCode.md)
 * [Change Log](./resource/ChangeLog.md)

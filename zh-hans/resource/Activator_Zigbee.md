@@ -9,27 +9,26 @@ ZigBee网关配网前，请确保ZigBee网关设备连接上外网联通的路�
 Title: Zigbee 网关配网
 
 participant APP
-participant SDK
-participant Zigbee网关
-participant Service
+participant Device
+participant Server
 
-Note over Zigbee网关: 将Zigbee网关重置
-APP->SDK: 获取token
-SDK->Service: 获取token
-Service-->SDK: 返回token
-SDK-->APP: 返回token
+Note over Device: 将Zigbee网关连上路由器，并置于配网状态
+APP --> APP: APP连上和网关相同的路由器热点
+Device-->APP: 发送广播包，待配网设备
+APP-->APP: 收到设备信息及active状态
 
-APP -> APP: APP连上和网关相同的路由器热点
+APP-->Server: 获取token
+Server-->APP: 返回token
 
-APP->SDK: 发送激活命令
-SDK->Zigbee网关: 发送激活命令
-Note over Zigbee网关: 设备收到激活信息
+APP-->Device: 发送激活命令给网关设备
+APP-->Server: 根据token 2秒钟轮询一次入网激活设备列表(总时长默认100s)
 
-Zigbee网关->Service: 去云端进行激活
-Service-->Zigbee网关: 激活成功
+Note over Device: 设备收到APP激活广播信息
 
-Zigbee网关-->SDK: 激活成功
-SDK-->APP: 激活成功
+Device->Server: 去云端进行激活
+Server-->Device: 激活成功
+
+Server-->APP: 激活成功，返回成功设备列表
 
 ```
 

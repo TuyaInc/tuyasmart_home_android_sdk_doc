@@ -1,7 +1,7 @@
 ## Group Management
 
 The Tuya Cloud supports the group management system. User can create group, change group name, manage devices of group, manage multiple devices via the group and dismiss group.
-Tuya Smart provides some interfaces for device group control. The group control herein refers to the WiFi group, and currently, only the group control function is available. The group function is disabled by default. If necessary, please contact our staff.
+Tuya Smart provides some interfaces for device group control. Currently only supports WiFi device groups.
 
 ### Group List Acquisition
 

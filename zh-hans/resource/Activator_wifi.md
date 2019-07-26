@@ -52,27 +52,24 @@ ActivatorModelEnum.TY_AP: 传入该参数则进行AP配网
 Title: EZ 配网
 
 participant APP
-participant SDK
 participant Device
-participant Service
+participant Server
 
 Note over APP: 连上路由器
 Note over Device: Wifi灯快闪
 
-APP->SDK: 获取token
-SDK->Service: 获取token
-Service-->SDK: 返回token
-SDK-->APP: 返回token
+APP-->Server: 获取token
+Server-->APP: 返回token
 
-APP->SDK: 开始配网 ssid/pwd/token
-Note over SDK: 通过广播、组播循环发送ssid/pwd/token
+Note over APP: 开始配网，通过广播、组播循环发ssid/pwd/token
 Device->Device: 捕捉到ssid/password/token
 
-Device->Service: 去激活设备
-Service-->Device: 激活成功
+APP-->Server: 根据token 2秒钟轮询一次入网激活设备列表(总时长默认100s)
 
-Device-->SDK: 激活成功
-SDK-->APP: 激活成功
+Device-->Server: 去激活设备
+Server-->Device: 激活成功
+
+Server-->APP: 激活成功，返回成功设备列表
 
 ```
 
@@ -93,30 +90,27 @@ mTuyaActivator = TuyaHomeSdk.getActivatorInstance().newMultiActivator(new Activa
 Title: AP 配网
 
 participant APP
-participant SDK
 participant Device
-participant Service
+participant Server
 
+Note over APP: 连上路由器
 Note over Device: Wifi灯慢闪
-APP->SDK: 获取token
-SDK->Service: 获取token
-Service-->SDK: 返回token
-SDK-->APP: 返回token
+APP-->Server: 获取token
+Server-->APP: 返回token
 
 Note over APP: 连上设备的热点
+APP-->Device: 开始配网，发送配置信息ssid/pwd/token
 
-APP->SDK: 开始配网 ssid/pwd/token
-SDK->Device: 发送配置信息 ssid/pwd/token
 Note over Device: 自动关闭热点
-
 Note over Device: 连上路由器WiFi
 
-Device->Service: 去激活设备
-Service-->Device: 激活成功
+Note over APP: 自动重新连上路由器
+APP-->Server: 根据token 2秒钟轮询一次入网激活设备列表(总时长默认100s)
 
-Device-->SDK: 激活成功
-SDK-->APP: 激活成功
+Device-->Server: 去激活设备
+Server-->Device: 激活成功
 
+Server-->APP: 激活成功，返回成功设备列表
 ```
 
 ```java

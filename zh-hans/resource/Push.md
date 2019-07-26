@@ -33,7 +33,7 @@ mPushAgent.setAlias("可以使用友盟获取的token", "TUYA_SMART", new UTrack
 * @param aliasId   用户别名 为第二步向友盟注册用户别名的alias
 * @param pushProvider   注册push的类别  友盟填"umeng" 
 */		
-TuyaHomeSdk.getInstance().registerDevice(String aliasId, String pushProvider, new IResultCallback() {
+TuyaHomeSdk.getPushInstance().registerDevice(String aliasId, String pushProvider, new IResultCallback() {
     @Override
     public void onError(String code, String error) {
     }
@@ -124,7 +124,7 @@ mPushAgent.deleteAlias(aliasId, "TUYA_SMART", new UTrack.ICallBack() {
 * @param aliasId   用户别名 即fcm生成的token
 * @param pushProvider   注册push的类别  fcm填"gcm"
 */		
-TuyaHomeSdk.getInstance().registerDevice(String aliasId, String pushProvider, new IResultCallback() {
+TuyaHomeSdk.getPushInstance().registerDevice(String aliasId, String pushProvider, new IResultCallback() {
     @Override
     public void onError(String code, String error) {
     }

@@ -763,7 +763,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="ErrorCode.html">
+        <li class="chapter " data-level="1.18" data-path="CommonInterface.html">
+            
+                <a href="CommonInterface.html">
+            
+                    
+                    通用接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="ErrorCode.html">
             
                 <a href="ErrorCode.html">
             
@@ -776,7 +789,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="FAQ.html">
+        <li class="chapter " data-level="1.20" data-path="FAQ.html">
             
                 <a href="FAQ.html">
             
@@ -789,7 +802,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20" data-path="Update_Log.html">
+        <li class="chapter " data-level="1.21" data-path="Update_Log.html">
             
                 <a href="Update_Log.html">
             
@@ -887,27 +900,24 @@ ActivatorModelEnum.TY_AP: &#x4F20;&#x5165;&#x8BE5;&#x53C2;&#x6570;&#x5219;&#x8FD
 <pre class="language-"><code class="lang-sequence">Title: EZ &#x914D;&#x7F51;
 
 participant APP
-participant SDK
 participant Device
-participant Service
+participant Server
 
 Note over APP: &#x8FDE;&#x4E0A;&#x8DEF;&#x7531;&#x5668;
 Note over Device: Wifi&#x706F;&#x5FEB;&#x95EA;
 
-APP-&gt;SDK: &#x83B7;&#x53D6;token
-SDK-&gt;Service: &#x83B7;&#x53D6;token
-Service--&gt;SDK: &#x8FD4;&#x56DE;token
-SDK--&gt;APP: &#x8FD4;&#x56DE;token
+APP--&gt;Server: &#x83B7;&#x53D6;token
+Server--&gt;APP: &#x8FD4;&#x56DE;token
 
-APP-&gt;SDK: &#x5F00;&#x59CB;&#x914D;&#x7F51; ssid/pwd/token
-Note over SDK: &#x901A;&#x8FC7;&#x5E7F;&#x64AD;&#x3001;&#x7EC4;&#x64AD;&#x5FAA;&#x73AF;&#x53D1;&#x9001;ssid/pwd/token
+Note over APP: &#x5F00;&#x59CB;&#x914D;&#x7F51;&#xFF0C;&#x901A;&#x8FC7;&#x5E7F;&#x64AD;&#x3001;&#x7EC4;&#x64AD;&#x5FAA;&#x73AF;&#x53D1;ssid/pwd/token
 Device-&gt;Device: &#x6355;&#x6349;&#x5230;ssid/password/token
 
-Device-&gt;Service: &#x53BB;&#x6FC0;&#x6D3B;&#x8BBE;&#x5907;
-Service--&gt;Device: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
+APP--&gt;Server: &#x6839;&#x636E;token 2&#x79D2;&#x949F;&#x8F6E;&#x8BE2;&#x4E00;&#x6B21;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;&#x8BBE;&#x5907;&#x5217;&#x8868;(&#x603B;&#x65F6;&#x957F;&#x9ED8;&#x8BA4;100s)
 
-Device--&gt;SDK: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
-SDK--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
+Device--&gt;Server: &#x53BB;&#x6FC0;&#x6D3B;&#x8BBE;&#x5907;
+Server--&gt;Device: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
+
+Server--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x8BBE;&#x5907;&#x5217;&#x8868;
 </code></pre>
 <pre class="language-"><code class="lang-java">mTuyaActivator <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newMultiActivator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">.</span><span class="token function">setSsid</span><span class="token punctuation">(</span>ssid<span class="token punctuation">)</span>
@@ -922,29 +932,27 @@ SDK--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
 <pre class="language-"><code class="lang-sequence">Title: AP &#x914D;&#x7F51;
 
 participant APP
-participant SDK
 participant Device
-participant Service
+participant Server
 
+Note over APP: &#x8FDE;&#x4E0A;&#x8DEF;&#x7531;&#x5668;
 Note over Device: Wifi&#x706F;&#x6162;&#x95EA;
-APP-&gt;SDK: &#x83B7;&#x53D6;token
-SDK-&gt;Service: &#x83B7;&#x53D6;token
-Service--&gt;SDK: &#x8FD4;&#x56DE;token
-SDK--&gt;APP: &#x8FD4;&#x56DE;token
+APP--&gt;Server: &#x83B7;&#x53D6;token
+Server--&gt;APP: &#x8FD4;&#x56DE;token
 
 Note over APP: &#x8FDE;&#x4E0A;&#x8BBE;&#x5907;&#x7684;&#x70ED;&#x70B9;
+APP--&gt;Device: &#x5F00;&#x59CB;&#x914D;&#x7F51;&#xFF0C;&#x53D1;&#x9001;&#x914D;&#x7F6E;&#x4FE1;&#x606F;ssid/pwd/token
 
-APP-&gt;SDK: &#x5F00;&#x59CB;&#x914D;&#x7F51; ssid/pwd/token
-SDK-&gt;Device: &#x53D1;&#x9001;&#x914D;&#x7F6E;&#x4FE1;&#x606F; ssid/pwd/token
 Note over Device: &#x81EA;&#x52A8;&#x5173;&#x95ED;&#x70ED;&#x70B9;
-
 Note over Device: &#x8FDE;&#x4E0A;&#x8DEF;&#x7531;&#x5668;WiFi
 
-Device-&gt;Service: &#x53BB;&#x6FC0;&#x6D3B;&#x8BBE;&#x5907;
-Service--&gt;Device: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
+Note over APP: &#x81EA;&#x52A8;&#x91CD;&#x65B0;&#x8FDE;&#x4E0A;&#x8DEF;&#x7531;&#x5668;
+APP--&gt;Server: &#x6839;&#x636E;token 2&#x79D2;&#x949F;&#x8F6E;&#x8BE2;&#x4E00;&#x6B21;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;&#x8BBE;&#x5907;&#x5217;&#x8868;(&#x603B;&#x65F6;&#x957F;&#x9ED8;&#x8BA4;100s)
 
-Device--&gt;SDK: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
-SDK--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
+Device--&gt;Server: &#x53BB;&#x6FC0;&#x6D3B;&#x8BBE;&#x5907;
+Server--&gt;Device: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
+
+Server--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x8BBE;&#x5907;&#x5217;&#x8868;
 </code></pre>
 <pre class="language-"><code class="lang-java">mTuyaActivator <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newActivator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">.</span><span class="token function">setSsid</span><span class="token punctuation">(</span>ssid<span class="token punctuation">)</span>
@@ -1046,7 +1054,7 @@ device_bind_success &#x8BBE;&#x5907;&#x7ED1;&#x5B9A;&#x6210;&#x529F;&#xFF0C;&#x4
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WIFI配网","level":"1.7.1","depth":2,"next":{"title":"ZigBee网关配网","level":"1.7.2","depth":2,"path":"resource/Activator_Zigbee.md","ref":"./resource/Activator_Zigbee.md","articles":[]},"previous":{"title":"设备配网","level":"1.7","depth":1,"ref":"","articles":[{"title":"WIFI配网","level":"1.7.1","depth":2,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[]},{"title":"ZigBee网关配网","level":"1.7.2","depth":2,"path":"resource/Activator_Zigbee.md","ref":"./resource/Activator_Zigbee.md","articles":[]},{"title":"ZigBee子设备配网","level":"1.7.3","depth":2,"path":"resource/Activator_ZigbeeSub.md","ref":"./resource/Activator_ZigbeeSub.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Activator_wifi.md","mtime":"2019-03-12T02:03:54.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-23T06:15:54.016Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"WIFI配网","level":"1.7.1","depth":2,"next":{"title":"ZigBee网关配网","level":"1.7.2","depth":2,"path":"resource/Activator_Zigbee.md","ref":"./resource/Activator_Zigbee.md","articles":[]},"previous":{"title":"设备配网","level":"1.7","depth":1,"ref":"","articles":[{"title":"WIFI配网","level":"1.7.1","depth":2,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[]},{"title":"ZigBee网关配网","level":"1.7.2","depth":2,"path":"resource/Activator_Zigbee.md","ref":"./resource/Activator_Zigbee.md","articles":[]},{"title":"ZigBee子设备配网","level":"1.7.3","depth":2,"path":"resource/Activator_ZigbeeSub.md","ref":"./resource/Activator_ZigbeeSub.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Activator_wifi.md","mtime":"2019-07-26T12:22:56.320Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-26T12:23:58.374Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>

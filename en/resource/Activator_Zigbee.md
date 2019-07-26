@@ -9,27 +9,28 @@ please ensure that the ZigBee gateway device is connected to the router of Inter
 Title: Zigbee Gateway configuration
 
 participant APP
-participant SDK
 participant Zigbee Gateway
 participant Service
 
 Note over Zigbee Gateway: Reset zigbee gateway
-APP->SDK: Get Token
-SDK->Service: Get Token
-Service-->SDK: Response Token
-SDK-->APP: Response Token
+
+APP-->Service: Get Token
+Service-->APP: Response Token
 
 APP -> APP: connect mobile phone to the same hotspot of the gateway
 
-APP->SDK: sends the activation instruction
-SDK->Zigbee Gateway: sends the activation instruction
+Device-->APP: broadcast configuration data
+APP-->APP: Receive Gateway information and active status
+
+APP-->Zigbee Gateway: sends the activation instruction
+APP-->Server: Use the token to poll the list of network activation devices every 2 seconds (the total duration is 100s by default)
+
 Note over Zigbee Gateway: device receives the activation data
 
 Zigbee Gateway->Service: activate the device
 Service-->Zigbee Gateway: network configuration succeeds
 
-Zigbee Gateway-->SDK: network configuration succeeds
-SDK-->APP: network configuration succeeds
+Server-->APP: Network configuration succeeds
 
 ```
 
