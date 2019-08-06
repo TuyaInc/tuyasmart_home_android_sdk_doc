@@ -1,4 +1,4 @@
-### 3.11.0
+### 3.11.1
 
 * so库集成方式变更，sdk提供armeabi-v7a、arm64-v8a、armeabi的so库，开发者按需使用
 * 开放蓝牙mesh相关功能
