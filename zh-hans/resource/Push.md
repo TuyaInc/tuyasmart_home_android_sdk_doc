@@ -122,7 +122,7 @@ mPushAgent.deleteAlias(aliasId, "TUYA_SMART", new UTrack.ICallBack() {
 ```java
 /**
 * @param aliasId   用户别名 即fcm生成的token
-* @param pushProvider   注册push的类别  fcm填"gcm"
+* @param pushProvider   注册push的类别  fcm填"fcm"
 */		
 TuyaHomeSdk.getPushInstance().registerDevice(String aliasId, String pushProvider, new IResultCallback() {
     @Override

@@ -29,7 +29,6 @@
   * [设备控制](./resource/Device.md)
   * [固件升级](./resource/OTA.md)
   * [设备数据流通道](./resource/Device_Data_Channel.md)
-  * [获取数据点的历史统计数据](./resource/Device.md#获取数据点的历史统计数据)
 * [共享设备](./resource/Shared.md)
 
   * [添加共享](./resource/Shared_Device_add.md)
@@ -58,3 +57,4 @@
 * [错误码](./resource/ErrorCode.md)
 * [常见问题](./resource/FAQ.md)
 * [更新日志](./resource/Update_Log.md)
+

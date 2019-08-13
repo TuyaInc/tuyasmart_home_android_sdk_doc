@@ -25,7 +25,6 @@
   * [Device Control](./resource/Device.md)
   * [Firmware upgrade](./resource/OTA.md)
   * [Data Model](./resource/Device_Data_Channel.md)
-  * [Get historical statistics of DP](./resource/Device.md#get-historical-statistics-of-dp)
 * [Shared devices](./resource/Shared.md)
   * [Add for Sharing](./resource/Shared_Device_add.md)
   * [Removing Sharing](./resource/Shared_Device_Remove.md)
