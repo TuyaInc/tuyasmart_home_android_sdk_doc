@@ -9,6 +9,8 @@ Tuya Smart provides a lot of interfaces for developers to realize the acquisitio
 **[Notes]**
 
 - For the device control, the data must be initialized first; namely, TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail(ITuyaHomeResultCallback callback) must be invoked first.
+- If you need to use latitude and longitude to device control, you need to call TuyaSdk.setLatAndLong before the distribution network, where lon and lat are used to indicate latitude and longitude information.
+
 
 ![pastedGraphic.png](images/pastedGraphic-1064908.png)
 

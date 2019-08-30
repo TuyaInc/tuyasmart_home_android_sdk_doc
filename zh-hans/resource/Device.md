@@ -9,7 +9,7 @@
 ##### 【注意事项】
 
 - 设备控制必须先初始化数据，即先调用TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail(ITuyaHomeResultCallback callback)
-
+- 设备控制如果需要使用经纬度，需要再配网前调用TuyaSdk.setLatAndLong，其中lon、lat用来标示经纬度信息。
 ------
 
 ### 设备操作控制
