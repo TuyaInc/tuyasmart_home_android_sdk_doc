@@ -1001,6 +1001,9 @@ SceneTask createPushMessage();
 TuyaHomeSceneManager.getInstance().createPushMessage();
 ```
 
+## 单个场景操作
+
+TuyaHomeSdk提供了单个场景的创建、修改、执行、删除4种操作，除了创建其他操作需要使用场景id进行初始化，场景id可以从[获取场景列表接口](#GetSceneList)的接口中拿到
 
 ### 创建场景
 

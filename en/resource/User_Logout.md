@@ -1,3 +1,63 @@
+## Change NickName
+
+[Method Prototype]
+
+```java
+/**
+* change nickname
+*
+* @param name   nickname
+* @param callback
+*/
+void reRickName(String name, final IReNickNameCallback callback);
+```
+**[Example Codes]**
+
+```java
+TuyaHomeSdk.getUserInstance().reRickName(
+    nickName, 
+    new IReNickNameCallback() {
+        @Override
+        public void onSuccess() {
+        }
+
+        @Override
+        public void onError(String code, String error) {
+
+        }
+});
+```
+
+## Update user's time zone
+
+[Method Prototype]
+
+```java
+/**
+* Update user's time zone
+*
+* @param timezoneId   time zone id
+* @param callback
+*/
+ void updateTimeZone(String timezoneId, IResultCallback callback);
+```
+**代码范例**
+
+```java
+TuyaHomeSdk.getUserInstance().updateTimeZone(
+    timezoneId, 
+    new IResultCallback() {
+        @Override
+        public void onSuccess() {
+        }
+
+        @Override
+        public void onError(String code, String error) {
+
+        }
+});
+```
+
 ## Upload the User Account Picture
 
 **[Description]**
@@ -5,6 +65,7 @@
 It is for user to upload his/her self-defined account image. 
 
 **[Method Prototype]**
+
 ```java
 /**
  * Upload user account picture
@@ -15,6 +76,7 @@ void uploadUserAvatar(File file, IBooleanCallback callback)
 ```
 
 **[Example Codes]**
+
 ```java
 TuyaHomeSdk.getUserInstance().uploadUserAvatar(
     file, 
@@ -39,6 +101,14 @@ Select the centigrade or Fahrenheit.
  */
 void setTempUnit(TempUnitEnum unit, IResultCallback callback);
 ```
+
+## Update user location information
+
+If necessary, the positioning information can be reported through the following interfaces:
+
+```java
+TuyaSdk.setLatAndLong(lat,lon);
+```
 ## Log Out of the Login Interface
 
 The logout interface has to be invoked for account switching. 
@@ -56,7 +126,7 @@ TuyaHomeSdk.getUserInstance().logout(new ILogoutCallback() {
 ```
 
 
-## Deregister Account
+## Disable account (deregister user)
 
 After one week, the account will be permanently disabled, and all information in the account will be deleted. If you log in to the account again before it is permanently disabled, your deregistration will be canceled.
 ```java

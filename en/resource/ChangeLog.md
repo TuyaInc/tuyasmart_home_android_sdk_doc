@@ -1,3 +1,11 @@
+### 3.12.0
+
+- Support sub device OTA
+- AP Distribution Network Optimization
+- Timing support annotation and push function
+- Support SigMesh Devices
+- bug fixed
+
 ###  3.11.2
 
 - Change the integration of the so library, sdk provides the so library of armeabi-v7a, arm64-v8a, armeabi developers use as needed

@@ -1,4 +1,4 @@
-# Smart
+# <span id ="Smart">Smart</span>
 
 ## Brief Introduction
 
@@ -985,6 +985,9 @@ SceneTask createPushMessage();
 ```java
 TuyaHomeSceneManager.getInstance().createPushMessage();
 ```
+
+## <span id="Scene_operation">Scene Operation</span>
+TuyaHomeSdk provides four operations for creating, modifying, executing, and deleting a single scene. In addition to creating other operations, the scene ID needs to be initialized. The scene ID can be obtained from the interface of [obtaining the scene list interface.](#ObtainSceneList)
 
 ### Create Scene
 

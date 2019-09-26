@@ -1,42 +1,6 @@
 ### 添加分享
 
-#### (1)添加多个设备共享（覆盖）
-
-##### 【描述】
-
-分享多个设备给指定用户，会将指定用户的以前所有分享覆盖掉
-
-##### 【方法调用】
-
-```java
-@param homeId	 家庭id
-@param countryCode 手机区号码,例如中国是“86”
-@param userAccount 账号
-@param ShareIdBean 分享内容 目前支持 设备或者mesh
-@param autoSharing 是否自动分享新增的设备，如果为true，则分享者以后新增的设备都会自动分享给该指定用户（mesh暂不支持该选项）
-
-void addShare(long homeId, String countryCode, String userAccount, ShareIdBean bean, boolean autoSharing, ITuyaResultCallback<SharedUserInfoBean> callback);
-
-
-```
-
-##### 【代码范例】
-
-```java
-TuyaHomeSdk.getDeviceShareInstance.addShare(homeId, countryCode, userAccount, bean, true, new ITuyaResultCallback<SharedUserInfoBean>() {
-            @Override
-            public void onSuccess(SharedUserInfoBean bean) {
-                
-            }
-
-            @Override
-            public void onError(String errorMsg, String errorCode) {
-                
-            }
-        });
-```
-
-#### (2)添加多个设备共享（追加）
+#### (1)添加多个设备共享（追加）
 
 ##### 【描述】
 
@@ -68,7 +32,7 @@ TuyaHomeSdk.getDeviceShareInstance().addShareWithHomeId(homeId, countryCode, use
         });
 ```
 
-#### (3)批量添加设备共享
+#### (2)批量添加设备共享
 
 ##### 【描述】
 
@@ -101,7 +65,7 @@ TuyaHomeSdk.getDeviceShareInstance().addShareWithMemberId (memberId, devIds, new
 });
 ```
 
-#### (4)单个设备取消共享
+#### (3)单个设备取消共享
 
 ##### 【描述】
 
@@ -137,7 +101,7 @@ TuyaHomeSdk.getDeviceShareInstance().disableDevShare (devId, memberId, new IResu
 });
 ```
 
-#### (5)单个设备开启分享
+#### (4)单个设备开启分享
 
 ##### 【描述】
 

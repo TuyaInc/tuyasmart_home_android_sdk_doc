@@ -176,3 +176,121 @@ TuyaMessage.getInstance().deleteMessages(
         });
         
 ```
+
+
+
+### 根据消息类型获取最新的消息
+
+##### 【描述】
+
+获取最新一条消息的时间戳
+
+##### 【方法原型】
+
+```java
+
+    /**
+     * 获取消息列表
+     * @param offset  偏移从第n条数据开始获取
+     * @param limit 每页的消息数量
+     * @param msgType  消息类型  (MSG_REPORT 告警) (MSG_FAMILY 家庭) (MSG_NOTIFY 通知)
+     * @param callback
+     */
+    void getMessageListByMsgType(int offset, int limit, MessageType msgType, ITuyaDataCallback<MessageListBean> callback);
+
+```
+
+##### 【代码范例】
+
+```java
+        TuyaHomeSdk.getMessageInstance().getMessageListByMsgType(offset, limit, type, new ITuyaDataCallback<MessageListBean>() {
+            @Override
+            public void onSuccess(MessageListBean result) {
+            
+            }
+
+            @Override
+            public void onError(String errorCode, String errorMessage) {
+            
+            }
+        });
+        
+```
+
+
+
+### 根据消息类型获取最新的消息
+
+##### 【描述】
+
+根据消息类型获取最新消息, 目前有3种类型的消息 (MSG_REPORT 告警) (MSG_FAMILY 家庭) (MSG_NOTIFY 通知)
+
+##### 【方法原型】
+
+```java
+
+    /**
+     * 根据消息类型获取最新的消息
+     * @param offset  偏移从第n条数据开始获取
+     * @param limit 每页的消息数量
+     * @param msgType  消息类型  (MSG_REPORT 告警) (MSG_FAMILY 家庭) (MSG_NOTIFY 通知)
+     * @param callback
+     */
+    void getMessageListByMsgType(int offset, int limit, MessageType msgType, ITuyaDataCallback<MessageListBean> callback);
+
+```
+
+##### 【代码范例】
+
+```java
+        TuyaHomeSdk.getMessageInstance().getMessageListByMsgType(offset, limit, type, new ITuyaDataCallback<MessageListBean>() {
+            @Override
+            public void onSuccess(MessageListBean result) {
+            
+            }
+
+            @Override
+            public void onError(String errorCode, String errorMessage) {
+            
+            }
+        });
+        
+```
+
+
+### 根据消息SrcId获取消息列表
+
+##### 【描述】
+
+根据消息SrcId获取消息列表， 目前只支持(MSG_REPORT 告警)类型的消息
+
+##### 【方法原型】
+
+```java
+
+    /**
+     * 根据消息SrcId获取消息列表
+     * @param offset  偏移从第n条数据开始获取
+     * @param limit 每页的消息数量
+     * @param msgType  消息类型 (MSG_REPORT 告警)
+     * @param msgSrcId  消息组id
+     * @param callback
+     */
+    void getMessageListByMsgSrcId(int offset, int limit, MessageType msgType, String msgSrcId, ITuyaDataCallback<MessageListBean> callback);
+
+```
+
+##### 【代码范例】
+
+```java
+TuyaHomeSdk.getMessageInstance().getMessageListByMsgSrcId(offset, limit, MessageType.MSG_REPORT, msgSrcId, true , new ITuyaDataCallback<MessageListBean>() {
+            @Override
+            public void onSuccess(MessageListBean result) {
+            }
+
+            @Override
+            public void onError(String errorCode, String errorMessage) {
+            }
+        });
+        
+```

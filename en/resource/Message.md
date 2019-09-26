@@ -166,3 +166,81 @@ Gets the timestamp of the latest message
         });
         
 ```
+
+
+### Get the latest message based on the message type
+
+**[Description]**
+
+Get the latest message based on the message type, there are currently three types of messages (MSG_REPORT alert) (MSG_FAMILY family) (MSG_NOTIFY notification)
+
+**[Method Prototype]**
+
+```java
+
+    /**
+     * Get the latest message based on the message type
+     * @param offset  The offset is obtained from the n th data
+     * @param limit Number of messages per page
+     * @param msgType  Message type (MSG_REPORT alert) (MSG_FAMILY family) (MSG_NOTIFY notification)
+     * @param callback
+     */
+    void getMessageListByMsgType(int offset, int limit, MessageType msgType, ITuyaDataCallback<MessageListBean> callback);
+
+```
+
+**[Example Codes]**
+
+
+```java
+        TuyaHomeSdk.getMessageInstance().getMessageListByMsgType(offset, limit, MessageType.MSG_REPORT, new ITuyaDataCallback<MessageListBean>() {
+            @Override
+            public void onSuccess(MessageListBean result) {
+            
+            }
+
+            @Override
+            public void onError(String errorCode, String errorMessage) {
+            
+            }
+        });
+        
+```
+
+
+### Gets the list of messages according to the message SrcId
+
+**[Description]**
+
+Gets the list of messages according to message SrcId, currently only messages of type (MSG_REPORT alert) are supported
+
+**[Method Prototype]**
+
+```java
+
+    /**
+     * Gets the list of messages according to the message SrcId
+     * @param offset  The offset is obtained from the n th data
+     * @param limit Number of messages per page
+     * @param msgType  Message type (MSG_REPORT alert)
+     * @param msgSrcId  Message SrcId
+     * @param callback
+     */
+    void getMessageListByMsgSrcId(int offset, int limit, MessageType msgType, String msgSrcId, ITuyaDataCallback<MessageListBean> callback);
+
+```
+
+**[Example Codes]**
+
+```java
+TuyaHomeSdk.getMessageInstance().getMessageListByMsgSrcId(offset, limit, MessageType.MSG_REPORT, msgSrcId, true , new ITuyaDataCallback<MessageListBean>() {
+            @Override
+            public void onSuccess(MessageListBean result) {
+            }
+
+            @Override
+            public void onError(String errorCode, String errorMessage) {
+            }
+        });
+        
+```

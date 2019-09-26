@@ -1,6 +1,4 @@
-# Device Control
-
-## **Acquisition of Device Information**
+## Acquisition of Device Information
 
 **[Description]**
 
@@ -12,9 +10,7 @@ Tuya Smart provides a lot of interfaces for developers to realize the acquisitio
 - If you need to use latitude and longitude to device control, you need to call TuyaSdk.setLatAndLong before the distribution network, where lon and lat are used to indicate latitude and longitude information.
 
 
-![pastedGraphic.png](images/pastedGraphic-1064908.png)
-
-**Device Operation Control**
+## Device Operation Control
 
 The ITuyaDevice class provides the device status notification capability. By registering callback functions, developers can easily obtain notifications on device data reception, device removal, online/offline status of device, and mobile network changes. In addition, it also provides an interface for controlling command issuing and device firmware upgrade.
 
@@ -22,7 +18,7 @@ The ITuyaDevice class provides the device status notification capability. By reg
 // Initialize the device control class based on the device id.
 ITuyaDevice mDevice = TuyaHomeSdk.newDeviceInstance(deviceBean.getDevId());
 ```
-## **Function Points of Device**
+## Function Points of Device
 
 The dps attribute of the DeviceBean class defines the state of the device, and is called the data point (DP) or the function point. Each key in the dps dictionary refers to a dpId of a function point, and the dpValue is the value of the function point. Refer to the functions of product on the [Tuya developer platform ](https://developer.tuya.com/)for definition of function points of products. For details of function points, please refer to the [Functional Point Related Concepts](https://docs.tuya.com/en/product/function.html)
 
@@ -40,25 +36,17 @@ According to the definition of function points of the product in the back end, t
 
 dps = {"101": true};
 
-
-
 // Example of string type function point with dpId set to 102. Function: set RGB to ff5500.
 
 dps = {"102": "ff5500"};
-
-
 
 // Example of enumeration type function point with dpId set to 103. Function: set gear to position 2.
 
 dps = {"103": "2"};
 
-
-
 // Example of value type function point with dpId set to 104. Function: set temperature to 20 centigrade degree.
 
 dps = {"104": 20};
-
-
 
 // Example of transparent (byte array) function point with dpId set to 105. Function: transparently transfer infrared data (i.e., 1122).
 
@@ -69,25 +57,18 @@ dps = {"105": "1122"};
 dps = {"101": true, "102": "ff5500"};
 
 mDevice.publishDps(dps, new IControlCallback() {
-
-@Override
-
-public void onError(String code, String error) {
-//Error code 11001
-//In the following cases:
-//1. Type error send to, for example, string type format, being sent to boolean type data
-//2. Read-only type DP data can not be sent. Reference to SchemaBean getMode "ro" is read-only type.
-//3, raw format send data format is not a hexadecimal string.
-
-}
-
-@Override
-
-public void onSuccess() {
-
-}
-
-});
+        @Override
+        public void onError(String code, String error) {
+				        //Error code 11001
+        //In the following cases:
+        //1. Type error send to, for example, string type format, being        sent to boolean type data
+        //2. Read-only type DP data can not be sent. Reference to SchemaBean getMode "ro" is read-only type.
+        //3, raw format send data format is not a hexadecimal string.
+        }
+        @Override
+        public void onSuccess() {
+        }
+    });
 ```
 **[Notes]**
 
@@ -95,9 +76,29 @@ public void onSuccess() {
 	 For example, the data type of function points shall be value, and {"104": 25} shall be sent as the control command, instead of {"104": "25"}.
 - For the transparent transmission, the byte array shall be the string format, and the string must have even bits. 
 	 The correct format shall be: {"105": "0110"}, instead of {"105": "110"}.
-- 
 
-### **Initializing Data Listener**
+## Device control
+
+Device control supports three kinds of channel control, LAN control, cloud control, and automatic mode (if LAN is online, first go LAN control, LAN is not online, go cloud control)
+
+##### LAN control:
+
+```java
+mDevice.publishDps(commandStr, TYDevicePublishModeEnum.TYDevicePublishModeLocal, callback);
+```
+##### Cloud control
+
+```java
+mDevice.publishDps(commandStr, TYDevicePublishModeEnum.TYDevicePublishModeInternet, callback);
+```
+##### Auto mode
+
+```java
+mDevice.publishDps(commandStr, TYDevicePublishModeEnum.TYDevicePublishModeAuto, callback);
+
+```
+
+### Initializing Data Listener
 
 **[Description]**
 
@@ -138,6 +139,7 @@ mDevice.registerDevListener(new IDevListener() {
 Send control commands to the device through the LAN or the cloud.
 
 **[Method Invocation]**
+
 ```java
 // Send control commands to the hardware.
 
@@ -147,11 +149,14 @@ mDevice.send(String command,IControlCallback callback);
 
 Take the light product as an example.
 
-1. Defining the dp point of light switch
+(1) Defining the dp point of light switch
+
 ```java
 public static final String STHEME_LAMP_DPID_101 = "101"; //light switch 
 ```
-2. Data structure of light switch
+
+(2) Data structure of light switch
+
 ```java
 public class LampBean {
 	private boolean open;
@@ -163,21 +168,15 @@ public class LampBean {
 	}
 }
 ```
-3. Device initialization
+(3) Device initialization
+
 ```java
 /**
-
- \* Device object. All dp changes for this device will be returned via callback.
-
- *
-
- \* Before the device initialization, please make sure that the connection server has been initialized; otherwise, the information returned by the server cannnot be obtained.
-
+* Device object. All dp changes for this device will be returned via callback.
+* Before the device initialization, please make sure that the connection server has been initialized; otherwise, the information returned by the server cannnot be obtained.
  */
 
 mDevice = new TuyaHomeSdk.newDeviceInstance(mDevId);
-
-
 
 mDevice.registerDevListener(new IDevListener() {
     @Override
@@ -204,7 +203,9 @@ mDevice.registerDevListener(new IDevListener() {
     }
 });
 ```
-\4. Code segment for switching on the light
+
+(4) Code segment for switching on the light
+
 ```java
  public void openLamp() {
     LampBean bean = new LampBean();
@@ -223,11 +224,14 @@ mDevice.registerDevListener(new IDevListener() {
     });
 }
 ```
-5. Cancel device listener event
+(5) Cancel device listener event
+
 ```java
 mDevice.unRegisterDevListener();
 ```
-\6. Device resource destruction
+
+(6) Device resource destruction
+
 ```java
 mDevice.onDestroy();
 ```
@@ -322,7 +326,7 @@ mDevice.removeDevice(new IResultCallback() {
 ```
 
 
-#### Obtain Wifi signal strength of device
+## Obtain Wifi signal strength of device
 
 ##### 【Description】
 
@@ -376,4 +380,6 @@ mDevice.requestWifiSignal(new WifiSignalListener() {
 |timezoneId | String | Device time zone |
 | category | String | Device Type |
 |MeshId | String | Device for gateway and subdevice type, which is an attribute of subdevice and identifies its gateway ID |
-
+| devId |String|Device unique identifier id|
+| isZigBeeWifi |boolean|                Is it a ZigBee gateway device?                |
+| hasZigBee |boolean|hasZigBee|

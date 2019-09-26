@@ -1,6 +1,6 @@
-## Mesh群组操作
+## Mesh 群组操作
 ITuyaGroup类提供了对Mesh群组的操作
-### Mesh群组判断方法
+### Mesh 群组判断方法
 
 可以通过群组中是否具备MeshId来区分Mesh群组和普通wifi群组
 #####  【代码范例】

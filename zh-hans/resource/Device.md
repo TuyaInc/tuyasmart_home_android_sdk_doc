@@ -1,5 +1,3 @@
-## 设备控制
-
 ### 设备信息获取
 
 ##### 【描述】
@@ -58,27 +56,46 @@ dps = {"105": "1122"};
 dps = {"101": true, "102": "ff5500"};
 
 mDevice.publishDps(dps, new IControlCallback() {
-@Override
-public void onError(String code, String error) {
-//错误码11001 
-//有下面几种情况：
-//1、类型不对导致，例如，string类型格式，发成boolean类型数据。
-//2、只读类型dp数据不能下发，参考SchemaBean getMode "ro"是只读类型。
-//3、raw格式发送数据格式不是16进制字符串。
-}
-@Override
-public void onSuccess() {
-}
-});
+        @Override
+        public void onError(String code, String error) {
+        //错误码11001
+        //有下面几种情况：
+        //1、类型不对导致，例如，string类型格式，发成boolean类型数据。
+        //2、只读类型dp数据不能下发，参考SchemaBean getMode "ro"是只读类型。
+        //3、raw格式发送数据格式不是16进制字符串。
+        }
+        @Override
+        public void onSuccess() {
+        }
+    });
 ```
 
 ##### 【注意事项】
 
-- 控制命令的发送需要特别注意数据类型。<br />
-	比如功能点的数据类型是数值型（value），那控制命令发送的应该是 `{"104": 25}`  而不是  `{"104": "25"}`<br />
-- 透传类型传输的byte数组是16进制字符串格式并且必须是偶数位。<br />
+- 控制命令的发送需要特别注意数据类型.
+	比如功能点的数据类型是数值型（value），那控制命令发送的应该是 `{"104": 25}`  而不是  `{"104": "25"}
+- 透传类型传输的byte数组是16进制字符串格式并且必须是偶数位。
 	比如正确的格式是: `{"105": "0110"}` 而不是 `{"105": "110"}`
 
+
+
+####  设备控制
+
+设备控制支持三种通道控制，局域网控制，云端控制，和自动方式（如果局域网在线，先走局域网控制，局域网不在线，走云端控制）
+
+局域网方式
+
+```java
+mDevice.publishDps(commandStr, TYDevicePublishModeEnum.TYDevicePublishModeLocal, callback);
+```
+云端控制
+```java
+mDevice.publishDps(commandStr, TYDevicePublishModeEnum.TYDevicePublishModeInternet, callback);
+```
+自动控制
+```java
+mDevice.publishDps(commandStr, TYDevicePublishModeEnum.TYDevicePublishModeAuto, callback);
+```
 
 #### 初始化数据监听
 
@@ -367,13 +384,16 @@ mDevice.requestWifiSignal(new WifiSignalListener() {
 | pv | String |网关协议版本|
 | bv | String |网关通用固件版本|
 | schemaMap | Map |Schema缓存数据|
-| dps | Map |设备数据|
+| dps | Map |          设备当前数据信息。key 是 dpId ，value 是值          |
 | isShare | boolean |是否是分享设备|
 | virtual|boolean |是否是虚拟设备|
-| lon、lat |String|经纬度信息|
+| lon、lat |String| 用来标示经纬度信息，需要用户使用sdk前，调用TuyaSdk.setLatAndLong 设置经纬度信息 |
 | isLocalOnline|boolean|设备局域网在线状态|
 | nodeId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其短地址ID，一个网关下面的nodeId都唯一的|
 | timezoneId |String|设备时区|
 | category | String |设备类型|
 | meshId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其网关ID|
+| devId |String|设备唯一标示id|
+| isZigBeeWifi |boolean|是否是ZigBee网关设备|
+| hasZigBee |boolean|hasZigBee|
 

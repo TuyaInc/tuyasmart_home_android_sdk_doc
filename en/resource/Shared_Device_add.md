@@ -1,38 +1,7 @@
 # Add for Sharing
 
-## (1) Add multiple devices for sharing (overwriting)
 
-**[Description]**
-
-Sharing multiple devices with a specified user will overwrite all his devices previously shared.
-
-**[Method Invocation]**
-
-```java
-/**
-@param homeId	home id
-@param countryCode	area code of mobile phone number (for example, the area code in China is “86”)
-@param userAccount	account number
-@param ShareIdBean	content to be shared (currently, the device or mesh is supported)
-@param autoSharing	does it automatically share new devices? (if true, the device added by the sharer in the future will be automatically shared to the specified user (mesh does not support this option for the time being)
-**/
-void addShare(long homeId, String countryCode, String userAccount, ShareIdBean bean, boolean autoSharing, ITuyaResultCallback<SharedUserInfoBean> callback);
-```
-
-**[Example Codes]**
-
-```java
-TuyaHomeSdk.getDeviceShareInstance.addShare(homeId, countryCode, userAccount, bean, true, new ITuyaResultCallback<SharedUserInfoBean>() {
-            @Override
-            public void onSuccess(SharedUserInfoBean bean) {
-            }
-            @Override
-            public void onError(String errorMsg, String errorCode) {
-            }
-        });
-```
-
-## (2) Add multiple devices for sharing (supplementing)
+## (1) Add multiple devices for sharing (supplementing)
 
 **[Description]**
 
@@ -70,7 +39,7 @@ TuyaHomeSdk.getDeviceShareInstance().addShareWithHomeId(homeId, countryCode, use
 void addShareWithMemberId(long memberId,List<String> devIds,IResultCallback callback);
 ```
 
-## (3) Batch add device sharing(supplementing)
+## (2) Batch add device sharing(supplementing)
 
 **[Description]**
 
@@ -102,7 +71,7 @@ TuyaHomeSdk.getDeviceShareInstance().addShareWithMemberId (memberId, devIds, new
 });
 ```
 
-## (4) Unsharing a single device
+## (3) Unsharing a single device
 
 **[Description]**
 
@@ -138,7 +107,7 @@ TuyaHomeSdk.getDeviceShareInstance().disableDevShare (devId, memberId, new IResu
 });
 ```
 
-## (5)Sharing a single device
+## (4)Sharing a single device
 
 ### 【描述】
 
