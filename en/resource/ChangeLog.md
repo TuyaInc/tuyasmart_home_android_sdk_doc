@@ -1,4 +1,4 @@
-### 3.12.0
+### 3.12.1
 
 - Support sub device OTA
 - AP Distribution Network Optimization
