@@ -52,6 +52,8 @@
    * [Message push switch](./resource/MessagePush.md)
 * [Feedback](./resource/Feedback.md)
 * [Integrate Push](./resource/Push.md)
+   * [FCM Push](./resource/Push_fcm.md)
+   * [Umeng](./resource/Push_umeng.md)
 * [Common Interface](./resource/CommonInterface.md)
 * [Error Code](./resource/ErrorCode.md)
 * [Change Log](./resource/ChangeLog.md)
