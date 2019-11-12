@@ -1,3 +1,7 @@
+### 3.12.4
+
+bugfix
+
 ### 3.12.1
 
 - Support sub device OTA
