@@ -108,7 +108,7 @@ TuyaHomeSdk.getUserInstance().loginOrRegisterWithUid("86", "1234", "123456", new
      * @param countryCode 国家码
      * @param uid uid
      * @param passwd 密码
-     * @param isCreateHome  是否默认创建房间
+     * @param isCreateHome  是否默认创建家庭
      * @param callback 回调
      */
 TuyaHomeSdk.getUserInstance().loginOrRegisterWithUid(String countryCode, String uid, String passwd, boolean isCreateHome, IUidLoginCallback callback);

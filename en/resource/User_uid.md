@@ -118,7 +118,7 @@ If you are not registered, this interface will register your uid, if you have al
       * @param countryCode country code
       * @param uid uid
       * @param passwd password
-      * @param isCreateHome Whether to create a room by default
+      * @param isCreateHome Whether to create a family by default
       * @param callback callback
       */
  TuyaHomeSdk.getUserInstance().loginOrRegisterWithUid(String countryCode, String uid, String passwd, boolean isCreateHome, IUidLoginCallback callback);
