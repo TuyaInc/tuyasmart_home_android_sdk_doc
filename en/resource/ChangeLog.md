@@ -1,3 +1,7 @@
+### 3.13.0
+- Support BLE Devices
+- Support BLE+WIFI Dual-mode Devices
+
 ### 3.12.4
 
 bugfix
@@ -8,6 +12,8 @@ bugfix
 - AP Distribution Network Optimization
 - Timing support annotation and push function
 - Support SigMesh Devices
+- registerDevice 
+- registerDevice deprecated the "gcm" parameter. Use "fcm"
 - bug fixed
 
 ###  3.11.2

@@ -1,3 +1,8 @@
+### 3.13.0-bata1
+
+* bugfix
+* 性能提升
+
 ### 3.12.4
 
 bugfix
@@ -8,6 +13,7 @@ bugfix
 - AP 配网优化
 - 定时支持备注和推送功能
 - 支持 SigMesh 设备
+- registerDevice 接口弃用 "gcm" 参数. 使用 "fcm"
 - bug 修复
 
 ### 3.11.2
