@@ -5,11 +5,15 @@
 
 ```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
-if(deviceBean.isBleMesh()){
-    L.d(TAG, "This device is mesh device");
- }else{
- 
-}
+// blue mesh 设备判断 （子设备+网关）
+if(deviceBean.isBlueMesh()){
+    L.d(TAG, "This device is blue mesh device");
+ }
+
+// blue mesh 网关设备判断
+if(deviceBean.isBlueMeshWifi()){
+    L.d(TAG, "This device is blue mesh wifi device");
+ }
 ```
 ###  子设备重命名
 ##### 【方法调用】

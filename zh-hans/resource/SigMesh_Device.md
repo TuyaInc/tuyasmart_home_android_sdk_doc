@@ -1,31 +1,27 @@
 ## 设备
 ITuyaBlueMeshDevice类封装了对指定Mesh内所有设备的操作
-```
+```java
 ITuyaBlueMeshDevice  mTuyaBlueMeshDevice = TuyaHomeSdk.newSigMeshDeviceInstance(meshId);
 ```
 
 ### Mesh设备判断方法
 ##### 【代码范例】
 
-```
+```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
-// 判读是否是 sigmesh 设备
+// 判读是否是 sigmesh 设备 （子设备+网关）
 if(deviceBean.isSigMesh()){
     L.d(TAG, "This device is sigmesh device");
- }else{
-
-}
+ }
 
 // 判读是否是 sigmesh 网关设备
 if(deviceBean.isSigMeshWifi()){
     L.d(TAG, "This device is sigmesh wifi device");
- }else{
-
-}
+ }
 ```
 ### Mesh设备在线状态判断方法
 
-```
+```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
 
 // 在线状态  (包括本地在线和网关在线)

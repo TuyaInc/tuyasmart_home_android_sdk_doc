@@ -436,14 +436,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="Device.html">
+        <li class="chapter " data-level="1.8" >
             
-                <a href="Device.html">
+                <span>
             
                     
-                    自定义设备控制
+                    设备控制
             
-                </a>
+                </span>
             
 
             
@@ -540,9 +540,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="Device_modify.html">
+        <li class="chapter " data-level="1.8.3" data-path="Device.html">
             
-                <a href="Device_modify.html#设备重命名">
+                <a href="Device.html#设备重命名">
             
                     
                     修改设备名称
@@ -553,9 +553,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="Device_modify.html">
+        <li class="chapter " data-level="1.8.4" data-path="Device.html">
             
-                <a href="Device_modify.html#移除设备">
+                <a href="Device.html#移除设备">
             
                     
                     移除设备
@@ -566,9 +566,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.5" data-path="Device_modify.html">
+        <li class="chapter " data-level="1.8.5" data-path="Device.html">
             
-                <a href="Device_modify.html#查询wifi信号强度">
+                <a href="Device.html#查询WiFi信号强度">
             
                     
                     查询WiFi信号强度
@@ -579,20 +579,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.6" data-path="Device_modify.html">
-            
-                <a href="Device_modify.html#devicebean数据模型">
-            
-                    
-                    DeviceBean数据模型
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.8.7" data-path="OTA.html">
+        <li class="chapter " data-level="1.8.6" data-path="OTA.html">
             
                 <a href="OTA.html">
             
@@ -605,7 +592,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.8" data-path="Gateway.html">
+        <li class="chapter " data-level="1.8.7" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -1212,9 +1199,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.21.2" data-path="BLE_Prepare.html">
+        <li class="chapter " data-level="1.21.2" data-path="BLE_Activator.html">
             
-                <a href="BLE_Prepare.html">
+                <a href="BLE_Activator.html">
             
                     
                     扫描与配网激活
@@ -1344,11 +1331,15 @@
 <h3 id="mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><a name="mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</h3>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
 <pre class="language-"><code class="lang-java">DeviceBean deviceBean<span class="token operator">=</span>TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isBleMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is mesh device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+<span class="token comment">// blue mesh &#x8BBE;&#x5907;&#x5224;&#x65AD; &#xFF08;&#x5B50;&#x8BBE;&#x5907;+&#x7F51;&#x5173;&#xFF09;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isBlueMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
 
-<span class="token punctuation">}</span>
+<span class="token comment">// blue mesh &#x7F51;&#x5173;&#x8BBE;&#x5907;&#x5224;&#x65AD;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isBlueMeshWifi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh wifi device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><a name="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;" class="plugin-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</h3>
 <h5 id="&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;"><a name="&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;</h5>
@@ -1456,7 +1447,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设备","level":"1.19.5","depth":2,"next":{"title":"群组","level":"1.19.6","depth":2,"path":"resource/Mesh_Group_Operate.md","ref":"./resource/Mesh_Group_Operate.md","articles":[]},"previous":{"title":"配网与入网","level":"1.19.4","depth":2,"path":"resource/Mesh_Config.md","ref":"./resource/Mesh_Config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Mesh_Device.md","mtime":"2019-09-26T02:17:32.545Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T13:28:11.063Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"设备","level":"1.19.5","depth":2,"next":{"title":"群组","level":"1.19.6","depth":2,"path":"resource/Mesh_Group_Operate.md","ref":"./resource/Mesh_Group_Operate.md","articles":[]},"previous":{"title":"配网与入网","level":"1.19.4","depth":2,"path":"resource/Mesh_Config.md","ref":"./resource/Mesh_Config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Mesh_Device.md","mtime":"2019-12-14T15:07:34.337Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-14T15:15:24.550Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1471,6 +1462,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

@@ -436,14 +436,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="Device.html">
+        <li class="chapter " data-level="1.8" >
             
-                <a href="Device.html">
+                <span>
             
                     
-                    自定义设备控制
+                    设备控制
             
-                </a>
+                </span>
             
 
             
@@ -540,9 +540,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="Device_modify.html">
+        <li class="chapter " data-level="1.8.3" data-path="Device.html">
             
-                <a href="Device_modify.html#设备重命名">
+                <a href="Device.html#设备重命名">
             
                     
                     修改设备名称
@@ -553,9 +553,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="Device_modify.html">
+        <li class="chapter " data-level="1.8.4" data-path="Device.html">
             
-                <a href="Device_modify.html#移除设备">
+                <a href="Device.html#移除设备">
             
                     
                     移除设备
@@ -566,9 +566,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.5" data-path="Device_modify.html">
+        <li class="chapter " data-level="1.8.5" data-path="Device.html">
             
-                <a href="Device_modify.html#查询wifi信号强度">
+                <a href="Device.html#查询WiFi信号强度">
             
                     
                     查询WiFi信号强度
@@ -579,20 +579,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.6" data-path="Device_modify.html">
-            
-                <a href="Device_modify.html#devicebean数据模型">
-            
-                    
-                    DeviceBean数据模型
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.8.7" data-path="OTA.html">
+        <li class="chapter " data-level="1.8.6" data-path="OTA.html">
             
                 <a href="OTA.html">
             
@@ -605,7 +592,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.8" data-path="Gateway.html">
+        <li class="chapter " data-level="1.8.7" data-path="Gateway.html">
             
                 <a href="Gateway.html">
             
@@ -1212,9 +1199,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.21.2" data-path="BLE_Prepare.html">
+        <li class="chapter " data-level="1.21.2" data-path="BLE_Activator.html">
             
-                <a href="BLE_Prepare.html">
+                <a href="BLE_Activator.html">
             
                     
                     扫描与配网激活
@@ -1342,35 +1329,34 @@
                                 
                                 <h2 id="&#x8BBE;&#x5907;"><a name="&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;</h2>
 <p>ITuyaBlueMeshDevice&#x7C7B;&#x5C01;&#x88C5;&#x4E86;&#x5BF9;&#x6307;&#x5B9A;Mesh&#x5185;&#x6240;&#x6709;&#x8BBE;&#x5907;&#x7684;&#x64CD;&#x4F5C;</p>
-<pre class="language-"><code>ITuyaBlueMeshDevice  mTuyaBlueMeshDevice = TuyaHomeSdk.newSigMeshDeviceInstance(meshId);
-</code></pre><h3 id="mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><a name="mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</h3>
+<pre class="language-"><code class="lang-java">ITuyaBlueMeshDevice  mTuyaBlueMeshDevice <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshDeviceInstance</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><a name="mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</h3>
 <h5 id="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><a name="&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x4EE3;&#x7801;&#x8303;&#x4F8B;&#x3011;</h5>
-<pre class="language-"><code>DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
-// &#x5224;&#x8BFB;&#x662F;&#x5426;&#x662F; sigmesh &#x8BBE;&#x5907;
-if(deviceBean.isSigMesh()){
-    L.d(TAG, &quot;This device is sigmesh device&quot;);
- }else{
+<pre class="language-"><code class="lang-java">DeviceBean deviceBean<span class="token operator">=</span>TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x5224;&#x8BFB;&#x662F;&#x5426;&#x662F; sigmesh &#x8BBE;&#x5907; &#xFF08;&#x5B50;&#x8BBE;&#x5907;+&#x7F51;&#x5173;&#xFF09;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isSigMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is sigmesh device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
 
-}
+<span class="token comment">// &#x5224;&#x8BFB;&#x662F;&#x5426;&#x662F; sigmesh &#x7F51;&#x5173;&#x8BBE;&#x5907;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isSigMeshWifi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is sigmesh wifi device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+</code></pre>
+<h3 id="mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><a name="mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</h3>
+<pre class="language-"><code class="lang-java">DeviceBean deviceBean<span class="token operator">=</span>TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-// &#x5224;&#x8BFB;&#x662F;&#x5426;&#x662F; sigmesh &#x7F51;&#x5173;&#x8BBE;&#x5907;
-if(deviceBean.isSigMeshWifi()){
-    L.d(TAG, &quot;This device is sigmesh wifi device&quot;);
- }else{
+<span class="token comment">// &#x5728;&#x7EBF;&#x72B6;&#x6001;  (&#x5305;&#x62EC;&#x672C;&#x5730;&#x5728;&#x7EBF;&#x548C;&#x7F51;&#x5173;&#x5728;&#x7EBF;)</span>
+<span class="token keyword">boolean</span> online<span class="token operator">=</span>deviceBean<span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-}
-</code></pre><h3 id="mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><a name="mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</h3>
-<pre class="language-"><code>DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
+<span class="token comment">//&#x8BBE;&#x5907;&#x672C;&#x5730;&#x84DD;&#x7259;&#x5728;&#x7EBF;&#x72B6;&#x6001;</span>
+<span class="token keyword">boolean</span> localOnline<span class="token operator">=</span>deviceBean<span class="token punctuation">.</span><span class="token function">getIsLocalOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-// &#x5728;&#x7EBF;&#x72B6;&#x6001;  (&#x5305;&#x62EC;&#x672C;&#x5730;&#x5728;&#x7EBF;&#x548C;&#x7F51;&#x5173;&#x5728;&#x7EBF;)
-boolean online=deviceBean.getIsOnline()
-
-//&#x8BBE;&#x5907;&#x672C;&#x5730;&#x84DD;&#x7259;&#x5728;&#x7EBF;&#x72B6;&#x6001;
-boolean localOnline=deviceBean.getIsLocalOnline()
-
-//&#x8BBE;&#x5907;&#x7F51;&#x5173;&#x5728;&#x7EBF;&#x72B6;&#x6001;  (&#x9700;&#x8981;&#x7F51;&#x5173;&#x5728;&#x7EBF;)
-boolean wifiOnline=deviceBean.isCloudOnline() &amp;&amp; gwBean.getIsOnline()
-</code></pre><h3 id="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><a name="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;" class="plugin-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</h3>
+<span class="token comment">//&#x8BBE;&#x5907;&#x7F51;&#x5173;&#x5728;&#x7EBF;&#x72B6;&#x6001;  (&#x9700;&#x8981;&#x7F51;&#x5173;&#x5728;&#x7EBF;)</span>
+<span class="token keyword">boolean</span> wifiOnline<span class="token operator">=</span>deviceBean<span class="token punctuation">.</span><span class="token function">isCloudOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> gwBean<span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><a name="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;" class="plugin-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</h3>
 <h5 id="&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;"><a name="&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;" class="plugin-anchor" href="#&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3011;</h5>
 <pre class="language-"><code class="lang-java"><span class="token operator">*</span> <span class="token annotation punctuation">@param</span> devId         &#x8BBE;&#x5907;Id
 <span class="token operator">*</span> <span class="token annotation punctuation">@param</span> name          &#x91CD;&#x547D;&#x540D;&#x540D;&#x79F0;
@@ -1476,7 +1462,7 @@ boolean wifiOnline=deviceBean.isCloudOnline() &amp;&amp; gwBean.getIsOnline()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设备","level":"1.20.5","depth":2,"next":{"title":"群组","level":"1.20.6","depth":2,"path":"resource/SigMesh_Group_Operate.md","ref":"./resource/SigMesh_Group_Operate.md","articles":[]},"previous":{"title":"配网与入网","level":"1.20.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/SigMesh_Device.md","mtime":"2019-09-26T02:17:32.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-06T13:28:11.063Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"设备","level":"1.20.5","depth":2,"next":{"title":"群组","level":"1.20.6","depth":2,"path":"resource/SigMesh_Group_Operate.md","ref":"./resource/SigMesh_Group_Operate.md","articles":[]},"previous":{"title":"配网与入网","level":"1.20.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/SigMesh_Device.md","mtime":"2019-12-14T15:07:34.339Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-14T15:15:24.550Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1491,6 +1477,10 @@ boolean wifiOnline=deviceBean.isCloudOnline() &amp;&amp; gwBean.getIsOnline()
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

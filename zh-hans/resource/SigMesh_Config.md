@@ -5,7 +5,7 @@
 扫描前需要检查蓝牙和位置权限
 
 ##### 【方法调用】
-```
+```java
 //开启扫描
 mMeshSearch.startSearch();
 //停止扫描
@@ -13,7 +13,7 @@ mMeshSearch.stopSearch();
 
 ```
 ##### 【代码范例】
-```
+```java
 ITuyaBlueMeshSearchListener iTuyaBlueMeshSearchListener=new ITuyaBlueMeshSearchListener() {
     @Override
     public void onSearched(SearchDeviceBean deviceBean) {
@@ -46,7 +46,7 @@ mMeshSearch.stopSearch();
 #### 通过手机蓝牙通道入网
 
 ##### 【初始化参数配置】
-```
+```java
 //普通设备入网参数配置
 TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivatorBuilder()
             .setSearchDeviceBeans(mSearchDeviceBeanList)
@@ -58,7 +58,7 @@ TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivat
 
 ##### 【参数说明】
 ###### 【入参】
-```
+```java
 * @param mSearchDeviceBeans     待配网的设备集合,通过 startSearch 扫描得到的
 * @param timeout    配网的超时时间设置，默认是100s（当一次性配网设备过多时，需要增加时间）
 * @param sigMeshBean  SigMeshBean   
@@ -67,7 +67,7 @@ TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivat
 ###### 【出参】
 ITuyaBlueMeshActivatorListener listener 配网回调接口
 
-```
+```java
 //单设备配网失败回调
 void onError(String mac, String errorCode, String errorMsg);
 
@@ -98,7 +98,7 @@ void onFinish();
 
 ##### 【方法调用】
 
-```
+```java
 //开启配网
 iTuyaBlueMeshActivator.startActivator();
 
@@ -107,7 +107,7 @@ iTuyaBlueMeshActivator.stopActivator();
 ```
 
 ##### 【代码范例】
-```
+```java
 //普通设备入网
 TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivatorBuilder()
             .setSearchDeviceBeans(mSearchDeviceBeanList)

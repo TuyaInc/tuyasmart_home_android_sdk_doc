@@ -5,7 +5,7 @@
 由云端分配MeshId，一个家庭下只能创建一个Mesh
 
 ##### 【方法调用】
-```
+```java
 * @param callback   回调
 void createSigMesh(ITuyaResultCallback<SigMeshBean> callback);
 ```
@@ -28,7 +28,7 @@ TuyaHomeSdk.newHomeInstance("homeId").createSigMesh(new ITuyaResultCallback<SigM
 ### 删除SigMesh
 
 ##### 【代码范例】
-```
+```java
 TuyaHomeSdk.newSigMeshDeviceInstance(meshId).removeMesh(new IResultCallback() {
     @Override
     public void onError(String errorCode, String errorMsg) {
@@ -45,11 +45,11 @@ TuyaHomeSdk.newSigMeshDeviceInstance(meshId).removeMesh(new IResultCallback() {
 
 ### 从缓存中获取Mesh数据
 ##### 【方法调用】
-```
+```java
 TuyaHomeSdk.getSigMeshInstance().getSigMeshList()
 ```
 ##### 【代码范例】
-```
+```java
 ITuyaHome mTuyaHome = TuyaHomeSdk.newHomeInstance("homeId");
 if (mTuyaHome.getHomeBean() != null){
 	List<SigMeshBean> meshList = TuyaHomeSdk.getSigMeshInstance().getSigMeshList()
@@ -58,7 +58,7 @@ if (mTuyaHome.getHomeBean() != null){
 
 ### 从缓存中获取Mesh下的子设备数据
 ##### 【代码范例】
-```
+```java
 List<DeviceBean> meshSubDevList = TuyaHomeSdk.newSigMeshDeviceInstance("meshId").getMeshSubDevList();
 
 ```
@@ -68,7 +68,7 @@ List<DeviceBean> meshSubDevList = TuyaHomeSdk.newSigMeshDeviceInstance("meshId")
 建议在家庭切换的时候 销毁当前Mesh  然后重新初始化家庭中的Mesh
 
 ##### 【方法调用】
-```
+```java
 //初始化mesh
 TuyaHomeSdk.getTuyaSigMeshClient().initMesh(String meshId);
 
@@ -82,7 +82,7 @@ TuyaHomeSdk.getTuyaSigMeshClient().destroyMesh();
 ITuyaBlueMeshClient 提供 开始连接、断开连接、开启扫描、停止扫描
 
 ##### 【方法调用】
-```
+```java
 // 开启连接
 TuyaHomeSdk.getTuyaSigMeshClient().startClient(mSigMeshBean);
 // 开启连接 指定扫描的时间 
