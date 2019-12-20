@@ -1,4 +1,4 @@
-### 3.13.0-beta2
+### 3.13.0-beta4
 - Support BLE Devices
 - Support BLE+WIFI Dual-mode Devices
 
