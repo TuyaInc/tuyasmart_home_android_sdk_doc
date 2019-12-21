@@ -21,8 +21,8 @@ ITuyaDevice mDevice = TuyaHomeSdk.newDeviceInstance(deviceBean.getDevId());
 
 #### 设备功能点
 
-DeviceBean 类 dps 属性定义了设备的状态，称作数据点（DP点）或功能点。`dps`字典里的每个`key`对应一个功能点的`dpId`，`dpValue`为该功能点的值。各自产品功能点定义参见[涂鸦开发者平台](https://developer.tuya.com/)的产品功能。
-功能点具体参见[功能点相关概念](https://docs.tuya.com/cn/product/function.html)
+DeviceBean 类 dps 属性定义了设备的状态，称作数据点（DP点）或功能点。`dps`字典里的每个`key`对应一个功能点的`dpId`，`dpValue`为该功能点的值。各自产品功能点定义参见[涂鸦开发者平台](https://iot.tuya.com/index)的产品功能。
+功能点具体参见[功能点相关概念](https://docs.tuya.com/zh/iot/configure-in-platform/function-definition/custom-functions#%E5%8A%9F%E8%83%BD%E7%82%B9%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5)
 
 ##### 【指令格式】
 

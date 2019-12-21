@@ -20,7 +20,7 @@ ITuyaDevice mDevice = TuyaHomeSdk.newDeviceInstance(deviceBean.getDevId());
 ```
 ## Function Points of Device
 
-The dps attribute of the DeviceBean class defines the state of the device, and is called the data point (DP) or the function point. Each key in the dps dictionary refers to a dpId of a function point, and the dpValue is the value of the function point. Refer to the functions of product on the [Tuya developer platform ](https://developer.tuya.com/)for definition of function points of products. For details of function points, please refer to the [Functional Point Related Concepts](https://docs.tuya.com/en/product/function.html)
+The dps attribute of the DeviceBean class defines the state of the device, and is called the data point (DP) or the function point. Each key in the dps dictionary refers to a dpId of a function point, and the dpValue is the value of the function point. Refer to the functions of product on the [Tuya developer platform ](https://iot.tuya.com/index)for definition of function points of products. For details of function points, please refer to the [Functional Point Related Concepts](https://docs.tuya.com/zh/iot/configure-in-platform/function-definition/custom-functions#%E5%8A%9F%E8%83%BD%E7%82%B9%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5)
 
 **[Command Format]**
 
