@@ -25,9 +25,5 @@ If the device is offline, you can call the connection method to connect the devi
 ```
 
 ### 3. Device Control
-Consistent with wifi device operation
-  * [Device Control](./resource/Device.md)
-  * [Function Points of Device](./resource/Device.md#function-points-of-device)
-  * [Device Control](./resource/Device.md#device-control)
-  * [Device Renaming](./resource/Device.md#device-renaming)
-  * [Remove Device](./resource/Device.md#remove-device)
+Consistent with wifi device operation，see above
+ 

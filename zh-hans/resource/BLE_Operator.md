@@ -26,9 +26,4 @@ TuyaHomeSdk.getBleManager().isBleLocalOnline(devId);
 ```
 
 ### 3. 设备控制
-与wifi设备操作一致，
-  * [设备控制](./resource/Device.md)
-  * [设备功能点](./resource/Device.md#设备功能点)
-  * [设备控制](./resource/Device.md#设备控制)
-  * [修改设备名称](./resource/Device.md#设备重命名)
-  * [移除设备](./resource/Device.md#移除设备)
+与wifi设备操作一致，见设备控制模块

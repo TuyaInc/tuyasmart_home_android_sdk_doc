@@ -2,8 +2,10 @@
 Two steps are required to activate the device. The first step is to scan the device. The second step is to activate the device.
 
 ### 1.Scan the device
-> Prior to scanning, you need to check the permissions of the scan first. For details, see  [BLE Prepare](./resource/BLE_Prepare.md) 
+> Prior to scanning, you need to check the permissions of the scan first. For details, see  [BLE Prepare]
+
 ```java
+
 /**
   *SCAN_TIME_OUT :Scan timeout time, 60s is recommended.
   *ScanType.SINGLE:scan type

@@ -1331,41 +1331,78 @@
 <p>&#x7ED1;&#x5B9A;&#x8BBE;&#x5907; &#x9700;&#x8981;&#x5148;&#x8FDB;&#x884C;&#x626B;&#x63CF; &#x626B;&#x63CF;&#x5230;&#x8BBE;&#x5907;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x914D;&#x7F51;&#x3002;</p>
 <h3 id="1&#x626B;&#x63CF;&#x8BBE;&#x5907;"><a name="1&#x626B;&#x63CF;&#x8BBE;&#x5907;" class="plugin-anchor" href="#1&#x626B;&#x63CF;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>1.&#x626B;&#x63CF;&#x8BBE;&#x5907;</h3>
 <blockquote>
-<p>&#x626B;&#x63CF;&#x524D;&#x9700;&#x8981;&#x5BF9;&#x626B;&#x63CF;&#x6240;&#x5177;&#x5907;&#x7684;&#x6743;&#x9650;&#x8FDB;&#x884C;&#x4F18;&#x5148;&#x68C0;&#x67E5;&#xFF0C;&#x5177;&#x4F53;&#x68C0;&#x67E5;&#x5185;&#x5BB9;&#x89C1;  <a href="resource/BLE_Prepare.md">&#x51C6;&#x5907;</a> 
-```java
-/<em>*
-  </em>SCAN_TIME_OUT :&#x626B;&#x63CF;&#x8D85;&#x65F6;&#x65F6;&#x95F4; &#x5355;&#x4F4D;&#x79D2; &#x63A8;&#x8350;60s.
-  <em>ScanType.SINGLE:&#x626B;&#x63CF;&#x7684;&#x8BBE;&#x5907;&#x7C7B;&#x578B; 
-  </em>response:&#x626B;&#x63CF;&#x56DE;&#x8C03;
-  */
-  TuyaHomeSdk.getBleOperator().startLeScan(
-  SCAN_TIME_OUT, ScanType.SINGLE, new TyBleScanResponse() {
-            @Override
-            public void onResult(ScanDeviceBean bean) {</p>
+<p>&#x626B;&#x63CF;&#x524D;&#x9700;&#x8981;&#x5BF9;&#x626B;&#x63CF;&#x6240;&#x5177;&#x5907;&#x7684;&#x6743;&#x9650;&#x8FDB;&#x884C;&#x4F18;&#x5148;&#x68C0;&#x67E5;&#xFF0C;&#x5177;&#x4F53;&#x68C0;&#x67E5;&#x5185;&#x5BB9;&#x89C1; &#x201C;&#x51C6;&#x5907;&#x201D;&#x6A21;&#x5757;</p>
 </blockquote>
-<pre class="language-"><code>        }
-    });
-</code></pre><pre class="language-"><code>
-### 1.1 &#x626B;&#x63CF;&#x56DE;&#x8C03;&#x8BF4;&#x660E;
+<pre class="language-"><code class="lang-java">
+<span class="token comment">/**
+  *SCAN_TIME_OUT :&#x626B;&#x63CF;&#x8D85;&#x65F6;&#x65F6;&#x95F4; &#x5355;&#x4F4D;&#x79D2; &#x63A8;&#x8350;60s.
+  *ScanType.SINGLE:&#x626B;&#x63CF;&#x7684;&#x8BBE;&#x5907;&#x7C7B;&#x578B; 
+  *response:&#x626B;&#x63CF;&#x56DE;&#x8C03;
+  */</span>
+  TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startLeScan</span><span class="token punctuation">(</span>
+  SCAN_TIME_OUT<span class="token punctuation">,</span> ScanType<span class="token punctuation">.</span>SINGLE<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">TyBleScanResponse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onResult</span><span class="token punctuation">(</span>ScanDeviceBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-|&#x5C5E;&#x6027;|&#x8BF4;&#x660E;|
-|:---|---|
-|id|&#x626B;&#x63CF;id &#x901A;&#x5E38;&#x7531;uuid&#x7EC4;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x552F;&#x4E00;&#x533A;&#x522B;&#x8BBE;&#x5907;|
-|name|&#x626B;&#x63CF;&#x5230;&#x7684;&#x84DD;&#x7259;&#x540D;&#x79F0; &#x4E00;&#x822C;&#x4E3A;&#x7A7A;|
-|providerName|&#x4E3A;SingleBleProvider&#x53EA;&#x5F00;&#x53D1;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x8BE5;&#x5B57;&#x6BB5;|
-|data|&#x539F;&#x59CB;&#x6570;&#x636E;|
-|configType|config_type_single&#xFF1A;&#x5355;&#x70B9;&#x8BBE;&#x5907;;config_type_wifi:&#x53CC;&#x6A21;&#x8BBE;&#x5907;|
-|productId|&#x4EA7;&#x54C1;id|
-|uuid|&#x4EA7;&#x54C1;uuid,&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x7801;|
-|mac|&#x8BBE;&#x5907;mac|
-|isbind|&#x662F;&#x5426;&#x88AB;&#x7ED1;&#x5B9A;|
-|flag|bit0:&#x662F;&#x5426;&#x652F;&#x6301;5G,5G&#x8868;&#x660E;&#x53CC;&#x6A21;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x652F;&#x6301;5GWifi;bit1:&#x662F;&#x5426;&#x540E;&#x7ED1;&#x5B9A;|
-
-### 1.2 &#x505C;&#x6B62;&#x626B;&#x63CF;
-```java
- TuyaHomeSdk.getBleOperator().stopLeScan();
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="11-&#x626B;&#x63CF;&#x56DE;&#x8C03;&#x8BF4;&#x660E;"><a name="11-&#x626B;&#x63CF;&#x56DE;&#x8C03;&#x8BF4;&#x660E;" class="plugin-anchor" href="#11-&#x626B;&#x63CF;&#x56DE;&#x8C03;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x626B;&#x63CF;&#x56DE;&#x8C03;&#x8BF4;&#x660E;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5C5E;&#x6027;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td>&#x626B;&#x63CF;id &#x901A;&#x5E38;&#x7531;uuid&#x7EC4;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x552F;&#x4E00;&#x533A;&#x522B;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td>&#x626B;&#x63CF;&#x5230;&#x7684;&#x84DD;&#x7259;&#x540D;&#x79F0; &#x4E00;&#x822C;&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr>
+<td style="text-align:left">providerName</td>
+<td>&#x4E3A;SingleBleProvider&#x53EA;&#x5F00;&#x53D1;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x8BE5;&#x5B57;&#x6BB5;</td>
+</tr>
+<tr>
+<td style="text-align:left">data</td>
+<td>&#x539F;&#x59CB;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td style="text-align:left">configType</td>
+<td>config_type_single&#xFF1A;&#x5355;&#x70B9;&#x8BBE;&#x5907;;config_type_wifi:&#x53CC;&#x6A21;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td style="text-align:left">productId</td>
+<td>&#x4EA7;&#x54C1;id</td>
+</tr>
+<tr>
+<td style="text-align:left">uuid</td>
+<td>&#x4EA7;&#x54C1;uuid,&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">mac</td>
+<td>&#x8BBE;&#x5907;mac</td>
+</tr>
+<tr>
+<td style="text-align:left">isbind</td>
+<td>&#x662F;&#x5426;&#x88AB;&#x7ED1;&#x5B9A;</td>
+</tr>
+<tr>
+<td style="text-align:left">flag</td>
+<td>bit0:&#x662F;&#x5426;&#x652F;&#x6301;5G,5G&#x8868;&#x660E;&#x53CC;&#x6A21;&#x8BBE;&#x5907;&#x662F;&#x5426;&#x652F;&#x6301;5GWifi;bit1:&#x662F;&#x5426;&#x540E;&#x7ED1;&#x5B9A;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-&#x505C;&#x6B62;&#x626B;&#x63CF;"><a name="12-&#x505C;&#x6B62;&#x626B;&#x63CF;" class="plugin-anchor" href="#12-&#x505C;&#x6B62;&#x626B;&#x63CF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x505C;&#x6B62;&#x626B;&#x63CF;</h3>
+<pre class="language-"><code class="lang-java"> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopLeScan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
  &#x5728;&#x6267;&#x884C;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x65F6;&#xFF0C;&#x5EFA;&#x8BAE;&#x505C;&#x6B62;&#x626B;&#x63CF;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;&#x626B;&#x63CF;&#x5F71;&#x54CD;&#x5230;&#x914D;&#x7F51;&#x8FC7;&#x7A0B;&#x3002;
-</code></pre><h3 id="2&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;"><a name="2&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;" class="plugin-anchor" href="#2&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;</h3>
+</code></pre>
+<h3 id="2&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;"><a name="2&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;" class="plugin-anchor" href="#2&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x5165;&#x7F51;&#x6FC0;&#x6D3B;</h3>
 <pre class="language-"><code class="lang-java">  <span class="token comment">/**
          * homeId:&#x5F53;&#x524D;&#x5BB6;&#x5EAD;homeId
          * uuid:&#x524D;&#x9762;&#x626B;&#x63CF;&#x5230;&#x7684;&#x8BBE;&#x5907;uuid&#xFF0C;&#x6BCF;&#x6B21;&#x8FDB;&#x884C;&#x914D;&#x7F51;&#x524D; &#x9700;&#x8981;&#x5148;&#x626B;&#x63CF;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x80FD;&#x914D;&#x7F51;&#x3002;
@@ -1462,7 +1499,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"扫描与配网激活","level":"1.21.2","depth":2,"next":{"title":"蓝牙设备操作","level":"1.21.3","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"previous":{"title":"准备","level":"1.21.1","depth":2,"path":"resource/BLE_Prepare.md","ref":"./resource/BLE_Prepare.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/BLE_Activator.md","mtime":"2019-12-06T12:37:00.867Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-21T03:19:20.254Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"扫描与配网激活","level":"1.21.2","depth":2,"next":{"title":"蓝牙设备操作","level":"1.21.3","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"previous":{"title":"准备","level":"1.21.1","depth":2,"path":"resource/BLE_Prepare.md","ref":"./resource/BLE_Prepare.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/BLE_Activator.md","mtime":"2019-12-24T04:49:59.157Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-24T04:53:01.570Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1477,6 +1514,10 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

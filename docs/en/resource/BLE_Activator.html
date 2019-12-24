@@ -1254,41 +1254,78 @@
 <p>Two steps are required to activate the device. The first step is to scan the device. The second step is to activate the device.</p>
 <h3 id="1scan-the-device"><a name="1scan-the-device" class="plugin-anchor" href="#1scan-the-device"><i class="fa fa-link" aria-hidden="true"></i></a>1.Scan the device</h3>
 <blockquote>
-<p>Prior to scanning, you need to check the permissions of the scan first. For details, see  <a href="resource/BLE_Prepare.md">BLE Prepare</a> 
-```java
-/<em>*
-  </em>SCAN_TIME_OUT :Scan timeout time, 60s is recommended.
-  <em>ScanType.SINGLE:scan type
-  </em>response:callback
-  */
-  TuyaHomeSdk.getBleOperator().startLeScan(
-  SCAN_TIME_OUT, ScanType.SINGLE, new TyBleScanResponse() {
-            @Override
-            public void onResult(ScanDeviceBean bean) {</p>
+<p>Prior to scanning, you need to check the permissions of the scan first. For details, see  [BLE Prepare]</p>
 </blockquote>
-<pre class="language-"><code>        }
-    });
-</code></pre><pre class="language-"><code>
-### 1.1 Callback Description
+<pre class="language-"><code class="lang-java">
+<span class="token comment">/**
+  *SCAN_TIME_OUT :Scan timeout time, 60s is recommended.
+  *ScanType.SINGLE:scan type
+  *response:callback
+  */</span>
+  TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startLeScan</span><span class="token punctuation">(</span>
+  SCAN_TIME_OUT<span class="token punctuation">,</span> ScanType<span class="token punctuation">.</span>SINGLE<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">TyBleScanResponse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onResult</span><span class="token punctuation">(</span>ScanDeviceBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-|Attributes|Description|
-|:---|---|
-|id|Scan ID usually consists of uuid, which can uniquely distinguish the device|
-|name|device ble Name|
-|providerName|SingleBleProvider|
-|data|raw data|
-|configType|config_type_single&#xFF1A;normal ble device ;config_type_wifi:Dual-mode device|
-|productId|productId|
-|uuid|Device unique code|
-|mac|Device mac|
-|isbind|true:bound false:not bind|
-|flag|bit0:Whether to support 5G WiFi|
-
-### 1.2 Stop Scan
-```java
- TuyaHomeSdk.getBleOperator().stopLeScan();
- When the device is start to activator, it is recommended to stop scanning.
-</code></pre><h3 id="2normal-ble-device-activator"><a name="2normal-ble-device-activator" class="plugin-anchor" href="#2normal-ble-device-activator"><i class="fa fa-link" aria-hidden="true"></i></a>2.Normal BLE device Activator</h3>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="11-callback-description"><a name="11-callback-description" class="plugin-anchor" href="#11-callback-description"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 Callback Description</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td>Scan ID usually consists of uuid, which can uniquely distinguish the device</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td>device ble Name</td>
+</tr>
+<tr>
+<td style="text-align:left">providerName</td>
+<td>SingleBleProvider</td>
+</tr>
+<tr>
+<td style="text-align:left">data</td>
+<td>raw data</td>
+</tr>
+<tr>
+<td style="text-align:left">configType</td>
+<td>config_type_single&#xFF1A;normal ble device ;config_type_wifi:Dual-mode device</td>
+</tr>
+<tr>
+<td style="text-align:left">productId</td>
+<td>productId</td>
+</tr>
+<tr>
+<td style="text-align:left">uuid</td>
+<td>Device unique code</td>
+</tr>
+<tr>
+<td style="text-align:left">mac</td>
+<td>Device mac</td>
+</tr>
+<tr>
+<td style="text-align:left">isbind</td>
+<td>true:bound false:not bind</td>
+</tr>
+<tr>
+<td style="text-align:left">flag</td>
+<td>bit0:Whether to support 5G WiFi</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-stop-scan"><a name="12-stop-scan" class="plugin-anchor" href="#12-stop-scan"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 Stop Scan</h3>
+<pre class="language-"><code class="lang-java"> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopLeScan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ When the device is start to activator<span class="token punctuation">,</span> it is recommended to stop scanning<span class="token punctuation">.</span>
+</code></pre>
+<h3 id="2normal-ble-device-activator"><a name="2normal-ble-device-activator" class="plugin-anchor" href="#2normal-ble-device-activator"><i class="fa fa-link" aria-hidden="true"></i></a>2.Normal BLE device Activator</h3>
 <pre class="language-"><code class="lang-java">  <span class="token comment">/**
          * homeId:current Home&apos;s Id
          * uuid:Device unique code from scan
@@ -1385,7 +1422,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"BLE Scan And Activator","level":"1.17.2","depth":2,"next":{"title":"BLE Device Operate","level":"1.17.3","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"previous":{"title":"BLE Prepare","level":"1.17.1","depth":2,"path":"resource/BLE_Prepare.md","ref":"./resource/BLE_Prepare.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_Activator.md","mtime":"2019-12-06T12:37:00.866Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-21T03:19:20.254Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"BLE Scan And Activator","level":"1.17.2","depth":2,"next":{"title":"BLE Device Operate","level":"1.17.3","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"previous":{"title":"BLE Prepare","level":"1.17.1","depth":2,"path":"resource/BLE_Prepare.md","ref":"./resource/BLE_Prepare.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_Activator.md","mtime":"2019-12-24T04:49:59.157Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-24T04:53:01.570Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1400,6 +1437,10 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
