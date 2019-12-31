@@ -25,9 +25,10 @@ Get the scene list, which can be used when the scene home page is initialized. D
 ```java
 /**
  * Obtain scene list
+ * @param homeId
  * @param callback
  */
-public void getSceneList(ITuyaDataCallback<List<SceneBean>> callback)
+public void getSceneList(long homeId, ITuyaDataCallback<List<SceneBean>> callback)
 ```
 
 Among, the interface of `SceneBean` is defined as follows
@@ -69,7 +70,7 @@ public String getId()
 **[Example Codes]**
 
 ```java
-TuyaHomeSdk.getSceneManagerInstance().getSceneList(new ITuyaResultCallback<List<SceneBean>>() {
+TuyaHomeSdk.getSceneManagerInstance().getSceneList(long homeId, new ITuyaResultCallback<List<SceneBean>>() {
       @Override
       public void onSuccess(List<SceneBean> result) {
       }
