@@ -70,7 +70,7 @@ public String getId()
 **[Example Codes]**
 
 ```java
-TuyaHomeSdk.getSceneManagerInstance().getSceneList(long homeId, new ITuyaResultCallback<List<SceneBean>>() {
+TuyaHomeSdk.getSceneManagerInstance().getSceneList(homeId, new ITuyaResultCallback<List<SceneBean>>() {
       @Override
       public void onSuccess(List<SceneBean> result) {
       }
