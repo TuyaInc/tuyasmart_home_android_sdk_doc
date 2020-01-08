@@ -79,4 +79,5 @@
   * [Control](./resource/SigMesh_Device_Operate.md)
   * [Firmware Upgrade](./resource/SigMesh_OTA.md)	
 * [Error Code](./resource/ErrorCode.md)
+* [Error Code](./resource/Problems.md)
 * [Change Log](./resource/ChangeLog.md)

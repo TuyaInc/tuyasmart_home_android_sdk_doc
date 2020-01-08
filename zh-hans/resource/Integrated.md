@@ -17,7 +17,7 @@ defaultConfig {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
         implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:3.13.0-beta4'
+        implementation 'com.tuya.smart:tuyasmart:3.13.0'
     }
     
 repositories {
@@ -29,11 +29,12 @@ repositories {
 ```
 
 
-> 【注意事项】
+> ⚠️【注意事项】
 >
-> * 涂鸦智能3.10.0之前的版本的sdk默认只支持armeabi-v7a，如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs)获取。
->
-> * 3.11.0版本已经将armeabi-v7a、arm64-v8a、armeabi集成进sdk，请将本地手动放入的sdk的相关so库移除，使用sdk中提供的。
+> * 涂鸦智能3.10.0之前的版本的sdk默认只支持armeabi-v7a，
+> * 3.11.0版本后已经将armeabi-v7a、arm64-v8a集成进sdk，请将本地手动放入的sdk的相关so库移除，使用sdk中提供的。
+> * 如果集成新版本so库。请移除之前老版本手动集成的库，防止冲突或者代码版本不一致导致的问题
+> * 如有其他平台需要可前往[GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs)获取。
 
 ### 三、集成安全图片
 

@@ -5,6 +5,7 @@ The Tuya Smart Home SDK provides the home-based interface encapsulation for the 
 - Network configuration, control, state reporting, timer task, group, firmware upgrading and sharing related to hardware.
 - Account system (general account functions such as registration, login, resetting password, etc. of mobile phone number and Email)
 - Home management
+- Scene Control
 - ZigBee gateway
 - Message center
 - Feedback

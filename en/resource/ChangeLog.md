@@ -1,10 +1,17 @@
+### 3.13.0(2020.01.08)
+
+bugfix
+
 ### 3.13.0-beta4
+
 - Support BLE Devices
 - Support BLE+WIFI Dual-mode Devices
 
 ### 3.12.4
 
 bugfix
+
+Recommended upgrade
 
 ### 3.12.1
 
