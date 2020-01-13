@@ -1,3 +1,14 @@
+### 3.14.5-beta1（2020.01.13）
+
+feature version
+
+[3.13.0 to 3.14.x Guide](Update_3_14_0.md)
+
+* Update the dependency of mqtt library
+* Improve the stability of communication within the LAN
+* Data encryption for network request response
+* Internal optimization and bugfix
+
 ### 3.13.0(2020.01.08)
 
 bugfix
