@@ -1335,30 +1335,30 @@
 * @param groupId &#x7FA4;&#x7EC4;&#x672A;&#x521B;&#x5EFA;&#xFF0C;&#x5165;&#x53C2;groupId&#x4F20;-1&#xFF1B;&#x5DF2;&#x6709;&#x7FA4;&#x7EC4;&#xFF0C;&#x8BF7;&#x4F20;&#x5B9E;&#x9645;&#x7FA4;&#x7EC4;ID
 * @param productId &#x9009;&#x62E9;&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;&#x7684;&#x8BBE;&#x5907;&#x7684;pid
 */</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">queryDeviceListToAddGroup</span><span class="token punctuation">(</span>groupId<span class="token punctuation">,</span> productId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IGetDevsFromGroupByPidCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupDeviceBean<span class="token punctuation">&gt;</span></span> bizResult<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">queryDeviceListToAddGroup</span><span class="token punctuation">(</span>mGroupId<span class="token punctuation">,</span> mProductId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token operator">&lt;</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupDeviceBean<span class="token punctuation">&gt;</span></span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupDeviceBean<span class="token punctuation">&gt;</span></span> arrayList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
 
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 id="&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;"><a name="&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;</h4>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
-* &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x7FA4;&#x7EC4;
+* &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7FA4;&#x7EC4;
 * @param homeId &#x5BB6;&#x5EAD;id
 * @param productId &#x9009;&#x62E9;&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;&#x7684;&#x8BBE;&#x5907;&#x7684;pid
 * @param name &#x9009;&#x62E9;&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;&#x7684;&#x540D;&#x79F0;
 * @param selectedDeviceIds &#x9009;&#x62E9;&#x7684;&#x8BBE;&#x5907;&#x7684;deviceId&#x5217;&#x8868;
 */</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createNewGroup</span><span class="token punctuation">(</span>productId<span class="token punctuation">,</span> name<span class="token punctuation">,</span> selectedDeviceIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ICreateGroupCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createGroup</span><span class="token punctuation">(</span>productId<span class="token punctuation">,</span> name<span class="token punctuation">,</span> selectedDeviceIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>Long<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">//&#x8FD4;&#x56DE;groupId</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>Long groupId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//&#x8FD4;&#x56DE;groupid</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
@@ -1428,7 +1428,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Wifi群组","level":"1.11.1","depth":2,"next":{"title":"Zigbee群组","level":"1.11.2","depth":2,"path":"resource/Group_zigbee.md","ref":"./resource/Group_zigbee.md","articles":[]},"previous":{"title":"群组管理","level":"1.11","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[{"title":"Wifi群组","level":"1.11.1","depth":2,"path":"resource/Group_wifi.md","ref":"./resource/Group_wifi.md","articles":[]},{"title":"Zigbee群组","level":"1.11.2","depth":2,"path":"resource/Group_zigbee.md","ref":"./resource/Group_zigbee.md","articles":[]},{"title":"群组控制","level":"1.11.3","depth":2,"path":"resource/Group_control.md","ref":"./resource/Group_control.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Group_wifi.md","mtime":"2019-09-23T09:57:28.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-13T07:50:39.550Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"Wifi群组","level":"1.11.1","depth":2,"next":{"title":"Zigbee群组","level":"1.11.2","depth":2,"path":"resource/Group_zigbee.md","ref":"./resource/Group_zigbee.md","articles":[]},"previous":{"title":"群组管理","level":"1.11","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[{"title":"Wifi群组","level":"1.11.1","depth":2,"path":"resource/Group_wifi.md","ref":"./resource/Group_wifi.md","articles":[]},{"title":"Zigbee群组","level":"1.11.2","depth":2,"path":"resource/Group_zigbee.md","ref":"./resource/Group_zigbee.md","articles":[]},{"title":"群组控制","level":"1.11.3","depth":2,"path":"resource/Group_control.md","ref":"./resource/Group_control.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"js-sequence-diagram-full":{},"anchors":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Group_wifi.md","mtime":"2020-02-28T10:25:21.439Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-28T10:29:26.208Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1443,10 +1443,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
