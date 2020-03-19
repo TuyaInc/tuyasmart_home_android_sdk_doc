@@ -1,13 +1,12 @@
-# Function Overview
 
-The Tuya Smart Home SDK provides the home-based interface encapsulation for the hardware and Tuya Cloud communication to accelerate the App R&D. Main functions of it include:
+## Functional Overview
 
-- Network configuration, control, state reporting, timer task, group, firmware upgrading and sharing related to hardware.
-- Account system (general account functions such as registration, login, resetting password, etc. of mobile phone number and Email)
-- Home management
-- Scene Control
-- ZigBee gateway
-- Message center
-- Feedback
-- See [Tuya Cloud api invoking](https://docs.tuya.com/cn/cloudapi/appAPI/index.html) for Tuya Cloud HTTP API interface encapsulation.
+Tuya Smart Android Home SDK is a solution for the Whole house intelligence on the Android,  Android developers can quickly develop app functions based on SDK, realize the activation of intelligent hardware, hardware control, firmware upgrades, timed tasks, intelligent scenarios and other operations.
+
+The SDK includes the following features::
+
+- Account system (phone number, email registration, login, password reset and other general account functions)
+- Home system (home management, room management, home sharing and other functions)
+- Hardware functions (network configuration, control, status reporting, timed tasks, groups, firmware upgrades, sharing)
+- Dependency environment based on Android 5.0 and higher
 

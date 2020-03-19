@@ -1,147 +1,122 @@
-## Configuration
+# Activation
 
-### Scan nearby sub-devices to be configured
-##### 【Description】
-Need to check Bluetooth and location permissions before scanning
+## Scaning Mesh Devices
 
-##### 【Method Invocation】
+ Keep bluetooth ON and check location permissions before scanning.
+
+**Declaration**
 
 ```java
-//start search
-mMeshSearch.startSearch();
-//stop search
-mMeshSearch.stopSearch();
+//start scanning
+void startSearch();
+//stop scanning
+void stopSearch();
 
 ```
-##### 【Example Codes】
+**Example**
+
 ```java
 ITuyaBlueMeshSearchListener iTuyaBlueMeshSearchListener=new ITuyaBlueMeshSearchListener() {
     @Override
     public void onSearched(SearchDeviceBean deviceBean) {
-
     }
 
     @Override
     public void onSearchFinish() {
-
     }
 };
 
 SearchBuilder searchBuilder = new SearchBuilder()
-				.setMeshName("out_of_mesh")        //To scan the name of the device (the default will be out_of_mesh, the name of the device in the unconfigured state)
-                .setTimeOut(100)        //Scan duration in seconds
-                .setTuyaBlueMeshSearchListener(iTuyaBlueMeshSearchListener).build();
+		 .setMeshName("out_of_mesh")        
+     .setTimeOut(100)        
+     .setTuyaBlueMeshSearchListener(iTuyaBlueMeshSearchListener).build();
 
 ITuyaBlueMeshSearch mMeshSearch = TuyaHomeSdk.getTuyaBlueMeshConfig().newTuyaBlueMeshSearch(searchBuilder);
 
-//start search
+//start
 mMeshSearch.startSearch();
-
-//stop search
+//stop
 mMeshSearch.stopSearch();
 ```
 
-### Sub-device Configuration
-##### 【Description】
-There are two types of sub-device configuration, one is common device access, and the other is mesh gateway access.
+## Sub-devices Activation —— APP Activation
+Two types of sub-devices Activation, App activation and Mesh gateway activation.
 
-##### 【Initial parameter configuration】
+**Declaration**
+
 ```java
-//common sub-device configuration parameter
-TuyaBlueMeshActivatorBuilder tuyaBlueMeshActivatorBuilder = new TuyaBlueMeshActivatorBuilder()
-            .setSearchDeviceBeans(mSearchDeviceBeanList)
-            //default version number
-            .setVersion("1.0")
-            .setBlueMeshBean(mMeshBean)
-            .setTimeOut(CONFIG_TIME_OUT)  //scan duration in seconds
-            .setTuyaBlueMeshActivatorListener();
-            
-//Mesh gateway configuration parameter    
-TuyaBlueMeshActivatorBuilder tuyaBlueMeshActivatorBuilder = new TuyaBlueMeshActivatorBuilder()
-            .setWifiSsid(mSsid)
-            .setWifiPassword(mPassword)     
-            .setSearchDeviceBeans(mSearchDeviceBeanList)
-            .setVersion("2.2")
-            .setBlueMeshBean(mMeshBean)
-            .setHomeId("homeId")
-        	  .setTimeOut(CONFIG_TIME_OUT)
-            .setTuyaBlueMeshActivatorListener();
+void startActivator();
+
+void stopActivator();
 ```
 
-##### 【参数说明】
-###### 【入参】
-```java
-* @param mSearchDeviceBeans     list of device to be configured
-* @param timeout   Timeout setting for network configuration, default is 100s
-* @param ssid        Name of the Wifi used by devices in working after the network isconfigured.  (Home network)
-* @param password   Password of the Wifi used by devices in working after the network is configured.  (Home network)
-* @param mMeshBean  MeshBean 
-* @param homeId     join homeId
-* @param version    Common device is 1.0 , gateway is 2.2
-```
+**Parameters**
 
-###### 【出参】
-ITuyaBlueMeshActivatorListener listener configuration callback
+|field|type|describe|
+|--|--|--|
+|mSearchDeviceBeans     |List|List of devices to be activated|
+|timeout                |Int|Activation timeout，default 100s.|
+|ssid                   |String|After activation, Wi-Fi's ssid.|
+|password               |String|After activation, Wi-Fi's password.|
+|mMeshBean              |MeshBean|MeshBean |
+|homeId                 |Long|HomeId|
+|version                |String|Devices activation is 1.0, gateway activation is 2.2.|
 
-```java
-//single device configuration failed callback
-void onError(String errorCode, String errorMsg);
 
-@param errorCode:
-13007       login failed
-13004       reset device address failed
-13005       device address allocation is full
-13007       ssid is empty 
-13011       configuration time out
 
-//single device configuration success callback
-void onSuccess(DeviceBean deviceBean);
-
-//configuration finish callback
-void onFinish();
-
-```
-
-##### 【Method Invocation】
+**Example**
 
 ```java
-//start activator
-iTuyaBlueMeshActivator.startActivator();
-
-//stop activator
-iTuyaBlueMeshActivator.stopActivator();
-```
-
-##### 【Example Codes】
-```java
-//common sub-device configuration
 TuyaBlueMeshActivatorBuilder tuyaBlueMeshActivatorBuilder = new TuyaBlueMeshActivatorBuilder()
                 .setSearchDeviceBeans(foundDevices)
                 .setVersion("1.0")
                 .setBlueMeshBean(mMeshBean)
                 .setTimeOut(timeOut)
                 .setTuyaBlueMeshActivatorListener(new ITuyaBlueMeshActivatorListener() {
-                    @Override
-                    public void onSuccess(DeviceBean deviceBean) {
-                        L.d(TAG, "subDevBean onSuccess: " + deviceBean.getName());
-                    }
+     @Override
+     public void onSuccess(DeviceBean deviceBean) {
+     }
 
-                    @Override
-                    public void onError(String errorCode, String errorMsg) {
-                        L.d(TAG, "config mesh error" + errorCode + " " + errorMsg);
-                    }
+     @Override
+     public void onError(String errorCode, String errorMsg) {
+     }
 
-                    @Override
-                    public void onFinish() {
-                        L.d(TAG, "config mesh onFinish： ");
-                    }
-                });
+     @Override
+     public void onFinish() {
+     }});
+      
 ITuyaBlueMeshActivator iTuyaBlueMeshActivator = TuyaHomeSdk.getTuyaBlueMeshConfig().newActivator(tuyaBlueMeshActivatorBuilder);
 
 iTuyaBlueMeshActivator.startActivator();
 
+iTuyaBlueMeshActivator.stopActivator();
 
-//gateway sub-device configuration
+```
+
+## Sub-devices Activation——Gateway Activation
+Two types of sub-devices Activation, device activation and Mesh gateway activation.
+**Declaration**
+
+```java
+void startActivator();
+
+void stopActivator();
+```
+**Parameters**
+
+|field|type|describe|
+|--|--|--|
+|mSearchDeviceBeans     |List|List of devices to be configured|
+|timeout                |Int|Activation timeout，default 100s.|
+|ssid                   |String|After activation, Wi-Fi's ssid.|
+|password               |String|After activation, Wi-Fi's password.|
+|mMeshBean              |MeshBean|MeshBean |
+|homeId                 |Long|HomeId|
+|version                |String|Devices activation is 1.0, gateway activation is 2.2.|
+
+**Example**
+
+```java
 TuyaBlueMeshActivatorBuilder tuyaBlueMeshActivatorBuilder = new TuyaBlueMeshActivatorBuilder()
                 .setWifiSsid(mSsid)
                 .setWifiPassword(mPassword)
@@ -151,22 +126,33 @@ TuyaBlueMeshActivatorBuilder tuyaBlueMeshActivatorBuilder = new TuyaBlueMeshActi
                 .setHomeId("homeId")
                 .setTuyaBlueMeshActivatorListener(new ITuyaBlueMeshActivatorListener() {
 
-                    @Override
-                    public void onSuccess(DeviceBean devBean) {
-                        L.d(TAG, "startConfig  success");
-                    }
+   @Override
+   public void onSuccess(DeviceBean devBean) {
+    }
 
-                    @Override
-                    public void onError(String errorCode, String errorMsg) {
-                        L.d(TAG, "errorCode: " + errorCode + " errorMsg: " + errorMsg);
-                    }
+   @Override
+   public void onError(String errorCode, String errorMsg) {
+  }
 
-                    @Override
-                    public void onFinish() {
-                        L.d(TAG, "subDevBean onFinish: ");             
-                    }
-                });
+   @Override
+   public void onFinish() {  
+ 
+   }});
 ITuyaBlueMeshActivator iTuyaBlueMeshActivator = TuyaHomeSdk.getTuyaBlueMeshConfig().newWifiActivator(tuyaBlueMeshActivatorBuilder);
+
 iTuyaBlueMeshActivator.startActivator();
 
+iTuyaBlueMeshActivator.stopActivator();
+
 ```
+
+
+### Error Code
+
+|Code|describe|
+|--|--|
+|13007|Device login failed|
+|13004|Failed to reset device address|
+|13005|Device address is full|
+|13007|Ssid is empty|
+|13011|Activation timeout|

@@ -1,10 +1,10 @@
 # 升级指南
 
-如果你已经集成了之前的版本，要升级到3.14.x版本请参照如下步骤：
+如果你已经集成了之前的版本，要升级到 3.14.x 版本请参照如下步骤：
 
-更新tuyasmart库的版本为 3.14.x 对应的版本
+更新 tuyasmart 库的版本为 3.14.x 对应的版本
 
-1. 移除paho mqtt库的依赖
+1. 移除 paho mqtt 库的依赖
 
 	```groovy
 	implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
@@ -12,7 +12,7 @@
 
 ![image-20200113142931719](images/image-20200113142931719.png)
 
-2. 移除paho库的混淆规则
+2. 移除 paho 库的混淆规则
 
 	```
 	-keep class org.eclipse.paho.client.mqttv3.** { *; }

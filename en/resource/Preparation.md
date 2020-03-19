@@ -1,10 +1,10 @@
-# Preparation for integration
+# Preparation
 
-## Create an sdk app
+## Create an SDK APP
 
 1. Click "App Service" - "App SDK" - "Obtain SDK" in order on the iot platform.
 
-2. Select the appropriate development plan according to your needs and click "Next".
+2. Select the feature according to your needs and click "Next".
 
 ![](./images/get_sdk.png)
 

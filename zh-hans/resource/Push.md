@@ -1,3 +1,3 @@
-# 集成Push
+# 集成 Push
 
-基于Tuya SDK开发的app，Tuya平台支持Push功能，支持给用户发送运营Push和产品的告警Push。
+基于 Tuya SDK 开发的 app，Tuya 平台支持 Push 功能，支持给用户发送运营 Push 和产品的告警 Push。

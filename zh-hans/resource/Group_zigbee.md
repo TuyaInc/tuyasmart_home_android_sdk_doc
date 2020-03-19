@@ -1,60 +1,70 @@
-### Zigbee群组
+### Zigbee 群组
 
 #### 群组列表获取
 
+获取可创建群组设备列表
+
 ```java
-/**
-* 获取可创建群组设备列表
-* @param homeId 家庭id
-* @param groupId 群组未创建，入参groupId传-1；已有群组，请传实际群组ID
-* @param productId 选择创建群组的设备的pid
-*/
 TuyaHomeSdk.newHomeInstance(homeId).queryZigbeeDeviceListToAddGroup(groupId, productId, 
         new ITuyaResultCallback<List<GroupDeviceBean>>() {
+        
             @Override
             public void onSuccess(List<GroupDeviceBean> arrayList) {
+                
+            }
+            
+            @Override
+            public void onError(String errorCode, String errorMsg) {
+                
+            }
+        });
+```
+**参数说明**
+
+| 参数         | 说明 |
+| ------------ | -------------------------- |
+| homeId             | 家庭 id |
+| groupId            | 群组未创建，入参 groupId 传-1；已有群组，请传实际群组 ID |
+| productId          | 选择创建群组的设备的 pid |
+
+#### 创建群组
+
+创建一个空群组
+
+```java
+TuyaHomeSdk.newHomeInstance(homeId).createZigbeeGroup(productId, meshId, name, 
+        new ITuyaResultCallback<CloudZigbeeGroupCreateBean>() {
+        
+            @Override
+            public void onSuccess(CloudZigbeeGroupCreateBean cloudZigbeeGroupCreateBean) {
+                //输出结果
+                long mGroupId = cloudZigbeeGroupCreateBean.getGroupId();
+                String mGId = cloudZigbeeGroupCreateBean.getLocalId();
             }
         
             @Override
             public void onError(String errorCode, String errorMsg) {
+                
             }
         });
 ```
+**参数说明**
 
-#### 创建群组
-
-```java
-/**
-* 创建一个空群组
-* @param homeId 家庭id
-* @param productId 选择创建群组的设备的pid
-* @param meshId 选择创建群组的设备的网关id（可使用deviceBean.getMeshId()获取）
-* @param name 选择创建群组的名称
-*/
-TuyaHomeSdk.newHomeInstance(homeId).createZigbeeGroup(productId, meshId, name, new ITuyaResultCallback<CloudZigbeeGroupCreateBean>() {
-    @Override
-    public void onSuccess(CloudZigbeeGroupCreateBean cloudZigbeeGroupCreateBean) {
-        //输出结果
-        long mGroupId = cloudZigbeeGroupCreateBean.getGroupId();
-        String mGId = cloudZigbeeGroupCreateBean.getLocalId();
-    }
-
-    @Override
-    public void onError(String errorCode, String errorMsg) {
-    }
-});
-```
+| 参数         | 说明 |
+| ------------ | -------------------------- |
+| homeId    | 家庭 id |
+| productId | 选择创建群组的设备的 pid |
+| meshId    | 选择创建群组的设备的网关 id（可使用 deviceBean.getMeshId() 获取）|
+| name      | 选择创建群组的名称 |
 
 #### 新增设备到群组
 
+添加新设备到群组，主要跟固件交互，写入群组设备到网关
+
 ```java
-/**
-* 新增设备到群组
-* @param meshId 选择创建群组的设备的网关id（可使用deviceBean.getMeshId()获取）
-* @param selectedDeviceIds 选择新增设备的deviceId列表
-* @param gid 群组的localId（可以通过创建空群组时获得，若已有群组可通过groupBean.getLocalId()获取）
-*/
-mITuyaZigbeeGroup.addDeviceToGroup(meshId, selectedDeviceIds, gid, new ITuyaResultCallback<ZigbeeGroupCreateResultBean>() {
+mITuyaZigbeeGroup.addDeviceToGroup(meshId, selectedDeviceIds, gid, 
+        new ITuyaResultCallback<ZigbeeGroupCreateResultBean>() {
+       
             @Override
             public void onSuccess(ZigbeeGroupCreateResultBean zigbeeGroupCreateResultBean) {
                 if (zigbeeGroupCreateResultBean != null) {
@@ -70,23 +80,29 @@ mITuyaZigbeeGroup.addDeviceToGroup(meshId, selectedDeviceIds, gid, new ITuyaResu
                     }
                 }
             }
-
+            
             @Override
             public void onError(String errorCode, String errorMsg) {
+                
             }
         });
 ```
+**参数说明**
+
+| 参数         | 说明 |
+| ------------ | -------------------------- |
+| meshId                 | 选择创建群组的设备的网关 id（可使用 deviceBean.getMeshId() 获取）|
+| selectedDeviceIds      | 选择新增设备的 deviceId 列表 |
+| gid                    | 群组的 localId 可以通过创建空群组时获得，若已有群组可通过 groupBean.getLocalId() 获取 |
 
 #### 删除群组已有设备
 
+删除网关中存储的群组中已有设备
+
 ```java
-/**
-* 删除群组已有设备
-* @param meshId 选择创建群组的设备的网关id（可使用deviceBean.getMeshId()获取）
-* @param selectedDeviceIds 选择删除设备的deviceId列表
-* @param gid 群组的localId（可以通过创建空群组时获得，若已有群组可通过groupBean.getLocalId()获取）
-*/
-mITuyaZigbeeGroup.delDeviceToGroup(meshId, selectedDeviceIds, gid, new ITuyaResultCallback<ZigbeeGroupCreateResultBean>() {
+mITuyaZigbeeGroup.delDeviceToGroup(meshId, selectedDeviceIds, gid, 
+        new ITuyaResultCallback<ZigbeeGroupCreateResultBean>() {
+        
             @Override
             public void onSuccess(ZigbeeGroupCreateResultBean zigbeeGroupCreateResultBean) {
                 if (zigbeeGroupCreateResultBean != null) {
@@ -102,29 +118,44 @@ mITuyaZigbeeGroup.delDeviceToGroup(meshId, selectedDeviceIds, gid, new ITuyaResu
                     }
                 }
             }
-
+            
             @Override
             public void onError(String errorCode, String errorMsg) {
+                
             }
-        });
+        }); 
 ```
+**参数说明**
+
+| 参数         | 说明 |
+| ------------ | -------------------------- |
+| meshId                 | 选择创建群组的设备的网关 id（可使用 deviceBean.getMeshId() 获取）|
+| selectedDeviceIds      | 选择删除设备的 deviceId 列表 |
+| gid                    | 群组的 localId 可以通过创建空群组时获得，若已有群组可通过 groupBean.getLocalId() 获取 |
 
 #### 更新保存群组
 
-```java
-/**
-* 更新保存群组到云端
-* @param groupId 群组id
-* @param homeId 家庭id
-* @param selectedDeviceIds 新增或者删除成功的设备id列表
-*/
-TuyaHomeSdk.newZigbeeGroupInstance(groupId).updateGroupDeviceList(homeId, selectedDeviceIds, new IResultCallback() {
-        @Override
-        public void onError(String s, String s1) {
-        }
+将跟网关固件群组设备增删的结果同步更新保存到云端
 
-        @Override
-        public void onSuccess() {
-        }
-    });
+```java
+TuyaHomeSdk.newZigbeeGroupInstance(groupId).updateGroupDeviceList(homeId, selectedDeviceIds, 
+        new IResultCallback() {
+        
+            @Override
+            public void onError(String s, String s1) {
+                
+            }
+            
+            @Override
+            public void onSuccess() {
+                
+            }
+        });
 ```
+**参数说明**
+
+| 参数         | 说明 |
+| ------------ | -------------------------- |
+| groupId                | 群组 id |
+| homeId                 | 家庭 id |
+| selectedDeviceIds      | 新增或者删除成功的设备 id 列表 |

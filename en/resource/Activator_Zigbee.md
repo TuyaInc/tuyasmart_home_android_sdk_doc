@@ -1,94 +1,17 @@
-### Network Configuration for ZigBee Gateway
+### Network Configuration for ZigBee Device
 
 #### Description
 
-It refers to the wired network configuration herein. Before the network configuration for ZigBee gateway,
-please ensure that the ZigBee gateway device is connected to the router of Internet and the network of the ZigBee gateway device has been configured.
+Support ZigBee gateway and sub-device distribution.
 
-```sequence
-Title: Zigbee Gateway configuration
 
-participant APP
-participant Zigbee Gateway
-participant Service
+| Attributes | Description |
+| -------- | -------------------------------------------------------  |
+| ZigBee | ZigBee technology is a short-range, low-complexity, low-power, low-speed, low-cost two-way wireless communication technology. It is mainly used for data transmission between various electronic devices with short distances, low power consumption and low transmission rates, as well as typical applications with periodic data, intermittent data and low response time data transmission.|
+| ZigBee Gateway | The device that integrates the coordinator and WiFi functions in the ZigBee network is responsible for the establishment of the ZigBee network and the storage of data information.|
+| sub-device | Routing or terminal equipment in ZigBee network, responsible for data forwarding or terminal control response.|
 
-Note over Zigbee Gateway: Reset zigbee gateway
 
-APP-->Service: Get Token
-Service-->APP: Response Token
+### Conditions
 
-APP -> APP: connect mobile phone to the same hotspot of the gateway
-
-Device-->APP: broadcast configuration data
-APP-->APP: Receive Gateway information and active status
-
-APP-->Zigbee Gateway: sends the activation instruction
-APP-->Server: Use the token to poll the list of network activation devices every 2 seconds (the total duration is 100s by default)
-
-Note over Zigbee Gateway: device receives the activation data
-
-Zigbee Gateway->Service: activate the device
-Service-->Zigbee Gateway: network configuration succeeds
-
-Server-->APP: Network configuration succeeds
-
-```
-
-#### Get Network Configuration Token
-
-Before the wifi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
-The term of validity of Token is 5 minutes, and the Token become invalid once the network configuration succeeds.
-A new Token has to be obtained if you have to reconfigure network.
-
-Wireless gateway, please use Wifi Network Configuration
-
-```java
-/**
-* @param homeId(Reference family management section)
-* @param callback
-*/
-TuyaHomeSdk.getActivatorInstance().getActivatorToken(homeId, new ITuyaActivatorGetToken() {
-@Override
-public void onSuccess(String token) {
-
-}
-
-@Override
-public void onFailure(String s, String s1) {
-
-}
-});
-```
-
-#### Configuration Method Invocation
-```java
-// Initialize listener
-ITuyaSmartActivatorListener listener = new ITuyaSmartActivatorListener() {
-@Override
-public void onError(String errorCode, String errorMsg) {
-
-}
-
-@Override
-public void onActiveSuccess(DeviceBean deviceBean) {
-
-}
-@Override
-public void onStep(String step, Object data) {
-
-}
-})
-
-ITuyaActivator mITuyaActivator = TuyaHomeSdk.getActivatorInstance().newGwActivator(new TuyaGwActivatorBuilder()
-.setToken(token)
-.setTimeOut(100)
-.setContext(this)
-.setListener(listener);
-
-// Start network configuration
-mITuyaActivator.start()
-// Stop network configuration
-mITuyaActivator.stop()
-// Exit the page to clean up
-mITuyaActivator.onDestroy()
-```
+Before developing ZigBee device network, you need to understand the basic logic of TuyaHomeSDK, and have used TuyaHomeSdk to complete the basic operations such as logging in and creating a home.

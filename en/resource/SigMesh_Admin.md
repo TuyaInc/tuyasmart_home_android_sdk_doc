@@ -1,92 +1,105 @@
-## Management
+# SigMesh Manager
+Contains MeshId creation, destruction
 
-### Create SigMesh
+## Create SigMesh
 
-MeshId is assigned by the cloud. Only one Mesh can be created in a family.
+MeshId is created by the cloud. Only one Mesh can be created in a family.
 
-##### 【Method Invocation】
+**Declaration**
 ```java
-* @param callback   
 void createSigMesh(ITuyaResultCallback<SigMeshBean> callback);
 ```
 
-##### 【Example Codes】
-``` java
-TuyaHomeSdk.newHomeInstance("homeId").createSigMesh(new ITuyaResultCallback<SigMeshBean>() {
+**Example**
+
+```java
+TuyaHomeSdk.newHomeInstance("homeIdxxxx").createSigMesh(new ITuyaResultCallback<SigMeshBean>() {
     @Override
     public void onError(String errorCode, String errorMsg) {
-        Toast.makeText(mContext, "create sigmesh fail "+ errorMsg, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onSuccess(SigMeshBean sigMeshBean) {
-        Toast.makeText(mContext, "create sigmesh success", Toast.LENGTH_LONG).show();
     }
 });
 ```
 
-### Remove SigMesh
+## Delete SigMesh
+Delete SigMesh MeshId
 
-##### 【Example Codes】
+**Declaration**
+```java
+void removeMesh(IResultCallback callback);
+```
+
+**Example**
 ```java
 TuyaHomeSdk.newSigMeshDeviceInstance(meshId).removeMesh(new IResultCallback() {
     @Override
     public void onError(String errorCode, String errorMsg) {
-	    Toast.makeText(mContext, "remove sigmesh fail "+ errorMsg, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onSuccess() {
-	    Toast.makeText(mContext, "remove sigmesh success", Toast.LENGTH_LONG).show();
     }
 });
 
 ```
 
-### Get Mesh Data From Cache
-##### 【Method Invocation】
+## Get Mesh Data From Cache
+
+**Declaration**
+
 ```java
-TuyaHomeSdk.getSigMeshInstance().getSigMeshList()
+List<SigMeshBean> getSigMeshList();
 ```
-##### 【Method Invocation】
+**Example**
 ```java
-ITuyaHome mTuyaHome = TuyaHomeSdk.newHomeInstance("homeId");
+ITuyaHome mTuyaHome = TuyaHomeSdk.newHomeInstance("homeIdxxxx");
 if (mTuyaHome.getHomeBean() != null){
 	List<SigMeshBean> meshList = TuyaHomeSdk.getSigMeshInstance().getSigMeshList()
 }
 ```
 
-###  Get Mesh Sub-device Data From Cache 
-##### 【Method Invocation】
-```java
-List<DeviceBean> meshSubDevList = TuyaHomeSdk.newSigMeshDeviceInstance("meshId").getMeshSubDevList();
+## Get Sub-device Data From Cache 
 
+**Declaration**
+
+```java
+ List<DeviceBean> getMeshSubDevList();
+```
+**Example**
+```java
+List<DeviceBean> meshSubDevList = TuyaHomeSdk.newSigMeshDeviceInstance("meshIdxxxxx").getMeshSubDevList();
 ```
 
+## Mesh Init  & Destroy
+It is recommended to destroy the current mesh and re-initialize the mesh when the family switches.
 
-### Mesh Initialization And Destruction
-It is recommended to destroy the current mesh and re-initialize the mesh in the family when the family switches
-
-##### 【Method Invocation】
+**Declaration**
 ```java
 //init mesh
-TuyaHomeSdk.getTuyaSigMeshClient().initMesh(String meshId);
+void initMesh(String meshId);
+//destroy current mesh
+void destroyMesh();
+```
+**Example**
+```java
+//init mesh
+TuyaHomeSdk.getTuyaSigMeshClient().initMesh("meshIdxxxxx");
 
 //destroy current mesh
 TuyaHomeSdk.getTuyaSigMeshClient().destroyMesh();
 ```
 
+## Mesh Sub-device Connect and disconnect
+`ITuyaBlueMeshClient` provides connect, disconnect, scan, stop scan.
 
-### Mesh Sub-device Connect And Disconnect
-##### 【Description】
-ITuyaBlueMeshClientProvides start connection, disconnect, start scan, stop scan
-
-##### 【Method Invocation】
+**Example**
 ```java
-// start connection
+// start connect
 TuyaHomeSdk.getTuyaSigMeshClient().startClient(mSigMeshBean);
-
-// start connection and specify the time of the scan
+// start connect with timeout
 TuyaHomeSdk.getTuyaSigMeshClient().startClient(mSigMeshBean,searchTime);
 
 //disconnect
@@ -100,9 +113,9 @@ TuyaHomeSdk.getTuyaSigMeshClient().stopSearch();
 
 ```
 
-##### 【Precautions】
-###### startClient(mSigMeshBean) After opening the connection, it will continuously scan the surrounding connectable devices in the background until the connection is successful.
-###### startClient(mSigMeshBean,searchTime) After the connection is opened, the device will not be scanned within the search time.
-###### Scanning in the background always consumes resources. You can control scanning in the background by startSearch and stopSearch.
-###### When startClient () is not started, calling startSearch () and stopSearch () has no effect.
-###### When connected to the mesh network, calling startSearch and stopSearch has no effect.
+**Precautions**
+
+ - `startClient(mSigMeshBean)` After calling, it will continuously scan the surrounding connectable devices in the background until the connection is successful.
+ - Scanning in the background always consumes resources. You can control background scanning by starting and stopping
+ - if not call  `startClient()` , `startSearch()` and  `stopSearch()` is not working
+ - When connected to the Mesh network, calling startSearch and stopSearch is not working.

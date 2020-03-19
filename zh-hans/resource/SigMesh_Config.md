@@ -1,18 +1,20 @@
 ## 配网与入网
 
 ### 扫描附近待配网子设备
-##### 【描述】
 扫描前需要检查蓝牙和位置权限
 
-##### 【方法调用】
+**接口说明**
+
 ```java
 //开启扫描
-mMeshSearch.startSearch();
+void startSearch();
 //停止扫描
-mMeshSearch.stopSearch();
+void stopSearch();
 
 ```
-##### 【代码范例】
+
+**示例代码**
+
 ```java
 ITuyaBlueMeshSearchListener iTuyaBlueMeshSearchListener=new ITuyaBlueMeshSearchListener() {
     @Override
@@ -41,103 +43,91 @@ mMeshSearch.startSearch();
 mMeshSearch.stopSearch();
 ```
 
-### 子设备入网
 
-#### 通过手机蓝牙通道入网
+## 子设备入网——通过 APP 蓝牙入网
 
-##### 【初始化参数配置】
-```java
-//普通设备入网参数配置
-TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivatorBuilder()
-            .setSearchDeviceBeans(mSearchDeviceBeanList)
-            .setSigMeshBean(sigMeshBean)
-            //超时时间
-            .setTimeOut(CONFIG_TIME_OUT)
-            .setTuyaBlueMeshActivatorListener();
-```
+子设备入网有两种方式，一种是通过 App 蓝牙入网，另一种是通过网关直接配子设备入网。
 
-##### 【参数说明】
-###### 【入参】
-```java
-* @param mSearchDeviceBeans     待配网的设备集合,通过 startSearch 扫描得到的
-* @param timeout    配网的超时时间设置，默认是100s（当一次性配网设备过多时，需要增加时间）
-* @param sigMeshBean  SigMeshBean   
-```
-
-###### 【出参】
-ITuyaBlueMeshActivatorListener listener 配网回调接口
-
-```java
-//单设备配网失败回调
-void onError(String mac, String errorCode, String errorMsg);
-
-@param errorCode:
-21002       invite 失败
-21004       provision 失败
-21006       send public key 失败
-21008       conform 失败
-210010      random conform 失败
-210014      send data 失败
-210016      composition data 失败
-210018      add appkey 失败
-210020      bind model 失败
-210022      publication model 失败
-210024      network transmit 失败
-210026      云端注册失败
-210027      设备地址分配已满
-210034      notify 失败
-20021       配网超时
-
-//单设备配网成功回调
-void onSuccess(String mac, DeviceBean deviceBean);
-
-//整个配网结束回调
-void onFinish();
-
-```
-
-##### 【方法调用】
+**接口说明**
 
 ```java
 //开启配网
-iTuyaBlueMeshActivator.startActivator();
+void startActivator();
+//停止配网
+void stopActivator();
+```
+**示例代码**
 
+```java
+TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivatorBuilder()
+            .setSearchDeviceBeans(mSearchDeviceBeanList)
+            .setSigMeshBean(sigMeshBean) // Sigmesh基本信息
+            .setTimeOut(timeout)  //超时时间
+            .setTuyaBlueMeshActivatorListener(new ITuyaBlueMeshActivatorListener() {
+     @Override
+     public void onSuccess(String mac, DeviceBean deviceBean) {
+         L.d(TAG, "subDevBean onSuccess: " + deviceBean.getName());
+     }
+     @Override
+     public void onError(String mac, String errorCode, String errorMsg) {
+         L.d(TAG, "config mesh error" + errorCode + " " + errorMsg);
+     }
+     @Override
+     public void onFinish() {
+      L.d(TAG, "config mesh onFinish： ");
+     });
+
+ITuyaBlueMeshActivator iTuyaBlueMeshActivator = TuyaHomeSdk.getTuyaBlueMeshConfig().newActivator(tuyaBlueMeshActivatorBuilder);
+
+//开启配网
+iTuyaBlueMeshActivator.startActivator();
 //停止配网
 iTuyaBlueMeshActivator.stopActivator();
 ```
 
-##### 【代码范例】
-```java
-//普通设备入网
-TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivatorBuilder()
-            .setSearchDeviceBeans(mSearchDeviceBeanList)
-            .setSigMeshBean(sigMeshBean)
-            //超时时间
-            .setTimeOut(CONFIG_TIME_OUT)
-            .setTuyaBlueMeshActivatorListener(new ITuyaBlueMeshActivatorListener() {
-                    @Override
-                    public void onSuccess(String mac, DeviceBean deviceBean) {
-                        L.d(TAG, "subDevBean onSuccess: " + deviceBean.getName());
-                    }
+**入参说明**
 
-                    @Override
-                    public void onError(String mac, String errorCode, String errorMsg) {
-                        L.d(TAG, "config mesh error" + errorCode + " " + errorMsg);
-                    }
+|参数|说明|
+|--|--|
+|mSearchDeviceBeanList|待配网的设备集合,通过 startSearch 扫描得到的|
+|timeout|配网的超时时间设置，默认是 100s（配网设备过多时，需要增加时间)|
+|sigMeshBean|SigMeshBean|
 
-                    @Override
-                    public void onFinish() {
-                        L.d(TAG, "config mesh onFinish： ");
-                    }
-                });
-ITuyaBlueMeshActivator iTuyaBlueMeshActivator = TuyaHomeSdk.getTuyaBlueMeshConfig().newActivator(tuyaBlueMeshActivatorBuilder);
+**出参说明**
 
-iTuyaBlueMeshActivator.startActivator();
+`DeviceBean` 见 [DeviceBean数据模型](./Device.md#DeviceBean数据模型)
 
-```
+`errorCode` 见错误码
 
-#### 通过网关通道入网
-同 [ZigBee子设备配网](./Activator_ZigbeeSub.md)
+## 错误码
 
-### 网关入网
-同 [Wifi EZ 配网模式](./Activator_wifi.md#EZ模式配网)
+|Code|MSG|
+|--|--|
+|21002       |invite 失败|
+|21004       |provision 失败|
+|21006       |send public key 失败|
+|21008       |conform 失败|
+|210010      |random conform 失败|
+|210014      |send data 失败|
+|210016      |composition data 失败|
+|210018      |add appkey 失败|
+|210020      |bind model 失败|
+|210022      |publication model 失败|
+|210024      |network transmit 失败|
+|210026      |云端注册失败|
+|210027      |设备地址分配已满|
+|210034      |notify 失败|
+|20021       |配网超时|
+
+
+## 子设备入网——通过网关通道入网
+
+同 [ZigBee 子设备配网](./Activator_zigbee_subdevice.md)
+
+## 网关入网
+
+SigMesh 网关 本质上为双模设备；
+
+可以使用 Wi-Fi设备的入网 同 [Wifi EZ 配网模式](./Activator_wifi_ez.md)；
+
+也可以使用单点蓝牙双模入网 [双模设备配网](./BLE_Activator.md#双模设备入网激活)。

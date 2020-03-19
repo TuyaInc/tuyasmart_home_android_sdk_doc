@@ -1,66 +1,216 @@
-## Room Management Class
+### Room management
 
-The ITuyaRoom provides the room management class, and adding devices, removing devices or groups are handled in this class. The `TuyaHomeSdk.newRoomInstance("roomId") `can be used to build the room management class. 
+**RoomBean**
 
-#### RoomBean Field Information:
-| field | type | describe |
-| --- | --- | --- |
-| roomId | long  | The id of the room|
-| name | String   | The name of the room|
-| deviceList | List &lt;DeviceBean&gt;  |The devices in the room|
-| groupList | List &lt;GroupBean&gt;  | The groups in the room|
-| displayOrder | int | Room order|
+| Parameters | Type | Description |
+| :--- | :--- | :--- |
+| roomId | long  | Room id|
+| name | String   | Room name|
+| deviceList | List &lt;DeviceBean&gt;   | Devices of room |
+| groupList | List &lt;GroupBean&gt;  | Groups of room |
+| displayOrder | int | Room display order |
 
-#### Interface Manifest:
+#### add group
+
+**Declaration**
+
 ```java
-/**
-* Update room name 
-*
-* @param name     New name of room
-* @param callback
-*/
-void updateRoom(String name, IResultCallback callback);
-/**
-* Add device
-*
-* @param devId
-* @param callback
-*/
-void addDevice(String devId, IResultCallback callback);
-
-/**
-* Add group
-*
-* @param groupId
-* @param callback
-*/
-void addGroup(long groupId, IResultCallback callback);
-/**
-* Remove device
-*
-* @param devId
-* @param callback
-*/
-void removeDevice(String devId, IResultCallback callback);
-/**
-* Remove group
-*
-* @param groupId
-* @param resultCallback
-*/
-void removeGroup(Long groupId, IResultCallback resultCallback);
-
-/**
-* Remove groups or devices from a room.
-* @param list
-* @param callback
-*/
-void moveDevGroupListFromRoom(List<DeviceAndGroupInRoomBean> list, IResultCallback callback);
-
-/**
-* Sort groups or devices in a room.
-* @param list
-* @param callback
-*/
-void sortDevInRoom(List<DeviceAndGroupInRoomBean> list, IResultCallback callback);
+void addGroup(long groupId, IResultCallback callback)
 ```
+
+**Parameters**
+
+| Parameters | Description |
+| :--- | :--- |
+| groupId | Group ID |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).addGroup(groupId, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### Update room name
+
+**Declaration**
+
+```java
+void updateRoom(String name, IResultCallback callback)
+```
+
+**Parameters**
+
+| Parameters | Description |
+| :--- | :--- |
+| name | New room name |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).updateRoom(name, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### Add device
+
+**Declaration**
+
+```java
+void addDevice(String devId, IResultCallback callback)
+```
+
+**Parameters**
+
+| Parameters | Description |
+| :--- | :--- |
+| devId | Device ID |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).addDevice(devId, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### Delete device
+
+**Declaration**
+
+```java
+void removeDevice(String devId, IResultCallback callback)
+```
+
+**Parameters**
+
+| Parameters | Description |
+| :--- | :--- |
+| devId | Device ID |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).removeDevice(devId, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### Delete Group
+
+**Declaration**
+
+```java
+void removeGroup(Long groupId, IResultCallback resultCallback)
+```
+
+**Parameters**
+
+| Parameters | Description |
+| :--- | :--- |
+| groupId | Group ID |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).removeGroup(groupId, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### Remove group or device from room
+
+**Declaration**
+
+```java
+void moveDevGroupListFromRoom(List list, IResultCallback callback)
+```
+
+**Parameters**
+
+| Parameters | Description |
+| :--- | :--- |
+| list | Group or device |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).moveDevGroupListFromRoom(list, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### Sort groups or devices in a room
+
+**Declaration**
+
+```java
+void sortDevInRoom(List<DeviceAndGroupInRoomBean> list, IResultCallback callback)
+```
+
+**Parameters**
+
+| Parameters | Description |
+| :--- | :--- |
+| list | Group or device |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).sortDevInRoom(list, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+

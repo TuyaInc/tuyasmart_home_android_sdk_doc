@@ -3,7 +3,6 @@
 #### Description
 
 This function is only applicable to the device that has self-entered internet after powered on the device. 
-And after resetting the device status, it will connect to the Tuya Cloud Server.
 
 ```sequence
 
@@ -35,32 +34,42 @@ cloud-->APP: Network configuration succeeds
 
 ```
 
-#### Configuration Method Invocation
+#### Initialize Parameters
 
 ```java
-/**
-* @param uuid 设备UUID
-* @param homeId 家庭ID
-* @param CONFIG_TIME_OUT 超时时间，建议设置为120s（单位是秒）
-*/
 TuyaQRCodeActivatorBuilder builder = new TuyaQRCodeActivatorBuilder()
-.setUuid(uuid)
-.setHomeId(homeId)
-.setContext(mActivity)
-.setTimeOut(CONFIG_TIME_OUT)
-.setListener(new ITuyaSmartActivatorListener() {
-    @Override
-    public void onError(String errorCode, String errorMsg) {
-    }
+        .setUuid(uuid)
+        .setHomeId(homeId)
+        .setContext(mActivity)
+        .setTimeOut(timeout)
+        .setListener(new ITuyaSmartActivatorListener() {
+            
+                @Override
+                public void onError(String errorCode, String errorMsg) {
+                    
+                }
+            
+                @Override
+                public void onActiveSuccess(DeviceBean devResp) {
+                    
+                }
+            
+                @Override
+                public void onStep(String step, Object data) {
+                    
+                }
+            }
+        ));
+```
+**Parameter Description**
 
-    @Override
-    public void onActiveSuccess(DeviceBean devResp) {
-    }
+| Parameter         | Description |
+| ------------ | -------------------------- |
+| uuid            | UUID of the device, which can be obtained by scanning the QR code of the device |
+| homeId          | Family ID, please refer to the family management section for details |
+| timeout         | Configuration timeout, default setting is 100s, unit is second|
 
-    @Override
-    public void onStep(String step, Object data) {
-    }
-}));
+#### Configuration Method Invocation
 
 ITuyaActivator mTuyaActivator = TuyaHomeSdk.getActivatorInstance().newQRCodeDevActivator(builder);
 // Start network configuration

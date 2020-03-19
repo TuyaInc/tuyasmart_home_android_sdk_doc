@@ -1,18 +1,20 @@
-## Configuration
+# Activation
 
-### Scan nearby sub-devices to be configured
-##### 【Description】
-Need to check Bluetooth and location permissions before scanning
+### Scaning Mesh Devices
+ Keep bluetooth ON and check location permissions before scanning.
 
-##### 【Method Invocation】
+**Declaration**
+
 ```java
-//start search
-mMeshSearch.startSearch();
-//stop search
-mMeshSearch.stopSearch();
+//start scanning
+void startSearch();
+//stop scanning
+void stopSearch();
 
 ```
-##### 【Example Codes】
+
+**Example**
+
 ```java
 ITuyaBlueMeshSearchListener iTuyaBlueMeshSearchListener=new ITuyaBlueMeshSearchListener() {
     @Override
@@ -25,116 +27,102 @@ ITuyaBlueMeshSearchListener iTuyaBlueMeshSearchListener=new ITuyaBlueMeshSearchL
 
     }
 };
-// The UUID of the SigMesh device to be deployed is fixed
+// SigMesh's UUID
 UUID[] MESH_PROVISIONING_UUID = {UUID.fromString("00001827-0000-1000-8000-00805f9b34fb")};
 SearchBuilder searchBuilder = new SearchBuilder()
 								.setServiceUUIDs(MESH_PROVISIONING_UUID)
-                .setTimeOut(100)        //scan duration in seconds
+                .setTimeOut(100)      
                 .setTuyaBlueMeshSearchListener(iTuyaBlueMeshSearchListener).build();
 
 ITuyaBlueMeshSearch mMeshSearch = TuyaHomeSdk.getTuyaBlueMeshConfig().newTuyaBlueMeshSearch(searchBuilder);
 
-//start search
+//start
 mMeshSearch.startSearch();
 
-//stop search
+//stop
 mMeshSearch.stopSearch();
 ```
 
-### Sub-device Configuration
 
-#### By mobile phone's Bluetooth channel
+## Sub-devices Activation —— APP Activation
 
-##### 【Initial parameter configuration】
+Two types of sub-devices Activation, App activation and Mesh gateway activation.
+
+**Declaration**
+
+```java
+
+void startActivator();
+
+void stopActivator();
+```
+**Example**
+
 ```java
 TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivatorBuilder()
             .setSearchDeviceBeans(mSearchDeviceBeanList)
-            .setSigMeshBean(sigMeshBean)
-            .setTimeOut(CONFIG_TIME_OUT)  // time out
-            .setTuyaBlueMeshActivatorListener();
-```
+            .setSigMeshBean(sigMeshBean) 
+            .setTimeOut(timeout) 
+            .setTuyaBlueMeshActivatorListener(new ITuyaBlueMeshActivatorListener() {
+     @Override
+     public void onSuccess(String mac, DeviceBean deviceBean) {
+     }
+     @Override
+     public void onError(String mac, String errorCode, String errorMsg) {
+     }
+     @Override
+     public void onFinish() {
+     });
 
-##### 【Parameter Description】
-###### 【Entry parameters】
-```java
-* @param mSearchDeviceBeans     list of device to be configured,get by startSearch
-* @param timeout    Timeout setting for network configuration, default is 100s (when there are too many devices for one-time network configuration, you need to increase the time)
-* @param sigMeshBean  SigMeshBean   
-```
+ITuyaBlueMeshActivator iTuyaBlueMeshActivator = TuyaHomeSdk.getTuyaBlueMeshConfig().newActivator(tuyaBlueMeshActivatorBuilder);
 
-###### 【Back parameters】
-ITuyaBlueMeshActivatorListener listener configuration callback
-
-```java
-//single device configuration failed callback
-void onError(String mac, String errorCode, String errorMsg);
-
-@param errorCode:
-21002       invite failed
-21004       provision failed
-21006       send public key failed
-21008       conform failed
-210010      random conform failed
-210014      send data failed
-210016      composition data failed
-210018      add appkey failed
-210020      bind model failed
-210022      publication model failed
-210024      network transmit failed
-210026      cloud registration failed
-210027      device address allocation is full
-210034      notify failed
-20021       configuration time out
-
-//single device configuration success callback
-void onSuccess(String mac, DeviceBean deviceBean);
-
-//configuration finish callback
-void onFinish();
-
-```
-
-##### 【Method Invocation】
-
-```java
-//start activator
+//start
 iTuyaBlueMeshActivator.startActivator();
-
-//stop activator
+//stop
 iTuyaBlueMeshActivator.stopActivator();
 ```
 
-##### 【Example Codes】
-```java
-//sub-device configuration
-TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder = new TuyaSigMeshActivatorBuilder()
-            .setSearchDeviceBeans(mSearchDeviceBeanList)
-            .setSigMeshBean(sigMeshBean)
-            .setTimeOut(CONFIG_TIME_OUT)
-            .setTuyaBlueMeshActivatorListener(new ITuyaBlueMeshActivatorListener() {
-                    @Override
-                    public void onSuccess(String mac, DeviceBean deviceBean) {
-                        L.d(TAG, "subDevBean onSuccess: " + deviceBean.getName());
-                    }
+**Parameters**
 
-                    @Override
-                    public void onError(String mac, String errorCode, String errorMsg) {
-                        L.d(TAG, "config mesh error" + errorCode + " " + errorMsg);
-                    }
+|field|describe|
+|--|--|
+|mSearchDeviceBeanList|List of devices to be activated|
+|timeout|Activation timeout，default 100s.|
+|sigMeshBean|SigMeshBean|
 
-                    @Override
-                    public void onFinish() {
-                        L.d(TAG, "config mesh onFinish： ");
-                    }
-                });
-ITuyaBlueMeshActivator iTuyaBlueMeshActivator = TuyaHomeSdk.getTuyaBlueMeshConfig().newActivator(tuyaBlueMeshActivatorBuilder);
+**Data Model**
 
-iTuyaBlueMeshActivator.startActivator();
+`DeviceBean` See [DeviceBean Data Model](./Device.md#Device Information Acquisition)
 
-```
+`errorCode` See Error Code
 
-#### By Gateway Channel
-same as  [ZigBee Sub-device Configuration](./Activator_ZigbeeSub.md)
+## Error Code
 
-### Gateway Configuration
-same as  [AP Mode Configuration](./Activator_wifi.md#EZ Mode Configuration)
+|Code|MSG|
+|--|--|
+|21002       |invite failed|
+|21004       |provision failed|
+|21006       |send public key failed|
+|21008       |conform failed|
+|210010      |random conform failed|
+|210014      |send data failed|
+|210016      |composition data failed|
+|210018      |add appkey failed|
+|210020      |bind model failed|
+|210022      |publication model failed|
+|210024      |network transmit failed|
+|210026      |Cloud registration failed|
+|210027      |Device address allocation is full|
+|210034      |notify failed|
+|20021       |timeout|
+
+
+## Sub-devices Activation——Gateway Activation
+
+See  [ZigBee Sub-devices Activation](./Activator_zigbee_subdevice.md)
+
+## Gateway Activation
+
+SigMesh gateway essentially dual-mode device
+1. Activation as a Wi-Fi device. See [Wifi EZ Activation](./Activator_wifi_ez.md)
+2. Activation as a BLE device. See [Dual-mode Activation](./BLE_Activator.md#Dual-mode-Device-Activation)

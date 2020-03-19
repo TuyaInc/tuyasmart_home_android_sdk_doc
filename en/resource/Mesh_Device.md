@@ -1,94 +1,107 @@
-## Device
+# Mesh Devices
 
-### Mesh Device Judgment Method
-##### 【Example Codes】
+## Found Mesh Devices
+
+**Example**
 
 ```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
-// Determine whether it is a bluemesh device (child device + gateway)
+
 if(deviceBean.isBlueMesh()){
     L.d(TAG, "This device is blue mesh device");
  }
 
-// Determine if it is a bluemesh gateway device
 if(deviceBean.isBlueMeshWifi()){
     L.d(TAG, "This device is blue mesh wifi device");
  }
 ```
-###  Sub-device Rename
-##### 【Method Invocation】
-```java
-* @param devId    	 device id
-* @param name		     new name
-* @param callback	
-public void renameMeshSubDev(String devId, String name, IResultCallback callback);
+##  Sub-devices Rename
 
+**Declaration**
+
+```java
+void renameMeshSubDev(String devId, String name, IResultCallback callback);
 ```
 
-##### 【Example Codes】
+**Parameters**
+
+|param|type|describe|
+|--|--|--|
+|devId  |String| Device Id |
+|name		|String|New name|
+|callback|IResultCallback|Callback|
+
+**Example**
+
 ```java
-mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"new name", new IResultCallback() {
+mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"device name", new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "rename failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "rename success", Toast.LENGTH_LONG).show();
             }
         });
 ```
 
-###  Sub-device Remove
-#####  【Method Invocation】
-```java
-* @param devId    	 device id
-* @param pcc  		   device category
-* @param callback	
-public void removeMeshSubDev(String devId, IResultCallback callback) ;
+##  Sub-devices Remove
 
-```
-#####  【Example Codes】
+**Declaration**
+
 ```java
-mTuyaBlueMesh.removeMeshSubDev(devBean.getDevId(),devBean.getCategory(), new IResultCallback() {
+void removeMeshSubDev(String devId, IResultCallback callback);
+```
+**Parameters**
+
+|param|type|describe|
+|--|--|--|
+|devId  |String| Device Id |
+|pcc		|String|Device type|
+|callback|IResultCallback|Callback|
+
+**Example**
+
+```java
+mTuyaBlueMesh.removeMeshSubDev(devBean.getDevId(), new IResultCallback(){
+  @Override
+  public void onError(String code, String errorMsg) {
+ }
+
+ @Override
+ public void onSuccess() {
+  Toast.makeText(mContext, "sub-deivces remove success", Toast.LENGTH_LONG).show();
+  }});
+```
+
+## Query Single Sub-devices
+
+Get dp data from cloud maybe not real-time data, can use it search real-time data and `IMeshDevListener`'s `onDpUpdate` will be callback.
+
+**Declaration**
+
+```java
+void querySubDevStatusByLocal(String pcc, String nodeId, IResultCallback callback);
+```
+
+**Parameters**
+
+|param|type|describe|
+|--|--|--|
+|pcc  |String| Device type |
+|nodeId		|String|Device nodeId|
+|callback|IResultCallback|Callback|
+
+**Example**
+
+```java
+mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "remove fail "+ errorMsg, Toast.LENGTH_LONG).show();
-    
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "remove success", Toast.LENGTH_LONG).show();
-            }
-        });
-```
-
-### Query of a Single Sub-device Information
-##### 【Description】
-The dp point data obtained in the cloud may not be the real-time data of the current device. You can use this command to query the current data value of the device. The result is returned by the onDpUpdate method of IMeshDevListener.
-
-#####  【Method Invocation】
-```java
-* @param pcc  		   device categoty
-* @param nodeId    	 device nodeId
-* @param callback
-public void querySubDevStatusByLocal(String pcc, final String nodeId, final IResultCallback callback);
-
-```
-
-#####  【Example Codes】
-```java
- mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
-            @Override
-            public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "query failed "+ errorMsg, Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onSuccess() {
-            		Toast.makeText(mContext, "query success ", Toast.LENGTH_LONG).show();
             }
         });
 ```

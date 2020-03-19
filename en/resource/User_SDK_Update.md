@@ -1,27 +1,30 @@
 # Migration of One Series of SDK Accounts
+If it is a 1 series SDK, users need to upgrade when accessing the latest version
 
-Upgrade after the login
+### Check if you want to upgrade user data
+
+   **Declaration**
 
 ```java
-/**
-* Check to determine whether the user data needs to be upgraded
-*
-* @return
-*/
-boolean checkVersionUpgrade();
+    boolean checkVersionUpgrade();
+```
+   
+   **Example**
 
-/**
-* Upgrade the account.
-/
-void upgradeVersion(IResultCallback callback);
+```java
+    TuyaHomeSdk.getUserInstance().checkVersionUpgrade();
+```
 
-/**
-*	Check upgrade
-*/
-TuyaHomeSdk.getUserInstance().checkVersionUpgrade()
+### Upgrade account
 
-/**
-*	Upgrade the user account.
-*/
-TuyaHomeSdk.getUserInstance().upgradeVersion()
+   **Declaration**
+
+```java
+   void upgradeVersion(IResultCallback callback);
+```
+
+   **Example**
+
+```java
+   TuyaHomeSdk.getUserInstance().upgradeVersion ()
 ```

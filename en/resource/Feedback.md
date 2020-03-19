@@ -1,349 +1,116 @@
-## Feedback
+# Message Push Settings
 
-It is used to provide a communication channel between users and businesses/developers.
+## Get the current status of the message master switch
 
-ITuyaFeedbackManager is classified into a feedback management class, and provides interfaces like adding feedback and obtaining feedback lists. Invoked method: 
+The message push switch is the master switch. In the off state, no messages such as device alarms, home messages, and notification messages can be received.
+
+**Declaration**
 
 ```java
-
-ITuyaFeedbackManager = TuyaHomeSdk.getTuyaFeekback().getFeedbackManager()
+void getPushStatus(ITuyaResultCallback<PushStatusBean> callback);
 ```
 
-ITuyaFeedbackMag is classified as a feedback management class for some conversation, and also provides new feedback and obtain a list of messages from the current conversation. Invoked method:
+**Parameters**
+
+| Parameters     | Description                    |
+| -------- | ----------------------- |
+| callback | Callbacks, including success and failure to get total switch status |
+
+**Example**
 
 ```java
-
-ITuyaFeedbackMag = TuyaHomeSdk.getTuyaFeekback().getFeedbackMsg(String hdId, int hdType)
+ TuyaHomeSdk.getPushInstance().getPushStatus(new ITuyaResultCallback<PushStatusBean>() {
+       @Override
+       public void onSuccess(PushStatusBean result) {}
+       @Override
+       public void onError(String errorCode, String errorMessage) {}
+ });
 ```
 
-## Obtain feedback list
+## Set the current state of the message master switch
 
-**[Description]**
+The message push switch is the master switch, and no messages such as device alarms, home messages, notification messages, etc. can be received in the off state.
 
-Obtain all feedback from the user.
+**Declaration**
 
-**[Method Prototype]**
 ```java
-/**
- * Obtain feedback list
- *
- * @param callback
- */
-void getFeedbackList(final ITuyaDataCallback<List<FeedbackBean>> callback);
-
+void setPushStatus(boolean isOpen, ITuyaDataCallback<Boolean> callback);
 ```
 
-Among, FeedbackBean class provides the following interfaces:
+**Parameters**
+
+| parameters    | description                       |
+| -------- | --------------------------- |
+| isOpen   | Whether to open                    |
+| callback | Callbacks, including setting success and failure             |
+
+**Example**
 
 ```java
-
-/**
- * Obtain date and time  Format: 2018-06-08 17:12:45
- * 
- * @return date and time
- */
-public String getDateTime() {
-     return dateTime;
-}
-
-/**
- * Obtain the latest feedback to display in the list
- *
- * @return Feedback content 
- */ 
-public String getContent() {
-     return content;
-}
-
-/**
- *  Obtain feedback category id
- *
- * @return Feedback category id
- */
-public String getHdId() {
-     return hdId;
-}
-
-/**
- * Obtain feedback category
- * 2: Device fault
- * 7: Miscellaneous
- * @return Feedback class
- */
-public int getHdType() {
-    return hdType;
-}
-
-/**
- * Obtain feedback category titles (if device fault occurs, the device name will be fed back.)
- *
- * @return category title
- */
-
-public String getTitle() {
-     return title;
-
-}
-```
-
-FeedbackTypeBean class provides the following interfaces:
-
-```java
-
-/**
- * Obtain feedback category id
- *
- * @return Feedback class id
- */
-public String getHdId() {
-     return hdId;
-}
-
-/**
- * Obtain feedback category
- * 2: Device fault
- * 7: Miscellaneous
- *
- * @return Feedback class
- */
-public int getHdType() {
-     return hdType;
-}
-
-/**
- * Obtain feedback class titles (if device fault occurs, the device name will be fed back.)
- *
- * @return class title
- */
-public String getTitle() {
-     return title;
-}
-```
-
-**[Example Codes]**
-
-```java
-TuyaHomeSdk.getTuyaFeekback().getFeedbackManager().getFeedbackList(new ITuyaDataCallback<List<FeedbackBean>>() {
-     @Override
-     public void onSuccess(List<FeedbackBean> feedbackTalkBeans) {
-     }
-     @Override
-     public void onError(String errorCode, String errorMessage) {
-     }
-}); 
-
-```
-## Obtain feedback type list
-
-**[Description]**
-
-Obtain a list of selectable feedback type to create choices  before feedback.
-
-**[Method Prototype]**
-```java
-/**
- * Obtain feedback type list
- *
- * @param callback
- */
-void getFeedbackType(final ITuyaDataCallback<List<FeedbackTypeRespBean>> callback);
-```
-
-Among, FeedbackTypeRespBean class provides the following interfaces:
-
-```java
-/**
- * Obtain a list of feedback type (device list and other lists)
- * @return class list
- */
-public ArrayList<FeedbackTypeBean> getList() {
-     return list;
-}
-/**
- * Obtain list category (Currently, only device and other lists are available)
- * @return list category
- */
-public String getType() {
-     return type;
-}
-```
-
-**[Example Codes]**
-```java
-TuyaHomeSdk.getTuyaFeekback().getFeedbackManager().getFeedbackType(new ITuyaDataCallback<List<FeedbackTypeRespBean>>() {
-     @Override
-     public void onSuccess(List<FeedbackTypeRespBean> feedbackTypeRespBeans) {
-     }
-     @Override
-     public void onError(String errorCode, String errorMsg) {
-
-     }
+TuyaHomeSdk.getPushInstance().setPushStatus(open, new ITuyaDataCallback<Boolean>() {
+      @Override
+      public void onSuccess(Boolean result) {}
+      @Override
+      public void onError(String errorCode, String errorMessage) {}
 });
 ```
-**Add feedback**
 
-**[Description]**
+## Get the switch status of the message according to the message type
 
-Add a new feedback.
+Get the switch status of the current type of message according to the message type
 
-**[Method Prototype]**
-```java
-/**
- * Add feedback
- *
- * @param message feedback content
- * @param contact  contact (phone or e-mail)
- * @param hdId     Feedback category id
- * @param hdType   Feedback class 
- * @param callback
- */
-
-void addFeedback(final String message,String contact, String hdId, int hdType, final ITuyaDataCallback<FeedbackMsgBean> callback);
-```
-Note hdId, hdTypevariable can be obtained from the FeedbackTypeBean class fed back by[ Obtain a List of Feedback Type](https://github.com/TuyaInc/tuyasmart_home_android_sdk/blob/master/TuyaSmartHomeSdkDemo/doc) interface.
-
-**[Example Codes]**
+**Declaration**
 
 ```java
-
-TuyaHomeSdk.getTuyaFeekback().getFeedbackManager().addFeedback(
-     “Thedevice fails ", //feedback
-     "abc@qq.com",
-     feebackTypeBean.getHdId(), 
-     feebackTypeBean.getHdType(), 
-     new ITuyaDataCallback<FeedbackMsgBean>() {
-         @Override
-         public void onSuccess(FeedbackMsgBean feedbackMsgBean) {
-         }
-         @Override
-         public void onError(String errorCode, String errorMsg) {
-         }
-});
-
+void getPushStatusByType(PushType type, ITuyaDataCallback<Boolean> callback);
 ```
 
-## Message management feedback
+**Parameters**
 
-From the feedback list fed by[Obtain Feedback List](https://github.com/TuyaInc/tuyasmart_home_android_sdk/blob/master/TuyaSmartHomeSdkDemo/doc/tuyahome.md#%23%23)interface, Each feedback object corresponds to a group of messages (conversations). Please use parameters of FeedbackBean object fed back by the interface to invoke TuyaHomeSdk.getTuyaFeekback().getFeedbackMsg(String hdId, int hdType) for initializing the message management class.
+| parameters     | description                     |
+| -------- | ------------------------ |
+| type     | Message type                |
+| callback | Callbacks, including success and failure |
 
-For example:
-
-```java
-ITuyaFeedbackMag mFeedbackMag = TuyaHomeSdk.getTuyaFeekback().getFeedbackMsg(
-     feedbackBean.getHdId(),
-     feedbackBean.getHdType()
-);
-```
-
-Among, FeedbackTalkBean provides the following interfaces:
+**Example**
 
 ```java
-/**
- *  Obtain message content
- * @return Message content 
- */
-public String getContent() {
-     return content;
-}
-
-/**
- *  Obtain message time
- * @return message time
- */
-public int getCtime() {
-     return ctime;
-}
-/**
- * Distinguish messages sent between users and backstage supporter.
- * 0 represents user
- */
-public int getType() {
-     return type;
-}
-
-/**
- *  Obtain feedback category id
- *
- * @return Feedback category id
- */
-public String getHdId() {
-     return hdId;
-}
-
-/**
- * Obtain feedback category
- * 2: Device fault
- * 7: Miscellaneous
- * @return Feedback class
- */
-public int getHdType() {
-    return hdType;
-}
-
-```
-
-## Obtain a list of feedback messages
-
-**[Description]**
-
-It is used to obtain a list of messages for the current feedback topic (conversation scene).
-
-**[Method Prototype]**
-
-```java
-/**
- * Obtain a list of feedback messages
- *
- *  @param callback callback
- */
-
-void getMsgList(ITuyaDataCallback<List<FeedbackMsgBean>> callback);
-```
-
-**[Example Codes]**
-
-```java
-mFeedbackMsg.getMsgList(new ITuyaDataCallback<List<FeedbackMsgBean>>() {
-     @Override
-     public void onSuccess(List<FeedbackMsgBean> result) {
-     }
-	 @Override
-     public void onError(String errorCode, String errorMessage) {
-     }
+TuyaHomeSdk.getPushInstance().getPushStatusByType(type, new ITuyaDataCallback<Boolean>() {
+      @Override
+      public void onSuccess(Boolean result) {}
+      @Override
+      public void onError(String errorCode, String errorMessage) {}
 });
 ```
-## Add new feedback
 
-**[Description]**
+## Get the switch status of the message according to the message type
 
-It is used to add a new feedback message to the current conversation.
+Gets the switch status of the current type of message according to the message type.
 
-**[Method Prototype]**
+**Declaration**
 
 ```java
-/**
- * Add new feedback
- *
- * @param msg      Feedback content 
- * @param contact  contact 
- * @param callback
- */
-void addMsg(String msg, String  contact,ITuyaDataCallback<FeedbackMsgBean> callback);
+void setPushStatusByType(PushType type, isOpen, ITuyaDataCallback<Boolean> callback);
 ```
 
-**[Example Codes]**
+**Parameter**
+
+| parameters     | description                     |
+| -------- | ------------------------ |
+| type     | Message type                 |
+| isOpen     | Whether to open                 |
+| callback | Callbacks, including success and failure |
+
+**Example**
 
 ```java
-mFeedbackMsg.addMsg(
-    “Question feedback again","abc@qq.com", 
-    new ITuyaDataCallback<FeedbackMsgBean>() {
-        @Override
-        public void onSuccess(FeedbackMsgBean result) {
-        }
+TuyaHomeSdk.getPushInstance().setPushStatusByType(pushType, checked, new ITuyaDataCallback<Boolean>() {
+      @Override
+      public void onSuccess(Boolean result) {
+      }
 
-        @Override
-        public void onError(String errorCode, String errorMessage) {
-        }
+      @Override
+      public void onError(String errorCode, String errorMessage) {
+      }
 });
-
 ```

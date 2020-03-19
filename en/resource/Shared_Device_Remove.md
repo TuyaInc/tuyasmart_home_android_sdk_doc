@@ -1,108 +1,115 @@
-# Removing Sharing
+# Remove Share
 
-## (1) Deleting the shared relationship
+## Delete sharing relationship
 
-**[Description]**
+The sharer deletes all shared relationships with the user of this relationship through the memberId (user dimension deletion).
 
-The sharer deletes all shared relationships with the relationship user via memberId (deleting user dimension).
+**Declaration**
 
-**[Method Invocation]**
 ```java
-@param memberId 	user member Id (obtained from SharedUserInfoBean)
-
 void removeUserShare(long memberId, IResultCallback callback);
 ```
-**[Example Codes]**
+
+**Parameters**
+
+| Parameters     | Description                                  |
+| :-------- | :------------------------------------- |
+| memberId | User ID to be deleted                   |
+| callback | Callback, including delete success or failure, cannot be null |
+
+**Example**
+
 ```java
-TuyaHomeSdk.getDeviceShareInstance().removeUserShare(memberId, new IResultCallback() {
+void removeUserShare(memberId, new IResultCallback() {
     @Override
-    public void onError(String code, String error) {
-    }
-
+    public void onError(String code, String error) {}
     @Override
-    public void onSuccess() {
-    }
-
+    public void onSuccess() {}
 })
 ```
-## (2) Deleting the received relationship for sharing
 
-**[Description]**
+## Delete received sharing relationship
 
-The receiver deletes all shared relationships with the relationship user via memberId (deleting user dimension).
-`
-**[Method Invocation]**
+The shared person obtains all shared device information of the user who has received this relationship through memberId.
+
+**Declaration**
+
 ```java
-@param memberId 	user member Id (obtained from SharedUserInfoBean)
 void removeReceivedUserShare(long memberId, IResultCallback callback);
 ```
-**[Example Codes]**
+
+**Parameters**
+
+| Parameters     | Description                                  |
+| -------- | ------------------------------------- |
+| memberId | User ID to be deleted                   |
+| callback | Callback, including delete success or failure, cannot be null |
+
+**Example**
+
 ```java
-TuyaHomeSdk.getDeviceShareInstance().removeReceivedUserShare(memberId, new IResultCallback() {
+void removeReceivedUserShare(memberId, new IResultCallback() {
     @Override
-    public void onError(String code, String error) {
-    }
-
-
+    public void onError(String code, String error) {}
     @Override
-    public void onSuccess() {
-    }
-
+    public void onSuccess() {}
 })
 ```
-## (3) Deleting sharing of a device
 
-**[Description]**
+## Delete a device share
 
-The sharer deletes a shared device of a specified relationship user.
+The sharer deletes a shared device under the specified relationship user.
 
-**[Method Invocation]**
+**Declaration**
+
 ```java
-@param devId	device Id
-
-@param memberId 	user member Id (obtained from SharedUserInfoBean)
-
-void removeDevShare(String devId, long memberId, IResultCallback callback);
+void disableDevShare(String devId, long memberId, IResultCallback callback);
 ```
-**[Example Codes]**
+
+**Parameters**
+
+| Parameters     | Description                                  |
+| -------- | ------------------------------------- |
+| devId    | Device ID to be deleted                       |
+| memberId | User ID to be deleted                   |
+| callback | Callback, including delete success or failure, cannot be null |
+
+**Example**
+
 ```java
-TuyaHomeSdk.getDeviceShareInstance().removeDevShare(devId, memberId, new IResultCallback() {
+void disableDevShare(devId, memberId, new IResultCallback() {
     @Override
-    public void onError(String code, String error) {
-
-    }
-
+    public void onError(String code, String error) {}
     @Override
-    public void onSuccess() {
-
-    }
-
+    public void onSuccess() {}
 })
 ```
-## (4) Removing the received device for sharing
 
-**[Description]**
+## Remove received shared device
 
-The receiver deletes a shared device.
+The sharer deletes a shared device under the specified relationship user.
 
-**[Method Invocation]**
+**Declaration**
+
 ```java
-@param devId	device Id
-
-void removeReceivedDevShare(String devId, IResultCallback callback);
+void disableDevShare(String devId, long memberId, IResultCallback callback);
 ```
-**[Example Codes]**
+
+**Parameters**
+
+| Parameters     | Description                                  |
+| -------- | ------------------------------------- |
+| devId    | Device ID to be deleted                        |
+| memberId | User ID to be deleted                    |
+| callback | Callback, including delete success or failure, cannot be null |
+
+**Example**
+
 ```java
-TuyaHomeSdk.getDeviceShareInstance().removeReceivedDevShare(devId,new IResultCallback() {
+void disableDevShare(devId, memberId, new IResultCallback() {
     @Override
-    public void onError(String code, String error) {
-
-    }
-
+    public void onError(String code, String error) {}
     @Override
-    public void onSuccess() {
-
-    }
-
+    public void onSuccess() {}
 })
 ```

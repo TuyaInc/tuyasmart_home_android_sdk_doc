@@ -1,134 +1,116 @@
-## Message Center
+# Message push settings
 
-### Message Push Setting
+## Get the current status of the message master switch
 
-#### Gets the current state of the message master switch
+The message push switch is the master switch. In the off state, no messages such as device alarms, home messages, and notification messages can be received.
 
-##### 【Description】
-
-The message push switch is the main switch, and when it is off, it cannot receive any message such as device Alarm, Family, Notify message.
-
-##### 【Method】
+**Declaration**
 
 ```java
-   /**
-     * Gets the message master switch state
-     * @param callback
-     */
-    void getPushStatus(ITuyaResultCallback<PushStatusBean> callback);
+void getPushStatus(ITuyaResultCallback<PushStatusBean> callback);
 ```
 
-##### 【Example Codes】
+**Parameters**
+
+| Parameters     | Description                    |
+| -------- | ----------------------- |
+| callback | Callbacks, including success and failure to get total switch status |
+
+**Example**
 
 ```java
  TuyaHomeSdk.getPushInstance().getPushStatus(new ITuyaResultCallback<PushStatusBean>() {
-            @Override
-            public void onSuccess(PushStatusBean result) {
-            }
-
-            @Override
-            public void onError(String errorCode, String errorMessage) {
-            }
-        });
+       @Override
+       public void onSuccess(PushStatusBean result) {}
+       @Override
+       public void onError(String errorCode, String errorMessage) {}
+ });
 ```
 
-#### Set the message master switch
+## Set the current state of the message master switch
 
-##### 【Description】
+The message push switch is the master switch, and no messages such as device alarms, home messages, notification messages, etc. can be received in the off state.
 
-The message push switch is the main switch, and when it is off, it cannot receive any message such as device Alarm, Family, Notify message.
-
-##### 【Method】
+**Declaration**
 
 ```java
-    /**
-     * Set the message master switch
-     * @param isOpen Message is Open
-     * @param callback
-     */
-    void setPushStatus(boolean isOpen, ITuyaDataCallback<Boolean> callback);
+void setPushStatus(boolean isOpen, ITuyaDataCallback<Boolean> callback);
 ```
 
-##### 【Example Codes】
+**Parameters**
+
+| Parameters     | Description                       |
+| -------- | --------------------------- |
+| isOpen   | Whether to open                    |
+| callback | Callbacks, including setting success and failure             |
+
+**Example**
 
 ```java
 TuyaHomeSdk.getPushInstance().setPushStatus(open, new ITuyaDataCallback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean result) {
-            }
-
-            @Override
-            public void onError(String errorCode, String errorMessage) {
-            }
-        });
+      @Override
+      public void onSuccess(Boolean result) {}
+      @Override
+      public void onError(String errorCode, String errorMessage) {}
+});
 ```
 
+## Get the switch status of the message according to the message type
 
-#### Gets the on-off state of a message based on its type
+Get the switch status of the current type of message according to the message type
 
-##### 【Description】
-
-Gets the on-off state of a message based on its type
-
-##### 【Method】
+**Declaration**
 
 ```java
-  /**
-     *  Gets the on-off state of a message based on its type
-     *  PushType.PUSH_ALARM  Alarm Message
-     *  PushType.PUSH_FAMILY Family Message
-     *  PushType.PUSH_NOTIFY Notify Message
-     * @param type Message type
-     * @param callback
-     */
-    void getPushStatusByType(PushType type, ITuyaDataCallback<Boolean> callback);
+void getPushStatusByType(PushType type, ITuyaDataCallback<Boolean> callback);
 ```
 
-##### 【Example Codes】
+**Parameters**
+
+| Parameters     | Description                     |
+| -------- | ------------------------ |
+| type     | Message type                |
+| callback | Callbacks, including success and failure |
+
+**Example**
 
 ```java
-    TuyaHomeSdk.getPushInstance().getPushStatusByType(type, new ITuyaDataCallback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean result) {
-            }
-
-            @Override
-            public void onError(String errorCode, String errorMessage) {
-            }
-        });
+TuyaHomeSdk.getPushInstance().getPushStatusByType(type, new ITuyaDataCallback<Boolean>() {
+      @Override
+      public void onSuccess(Boolean result) {}
+      @Override
+      public void onError(String errorCode, String errorMessage) {}
+});
 ```
 
-#### Sets the on-off state of a message based on its type
+## Get the switch status of the message according to the message type
 
-##### 【Description】
+Gets the switch status of the current type of message according to the message type.
 
-Sets the on-off state of a message based on its type
-
-##### 【Method】
+**Declaration**
 
 ```java
-  /**
-     *  Sets the on-off state of a message based on its type
-     *  PushType.PUSH_ALARM  Alarm Message
-     *  PushType.PUSH_FAMILY Family Message
-     *  PushType.PUSH_NOTIFY Notify Message
-     * @param type Message Type
-     * @param isOpen Message is Open
-     * @param callback
-     */
-    void setPushStatusByType(PushType type, isOpen, ITuyaDataCallback<Boolean> callback);
+void setPushStatusByType(PushType type, isOpen, ITuyaDataCallback<Boolean> callback);
 ```
 
-##### 【Example Codes】
+**Parameter**
+
+| Parameter     | Description                     |
+| -------- | ------------------------ |
+| type     | Message type                 |
+| isOpen     | Whether to open                 |
+| callback | Callbacks, including success and failure |
+
+**Example**
 
 ```java
-        TuyaHomeSdk.getPushInstance().setPushStatusByType(pushType, checked, new ITuyaDataCallback<Boolean>() {
-            @Override
-            public void onSuccess(Boolean result) {
-            }
+TuyaHomeSdk.getPushInstance().setPushStatusByType(pushType, checked, new ITuyaDataCallback<Boolean>() {
+      @Override
+      public void onSuccess(Boolean result) {
+      }
 
-            @Override
-            public void onError(String errorCode, String errorMessage) {
-            }
-        });
+      @Override
+      public void onError(String errorCode, String errorMessage) {
+      }
+});
 ```

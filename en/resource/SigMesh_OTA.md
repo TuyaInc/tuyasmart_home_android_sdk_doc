@@ -1,24 +1,28 @@
-## Firmware Upgrade
-There are two types of sub-device upgrades, one is the ordinary sub-device upgrade, and the other is the mesh gateway upgrade.
+# Mesh OTA
+There are two types of sub-device upgrades, one is ordinary sub-device upgrade, and the other is mesh gateway upgrade.
 
-### Get Sub-device Upgrade Information
+## Checking Firmware Information
+
+**Declaration**
+
+```java
+void requestUpgradeInfo(String devId, IRequestUpgradeInfoCallback callback);
+```
+
+**Parameters**
+
+|param|type|description|
+|--|--|--|
+|devId|String|devId|
+|callback|IRequestUpgradeInfoCallback|callback|
+
+**Example**
+
 ```java
 TuyaHomeSdk.getMeshInstance().requestUpgradeInfo(mDevID, new IRequestUpgradeInfoCallback() {
     @Override
     public void onSuccess(ArrayList<BLEUpgradeBean> bleUpgradeBeans) {
-    	for (BLEUpgradeBean bean : bleUpgradeBeans) {
-       if (bean.getUpgradeStatus()==1) {
-          if (bean.getType() == 0) {
-            // wifi module needs to be upgraded
-          }else if(bean.getType == 1){
-            // Bluetooth module needs to be upgraded
-            // Need to download ota firmware manually
-            url=bean.getUrl()
-					}
-       }else{
-         // No update required
-       }
-		 }
+       
     }
 
     @Override
@@ -27,61 +31,53 @@ TuyaHomeSdk.getMeshInstance().requestUpgradeInfo(mDevID, new IRequestUpgradeInfo
 });
 ```
 
-### Sub-device Upgrade
-##### 【Initial parameter configuration】
+`BLEUpgradeBean`  data model
+
+|param|type|description|
+|------|------|-------|
+|upgradeStatus|int|0: No new version 1: New version available 2: In upgrade|
+|version| String|Latest version|
+|currentVersion| String |Current version|
+|timeout| int| timeout, Unit s|
+|upgradeType|int|0:Reminds to upgrade 2: Forced upgrade 3: Detect upgrade|
+|type|int|0: Wi-Fi 1: BLE  2: GPRS 3: Zigbee 9: MCU|
+|typeDesc| String |Upgrade description|
+|lastUpgradeTime|long|Last upgrade time|
+|**url**|String|New firmware download url, `type` =` 1` or `9` has value|
+|fileSize|long|New firmware size|
+|md5|String|New firmware MD5 value|
+
+
+## Sub-device Ordinary Upgrade
+
+**Declaration**
+
 ```java
-TuyaBlueMeshOtaBuilder build = new TuyaBlueMeshOtaBuilder()
-            .setData(byte[] data)
-            .setMeshId(String meshId)
-            .setProductKey(String productKey)
-            .setNodeId(String nodeId)      
-            .setDevId(String devId)
-            .setVersion(String version)
-            .setTuyaBlueMeshActivatorListener(MeshUpgradeListener mListener)
-            .bulid();
-
-```
-##### 【Parameter Description】
-###### 【Entry parameters】
-```java
-* @param data     				byte stream of the firmware to be upgraded
-* @param meshId   				meshId
-* @param productKey    		product Id
-* @param mNodeId  				nodeId
-* @param devId 					  device Id 
-* @param version     			the version number of the firmware to be upgraded
+void startOta();
 ```
 
-###### 【Back parameters】
-MeshUpgradeListener listener 
+**Example**
 
-##### 【Example Codes】
 ```java
 private MeshUpgradeListener mListener = new MeshUpgradeListener() {
         @Override
         public void onUpgrade(int percent) {
-        	// upgrade progress
         }
 
         @Override
         public void onSendSuccess() {
-        	// firmware data sent successfully
-
         }
 
         @Override
         public void onUpgradeSuccess() {
-        	// update successed
         	 mMeshOta.onDestroy();
         }
 
         @Override
         public void onFail(String errorCode, String errorMsg) {
-        	// update failed
         	 mMeshOta.onDestroy();
         }
     };
-//Get the byte stream of the specified file
 byte data[] = getFromFile(path);
 
 TuyaBlueMeshOtaBuilder build = new TuyaBlueMeshOtaBuilder()
@@ -95,39 +91,51 @@ TuyaBlueMeshOtaBuilder build = new TuyaBlueMeshOtaBuilder()
         .bulid();
 ITuyaBlueMeshOta  = TuyaHomeSdk.newMeshOtaManagerInstance(build);
 
-// Start upgrading
+//start
 mMeshOta.startOta();
 ```
 
-### Gateway Device Upgrade
-##### 【Example Codes】
+**Parameter**
+
+`TuyaBlueMeshOtaBuilder`
+
+|param|type|description|
+|--|--|--|
+|data|byte[]|Byte stream of the firmware to be upgraded|
+|meshId|String|Device MeshId|
+|productKey|String|Product Id|
+|mNodeId|String|Device NodeId|
+|devId|String|Device Id|
+|version|String|Version|
+
+
+## Sub-device Gateway Upgrade
+
+Refer to the gateway upgrade, the following is the sample code
+
+**Example**
+
 ```java
 private IOtaListener iOtaListener = new IOtaListener() {
         @Override
         public void onSuccess(int otaType) {
-            // update successed
-  		
   		}
 
         @Override
         public void onFailure(int otaType, String code, String error) {
-         	// update failed
-
         }
 
         @Override
-        public void onProgress(int otaType, final int progress) {
-           // update progress
-                      
+        public void onProgress(int otaType, final int progress) {     
         }
     };
 
 ITuyaOta iTuyaOta = TuyaHomeSdk.newOTAInstance(mDevID);
 iTuyaOta.setOtaListener(mOtaListener);
-// start upgrading
+//start
 iTuyaOta.startOta();
 
-// destroy upgrading
+//destroy
 iTuyaOta.onDestroy();
 
 ```

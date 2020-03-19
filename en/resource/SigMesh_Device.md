@@ -1,115 +1,124 @@
-## Device
-ITuyaBlueMeshDevice class encapsulates operations on all devices in the specified Mesh
+# SigMesh Devices
+`ITuyaBlueMeshDevice` provides all operations for Mesh devices.
+
 ```java
 ITuyaBlueMeshDevice  mTuyaBlueMeshDevice = TuyaHomeSdk.newSigMeshDeviceInstance(meshId);
 ```
 
-### Mesh Device Judgment Method
-##### 【Example Codes】
+##  Found SigMesh Devices
+
+**Example**
 
 ```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
-// Determine whether it is a sigmesh device (child device + gateway)
+
 if(deviceBean.isSigMesh()){
     L.d(TAG, "This device is sigmesh device");
  }
 
-// Determine if it is a sigmesh gateway device
 if(deviceBean.isSigMeshWifi()){
     L.d(TAG, "This device is sigmesh wifi device");
  }
 ```
-### Mesh Device Online Status Judgment Method
+## Mesh Device Online Status
+
+**Example**
 
 ```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
 
-// Online status (including local online and gateway online)
+//online status (Including local online and gateway online)
 boolean online=deviceBean.getIsOnline()
-
-// Device local Bluetooth online status
+//local online
 boolean localOnline=deviceBean.getIsLocalOnline()
-
-// Device gateway online status (requires gateway online)
+//gateway online
 boolean wifiOnline=deviceBean.isCloudOnline() && gwBean.getIsOnline() 
-
 ```
 
+##  Sub-devices Rename
 
-###  Sub-device Rename
-##### 【Method Invocation】
+**Declaration**
+
 ```java
-* @param devId    	 device id
-* @param name		     new name
-* @param callback	 
-public void renameMeshSubDev(String devId, String name, IResultCallback callback);
-
+void renameMeshSubDev(String devId, String name, IResultCallback callback);
 ```
+**Parameters**
 
-##### 【Example Codes】
+|param|describe|
+|--|--|
+|devId|Device Id|
+|name|New name|
+|callback|Callback|
+
+**Example**
+
 ```java
- mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"new name", new IResultCallback() {
-            @Override
-            public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "rename failed "+ errorMsg, Toast.LENGTH_LONG).show();
-            }
+mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"new name", new IResultCallback() {
+     @Override
+     public void onError(String code, String errorMsg) {
+     }
 
-            @Override
-            public void onSuccess() {
-            		Toast.makeText(mContext, "rename success", Toast.LENGTH_LONG).show();
-            }
-        });
+     @Override
+     public void onSuccess() {
+   }});
 ```
 
-###  Sub-device Remove
-#####  【Method Invocation】
+##  Sub-devices Remove
+
+**Declaration**
+
 ```java
-* @param devId    	 device id
-* @param pcc  		   device category
-* @param callback	   
-public void removeMeshSubDev(String devId, IResultCallback callback) ;
-
+void removeMeshSubDev(String devId, IResultCallback callback);
 ```
-#####  【Example Codes】
+
+**Parameters**
+
+|param|说明|
+|--|--|
+|devId|Device Id|
+|pcc|Device type|
+|callback|Callback|
+
+**Example**
+
 ```java
 mTuyaBlueMesh.removeMeshSubDev(devBean.getDevId(),devBean.getCategory(), new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "remove fail "+ errorMsg, Toast.LENGTH_LONG).show();
-    
             }
-
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "remove success", Toast.LENGTH_LONG).show();
             }
         });
 ```
 
-### Query of a Single Sub-device Information
-##### 【Description】
-The dp point data obtained in the cloud may not be the real-time data of the current device. You can use this command to query the current data value of the device. The result is returned by the onDpUpdate method of IMeshDevListener.
+### Query Single Sub-devices 
 
-#####  【Method Invocation】
+Get dp data from cloud maybe not real-time data, can use it search real-time data and `IMeshDevListener`'s `onDpUpdate` will be callback.
+
+**Declaration**
+
 ```java
-* @param pcc  		   device categoty
-* @param nodeId    	 device nodeId
-* @param callback	  
-public void querySubDevStatusByLocal(String pcc, final String nodeId, final IResultCallback callback);
-
+void querySubDevStatusByLocal(String pcc, final String nodeId, final IResultCallback callback);
 ```
 
-#####  【Example Codes】
+**Parameters**
+
+|param|describe|
+|--|--|
+|pcc|Device type|
+|nodeId|Device nodeId|
+|callback|Callback|
+
+**Example**
+
 ```java
- mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
+mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "query failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
-
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "query success ", Toast.LENGTH_LONG).show();
             }
         });
 ```

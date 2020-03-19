@@ -1,6 +1,6 @@
-## Home Management Class
+## Home Management
 
-The ITuyaHomeManager provides changes related to creating home, obtaining the home list and monitoring home, and it can be obtained by invoking the `TuyaHomeSdk.getHomeManagerInstance()`.
+The ITuyaHomeManager provides operations related to creating home, obtaining the home list and monitoring home status change. It can be obtained by invoking the `TuyaHomeSdk.getHomeManagerInstance()`.
 
 ## HomeBean Field Information
 | field | type | describe |

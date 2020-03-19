@@ -1,15 +1,14 @@
 ## Handling of Expired Session
 
-[Description]
 
 If you have not logged in to your account for a long time, the session expiration error will be returned when you access the server interface. You have to monitor the notification of the`setOnNeedLoginListener` and log in to the account again after the login page is displayed.
 
-**[Method Prototype]**
+**Declaration**
 
 ```java
 TuyaHomeSdk.setOnNeedLoginListener(INeedLoginListener needLoginListener);
 ```
-**[Example Codes]**
+**Example**
 
 ```java
 public class TuyaSmartApp extends Application {

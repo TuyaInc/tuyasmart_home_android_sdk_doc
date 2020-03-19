@@ -1,246 +1,160 @@
-# Message center
+## Get Message List
 
-## Obtain message list
+Used to get a list of all messages.
 
-**[Description]**
+|     classname     |      description      |
+| ---------- | ------------ |
+| ITuyaMessage | User feedback management class |
 
-It is used to obtain lists of all messages.
+**Declaration**
 
-**[Method Prototype]**
 ```java
-/**
- * Obtain message list
- *
- * @param callback
- */
 void getMessageList(ITuyaDataCallback<List<MessageBean>> callback);
-
-Among,  MessageBeanprovides the following interfaces:
-
-/**
- * Obtain date and time  Format: 2017-09-08 17:12:45
- *
- * @return date and time
- */
-public String getDateTime() {
-     return dateTime;
-}
-/**
- * Obtain message icon URL
- *
- * @return Message icon URL
- */
-public String getIcon() {
-     return icon;
-}
-/**
- * Obtain the message type name (if it is alarm type message, then dp points name are available.)
- *
- * @return message class name 
- */
-public String getMsgTypeContent() {
-     return msgTypeContent;
-}
-
-/**
- * Obtain the message content for interface display.
- *
- * @return Message content 
- */
-public String getMsgContent() {
-
-     return msgContent;
-
-}
-
-/**
- * obtain message type
- * 0: System Messages
- * 1: With new device
- * 2: With new friends
- * 4: Device alarm
- *
- * @return message class 
- */
-
-public int getMsgType() {
-     return msgType;
-}
-
-/**
- *  Obtain id of device
- Note: This field is only available for alarm type messages.
- *
- * @return device ID
- */
-public String getMsgSrcId() {
-     return msgSrcId;
-}
-
-/**
- * obtain message id
- *
- * @return message id
- */
-public String getId() {
-     return id;
-}
 ```
-**[Example Codes]**
+
+**Parameters**
+
+| parameter     | description                             |
+| -------- | -------------------------------- |
+| callback | Callbacks, including success and failure of getting message list |
+
+**MessageBean data model**
+
+|      field      |  type   |               description               |
+| ------------ | ----- | ------------------------------ |
+|    dateTime    | String  |            Date and time           |
+|      Icon      | String  |           Message icon URL            |
+| msgTypeContent | String  |           Message type name           |
+|   msgContent   | String  |             Message content             |
+|    msgType     | Integer |             Message type             |
+|    msgSrcId    | String  | Device Id (this field is only available in alarm messages) |
+|       id       | String  |              Message id             |
+
+**Example**
+
 ```java
 TuyaHomeSdk.getMessageInstance().getMessageList(new ITuyaDataCallback<List<MessageBean>>() {
-     @Override
-     public void onSuccess(List<MessageBean> result) {
-     }
-     @Override
-     public void onError(String errorCode, String errorMessage) {
-     }
+    @Override
+    public void onSuccess(List<MessageBean> result) {}
+    @Override
+    public void onError(String errorCode, String errorMessage) {}
 });
 ```
-## Delete messages
 
-**[Description]**
+## Delete message
 
-It is used to delete messages in bulk.
+Used to delete messages in batches.
 
-**[Method Prototype]**
+**Declaration**
+
 ```java
-/**
- *  Delete messages
- *
- * @param mIds to be deleted message id list
- * @param callback
- */
 void deleteMessage(List<String> mIds, IBooleanCallback callback);
 ```
-**[Example Codes]**
+
+**Parameters**
+
+| parameter    | description                             |
+| ------- | -------------------------------- |
+| mIds    | Device ids |
+| contact | Callbacks, including delete success and failure        |
+
+**Example**
+
 ```java
-List<String> deleteList = new ArrayList<>();  
-deleteList.add(messageBean.getId());  //add the id of the targeted message into the list
-
 TuyaMessage.getInstance().deleteMessages(
-     deleteList, 
-     new IBooleanCallback() {
-         @Override
-         public void onSuccess() {       
-         }
-         @Override
-         public void onError(String errorCode, String errorMessage) {
-
-         }
+    deleteList, 
+    new IBooleanCallback() {
+        @Override
+        public void onSuccess() {}
+        @Override
+        public void onError(String errorCode, String errorMessage) {}
 });
 ```
 
-### Get the latest message
+## Get the latest news
 
-**[Description]**
+Gets the timestamp of the latest message.
 
-Gets the timestamp of the latest message
-
-**[Method Prototype]**
+**Declaration**
 
 ```java
-
-    /**
-     *  Gets the timestamp of the latest message
-     * @param callback
-     */
-    void getMessageMaxTime(ITuyaDataCallback<Integer> callback);
-
+void getMessageMaxTime(ITuyaDataCallback<Integer> callback);
 ```
 
-**[Example Codes]**
+**Parameters**
+
+| parameter     | description                             |
+| -------- | -------------------------------- |
+| callback | Callbacks, including getting latest news success and failure |
+
+**Example**
 
 ```java
-
-        TuyaHomeSdk.getMessageInstance().getMessageMaxTime(new ITuyaDataCallback<Integer>() {
-            @Override
-            public void onSuccess(Integer integer) {
-                
-            }
-
-            @Override
-            public void onError(String s, String s1) {
-
-            }
-        });
-        
+TuyaHomeSdk.getMessageInstance().getMessageMaxTime(new ITuyaDataCallback<Integer>() {
+      @Override
+      public void onSuccess(Integer integer) {}
+      @Override
+      public void onError(String s, String s1) {}
+});
 ```
 
+## Get latest messages based on message type
 
-### Get the latest message based on the message type
+Get the latest news according to the message type, there are currently 3 types of messages (MSG\_REPORT alert) (MSG\_FAMILY family) (MSG\_NOTIFY notification).
 
-**[Description]**
-
-Get the latest message based on the message type, there are currently three types of messages (MSG_REPORT alert) (MSG_FAMILY family) (MSG_NOTIFY notification)
-
-**[Method Prototype]**
+**Declaration**
 
 ```java
-
-    /**
-     * Get the latest message based on the message type
-     * @param offset  The offset is obtained from the n th data
-     * @param limit Number of messages per page
-     * @param msgType  Message type (MSG_REPORT alert) (MSG_FAMILY family) (MSG_NOTIFY notification)
-     * @param callback
-     */
-    void getMessageListByMsgType(int offset, int limit, MessageType msgType, ITuyaDataCallback<MessageListBean> callback);
-
+void getMessageListByMsgType(int offset, int limit, MessageType msgType, ITuyaDataCallback<MessageListBean> callback);
 ```
 
-**[Example Codes]**
+**Parameters**
 
+| parameter     | description                                                         |
+| -------- | ------------------------------------------------------------ |
+| offset   | Offset is obtained from the nth data                                      |
+| limit    | Number of messages per page                                               |
+| msgType  | Message type (MSG\_REPORT alert) (MSG\_FAMILY family) (MSG\_NOTIFY notification) |
+| callback | Callbacks, including success and failure                                    |
+
+**Example**
 
 ```java
-        TuyaHomeSdk.getMessageInstance().getMessageListByMsgType(offset, limit, MessageType.MSG_REPORT, new ITuyaDataCallback<MessageListBean>() {
-            @Override
-            public void onSuccess(MessageListBean result) {
-            
-            }
-
-            @Override
-            public void onError(String errorCode, String errorMessage) {
-            
-            }
-        });
-        
+TuyaHomeSdk.getMessageInstance().getMessageListByMsgType(offset, limit, type, new ITuyaDataCallback<MessageListBean>() {
+      @Override
+      public void onSuccess(MessageListBean result) {}
+      @Override
+      public void onError(String errorCode, String errorMessage) {}
+});
 ```
 
+## Get message list based on message SrcId
 
-### Gets the list of messages according to the message SrcId
+The message list is obtained according to the message SrcId. Currently, only messages of the type (MSG_REPORT alarm) are supported.
 
-**[Description]**
-
-Gets the list of messages according to message SrcId, currently only messages of type (MSG_REPORT alert) are supported
-
-**[Method Prototype]**
+**Declaration**
 
 ```java
-
-    /**
-     * Gets the list of messages according to the message SrcId
-     * @param offset  The offset is obtained from the n th data
-     * @param limit Number of messages per page
-     * @param msgType  Message type (MSG_REPORT alert)
-     * @param msgSrcId  Message SrcId
-     * @param callback
-     */
-    void getMessageListByMsgSrcId(int offset, int limit, MessageType msgType, String msgSrcId, ITuyaDataCallback<MessageListBean> callback);
-
+void getMessageListByMsgSrcId(int offset, int limit, MessageType msgType, String msgSrcId, ITuyaDataCallback<MessageListBean> callback);
 ```
 
-**[Example Codes]**
+**Parameters**
+
+| parameter     | description                       |
+| -------- | --------------------------- |
+| offset   | Offset is obtained from the nth data   |
+| limit    | Number of messages per page              |
+| msgType  | Message type (MSG_REPORT alert) |
+| msgSrcId | Interest group id                   |
+| callback | Callbacks, including success and failure    |
+
+**Example**
 
 ```java
-TuyaHomeSdk.getMessageInstance().getMessageListByMsgSrcId(offset, limit, MessageType.MSG_REPORT, msgSrcId, true , new ITuyaDataCallback<MessageListBean>() {
-            @Override
-            public void onSuccess(MessageListBean result) {
-            }
-
-            @Override
-            public void onError(String errorCode, String errorMessage) {
-            }
-        });
-        
+TuyaHomeSdk.getMessageInstance().getMessageListByMsgType(offset, limit, type, new ITuyaDataCallback<MessageListBean>() {
+      @Override
+      public void onSuccess(MessageListBean result) {}
+      @Override
+      public void onError(String errorCode, String errorMessage) {}
+});
 ```

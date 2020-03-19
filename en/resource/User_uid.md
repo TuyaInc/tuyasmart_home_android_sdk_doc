@@ -1,125 +1,104 @@
-# User uid Login System
+# User uid login system
+Tuya Smart provides a uid login system. If customers have their own user system, they can access our SDK through uid login system.
+## User uid registration
 
-Tuya Smart provides the uid login system. If clients have their own user system, the user system can access our sdk via the uid login system. 
-
-## (1)User uid Registration
-
-**[Description]**
+**Declaration**
 
 User uid registration
 
-**[Method Invocation]**
-
 ```java
-
-/** User uid registration
-* @param countryCode Country code
-* @param uid         User uid
-* @param password    Password
-* @param callback    uid uid registration callback interface. 
-**/
-TuyaHomeSdk.getUserInstance().registerAccountWithUid(String countryCode, String uid, String password, IRegisterCallback callback);
+TuyaHomeSdk.getUserInstance().registerAccountWithUid (String countryCode, String uid, String password, IRegisterCallback callback);
 ```
-**[Example Codes]**
-```java
-// uid registration.
-TuyaHomeSdk.getUserInstance().registerAccountWithUid("86", "1234","123456", new IRegisterCallback() {
-    @Override
-    public void onSuccess(User user) {
-        Toast.makeText(mContext, "The UID registration succeeds.", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
+**Parameters**
 
+|Parameters | Description |
+| ----------- | ----------------- |
+|countryCode | country code, for example: 86 |
+| uid | User uid |
+password | User Password |
+| callback | callback |
+
+**Example**
+
+```java
+// uid registration
+TuyaHomeSdk.getUserInstance().registerAccountWithUid ("86", "1234", "123456", new IRegisterCallback () {
+    @Override
+    public void onSuccess (User user) {
+        Toast.makeText (mContext, "UID registered successfully", Toast.LENGTH_SHORT) .show ();
+    }
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, "code:" + code + "error:" + error, Toast.LENGTH_SHORT) .show ();
+    }
 });
 ```
-
-## (2) User uid Login
-
-**[Description]**
+## User uid login
+**Declaration**
 
 User uid login
 
-**[Method Invocation]**
 ```java
-/** uid login
-* @param countryCode Country code
-* @param uid         User uid
-* @param passwd      Password
-* @param callback    Login callback interface. 
-*/
-TuyaHomeSdk.getUserInstance().loginWithUid(String countryCode, String uid, String passwd, ILoginCallback callback);
+TuyaHomeSdk.getUserInstance().loginWithUid (String countryCode, String uid, String passwd, ILoginCallback callback);
 ```
-**[Example Codes]**
+**Parameters**
+
+|Parameters | Description |
+| ----------- | ----------------- |
+|countryCode | country code, for example: 86 |
+| uid | User uid |
+| passwd | User Password |
+| callback | callback |
+
+**Example**
+
 ```java
-
 // uid login
+TuyaHomeSdk.getUserInstance().loginWithUid ("86", "1234", "123456", new ILoginCallback () {
+    @Override
+    public void onSuccess (User user) {
+        Toast.makeText (mContext, "Successfully logged in, username:", Toast.LENGTH_SHORT) .show ();
+    }
 
-TuyaHomeSdk.getUserInstance().loginWithUid("86", "1234", "123456", new ILoginCallback() {
-    @Override
-    public void onSuccess(User user) {
-        Toast.makeText(mContext, "Login succeeds, username:" , Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, "code:" + code + "error:" + error, Toast.LENGTH_SHORT) .show ();
+    }
 });
 ```
-## (3) Reset User uid Password
+## User uid reset password
+The user uid resets the password. You need to reset the password through the cloud connection. See [Cloud API Documentation] (https://docs.tuya.com/cn/openapi/api/post_apps.schema.user_1.0.html)
 
-**[Description]**
+## User uid login registration interface
+**Declaration**
 
-The user uid password resetting requires Cloud-Cloud connection. Please refer to the Cloud API documents for details.[https://docs.tuya.com/en/openapi/api/post_apps.schema.user_1.0.html](<https://docs.tuya.com/en/openapi/api/post_apps.schema.user_1.0.html>)
+The user UID login and registers to form an interface.
 
-## (4) User uid Login Interface and Registration Interface
-
-**[Description]**
-
-User uid login interface and registration interface will be integrated. 
-
-**[Method Invocation]**
 ```java
-/** uid login
-* @param countryCode Country code
-* @param uid         User uid
-* @param passwd      Password
-* @param callback    Login callback interface. 
-*/
 TuyaHomeSdk.getUserInstance().loginOrRegisterWithUid(String countryCode, String uid, String passwd, ILoginCallback callback);
 ```
-**[Example Codes]**
+**Parameters**
+
+|Parameters | Description |
+| ----------- | ----------------- |
+|countryCode | country code, for example: 86 |
+| uid | uid |
+| passwd | User Password |
+| callback | callback |
+
+**Example**
+
 ```java
 // uid login
-TuyaHomeSdk.getUserInstance().loginOrRegisterWithUid("86", "1234", "123456", new ILoginCallback() {
-    @Override
-    public void onSuccess(User user) {
-        Toast.makeText(mContext, "Login succeeds, username:" , Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-       Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
+TuyaHomeSdk.getUserInstance().loginOrRegisterWithUid("86", "1234", "123456", new ILoginCallback () {
+    @Override
+    public void onSuccess (User user) {
+        Toast.makeText (mContext, "Successfully logged in, username:", Toast.LENGTH_SHORT) .show ();
+    }
+
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, "code:" + code + "error:" + error, Toast.LENGTH_SHORT) .show ();
+    }
 });
-```
-
-## （5）User uid login registration interface
-
-The user uid logs in to the registration interface. 
-
-If you are not registered, this interface will register your uid, if you have already registered, it will  log in directly.
-
-```java
-     /**
-      *
-      * @param countryCode country code
-      * @param uid uid
-      * @param passwd password
-      * @param isCreateHome Whether to create a family by default
-      * @param callback callback
-      */
- TuyaHomeSdk.getUserInstance().loginOrRegisterWithUid(String countryCode, String uid, String passwd, boolean isCreateHome, IUidLoginCallback callback);
 ```

@@ -1,7 +1,8 @@
 ## Mesh 设备
 
-### Mesh设备判断方法
-##### 【代码范例】
+## Mesh 设备判断方法
+
+**使用方法**
 
 ```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
@@ -13,82 +14,96 @@ if(deviceBean.isBlueMesh()){
 // blue mesh 网关设备判断
 if(deviceBean.isBlueMeshWifi()){
     L.d(TAG, "This device is blue mesh wifi device");
- }
+}
 ```
-###  子设备重命名
-##### 【方法调用】
-```java
-* @param devId    	 设备Id
-* @param name		  重命名名称
-* @param callback	  回调
-public void renameMeshSubDev(String devId, String name, IResultCallback callback);
+##  子设备重命名
 
+**接口说明**
+
+```java
+void renameMeshSubDev(String devId, String name, IResultCallback callback);
 ```
 
-##### 【代码范例】
+**参数说明**
+
+|参数|类型|说明|
+|--|--|--|
+|devId  |String| 设备 Id|
+|name		|String|重命名名称|
+|callback|IResultCallback|回调|
+
+**代码示例**
 ```java
- mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"设备名称", new IResultCallback() {
+mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"设备名称", new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "重命名失败"+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "重命名成功", Toast.LENGTH_LONG).show();
             }
         });
 ```
 
-###  子设备移除
-#####  【方法调用】
-```java
-* @param devId    	 设备Id
-* @param pcc  		 设备大小类
-* @param callback	  回调
-public void removeMeshSubDev(String devId, IResultCallback callback) ;
+##  子设备移除
 
-```
-#####  【代码范例】
+**接口说明**
+
 ```java
-mTuyaBlueMesh.removeMeshSubDev(devBean.getDevId(), new IResultCallback() {
+void removeMeshSubDev(String devId, IResultCallback callback);
+```
+**参数说明**
+
+|参数|类型|说明|
+|--|--|--|
+|devId  |String| 设备 Id|
+|pcc		|String|设备大小类|
+|callback|IResultCallback|回调|
+
+**代码示例**
+
+```java
+mTuyaBlueMesh.removeMeshSubDev(devBean.getDevId(), new IResultCallback(){
+  @Override
+  public void onError(String code, String errorMsg) {
+    Toast.makeText(mContext, "子设备移除失败 "+ errorMsg,     Toast.LENGTH_LONG).show();
+  }
+
+  @Override
+  public void onSuccess() {
+    Toast.makeText(mContext, "子设备移除成功", Toast.LENGTH_LONG).show();
+  }
+});
+```
+
+## 单个子设备信息查询
+
+云端获取到的 dp 点数据可能不是当前设备实时的数据，可以通过该命令去查询设备的当前数据值，结果通过 `IMeshDevListener` 的 `onDpUpdate` 方法返回
+
+**接口说明**
+
+```java
+void querySubDevStatusByLocal(String pcc, String nodeId, IResultCallback callback);
+```
+
+**参数说明**
+
+|参数|类型|说明|
+|--|--|--|
+|pcc  |String| 设备大小类|
+|nodeId		|String|设备 nodeId|
+|callback|IResultCallback|回调|
+
+**代码示例**
+
+```java
+mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "子设备移除失败 "+ errorMsg, Toast.LENGTH_LONG).show();
-    
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "子设备移除成功", Toast.LENGTH_LONG).show();
-            }
-        });
-```
-
-### 单个子设备信息查询
-##### 【说明】
-云端获取到的dp点数据可能不是当前设备实时的数据，可以通过该命令去查询设备的当前数据值，结果通过IMeshDevListener的onDpUpdate方法返回
-
-#####  【方法调用】
-```java
-* @param pcc  		 设备大小类
-* @param nodeId    	 设备nodeId
-* @param callback	  回调
-public void querySubDevStatusByLocal(String pcc, final String nodeId, final IResultCallback callback);
-
-```
-
-#####  【代码范例】
-```java
- mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
-            @Override
-            public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "查询失败 "+ errorMsg, Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onSuccess() {
-            		Toast.makeText(mContext, "查询成功 ", Toast.LENGTH_LONG).show();
             }
         });
 ```

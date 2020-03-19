@@ -1,153 +1,168 @@
-## Group
-ITuyaGroup class provides operations on Mesh groups
-### Mesh Group Judgment Method
+# SigMesh Group Operation
+`ITuyaGroup` provides operations for Mesh group.
 
-ITuyaGroup class provides operations on Mesh groups
-#####  【Example Codes】
+## Find Mesh Group
+
+A Mesh group or a WiFi group can be distinguished by whether it has a MeshId.
+
+**Example**
 
 ```java
 GroupBean groupBean=TuyaHomeSdk.getDataInstance().getGroupBean("groupId");
 if(!TextUtils.isEmpty(groupBean.getMeshId())){    
 	L.d(TAG, "This group is mesh group");
-}else{
-
 }
-
 ```
 
-### Create Group
+## Create Mesh Group
 
-##### 【command format】
+16128 groups can be created in a mesh network. The id range when returning is 0xC000-0xFEFF . It is maintained locally.
 
-Supports the creation of 16128 groups in a mesh network. The id range when returning C000-FEFF (hexadecimal) is maintained locally.
-
-##### 【Method Invocation】
+Declaration
 
 ```java
-* @param name			group name
-* @param pcc			category of devices in the group 
-* @param localId	localId of the group (range C000-FEFF hex string)
-* @param callback		
-public void addGroup(String name, String pcc, String localId,IAddGroupCallback callback);
+void addGroup(String name, String pcc, String localId,IAddGroupCallback callback);
 ```
+Parameters
 
-##### 【Example Codes】
+|param|describe|
+|--|--|
+|name|group name|
+|pcc|device type|
+|localId|LocalId (0xC000 - 0xFFFF)|
+|callback|Callback|
+
+Example
 
 ```java
 ITuyaBlueMeshDevice mTuyaSigMeshDevice= TuyaHomeSdk.newSigMeshDeviceInstance("meshId");
 
-mTuyaSigMeshDevice.addGroup("group name","category", "8001", new IAddGroupCallback() {
+mTuyaSigMeshDevice.addGroup("group name","pcc", "8001", new IAddGroupCallback() {
 			@Override
-            public void onError(String errorCode, String errorMsg) {
-            		Toast.makeText(mContext, "create group fail"+ errorMsg, Toast.LENGTH_LONG).show();
-            }
-            
-            	
-            @Override
-            public void onSuccess(long groupId) {
-            		Toast.makeText(mContext, "create group success", Toast.LENGTH_LONG).show();
-            }
-        
-        });
+     public void onError(String errorCode, String errorMsg) {
+     }
+
+     @Override
+     public void onSuccess(long groupId) {
+     }
+     });
 ```
 
 
 
-### Add Sub-devices To Group
+## Add Sub-devices to Group
 
-##### 【Method Invocation】
+**Declaration**
+
 ```java
-* @param devId		device id
-* @param callback	
-public void addDevice(String devId,IResultCallback callback);
+void addDevice(String devId,IResultCallback callback);
 ```
-##### 【Example Codes】
+**Parameters**
+
+|param|describe|
+|--|--|
+|devId|device Id|
+|callback|callback|
+
+**Example**
 
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newSigMeshGroupInstance(groupId);
 mGroup.addDevice("devId", new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "Adding device to group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "Adding device to group success", Toast.LENGTH_LONG).show();
             }
         });
 ```
 
 
-### Remove Sub-devices from Group
-##### 【Method Invocation】
+## Remove Sub-devices From Group
+
+**Declaration**
+
 ```java
-* @param devId		device id
-* @param callback	
-public void removeDevice(String devId,IResultCallback callback);
-
+void removeDevice(String devId,IResultCallback callback);
 ```
+**Parameters**
 
-##### 【Example Codes】
+|param|describe|
+|--|--|
+|devId|Device Id|
+|callback|Callback|
+
+**Example**
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newSigMeshGroupInstance(groupId);
 mGroup.removeDevice("devId", new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "Remove device from group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
-
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "Remove device from group success ", Toast.LENGTH_LONG).show();
             }
         });
 
 ```
 
-### Dismiss Group
-##### 【Method Invocation】
+## Disband Group
+
+**Declaration**
+
 ```java
-* @param callback	回调
-public void dismissGroup(IResultCallback callback);
+void dismissGroup(IResultCallback callback);
 ```
-##### 【Example Codes】
+**Parameters**
+
+|param|describe|
+|--|--|
+|callback|Callback|
+
+**Example**
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newSigMeshGroupInstance(groupId);
 mGroup.dismissGroup(new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "dismiss group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "dismiss group success", Toast.LENGTH_LONG).show();
             }
         });
 
 ```
 
 
-### Rename Group
-##### 【Method Invocation】
+## Group Rename
+
+**Declaration**
+
 ```java
-* @param groupName	rename name
-* @param callback	
-public void renameGroup(String groupName,IResultCallback callback);
+void renameGroup(String groupName,IResultCallback callback);
 ```
-##### 【Example Codes】
+
+**Parameters**
+
+|param|describe|
+|--|--|
+|groupName|new name|
+|callback|Callback|
+
+**Example**
+
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newSigMeshGroupInstance(groupId);
-mGroup.renameGroup("new group name",new IResultCallback() {
+mGroup.renameGroup("group name",new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "rename group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "rename group success", Toast.LENGTH_LONG).show();
             }
         });
 

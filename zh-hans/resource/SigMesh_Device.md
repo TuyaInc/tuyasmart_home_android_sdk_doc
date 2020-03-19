@@ -1,115 +1,124 @@
-## 设备
-ITuyaBlueMeshDevice类封装了对指定Mesh内所有设备的操作
+# 设备
+ITuyaBlueMeshDevice 类封装了对指定 Mesh 内所有设备的操作
+
 ```java
 ITuyaBlueMeshDevice  mTuyaBlueMeshDevice = TuyaHomeSdk.newSigMeshDeviceInstance(meshId);
 ```
 
-### Mesh设备判断方法
-##### 【代码范例】
+## SigMesh 设备和网关判断方法
+
+**示例代码**
 
 ```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
 // 判读是否是 sigmesh 设备 （子设备+网关）
 if(deviceBean.isSigMesh()){
     L.d(TAG, "This device is sigmesh device");
- }
+}
 
 // 判读是否是 sigmesh 网关设备
 if(deviceBean.isSigMeshWifi()){
     L.d(TAG, "This device is sigmesh wifi device");
- }
+}
 ```
-### Mesh设备在线状态判断方法
+## Mesh 设备在线状态判断方法
+
+**示例代码**
 
 ```java
 DeviceBean deviceBean=TuyaHomeSdk.getDataInstance().getDeviceBean(mDevId);
 
-// 在线状态  (包括本地在线和网关在线)
+//在线状态  (包括本地在线和网关在线)
 boolean online=deviceBean.getIsOnline()
-
 //设备本地蓝牙在线状态
 boolean localOnline=deviceBean.getIsLocalOnline()
-
 //设备网关在线状态  (需要网关在线)
 boolean wifiOnline=deviceBean.isCloudOnline() && gwBean.getIsOnline() 
-
 ```
 
+##  子设备重命名
 
-###  子设备重命名
-##### 【方法调用】
+**接口说明**
+
 ```java
-* @param devId    	 设备Id
-* @param name		  重命名名称
-* @param callback	  回调
-public void renameMeshSubDev(String devId, String name, IResultCallback callback);
-
+void renameMeshSubDev(String devId, String name, IResultCallback callback);
 ```
+**参数说明**
 
-##### 【代码范例】
+|参数|说明|
+|--|--|
+|devId|设备 Id|
+|name|重命名名称|
+|callback|回调|
+
+**示例代码**
+
 ```java
- mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"设备名称", new IResultCallback() {
-            @Override
-            public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "重命名失败"+ errorMsg, Toast.LENGTH_LONG).show();
-            }
+mTuyaBlueMesh.renameMeshSubDev(devBean.getDevId(),"设备名称", new IResultCallback() {
+     @Override
+     public void onError(String code, String errorMsg) {
+     }
 
-            @Override
-            public void onSuccess() {
-            		Toast.makeText(mContext, "重命名成功", Toast.LENGTH_LONG).show();
-            }
-        });
+     @Override
+     public void onSuccess() {
+     }
+});
 ```
 
-###  子设备移除
-#####  【方法调用】
+##  子设备移除
+
+**接口说明**
+
 ```java
-* @param devId    	 设备Id
-* @param pcc  		 设备大小类
-* @param callback	  回调
-public void removeMeshSubDev(String devId, IResultCallback callback) ;
-
+void removeMeshSubDev(String devId, IResultCallback callback);
 ```
-#####  【代码范例】
+
+**参数说明**
+
+|参数|说明|
+|--|--|
+|devId|设备 Id|
+|pcc|设备大小类|
+|callback|回调|
+
+**示例代码**
 ```java
 mTuyaBlueMesh.removeMeshSubDev(devBean.getDevId(),devBean.getCategory(), new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "子设备移除失败 "+ errorMsg, Toast.LENGTH_LONG).show();
-    
             }
-
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "子设备移除成功", Toast.LENGTH_LONG).show();
             }
         });
 ```
 
 ### 单个子设备信息查询
-##### 【说明】
-云端获取到的dp点数据可能不是当前设备实时的数据，可以通过该命令去查询设备的当前数据值，结果通过IMeshDevListener的onDpUpdate方法返回
 
-#####  【方法调用】
+云端获取到的 dp 点数据可能不是当前设备实时的数据，可以通过该命令去查询设备的当前数据值，结果通过 `IMeshDevListener` 的 `onDpUpdate` 方法返回
+
+**接口说明**
+
 ```java
-* @param pcc  		 设备大小类
-* @param nodeId    	 设备nodeId
-* @param callback	  回调
-public void querySubDevStatusByLocal(String pcc, final String nodeId, final IResultCallback callback);
-
+void querySubDevStatusByLocal(String pcc, final String nodeId, final IResultCallback callback);
 ```
 
-#####  【代码范例】
+**参数说明**
+
+|参数|说明|
+|--|--|
+|pcc|设备大小类|
+|nodeId|设备 nodeId|
+|callback|回调|
+
+**示例代码**
 ```java
- mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
+mTuyaBlueMeshDevice.querySubDevStatusByLocal(devBean.getCategory(), devBean.getNodeId(), new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "查询失败 "+ errorMsg, Toast.LENGTH_LONG).show();
             }
-
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "查询成功 ", Toast.LENGTH_LONG).show();
             }
         });
 ```

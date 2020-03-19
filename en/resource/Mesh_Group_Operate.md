@@ -1,115 +1,137 @@
-## Group
-ITuyaGroup class provides operations on Mesh groups
-### Mesh Group Judgment Method
+# Mesh Group Operation
+`ITuyaGroup` provides operations for Mesh group.
 
-ITuyaGroup class provides operations on Mesh groups
-#####  【Example Codes】
+## Find Mesh Group
+
+A Mesh group or a WiFi group can be distinguished by whether it has a MeshId.
+
+**Example**
 
 ```java
 GroupBean groupBean=TuyaHomeSdk.getDataInstance().getGroupBean("groupId");
 if(!TextUtils.isEmpty(groupBean.getMeshId())){    
 	L.d(TAG, "This group is mesh group");
-}else{
-
 }
-
 ```
 
-### Add Sub-devices To Group
+## Add Sub-devices to Group
 
-##### 【Method Invocation】
+**Declaration**
+
 ```java
-* @param devId		device Id
-* @param callback	
-public void addDevice(String devId,IResultCallback callback);
+void addDevice(String devId,IResultCallback callback);
 ```
-##### 【Example Codes】
+**Parameters**
+
+|field|type|describe|
+|--|--|--|
+|devId|String|Device Id|
+|callback|IResultCallback|Callback|
+
+**Example**
 
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
 mGroup.addDevice("devId", new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "Adding device to group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "Adding device to group success", Toast.LENGTH_LONG).show();
             }
         });
 ```
 
 
-### Remove Sub-devices from Group
-##### 【Method Invocation】
-```java
-* @param devId		device id
-* @param callback	
-public void removeDevice(String devId,IResultCallback callback);
+## Remove Sub-devices From Group
+**Declaration**
 
+```java
+void removeDevice(String devId,IResultCallback callback);
 ```
 
-##### 【Example Codes】
+**Parameters**
+
+|field|type|describe|
+|--|--|--|
+|devId|String|Device Id|
+|callback|IResultCallback|Callback|
+
+
+
+**Example**
+
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
 mGroup.removeDevice("devId", new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "Remove device from group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "Remove device from group success ", Toast.LENGTH_LONG).show();
             }
         });
 
 ```
 
-### Dismiss Group
-##### 【Method Invocation】
+## Disband Group
+
+**Declaration**
+
 ```java
-* @param callback	
-public void dismissGroup(IResultCallback callback);
+void dismissGroup(IResultCallback callback);
 ```
-##### 【Example Codes】
+**Parameters**
+
+|field|type|describe|
+|--|--|--|
+|callback|IResultCallback|Callback|
+
+**Example**
+
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
 mGroup.dismissGroup(new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "dismiss group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "dismiss group success", Toast.LENGTH_LONG).show();
             }
         });
 
 ```
 
 
-### Rename Group
-##### 【Method Invocation】
+## Group Rename
+
+**Declaration**
+
 ```java
-* @param groupName	rename name
-* @param callback	
-public void renameGroup(String groupName,IResultCallback callback);
+void renameGroup(String groupName,IResultCallback callback);
 ```
-##### 【Example Codes】
+
+**Parameters**
+
+|field|type|describe|
+|--|--|--|
+|groupName|String|Rename|
+|callback|IResultCallback|Callback|
+
+**Example**
+
 ```java
 ITuyaGroup mGroup = TuyaHomeSdk.newBlueMeshGroupInstance(groupId);
-mGroup.renameGroup("new group name",new IResultCallback() {
+mGroup.renameGroup("group name",new IResultCallback() {
             @Override
             public void onError(String code, String errorMsg) {
-            		Toast.makeText(mContext, "rename group failed "+ errorMsg, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onSuccess() {
-            		Toast.makeText(mContext, "rename group success", Toast.LENGTH_LONG).show();
             }
         });
 

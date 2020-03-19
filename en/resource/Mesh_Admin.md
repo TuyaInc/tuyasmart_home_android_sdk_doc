@@ -1,52 +1,68 @@
-# Management
-### Create Mesh
+# Mesh Manager
+##  Create Mesh
 
-##### 【Method Invocation】
+**Declaration**
+
 ```java
-* @param meshName   mesh name（no more than 16 bytes）
-* @param callback   
 void createBlueMesh(String meshName, ITuyaResultCallback<BlueMeshBean> callback);
 ```
+**Parameters**
 
-##### 【Example Codes】
+|field|type|describe|
+|--|--|--|
+|meshName|String|mesh's name（limit 16）|
+|callback|ITuyaResultCallback|callback|
+
+**Example**
+
 ``` java
 TuyaHomeSdk.newHomeInstance("homeId").createBlueMesh("meshName", new ITuyaResultCallback<BlueMeshBean>() {
     @Override
     public void onError(String errorCode, String errorMsg) {
-        Toast.makeText(mContext, "create mesh fail "+ errorMsg, Toast.LENGTH_LONG).show();
     }
 
     @Override	
     public void onSuccess(BlueMeshBean blueMeshBean) {
-        Toast.makeText(mContext, "creat mesh success", Toast.LENGTH_LONG).show();
     }
 });
 ```
 
-### Remove Mesh
+## Delete Mesh
 
-##### 【Example Codes】
+**Declaration**
+
+```java
+void removeMesh(IResultCallback callback);
+```
+**Parameters**
+
+|field|type|describe|
+|--|--|--|
+|callback|IResultCallback|callback|
+
+**Example**
+
 ```java
 TuyaHomeSdk.newBlueMeshDeviceInstance(meshId).removeMesh(new IResultCallback() {
     @Override
     public void onError(String errorCode, String errorMsg) {
-	    Toast.makeText(mContext, "remove mesh fail "+ errorMsg, Toast.LENGTH_LONG).show();
     }
 	
     @Override
     public void onSuccess() {
-	    Toast.makeText(mContext, "remove mesh success ", Toast.LENGTH_LONG).show();
     }
 });
 
 ```
 
-### Get Mesh Data From Cache
-##### 【Method Invocation】
+## Get Data of Mesh From Cache
+**Declaration**
+
 ```java
-TuyaHomeSdk.newHomeInstance("homeId").getHomeBean().getMeshList()
+List<BlueMeshBean> getMeshList();
 ```
-##### 【Example Codes】
+**Example**
+
 ```java
 ITuyaHome mTuyaHome = TuyaHomeSdk.newHomeInstance("homeId");
 if (mTuyaHome.getHomeBean() != null){
@@ -55,55 +71,58 @@ if (mTuyaHome.getHomeBean() != null){
 }            
 ```
 
-###  Get Mesh Sub-device Data From Cache 
-##### 【Example Codes】
+## Get Data of Mesh's Sub-devices From Cache 
+**Declaration**
+
+```java
+List<DeviceBean> getMeshSubDevList();
+```
+**Example**
+
 ```java
 List<DeviceBean> meshSubDevList = TuyaHomeSdk.newBlueMeshDeviceInstance("meshId").getMeshSubDevList();
     
 ```
 
 
-### Mesh Initialization And Destruction
-建议在家庭切换的时候 销毁当前mesh  然后重新初始化家庭中的mesh
+## Mesh Init and Destroy
+recommend to destroy the Mesh and re-initialize the Mesh in the family when the family switches.
 
-##### 【Method Invocation】
+**Example**
+
 ```java
-//初始化mesh
+//init
 TuyaHomeSdk.getTuyaBlueMeshClient().initMesh(String meshId);       
 
-//销毁当前mesh
+//destroy
 TuyaHomeSdk.getTuyaBlueMeshClient().destroyMesh();       
 ```
 
 
-### Mesh Sub-device Connect And Disconnect
-##### 【Description】
-ITuyaBlueMeshClientProvides start connection, disconnect, start scan, stop scan
+## Mesh Sub-devices's Connect and Disconnect
+ITuyaBlueMeshClient has start connecting, disconnect, start scanning, stop scanning.
 
-##### 【Method Invocation】
+**Example**
 
 ```java
-// start connection
+//start connecting
 TuyaHomeSdk.getTuyaBlueMeshClient().startClient(mBlueMeshBean);
 
 //disconnect
 TuyaHomeSdk.getTuyaBlueMeshClient().stopClient();
 
-//start scan
+//start scanning
 TuyaHomeSdk.getTuyaBlueMeshClient().startSearch()
 
-//stop scan
+//stop scanning
 TuyaHomeSdk.getTuyaBlueMeshClient().stopSearch();
 
 ```
 
-##### 【Precautions】 
-###### startClient(mSigMeshBean) After opening the connection, it will continuously scan the surrounding connectable devices in the background until the connection is successful.
+**Precautions** 
 
-###### startClient(mSigMeshBean,searchTime) After the connection is opened, the device will not be scanned within the search time.
+ -  Start connecting and will be scanning the connectable devices in the background until the connection is successful.
+ -  Scanning always consumes resources, can control scanning by turning on scanning and stopping scanning.
+ -  Use `startSearch()` or `stopSearch()` must be after calling `startClient()`.
+ -   `startSearch()` or `stopSearch()` will be not working when connected to the Mesh.
 
-###### Scanning in the background always consumes resources. You can control scanning in the background by startSearch and stopSearch.
-
-###### When startClient () is not started, calling startSearch () and stopSearch () has no effect.
-
-###### When connected to the mesh network, calling startSearch and stopSearch has no effect.

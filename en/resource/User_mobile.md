@@ -1,212 +1,205 @@
-## Use Mobile Phone Verification Code for Login
+# Mobile account system
 
-Tuya Smart provides the mobile phone verification code login system. 
+Tutu Smart provides a mobile phone verification code login system.
+## Mobile Verification Code Login
 
-### (1) Use Mobile Phone Verification Code for Login
+The verification code login function of the mobile phone needs to call the verification code sending interface first to send the verification code. Then call the mobile phone verification code verification interface. Fill the received verification code into the corresponding parameters.
 
-**[Description]**
+**Declaration**
 
-The mobile phone verification code login function needs to first call the verification code sending interface and send the verification code. Then call the phone verification code verification interface. Fill in the received verification code into the corresponding parameters.
-
-**[Code Invocation]**
+Get phone verification code
 
 ```java
-
-/** Obtain mobile phone verification code.
-* @param countryCode   Country code
-* @param phoneNumber   Mobile phone number.
-*/
-TuyaHomeSdk.getUserInstance().getValidateCode(String countryCode, String phoneNumber, final IValidateCallback callback);
-
-/** Use mobile phone verification code for login
-* @param countryCode Country code
-* @param phone       Mobile phone number
-* @param code        Verification code
-* @param callback    Login callback interface. 
-*/
-TuyaHomeSdk.getUserInstance().loginWithPhone(String countryCode, String phone, String code, final ILoginCallback callback)
+TuyaHomeSdk.getUserInstance().getValidateCode(String phoneCode, String phoneNumber, final IValidateCallback callback);
 ```
 
-**[Example Codes]**
+**Parameters**
+
+| Parameters | Description |
+| ----------- | ----------------- |
+| phoneCode | Mobile Area Code: Such as "86" |
+| phoneNumber | mobile number |
+| callback | callback |
+
+**Declaration** 
+
+Phone verification code login
+
 
 ```java
+TuyaHomeSdk.getUserInstance().loginWithPhone(String phoneCode, String phone, String code, final ILoginCallback callback)
+```
 
-// Obtain mobile phone verification code.
+**Parameters**
 
-TuyaHomeSdk.getUserInstance().getValidateCode("86","13666666666", new IValidateCallback(){
-    @Override
-    public void onSuccess() {
-       Toast.makeText(mContext, "Obtaining verification code succeeds.", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
+| Parameters | Description |
+| ----------- | ----------------- |
+|phoneCode | Mobile Area Code: Such as "86" |
+| phone | phone number |
+| code | Verification Code |
+|callback | Login callback interface |
+
+**Example**
+
+```java
+// Get phone verification code
+TuyaHomeSdk.getUserInstance().getValidateCode("86", "13666666666", new IValidateCallback () {
+    @Override
+    public void onSuccess () {
+        Toast.makeText (mContext, "Success in obtaining verification code", Toast.LENGTH_SHORT) .show ();
+    }
+
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, "code:" + code + "error:" + error, Toast.LENGTH_SHORT) .show ();
+    }
 });
-
-// Use mobile phone verification code for login
-TuyaHomeSdk.getUserInstance().loginWithPhone("86", "13355555555", "123456", new ILoginCallback() {
-    @Override
-    public void onSuccess(User user) {
-        Toast.makeText(mContext, "Login succeeds, username:" +TuyaHomeSdk.getUserInstance().getUser().getUsername(), Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, error, Toast.LENGTH_SHORT).show();
-    }
-});
-```
-## Use Mobile Phone Password for Login
-
-Tuya Smart provides the mobile phone password login system.
-
-**(1) Register Password on the Mobile Phone.** 
-
-**[Description]**
-
-Register password on the mobile phone.
-
-**[Method Invocation]**
-
-```java
-
-
-/** Obtain mobile phone verification code.
-* @param countryCode   Country code
-* @param phoneNumber   Mobile phone number.
-*/
-
-TuyaHomeSdk.getUserInstance().getValidateCode(String countryCode, String phoneNumber, final IValidateCallback callback);
-
-
-
-/** Use your mobile phone to register account and password.
-* @param countryCode Country code
-* @param phone       Mobile phone 
-* @param passwd      Password
-* @param code        Verification code
-* @param callback    Login callback interface. 
-*/
-
-TuyaHomeSdk.getUserInstance().registerAccountWithPhone(final String countryCode, final String phone, final String passwd, final String code, final IRegisterCallback callback);
-```
-
-**[Example Codes]**
-```java
-
-// Obtain mobile phone verification code.
-
-TuyaHomeSdk.getUserInstance().getValidateCode("86","13666666666", new IValidateCallback(){
-    @Override
-    public void onSuccess() {
-        Toast.makeText(mContext, "Obtaining verification code succeeds.", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
-});
-
-// Use your mobile phone to register account and password.
-
-TuyaHomeSdk.getUserInstance().registerAccountWithPhone("86","13666666666","123456","124332", new IRegisterCallback() {
-    @Override
-    public void onSuccess(User user) {
-        Toast.makeText(mContext, "The registration succeeds.", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
-});
-
-```
-
-### (2) Mobile Phone Password Login
-
-**[Description]**
-
-Use mobile phone password for login.
-
-**[Method Invocation]**
-```java
-/** Use mobile phone password for login.
-* @param countryCode Country code
-* @param phone       Mobile phone password
-* @param passwd      Password
-* @param callback    Login callback interface. 
-*/
-TuyaHomeSdk.getUserInstance().loginWithPhonePassword(String countryCode, String phone, String passwd, final ILoginCallback callback);
-
-```
-**[Example Codes]**
-
-```java
-
-// Use mobile phone password for login.
-TuyaHomeSdk.getUserInstance().loginWithPhonePassword("86", "13666666666", "123456", new ILoginCallback() {
-    @Override
-    public void onSuccess(User user) {
-        Toast.makeText(mContext, "Login succeeds, username:" +TuyaHomeSdk.getUserInstance().getUser().getUsername(), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
-});
-
-```
-### (3) Reset App Password on the Mobile Phone
-
-**[Description]**
-
-Reset App password on the mobile phone.
-
-**[Method Invocation]**
-
-```java
-/** Obtain mobile phone verification code.
-* @param countryCode   Country code
-* @param phoneNumber   Mobile phone number.
-*/
-TuyaHomeSdk.getUserInstance().getValidateCode(String countryCode, String phoneNumber, final IValidateCallback callback);
-
-
-
-/** Reset password
-* @param countryCode Country code
-* @param phone       Mobile phone number
-* @param code        Mobile phone verification code
-* @param newPasswd   New password
-* @param callback    Reset the mobile phone password callback interface. 
-*/
-TuyaHomeSdk.getUserInstance().resetPhonePassword(final String countryCode, final String phone, final String code, final String newPasswd, final IResetPasswordCallback callback);
-
-```
-**[Example Codes]**
-
-```java
-// Obtain the verification code received on your mobile phone.
-TuyaHomeSdk.getUserInstance().getValidateCode("86", "13555555555", new IValidateCallback() {
-    @Override
-    public void onSuccess() {
-        Toast.makeText(mContext, "Obtaining verification code succeeds.", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
-});
-// Reset the App password on your mobile phone.
-TuyaHomeSdk.getUserInstance().resetPhonePassword("86", "13555555555", "123456", "123123", new IResetPasswordCallback(){
-    @Override
-    public void onSuccess() {
-        Toast.makeText(mContext, "Retrieve password succeeds.", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
+// Mobile verification code login
+TuyaHomeSdk.getUserInstance().loginWithPhone("86", "13355555555", "123456", new ILoginCallback () {
+    @Override
+    public void onSuccess (User user) {
+        Toast.makeText (mContext, "Successfully logged in, username:" + TuyaHomeSdk.getUserInstance (). GetUser (). GetUsername (), Toast.LENGTH_SHORT) .show ();
+    }
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, error, Toast.LENGTH_SHORT) .show ();
+    }
 });
 ```
+## User mobile password login
+
+Tuyao provides mobile phone password login system.
+### Phone password registration
+Mobile phone password registration, including obtaining a verification code interface and a registration interface
+
+**Declaration**
+
+Get phone verification code
+
+```java
+TuyaHomeSdk.getUserInstance().getValidateCode(String phoneCode, String phoneNumber, final IValidateCallback callback);
+```
+
+**Parameters**
+
+| Parameters | Description |
+| ----------- | ----------------- |
+| phoneCode | Mobile Area Code: Such as "86" |
+| phoneNumber | phone number |
+| callback | callback |
+
+**Declaration**
+
+Phone password registration
+
+```java
+TuyaHomeSdk.getUserInstance().registerAccountWithPhone(final String phoneCode, final String phoneNumber, final String passwd, final String code, final IRegisterCallback callback);
+```
+
+**Parameters**
+
+| Parameters | Description |
+| ----------- | ----------------- |
+| phoneCode | Mobile Area Code: Such as "86" |
+| phoneNumber | phone number |
+| passwd | password |
+| code | Verification Code |
+| callback | callback |
+
+**Example**
+
+```java
+// Get phone verification code
+TuyaHomeSdk.getUserInstance().getValidateCode("86", "13666666666", new IValidateCallback () {
+    @Override
+    public void onSuccess () {
+        Toast.makeText (mContext, "Success in obtaining verification code", Toast.LENGTH_SHORT) .show ();
+    }
+
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, "code:" + code + "error:" + error, Toast.LENGTH_SHORT) .show ();
+    }
+ });
+// Register mobile password account
+TuyaHomeSdk.getUserInstance().registerAccountWithPhone("86", "13666666666", "123456", "124332", new IRegisterCallback () {
+    @Override
+    public void onSuccess (User user) {
+        Toast.makeText (mContext, "Registration succeeded", Toast.LENGTH_SHORT) .show ();
+    }
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, "code:" + code + "error:" + error, Toast.LENGTH_SHORT) .show ();
+    }
+});
+```
+### Phone password login
+**Declaration**
+
+Sign in with your mobile number and password.
+
+```java
+TuyaHomeSdk.getUserInstance().loginWithPhonePassword(String phoneCode, String phone, String passwd, final ILoginCallback callback);
+```
+
+**Parameters**
+
+| Parameter | Description |
+| ----------- | ----------------- |
+| phoneCode | Mobile Area Code: Such as "86" |
+| phone | mobile number |
+| passwd | Login password |
+callback | Login callback interface |
+
+**Example**
+
+```java
+// Mobile password login
+TuyaHomeSdk.getUserInstance().loginWithPhonePassword ("86", "13666666666", "123456", new ILoginCallback () {
+    @Override
+    public void onSuccess (User user) {
+        Toast.makeText (mContext, "Successfully logged in, username:" + TuyaHomeSdk.getUserInstance (). GetUser (). GetUsername (), Toast.LENGTH_SHORT) .show ();
+    }
+
+    @Override
+    public void onError (String code, String error) {
+        Toast.makeText (mContext, "code:" + code + "error:" + error, Toast.LENGTH_SHORT) .show ();
+    }
+});
+```
+### Phone reset password
+
+Phone reset password function, including two interfaces: send verification code interface and reset password interface
+
+**Declaration**
+
+Get phone verification code
+
+```java
+TuyaHomeSdk.getUserInstance().getValidateCode (String phoneCode, String phoneNumber, final IValidateCallback callback);
+```
+
+**Parameters**
+
+| Parameter | Description |
+| ----------- | ----------------- |
+|phoneCode | Mobile Area Code: Such as "86" |
+| phoneNumber | mobile number |
+
+**Declaration**
+
+reset Password
+
+```java
+TuyaHomeSdk.getUserInstance().resetPhonePassword (final String phoneCode, final String phone, final String code, final String newPasswd, final IResetPasswordCallback callback);
+```
+
+**Parameters**
+
+| Parameter | Description |
+| ----------- | ----------------- |
+| phoneCode | Mobile Area Code: Such as "86" |
+| phone | mobile number |
+| code | Verification Code |
+| newPasswd | new password |
+| callback |
