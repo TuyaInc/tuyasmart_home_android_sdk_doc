@@ -21,7 +21,7 @@
   * [家庭成员管理](./resource/HomeMember.md)
   * [家庭房间管理](./resource/Room.md)
 
-* 设备配网
+* [设备配网](./resource/Activator_wifi.md)
   * [Wi-Fi 设备配网](./resource/Activator_wifi.md)
     * [快连 (EZ) 模式](./resource/Activator_wifi_ez.md)
     * [热点 (AP) 模式](./resource/Activator_wifi_ap.md)
