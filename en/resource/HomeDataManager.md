@@ -1,8 +1,8 @@
-### Operation class of cached data
+### Operation Class of Cached Data
 
 Every time `TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail()` is used to get the details of the specified family, the family information will be cached in the SDK. At this time, you can use `ITuyaHomeDataManager` to operate the data cached in SDK.
 
-#### Get home data
+#### Get Home Data
 
 **Declaration**
 
@@ -22,7 +22,7 @@ HomeBean getHomeBean(long homeId)
 TuyaHomeSdk.getDataInstance().getHomeBean(homeId);
 ```
 
-#### Get a list of devices, groups and rooms under the family
+#### Get a List of Devices, Groups and Rooms Under the Family
 
 **Declaration**
 
@@ -42,7 +42,7 @@ List<RoomBean> getHomeRoomList(long homeId)
 TuyaHomeSdk.getDataInstance().getHomeRoomList(homeId);
 ```
 
-#### Get the device list below home
+#### Get the Device List Below Home
 
 **Declaration**
 
@@ -62,7 +62,7 @@ List<DeviceBean> getHomeDeviceList(long homeId)
 TuyaHomeSdk.getDataInstance().getHomeDeviceList(homeId);
 ```
 
-#### Get the list of groups under the family
+#### Get the List of Groups Under the Family
 
 **Declaration**
 
@@ -82,7 +82,7 @@ List<GroupBean> getHomeGroupList(long homeId)
 TuyaHomeSdk.getDataInstance().getHomeGroupList(homeId);
 ```
 
-#### Get groups
+#### Get Groups
 
 **Declaration**
 
@@ -102,7 +102,7 @@ GroupBean getGroupBean(long groupId)
 TuyaHomeSdk.getDataInstance().getGroupBean(groupId);
 ```
 
-#### Acquiring equipment
+#### Acquiring Equipment
 
 **Declaration**
 
@@ -122,7 +122,7 @@ DeviceBean getDeviceBean(String devId)
 TuyaHomeSdk.getDataInstance().getDeviceBean(devId);
 ```
 
-#### Get rooms based on group ID
+#### Get Rooms Based on Group ID
 
 **Declaration**
 
@@ -142,7 +142,7 @@ RoomBean getGroupRoomBean(long groupId)
 TuyaHomeSdk.getDataInstance().getGroupRoomBean(groupId);
 ```
 
-#### Get room
+#### Get Room
 
 **Declaration**
 
@@ -162,7 +162,7 @@ RoomBean getRoomBean(long roomId)
 TuyaHomeSdk.getDataInstance().getRoomBean(roomId);
 ```
 
-#### Get room information according to equipment
+#### Get Room Information According To Equipment
 
 **Declaration**
 
@@ -182,7 +182,7 @@ RoomBean getDeviceRoomBean(String devId)
 TuyaHomeSdk.getDataInstance().getDeviceRoomBean(devId);
 ```
 
-#### Get the device list under the group
+#### Get the Device List Under the Group
 
 **Declaration**
 
@@ -202,7 +202,7 @@ List<DeviceBean> getGroupDeviceList(long groupId)
 TuyaHomeSdk.getDataInstance().getGroupDeviceList(groupId);
 ```
 
-#### Get the group list under mesh
+#### Get the Group List Under Mesh
 
 **Declaration**
 
@@ -222,7 +222,7 @@ List<GroupBean> getMeshGroupList(String meshId)
 TuyaHomeSdk.getDataInstance().getMeshGroupList(meshId);
 ```
 
-#### Get mesh device list
+#### Get Mesh Device List
 
 **Declaration**
 
@@ -242,7 +242,7 @@ List<DeviceBean> getMeshDeviceList(String meshId)
 TuyaHomeSdk.getDataInstance().getMeshDeviceList(meshId);
 ```
 
-#### Get the equipment list under the room according to the room ID
+#### Get the Equipment List Under the Room According To the Room ID
 
 **Declaration**
 
@@ -262,7 +262,7 @@ List<DeviceBean> getRoomDeviceList(long roomId)
 TuyaHomeSdk.getDataInstance().getRoomDeviceList(roomId);
 ```
 
-#### Get the group list under the room according to the room ID
+#### Get the Group List Under the Room According To the Room ID
 
 **Declaration**
 
@@ -282,7 +282,7 @@ List<GroupBean> getRoomGroupList(long roomId)
 TuyaHomeSdk.getDataInstance().getRoomGroupList(roomId);
 ```
 
-#### Get list of sub devices
+#### Get List of Sub Devices
 
 **Declaration**
 
@@ -302,7 +302,7 @@ List<DeviceBean> getSubDeviceBean(String devId)
 TuyaHomeSdk.getDataInstance().getSubDeviceBean(devId);
 ```
 
-#### Get sub devices according to node ID
+#### Get Sub Devices According To Node ID
 
 **Declaration**
 
@@ -323,7 +323,7 @@ DeviceBean getSubDeviceBeanByNodeId(String devId, String nodeId)
 TuyaHomeSdk.getDataInstance().getSubDeviceBeanByNodeId(devId, nodeId);
 ```
 
-#### Get product information
+#### Get Product Information
 
 **Declaration**
 
@@ -343,7 +343,7 @@ ProductBean getProductBean(String productId)
 TuyaHomeSdk.getDataInstance().getProductBean(productId);
 ```
 
-#### Get DP data
+#### Get DP Data
 
 **Declaration**
 
@@ -364,7 +364,7 @@ Object getDp(String devId, String dpId)
 TuyaHomeSdk.getDataInstance().getDp(devId, dpId);
 ```
 
-#### Get DPS data
+#### Get DPS Data
 
 **Declaration**
 
@@ -384,7 +384,7 @@ Map<String, Object> getDps(String devId)
 TuyaHomeSdk.getDataInstance().getDps(devId);
 ```
 
-#### Get device schema
+#### Get Device Schema
 
 **Declaration**
 
@@ -404,7 +404,7 @@ Map<String, SchemaBean> getSchema(String devId)
 TuyaHomeSdk.getDataInstance().getSchema(devId);
 ```
 
-#### Query device
+#### Query Device
 
 **Declaration**
 
@@ -434,7 +434,7 @@ TuyaHomeSdk.getDataInstance().queryDev(devId, new ITuyaDataCallback() {
     });
 ```
 
-#### Query device
+#### Query Device
 
 **Declaration**
 
@@ -459,7 +459,7 @@ TuyaHomeSdk.getDataInstance().discoveredLanDevice(new ITuyaSearchDeviceListener(
     });
 ```
 
-#### Unregister device query listening
+#### Unregister Device Query Listening
 
 **Declaration**
 
@@ -484,7 +484,7 @@ TuyaHomeSdk.getDataInstance().unRegisterDiscoveredLanDeviceListener(new ITuyaSea
     });
 ```
 
-#### Query sub devices
+#### Query Sub Devices
 
 **Declaration**
 
@@ -515,7 +515,7 @@ TuyaHomeSdk.getDataInstance().querySubDev(meshId, devId, new ITuyaDataCallback<D
     });
 ```
 
-#### Get device information
+#### Get Device Information
 
 **Declaration**
 
@@ -535,7 +535,7 @@ DeviceRespBean getDevRespBean(String devId)
 TuyaHomeSdk.getDataInstance().getDevRespBean(devId);
 ```
 
-#### Get sub device information
+#### Get Sub Device Information
 
 **Declaration**
 
@@ -556,7 +556,7 @@ DeviceRespBean getSubDevRespBean(String meshId, String nodeId)
 TuyaHomeSdk.getDataInstance().getSubDevRespBean(meshId, nodeId);
 ```
 
-#### Get device information list
+#### Get Device Information List
 
 **Declaration**
 
@@ -570,7 +570,7 @@ List<DeviceRespBean> getDevRespBeanList();
 TuyaHomeSdk.getDataInstance().getDevRespBeanList();
 ```
 
-#### Add device list
+#### Add Device List
 
 **Declaration**
 
@@ -590,7 +590,7 @@ void addDevRespList(List<DeviceRespBean> deviceRespBeans)
 TuyaHomeSdk.getDataInstance().addDevRespList(deviceRespBeans);
 ```
 
-#### Add product list
+#### Add Product List
 
 **Declaration**
 
@@ -610,7 +610,7 @@ void addProductList(List<ProductBean> productBeans)
 TuyaHomeSdk.getDataInstance().addProductList(productBeans);
 ```
 
-#### Get list of sub devices
+#### Get List of Sub Devices
 
 **Declaration**
 

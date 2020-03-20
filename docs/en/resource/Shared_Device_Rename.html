@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Shared_Device_Remove.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,11 +1416,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="modifying-remark-name"><a name="modifying-remark-name" class="plugin-anchor" href="#modifying-remark-name"><i class="fa fa-link" aria-hidden="true"></i></a>Modifying Remark Name</h1>
-<h2 id="modifying-the-remark-name-of-the-person-issuing-the-sharing-information"><a name="modifying-the-remark-name-of-the-person-issuing-the-sharing-information" class="plugin-anchor" href="#modifying-the-remark-name-of-the-person-issuing-the-sharing-information"><i class="fa fa-link" aria-hidden="true"></i></a>Modifying the remark name of the person issuing the sharing information</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#modifying-remark-name"><b></b>Modifying Remark Name</a></li><ul><li><span class="title-icon "></span><a href="#modifying-the-remark-name-of-the-person-issuing-the-sharing-information"><b></b>Modifying the remark name of the person issuing the sharing information</a></li><li><span class="title-icon "></span><a href="#modifying-the-remark-name-of-the-person-receiving-the-sharing-information"><b></b>Modifying the remark name of the person receiving the sharing information</a></li></ul></ul></div><a href="#modifying-remark-name" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="modifying-remark-name"><a name="modifying-remark-name" class="anchor-navigation-ex-anchor" href="#modifying-remark-name"><i class="fa fa-link" aria-hidden="true"></i></a><a name="modifying-remark-name" class="plugin-anchor" href="#modifying-remark-name"><i class="fa fa-link" aria-hidden="true"></i></a>Modifying Remark Name</h1>
+<h2 id="modifying-the-remark-name-of-the-person-issuing-the-sharing-information"><a name="modifying-the-remark-name-of-the-person-issuing-the-sharing-information" class="anchor-navigation-ex-anchor" href="#modifying-the-remark-name-of-the-person-issuing-the-sharing-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="modifying-the-remark-name-of-the-person-issuing-the-sharing-information" class="plugin-anchor" href="#modifying-the-remark-name-of-the-person-issuing-the-sharing-information"><i class="fa fa-link" aria-hidden="true"></i></a>Modifying the remark name of the person issuing the sharing information</h2>
 <p>The sharer modifies the remark name of the person being shared. If you share the device with other people, you can modify the remark name of the person.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addShareWithHomeId</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String countryCode<span class="token punctuation">,</span> String userAccount<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> devIds<span class="token punctuation">,</span> ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addShareWithHomeId</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> userAccount<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> devIds<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SharedUserInfoBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1430,17 +1454,17 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addShareWithHomeId</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> countryCode<span class="token punctuation">,</span> userAccount<span class="token punctuation">,</span> devIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addShareWithHomeId</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> countryCode<span class="token punctuation">,</span> userAccount<span class="token punctuation">,</span> devIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SharedUserInfoBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>SharedUserInfoBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">SharedUserInfoBean</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorMsg<span class="token punctuation">,</span> String errorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">String</span> errorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="modifying-the-remark-name-of-the-person-receiving-the-sharing-information"><a name="modifying-the-remark-name-of-the-person-receiving-the-sharing-information" class="plugin-anchor" href="#modifying-the-remark-name-of-the-person-receiving-the-sharing-information"><i class="fa fa-link" aria-hidden="true"></i></a>Modifying the remark name of the person receiving the sharing information</h2>
+<h2 id="modifying-the-remark-name-of-the-person-receiving-the-sharing-information"><a name="modifying-the-remark-name-of-the-person-receiving-the-sharing-information" class="anchor-navigation-ex-anchor" href="#modifying-the-remark-name-of-the-person-receiving-the-sharing-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="modifying-the-remark-name-of-the-person-receiving-the-sharing-information" class="plugin-anchor" href="#modifying-the-remark-name-of-the-person-receiving-the-sharing-information"><i class="fa fa-link" aria-hidden="true"></i></a>Modifying the remark name of the person receiving the sharing information</h2>
 <p>The person who has shared changes the name of the person who shared it. You have received a share from someone else. You can modify this person&apos;s note name.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameReceivedShareNickname</span><span class="token punctuation">(</span><span class="token keyword">long</span> memberId<span class="token punctuation">,</span> String name<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameReceivedShareNickname</span><span class="token punctuation">(</span><span class="token keyword">long</span> memberId<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1462,11 +1486,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addShareWithHomeId</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> countryCode<span class="token punctuation">,</span> userAccount<span class="token punctuation">,</span> devIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>SharedUserInfoBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addShareWithHomeId</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> countryCode<span class="token punctuation">,</span> userAccount<span class="token punctuation">,</span> devIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SharedUserInfoBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>SharedUserInfoBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">SharedUserInfoBean</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorMsg<span class="token punctuation">,</span> String errorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">String</span> errorCode<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
@@ -1512,7 +1536,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Modifying Remark Name","level":"1.10.3","depth":2,"next":{"title":"Timer Task","level":"1.11","depth":1,"path":"resource/Timer.md","ref":"./resource/Timer.md","articles":[]},"previous":{"title":"Removing Sharing","level":"1.10.2","depth":2,"path":"resource/Shared_Device_Remove.md","ref":"./resource/Shared_Device_Remove.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Shared_Device_Rename.md","mtime":"2020-03-19T13:48:42.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Modifying Remark Name","level":"1.10.3","depth":2,"next":{"title":"Timer Task","level":"1.11","depth":1,"path":"resource/Timer.md","ref":"./resource/Timer.md","articles":[]},"previous":{"title":"Removing Sharing","level":"1.10.2","depth":2,"path":"resource/Shared_Device_Remove.md","ref":"./resource/Shared_Device_Remove.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Shared_Device_Rename.md","mtime":"2020-03-19T13:48:42.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1527,6 +1551,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1547,10 +1591,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

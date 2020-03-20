@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Modify User Information · GitBook</title>
+        <title>Sign Out · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -22,6 +22,18 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
                 
             
                 
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -61,11 +74,22 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="User_Logout.html" />
+    <link rel="next" href="User_logout.html" />
     
     
-    <link rel="prev" href="User_Third_Login.html" />
+    <link rel="prev" href="User_update.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1377,7 +1401,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Modify User Information</a>
+        <a href=".." >Sign Out</a>
     </h1>
 </div>
 
@@ -1392,172 +1416,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="change-nickname"><a name="change-nickname" class="plugin-anchor" href="#change-nickname"><i class="fa fa-link" aria-hidden="true"></i></a>Change Nickname</h2>
-<p><strong>Declaration</strong></p>
-<p>Change nickname</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> reRickName <span class="token punctuation">(</span>String name<span class="token punctuation">,</span> <span class="token keyword">final</span> IReNickNameCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>Nickname</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>callback</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reRickName <span class="token punctuation">(</span>nickName<span class="token punctuation">,</span>
-    <span class="token keyword">new</span> <span class="token class-name">IReNickNameCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">}</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-        <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="update-user-time-zone"><a name="update-user-time-zone" class="plugin-anchor" href="#update-user-time-zone"><i class="fa fa-link" aria-hidden="true"></i></a>Update user time zone</h2>
-<p><strong>Declaration</strong></p>
-<p>Used to update the user time zone.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateTimeZone</span><span class="token punctuation">(</span>String timezoneId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>timezoneId</td>
-<td>timezone id</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>callback</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>updateTimeZone <span class="token punctuation">(</span>
-    timezoneId<span class="token punctuation">,</span>
-    <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-        <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="upload-user-avatar"><a name="upload-user-avatar" class="plugin-anchor" href="#upload-user-avatar"><i class="fa fa-link" aria-hidden="true"></i></a>Upload user avatar</h2>
-<p><strong>Declaration</strong></p>
-<p>Used to upload user-defined avatars.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">uploadUserAvatar</span><span class="token punctuation">(</span>File file<span class="token punctuation">,</span> IBooleanCallback callback<span class="token punctuation">)</span>
-</code></pre>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>file</td>
-<td>User avatar image file</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>callback</td>
-</tr>
-</tbody>
-</table>
-<p><strong> Code Example </strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>uploadUserAvatar <span class="token punctuation">(</span>
-    file<span class="token punctuation">,</span>
-    <span class="token keyword">new</span> <span class="token class-name">IBooleanCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-        <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="set-the-temperature-unit"><a name="set-the-temperature-unit" class="plugin-anchor" href="#set-the-temperature-unit"><i class="fa fa-link" aria-hidden="true"></i></a>Set the temperature unit</h2>
-<p><strong>Declaration</strong></p>
-<p>Set whether the temperature unit is Celsius or Fahrenheit</p>
-<ul>
-<li>TempUnitEnum.Celsius: Celsius</li>
-<li>TempUnitEnum.Fahrenheit: Hua degree</li>
-</ul>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> setTempUnit <span class="token punctuation">(</span>TempUnitEnum unit<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>unit</td>
-<td>unit</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>callback</td>
-</tr>
-</tbody>
-</table>
-<h2 id="logout-interface"><a name="logout-interface" class="plugin-anchor" href="#logout-interface"><i class="fa fa-link" aria-hidden="true"></i></a>Logout interface</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#logout-interface"><b></b>Logout Interface</a></li><li><span class="title-icon "></span><a href="#disable-account"><b></b>Disable Account</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="logout-interface"><a name="logout-interface" class="anchor-navigation-ex-anchor" href="#logout-interface"><i class="fa fa-link" aria-hidden="true"></i></a><a name="logout-interface" class="plugin-anchor" href="#logout-interface"><i class="fa fa-link" aria-hidden="true"></i></a>Logout Interface</h2>
 <p>When the user account is switched, it is necessary to call the logout interface</p>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span>getUserInstance <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>logout <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ILogoutCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>logout <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ILogoutCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token annotation punctuation">@Override</span>
   <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// Sign out successfully</span>
   <span class="token punctuation">}</span>
 
   <span class="token annotation punctuation">@Override</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="update-user-targeting"><a name="update-user-targeting" class="plugin-anchor" href="#update-user-targeting"><i class="fa fa-link" aria-hidden="true"></i></a>Update user targeting</h2>
-<p>If necessary, the positioning information can be reported through the following interfaces:</p>
-<pre class="language-"><code class="lang-java">TuyaSdk<span class="token punctuation">.</span>setLatAndLong <span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lon<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="disable-account"><a name="disable-account" class="plugin-anchor" href="#disable-account"><i class="fa fa-link" aria-hidden="true"></i></a>Disable account</h2>
+<h2 id="disable-account"><a name="disable-account" class="anchor-navigation-ex-anchor" href="#disable-account"><i class="fa fa-link" aria-hidden="true"></i></a><a name="disable-account" class="plugin-anchor" href="#disable-account"><i class="fa fa-link" aria-hidden="true"></i></a>Disable Account</h2>
 <p><strong>Declaration</strong></p>
 <p>After calling the logout account interface, the account will be permanently deactivated after one week and all information under your account will be deleted. Log back in before that, and your deactivation request will be cancelled.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> cancelAccount <span class="token punctuation">(</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> cancelAccount <span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>cancelAccount <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>cancelAccount <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
@@ -1593,12 +1474,12 @@
 
             
                 
-                <a href="User_Third_Login.html" class="navigation navigation-prev " aria-label="Previous page: Third Party Login">
+                <a href="User_update.html" class="navigation navigation-prev " aria-label="Previous page: Modify User Information">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="User_Logout.html#logout-interface" class="navigation navigation-next " aria-label="Next page: Sign Out">
+                <a href="User_logout.html#disable-account" class="navigation navigation-next " aria-label="Next page: Disable Account">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1609,7 +1490,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Modify User Information","level":"1.4.6","depth":2,"next":{"title":"Sign Out","level":"1.4.7","depth":2,"anchor":"#logout-interface","path":"resource/User_Logout.md","ref":"./resource/User_Logout.md#logout-interface","articles":[]},"previous":{"title":"Third Party Login","level":"1.4.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_Logout.md","mtime":"2020-03-19T13:05:54.396Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Sign Out","level":"1.4.7","depth":2,"next":{"title":"Disable Account","level":"1.4.8","depth":2,"anchor":"#disable-account","path":"resource/User_logout.md","ref":"./resource/User_logout.md#disable-account","articles":[]},"previous":{"title":"Modify User Information","level":"1.4.6","depth":2,"path":"resource/User_update.md","ref":"./resource/User_update.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_logout.md","mtime":"2020-03-20T03:00:47.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1624,6 +1505,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1644,10 +1545,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

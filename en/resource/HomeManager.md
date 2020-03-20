@@ -1,4 +1,4 @@
-### Family management
+### Family Management
 
 Create and query family information change monitor
 
@@ -16,7 +16,7 @@ void onDestroy()
 TuyaHomeSdk.getHomeManagerInstance().onDestroy();
 ```
 
-#### Get family list
+#### Get Family List
 
 **Declaration**
 
@@ -50,7 +50,7 @@ TuyaHomeSdk.getHomeManagerInstance().createHome(name, lon, lat, geoName, rooms, 
     });
 ```
 
-#### Get family list
+#### Get Family List
 
 **Declaration**
 
@@ -79,7 +79,7 @@ TuyaHomeSdk.getHomeManagerInstance().queryHomeList(new ITuyaGetHomeListCallback(
     });
 ```
 
-#### Change of registered family information
+#### Change of Registered Family Information
 
 There are: addition and deletion of family, information change, change of sharing list and successful monitoring of server connection
 
@@ -130,7 +130,7 @@ TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(new ITuyaHom
     });
 ```
 
-#### Change of cancellation family information
+#### Change of Cancellation Family Information
 
 **Declaration**
 

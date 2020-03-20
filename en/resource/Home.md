@@ -1,4 +1,4 @@
-### Family management
+### Family Management
 
 Get the family list, family management, room and equipment management under the family and information monitoring, etc.
 
@@ -20,7 +20,7 @@ Get the family list, family management, room and equipment management under the 
 | sharedGroupList | List&lt;GroupBean&gt; |Shared groups received |
 | homeStatus | int| The home status （1:to be accepted 2:accepted 3:reject）|
 
-#### Get data information in local cache
+#### Get Data Information in Local Cache
 
 **Declaration**
 
@@ -49,7 +49,7 @@ TuyaHomeSdk.newHomeInstance(10000).getHomeLocalCache(new ITuyaHomeResultCallback
     });
 ```
 
-#### Update family information
+#### Update Family Information
 
 **Declaration**
 
@@ -82,7 +82,7 @@ TuyaHomeSdk.newHomeInstance(10000).updateHome(name, lon, lat, geoName, new IResu
     });
 ```
 
-#### Family sort
+#### Family Sort
 
 **Declaration**
 
@@ -112,7 +112,7 @@ TuyaHomeSdk.newHomeInstance(10000).sortHome(idList, new IResultCallback() {
     });
 ```
 
-#### Get family list
+#### Get Family List
 
 Obtain all data under the family, including equipment, groups, rooms, etc
 
@@ -143,7 +143,7 @@ TuyaHomeSdk.newHomeInstance(10000).getHomeDetail(new ITuyaHomeResultCallback() {
     });
 ```
 
-#### Disband family
+#### Disband Family
 
 **Declaration**
 
@@ -172,7 +172,7 @@ TuyaHomeSdk.newHomeInstance(10000).dismissHome(new IResultCallback() {
     });
 ```
 
-#### Add room
+#### Add Room
 
 **Declaration**
 
@@ -202,7 +202,7 @@ TuyaHomeSdk.newHomeInstance(10000).addRoom(name, new ITuyaRoomResultCallback() {
     });
 ```
 
-#### Remove room
+#### Remove Room
 
 **Declaration**
 
@@ -232,7 +232,7 @@ TuyaHomeSdk.newHomeInstance(10000).removeRoom(roomId, new IResultCallback() {
     });
 ```
 
-#### Sorting rooms
+#### Sorting Rooms
 
 **Declaration**
 
@@ -262,7 +262,7 @@ TuyaHomeSdk.newHomeInstance(10000).sortRoom(idList, new IResultCallback() {
     });
 ```
 
-#### Query room list
+#### Query Room List
 
 **Declaration**
 
@@ -291,7 +291,7 @@ TuyaHomeSdk.newHomeInstance(10000).queryRoomList(new ITuyaGetRoomListCallback() 
     });
 ```
 
-#### Get home instance information
+#### Get Home Instance Information
 
 **Declaration**
 
@@ -337,7 +337,7 @@ TuyaHomeSdk.newHomeInstance(10000).createGroup(productId, name, devIdList, new I
     });
 ```
 
-#### Query room information according to equipment
+#### Query Room Information According To Equipment
 
 **Declaration**
 
@@ -357,7 +357,7 @@ List<RoomBean> queryRoomInfoByDevice(List<DeviceBean> deviceList)
 TuyaHomeSdk.newHomeInstance(10000).queryRoomInfoByDevice(deviceList);
 ```
 
-#### Monitor the change of information in the home
+#### Monitor the Change of Information in the Home
 
 **Declaration**
 
@@ -398,7 +398,7 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(new ITuyaHomeStatu
     });
 ```
 
-#### Log off monitoring of information changes below home
+#### Log Off Monitoring of Information Changes Below Home
 
 **Declaration**
 
@@ -439,7 +439,7 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(new ITuyaHomeSta
     });
 ```
 
-#### Monitor the change of device information under the home
+#### Monitor the Change of Device Information Under the Home
 
 **Declaration**
 
@@ -472,7 +472,7 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(new ITuyaHom
     });
 ```
 
-#### Log off monitoring of device information changes under home
+#### Log Off Monitoring of Device Information Changes Under Home
 
 **Declaration**
 
@@ -505,7 +505,7 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(new ITuyaH
     });
 ```
 
-#### Create Bluetooth mesh
+#### Create Bluetooth Mesh
 
 **Declaration**
 
@@ -535,7 +535,7 @@ TuyaHomeSdk.newHomeInstance(10000).createBlueMesh(meshName, new ITuyaResultCallb
     });
 ```
 
-#### Create Bluetooth SIG mesh
+#### Create Bluetooth SIG Mesh
 
 **Declaration**
 
@@ -564,7 +564,7 @@ TuyaHomeSdk.newHomeInstance(10000).createSigMesh(new ITuyaResultCallback() {
     });
 ```
 
-#### Query the list of devices added to the group
+#### Query the List of Devices Added To the Group
 
 **Declaration**
 
@@ -595,7 +595,7 @@ TuyaHomeSdk.newHomeInstance(10000).queryDeviceListToAddGroup(groupId, productId,
     });
 ```
 
-#### Query ZigBee device list added to group
+#### Query ZigBee Device List Added To Group
 
 **Declaration**
 
@@ -641,7 +641,7 @@ void onDestroy()
 TuyaHomeSdk.newHomeInstance(10000).onDestroy();
 ```
 
-#### Create ZigBee group
+#### Create ZigBee Group
 
 **Declaration**
 
@@ -674,7 +674,7 @@ TuyaHomeSdk.newHomeInstance(10000).createZigbeeGroup(productId, parentId, parent
     });
 ```
 
-#### Use groups to query room information
+#### Use Groups To Query Room Information
 
 **Declaration**
 
@@ -694,7 +694,7 @@ List<RoomBean> queryRoomInfoByGroup(List<GroupBean> groupList)
 TuyaHomeSdk.newHomeInstance(10000).queryRoomInfoByGroup(groupList);
 ```
 
-#### Bind new device
+#### Bind New Device
 
 **Declaration**
 
@@ -724,7 +724,7 @@ TuyaHomeSdk.newHomeInstance(10000).bindNewConfigDevs(devIds, new IResultCallback
     });
 ```
 
-#### Registered product alarm monitoring
+#### Registered Product Alarm Monitoring
 
 **Declaration**
 
@@ -749,7 +749,7 @@ TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(new IWarningMsgLi
     });
 ```
 
-#### Unregister product alarm monitoring
+#### Unregister Product Alarm Monitoring
 
 **Declaration**
 
@@ -774,7 +774,7 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterProductWarnListener(new IWarningMsg
     });
 ```
 
-#### Sort groups or devices in your home
+#### Sort Groups or Devices in Your Home
 
 **Declaration**
 
@@ -806,7 +806,7 @@ TuyaHomeSdk.newHomeInstance(10000).sortDevInHome(homeId, list, new IResultCallba
     });
 ```
 
-#### Update family information
+#### Update Family Information
 
 **Declaration**
 
@@ -841,7 +841,7 @@ TuyaHomeSdk.newHomeInstance(10000).updateHome(name, lon, lat, geoName, rooms, ov
     });
 ```
 
-#### Create ZigBee group
+#### Create ZigBee Group
 
 **Declaration**
 
@@ -873,7 +873,7 @@ TuyaHomeSdk.newHomeInstance(10000).createZigbeeGroup(productId, parentId, name, 
     });
 ```
 
-#### Register upgrade status listener
+#### Register Upgrade Status Listener
 
 **Declaration**
 

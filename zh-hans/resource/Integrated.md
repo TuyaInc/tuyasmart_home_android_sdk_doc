@@ -30,9 +30,9 @@ repositories {
 }
 ```
 
-> ⚠️【注意事项】
+>** [info] 【注意事项】**
 >
-> * 涂鸦智能 3.10.0 之前的版本的sdk默认只支持 armeabi-v7a，
+> * 涂鸦智能 3.10.0 之前的版本的 sdk 默认只支持 armeabi-v7a，
 > * 3.11.0 版本后已经将 armeabi-v7a、arm64-v8a 集成进 sdk，请将本地手动放入的 sdk 的相关 so 库移除，使用 sdk 中提供的。
 > * 如果集成新版本 so 库。请移除之前老版本手动集成的库，防止冲突或者代码版本不一致导致的问题
 > * 如有其他平台需要可前往 [GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs) 获取。

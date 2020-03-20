@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Push.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,37 +1416,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="integrate-fcm-push"><a name="integrate-fcm-push" class="plugin-anchor" href="#integrate-fcm-push"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate FCM Push</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#integrate-fcm-push"><b></b>Integrate FCM Push</a></li><li><span class="title-icon "></span><a href="#configure-fcm-information-to-the-tuya-iot-platform"><b></b>Configure FCM information to the Tuya Iot platform</a></li><li><span class="title-icon "></span><a href="#the-registered-token-is-registered-to-tuya-cloud"><b></b>The registered token is registered to Tuya Cloud.</a></li><li><span class="title-icon "></span><a href="#receive-and-process-messages"><b></b>Receive and process messages</a></li></ul><li><span class="title-icon "></span><a href="#user-unbind"><b></b>User unbind</a></li><ul><li><span class="title-icon "></span><a href="#send-push"><b></b>Send Push</a></li><li><span class="title-icon "></span><a href="#precautions"><b></b>Precautions</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="integrate-fcm-push"><a name="integrate-fcm-push" class="anchor-navigation-ex-anchor" href="#integrate-fcm-push"><i class="fa fa-link" aria-hidden="true"></i></a><a name="integrate-fcm-push" class="plugin-anchor" href="#integrate-fcm-push"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate FCM Push</h3>
 <p>Foreign users need to integrate Google&#x2019;s FCM push service. According to official document,  <a href="https://firebase.google.com/docs/android/setup?hl=zh-cn" target="_blank">Firebase is added to your Android project</a>, then the client is configured by reference with  <a href="https://firebase.google.com/docs/cloud-messaging/android/client?hl=zh-cn" target="_blank">Android Client Configuration Firebase</a></p>
-<h3 id="configure-fcm-information-to-the-tuya-iot-platform"><a name="configure-fcm-information-to-the-tuya-iot-platform" class="plugin-anchor" href="#configure-fcm-information-to-the-tuya-iot-platform"><i class="fa fa-link" aria-hidden="true"></i></a>Configure FCM information to the Tuya Iot platform</h3>
+<h3 id="configure-fcm-information-to-the-tuya-iot-platform"><a name="configure-fcm-information-to-the-tuya-iot-platform" class="anchor-navigation-ex-anchor" href="#configure-fcm-information-to-the-tuya-iot-platform"><i class="fa fa-link" aria-hidden="true"></i></a><a name="configure-fcm-information-to-the-tuya-iot-platform" class="plugin-anchor" href="#configure-fcm-information-to-the-tuya-iot-platform"><i class="fa fa-link" aria-hidden="true"></i></a>Configure FCM information to the Tuya Iot platform</h3>
 <p>Please refer to the document <a href="https://docs.tuya.com/docDetail?code=K8uhkijtdvosi" target="_blank">Register process of FCM</a>. Configure the Sender ID, Server Key, and google-services.json files to the &quot;App Workbench&quot; of the iot platform - &quot;APP SDK&quot; corresponding to the configuration of the application &quot;Push (Google)&quot;</p>
 <p><img src="images/push_fcm_iot_en.png" alt=""></p>
-<h3 id="the-registered-token-is-registered-to-tuya-cloud"><a name="the-registered-token-is-registered-to-tuya-cloud" class="plugin-anchor" href="#the-registered-token-is-registered-to-tuya-cloud"><i class="fa fa-link" aria-hidden="true"></i></a>The registered token is registered to Tuya Cloud.</h3>
+<h3 id="the-registered-token-is-registered-to-tuya-cloud"><a name="the-registered-token-is-registered-to-tuya-cloud" class="anchor-navigation-ex-anchor" href="#the-registered-token-is-registered-to-tuya-cloud"><i class="fa fa-link" aria-hidden="true"></i></a><a name="the-registered-token-is-registered-to-tuya-cloud" class="plugin-anchor" href="#the-registered-token-is-registered-to-tuya-cloud"><i class="fa fa-link" aria-hidden="true"></i></a>The registered token is registered to Tuya Cloud.</h3>
 <p>The onTokenRefresh method of inheriting the FirebaseInstanceIdService class monitors the generation of the registration token, and the token is registered to the graffiti cloud.</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
 * @param aliasId   user alias, the token generated by fcm
 * @param pushProvider   registered push category   fcm is filled in&quot;fcm&#x201D;
 */</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span>String aliasId<span class="token punctuation">,</span> String pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> aliasId<span class="token punctuation">,</span> <span class="token class-name">String</span> pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="receive-and-process-messages"><a name="receive-and-process-messages" class="plugin-anchor" href="#receive-and-process-messages"><i class="fa fa-link" aria-hidden="true"></i></a>Receive and process messages</h3>
+<h3 id="receive-and-process-messages"><a name="receive-and-process-messages" class="anchor-navigation-ex-anchor" href="#receive-and-process-messages"><i class="fa fa-link" aria-hidden="true"></i></a><a name="receive-and-process-messages" class="plugin-anchor" href="#receive-and-process-messages"><i class="fa fa-link" aria-hidden="true"></i></a>Receive and process messages</h3>
 <p>Receive processing messages in the onMessageReceived method in a class that extend FirebaseMessagingService</p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyFcmListenerService</span> <span class="token keyword">extends</span> <span class="token class-name">FirebaseMessagingService</span> <span class="token punctuation">{</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> String TAG <span class="token operator">=</span> <span class="token string">&quot;MyFcmListenerService&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> TAG <span class="token operator">=</span> <span class="token string">&quot;MyFcmListenerService&quot;</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">public</span> <span class="token keyword">static</span> HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Long<span class="token punctuation">&gt;</span></span> pushTimeMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Long</span><span class="token punctuation">&gt;</span></span> pushTimeMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessageReceived</span><span class="token punctuation">(</span>RemoteMessage message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;FCM message received&quot;</span> <span class="token operator">+</span> message<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessageReceived</span><span class="token punctuation">(</span><span class="token class-name">RemoteMessage</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;FCM message received&quot;</span> <span class="token operator">+</span> message<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -1431,19 +1455,19 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <ul>
 <li>The content in message.getData() is the received push information.</li>
 </ul>
-<h2 id="user-unbind"><a name="user-unbind" class="plugin-anchor" href="#user-unbind"><i class="fa fa-link" aria-hidden="true"></i></a>User unbind</h2>
+<h2 id="user-unbind"><a name="user-unbind" class="anchor-navigation-ex-anchor" href="#user-unbind"><i class="fa fa-link" aria-hidden="true"></i></a><a name="user-unbind" class="plugin-anchor" href="#user-unbind"><i class="fa fa-link" aria-hidden="true"></i></a>User unbind</h2>
 <p><strong>Description</strong></p>
 <p>When the user needs to unburden the application and user relationship, such as logging out, user can invoke the method of removing registered token by FCM.</p>
-<pre class="language-"><code class="lang-java">FirebaseInstanceId<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteInstanceId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">FirebaseInstanceId</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteInstanceId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="send-push"><a name="send-push" class="plugin-anchor" href="#send-push"><i class="fa fa-link" aria-hidden="true"></i></a>Send Push</h3>
-<h4 id="add-operation-push"><a name="add-operation-push" class="plugin-anchor" href="#add-operation-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add operation Push</h4>
+<h3 id="send-push"><a name="send-push" class="anchor-navigation-ex-anchor" href="#send-push"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-push" class="plugin-anchor" href="#send-push"><i class="fa fa-link" aria-hidden="true"></i></a>Send Push</h3>
+<h4 id="add-operation-push"><a name="add-operation-push" class="anchor-navigation-ex-anchor" href="#add-operation-push"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-operation-push" class="plugin-anchor" href="#add-operation-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add operation Push</h4>
 <p>Doodle Developer Platform - User Operations - Message Center - Add News</p>
 <p><img src="images/android-push-setting-operation.png" alt=""></p>
-<h4 id="add-alarm-push"><a name="add-alarm-push" class="plugin-anchor" href="#add-alarm-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add alarm Push</h4>
+<h4 id="add-alarm-push"><a name="add-alarm-push" class="anchor-navigation-ex-anchor" href="#add-alarm-push"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-alarm-push" class="plugin-anchor" href="#add-alarm-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add alarm Push</h4>
 <p>Graffiti Developer Platform - Corresponding Products - Extended Features - Alarm Settings - New Alarm Rules (App Push Mode)</p>
 <p><img src="images/android-push-setting-warning.png" alt=""></p>
-<h3 id="precautions"><a name="precautions" class="plugin-anchor" href="#precautions"><i class="fa fa-link" aria-hidden="true"></i></a>Precautions</h3>
+<h3 id="precautions"><a name="precautions" class="anchor-navigation-ex-anchor" href="#precautions"><i class="fa fa-link" aria-hidden="true"></i></a><a name="precautions" class="plugin-anchor" href="#precautions"><i class="fa fa-link" aria-hidden="true"></i></a>Precautions</h3>
 <ul>
 <li>With FCM, you need to have Google services installed on your phone and you can connect to Google.</li>
 </ul>
@@ -1490,7 +1514,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"FCM Push","level":"1.16.1","depth":2,"next":{"title":"Umeng","level":"1.16.2","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]},"previous":{"title":"Integrate Push","level":"1.16","depth":1,"path":"resource/Push.md","ref":"./resource/Push.md","articles":[{"title":"FCM Push","level":"1.16.1","depth":2,"path":"resource/Push_fcm.md","ref":"./resource/Push_fcm.md","articles":[]},{"title":"Umeng","level":"1.16.2","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Push_fcm.md","mtime":"2019-10-17T02:56:11.002Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"FCM Push","level":"1.16.1","depth":2,"next":{"title":"Umeng","level":"1.16.2","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]},"previous":{"title":"Integrate Push","level":"1.16","depth":1,"path":"resource/Push.md","ref":"./resource/Push.md","articles":[{"title":"FCM Push","level":"1.16.1","depth":2,"path":"resource/Push_fcm.md","ref":"./resource/Push_fcm.md","articles":[]},{"title":"Umeng","level":"1.16.2","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Push_fcm.md","mtime":"2019-10-17T02:56:11.002Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1505,6 +1529,26 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1525,10 +1569,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

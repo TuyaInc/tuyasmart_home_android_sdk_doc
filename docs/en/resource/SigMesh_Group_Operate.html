@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="SigMesh_Device.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,20 +1416,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="sigmesh-group-operation"><a name="sigmesh-group-operation" class="plugin-anchor" href="#sigmesh-group-operation"><i class="fa fa-link" aria-hidden="true"></i></a>SigMesh Group Operation</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#sigmesh-group-operation"><b></b>SigMesh Group Operation</a></li><ul><li><span class="title-icon "></span><a href="#find-mesh-group"><b></b>Find Mesh Group</a></li><li><span class="title-icon "></span><a href="#create-mesh-group"><b></b>Create Mesh Group</a></li><li><span class="title-icon "></span><a href="#add-sub-devices-to-group"><b></b>Add Sub-devices to Group</a></li><li><span class="title-icon "></span><a href="#remove-sub-devices-from-group"><b></b>Remove Sub-devices From Group</a></li><li><span class="title-icon "></span><a href="#disband-group"><b></b>Disband Group</a></li><li><span class="title-icon "></span><a href="#group-rename"><b></b>Group Rename</a></li></ul></ul></div><a href="#sigmesh-group-operation" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sigmesh-group-operation"><a name="sigmesh-group-operation" class="anchor-navigation-ex-anchor" href="#sigmesh-group-operation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sigmesh-group-operation" class="plugin-anchor" href="#sigmesh-group-operation"><i class="fa fa-link" aria-hidden="true"></i></a>SigMesh Group Operation</h1>
 <p><code>ITuyaGroup</code> provides operations for Mesh group.</p>
-<h2 id="find-mesh-group"><a name="find-mesh-group" class="plugin-anchor" href="#find-mesh-group"><i class="fa fa-link" aria-hidden="true"></i></a>Find Mesh Group</h2>
+<h2 id="find-mesh-group"><a name="find-mesh-group" class="anchor-navigation-ex-anchor" href="#find-mesh-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="find-mesh-group" class="plugin-anchor" href="#find-mesh-group"><i class="fa fa-link" aria-hidden="true"></i></a>Find Mesh Group</h2>
 <p>A Mesh group or a WiFi group can be distinguished by whether it has a MeshId.</p>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">GroupBean groupBean<span class="token operator">=</span>TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token string">&quot;groupId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>TextUtils<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>groupBean<span class="token punctuation">.</span><span class="token function">getMeshId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    
-    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This group is mesh group&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">GroupBean</span> groupBean<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token string">&quot;groupId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>groupBean<span class="token punctuation">.</span><span class="token function">getMeshId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    
+    <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This group is mesh group&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="create-mesh-group"><a name="create-mesh-group" class="plugin-anchor" href="#create-mesh-group"><i class="fa fa-link" aria-hidden="true"></i></a>Create Mesh Group</h2>
+<h2 id="create-mesh-group"><a name="create-mesh-group" class="anchor-navigation-ex-anchor" href="#create-mesh-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="create-mesh-group" class="plugin-anchor" href="#create-mesh-group"><i class="fa fa-link" aria-hidden="true"></i></a>Create Mesh Group</h2>
 <p>16128 groups can be created in a mesh network. The id range when returning is 0xC000-0xFEFF . It is maintained locally.</p>
 <p>Declaration</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addGroup</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> String pcc<span class="token punctuation">,</span> String localId<span class="token punctuation">,</span>IAddGroupCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> localId<span class="token punctuation">,</span><span class="token class-name">IAddGroupCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Parameters</p>
 <table>
@@ -1435,11 +1459,11 @@
 </tbody>
 </table>
 <p>Example</p>
-<pre class="language-"><code class="lang-java">ITuyaBlueMeshDevice mTuyaSigMeshDevice<span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaBlueMeshDevice</span> mTuyaSigMeshDevice<span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSigMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 mTuyaSigMeshDevice<span class="token punctuation">.</span><span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token string">&quot;group name&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;pcc&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;8001&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IAddGroupCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
 
      <span class="token annotation punctuation">@Override</span>
@@ -1447,9 +1471,9 @@ mTuyaSigMeshDevice<span class="token punctuation">.</span><span class="token fun
      <span class="token punctuation">}</span>
      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="add-sub-devices-to-group"><a name="add-sub-devices-to-group" class="plugin-anchor" href="#add-sub-devices-to-group"><i class="fa fa-link" aria-hidden="true"></i></a>Add Sub-devices to Group</h2>
+<h2 id="add-sub-devices-to-group"><a name="add-sub-devices-to-group" class="anchor-navigation-ex-anchor" href="#add-sub-devices-to-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-sub-devices-to-group" class="plugin-anchor" href="#add-sub-devices-to-group"><i class="fa fa-link" aria-hidden="true"></i></a>Add Sub-devices to Group</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addDevice</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1471,10 +1495,10 @@ mTuyaSigMeshDevice<span class="token punctuation">.</span><span class="token fun
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">ITuyaGroup mGroup <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 mGroup<span class="token punctuation">.</span><span class="token function">addDevice</span><span class="token punctuation">(</span><span class="token string">&quot;devId&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
@@ -1482,9 +1506,9 @@ mGroup<span class="token punctuation">.</span><span class="token function">addDe
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="remove-sub-devices-from-group"><a name="remove-sub-devices-from-group" class="plugin-anchor" href="#remove-sub-devices-from-group"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Sub-devices From Group</h2>
+<h2 id="remove-sub-devices-from-group"><a name="remove-sub-devices-from-group" class="anchor-navigation-ex-anchor" href="#remove-sub-devices-from-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remove-sub-devices-from-group" class="plugin-anchor" href="#remove-sub-devices-from-group"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Sub-devices From Group</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeDevice</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1506,19 +1530,19 @@ mGroup<span class="token punctuation">.</span><span class="token function">addDe
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">ITuyaGroup mGroup <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 mGroup<span class="token punctuation">.</span><span class="token function">removeDevice</span><span class="token punctuation">(</span><span class="token string">&quot;devId&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
             <span class="token annotation punctuation">@Override</span>
             <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="disband-group"><a name="disband-group" class="plugin-anchor" href="#disband-group"><i class="fa fa-link" aria-hidden="true"></i></a>Disband Group</h2>
+<h2 id="disband-group"><a name="disband-group" class="anchor-navigation-ex-anchor" href="#disband-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="disband-group" class="plugin-anchor" href="#disband-group"><i class="fa fa-link" aria-hidden="true"></i></a>Disband Group</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">dismissGroup</span><span class="token punctuation">(</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">dismissGroup</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1536,10 +1560,10 @@ mGroup<span class="token punctuation">.</span><span class="token function">remov
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">ITuyaGroup mGroup <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 mGroup<span class="token punctuation">.</span><span class="token function">dismissGroup</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
@@ -1547,9 +1571,9 @@ mGroup<span class="token punctuation">.</span><span class="token function">dismi
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="group-rename"><a name="group-rename" class="plugin-anchor" href="#group-rename"><i class="fa fa-link" aria-hidden="true"></i></a>Group Rename</h2>
+<h2 id="group-rename"><a name="group-rename" class="anchor-navigation-ex-anchor" href="#group-rename"><i class="fa fa-link" aria-hidden="true"></i></a><a name="group-rename" class="plugin-anchor" href="#group-rename"><i class="fa fa-link" aria-hidden="true"></i></a>Group Rename</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameGroup</span><span class="token punctuation">(</span>String groupName<span class="token punctuation">,</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameGroup</span><span class="token punctuation">(</span><span class="token class-name">String</span> groupName<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1571,10 +1595,10 @@ mGroup<span class="token punctuation">.</span><span class="token function">dismi
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">ITuyaGroup mGroup <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSigMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 mGroup<span class="token punctuation">.</span><span class="token function">renameGroup</span><span class="token punctuation">(</span><span class="token string">&quot;group name&quot;</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
@@ -1625,7 +1649,7 @@ mGroup<span class="token punctuation">.</span><span class="token function">renam
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Group","level":"1.19.6","depth":2,"next":{"title":"Control","level":"1.19.7","depth":2,"path":"resource/SigMesh_Device_Operate.md","ref":"./resource/SigMesh_Device_Operate.md","articles":[]},"previous":{"title":"Device","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SigMesh_Group_Operate.md","mtime":"2020-03-19T13:16:27.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Group","level":"1.19.6","depth":2,"next":{"title":"Control","level":"1.19.7","depth":2,"path":"resource/SigMesh_Device_Operate.md","ref":"./resource/SigMesh_Device_Operate.md","articles":[]},"previous":{"title":"Device","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SigMesh_Group_Operate.md","mtime":"2020-03-19T13:16:27.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1640,6 +1664,26 @@ mGroup<span class="token punctuation">.</span><span class="token function">renam
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1660,10 +1704,6 @@ mGroup<span class="token punctuation">.</span><span class="token function">renam
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

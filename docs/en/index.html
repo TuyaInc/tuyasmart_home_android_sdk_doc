@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -64,6 +77,17 @@
     <link rel="next" href="resource/Preparation.html" />
     
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -149,7 +173,7 @@
                 <a href="resource/User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -209,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="resource/User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="resource/User_update.html">
             
-                <a href="resource/User_Logout.html#change-nickname">
+                <a href="resource/User_update.html">
             
                     
                     Modify User Information
@@ -222,9 +246,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="resource/User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="resource/User_logout.html">
             
-                <a href="resource/User_Logout.html#logout-interface">
+                <a href="resource/User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -235,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="resource/User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="resource/User_logout.html">
             
-                <a href="resource/User_Logout.html#disable-account">
+                <a href="resource/User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -481,7 +505,7 @@
     
         <li class="chapter " data-level="1.9" data-path="resource/Device.html">
             
-                <a href="resource/Device.html">
+                <a href="resource/Device.html#device-control">
             
                     
                     Device Control
@@ -654,7 +678,7 @@
                 <a href="resource/Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1390,17 +1414,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="tuya-smart-android-sdk"><a name="tuya-smart-android-sdk" class="plugin-anchor" href="#tuya-smart-android-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>Tuya Smart Android SDK</h1>
-<h2 id="features-overview"><a name="features-overview" class="plugin-anchor" href="#features-overview"><i class="fa fa-link" aria-hidden="true"></i></a>Features Overview</h2>
-<p>Tuya Smart APP SDK provides the interface package for the communication between hardware and Tuya Cloud to accelerate the application development process, including the following features:</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#tuya-smart-android-home-sdk-overview"><b></b>Tuya Smart Android Home SDK Overview</a></li></ul></div><a href="#tuya-smart-android-home-sdk-overview" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="tuya-smart-android-home-sdk-overview"><a name="tuya-smart-android-home-sdk-overview" class="anchor-navigation-ex-anchor" href="#tuya-smart-android-home-sdk-overview"><i class="fa fa-link" aria-hidden="true"></i></a><a name="tuya-smart-android-home-sdk-overview" class="plugin-anchor" href="#tuya-smart-android-home-sdk-overview"><i class="fa fa-link" aria-hidden="true"></i></a>Tuya Smart Android Home SDK Overview</h1>
+<p>Tuya Smart Android Home SDK is a solution for the Whole house intelligence on the Android,  Android developers can quickly develop app functions based on SDK, realize the activation of intelligent hardware, hardware control, firmware upgrades, timed tasks, intelligent scenarios and other operations.</p>
+<p>The SDK includes the following features::</p>
 <ul>
-<li>Hardware functions (network configuration, control, status reporting, regular tasks, groups, firmware upgrades and sharing)</li>
 <li>Account system (phone number, email registration, login, password reset and other general account functions)</li>
-<li>Family management</li>
-<li>ZigBee Gateway</li>
-<li>Message Center</li>
-<li>Feedback</li>
-<li>Tuya Cloud HTTP API interface package(<a href="https://docs.tuya.com/en/cloudapi/appAPI/index.html" target="_blank">APP API list</a>)</li>
+<li>Home system (home management, room management, home sharing and other functions)</li>
+<li>Hardware functions (network configuration, control, status reporting, timed tasks, groups, firmware upgrades, sharing)</li>
+<li>Dependency environment based on Android 5.0 and higher</li>
 </ul>
 
                                 
@@ -1441,7 +1462,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Preparation for Integration","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"README.md","mtime":"2019-03-12T02:03:54.256Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":".","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Preparation for Integration","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"README.md","mtime":"2020-03-20T01:41:07.969Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":".","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1456,6 +1477,26 @@
     
         
         <script src="../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1476,10 +1517,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

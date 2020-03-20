@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="SigMesh_IDEA.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,33 +1416,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="sigmesh-manager"><a name="sigmesh-manager" class="plugin-anchor" href="#sigmesh-manager"><i class="fa fa-link" aria-hidden="true"></i></a>SigMesh Manager</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#sigmesh-manager"><b></b>SigMesh Manager</a></li><ul><li><span class="title-icon "></span><a href="#create-sigmesh"><b></b>Create SigMesh</a></li><li><span class="title-icon "></span><a href="#delete-sigmesh"><b></b>Delete SigMesh</a></li><li><span class="title-icon "></span><a href="#get-mesh-data-from-cache"><b></b>Get Mesh Data From Cache</a></li><li><span class="title-icon "></span><a href="#get-sub-device-data-from-cache"><b></b>Get Sub-device Data From Cache</a></li><li><span class="title-icon "></span><a href="#mesh-init---destroy"><b></b>Mesh Init  &amp; Destroy</a></li><li><span class="title-icon "></span><a href="#mesh-sub-device-connect-and-disconnect"><b></b>Mesh Sub-device Connect and disconnect</a></li></ul></ul></div><a href="#sigmesh-manager" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sigmesh-manager"><a name="sigmesh-manager" class="anchor-navigation-ex-anchor" href="#sigmesh-manager"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sigmesh-manager" class="plugin-anchor" href="#sigmesh-manager"><i class="fa fa-link" aria-hidden="true"></i></a>SigMesh Manager</h1>
 <p>Contains MeshId creation, destruction</p>
-<h2 id="create-sigmesh"><a name="create-sigmesh" class="plugin-anchor" href="#create-sigmesh"><i class="fa fa-link" aria-hidden="true"></i></a>Create SigMesh</h2>
+<h2 id="create-sigmesh"><a name="create-sigmesh" class="anchor-navigation-ex-anchor" href="#create-sigmesh"><i class="fa fa-link" aria-hidden="true"></i></a><a name="create-sigmesh" class="plugin-anchor" href="#create-sigmesh"><i class="fa fa-link" aria-hidden="true"></i></a>Create SigMesh</h2>
 <p>MeshId is created by the cloud. Only one Mesh can be created in a family.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">createSigMesh</span><span class="token punctuation">(</span>ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>SigMeshBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">createSigMesh</span><span class="token punctuation">(</span><span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SigMeshBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token string">&quot;homeIdxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createSigMesh</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>SigMeshBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token string">&quot;homeIdxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createSigMesh</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SigMeshBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>SigMeshBean sigMeshBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">SigMeshBean</span> sigMeshBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="delete-sigmesh"><a name="delete-sigmesh" class="plugin-anchor" href="#delete-sigmesh"><i class="fa fa-link" aria-hidden="true"></i></a>Delete SigMesh</h2>
+<h2 id="delete-sigmesh"><a name="delete-sigmesh" class="anchor-navigation-ex-anchor" href="#delete-sigmesh"><i class="fa fa-link" aria-hidden="true"></i></a><a name="delete-sigmesh" class="plugin-anchor" href="#delete-sigmesh"><i class="fa fa-link" aria-hidden="true"></i></a>Delete SigMesh</h2>
 <p>Delete SigMesh MeshId</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeMesh</span><span class="token punctuation">(</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeMesh</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshDeviceInstance</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeMesh</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSigMeshDeviceInstance</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeMesh</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
@@ -1426,54 +1450,54 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="get-mesh-data-from-cache"><a name="get-mesh-data-from-cache" class="plugin-anchor" href="#get-mesh-data-from-cache"><i class="fa fa-link" aria-hidden="true"></i></a>Get Mesh Data From Cache</h2>
+<h2 id="get-mesh-data-from-cache"><a name="get-mesh-data-from-cache" class="anchor-navigation-ex-anchor" href="#get-mesh-data-from-cache"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-mesh-data-from-cache" class="plugin-anchor" href="#get-mesh-data-from-cache"><i class="fa fa-link" aria-hidden="true"></i></a>Get Mesh Data From Cache</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>SigMeshBean<span class="token punctuation">&gt;</span></span> <span class="token function">getSigMeshList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SigMeshBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getSigMeshList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">ITuyaHome mTuyaHome <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token string">&quot;homeIdxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span> <span class="token punctuation">(</span>mTuyaHome<span class="token punctuation">.</span><span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> null<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    List<span class="token generics function"><span class="token punctuation">&lt;</span>SigMeshBean<span class="token punctuation">&gt;</span></span> meshList <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getSigMeshInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSigMeshList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaHome</span> mTuyaHome <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token string">&quot;homeIdxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>mTuyaHome<span class="token punctuation">.</span><span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SigMeshBean</span><span class="token punctuation">&gt;</span></span> meshList <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getSigMeshInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSigMeshList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="get-sub-device-data-from-cache"><a name="get-sub-device-data-from-cache" class="plugin-anchor" href="#get-sub-device-data-from-cache"><i class="fa fa-link" aria-hidden="true"></i></a>Get Sub-device Data From Cache</h2>
+<h2 id="get-sub-device-data-from-cache"><a name="get-sub-device-data-from-cache" class="anchor-navigation-ex-anchor" href="#get-sub-device-data-from-cache"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-sub-device-data-from-cache" class="plugin-anchor" href="#get-sub-device-data-from-cache"><i class="fa fa-link" aria-hidden="true"></i></a>Get Sub-device Data From Cache</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"> List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getMeshSubDevList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshSubDevList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> meshSubDevList <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newSigMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshIdxxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshSubDevList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> meshSubDevList <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newSigMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshIdxxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshSubDevList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="mesh-init---destroy"><a name="mesh-init---destroy" class="plugin-anchor" href="#mesh-init---destroy"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh Init  &amp; Destroy</h2>
+<h2 id="mesh-init---destroy"><a name="mesh-init---destroy" class="anchor-navigation-ex-anchor" href="#mesh-init---destroy"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-init---destroy" class="plugin-anchor" href="#mesh-init---destroy"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh Init  &amp; Destroy</h2>
 <p>It is recommended to destroy the current mesh and re-initialize the mesh when the family switches.</p>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">//init mesh</span>
-<span class="token keyword">void</span> <span class="token function">initMesh</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">initMesh</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//destroy current mesh</span>
 <span class="token keyword">void</span> <span class="token function">destroyMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">//init mesh</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">initMesh</span><span class="token punctuation">(</span><span class="token string">&quot;meshIdxxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">initMesh</span><span class="token punctuation">(</span><span class="token string">&quot;meshIdxxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//destroy current mesh</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">destroyMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">destroyMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="mesh-sub-device-connect-and-disconnect"><a name="mesh-sub-device-connect-and-disconnect" class="plugin-anchor" href="#mesh-sub-device-connect-and-disconnect"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh Sub-device Connect and disconnect</h2>
+<h2 id="mesh-sub-device-connect-and-disconnect"><a name="mesh-sub-device-connect-and-disconnect" class="anchor-navigation-ex-anchor" href="#mesh-sub-device-connect-and-disconnect"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-sub-device-connect-and-disconnect" class="plugin-anchor" href="#mesh-sub-device-connect-and-disconnect"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh Sub-device Connect and disconnect</h2>
 <p><code>ITuyaBlueMeshClient</code> provides connect, disconnect, scan, stop scan.</p>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// start connect</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startClient</span><span class="token punctuation">(</span>mSigMeshBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startClient</span><span class="token punctuation">(</span>mSigMeshBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// start connect with timeout</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startClient</span><span class="token punctuation">(</span>mSigMeshBean<span class="token punctuation">,</span>searchTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startClient</span><span class="token punctuation">(</span>mSigMeshBean<span class="token punctuation">,</span>searchTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//disconnect</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//start scan</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 <span class="token comment">//stop scan</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaSigMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Precautions</strong></p>
 <ul>
@@ -1525,7 +1549,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Management","level":"1.19.3","depth":2,"next":{"title":"Configuration","level":"1.19.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},"previous":{"title":"Basic Notion","level":"1.19.2","depth":2,"path":"resource/SigMesh_IDEA.md","ref":"./resource/SigMesh_IDEA.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SigMesh_Admin.md","mtime":"2020-03-19T12:42:11.308Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Management","level":"1.19.3","depth":2,"next":{"title":"Configuration","level":"1.19.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},"previous":{"title":"Basic Notion","level":"1.19.2","depth":2,"path":"resource/SigMesh_IDEA.md","ref":"./resource/SigMesh_IDEA.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SigMesh_Admin.md","mtime":"2020-03-19T12:42:11.308Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1540,6 +1564,26 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1560,10 +1604,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

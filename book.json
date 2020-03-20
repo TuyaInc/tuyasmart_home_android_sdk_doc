@@ -3,7 +3,14 @@
     "js-sequence-diagram-full@>=0.3.1",
     "prism",
     "-highlight",
-    "anchors"
+    "anchors",
+    "splitter",
+    "github",
+    "github-buttons",
+    "-sharing",
+    "anchor-navigation-ex",
+    "alerts",
+    "ga"
   ],
   "pluginsConfig": {
     "prism": {
@@ -16,6 +23,28 @@
       "ignore": [
         "sequence"
       ]
+    },
+    "github": {
+      "url": "https://github.com/TuyaInc/tuyasmart_home_android_sdk"
+    },
+    "github-buttons": {
+      "buttons": [{
+        "user": "TuyaInc",
+        "repo": "tuyasmart_home_android_sdk",
+        "type": "star",
+        "size": "small"
+      }]
+    },
+    "sharing": {
+      "all": []
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false,
+      "associatedWithSummary": false,
+      "showGoTop": true    
+    },
+    "ga": {
+        "token": "UA-161421048-1"
     }
   }
 }

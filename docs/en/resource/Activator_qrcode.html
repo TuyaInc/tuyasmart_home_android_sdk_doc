@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Activator_zigbee_subdevice.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,8 +1416,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="device-qrcode-configuration"><a name="device-qrcode-configuration" class="plugin-anchor" href="#device-qrcode-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>Device QRCode Configuration</h3>
-<h4 id="description"><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#device-qrcode-configuration"><b></b>Device QRCode Configuration</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="device-qrcode-configuration"><a name="device-qrcode-configuration" class="anchor-navigation-ex-anchor" href="#device-qrcode-configuration"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-qrcode-configuration" class="plugin-anchor" href="#device-qrcode-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>Device QRCode Configuration</h3>
+<h4 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
 <p>This function is only applicable to the device that has self-entered internet after powered on the device. </p>
 <pre class="language-"><code class="lang-sequence">
 Title: Device QRCode Configuration
@@ -1422,8 +1446,8 @@ Device-&gt;cloud: Activate the device
 cloud--&gt;Device: Network configuration succeeds
 cloud--&gt;APP: Network configuration succeeds
 </code></pre>
-<h4 id="initialize-parameters"><a name="initialize-parameters" class="plugin-anchor" href="#initialize-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Initialize Parameters</h4>
-<pre class="language-"><code class="lang-java">TuyaQRCodeActivatorBuilder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaQRCodeActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<h4 id="initialize-parameters"><a name="initialize-parameters" class="anchor-navigation-ex-anchor" href="#initialize-parameters"><i class="fa fa-link" aria-hidden="true"></i></a><a name="initialize-parameters" class="plugin-anchor" href="#initialize-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Initialize Parameters</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaQRCodeActivatorBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaQRCodeActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setUuid</span><span class="token punctuation">(</span>uuid<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setHomeId</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">)</span>
@@ -1431,17 +1455,17 @@ cloud--&gt;APP: Network configuration succeeds
         <span class="token punctuation">.</span><span class="token function">setListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSmartActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span>DeviceBean devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span>String step<span class="token punctuation">,</span> Object data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span><span class="token class-name">String</span> step<span class="token punctuation">,</span> <span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -1470,7 +1494,7 @@ cloud--&gt;APP: Network configuration succeeds
 </tr>
 </tbody>
 </table>
-<h4 id="configuration-method-invocation"><a name="configuration-method-invocation" class="plugin-anchor" href="#configuration-method-invocation"><i class="fa fa-link" aria-hidden="true"></i></a>Configuration Method Invocation</h4>
+<h4 id="configuration-method-invocation"><a name="configuration-method-invocation" class="anchor-navigation-ex-anchor" href="#configuration-method-invocation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="configuration-method-invocation" class="plugin-anchor" href="#configuration-method-invocation"><i class="fa fa-link" aria-hidden="true"></i></a>Configuration Method Invocation</h4>
 <p>ITuyaActivator mTuyaActivator = TuyaHomeSdk.getActivatorInstance().newQRCodeDevActivator(builder);
 // Start network configuration
 mTuyaActivator.start();
@@ -1511,7 +1535,7 @@ mTuyaActivator.onDestory();
                 </a>
                 
                 
-                <a href="Device.html" class="navigation navigation-next " aria-label="Next page: Device Control">
+                <a href="Device.html#device-control" class="navigation navigation-next " aria-label="Next page: Device Control">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1522,7 +1546,7 @@ mTuyaActivator.onDestory();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scan QRCode Configuration","level":"1.8","depth":1,"next":{"title":"Device Control","level":"1.9","depth":1,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[{"title":"Device Information Acquisition","level":"1.9.1","depth":2,"anchor":"#device-information-acquisition","path":"resource/Device.md","ref":"./resource/Device.md#device-information-acquisition","articles":[]},{"title":"Initial Device Control","level":"1.9.2","depth":2,"anchor":"#initial-device-control","path":"resource/Device.md","ref":"./resource/Device.md#initial-device-control","articles":[]},{"title":"Register Device Listener","level":"1.9.3","depth":2,"anchor":"#register-device-listener","path":"resource/Device.md","ref":"./resource/Device.md#register-device-listener","articles":[]},{"title":"Unregister Device Listener","level":"1.9.4","depth":2,"anchor":"#unregister-device-listener","path":"resource/Device.md","ref":"./resource/Device.md#unregister-device-listener","articles":[]},{"title":"Device Control Method","level":"1.9.5","depth":2,"anchor":"#device-control-method","path":"resource/Device.md","ref":"./resource/Device.md#device-control-method","articles":[]},{"title":"Function Points of Device","level":"1.9.6","depth":2,"anchor":"#function-points-of-device","path":"resource/Device.md","ref":"./resource/Device.md#function-points-of-device","articles":[]},{"title":"Querying Device Information","level":"1.9.7","depth":2,"anchor":"#querying-device-information","path":"resource/Device.md","ref":"./resource/Device.md#querying-device-information","articles":[]},{"title":"Rename Device","level":"1.9.8","depth":2,"anchor":"#rename-device","path":"resource/Device.md","ref":"./resource/Device.md#rename-device","articles":[]},{"title":"Remove Device","level":"1.9.9","depth":2,"anchor":"#remove-device","path":"resource/Device.md","ref":"./resource/Device.md#remove-device","articles":[]},{"title":"Query Wi-Fi Signal Strength","level":"1.9.10","depth":2,"anchor":"#query-wi-fi-signal-strength","path":"resource/Device.md","ref":"./resource/Device.md#query-wi-fi-signal-strength","articles":[]},{"title":"Recycling Device Resources","level":"1.9.11","depth":2,"anchor":"#recycling-device-resources","path":"resource/Device.md","ref":"./resource/Device.md#recycling-device-resources","articles":[]},{"title":"Firmware Upgrade","level":"1.9.12","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"Gateway","level":"1.9.13","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]}]},"previous":{"title":"ZigBee Sub-device Configuration","level":"1.7.2","depth":2,"path":"resource/Activator_zigbee_subdevice.md","ref":"resource/Activator_zigbee_subdevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_qrcode.md","mtime":"2020-03-19T13:58:01.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Scan QRCode Configuration","level":"1.8","depth":1,"next":{"title":"Device Control","level":"1.9","depth":1,"anchor":"#device-control","path":"resource/Device.md","ref":"./resource/Device.md#device-control","articles":[{"title":"Device Information Acquisition","level":"1.9.1","depth":2,"anchor":"#device-information-acquisition","path":"resource/Device.md","ref":"./resource/Device.md#device-information-acquisition","articles":[]},{"title":"Initial Device Control","level":"1.9.2","depth":2,"anchor":"#initial-device-control","path":"resource/Device.md","ref":"./resource/Device.md#initial-device-control","articles":[]},{"title":"Register Device Listener","level":"1.9.3","depth":2,"anchor":"#register-device-listener","path":"resource/Device.md","ref":"./resource/Device.md#register-device-listener","articles":[]},{"title":"Unregister Device Listener","level":"1.9.4","depth":2,"anchor":"#unregister-device-listener","path":"resource/Device.md","ref":"./resource/Device.md#unregister-device-listener","articles":[]},{"title":"Device Control Method","level":"1.9.5","depth":2,"anchor":"#device-control-method","path":"resource/Device.md","ref":"./resource/Device.md#device-control-method","articles":[]},{"title":"Function Points of Device","level":"1.9.6","depth":2,"anchor":"#function-points-of-device","path":"resource/Device.md","ref":"./resource/Device.md#function-points-of-device","articles":[]},{"title":"Querying Device Information","level":"1.9.7","depth":2,"anchor":"#querying-device-information","path":"resource/Device.md","ref":"./resource/Device.md#querying-device-information","articles":[]},{"title":"Rename Device","level":"1.9.8","depth":2,"anchor":"#rename-device","path":"resource/Device.md","ref":"./resource/Device.md#rename-device","articles":[]},{"title":"Remove Device","level":"1.9.9","depth":2,"anchor":"#remove-device","path":"resource/Device.md","ref":"./resource/Device.md#remove-device","articles":[]},{"title":"Query Wi-Fi Signal Strength","level":"1.9.10","depth":2,"anchor":"#query-wi-fi-signal-strength","path":"resource/Device.md","ref":"./resource/Device.md#query-wi-fi-signal-strength","articles":[]},{"title":"Recycling Device Resources","level":"1.9.11","depth":2,"anchor":"#recycling-device-resources","path":"resource/Device.md","ref":"./resource/Device.md#recycling-device-resources","articles":[]},{"title":"Firmware Upgrade","level":"1.9.12","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"ZigBee Gateway Control","level":"1.9.13","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]}]},"previous":{"title":"ZigBee Sub-device Configuration","level":"1.7.2","depth":2,"path":"resource/Activator_zigbee_subdevice.md","ref":"resource/Activator_zigbee_subdevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_qrcode.md","mtime":"2020-03-19T13:58:01.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1537,6 +1561,26 @@ mTuyaActivator.onDestory();
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1557,10 +1601,6 @@ mTuyaActivator.onDestory();
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

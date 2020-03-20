@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Gateway.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Loginout.html">
+                <a href="User_update.html">
             
                     
                     修改用户信息
@@ -224,12 +248,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#退出登录接口">
+                <a href="User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#停用账户">
+                <a href="User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#设备控制">
             
                     
                     设备控制
@@ -643,7 +667,7 @@
                 <a href="Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1386,7 +1410,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5171;&#x4EAB;&#x8BBE;&#x5907;"><a name="&#x5171;&#x4EAB;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x5171;&#x4EAB;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5171;&#x4EAB;&#x8BBE;&#x5907;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5171;&#x4EAB;&#x8BBE;&#x5907;"><b></b>&#x5171;&#x4EAB;&#x8BBE;&#x5907;</a></li></ul></div><a href="#&#x5171;&#x4EAB;&#x8BBE;&#x5907;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5171;&#x4EAB;&#x8BBE;&#x5907;"><a name="&#x5171;&#x4EAB;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x5171;&#x4EAB;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5171;&#x4EAB;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x5171;&#x4EAB;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5171;&#x4EAB;&#x8BBE;&#x5907;</h1>
 <p>&#x6D82;&#x9E26;&#x667A;&#x80FD;&#x63D0;&#x4F9B;&#x4E86;&#x5411;&#x597D;&#x53CB;&#x5206;&#x4EAB;&#x63A7;&#x5236;&#x8BBE;&#x5907;&#x7684;&#x80FD;&#x529B;&#x3002;&#x652F;&#x6301;&#x5206;&#x4EAB;&#x8005;&#x548C;&#x88AB;&#x5206;&#x4EAB;&#x8005;&#x5BF9;&#x5206;&#x4EAB;&#x7684;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x589E;&#x52A0;&#x3001;&#x5220;&#x9664;&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x4FEE;&#x6539;&#x3002;</p>
 <table>
 <thead>
@@ -1429,7 +1453,7 @@
 
             
                 
-                <a href="Gateway.html" class="navigation navigation-prev " aria-label="Previous page: 网关">
+                <a href="Gateway.html" class="navigation navigation-prev " aria-label="Previous page: ZigBee 网关控制">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1445,7 +1469,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"共享设备","level":"1.10","depth":1,"next":{"title":"添加共享","level":"1.10.1","depth":2,"path":"resource/Shared_Device_add.md","ref":"./resource/Shared_Device_add.md","articles":[]},"previous":{"title":"网关","level":"1.9.12","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Shared.md","mtime":"2020-03-19T14:01:41.381Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"共享设备","level":"1.10","depth":1,"next":{"title":"添加共享","level":"1.10.1","depth":2,"path":"resource/Shared_Device_add.md","ref":"./resource/Shared_Device_add.md","articles":[]},"previous":{"title":"ZigBee 网关控制","level":"1.9.12","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Shared.md","mtime":"2020-03-19T14:01:41.381Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1460,6 +1484,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1480,10 +1524,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

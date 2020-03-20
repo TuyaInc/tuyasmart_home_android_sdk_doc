@@ -2,13 +2,13 @@
 
 ## Create an SDK APP
 
-1. Click "App Service" - "App SDK" - "Obtain SDK" in order on the iot platform.
-
-2. Select the feature according to your needs and click "Next".
+1. Got to [Tuya IoT platform](https://iot.tuya.com/)
+2. Click "App Service" - "App SDK" - "Obtain SDK" in order on the iot platform.
+3. Select the feature according to your needs and click "Next".
 
 ![](./images/get_sdk.png)
 
-3. Enter the created app information as prompted and click "Next."
+3. Enter the created app information as prompted and click "Next".
 
 	![](./images/input_app_info.png)
 

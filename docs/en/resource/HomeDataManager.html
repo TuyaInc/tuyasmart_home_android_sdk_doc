@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="HomeManager.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,11 +1416,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="operation-class-of-cached-data"><a name="operation-class-of-cached-data" class="plugin-anchor" href="#operation-class-of-cached-data"><i class="fa fa-link" aria-hidden="true"></i></a>Operation class of cached data</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#operation-class-of-cached-data"><b></b>Operation Class of Cached Data</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="operation-class-of-cached-data"><a name="operation-class-of-cached-data" class="anchor-navigation-ex-anchor" href="#operation-class-of-cached-data"><i class="fa fa-link" aria-hidden="true"></i></a><a name="operation-class-of-cached-data" class="plugin-anchor" href="#operation-class-of-cached-data"><i class="fa fa-link" aria-hidden="true"></i></a>Operation Class of Cached Data</h3>
 <p>Every time <code>TuyaHomeSdk.newHomeInstance(homeId).getHomeDetail()</code> is used to get the details of the specified family, the family information will be cached in the SDK. At this time, you can use <code>ITuyaHomeDataManager</code> to operate the data cached in SDK.</p>
-<h4 id="get-home-data"><a name="get-home-data" class="plugin-anchor" href="#get-home-data"><i class="fa fa-link" aria-hidden="true"></i></a>Get home data</h4>
+<h4 id="get-home-data"><a name="get-home-data" class="anchor-navigation-ex-anchor" href="#get-home-data"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-home-data" class="plugin-anchor" href="#get-home-data"><i class="fa fa-link" aria-hidden="true"></i></a>Get Home Data</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">HomeBean <span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">HomeBean</span> <span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1414,11 +1438,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeBean</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeBean</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-a-list-of-devices-groups-and-rooms-under-the-family"><a name="get-a-list-of-devices-groups-and-rooms-under-the-family" class="plugin-anchor" href="#get-a-list-of-devices-groups-and-rooms-under-the-family"><i class="fa fa-link" aria-hidden="true"></i></a>Get a list of devices, groups and rooms under the family</h4>
+<h4 id="get-a-list-of-devices-groups-and-rooms-under-the-family"><a name="get-a-list-of-devices-groups-and-rooms-under-the-family" class="anchor-navigation-ex-anchor" href="#get-a-list-of-devices-groups-and-rooms-under-the-family"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-a-list-of-devices-groups-and-rooms-under-the-family" class="plugin-anchor" href="#get-a-list-of-devices-groups-and-rooms-under-the-family"><i class="fa fa-link" aria-hidden="true"></i></a>Get a List of Devices, Groups and Rooms Under the Family</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>RoomBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeRoomList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">RoomBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeRoomList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1436,11 +1460,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeRoomList</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeRoomList</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-the-device-list-below-home"><a name="get-the-device-list-below-home" class="plugin-anchor" href="#get-the-device-list-below-home"><i class="fa fa-link" aria-hidden="true"></i></a>Get the device list below home</h4>
+<h4 id="get-the-device-list-below-home"><a name="get-the-device-list-below-home" class="anchor-navigation-ex-anchor" href="#get-the-device-list-below-home"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-device-list-below-home" class="plugin-anchor" href="#get-the-device-list-below-home"><i class="fa fa-link" aria-hidden="true"></i></a>Get the Device List Below Home</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1458,11 +1482,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeDeviceList</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-the-list-of-groups-under-the-family"><a name="get-the-list-of-groups-under-the-family" class="plugin-anchor" href="#get-the-list-of-groups-under-the-family"><i class="fa fa-link" aria-hidden="true"></i></a>Get the list of groups under the family</h4>
+<h4 id="get-the-list-of-groups-under-the-family"><a name="get-the-list-of-groups-under-the-family" class="anchor-navigation-ex-anchor" href="#get-the-list-of-groups-under-the-family"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-list-of-groups-under-the-family" class="plugin-anchor" href="#get-the-list-of-groups-under-the-family"><i class="fa fa-link" aria-hidden="true"></i></a>Get the List of Groups Under the Family</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getHomeGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getHomeGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1480,11 +1504,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeGroupList</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeGroupList</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-groups"><a name="get-groups" class="plugin-anchor" href="#get-groups"><i class="fa fa-link" aria-hidden="true"></i></a>Get groups</h4>
+<h4 id="get-groups"><a name="get-groups" class="anchor-navigation-ex-anchor" href="#get-groups"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-groups" class="plugin-anchor" href="#get-groups"><i class="fa fa-link" aria-hidden="true"></i></a>Get Groups</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">GroupBean <span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">GroupBean</span> <span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1502,11 +1526,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupBean</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupBean</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="acquiring-equipment"><a name="acquiring-equipment" class="plugin-anchor" href="#acquiring-equipment"><i class="fa fa-link" aria-hidden="true"></i></a>Acquiring equipment</h4>
+<h4 id="acquiring-equipment"><a name="acquiring-equipment" class="anchor-navigation-ex-anchor" href="#acquiring-equipment"><i class="fa fa-link" aria-hidden="true"></i></a><a name="acquiring-equipment" class="plugin-anchor" href="#acquiring-equipment"><i class="fa fa-link" aria-hidden="true"></i></a>Acquiring Equipment</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">DeviceBean <span class="token function">getDeviceBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DeviceBean</span> <span class="token function">getDeviceBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1524,11 +1548,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-rooms-based-on-group-id"><a name="get-rooms-based-on-group-id" class="plugin-anchor" href="#get-rooms-based-on-group-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get rooms based on group ID</h4>
+<h4 id="get-rooms-based-on-group-id"><a name="get-rooms-based-on-group-id" class="anchor-navigation-ex-anchor" href="#get-rooms-based-on-group-id"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-rooms-based-on-group-id" class="plugin-anchor" href="#get-rooms-based-on-group-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get Rooms Based on Group ID</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">RoomBean <span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">RoomBean</span> <span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1546,11 +1570,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupRoomBean</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-room"><a name="get-room" class="plugin-anchor" href="#get-room"><i class="fa fa-link" aria-hidden="true"></i></a>Get room</h4>
+<h4 id="get-room"><a name="get-room" class="anchor-navigation-ex-anchor" href="#get-room"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-room" class="plugin-anchor" href="#get-room"><i class="fa fa-link" aria-hidden="true"></i></a>Get Room</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">RoomBean <span class="token function">getRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">RoomBean</span> <span class="token function">getRoomBean</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1568,11 +1592,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRoomBean</span><span class="token punctuation">(</span>roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRoomBean</span><span class="token punctuation">(</span>roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-room-information-according-to-equipment"><a name="get-room-information-according-to-equipment" class="plugin-anchor" href="#get-room-information-according-to-equipment"><i class="fa fa-link" aria-hidden="true"></i></a>Get room information according to equipment</h4>
+<h4 id="get-room-information-according-to-equipment"><a name="get-room-information-according-to-equipment" class="anchor-navigation-ex-anchor" href="#get-room-information-according-to-equipment"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-room-information-according-to-equipment" class="plugin-anchor" href="#get-room-information-according-to-equipment"><i class="fa fa-link" aria-hidden="true"></i></a>Get Room Information According To Equipment</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">RoomBean <span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">RoomBean</span> <span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1590,11 +1614,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceRoomBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-the-device-list-under-the-group"><a name="get-the-device-list-under-the-group" class="plugin-anchor" href="#get-the-device-list-under-the-group"><i class="fa fa-link" aria-hidden="true"></i></a>Get the device list under the group</h4>
+<h4 id="get-the-device-list-under-the-group"><a name="get-the-device-list-under-the-group" class="anchor-navigation-ex-anchor" href="#get-the-device-list-under-the-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-device-list-under-the-group" class="plugin-anchor" href="#get-the-device-list-under-the-group"><i class="fa fa-link" aria-hidden="true"></i></a>Get the Device List Under the Group</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1612,11 +1636,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupDeviceList</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-the-group-list-under-mesh"><a name="get-the-group-list-under-mesh" class="plugin-anchor" href="#get-the-group-list-under-mesh"><i class="fa fa-link" aria-hidden="true"></i></a>Get the group list under mesh</h4>
+<h4 id="get-the-group-list-under-mesh"><a name="get-the-group-list-under-mesh" class="anchor-navigation-ex-anchor" href="#get-the-group-list-under-mesh"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-group-list-under-mesh" class="plugin-anchor" href="#get-the-group-list-under-mesh"><i class="fa fa-link" aria-hidden="true"></i></a>Get the Group List Under Mesh</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getMeshGroupList</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshGroupList</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1634,11 +1658,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshGroupList</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshGroupList</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-mesh-device-list"><a name="get-mesh-device-list" class="plugin-anchor" href="#get-mesh-device-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get mesh device list</h4>
+<h4 id="get-mesh-device-list"><a name="get-mesh-device-list" class="anchor-navigation-ex-anchor" href="#get-mesh-device-list"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-mesh-device-list" class="plugin-anchor" href="#get-mesh-device-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get Mesh Device List</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1656,11 +1680,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshDeviceList</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-the-equipment-list-under-the-room-according-to-the-room-id"><a name="get-the-equipment-list-under-the-room-according-to-the-room-id" class="plugin-anchor" href="#get-the-equipment-list-under-the-room-according-to-the-room-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get the equipment list under the room according to the room ID</h4>
+<h4 id="get-the-equipment-list-under-the-room-according-to-the-room-id"><a name="get-the-equipment-list-under-the-room-according-to-the-room-id" class="anchor-navigation-ex-anchor" href="#get-the-equipment-list-under-the-room-according-to-the-room-id"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-equipment-list-under-the-room-according-to-the-room-id" class="plugin-anchor" href="#get-the-equipment-list-under-the-room-according-to-the-room-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get the Equipment List Under the Room According To the Room ID</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1678,11 +1702,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span>roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRoomDeviceList</span><span class="token punctuation">(</span>roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-the-group-list-under-the-room-according-to-the-room-id"><a name="get-the-group-list-under-the-room-according-to-the-room-id" class="plugin-anchor" href="#get-the-group-list-under-the-room-according-to-the-room-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get the group list under the room according to the room ID</h4>
+<h4 id="get-the-group-list-under-the-room-according-to-the-room-id"><a name="get-the-group-list-under-the-room-according-to-the-room-id" class="anchor-navigation-ex-anchor" href="#get-the-group-list-under-the-room-according-to-the-room-id"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-group-list-under-the-room-according-to-the-room-id" class="plugin-anchor" href="#get-the-group-list-under-the-room-according-to-the-room-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get the Group List Under the Room According To the Room ID</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> <span class="token function">getRoomGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRoomGroupList</span><span class="token punctuation">(</span><span class="token keyword">long</span> roomId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1700,11 +1724,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRoomGroupList</span><span class="token punctuation">(</span>roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRoomGroupList</span><span class="token punctuation">(</span>roomId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-list-of-sub-devices"><a name="get-list-of-sub-devices" class="plugin-anchor" href="#get-list-of-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Get list of sub devices</h4>
+<h4 id="get-list-of-sub-devices"><a name="get-list-of-sub-devices" class="anchor-navigation-ex-anchor" href="#get-list-of-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-list-of-sub-devices" class="plugin-anchor" href="#get-list-of-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Get List of Sub Devices</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> <span class="token function">getSubDeviceBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getSubDeviceBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1722,11 +1746,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-sub-devices-according-to-node-id"><a name="get-sub-devices-according-to-node-id" class="plugin-anchor" href="#get-sub-devices-according-to-node-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get sub devices according to node ID</h4>
+<h4 id="get-sub-devices-according-to-node-id"><a name="get-sub-devices-according-to-node-id" class="anchor-navigation-ex-anchor" href="#get-sub-devices-according-to-node-id"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-sub-devices-according-to-node-id" class="plugin-anchor" href="#get-sub-devices-according-to-node-id"><i class="fa fa-link" aria-hidden="true"></i></a>Get Sub Devices According To Node ID</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">DeviceBean <span class="token function">getSubDeviceBeanByNodeId</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> String nodeId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DeviceBean</span> <span class="token function">getSubDeviceBeanByNodeId</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> nodeId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1748,11 +1772,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDeviceBeanByNodeId</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDeviceBeanByNodeId</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-product-information"><a name="get-product-information" class="plugin-anchor" href="#get-product-information"><i class="fa fa-link" aria-hidden="true"></i></a>Get product information</h4>
+<h4 id="get-product-information"><a name="get-product-information" class="anchor-navigation-ex-anchor" href="#get-product-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-product-information" class="plugin-anchor" href="#get-product-information"><i class="fa fa-link" aria-hidden="true"></i></a>Get Product Information</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">ProductBean <span class="token function">getProductBean</span><span class="token punctuation">(</span>String productId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ProductBean</span> <span class="token function">getProductBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> productId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1770,11 +1794,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getProductBean</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getProductBean</span><span class="token punctuation">(</span>productId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-dp-data"><a name="get-dp-data" class="plugin-anchor" href="#get-dp-data"><i class="fa fa-link" aria-hidden="true"></i></a>Get DP data</h4>
+<h4 id="get-dp-data"><a name="get-dp-data" class="anchor-navigation-ex-anchor" href="#get-dp-data"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-dp-data" class="plugin-anchor" href="#get-dp-data"><i class="fa fa-link" aria-hidden="true"></i></a>Get DP Data</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">Object <span class="token function">getDp</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> String dpId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Object</span> <span class="token function">getDp</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> dpId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1796,11 +1820,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDp</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> dpId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDp</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> dpId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-dps-data"><a name="get-dps-data" class="plugin-anchor" href="#get-dps-data"><i class="fa fa-link" aria-hidden="true"></i></a>Get DPS data</h4>
+<h4 id="get-dps-data"><a name="get-dps-data" class="anchor-navigation-ex-anchor" href="#get-dps-data"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-dps-data" class="plugin-anchor" href="#get-dps-data"><i class="fa fa-link" aria-hidden="true"></i></a>Get DPS Data</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> <span class="token function">getDps</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> <span class="token function">getDps</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1818,11 +1842,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDps</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDps</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-device-schema"><a name="get-device-schema" class="plugin-anchor" href="#get-device-schema"><i class="fa fa-link" aria-hidden="true"></i></a>Get device schema</h4>
+<h4 id="get-device-schema"><a name="get-device-schema" class="anchor-navigation-ex-anchor" href="#get-device-schema"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-device-schema" class="plugin-anchor" href="#get-device-schema"><i class="fa fa-link" aria-hidden="true"></i></a>Get Device Schema</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> SchemaBean<span class="token punctuation">&gt;</span></span> <span class="token function">getSchema</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">SchemaBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getSchema</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1840,11 +1864,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSchema</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSchema</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="query-device"><a name="query-device" class="plugin-anchor" href="#query-device"><i class="fa fa-link" aria-hidden="true"></i></a>Query device</h4>
+<h4 id="query-device"><a name="query-device" class="anchor-navigation-ex-anchor" href="#query-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="query-device" class="plugin-anchor" href="#query-device"><i class="fa fa-link" aria-hidden="true"></i></a>Query Device</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">queryDev</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> ITuyaDataCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">queryDev</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1866,20 +1890,20 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">queryDev</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">queryDev</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>Object result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Object</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="query-device"><a name="query-device" class="plugin-anchor" href="#query-device"><i class="fa fa-link" aria-hidden="true"></i></a>Query device</h4>
+<h4 id="query-device_1"><a name="query-device_1" class="anchor-navigation-ex-anchor" href="#query-device_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="query-device" class="plugin-anchor" href="#query-device"><i class="fa fa-link" aria-hidden="true"></i></a>Query Device</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">discoveredLanDevice</span><span class="token punctuation">(</span>ITuyaSearchDeviceListener listener<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">discoveredLanDevice</span><span class="token punctuation">(</span><span class="token class-name">ITuyaSearchDeviceListener</span> listener<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1897,16 +1921,16 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">discoveredLanDevice</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSearchDeviceListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">discoveredLanDevice</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSearchDeviceListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDeviceFind</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> DeviceActiveEnum activeEnum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDeviceFind</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">DeviceActiveEnum</span> activeEnum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="unregister-device-query-listening"><a name="unregister-device-query-listening" class="plugin-anchor" href="#unregister-device-query-listening"><i class="fa fa-link" aria-hidden="true"></i></a>Unregister device query listening</h4>
+<h4 id="unregister-device-query-listening"><a name="unregister-device-query-listening" class="anchor-navigation-ex-anchor" href="#unregister-device-query-listening"><i class="fa fa-link" aria-hidden="true"></i></a><a name="unregister-device-query-listening" class="plugin-anchor" href="#unregister-device-query-listening"><i class="fa fa-link" aria-hidden="true"></i></a>Unregister Device Query Listening</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">unRegisterDiscoveredLanDeviceListener</span><span class="token punctuation">(</span>ITuyaSearchDeviceListener listener<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">unRegisterDiscoveredLanDeviceListener</span><span class="token punctuation">(</span><span class="token class-name">ITuyaSearchDeviceListener</span> listener<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1924,16 +1948,16 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unRegisterDiscoveredLanDeviceListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSearchDeviceListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unRegisterDiscoveredLanDeviceListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSearchDeviceListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDeviceFind</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> DeviceActiveEnum activeEnum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDeviceFind</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">DeviceActiveEnum</span> activeEnum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="query-sub-devices"><a name="query-sub-devices" class="plugin-anchor" href="#query-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Query sub devices</h4>
+<h4 id="query-sub-devices"><a name="query-sub-devices" class="anchor-navigation-ex-anchor" href="#query-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="query-sub-devices" class="plugin-anchor" href="#query-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Query Sub Devices</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">querySubDev</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> ITuyaDataCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">querySubDev</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1959,20 +1983,20 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">querySubDev</span><span class="token punctuation">(</span>meshId<span class="token punctuation">,</span> devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">querySubDev</span><span class="token punctuation">(</span>meshId<span class="token punctuation">,</span> devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>DeviceBean result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-device-information"><a name="get-device-information" class="plugin-anchor" href="#get-device-information"><i class="fa fa-link" aria-hidden="true"></i></a>Get device information</h4>
+<h4 id="get-device-information"><a name="get-device-information" class="anchor-navigation-ex-anchor" href="#get-device-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-device-information" class="plugin-anchor" href="#get-device-information"><i class="fa fa-link" aria-hidden="true"></i></a>Get Device Information</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">DeviceRespBean <span class="token function">getDevRespBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DeviceRespBean</span> <span class="token function">getDevRespBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1990,11 +2014,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDevRespBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDevRespBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-sub-device-information"><a name="get-sub-device-information" class="plugin-anchor" href="#get-sub-device-information"><i class="fa fa-link" aria-hidden="true"></i></a>Get sub device information</h4>
+<h4 id="get-sub-device-information"><a name="get-sub-device-information" class="anchor-navigation-ex-anchor" href="#get-sub-device-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-sub-device-information" class="plugin-anchor" href="#get-sub-device-information"><i class="fa fa-link" aria-hidden="true"></i></a>Get Sub Device Information</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">DeviceRespBean <span class="token function">getSubDevRespBean</span><span class="token punctuation">(</span>String meshId<span class="token punctuation">,</span> String nodeId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DeviceRespBean</span> <span class="token function">getSubDevRespBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">,</span> <span class="token class-name">String</span> nodeId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2016,18 +2040,18 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDevRespBean</span><span class="token punctuation">(</span>meshId<span class="token punctuation">,</span> nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDevRespBean</span><span class="token punctuation">(</span>meshId<span class="token punctuation">,</span> nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-device-information-list"><a name="get-device-information-list" class="plugin-anchor" href="#get-device-information-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get device information list</h4>
+<h4 id="get-device-information-list"><a name="get-device-information-list" class="anchor-navigation-ex-anchor" href="#get-device-information-list"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-device-information-list" class="plugin-anchor" href="#get-device-information-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get Device Information List</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceRespBean<span class="token punctuation">&gt;</span></span> <span class="token function">getDevRespBeanList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceRespBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getDevRespBeanList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDevRespBeanList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDevRespBeanList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="add-device-list"><a name="add-device-list" class="plugin-anchor" href="#add-device-list"><i class="fa fa-link" aria-hidden="true"></i></a>Add device list</h4>
+<h4 id="add-device-list"><a name="add-device-list" class="anchor-navigation-ex-anchor" href="#add-device-list"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-device-list" class="plugin-anchor" href="#add-device-list"><i class="fa fa-link" aria-hidden="true"></i></a>Add Device List</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addDevRespList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceRespBean<span class="token punctuation">&gt;</span></span> deviceRespBeans<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addDevRespList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceRespBean</span><span class="token punctuation">&gt;</span></span> deviceRespBeans<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2045,11 +2069,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addDevRespList</span><span class="token punctuation">(</span>deviceRespBeans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addDevRespList</span><span class="token punctuation">(</span>deviceRespBeans<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="add-product-list"><a name="add-product-list" class="plugin-anchor" href="#add-product-list"><i class="fa fa-link" aria-hidden="true"></i></a>Add product list</h4>
+<h4 id="add-product-list"><a name="add-product-list" class="anchor-navigation-ex-anchor" href="#add-product-list"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-product-list" class="plugin-anchor" href="#add-product-list"><i class="fa fa-link" aria-hidden="true"></i></a>Add Product List</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addProductList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>ProductBean<span class="token punctuation">&gt;</span></span> productBeans<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addProductList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ProductBean</span><span class="token punctuation">&gt;</span></span> productBeans<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2067,11 +2091,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addProductList</span><span class="token punctuation">(</span>productBeans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addProductList</span><span class="token punctuation">(</span>productBeans<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-list-of-sub-devices"><a name="get-list-of-sub-devices" class="plugin-anchor" href="#get-list-of-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Get list of sub devices</h4>
+<h4 id="get-list-of-sub-devices_1"><a name="get-list-of-sub-devices_1" class="anchor-navigation-ex-anchor" href="#get-list-of-sub-devices_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-list-of-sub-devices" class="plugin-anchor" href="#get-list-of-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Get List of Sub Devices</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getSubDevList</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> ITuyaDataCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getSubDevList</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2093,13 +2117,13 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDevList</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getSubDevList</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>Object result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Object</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2147,7 +2171,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Home Data Management","level":"1.5.3","depth":2,"next":{"title":"Home Member Management","level":"1.5.4","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"previous":{"title":"Home Operations","level":"1.5.2","depth":2,"path":"resource/HomeManager.md","ref":"./resource/HomeManager.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/HomeDataManager.md","mtime":"2020-03-19T12:50:00.215Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Home Data Management","level":"1.5.3","depth":2,"next":{"title":"Home Member Management","level":"1.5.4","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"previous":{"title":"Home Operations","level":"1.5.2","depth":2,"path":"resource/HomeManager.md","ref":"./resource/HomeManager.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/HomeDataManager.md","mtime":"2020-03-20T03:36:06.689Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -2162,6 +2186,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -2182,10 +2226,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

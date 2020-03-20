@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="HomeMember.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,7 +1416,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="room-management"><a name="room-management" class="plugin-anchor" href="#room-management"><i class="fa fa-link" aria-hidden="true"></i></a>Room management</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#room-management"><b></b>Room Management</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="room-management"><a name="room-management" class="anchor-navigation-ex-anchor" href="#room-management"><i class="fa fa-link" aria-hidden="true"></i></a><a name="room-management" class="plugin-anchor" href="#room-management"><i class="fa fa-link" aria-hidden="true"></i></a>Room Management</h3>
 <p><strong>RoomBean</strong></p>
 <table>
 <thead>
@@ -1430,9 +1454,9 @@
 </tr>
 </tbody>
 </table>
-<h4 id="add-group"><a name="add-group" class="plugin-anchor" href="#add-group"><i class="fa fa-link" aria-hidden="true"></i></a>add group</h4>
+<h4 id="add-group"><a name="add-group" class="anchor-navigation-ex-anchor" href="#add-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-group" class="plugin-anchor" href="#add-group"><i class="fa fa-link" aria-hidden="true"></i></a>Add Group</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1450,9 +1474,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addGroup</span><span class="token punctuation">(</span>groupId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addGroup</span><span class="token punctuation">(</span>groupId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1461,9 +1485,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="update-room-name"><a name="update-room-name" class="plugin-anchor" href="#update-room-name"><i class="fa fa-link" aria-hidden="true"></i></a>Update room name</h4>
+<h4 id="update-room-name"><a name="update-room-name" class="anchor-navigation-ex-anchor" href="#update-room-name"><i class="fa fa-link" aria-hidden="true"></i></a><a name="update-room-name" class="plugin-anchor" href="#update-room-name"><i class="fa fa-link" aria-hidden="true"></i></a>Update Room Name</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateRoom</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateRoom</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1481,9 +1505,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateRoom</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateRoom</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1492,9 +1516,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="add-device"><a name="add-device" class="plugin-anchor" href="#add-device"><i class="fa fa-link" aria-hidden="true"></i></a>Add device</h4>
+<h4 id="add-device"><a name="add-device" class="anchor-navigation-ex-anchor" href="#add-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-device" class="plugin-anchor" href="#add-device"><i class="fa fa-link" aria-hidden="true"></i></a>Add Device</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addDevice</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1512,9 +1536,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addDevice</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addDevice</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1523,9 +1547,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="delete-device"><a name="delete-device" class="plugin-anchor" href="#delete-device"><i class="fa fa-link" aria-hidden="true"></i></a>Delete device</h4>
+<h4 id="delete-device"><a name="delete-device" class="anchor-navigation-ex-anchor" href="#delete-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="delete-device" class="plugin-anchor" href="#delete-device"><i class="fa fa-link" aria-hidden="true"></i></a>Delete Device</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeDevice</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1543,9 +1567,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeDevice</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeDevice</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1554,9 +1578,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="delete-group"><a name="delete-group" class="plugin-anchor" href="#delete-group"><i class="fa fa-link" aria-hidden="true"></i></a>Delete Group</h4>
+<h4 id="delete-group"><a name="delete-group" class="anchor-navigation-ex-anchor" href="#delete-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="delete-group" class="plugin-anchor" href="#delete-group"><i class="fa fa-link" aria-hidden="true"></i></a>Delete Group</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeGroup</span><span class="token punctuation">(</span>Long groupId<span class="token punctuation">,</span> IResultCallback resultCallback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeGroup</span><span class="token punctuation">(</span><span class="token class-name">Long</span> groupId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> resultCallback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1574,9 +1598,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeGroup</span><span class="token punctuation">(</span>groupId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeGroup</span><span class="token punctuation">(</span>groupId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1585,9 +1609,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="remove-group-or-device-from-room"><a name="remove-group-or-device-from-room" class="plugin-anchor" href="#remove-group-or-device-from-room"><i class="fa fa-link" aria-hidden="true"></i></a>Remove group or device from room</h4>
+<h4 id="remove-group-or-device-from-room"><a name="remove-group-or-device-from-room" class="anchor-navigation-ex-anchor" href="#remove-group-or-device-from-room"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remove-group-or-device-from-room" class="plugin-anchor" href="#remove-group-or-device-from-room"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Group or Device From Room</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">moveDevGroupListFromRoom</span><span class="token punctuation">(</span>List list<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">moveDevGroupListFromRoom</span><span class="token punctuation">(</span><span class="token class-name">List</span> list<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1605,9 +1629,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">moveDevGroupListFromRoom</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">moveDevGroupListFromRoom</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1616,9 +1640,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="sort-groups-or-devices-in-a-room"><a name="sort-groups-or-devices-in-a-room" class="plugin-anchor" href="#sort-groups-or-devices-in-a-room"><i class="fa fa-link" aria-hidden="true"></i></a>Sort groups or devices in a room</h4>
+<h4 id="sort-groups-or-devices-in-a-room"><a name="sort-groups-or-devices-in-a-room" class="anchor-navigation-ex-anchor" href="#sort-groups-or-devices-in-a-room"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sort-groups-or-devices-in-a-room" class="plugin-anchor" href="#sort-groups-or-devices-in-a-room"><i class="fa fa-link" aria-hidden="true"></i></a>Sort Groups or Devices in a Room</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">sortDevInRoom</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceAndGroupInRoomBean<span class="token punctuation">&gt;</span></span> list<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">sortDevInRoom</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceAndGroupInRoomBean</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1636,9 +1660,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sortDevInRoom</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newRoomInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sortDevInRoom</span><span class="token punctuation">(</span>list<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1690,7 +1714,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Room Management","level":"1.5.5","depth":2,"next":{"title":"Wi-Fi Configuration","level":"1.6","depth":1,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[{"title":"EZ Mode Configuration","level":"1.6.1","depth":2,"path":"resource/Activator_wifi_ez.md","ref":"resource/Activator_wifi_ez.md","articles":[]},{"title":"AP Mode Configuration","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"resource/Activator_wifi_ap.md","articles":[]},{"title":"Wi-Fi Common Problem","level":"1.6.3","depth":2,"path":"resource/Activator_wifi_qa.md","ref":"resource/Activator_wifi_qa.md","articles":[]}]},"previous":{"title":"Home Member Management","level":"1.5.4","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Room.md","mtime":"2020-03-19T12:50:00.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Room Management","level":"1.5.5","depth":2,"next":{"title":"Wi-Fi Configuration","level":"1.6","depth":1,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[{"title":"EZ Mode Configuration","level":"1.6.1","depth":2,"path":"resource/Activator_wifi_ez.md","ref":"resource/Activator_wifi_ez.md","articles":[]},{"title":"AP Mode Configuration","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"resource/Activator_wifi_ap.md","articles":[]},{"title":"Wi-Fi Common Problem","level":"1.6.3","depth":2,"path":"resource/Activator_wifi_qa.md","ref":"resource/Activator_wifi_qa.md","articles":[]}]},"previous":{"title":"Home Member Management","level":"1.5.4","depth":2,"path":"resource/HomeMember.md","ref":"./resource/HomeMember.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Room.md","mtime":"2020-03-20T03:36:06.691Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1705,6 +1729,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1725,10 +1769,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

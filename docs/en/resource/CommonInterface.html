@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Push_umeng.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,7 +1416,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="common-interface"><a name="common-interface" class="plugin-anchor" href="#common-interface"><i class="fa fa-link" aria-hidden="true"></i></a>Common interface</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#common-interface"><b></b>Common interface</a></li><li><span class="title-icon "></span><a href="#example"><b></b>Example</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="common-interface"><a name="common-interface" class="anchor-navigation-ex-anchor" href="#common-interface"><i class="fa fa-link" aria-hidden="true"></i></a><a name="common-interface" class="plugin-anchor" href="#common-interface"><i class="fa fa-link" aria-hidden="true"></i></a>Common interface</h2>
 <p>The server api calls the common function interface in the interface<code>ITuyaSmartRequest</code></p>
 <p>There are the following interfaces available for calling</p>
 <pre class="language-"><code class="lang-java">  <span class="token comment">/**
@@ -1404,7 +1428,7 @@
  * @param callback: callback
  * @param &lt;T&gt;
  */</span>
-<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiName</span><span class="token punctuation">(</span>String apiName<span class="token punctuation">,</span> String version<span class="token punctuation">,</span> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> Class<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiName</span><span class="token punctuation">(</span><span class="token class-name">String</span> apiName<span class="token punctuation">,</span> <span class="token class-name">String</span> version<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">/**
  * Applies to api interface requests without session
@@ -1415,10 +1439,10 @@
  * @param callback: callback
  * @param &lt;T&gt;
  */</span>
-<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span>String apiName<span class="token punctuation">,</span> String version<span class="token punctuation">,</span> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> Class<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span><span class="token class-name">String</span> apiName<span class="token punctuation">,</span> <span class="token class-name">String</span> version<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The calling method is as follows:<code>TuyaHomeSdk.getRequestInstance()</code></p>
-<h2 id="example"><a name="example" class="plugin-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h2>
+<h2 id="example"><a name="example" class="anchor-navigation-ex-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a><a name="example" class="plugin-anchor" href="#example"><i class="fa fa-link" aria-hidden="true"></i></a>Example</h2>
 <p>Take the following interface as an example:</p>
 <table>
 <thead>
@@ -1438,17 +1462,17 @@
 </tr>
 </tbody>
 </table>
-<pre class="language-"><code class="lang-java">Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> postData <span class="token operator">=</span> null<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> postData <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
 
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getRequestInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span><span class="token string">&quot;tuya.m.country.list&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span> postData<span class="token punctuation">,</span> String<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getRequestInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span><span class="token string">&quot;tuya.m.country.list&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span> postData<span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>String result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> errorCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> errorCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1495,7 +1519,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Common Interface","level":"1.17","depth":1,"next":{"title":"Bluetooth Low Energy","level":"1.18","depth":1,"path":"resource/BLE.md","ref":"./resource/BLE.md","articles":[{"title":"Scan Device","level":"1.18.1","depth":2,"anchor":"#scanning-device","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#scanning-device","articles":[]},{"title":"BLE Device Activation","level":"1.18.2","depth":2,"anchor":"#single-ble-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#single-ble-device-activation","articles":[]},{"title":"Dual-mode Device Activation","level":"1.18.3","depth":2,"anchor":"#dual-mode-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#dual-mode-device-activation","articles":[]},{"title":"BLE Device Function","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]}]},"previous":{"title":"Umeng","level":"1.16.2","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/CommonInterface.md","mtime":"2019-07-26T03:03:12.108Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Common Interface","level":"1.17","depth":1,"next":{"title":"Bluetooth Low Energy","level":"1.18","depth":1,"path":"resource/BLE.md","ref":"./resource/BLE.md","articles":[{"title":"Scan Device","level":"1.18.1","depth":2,"anchor":"#scanning-device","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#scanning-device","articles":[]},{"title":"BLE Device Activation","level":"1.18.2","depth":2,"anchor":"#single-ble-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#single-ble-device-activation","articles":[]},{"title":"Dual-mode Device Activation","level":"1.18.3","depth":2,"anchor":"#dual-mode-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#dual-mode-device-activation","articles":[]},{"title":"BLE Device Function","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]}]},"previous":{"title":"Umeng","level":"1.16.2","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/CommonInterface.md","mtime":"2019-07-26T03:03:12.108Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1510,6 +1534,26 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1530,10 +1574,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

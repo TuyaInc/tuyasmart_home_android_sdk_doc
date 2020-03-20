@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="BLE_Activator.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Loginout.html">
+                <a href="User_update.html">
             
                     
                     修改用户信息
@@ -224,12 +248,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#退出登录接口">
+                <a href="User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#停用账户">
+                <a href="User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#设备控制">
             
                     
                     设备控制
@@ -643,7 +667,7 @@
                 <a href="Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1386,7 +1410,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><a name="&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><b></b>&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5148;&#x8981;&#x6761;&#x4EF6;"><b></b>&#x5148;&#x8981;&#x6761;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;"><b></b>&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;</a></li><li><span class="title-icon "></span><a href="#&#x8FDE;&#x63A5;&#x8BBE;&#x5907;"><b></b>&#x8FDE;&#x63A5;&#x8BBE;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><b></b>&#x8BBE;&#x5907;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><b></b>&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;</a></li><li><span class="title-icon "></span><a href="#&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;"><b></b>&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><b></b>&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;</a></li><li><span class="title-icon "></span><a href="#&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><b></b>&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;"><b></b>&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;"><b></b>&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><b></b>&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</a></li><li><span class="title-icon "></span><a href="#&#x79FB;&#x9664;&#x8BBE;&#x5907;"><b></b>&#x79FB;&#x9664;&#x8BBE;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;"><b></b>&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;</a></li></ul></ul></ul></div><a href="#&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><a name="&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x7B2C;&#x4E09;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#x64CD;&#x4F5C;</h1>
 <p>&#x672C;&#x8282;&#x5C06;&#x4F1A;&#x4ECB;&#x7ECD;&#x5DF2;&#x914D;&#x7F51;&#x7684;&#x5355;&#x70B9;&#x8BBE;&#x5907;&#xFF0C;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x72B6;&#x6001;&#x68C0;&#x6D4B;&#x3001;&#x8FDE;&#x63A5;&#x3001;&#x89E3;&#x7ED1;&#x7B49;&#x3002;&#x63A8;&#x8350;&#x5148;&#x9605;&#x8BFB;&#x84DD;&#x7259;<a href="BLE.html">&#x7B2C;&#x4E00;&#x8282;</a>&#x3001;<a href="BLE_Activator.html">&#x7B2C;&#x4E8C;&#x8282;</a>&#x3002;</p>
 <p><strong>&#x672C;&#x8282;&#x6982;&#x8981;</strong></p>
 <ol>
@@ -1396,29 +1420,29 @@
 <li>&#x4FEE;&#x6539;&#x8BBE;&#x5907;</li>
 <li>&#x89E3;&#x7ED1;&#x8BBE;&#x5907;</li>
 </ol>
-<h2 id="&#x5148;&#x8981;&#x6761;&#x4EF6;"><a name="&#x5148;&#x8981;&#x6761;&#x4EF6;" class="plugin-anchor" href="#&#x5148;&#x8981;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5148;&#x8981;&#x6761;&#x4EF6;</h2>
+<h2 id="&#x5148;&#x8981;&#x6761;&#x4EF6;"><a name="&#x5148;&#x8981;&#x6761;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5148;&#x8981;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5148;&#x8981;&#x6761;&#x4EF6;" class="plugin-anchor" href="#&#x5148;&#x8981;&#x6761;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5148;&#x8981;&#x6761;&#x4EF6;</h2>
 <ol>
 <li>&#x5F00;&#x53D1; BLE &#x4E4B;&#x524D; &#x9700;&#x8981;&#x5148;&#x4E86;&#x89E3; TuyaHomeSDK &#x57FA;&#x672C;&#x903B;&#x8F91;&#xFF0C;&#x9700;&#x8981;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528; TuyaHomeSdk &#x5B8C;&#x6210;&#x521D;&#x59CB;&#x5316;&#x3001;&#x767B;&#x5F55;&#x3001;&#x521B;&#x5EFA;&#x5BB6;&#x5EAD;&#x7B49;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x6B64;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x8FDB;&#x884C; BLE &#x6A21;&#x5757;&#x5F00;&#x53D1;&#x4F7F;&#x7528;&#x3002; </li>
 <li>&#x8BBE;&#x5907;&#x53C2;&#x7167;&#x7B2C;&#x4E8C;&#x8282;&#x5DF2;&#x6B63;&#x5E38;&#x914D;&#x7F51;&#x3002;&#x914D;&#x7F51;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5C06;&#x4F1A;&#x5F97;&#x5230; deviceBean&#xFF0C;&#x53EF;&#x4EE5;&#x53D6;&#x5230; devId&#xFF0C;&#x540E;&#x7EED;&#x64CD;&#x4F5C;&#x4E3B;&#x8981;&#x6839;&#x636E; devId &#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</li>
 </ol>
-<h2 id="&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;"><a name="&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;" class="plugin-anchor" href="#&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;</h2>
+<h2 id="&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;"><a name="&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;" class="plugin-anchor" href="#&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5224;&#x65AD;&#x8BBE;&#x5907;&#x5728;&#x7EBF;&#x72B6;&#x6001;</h2>
 <ul>
 <li><p>&#x901A;&#x8FC7;&#x901A;&#x7528;&#x65B9;&#x5F0F;&#x67E5;&#x8BE2; &#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x4E00;&#x81F4;&#xFF08;&#x6B64;&#x72B6;&#x6001;&#x662F;&#x7EFC;&#x5408;&#x72B6;&#x6001;&#xFF0C;&#x82E5;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x6DFB;&#x52A0;&#x5230;&#x7F51;&#x5173;&#x4E0B;&#x9762; &#x5219;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x53EF;&#x4E91;&#x7AEF;&#x5728;&#x7EBF;&#xFF09;</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>&#x67E5;&#x8BE2;&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x662F;&#x5426;&#x672C;&#x5730;&#x8FDE;&#x63A5;</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBleLocalOnline</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBleLocalOnline</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <blockquote>
 <p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x84DD;&#x7259;&#x53EA;&#x9700;&#x8981;&#x8003;&#x8651;&#x672C;&#x5730;&#x72B6;&#x6001;&#x5373;&#x53EF;&#x3002;&#x53EA;&#x6709;&#x52A0;&#x5165;&#x84DD;&#x7259;&#x7F51;&#x5173;&#x4E0B;&#x7684;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x624D;&#x9700;&#x8981;&#x8003;&#x8651;&#x662F;&#x5426;&#x4E91;&#x7AEF;&#x5728;&#x7EBF;&#x3002;</p>
 </blockquote>
 </li>
 </ul>
-<h2 id="&#x8FDE;&#x63A5;&#x8BBE;&#x5907;"><a name="&#x8FDE;&#x63A5;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x8FDE;&#x63A5;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDE;&#x63A5;&#x8BBE;&#x5907;</h2>
+<h2 id="&#x8FDE;&#x63A5;&#x8BBE;&#x5907;"><a name="&#x8FDE;&#x63A5;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x8FDE;&#x63A5;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FDE;&#x63A5;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x8FDE;&#x63A5;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDE;&#x63A5;&#x8BBE;&#x5907;</h2>
 <p>&#x82E5;&#x8BBE;&#x5907;&#x5904;&#x4E8E;&#x79BB;&#x7EBF;&#x72B6;&#x6001; &#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x8FDE;&#x63A5;&#x65B9;&#x6CD5; &#x8FDB;&#x884C;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x3002;</p>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span>String idJsonString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span><span class="token class-name">String</span> idJsonString<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
@@ -1438,29 +1462,29 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre class="language-"><code class="lang-java"> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> devIdList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> devIdList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
  devIdList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>devId1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x8BBE;&#x5907;1 devId</span>
  devIdList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>devId2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&#x8BBE;&#x5907;2 devId</span>
 
- String ids <span class="token operator">=</span> JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>devIdList<span class="token punctuation">)</span><span class="token punctuation">;</span>
- TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span>ids<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token class-name">String</span> ids <span class="token operator">=</span> <span class="token class-name">JSONObject</span><span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>devIdList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span>ids<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x64CD;&#x4F5C;</h2>
+<h2 id="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x64CD;&#x4F5C;</h2>
 <p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x5907;&#x7684;&#x64CD;&#x4F5C;&#x7C7B;&#x8FDB;&#x884C;&#x76D1;&#x542C;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x3002;&#x8BE5;&#x90E8;&#x5206;&#x4E0E; Wi-Fi &#x903B;&#x8F91;&#x7C7B;&#x4F3C;&#xFF0C;&#x53EF;&#x5148;&#x53C2;&#x8003;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x903B;&#x8F91;&#x4FE1;&#x606F;<a href="Device.html">WIFI&#x8BBE;&#x5907;&#x64CD;&#x4F5C;</a></p>
-<h3 id="&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><a name="&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;</h3>
+<h3 id="&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><a name="&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;">&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x83B7;&#x53D6;</a></p>
-<h3 id="&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;"><a name="&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;</h3>
+<h3 id="&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;"><a name="&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;">&#x521D;&#x59CB;&#x5316;&#x8BBE;&#x5907;&#x63A7;&#x5236;</a></p>
-<h3 id="&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><a name="&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;" class="plugin-anchor" href="#&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;</h3>
+<h3 id="&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><a name="&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;" class="plugin-anchor" href="#&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;">&#x6CE8;&#x518C;&#x8BBE;&#x5907;&#x76D1;&#x542C;</a></p>
-<h3 id="&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><a name="&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;" class="plugin-anchor" href="#&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;</h3>
+<h3 id="&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><a name="&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;" class="plugin-anchor" href="#&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;">&#x53D6;&#x6D88;&#x8BBE;&#x5907;&#x76D1;&#x542C;</a></p>
-<h3 id="&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;"><a name="&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;</h3>
+<h3 id="&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;"><a name="&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;">&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x8BF4;&#x660E;</a></p>
-<h3 id="&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;"><a name="&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;</h3>
+<h3 id="&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;"><a name="&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x65B9;&#x6CD5;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x4E0D;&#x540C; &#x4E0D;&#x5177;&#x5907;&#x5C40;&#x57DF;&#x7F51;&#x4E0B;&#x53D1;&#x529F;&#x80FD;&#x3002;&#x4EC5;&#x652F;&#x6301;&#x90E8;&#x5206;&#x4E0B;&#x53D1;&#x529F;&#x80FD;&#x3002;&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x63A5;&#x53E3;&#x529F;&#x80FD;&#x4E3A;&#x5411;&#x8BBE;&#x5907;&#x53D1;&#x9001;&#x529F;&#x80FD;&#x70B9;&#xFF0C;&#x6765;&#x6539;&#x53D8;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x6216;&#x529F;&#x80FD;&#x3002;</p>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span>String dps<span class="token punctuation">,</span> IControlCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span><span class="token class-name">String</span> dps<span class="token punctuation">,</span> <span class="token class-name">IControlCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
@@ -1486,30 +1510,30 @@
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
 <p>&#x5047;&#x8BBE;&#x5F00;&#x706F;&#x7684;&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x662F; 101&#xFF0C;&#x90A3;&#x4E48;&#x5F00;&#x706F;&#x7684;&#x63A7;&#x5236;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
-<pre class="language-"><code class="lang-java">HashMap<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> hashMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> hashMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 hashMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;101&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-mDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>hashMap<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IControlCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+mDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span><span class="token class-name">JSONObject</span><span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>hashMap<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IControlCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;&#x5F00;&#x706F;&#x5931;&#x8D25;&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;&#x5F00;&#x706F;&#x5931;&#x8D25;&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;&#x5F00;&#x706F;&#x6210;&#x529F;&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;&#x5F00;&#x706F;&#x6210;&#x529F;&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><a name="&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</h3>
+<h3 id="&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><a name="&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;">&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</a></p>
-<h3 id="&#x79FB;&#x9664;&#x8BBE;&#x5907;"><a name="&#x79FB;&#x9664;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x79FB;&#x9664;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79FB;&#x9664;&#x8BBE;&#x5907;</h3>
+<h3 id="&#x79FB;&#x9664;&#x8BBE;&#x5907;"><a name="&#x79FB;&#x9664;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x79FB;&#x9664;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x79FB;&#x9664;&#x8BBE;&#x5907;" class="plugin-anchor" href="#&#x79FB;&#x9664;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79FB;&#x9664;&#x8BBE;&#x5907;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x79FB;&#x9664;&#x8BBE;&#x5907;">&#x79FB;&#x9664;&#x8BBE;&#x5907;</a></p>
 <blockquote>
 <p>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x7684;&#x89E3;&#x7ED1;&#x4E0E; Wi-Fi &#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x4E00;&#x81F4; &#x90FD;&#x662F;&#x8C03;&#x7528;
 <code>TuyaHomeSdk.newDeviceInstance(&quot;devId&quot;).removeDevice()</code> &#x6216;&#x8005;<code>resetFactory()</code> 
 &#x53EA;&#x662F;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x9664;&#x4E86;&#x8FDB;&#x884C;&#x4E91;&#x7AEF;&#x79FB;&#x9664;&#x4E4B;&#x5916;&#x3002;&#x82E5;&#x8BBE;&#x5907;&#x6B64;&#x65F6;&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x72B6;&#x6001; &#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x79FB;&#x9664;&#x8BBE;&#x5907;&#xFF0C;&#x82E5;&#x6B64;&#x65F6;&#x8BBE;&#x5907;&#x79BB;&#x7EBF;&#xFF0C;&#x5219;&#x53EA;&#x4F1A;&#x4E91;&#x7AEF;&#x79FB;&#x9664;&#x3002;&#x8BBE;&#x5907;&#x4F1A;&#x6254;&#x5904;&#x4E8E;&#x7ED1;&#x5B9A;&#x72B6;&#x6001;&#x3002; &#x4E0B;&#x6B21;&#x60F3;&#x8981;&#x7EE7;&#x7EED;&#x91CD;&#x65B0;&#x7ED1;&#x5B9A;&#x8BBE;&#x5907;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x8BBE;&#x5907;&#x624B;&#x52A8;&#x7F6E;&#x4E3A;&#x914D;&#x7F51;&#x72B6;&#x6001;&#x3002;sdk&#x5728;&#x626B;&#x63CF;&#x65F6;&#xFF0C;&#x82E5;&#x53D1;&#x73B0;&#x8BBE;&#x5907;&#x5904;&#x4E8E;&#x7ED1;&#x5B9A;&#x72B6;&#x6001;&#x4F46;&#x662F;&#x4E91;&#x7AEF;&#x5DF2;&#x89E3;&#x7ED1;&#x4E5F;&#x4F1A;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x91CD;&#x7F6E;&#x3002;</p>
 </blockquote>
-<h3 id="&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;"><a name="&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;" class="plugin-anchor" href="#&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;</h3>
+<h3 id="&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;"><a name="&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;" class="plugin-anchor" href="#&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;</h3>
 <p>&#x4E0E; Wi-Fi &#x8BBE;&#x5907;&#x7684;&#x6307;&#x4EE4;&#x4E0B;&#x53D1;&#x4E00;&#x81F4; <a href="Device.html#&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;">&#x56DE;&#x6536;&#x8BBE;&#x5907;&#x8D44;&#x6E90;</a></p>
 
                                 
@@ -1554,7 +1578,7 @@ mDevice<span class="token punctuation">.</span><span class="token function">publ
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"蓝牙设备操作","level":"1.18.4","depth":2,"next":{"title":"固件升级","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]},"previous":{"title":"双模设备配网","level":"1.18.3","depth":2,"anchor":"#双模设备入网激活","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#双模设备入网激活","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/BLE_Operator.md","mtime":"2020-03-19T13:58:01.718Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"蓝牙设备操作","level":"1.18.4","depth":2,"next":{"title":"固件升级","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]},"previous":{"title":"双模设备配网","level":"1.18.3","depth":2,"anchor":"#双模设备入网激活","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#双模设备入网激活","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/BLE_Operator.md","mtime":"2020-03-19T13:58:01.718Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1569,6 +1593,26 @@ mDevice<span class="token punctuation">.</span><span class="token function">publ
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1589,10 +1633,6 @@ mDevice<span class="token punctuation">.</span><span class="token function">publ
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

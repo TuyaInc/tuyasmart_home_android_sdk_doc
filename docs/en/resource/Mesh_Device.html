@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Mesh_Config.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,22 +1416,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mesh-devices"><a name="mesh-devices" class="plugin-anchor" href="#mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh Devices</h1>
-<h2 id="found-mesh-devices"><a name="found-mesh-devices" class="plugin-anchor" href="#found-mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Found Mesh Devices</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mesh-devices"><b></b>Mesh Devices</a></li><ul><li><span class="title-icon "></span><a href="#found-mesh-devices"><b></b>Found Mesh Devices</a></li><li><span class="title-icon "></span><a href="#sub-devices-rename"><b></b>Sub-devices Rename</a></li><li><span class="title-icon "></span><a href="#sub-devices-remove"><b></b>Sub-devices Remove</a></li><li><span class="title-icon "></span><a href="#query-single-sub-devices"><b></b>Query Single Sub-devices</a></li></ul></ul></div><a href="#mesh-devices" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mesh-devices"><a name="mesh-devices" class="anchor-navigation-ex-anchor" href="#mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-devices" class="plugin-anchor" href="#mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh Devices</h1>
+<h2 id="found-mesh-devices"><a name="found-mesh-devices" class="anchor-navigation-ex-anchor" href="#found-mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="found-mesh-devices" class="plugin-anchor" href="#found-mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Found Mesh Devices</h2>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">DeviceBean deviceBean<span class="token operator">=</span>TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DeviceBean</span> deviceBean<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isBlueMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
  <span class="token punctuation">}</span>
 
 <span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isBlueMeshWifi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    L<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh wifi device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh wifi device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
  <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="sub-devices-rename"><a name="sub-devices-rename" class="plugin-anchor" href="#sub-devices-rename"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Rename</h2>
+<h2 id="sub-devices-rename"><a name="sub-devices-rename" class="anchor-navigation-ex-anchor" href="#sub-devices-rename"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sub-devices-rename" class="plugin-anchor" href="#sub-devices-rename"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Rename</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameMeshSubDev</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> String name<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameMeshSubDev</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1439,7 +1463,7 @@
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mTuyaBlueMesh<span class="token punctuation">.</span><span class="token function">renameMeshSubDev</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">&quot;device name&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
@@ -1447,9 +1471,9 @@
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="sub-devices-remove"><a name="sub-devices-remove" class="plugin-anchor" href="#sub-devices-remove"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Remove</h2>
+<h2 id="sub-devices-remove"><a name="sub-devices-remove" class="anchor-navigation-ex-anchor" href="#sub-devices-remove"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sub-devices-remove" class="plugin-anchor" href="#sub-devices-remove"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Remove</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeMeshSubDev</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeMeshSubDev</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1481,18 +1505,18 @@
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mTuyaBlueMesh<span class="token punctuation">.</span><span class="token function">removeMeshSubDev</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
   <span class="token annotation punctuation">@Override</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
  <span class="token punctuation">}</span>
 
  <span class="token annotation punctuation">@Override</span>
  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;sub-deivces remove success&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;sub-deivces remove success&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="query-single-sub-devices"><a name="query-single-sub-devices" class="plugin-anchor" href="#query-single-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Query Single Sub-devices</h2>
+<h2 id="query-single-sub-devices"><a name="query-single-sub-devices" class="anchor-navigation-ex-anchor" href="#query-single-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="query-single-sub-devices" class="plugin-anchor" href="#query-single-sub-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Query Single Sub-devices</h2>
 <p>Get dp data from cloud maybe not real-time data, can use it search real-time data and <code>IMeshDevListener</code>&apos;s <code>onDpUpdate</code> will be callback.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">querySubDevStatusByLocal</span><span class="token punctuation">(</span>String pcc<span class="token punctuation">,</span> String nodeId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">querySubDevStatusByLocal</span><span class="token punctuation">(</span><span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> nodeId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1524,7 +1548,7 @@
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">querySubDevStatusByLocal</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> devBean<span class="token punctuation">.</span><span class="token function">getNodeId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
@@ -1575,7 +1599,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device","level":"1.20.5","depth":2,"next":{"title":"Group","level":"1.20.6","depth":2,"path":"resource/Mesh_Group_Operate.md","ref":"./resource/Mesh_Group_Operate.md","articles":[]},"previous":{"title":"Configuration","level":"1.20.4","depth":2,"path":"resource/Mesh_Config.md","ref":"./resource/Mesh_Config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh_Device.md","mtime":"2020-03-19T13:16:27.806Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device","level":"1.20.5","depth":2,"next":{"title":"Group","level":"1.20.6","depth":2,"path":"resource/Mesh_Group_Operate.md","ref":"./resource/Mesh_Group_Operate.md","articles":[]},"previous":{"title":"Configuration","level":"1.20.4","depth":2,"path":"resource/Mesh_Config.md","ref":"./resource/Mesh_Config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh_Device.md","mtime":"2020-03-19T13:16:27.806Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1590,6 +1614,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1610,10 +1654,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

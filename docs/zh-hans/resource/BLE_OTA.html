@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="BLE_Operator.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Loginout.html">
+                <a href="User_update.html">
             
                     
                     修改用户信息
@@ -224,12 +248,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#退出登录接口">
+                <a href="User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#停用账户">
+                <a href="User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#设备控制">
             
                     
                     设备控制
@@ -643,7 +667,7 @@
                 <a href="Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1386,16 +1410,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota"><a name="&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907; OTA</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota"><b></b>&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907; OTA</a></li><ul><li><span class="title-icon "></span><a href="#&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;"><b></b>&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#ota-&#x5347;&#x7EA7;"><b></b>OTA &#x5347;&#x7EA7;</a></li><li><span class="title-icon "></span><a href="#&#x9519;&#x8BEF;&#x7801;"><b></b>&#x9519;&#x8BEF;&#x7801;</a></li></ul></ul></div><a href="#&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota"><a name="&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907;-ota"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x7B2C;&#x56DB;&#x8282;&#x2014;&#x2014;&#x5355;&#x70B9;&#x8BBE;&#x5907; OTA</h1>
 <p>&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x8FDB;&#x884C; OTA &#x5347;&#x7EA7;&#x7528;&#x4E8E;&#x66F4;&#x65B0;&#x56FA;&#x4EF6;&#x3002;&#x518D;&#x8FDB;&#x884C;&#x672C;&#x7AE0;&#x8282;&#x9605;&#x8BFB;&#x4E4B;&#x524D; &#x9700;&#x8981;&#x5148;&#x9605;&#x8BFB;<a href="BLE.html">&#x7B2C;&#x4E00;&#x8282;</a>&#x3001;<a href="BLE_Activator.html">&#x7B2C;&#x4E8C;&#x8282;</a> &#x3001;<a href="BLE_Operator.html">&#x7B2C;&#x4E09;&#x8282;</a> &#x3002;</p>
 <p><strong>&#x5347;&#x7EA7; OTA &#x6D41;&#x7A0B;</strong></p>
 <ul>
 <li>&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;</li>
 <li>&#x5347;&#x7EA7; OTA</li>
 </ul>
-<h2 id="&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;"><a name="&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;</h2>
+<h2 id="&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;"><a name="&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68C0;&#x67E5;&#x56FA;&#x4EF6;&#x4FE1;&#x606F;</h2>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> IRequestUpgradeInfoCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">IRequestUpgradeInfoCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
@@ -1420,14 +1444,14 @@
 </tbody>
 </table>
 <p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getMeshInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span>mDevID<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IRequestUpgradeInfoCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getMeshInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span>mDevID<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IRequestUpgradeInfoCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>BLEUpgradeBean<span class="token punctuation">&gt;</span></span> bleUpgradeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BLEUpgradeBean</span><span class="token punctuation">&gt;</span></span> bleUpgradeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1498,10 +1522,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="ota-&#x5347;&#x7EA7;"><a name="ota-&#x5347;&#x7EA7;" class="plugin-anchor" href="#ota-&#x5347;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>OTA &#x5347;&#x7EA7;</h2>
+<h2 id="ota-&#x5347;&#x7EA7;"><a name="ota-&#x5347;&#x7EA7;" class="anchor-navigation-ex-anchor" href="#ota-&#x5347;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ota-&#x5347;&#x7EA7;" class="plugin-anchor" href="#ota-&#x5347;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>OTA &#x5347;&#x7EA7;</h2>
 <p>&#x9700;&#x8981;&#x5C06;&#x4E0A;&#x4E00;&#x6B65;&#x68C0;&#x67E5;&#x5230;&#x6709;&#x65B0;&#x56FA;&#x4EF6;&#x7684;&#x56FA;&#x4EF6;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;&#x540E; &#x8FDB;&#x884C; OTA &#x5347;&#x7EA7;&#x3002;</p>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleOta</span><span class="token punctuation">(</span>String uuid<span class="token punctuation">,</span> <span class="token keyword">int</span> type<span class="token punctuation">,</span> String version<span class="token punctuation">,</span> String binPackagePath<span class="token punctuation">,</span> OnBleUpgradeListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleOta</span><span class="token punctuation">(</span><span class="token class-name">String</span> uuid<span class="token punctuation">,</span> <span class="token keyword">int</span> type<span class="token punctuation">,</span> <span class="token class-name">String</span> version<span class="token punctuation">,</span> <span class="token class-name">String</span> binPackagePath<span class="token punctuation">,</span> <span class="token class-name">OnBleUpgradeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
@@ -1540,7 +1564,7 @@
 </tr>
 </tbody>
 </table>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleOta</span><span class="token punctuation">(</span>uuid<span class="token punctuation">,</span> type<span class="token punctuation">,</span> version<span class="token punctuation">,</span> binPackagePath<span class="token punctuation">,</span> <span class="token keyword">new</span>  <span class="token class-name">OnBleUpgradeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleOta</span><span class="token punctuation">(</span>uuid<span class="token punctuation">,</span> type<span class="token punctuation">,</span> version<span class="token punctuation">,</span> binPackagePath<span class="token punctuation">,</span> <span class="token keyword">new</span>  <span class="token class-name">OnBleUpgradeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onUpgrade</span><span class="token punctuation">(</span><span class="token keyword">int</span> percent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// &#x5347;&#x7EA7;&#x8FDB;&#x5EA6; &#x767E;&#x5206;&#x6BD4;</span>
@@ -1552,12 +1576,12 @@
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">//&#x5347;&#x7EA7;&#x5931;&#x8D25;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="&#x9519;&#x8BEF;&#x7801;"><a name="&#x9519;&#x8BEF;&#x7801;" class="plugin-anchor" href="#&#x9519;&#x8BEF;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9519;&#x8BEF;&#x7801;</h2>
+<h2 id="&#x9519;&#x8BEF;&#x7801;"><a name="&#x9519;&#x8BEF;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x9519;&#x8BEF;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9519;&#x8BEF;&#x7801;" class="plugin-anchor" href="#&#x9519;&#x8BEF;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9519;&#x8BEF;&#x7801;</h2>
 <p>&#x5347;&#x7EA7;&#x9519;&#x8BEF;&#x7801; &#x89C1;&#x914D;&#x7F51;&#x90E8;&#x5206;&#x9519;&#x8BEF;&#x7801; <a href="BLE_Activator.html#&#x9519;&#x8BEF;&#x7801;">&#x5355;&#x70B9;&#x84DD;&#x7259;&#x9519;&#x8BEF;&#x7801;</a></p>
 
                                 
@@ -1602,7 +1626,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"固件升级","level":"1.18.5","depth":2,"next":{"title":"蓝牙 Mesh (SIG)","level":"1.19","depth":1,"path":"resource/Mesh.md","ref":"./resource/Mesh.md","articles":[{"title":"准备","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},{"title":"部分基础概念","level":"1.19.2","depth":2,"path":"resource/SigMesh_IDEA.md","ref":"./resource/SigMesh_IDEA.md","articles":[]},{"title":"管理","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},{"title":"配网与入网","level":"1.19.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},{"title":"设备","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},{"title":"群组","level":"1.19.6","depth":2,"path":"resource/SigMesh_Group_Operate.md","ref":"./resource/SigMesh_Group_Operate.md","articles":[]},{"title":"控制","level":"1.19.7","depth":2,"path":"resource/SigMesh_Device_Operate.md","ref":"./resource/SigMesh_Device_Operate.md","articles":[]},{"title":"固件升级","level":"1.19.8","depth":2,"path":"resource/SigMesh_OTA.md","ref":"./resource/SigMesh_OTA.md","articles":[]}]},"previous":{"title":"蓝牙设备操作","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/BLE_OTA.md","mtime":"2020-03-19T12:22:14.448Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"固件升级","level":"1.18.5","depth":2,"next":{"title":"蓝牙 Mesh (SIG)","level":"1.19","depth":1,"path":"resource/Mesh.md","ref":"./resource/Mesh.md","articles":[{"title":"准备","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},{"title":"部分基础概念","level":"1.19.2","depth":2,"path":"resource/SigMesh_IDEA.md","ref":"./resource/SigMesh_IDEA.md","articles":[]},{"title":"管理","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},{"title":"配网与入网","level":"1.19.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},{"title":"设备","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},{"title":"群组","level":"1.19.6","depth":2,"path":"resource/SigMesh_Group_Operate.md","ref":"./resource/SigMesh_Group_Operate.md","articles":[]},{"title":"控制","level":"1.19.7","depth":2,"path":"resource/SigMesh_Device_Operate.md","ref":"./resource/SigMesh_Device_Operate.md","articles":[]},{"title":"固件升级","level":"1.19.8","depth":2,"path":"resource/SigMesh_OTA.md","ref":"./resource/SigMesh_OTA.md","articles":[]}]},"previous":{"title":"蓝牙设备操作","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/BLE_OTA.md","mtime":"2020-03-19T12:22:14.448Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1617,6 +1641,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1637,10 +1681,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

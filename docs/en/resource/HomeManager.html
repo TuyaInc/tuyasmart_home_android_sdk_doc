@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="User_Session.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,18 +1416,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="family-management"><a name="family-management" class="plugin-anchor" href="#family-management"><i class="fa fa-link" aria-hidden="true"></i></a>Family management</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#family-management"><b></b>Family Management</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="family-management"><a name="family-management" class="anchor-navigation-ex-anchor" href="#family-management"><i class="fa fa-link" aria-hidden="true"></i></a><a name="family-management" class="plugin-anchor" href="#family-management"><i class="fa fa-link" aria-hidden="true"></i></a>Family Management</h3>
 <p>Create and query family information change monitor</p>
-<h4 id="destruction"><a name="destruction" class="plugin-anchor" href="#destruction"><i class="fa fa-link" aria-hidden="true"></i></a>Destruction</h4>
+<h4 id="destruction"><a name="destruction" class="anchor-navigation-ex-anchor" href="#destruction"><i class="fa fa-link" aria-hidden="true"></i></a><a name="destruction" class="plugin-anchor" href="#destruction"><i class="fa fa-link" aria-hidden="true"></i></a>Destruction</h4>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-family-list"><a name="get-family-list" class="plugin-anchor" href="#get-family-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get family list</h4>
+<h4 id="get-family-list"><a name="get-family-list" class="anchor-navigation-ex-anchor" href="#get-family-list"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-family-list" class="plugin-anchor" href="#get-family-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get Family List</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">createHome</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> String geoName<span class="token punctuation">,</span> List rooms<span class="token punctuation">,</span> ITuyaHomeResultCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">createHome</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> <span class="token class-name">String</span> geoName<span class="token punctuation">,</span> <span class="token class-name">List</span> rooms<span class="token punctuation">,</span> <span class="token class-name">ITuyaHomeResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1441,20 +1465,20 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createHome</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> lon<span class="token punctuation">,</span> lat<span class="token punctuation">,</span> geoName<span class="token punctuation">,</span> rooms<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaHomeResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createHome</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> lon<span class="token punctuation">,</span> lat<span class="token punctuation">,</span> geoName<span class="token punctuation">,</span> rooms<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaHomeResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>HomeBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">HomeBean</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="get-family-list"><a name="get-family-list" class="plugin-anchor" href="#get-family-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get family list</h4>
+<h4 id="get-family-list_1"><a name="get-family-list_1" class="anchor-navigation-ex-anchor" href="#get-family-list_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-family-list" class="plugin-anchor" href="#get-family-list"><i class="fa fa-link" aria-hidden="true"></i></a>Get Family List</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">queryHomeList</span><span class="token punctuation">(</span>ITuyaGetHomeListCallback callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">queryHomeList</span><span class="token punctuation">(</span><span class="token class-name">ITuyaGetHomeListCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1472,21 +1496,21 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">queryHomeList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaGetHomeListCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">queryHomeList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaGetHomeListCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>HomeBean<span class="token punctuation">&gt;</span></span> homeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">HomeBean</span><span class="token punctuation">&gt;</span></span> homeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="change-of-registered-family-information"><a name="change-of-registered-family-information" class="plugin-anchor" href="#change-of-registered-family-information"><i class="fa fa-link" aria-hidden="true"></i></a>Change of registered family information</h4>
+<h4 id="change-of-registered-family-information"><a name="change-of-registered-family-information" class="anchor-navigation-ex-anchor" href="#change-of-registered-family-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="change-of-registered-family-information" class="plugin-anchor" href="#change-of-registered-family-information"><i class="fa fa-link" aria-hidden="true"></i></a>Change of Registered Family Information</h4>
 <p>There are: addition and deletion of family, information change, change of sharing list and successful monitoring of server connection</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span>ITuyaHomeChangeListener listener<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token class-name">ITuyaHomeChangeListener</span> listener<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1504,9 +1528,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String homeName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">String</span> homeName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1522,11 +1546,11 @@
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedGroupList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> sharedGroupList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedGroupList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> sharedGroupList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1535,9 +1559,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h4 id="change-of-cancellation-family-information"><a name="change-of-cancellation-family-information" class="plugin-anchor" href="#change-of-cancellation-family-information"><i class="fa fa-link" aria-hidden="true"></i></a>Change of cancellation family information</h4>
+<h4 id="change-of-cancellation-family-information"><a name="change-of-cancellation-family-information" class="anchor-navigation-ex-anchor" href="#change-of-cancellation-family-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="change-of-cancellation-family-information" class="plugin-anchor" href="#change-of-cancellation-family-information"><i class="fa fa-link" aria-hidden="true"></i></a>Change of Cancellation Family Information</h4>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span>ITuyaHomeChangeListener listener<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token class-name">ITuyaHomeChangeListener</span> listener<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1555,9 +1579,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getHomeManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unRegisterTuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaHomeChangeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String homeName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onHomeInvite</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">String</span> homeName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1573,11 +1597,11 @@
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedDeviceList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> sharedDeviceList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedGroupList</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>GroupBean<span class="token punctuation">&gt;</span></span> sharedGroupList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSharedGroupList</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GroupBean</span><span class="token punctuation">&gt;</span></span> sharedGroupList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
         <span class="token punctuation">}</span>
         <span class="token annotation punctuation">@Override</span>
@@ -1629,7 +1653,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Home Management","level":"1.5","depth":1,"next":{"title":"Home Management","level":"1.5.1","depth":2,"path":"resource/Home.md","ref":"./resource/Home.md","articles":[]},"previous":{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/HomeManager.md","mtime":"2020-03-19T12:50:00.216Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Home Management","level":"1.5","depth":1,"next":{"title":"Home Management","level":"1.5.1","depth":2,"path":"resource/Home.md","ref":"./resource/Home.md","articles":[]},"previous":{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/HomeManager.md","mtime":"2020-03-20T03:36:06.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1644,6 +1668,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1664,10 +1708,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

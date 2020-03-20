@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Push_fcm.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,9 +1416,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="integrated-umeng"><a name="integrated-umeng" class="plugin-anchor" href="#integrated-umeng"><i class="fa fa-link" aria-hidden="true"></i></a>Integrated Umeng</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#integrated-umeng"><b></b>Integrated Umeng</a></li><ul><li><span class="title-icon "></span><a href="#configuration-app-information"><b></b>Configuration app information</a></li><li><span class="title-icon "></span><a href="#set-up-a-user-alias"><b></b>Set up a user alias</a></li><li><span class="title-icon "></span><a href="#push-tuya-cloud-registration"><b></b>Push Tuya Cloud Registration</a></li><li><span class="title-icon "></span><a href="#third-party-channel-setting"><b></b>Third-party channel setting</a></li><li><span class="title-icon "></span><a href="#user-unbind"><b></b>User unbind</a></li><li><span class="title-icon "></span><a href="#send-push"><b></b>Send push</a></li><li><span class="title-icon "></span><a href="#add-operation-push"><b></b>Add operation push</a></li><li><span class="title-icon "></span><a href="#add-alarm-push"><b></b>Add alarm push</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="integrated-umeng"><a name="integrated-umeng" class="anchor-navigation-ex-anchor" href="#integrated-umeng"><i class="fa fa-link" aria-hidden="true"></i></a><a name="integrated-umeng" class="plugin-anchor" href="#integrated-umeng"><i class="fa fa-link" aria-hidden="true"></i></a>Integrated Umeng</h2>
 <p>The domestic Push function is developed based on Umeng&apos;s push. Please refer to the <a href="https://developer.umeng.com/docs/66632/detail/66744" target="_blank">Umeng Document</a>to integrate Umeng into the project. Tuya Cloud supports Umeng third-party channel. If Xiaomi, Huawei and Meizu channels are required, a user can apply to each platform for initialization according to Umeng Document.</p>
-<h3 id="configuration-app-information"><a name="configuration-app-information" class="plugin-anchor" href="#configuration-app-information"><i class="fa fa-link" aria-hidden="true"></i></a>Configuration app information</h3>
+<h3 id="configuration-app-information"><a name="configuration-app-information" class="anchor-navigation-ex-anchor" href="#configuration-app-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="configuration-app-information" class="plugin-anchor" href="#configuration-app-information"><i class="fa fa-link" aria-hidden="true"></i></a>Configuration app information</h3>
 <p>Copy the information such as &#x201C;app key&#x201D; to the &#x201C;APP Workbench&#x201D; - &#x201C;APP SDK&#x201D; - the configuration of the corresponding application.</p>
 <blockquote>
 <p> &#x26A0;&#xFE0F; Do not configure the information incorrectly:</p>
@@ -1405,7 +1429,7 @@
 </ul>
 </blockquote>
 <p><img src="images/push_umeng_iot_en.png" style="zoom: 33%;"></p>
-<h3 id="set-up-a-user-alias"><a name="set-up-a-user-alias" class="plugin-anchor" href="#set-up-a-user-alias"><i class="fa fa-link" aria-hidden="true"></i></a>Set up a user alias</h3>
+<h3 id="set-up-a-user-alias"><a name="set-up-a-user-alias" class="anchor-navigation-ex-anchor" href="#set-up-a-user-alias"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-up-a-user-alias" class="plugin-anchor" href="#set-up-a-user-alias"><i class="fa fa-link" aria-hidden="true"></i></a>Set up a user alias</h3>
 <p>After Umeng has been ensured to integrate into the project, the user id is set through the Umeng SDK, and the message is pushed to the user according to the user id.</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
 @param aliasId Alias        
@@ -1418,23 +1442,23 @@
 * @param ALIAS_TYPE        fill in&quot;TUYA_SMART&quot;
 
 */</span>
-mPushAgent<span class="token punctuation">.</span><span class="token function">setAlias</span><span class="token punctuation">(</span><span class="token string">&quot;zhangsan@sina.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;TUYA_SMART&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">UTrack<span class="token punctuation">.</span>ICallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+mPushAgent<span class="token punctuation">.</span><span class="token function">setAlias</span><span class="token punctuation">(</span><span class="token string">&quot;zhangsan@sina.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;TUYA_SMART&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">UTrack</span><span class="token punctuation">.</span><span class="token class-name">ICallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isSuccess<span class="token punctuation">,</span> String message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isSuccess<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
      <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="push-tuya-cloud-registration"><a name="push-tuya-cloud-registration" class="plugin-anchor" href="#push-tuya-cloud-registration"><i class="fa fa-link" aria-hidden="true"></i></a>Push Tuya Cloud Registration</h3>
+<h3 id="push-tuya-cloud-registration"><a name="push-tuya-cloud-registration" class="anchor-navigation-ex-anchor" href="#push-tuya-cloud-registration"><i class="fa fa-link" aria-hidden="true"></i></a><a name="push-tuya-cloud-registration" class="plugin-anchor" href="#push-tuya-cloud-registration"><i class="fa fa-link" aria-hidden="true"></i></a>Push Tuya Cloud Registration</h3>
 <p>Register aliasId to the Tuya Cloud</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
 * @param aliasId   user alias, the alias as the user alias used in registering Umeng in Step 2
 * @param pushProvider   registered push category   It is filled in&quot;umeng&#x201D;
 
 */</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span>String aliasId<span class="token punctuation">,</span> String pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">registerDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> aliasId<span class="token punctuation">,</span> <span class="token class-name">String</span> pushProvider<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
      <span class="token punctuation">}</span>
      <span class="token annotation punctuation">@Override</span>
@@ -1443,23 +1467,23 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
      <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="third-party-channel-setting"><a name="third-party-channel-setting" class="plugin-anchor" href="#third-party-channel-setting"><i class="fa fa-link" aria-hidden="true"></i></a>Third-party channel setting</h3>
+<h3 id="third-party-channel-setting"><a name="third-party-channel-setting" class="anchor-navigation-ex-anchor" href="#third-party-channel-setting"><i class="fa fa-link" aria-hidden="true"></i></a><a name="third-party-channel-setting" class="plugin-anchor" href="#third-party-channel-setting"><i class="fa fa-link" aria-hidden="true"></i></a>Third-party channel setting</h3>
 <p>If users use the Umeng third-party channel, the pop-up activity must be named SpecialPushActivity.   Take Xiaomi as an example, SpecialPushActivity inherits from UmengNotifyClickActivity, and the complete package name path is com.activity.SpecialPushActivity.</p>
 <p><strong>Push message reception</strong></p>
 <p>Inherit UmengMessageService, and implement your own Service to fully control the processing of the Msg.custom contains the received push information message. Refer to the Umeng document.</p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyPushIntentService</span> <span class="token keyword">extends</span> <span class="token class-name">UmengMessageService</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span>Context context<span class="token punctuation">,</span> Intent intent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">Intent</span> intent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
          <span class="token keyword">try</span> <span class="token punctuation">{</span>
-             String message <span class="token operator">=</span> intent<span class="token punctuation">.</span><span class="token function">getStringExtra</span><span class="token punctuation">(</span>AgooConstants<span class="token punctuation">.</span>MESSAGE_BODY<span class="token punctuation">)</span><span class="token punctuation">;</span>
-             UMessage msg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UMessage</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">JSONObject</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
-             UmLog<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;message=&quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">//message body</span>
-             UmLog<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;custom=&quot;</span> <span class="token operator">+</span> msg<span class="token punctuation">.</span>custom<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//content of custom message </span>
-             UmLog<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;title=&quot;</span> <span class="token operator">+</span> msg<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// notice title</span>
-             UmLog<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;text=&quot;</span> <span class="token operator">+</span> msg<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">//notice content</span>
-             PushBean pushBean<span class="token operator">=</span>PushBean<span class="token punctuation">.</span><span class="token function">formatMessage</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>custom<span class="token punctuation">)</span>
+             <span class="token class-name">String</span> message <span class="token operator">=</span> intent<span class="token punctuation">.</span><span class="token function">getStringExtra</span><span class="token punctuation">(</span><span class="token class-name">AgooConstants</span><span class="token punctuation">.</span>MESSAGE_BODY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+             <span class="token class-name">UMessage</span> msg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UMessage</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">JSONObject</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+             <span class="token class-name">UmLog</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;message=&quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">//message body</span>
+             <span class="token class-name">UmLog</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;custom=&quot;</span> <span class="token operator">+</span> msg<span class="token punctuation">.</span>custom<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//content of custom message </span>
+             <span class="token class-name">UmLog</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;title=&quot;</span> <span class="token operator">+</span> msg<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// notice title</span>
+             <span class="token class-name">UmLog</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;text=&quot;</span> <span class="token operator">+</span> msg<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">//notice content</span>
+             <span class="token class-name">PushBean</span> pushBean<span class="token operator">=</span><span class="token class-name">PushBean</span><span class="token punctuation">.</span><span class="token function">formatMessage</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>custom<span class="token punctuation">)</span>
          <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-             L<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> e<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+             <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> e<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
          <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -1469,25 +1493,25 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <li>The specific protocol format of msg.custom: custom=tuya://message?a=view&amp;ct=${title}&amp;cc=${content}&amp;p={}&amp;link=tuyaSmart%3A%2F%2Fbrowser%3Furl%3Dhttp%253A%252F%252Fwww.baidu.com;</li>
 <li>The data is parsed with PushBean.formatMessage() to obtain the PushBean.</li>
 </ul>
-<h3 id="user-unbind"><a name="user-unbind" class="plugin-anchor" href="#user-unbind"><i class="fa fa-link" aria-hidden="true"></i></a>User unbind</h3>
+<h3 id="user-unbind"><a name="user-unbind" class="anchor-navigation-ex-anchor" href="#user-unbind"><i class="fa fa-link" aria-hidden="true"></i></a><a name="user-unbind" class="plugin-anchor" href="#user-unbind"><i class="fa fa-link" aria-hidden="true"></i></a>User unbind</h3>
 <p><strong>Description</strong></p>
 <p>When the user needs to unburden the application and user relationship, such as logging out, user can invoke the removal alias method by Umeng.</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">/**
 * @param aliasId Alias        user-generated unique id
 * @param ALIAS_TYPE        fill in&quot;TUYA_SMART&quot;
 */</span>
-mPushAgent<span class="token punctuation">.</span><span class="token function">deleteAlias</span><span class="token punctuation">(</span>aliasId<span class="token punctuation">,</span> <span class="token string">&quot;TUYA_SMART&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">UTrack<span class="token punctuation">.</span>ICallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+mPushAgent<span class="token punctuation">.</span><span class="token function">deleteAlias</span><span class="token punctuation">(</span>aliasId<span class="token punctuation">,</span> <span class="token string">&quot;TUYA_SMART&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">UTrack</span><span class="token punctuation">.</span><span class="token class-name">ICallBack</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isSuccess<span class="token punctuation">,</span> String message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onMessage</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isSuccess<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="send-push"><a name="send-push" class="plugin-anchor" href="#send-push"><i class="fa fa-link" aria-hidden="true"></i></a>Send push</h3>
-<h3 id="add-operation-push"><a name="add-operation-push" class="plugin-anchor" href="#add-operation-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add operation push</h3>
+<h3 id="send-push"><a name="send-push" class="anchor-navigation-ex-anchor" href="#send-push"><i class="fa fa-link" aria-hidden="true"></i></a><a name="send-push" class="plugin-anchor" href="#send-push"><i class="fa fa-link" aria-hidden="true"></i></a>Send push</h3>
+<h3 id="add-operation-push"><a name="add-operation-push" class="anchor-navigation-ex-anchor" href="#add-operation-push"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-operation-push" class="plugin-anchor" href="#add-operation-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add operation push</h3>
 <p>Tuya Developer Platform -&gt; User operation -&gt; Message center -&gt;Add message</p>
 <p><img src="images/android-push-setting-operation.png" alt=""></p>
-<h3 id="add-alarm-push"><a name="add-alarm-push" class="plugin-anchor" href="#add-alarm-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add alarm push</h3>
+<h3 id="add-alarm-push"><a name="add-alarm-push" class="anchor-navigation-ex-anchor" href="#add-alarm-push"><i class="fa fa-link" aria-hidden="true"></i></a><a name="add-alarm-push" class="plugin-anchor" href="#add-alarm-push"><i class="fa fa-link" aria-hidden="true"></i></a>Add alarm push</h3>
 <p><img src="images/android-push-setting-warning.png" alt=""></p>
 <p>Tuya Developer Platform -&gt; Product -&gt; Extended function -&gt;Set alarm -&gt; Add rules for alarms (apply the push mode)</p>
 
@@ -1533,7 +1557,7 @@ mPushAgent<span class="token punctuation">.</span><span class="token function">d
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Umeng","level":"1.16.2","depth":2,"next":{"title":"Common Interface","level":"1.17","depth":1,"path":"resource/CommonInterface.md","ref":"./resource/CommonInterface.md","articles":[]},"previous":{"title":"FCM Push","level":"1.16.1","depth":2,"path":"resource/Push_fcm.md","ref":"./resource/Push_fcm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Push_umeng.md","mtime":"2019-10-17T02:55:59.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Umeng","level":"1.16.2","depth":2,"next":{"title":"Common Interface","level":"1.17","depth":1,"path":"resource/CommonInterface.md","ref":"./resource/CommonInterface.md","articles":[]},"previous":{"title":"FCM Push","level":"1.16.1","depth":2,"path":"resource/Push_fcm.md","ref":"./resource/Push_fcm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Push_umeng.md","mtime":"2019-10-17T02:55:59.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1548,6 +1572,26 @@ mPushAgent<span class="token punctuation">.</span><span class="token function">d
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1568,10 +1612,6 @@ mPushAgent<span class="token punctuation">.</span><span class="token function">d
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

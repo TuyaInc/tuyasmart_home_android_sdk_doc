@@ -1,4 +1,4 @@
-### Room management
+### Room Management
 
 **RoomBean**
 
@@ -10,7 +10,7 @@
 | groupList | List &lt;GroupBean&gt;  | Groups of room |
 | displayOrder | int | Room display order |
 
-#### add group
+#### Add Group
 
 **Declaration**
 
@@ -39,7 +39,7 @@ TuyaHomeSdk.newRoomInstance(10000).addGroup(groupId, new IResultCallback() {
     });
 ```
 
-#### Update room name
+#### Update Room Name
 
 **Declaration**
 
@@ -68,7 +68,7 @@ TuyaHomeSdk.newRoomInstance(10000).updateRoom(name, new IResultCallback() {
     });
 ```
 
-#### Add device
+#### Add Device
 
 **Declaration**
 
@@ -97,7 +97,7 @@ TuyaHomeSdk.newRoomInstance(10000).addDevice(devId, new IResultCallback() {
     });
 ```
 
-#### Delete device
+#### Delete Device
 
 **Declaration**
 
@@ -155,7 +155,7 @@ TuyaHomeSdk.newRoomInstance(10000).removeGroup(groupId, new IResultCallback() {
     });
 ```
 
-#### Remove group or device from room
+#### Remove Group or Device From Room
 
 **Declaration**
 
@@ -184,7 +184,7 @@ TuyaHomeSdk.newRoomInstance(10000).moveDevGroupListFromRoom(list, new IResultCal
     });
 ```
 
-#### Sort groups or devices in a room
+#### Sort Groups or Devices in a Room
 
 **Declaration**
 

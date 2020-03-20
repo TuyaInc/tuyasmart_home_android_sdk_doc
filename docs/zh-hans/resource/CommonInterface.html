@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Feedback.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Loginout.html">
+                <a href="User_update.html">
             
                     
                     修改用户信息
@@ -224,12 +248,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#退出登录接口">
+                <a href="User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#停用账户">
+                <a href="User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#设备控制">
             
                     
                     设备控制
@@ -643,7 +667,7 @@
                 <a href="Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1386,12 +1410,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x901A;&#x7528;&#x63A5;&#x53E3;"><a name="&#x901A;&#x7528;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x901A;&#x7528;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x7528;&#x63A5;&#x53E3;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x901A;&#x7528;&#x63A5;&#x53E3;"><b></b>&#x901A;&#x7528;&#x63A5;&#x53E3;</a></li></ul></div><a href="#&#x901A;&#x7528;&#x63A5;&#x53E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x901A;&#x7528;&#x63A5;&#x53E3;"><a name="&#x901A;&#x7528;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x7528;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x7528;&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x901A;&#x7528;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x7528;&#x63A5;&#x53E3;</h1>
 <p>&#x670D;&#x52A1;&#x7AEF; api &#x8C03;&#x7528;&#x529F;&#x80FD;&#x901A;&#x7528;&#x63A5;&#x53E3;&#x5728;&#x7C7B; <code>ITuyaSmartRequest</code> &#x4E2D;</p>
 <p>&#x6709;&#x5982;&#x4E0B;&#x63A5;&#x53E3;&#x53EF;&#x4F9B;&#x8C03;&#x7528;</p>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
 <p>&#x5E26; session &#x7684;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;</p>
-<pre class="language-"><code class="lang-java"><span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiName</span><span class="token punctuation">(</span>String apiName<span class="token punctuation">,</span> String version<span class="token punctuation">,</span> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> Class<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiName</span><span class="token punctuation">(</span><span class="token class-name">String</span> apiName<span class="token punctuation">,</span> <span class="token class-name">String</span> version<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
@@ -1426,7 +1450,7 @@
 </table>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
 <p>&#x4E0D;&#x5E26; session &#x7684;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;</p>
-<pre class="language-"><code class="lang-java"><span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span>String apiName<span class="token punctuation">,</span> String version<span class="token punctuation">,</span> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> Class<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>T<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">void</span> <span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span><span class="token class-name">String</span> apiName<span class="token punctuation">,</span> <span class="token class-name">String</span> version<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> postData<span class="token punctuation">,</span> <span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> object<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
 <table>
@@ -1479,17 +1503,17 @@
 </tr>
 </tbody>
 </table>
-<pre class="language-"><code class="lang-java">Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> postData <span class="token operator">=</span> null<span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> postData <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
 
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getRequestInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span><span class="token string">&quot;tuya.m.country.list&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span> postData<span class="token punctuation">,</span> String<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getRequestInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span><span class="token string">&quot;tuya.m.country.list&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1.0&quot;</span><span class="token punctuation">,</span> postData<span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>String result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Log<span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> errorCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> errorCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1536,7 +1560,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"通用接口","level":"1.16","depth":1,"next":{"title":"集成 Push","level":"1.17","depth":1,"path":"resource/Push.md","ref":"./resource/Push.md","articles":[{"title":"友盟","level":"1.17.1","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]},{"title":"Firebase Cloud Messaging (FCM)","level":"1.17.2","depth":2,"path":"resource/Push_fcm.md","ref":"./resource/Push_fcm.md","articles":[]}]},"previous":{"title":"意见反馈","level":"1.15","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/CommonInterface.md","mtime":"2020-03-19T02:05:41.562Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"通用接口","level":"1.16","depth":1,"next":{"title":"集成 Push","level":"1.17","depth":1,"path":"resource/Push.md","ref":"./resource/Push.md","articles":[{"title":"友盟","level":"1.17.1","depth":2,"path":"resource/Push_umeng.md","ref":"./resource/Push_umeng.md","articles":[]},{"title":"Firebase Cloud Messaging (FCM)","level":"1.17.2","depth":2,"path":"resource/Push_fcm.md","ref":"./resource/Push_fcm.md","articles":[]}]},"previous":{"title":"意见反馈","level":"1.15","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/CommonInterface.md","mtime":"2020-03-19T02:05:41.562Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1551,6 +1575,26 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1571,10 +1615,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

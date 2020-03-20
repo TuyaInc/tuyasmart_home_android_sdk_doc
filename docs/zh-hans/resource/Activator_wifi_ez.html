@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Activator_wifi.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Loginout.html">
+                <a href="User_update.html">
             
                     
                     修改用户信息
@@ -224,12 +248,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#退出登录接口">
+                <a href="User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#停用账户">
+                <a href="User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#设备控制">
             
                     
                     设备控制
@@ -643,7 +667,7 @@
                 <a href="Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1386,7 +1410,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="ez-&#x6A21;&#x5F0F;"><a name="ez-&#x6A21;&#x5F0F;" class="plugin-anchor" href="#ez-&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>EZ &#x6A21;&#x5F0F;</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#ez-&#x6A21;&#x5F0F;"><b></b>EZ &#x6A21;&#x5F0F;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="ez-&#x6A21;&#x5F0F;"><a name="ez-&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#ez-&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ez-&#x6A21;&#x5F0F;" class="plugin-anchor" href="#ez-&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>EZ &#x6A21;&#x5F0F;</h3>
 <pre class="language-"><code class="lang-sequence">Title: EZ &#x914D;&#x7F51;
 
 participant APP
@@ -1409,28 +1433,28 @@ Server--&gt;Device: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
 
 Server--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x8BBE;&#x5907;&#x5217;&#x8868;
 </code></pre>
-<h4 id="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><a name="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;</h4>
-<pre class="language-"><code class="lang-java">ActivatorBuilder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<h4 id="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><a name="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ActivatorBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setSsid</span><span class="token punctuation">(</span>ssid<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span>
-        <span class="token punctuation">.</span><span class="token function">setActivatorModel</span><span class="token punctuation">(</span>ActivatorModelEnum<span class="token punctuation">.</span>TY_EZ<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setActivatorModel</span><span class="token punctuation">(</span><span class="token class-name">ActivatorModelEnum</span><span class="token punctuation">.</span>TY_EZ<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setToken</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSmartActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span>DeviceBean devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span>String step<span class="token punctuation">,</span> Object data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span><span class="token class-name">String</span> step<span class="token punctuation">,</span> <span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -1473,16 +1497,16 @@ Server--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210
 </table>
 <p><strong>&#x83B7;&#x53D6;&#x914D;&#x7F51; token</strong></p>
 <p>&#x5F00;&#x59CB;&#x914D;&#x7F51;&#x4E4B;&#x524D;&#xFF0C;SDK &#x9700;&#x8981;&#x5728;&#x8054;&#x7F51;&#x72B6;&#x6001;&#x4E0B;&#x4ECE;&#x6D82;&#x9E26;&#x4E91;&#x83B7;&#x53D6;&#x914D;&#x7F51; Token&#xFF0C;Token &#x7684;&#x6709;&#x6548;&#x671F;&#x4E3A;5&#x5206;&#x949F;&#xFF0C;&#x4E14;&#x914D;&#x7F6E;&#x6210;&#x529F;&#x540E;&#x5C31;&#x4F1A;&#x5931;&#x6548;&#xFF08;&#x518D;&#x6B21;&#x914D;&#x7F51;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x83B7;&#x53D6;&#xFF09;&#x3002;</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getActivatorToken</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> 
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getActivatorToken</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> 
         <span class="token keyword">new</span> <span class="token class-name">ITuyaActivatorGetToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>String token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFailure</span><span class="token punctuation">(</span>String s<span class="token punctuation">,</span> String s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFailure</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1502,8 +1526,8 @@ Server--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210
 </tr>
 </tbody>
 </table>
-<h4 id="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><a name="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;" class="plugin-anchor" href="#&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;</h4>
-<pre class="language-"><code class="lang-java">ITuyaActivator mTuyaActivator <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newMultiActivator</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h4 id="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><a name="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;" class="plugin-anchor" href="#&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaActivator</span> mTuyaActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newMultiActivator</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//&#x5F00;&#x59CB;&#x914D;&#x7F51;</span>
 mTuyaActivator<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//&#x505C;&#x6B62;&#x914D;&#x7F51;</span>
@@ -1554,7 +1578,7 @@ mTuyaActivator<span class="token punctuation">.</span><span class="token functio
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"快连 (EZ) 模式","level":"1.6.1","depth":2,"next":{"title":"热点 (AP) 模式","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"./resource/Activator_wifi_ap.md","articles":[]},"previous":{"title":"Wi-Fi 设备配网","level":"1.6","depth":1,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[{"title":"快连 (EZ) 模式","level":"1.6.1","depth":2,"path":"resource/Activator_wifi_ez.md","ref":"./resource/Activator_wifi_ez.md","articles":[]},{"title":"热点 (AP) 模式","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"./resource/Activator_wifi_ap.md","articles":[]},{"title":"Wi-Fi 设备配网常见问题","level":"1.6.3","depth":2,"path":"resource/Activator_wifi_faq.md","ref":"./resource/Activator_wifi_faq.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Activator_wifi_ez.md","mtime":"2020-03-19T14:06:07.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"快连 (EZ) 模式","level":"1.6.1","depth":2,"next":{"title":"热点 (AP) 模式","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"./resource/Activator_wifi_ap.md","articles":[]},"previous":{"title":"Wi-Fi 设备配网","level":"1.6","depth":1,"path":"resource/Activator_wifi.md","ref":"./resource/Activator_wifi.md","articles":[{"title":"快连 (EZ) 模式","level":"1.6.1","depth":2,"path":"resource/Activator_wifi_ez.md","ref":"./resource/Activator_wifi_ez.md","articles":[]},{"title":"热点 (AP) 模式","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"./resource/Activator_wifi_ap.md","articles":[]},{"title":"Wi-Fi 设备配网常见问题","level":"1.6.3","depth":2,"path":"resource/Activator_wifi_faq.md","ref":"./resource/Activator_wifi_faq.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Activator_wifi_ez.md","mtime":"2020-03-19T14:06:07.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1569,6 +1593,26 @@ mTuyaActivator<span class="token punctuation">.</span><span class="token functio
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1589,10 +1633,6 @@ mTuyaActivator<span class="token punctuation">.</span><span class="token functio
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

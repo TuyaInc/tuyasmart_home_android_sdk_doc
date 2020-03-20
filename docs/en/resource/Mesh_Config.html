@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Mesh_Admin.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,8 +1416,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="activation"><a name="activation" class="plugin-anchor" href="#activation"><i class="fa fa-link" aria-hidden="true"></i></a>Activation</h1>
-<h2 id="scaning-mesh-devices"><a name="scaning-mesh-devices" class="plugin-anchor" href="#scaning-mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Scaning Mesh Devices</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#activation"><b></b>Activation</a></li><ul><li><span class="title-icon "></span><a href="#scaning-mesh-devices"><b></b>Scaning Mesh Devices</a></li><li><span class="title-icon "></span><a href="#sub-devices-activation-&#x2014;&#x2014;-app-activation"><b></b>Sub-devices Activation &#x2014;&#x2014; APP Activation</a></li><li><span class="title-icon "></span><a href="#sub-devices-activation&#x2014;&#x2014;gateway-activation"><b></b>Sub-devices Activation&#x2014;&#x2014;Gateway Activation</a></li><ul><li><span class="title-icon "></span><a href="#error-code"><b></b>Error Code</a></li></ul></ul></ul></div><a href="#activation" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="activation"><a name="activation" class="anchor-navigation-ex-anchor" href="#activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="activation" class="plugin-anchor" href="#activation"><i class="fa fa-link" aria-hidden="true"></i></a>Activation</h1>
+<h2 id="scaning-mesh-devices"><a name="scaning-mesh-devices" class="anchor-navigation-ex-anchor" href="#scaning-mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a><a name="scaning-mesh-devices" class="plugin-anchor" href="#scaning-mesh-devices"><i class="fa fa-link" aria-hidden="true"></i></a>Scaning Mesh Devices</h2>
 <p> Keep bluetooth ON and check location permissions before scanning.</p>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">//start scanning</span>
@@ -1402,9 +1426,9 @@
 <span class="token keyword">void</span> <span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">ITuyaBlueMeshSearchListener iTuyaBlueMeshSearchListener<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshSearchListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaBlueMeshSearchListener</span> iTuyaBlueMeshSearchListener<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshSearchListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSearched</span><span class="token punctuation">(</span>SearchDeviceBean deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSearched</span><span class="token punctuation">(</span><span class="token class-name">SearchDeviceBean</span> deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
@@ -1412,19 +1436,19 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-SearchBuilder searchBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SearchBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token class-name">SearchBuilder</span> searchBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SearchBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
          <span class="token punctuation">.</span><span class="token function">setMeshName</span><span class="token punctuation">(</span><span class="token string">&quot;out_of_mesh&quot;</span><span class="token punctuation">)</span>        
      <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>        
      <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshSearchListener</span><span class="token punctuation">(</span>iTuyaBlueMeshSearchListener<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-ITuyaBlueMeshSearch mMeshSearch <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newTuyaBlueMeshSearch</span><span class="token punctuation">(</span>searchBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">ITuyaBlueMeshSearch</span> mMeshSearch <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newTuyaBlueMeshSearch</span><span class="token punctuation">(</span>searchBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//start</span>
 mMeshSearch<span class="token punctuation">.</span><span class="token function">startSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//stop</span>
 mMeshSearch<span class="token punctuation">.</span><span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="sub-devices-activation-&#x2014;&#x2014;-app-activation"><a name="sub-devices-activation-&#x2014;&#x2014;-app-activation" class="plugin-anchor" href="#sub-devices-activation-&#x2014;&#x2014;-app-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Activation &#x2014;&#x2014; APP Activation</h2>
+<h2 id="sub-devices-activation-&#x2014;&#x2014;-app-activation"><a name="sub-devices-activation-&#x2014;&#x2014;-app-activation" class="anchor-navigation-ex-anchor" href="#sub-devices-activation-&#x2014;&#x2014;-app-activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sub-devices-activation-&#x2014;&#x2014;-app-activation" class="plugin-anchor" href="#sub-devices-activation-&#x2014;&#x2014;-app-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Activation &#x2014;&#x2014; APP Activation</h2>
 <p>Two types of sub-devices Activation, App activation and Mesh gateway activation.</p>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1479,31 +1503,31 @@ mMeshSearch<span class="token punctuation">.</span><span class="token function">
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaBlueMeshActivatorBuilder tuyaBlueMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaBlueMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaBlueMeshActivatorBuilder</span> tuyaBlueMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaBlueMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setSearchDeviceBeans</span><span class="token punctuation">(</span>foundDevices<span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setVersion</span><span class="token punctuation">(</span><span class="token string">&quot;1.0&quot;</span><span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setBlueMeshBean</span><span class="token punctuation">(</span>mMeshBean<span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span>timeOut<span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>DeviceBean deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
 
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
 
      <span class="token annotation punctuation">@Override</span>
      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFinish</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-ITuyaBlueMeshActivator iTuyaBlueMeshActivator <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">ITuyaBlueMeshActivator</span> iTuyaBlueMeshActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">stopActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="sub-devices-activation&#x2014;&#x2014;gateway-activation"><a name="sub-devices-activation&#x2014;&#x2014;gateway-activation" class="plugin-anchor" href="#sub-devices-activation&#x2014;&#x2014;gateway-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Activation&#x2014;&#x2014;Gateway Activation</h2>
+<h2 id="sub-devices-activation&#x2014;&#x2014;gateway-activation"><a name="sub-devices-activation&#x2014;&#x2014;gateway-activation" class="anchor-navigation-ex-anchor" href="#sub-devices-activation&#x2014;&#x2014;gateway-activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sub-devices-activation&#x2014;&#x2014;gateway-activation" class="plugin-anchor" href="#sub-devices-activation&#x2014;&#x2014;gateway-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Sub-devices Activation&#x2014;&#x2014;Gateway Activation</h2>
 <p>Two types of sub-devices Activation, device activation and Mesh gateway activation.
 <strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1558,7 +1582,7 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaBlueMeshActivatorBuilder tuyaBlueMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaBlueMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaBlueMeshActivatorBuilder</span> tuyaBlueMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaBlueMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setWifiSsid</span><span class="token punctuation">(</span>mSsid<span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setWifiPassword</span><span class="token punctuation">(</span>mPassword<span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setSearchDeviceBeans</span><span class="token punctuation">(</span>foundDevices<span class="token punctuation">)</span>
@@ -1568,24 +1592,24 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
                 <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
    <span class="token annotation punctuation">@Override</span>
-   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>DeviceBean devBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> devBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
    <span class="token annotation punctuation">@Override</span>
-   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token punctuation">}</span>
 
    <span class="token annotation punctuation">@Override</span>
    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFinish</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
 
    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-ITuyaBlueMeshActivator iTuyaBlueMeshActivator <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newWifiActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">ITuyaBlueMeshActivator</span> iTuyaBlueMeshActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newWifiActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">stopActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="error-code"><a name="error-code" class="plugin-anchor" href="#error-code"><i class="fa fa-link" aria-hidden="true"></i></a>Error Code</h3>
+<h3 id="error-code"><a name="error-code" class="anchor-navigation-ex-anchor" href="#error-code"><i class="fa fa-link" aria-hidden="true"></i></a><a name="error-code" class="plugin-anchor" href="#error-code"><i class="fa fa-link" aria-hidden="true"></i></a>Error Code</h3>
 <table>
 <thead>
 <tr>
@@ -1659,7 +1683,7 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configuration","level":"1.20.4","depth":2,"next":{"title":"Device","level":"1.20.5","depth":2,"path":"resource/Mesh_Device.md","ref":"./resource/Mesh_Device.md","articles":[]},"previous":{"title":"Management","level":"1.20.3","depth":2,"path":"resource/Mesh_Admin.md","ref":"./resource/Mesh_Admin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh_Config.md","mtime":"2020-03-19T12:42:11.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Configuration","level":"1.20.4","depth":2,"next":{"title":"Device","level":"1.20.5","depth":2,"path":"resource/Mesh_Device.md","ref":"./resource/Mesh_Device.md","articles":[]},"previous":{"title":"Management","level":"1.20.3","depth":2,"path":"resource/Mesh_Admin.md","ref":"./resource/Mesh_Admin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh_Config.md","mtime":"2020-03-19T12:42:11.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1674,6 +1698,26 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1694,10 +1738,6 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

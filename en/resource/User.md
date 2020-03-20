@@ -1,4 +1,4 @@
-# User management
+# User Management
 
 Tuya Cloud supports various kinds of user systems such as mobile phone, email and UID. Mobile phone supports verification code login and password login. The registration and login of each user system will be separately described later.
 

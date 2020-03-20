@@ -182,6 +182,23 @@ mDevice.registerDevListener(new IDevListener() {
 });
 ```
 
+## Unregister Device Listener
+
+When you do not need to listen to the device, you can unregister the device listener.
+
+**Declaration**
+
+```java
+ITuyaDevice.unRegisterDevListener()
+```
+
+**Example**
+
+
+```java
+mDevice.unRegisterDevListener();
+```
+
 ## Device Control Method
 
 The device control interface function is to send function points to the device to change the device status or function.
@@ -306,21 +323,6 @@ mDevice.publishDps(dps, new IControlCallback() {
 - For the transparent transmission, the byte array shall be the string format, and the string must have even bits. 
 	 The correct format shall be: {"105": "0110"}, instead of {"105": "110"}.
 
-## Unregister Device Listener
-
-**Declaration**
-
-```java
-ITuyaDevice.unRegisterDevListener()
-```
-
-**Example**
-
-
-```java
-mDevice.unRegisterDevListener();
-```
-
 ## Querying Device Information
 
 **Declaration**
@@ -349,7 +351,7 @@ mDevice.getDp(dpId, new IResultCallback() {
 });
 ```
 
-**[Notes]**
+**Notes**
 
 - This interface is mainly for the dp points where the data will not be reported automatically. The dp data values for regular query can be obtained through getDps() in DeviceBean.
 

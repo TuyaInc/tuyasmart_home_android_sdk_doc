@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Message.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,11 +1416,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="message-push-settings"><a name="message-push-settings" class="plugin-anchor" href="#message-push-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Message push settings</h1>
-<h2 id="get-the-current-status-of-the-message-master-switch"><a name="get-the-current-status-of-the-message-master-switch" class="plugin-anchor" href="#get-the-current-status-of-the-message-master-switch"><i class="fa fa-link" aria-hidden="true"></i></a>Get the current status of the message master switch</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#message-push-settings"><b></b>Message push settings</a></li><ul><li><span class="title-icon "></span><a href="#get-the-current-status-of-the-message-master-switch"><b></b>Get the current status of the message master switch</a></li><li><span class="title-icon "></span><a href="#set-the-current-state-of-the-message-master-switch"><b></b>Set the current state of the message master switch</a></li><li><span class="title-icon "></span><a href="#get-the-switch-status-of-the-message-according-to-the-message-type"><b></b>Get the switch status of the message according to the message type</a></li><li><span class="title-icon "></span><a href="#get-the-switch-status-of-the-message-according-to-the-message-type_1"><b></b>Get the switch status of the message according to the message type</a></li></ul></ul></div><a href="#message-push-settings" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="message-push-settings"><a name="message-push-settings" class="anchor-navigation-ex-anchor" href="#message-push-settings"><i class="fa fa-link" aria-hidden="true"></i></a><a name="message-push-settings" class="plugin-anchor" href="#message-push-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Message push settings</h1>
+<h2 id="get-the-current-status-of-the-message-master-switch"><a name="get-the-current-status-of-the-message-master-switch" class="anchor-navigation-ex-anchor" href="#get-the-current-status-of-the-message-master-switch"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-current-status-of-the-message-master-switch" class="plugin-anchor" href="#get-the-current-status-of-the-message-master-switch"><i class="fa fa-link" aria-hidden="true"></i></a>Get the current status of the message master switch</h2>
 <p>The message push switch is the master switch. In the off state, no messages such as device alarms, home messages, and notification messages can be received.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getPushStatus</span><span class="token punctuation">(</span>ITuyaResultCallback<span class="token generics function"><span class="token punctuation">&lt;</span>PushStatusBean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getPushStatus</span><span class="token punctuation">(</span><span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PushStatusBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1414,17 +1438,17 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPushStatus</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>PushStatusBean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPushStatus</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PushStatusBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
        <span class="token annotation punctuation">@Override</span>
-       <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>PushStatusBean result<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+       <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">PushStatusBean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
        <span class="token annotation punctuation">@Override</span>
-       <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+       <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="set-the-current-state-of-the-message-master-switch"><a name="set-the-current-state-of-the-message-master-switch" class="plugin-anchor" href="#set-the-current-state-of-the-message-master-switch"><i class="fa fa-link" aria-hidden="true"></i></a>Set the current state of the message master switch</h2>
+<h2 id="set-the-current-state-of-the-message-master-switch"><a name="set-the-current-state-of-the-message-master-switch" class="anchor-navigation-ex-anchor" href="#set-the-current-state-of-the-message-master-switch"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-the-current-state-of-the-message-master-switch" class="plugin-anchor" href="#set-the-current-state-of-the-message-master-switch"><i class="fa fa-link" aria-hidden="true"></i></a>Set the current state of the message master switch</h2>
 <p>The message push switch is the master switch, and no messages such as device alarms, home messages, notification messages, etc. can be received in the off state.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">setPushStatus</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isOpen<span class="token punctuation">,</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>Boolean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">setPushStatus</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> isOpen<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1446,17 +1470,17 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setPushStatus</span><span class="token punctuation">(</span>open<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>Boolean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setPushStatus</span><span class="token punctuation">(</span><span class="token keyword">open</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token annotation punctuation">@Override</span>
-      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>Boolean result<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
       <span class="token annotation punctuation">@Override</span>
-      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="get-the-switch-status-of-the-message-according-to-the-message-type"><a name="get-the-switch-status-of-the-message-according-to-the-message-type" class="plugin-anchor" href="#get-the-switch-status-of-the-message-according-to-the-message-type"><i class="fa fa-link" aria-hidden="true"></i></a>Get the switch status of the message according to the message type</h2>
+<h2 id="get-the-switch-status-of-the-message-according-to-the-message-type"><a name="get-the-switch-status-of-the-message-according-to-the-message-type" class="anchor-navigation-ex-anchor" href="#get-the-switch-status-of-the-message-according-to-the-message-type"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-switch-status-of-the-message-according-to-the-message-type" class="plugin-anchor" href="#get-the-switch-status-of-the-message-according-to-the-message-type"><i class="fa fa-link" aria-hidden="true"></i></a>Get the switch status of the message according to the message type</h2>
 <p>Get the switch status of the current type of message according to the message type</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getPushStatusByType</span><span class="token punctuation">(</span>PushType type<span class="token punctuation">,</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>Boolean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getPushStatusByType</span><span class="token punctuation">(</span><span class="token class-name">PushType</span> type<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1478,17 +1502,17 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPushStatusByType</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>Boolean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPushStatusByType</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token annotation punctuation">@Override</span>
-      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>Boolean result<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
       <span class="token annotation punctuation">@Override</span>
-      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="get-the-switch-status-of-the-message-according-to-the-message-type"><a name="get-the-switch-status-of-the-message-according-to-the-message-type" class="plugin-anchor" href="#get-the-switch-status-of-the-message-according-to-the-message-type"><i class="fa fa-link" aria-hidden="true"></i></a>Get the switch status of the message according to the message type</h2>
+<h2 id="get-the-switch-status-of-the-message-according-to-the-message-type_1"><a name="get-the-switch-status-of-the-message-according-to-the-message-type_1" class="anchor-navigation-ex-anchor" href="#get-the-switch-status-of-the-message-according-to-the-message-type_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-the-switch-status-of-the-message-according-to-the-message-type" class="plugin-anchor" href="#get-the-switch-status-of-the-message-according-to-the-message-type"><i class="fa fa-link" aria-hidden="true"></i></a>Get the switch status of the message according to the message type</h2>
 <p>Gets the switch status of the current type of message according to the message type.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">setPushStatusByType</span><span class="token punctuation">(</span>PushType type<span class="token punctuation">,</span> isOpen<span class="token punctuation">,</span> ITuyaDataCallback<span class="token generics function"><span class="token punctuation">&lt;</span>Boolean<span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">setPushStatusByType</span><span class="token punctuation">(</span><span class="token class-name">PushType</span> type<span class="token punctuation">,</span> isOpen<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameter</strong></p>
 <table>
@@ -1514,13 +1538,13 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setPushStatusByType</span><span class="token punctuation">(</span>pushType<span class="token punctuation">,</span> checked<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics function"><span class="token punctuation">&lt;</span>Boolean<span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getPushInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setPushStatusByType</span><span class="token punctuation">(</span>pushType<span class="token punctuation">,</span> checked<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token annotation punctuation">@Override</span>
-      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>Boolean result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token punctuation">}</span>
 
       <span class="token annotation punctuation">@Override</span>
-      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1567,7 +1591,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Message Push Switch","level":"1.14.2","depth":2,"next":{"title":"Feedback","level":"1.15","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"previous":{"title":"Message List","level":"1.14.1","depth":2,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/MessagePush.md","mtime":"2020-03-19T13:58:01.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Message Push Switch","level":"1.14.2","depth":2,"next":{"title":"Feedback","level":"1.15","depth":1,"path":"resource/Feedback.md","ref":"./resource/Feedback.md","articles":[]},"previous":{"title":"Message List","level":"1.14.1","depth":2,"path":"resource/Message.md","ref":"./resource/Message.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/MessagePush.md","mtime":"2020-03-19T13:58:01.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1582,6 +1606,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1602,10 +1646,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

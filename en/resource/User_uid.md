@@ -1,6 +1,6 @@
-# User uid login system
+# User Uid Login System
 Tuya Smart provides a uid login system. If customers have their own user system, they can access our SDK through uid login system.
-## User uid registration
+## User Uid Registration
 
 **Declaration**
 
@@ -15,7 +15,7 @@ TuyaHomeSdk.getUserInstance().registerAccountWithUid (String countryCode, String
 | ----------- | ----------------- |
 |countryCode | country code, for example: 86 |
 | uid | User uid |
-password | User Password |
+|password | User Password |
 | callback | callback |
 
 **Example**
@@ -33,7 +33,7 @@ TuyaHomeSdk.getUserInstance().registerAccountWithUid ("86", "1234", "123456", ne
     }
 });
 ```
-## User uid login
+## User Uid Login
 **Declaration**
 
 User uid login
@@ -66,10 +66,10 @@ TuyaHomeSdk.getUserInstance().loginWithUid ("86", "1234", "123456", new ILoginCa
     }
 });
 ```
-## User uid reset password
-The user uid resets the password. You need to reset the password through the cloud connection. See [Cloud API Documentation] (https://docs.tuya.com/cn/openapi/api/post_apps.schema.user_1.0.html)
+## User Uid Reset Password
+The user uid resets the password. You need to reset the password through the cloud connection. See [Cloud API Documentation](https://docs.tuya.com/cn/openapi/api/post_apps.schema.user_1.0.html)
 
-## User uid login registration interface
+## User Uid Login Registration Interface
 **Declaration**
 
 The user UID login and registers to form an interface.

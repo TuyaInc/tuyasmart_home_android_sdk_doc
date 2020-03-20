@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Preparation.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,11 +1416,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="integrate-sdk"><a name="integrate-sdk" class="plugin-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate SDK</h1>
-<h1 id="preparation-for-integration"><a name="preparation-for-integration" class="plugin-anchor" href="#preparation-for-integration"><i class="fa fa-link" aria-hidden="true"></i></a>Preparation for Integration</h1>
-<h3 id="create-project"><a name="create-project" class="plugin-anchor" href="#create-project"><i class="fa fa-link" aria-hidden="true"></i></a>Create Project</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#integrate-sdk"><b></b>Integrate SDK</a></li><li><span class="title-icon "></span><a href="#preparation-for-integration"><b></b>Preparation for Integration</a></li><ul><ul><li><span class="title-icon "></span><a href="#create-project"><b></b>Create Project</a></li><li><span class="title-icon "></span><a href="#configure-the-buildgradle"><b></b>Configure the build.gradle</a></li><li><span class="title-icon "></span><a href="#integrated-security-image"><b></b>Integrated security image</a></li><li><span class="title-icon "></span><a href="#set-the-androidmanifestxml"><b></b>Set the AndroidManifest.xml</a></li><li><span class="title-icon "></span><a href="#proguard-configuration"><b></b>Proguard Configuration</a></li></ul><li><span class="title-icon "></span><a href="#use-the-sdk-function-in-codes"><b></b>Use the SDK function in codes</a></li><ul><li><span class="title-icon "></span><a href="#initiate-sdk-in-the-application"><b></b>Initiate SDK in the Application</a></li><li><span class="title-icon "></span><a href="#logout-of-the-tuya-smart-cloud-connection"><b></b>Logout of the Tuya Smart Cloud connection</a></li><li><span class="title-icon "></span><a href="#monitor-the-invalidity-of-registered-session"><b></b>Monitor the invalidity of registered session</a></li><li><span class="title-icon "></span><a href="#debug-mode"><b></b>Debug mode</a></li></ul></ul></ul></div><a href="#integrate-sdk" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="integrate-sdk"><a name="integrate-sdk" class="anchor-navigation-ex-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="integrate-sdk" class="plugin-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>Integrate SDK</h1>
+<h1 id="preparation-for-integration"><a name="preparation-for-integration" class="anchor-navigation-ex-anchor" href="#preparation-for-integration"><i class="fa fa-link" aria-hidden="true"></i></a><a name="preparation-for-integration" class="plugin-anchor" href="#preparation-for-integration"><i class="fa fa-link" aria-hidden="true"></i></a>Preparation for Integration</h1>
+<h3 id="create-project"><a name="create-project" class="anchor-navigation-ex-anchor" href="#create-project"><i class="fa fa-link" aria-hidden="true"></i></a><a name="create-project" class="plugin-anchor" href="#create-project"><i class="fa fa-link" aria-hidden="true"></i></a>Create Project</h3>
 <p>Build your project in the Android Studio.</p>
-<h3 id="configure-the-buildgradle"><a name="configure-the-buildgradle" class="plugin-anchor" href="#configure-the-buildgradle"><i class="fa fa-link" aria-hidden="true"></i></a>Configure the build.gradle</h3>
+<h3 id="configure-the-buildgradle"><a name="configure-the-buildgradle" class="anchor-navigation-ex-anchor" href="#configure-the-buildgradle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="configure-the-buildgradle" class="plugin-anchor" href="#configure-the-buildgradle"><i class="fa fa-link" aria-hidden="true"></i></a>Configure the build.gradle</h3>
 <p>Add the following codes to the build.gradle file.</p>
 <pre class="language-"><code class="lang-groovy">defaultConfig <span class="token punctuation">{</span>
     ndk <span class="token punctuation">{</span>
@@ -1417,18 +1441,18 @@ repositories <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <blockquote>
-<p><strong>[Note]</strong></p>
+<p><strong>[info] Note</strong></p>
 <ul>
 <li>The Tuya Smart sdk solely supports the platform of armeabi-v7a architecture by default. Developer may refer to the <a href="https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs" target="_blank">GitHub</a> if you need other platforms. </li>
 <li>After version 3.11.0, the so libraries of armeabi-v7a, arm64-v8a, armeabi platforms have been integrated into sdk. Please remove the relevant so-banks of sdk manually placed in the local, and use the default provided by sdk.</li>
 </ul>
 </blockquote>
-<h3 id="integrated-security-image"><a name="integrated-security-image" class="plugin-anchor" href="#integrated-security-image"><i class="fa fa-link" aria-hidden="true"></i></a>Integrated security image</h3>
+<h3 id="integrated-security-image"><a name="integrated-security-image" class="anchor-navigation-ex-anchor" href="#integrated-security-image"><i class="fa fa-link" aria-hidden="true"></i></a><a name="integrated-security-image" class="plugin-anchor" href="#integrated-security-image"><i class="fa fa-link" aria-hidden="true"></i></a>Integrated security image</h3>
 <p>Click the download button to download the security image.</p>
 <p><img src="images/download_t_s.png" alt=""></p>
 <p>Rename the downloaded security image to &quot;t_s.bmp&quot; and move it to the assets/ folder in the project directory.</p>
 <p><img src="images/addt_s.png" alt=""></p>
-<h3 id="set-the-androidmanifestxml"><a name="set-the-androidmanifestxml" class="plugin-anchor" href="#set-the-androidmanifestxml"><i class="fa fa-link" aria-hidden="true"></i></a>Set the AndroidManifest.xml</h3>
+<h3 id="set-the-androidmanifestxml"><a name="set-the-androidmanifestxml" class="anchor-navigation-ex-anchor" href="#set-the-androidmanifestxml"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-the-androidmanifestxml" class="plugin-anchor" href="#set-the-androidmanifestxml"><i class="fa fa-link" aria-hidden="true"></i></a>Set the AndroidManifest.xml</h3>
 <p>Set appkey and appSecret in the AndroidManifest.xml file, and configure corresponding permissions, etc.</p>
 <pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta-data</span>
     <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>TUYA_SMART_APPKEY<span class="token punctuation">&quot;</span></span>
@@ -1437,7 +1461,7 @@ repositories <span class="token punctuation">{</span>
     <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>TUYA_SMART_SECRET<span class="token punctuation">&quot;</span></span>
     <span class="token attr-name"><span class="token namespace">android:</span>value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>AppSecret<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
 </code></pre>
-<h3 id="proguard-configuration"><a name="proguard-configuration" class="plugin-anchor" href="#proguard-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>Proguard Configuration</h3>
+<h3 id="proguard-configuration"><a name="proguard-configuration" class="anchor-navigation-ex-anchor" href="#proguard-configuration"><i class="fa fa-link" aria-hidden="true"></i></a><a name="proguard-configuration" class="plugin-anchor" href="#proguard-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>Proguard Configuration</h3>
 <p>please add this proguard configuration to proguard-rules.pro files. </p>
 <pre class="language-"><code class="lang-bash"><span class="token comment">#fastJson</span>
 -keep class com.alibaba.fastjson.**<span class="token punctuation">{</span>*<span class="token punctuation">;</span><span class="token punctuation">}</span>
@@ -1458,9 +1482,9 @@ repositories <span class="token punctuation">{</span>
 -keep class com.tuya.**<span class="token punctuation">{</span>*<span class="token punctuation">;</span><span class="token punctuation">}</span>
 -dontwarn com.tuya.**
 </code></pre>
-<h2 id="use-the-sdk-function-in-codes"><a name="use-the-sdk-function-in-codes" class="plugin-anchor" href="#use-the-sdk-function-in-codes"><i class="fa fa-link" aria-hidden="true"></i></a>Use the SDK function in codes</h2>
+<h2 id="use-the-sdk-function-in-codes"><a name="use-the-sdk-function-in-codes" class="anchor-navigation-ex-anchor" href="#use-the-sdk-function-in-codes"><i class="fa fa-link" aria-hidden="true"></i></a><a name="use-the-sdk-function-in-codes" class="plugin-anchor" href="#use-the-sdk-function-in-codes"><i class="fa fa-link" aria-hidden="true"></i></a>Use the SDK function in codes</h2>
 <p>The TuyaHomeSdk is the outbound interface of the Smart Home, and the operations include network configuration, initiation, control, room, group and ZigBee.</p>
-<h3 id="initiate-sdk-in-the-application"><a name="initiate-sdk-in-the-application" class="plugin-anchor" href="#initiate-sdk-in-the-application"><i class="fa fa-link" aria-hidden="true"></i></a>Initiate SDK in the Application</h3>
+<h3 id="initiate-sdk-in-the-application"><a name="initiate-sdk-in-the-application" class="anchor-navigation-ex-anchor" href="#initiate-sdk-in-the-application"><i class="fa fa-link" aria-hidden="true"></i></a><a name="initiate-sdk-in-the-application" class="plugin-anchor" href="#initiate-sdk-in-the-application"><i class="fa fa-link" aria-hidden="true"></i></a>Initiate SDK in the Application</h3>
 <p><strong>Description</strong></p>
 <p>It is used to initiate components of communication services, etc.</p>
 <p><strong>Example</strong></p>
@@ -1468,26 +1492,26 @@ repositories <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p><strong>Note:</strong></p>
 <p>The appId and appSecret need to be configured in the AndroidManifest.xml file or the build environment or the codes. </p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>Application application<span class="token punctuation">,</span> String appkey<span class="token punctuation">,</span> String appSerect<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">Application</span> application<span class="token punctuation">,</span> <span class="token class-name">String</span> appkey<span class="token punctuation">,</span> <span class="token class-name">String</span> appSerect<span class="token punctuation">)</span>
 </code></pre>
-<h3 id="logout-of-the-tuya-smart-cloud-connection"><a name="logout-of-the-tuya-smart-cloud-connection" class="plugin-anchor" href="#logout-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a>Logout of the Tuya Smart Cloud connection</h3>
+<h3 id="logout-of-the-tuya-smart-cloud-connection"><a name="logout-of-the-tuya-smart-cloud-connection" class="anchor-navigation-ex-anchor" href="#logout-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a><a name="logout-of-the-tuya-smart-cloud-connection" class="plugin-anchor" href="#logout-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a>Logout of the Tuya Smart Cloud connection</h3>
 <p>The following interface needs to be invoked to log out of the App. </p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="monitor-the-invalidity-of-registered-session"><a name="monitor-the-invalidity-of-registered-session" class="plugin-anchor" href="#monitor-the-invalidity-of-registered-session"><i class="fa fa-link" aria-hidden="true"></i></a>Monitor the invalidity of registered session</h3>
+<h3 id="monitor-the-invalidity-of-registered-session"><a name="monitor-the-invalidity-of-registered-session" class="anchor-navigation-ex-anchor" href="#monitor-the-invalidity-of-registered-session"><i class="fa fa-link" aria-hidden="true"></i></a><a name="monitor-the-invalidity-of-registered-session" class="plugin-anchor" href="#monitor-the-invalidity-of-registered-session"><i class="fa fa-link" aria-hidden="true"></i></a>Monitor the invalidity of registered session</h3>
 <p><strong>Description</strong></p>
 <p>Because of abnormality or long-time absence of operation for 45 or more days, the session will become invalid, and user has to log out of the App and log in again to obtain the session. </p>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// Monitor the invalidity of session.</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span>INeedLoginListener needLoginListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token class-name">INeedLoginListener</span> needLoginListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-needLoginListener<span class="token punctuation">.</span><span class="token function">onNeedLogin</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+needLoginListener<span class="token punctuation">.</span><span class="token function">onNeedLogin</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TuyaSmartApp</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
@@ -1496,22 +1520,22 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment">// Register in the App.</span>
-                TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">INeedLoginListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">INeedLoginListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNeedLogin</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNeedLogin</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <blockquote>
-<p>[<strong>Note</strong>]</p>
+<p><strong>[info] Note</strong></p>
 <ul>
 <li>In case of this kind of callback, please go to the login page and require the user to log in again. </li>
 </ul>
 </blockquote>
-<h3 id="debug-mode"><a name="debug-mode" class="plugin-anchor" href="#debug-mode"><i class="fa fa-link" aria-hidden="true"></i></a>Debug mode</h3>
+<h3 id="debug-mode"><a name="debug-mode" class="anchor-navigation-ex-anchor" href="#debug-mode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="debug-mode" class="plugin-anchor" href="#debug-mode"><i class="fa fa-link" aria-hidden="true"></i></a>Debug mode</h3>
 <p>In the debug mode, you can enable the sdk log switch to view more log information and help you locate the problem quickly. It is recommended to turn off the log switch in release mode.</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">setDebugMode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setDebugMode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                                 
@@ -1556,7 +1580,7 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.3","depth":1,"next":{"title":"User Management","level":"1.4","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"SDK Account Upgrade","level":"1.4.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.4.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.4.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Modify User Information","level":"1.4.6","depth":2,"anchor":"#change-nickname","path":"resource/User_Logout.md","ref":"./resource/User_Logout.md#change-nickname","articles":[]},{"title":"Sign Out","level":"1.4.7","depth":2,"anchor":"#logout-interface","path":"resource/User_Logout.md","ref":"./resource/User_Logout.md#logout-interface","articles":[]},{"title":"Disable Account","level":"1.4.8","depth":2,"anchor":"#disable-account","path":"resource/User_Logout.md","ref":"./resource/User_Logout.md#disable-account","articles":[]},{"title":"Data Model","level":"1.4.9","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]},{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]}]},"previous":{"title":"Preparation for Integration","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Integrated.md","mtime":"2020-03-19T14:16:47.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.3","depth":1,"next":{"title":"User Management","level":"1.4","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"Migration from 1.x SDK","level":"1.4.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.4.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.4.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Modify User Information","level":"1.4.6","depth":2,"path":"resource/User_update.md","ref":"./resource/User_update.md","articles":[]},{"title":"Sign Out","level":"1.4.7","depth":2,"anchor":"#logout-interface","path":"resource/User_logout.md","ref":"./resource/User_logout.md#logout-interface","articles":[]},{"title":"Disable Account","level":"1.4.8","depth":2,"anchor":"#disable-account","path":"resource/User_logout.md","ref":"./resource/User_logout.md#disable-account","articles":[]},{"title":"Data Model","level":"1.4.9","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]},{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]}]},"previous":{"title":"Preparation for Integration","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Integrated.md","mtime":"2020-03-20T03:42:46.128Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1571,6 +1595,26 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1591,10 +1635,6 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

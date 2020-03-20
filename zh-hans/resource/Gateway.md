@@ -1,4 +1,4 @@
-# Zigbee网关控制
+# ZigBee 网关控制
 
 网关本身也是个设备，如果要控制网关本身，可以参考之前的章节。
 
@@ -6,7 +6,7 @@
 
 |   类名    |       说明       |
 | :-------: | :-------------- |
-| ITuyaGateway | 网关类封装了Zigbee网关的相关操作，包括控制、查询子设备，监听子设备状态等。 |
+| ITuyaGateway | 网关类封装了 Zigbee 网关的相关操作，包括控制、查询子设备，监听子设备状态等。 |
 
 ## 初始化网关
 
@@ -171,11 +171,11 @@ void publishDps(String nodeId, String dps, IResultCallback callback)
 
 **参数说明**
 
-| 参数     | 说明                                     |
-| -------- | ---------------------------------------- |
-| nodeId   | 子设备节点id，从子设备的DeviceBean中获取 |
-| dps      | 要控制的功能点列表，格式为json字符串     |
-| callback | 发送成功或失败的回调                     |
+| 参数     | 说明                                        |
+| -------- | ------------------------------------------- |
+| nodeId   | 子设备节点 id，从子设备的 DeviceBean 中获取 |
+| dps      | 要控制的功能点列表，格式为 json 字符串      |
+| callback | 发送成功或失败的回调                        |
 
 **示例代码**
 
@@ -207,8 +207,8 @@ void multicastDps(String nodeId, String dps, IResultCallback callback)
 
 | 参数     | 说明                                 |
 | -------- | ------------------------------------ |
-| nodeId  | 子设备节点id，从子设备的DeviceBean中获取                             |
-| dps      | 要控制的功能点列表，格式为json字符串 |
+| nodeId  | 子设备节点 id，从子设备的 DeviceBean 中获取                          |
+| dps      | 要控制的功能点列表，格式为 json 字符串 |
 | callback | 发送成功或失败的回调                 |
 
 **示例代码**
@@ -240,10 +240,10 @@ void broadcastDps(String dps, IResultCallback callback)
 
 **参数说明**
 
-| 参数     | 说明                                 |
-| -------- | ------------------------------------ |
-| dps      | 要控制的功能点列表，格式为json字符串 |
-| callback | 发送成功或失败的回调                 |
+| 参数     | 说明                                   |
+| -------- | -------------------------------------- |
+| dps      | 要控制的功能点列表，格式为 json 字符串 |
+| callback | 发送成功或失败的回调                   |
 
 **示例代码**
 

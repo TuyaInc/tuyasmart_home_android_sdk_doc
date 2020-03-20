@@ -11,21 +11,15 @@ TuyaHomeSdk.setOnNeedLoginListener(INeedLoginListener needLoginListener);
 **Example**
 
 ```java
-public class TuyaSmartApp extends Application {
+TuyaHomeSdk.setOnNeedLoginListener(new INeedLoginListener() {
+  @Override
+  public void onNeedLogin(Context context) {
 
-        @Override
-        public void onCreate() {
-            super.onCreate();
-            //Need to register in the application
-  			  TuyaHomeSdk.setOnNeedLoginListener(new INeedLoginListener() {
-     		  @Override
-      		  public void onNeedLogin(Context context) {
-
-      		  }
-    });
+  }
+});
 ```
->- Precautions
->
-> 	Once such a callback occurs, please go to the login page and let the user log in again.
+**Notes**
 
----
+* Once such a callback occurs, please go to the login page and let the user log in again.
+* Recommended for use in Application
+

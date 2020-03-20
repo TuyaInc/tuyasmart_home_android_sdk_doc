@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="BLE.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,11 +1416,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="section-ii&#x2014;&#x2014;ble-device-scanning-and-activation"><a name="section-ii&#x2014;&#x2014;ble-device-scanning-and-activation" class="plugin-anchor" href="#section-ii&#x2014;&#x2014;ble-device-scanning-and-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Section II&#x2014;&#x2014;BLE Device Scanning and Activation</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#section-ii&#x2014;&#x2014;ble-device-scanning-and-activation"><b></b>Section II&#x2014;&#x2014;BLE Device Scanning and Activation</a></li><ul><li><span class="title-icon "></span><a href="#prepare"><b></b>Prepare</a></li><li><span class="title-icon "></span><a href="#scanning-device"><b></b>Scanning Device</a></li><li><span class="title-icon "></span><a href="#stop-scanning"><b></b>Stop Scanning</a></li><li><span class="title-icon "></span><a href="#single-ble-device-activation"><b></b>Single BLE Device Activation</a></li><li><span class="title-icon "></span><a href="#cancel-activation"><b></b>Cancel Activation</a></li><li><span class="title-icon "></span><a href="#dual-mode-device-activation"><b></b>Dual-mode Device Activation</a></li><li><span class="title-icon "></span><a href="#cancel-dual-mode-device-activation"><b></b>Cancel Dual-mode Device Activation</a></li><li><span class="title-icon "></span><a href="#error-code"><b></b>Error Code</a></li></ul></ul></div><a href="#section-ii&#x2014;&#x2014;ble-device-scanning-and-activation" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="section-ii&#x2014;&#x2014;ble-device-scanning-and-activation"><a name="section-ii&#x2014;&#x2014;ble-device-scanning-and-activation" class="anchor-navigation-ex-anchor" href="#section-ii&#x2014;&#x2014;ble-device-scanning-and-activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="section-ii&#x2014;&#x2014;ble-device-scanning-and-activation" class="plugin-anchor" href="#section-ii&#x2014;&#x2014;ble-device-scanning-and-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Section II&#x2014;&#x2014;BLE Device Scanning and Activation</h1>
 <p>This section will introduce the scanning and activation of Tuya single-point equipment and dual-mode equipment. It is recommended to read <a href="BLE.html">Section 1</a></p>
-<h2 id="prepare"><a name="prepare" class="plugin-anchor" href="#prepare"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare</h2>
+<h2 id="prepare"><a name="prepare" class="anchor-navigation-ex-anchor" href="#prepare"><i class="fa fa-link" aria-hidden="true"></i></a><a name="prepare" class="plugin-anchor" href="#prepare"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare</h2>
 <p>Before developing BLE, you need to understand the basic logic of TuyaHomeSDK. You must already use TuyaHomeSdk to complete the basic operations such as initialization, login, and home creation.</p>
-<h2 id="scanning-device"><a name="scanning-device" class="plugin-anchor" href="#scanning-device"><i class="fa fa-link" aria-hidden="true"></i></a>Scanning Device</h2>
+<h2 id="scanning-device"><a name="scanning-device" class="anchor-navigation-ex-anchor" href="#scanning-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="scanning-device" class="plugin-anchor" href="#scanning-device"><i class="fa fa-link" aria-hidden="true"></i></a>Scanning Device</h2>
 <p>Unactivated Bluetooth devices will send Bluetooth broadcast packets to the surroundings, and the SDK will analyze the broadcast packets according to the protocol to find the surrounding Tuya Bluetooth single-point devices and dual-mode devices.</p>
 <blockquote>
 <p>Remind again: permissions check is required before scanning,  <strong>Only permissions allowable can work</strong>
@@ -1404,7 +1428,7 @@
 2&#x3001;APP has positioning permission</p>
 </blockquote>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startLeScan</span><span class="token punctuation">(</span><span class="token keyword">int</span> timeout<span class="token punctuation">,</span> ScanType type<span class="token punctuation">,</span> TyBleScanResponse response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startLeScan</span><span class="token punctuation">(</span><span class="token keyword">int</span> timeout<span class="token punctuation">,</span> <span class="token class-name">ScanType</span> type<span class="token punctuation">,</span> <span class="token class-name">TyBleScanResponse</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1430,9 +1454,9 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startLeScan</span><span class="token punctuation">(</span><span class="token number">60000</span><span class="token punctuation">,</span> ScanType<span class="token punctuation">.</span>SINGLE<span class="token punctuation">,</span> <span class="token keyword">new</span>    <span class="token class-name">TyBleScanResponse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startLeScan</span><span class="token punctuation">(</span><span class="token number">60000</span><span class="token punctuation">,</span> <span class="token class-name">ScanType</span><span class="token punctuation">.</span>SINGLE<span class="token punctuation">,</span> <span class="token keyword">new</span>    <span class="token class-name">TyBleScanResponse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onResult</span><span class="token punctuation">(</span>ScanDeviceBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onResult</span><span class="token punctuation">(</span><span class="token class-name">ScanDeviceBean</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1489,18 +1513,18 @@
 </tr>
 </tbody>
 </table>
-<h2 id="stop-scanning"><a name="stop-scanning" class="plugin-anchor" href="#stop-scanning"><i class="fa fa-link" aria-hidden="true"></i></a>Stop Scanning</h2>
+<h2 id="stop-scanning"><a name="stop-scanning" class="anchor-navigation-ex-anchor" href="#stop-scanning"><i class="fa fa-link" aria-hidden="true"></i></a><a name="stop-scanning" class="plugin-anchor" href="#stop-scanning"><i class="fa fa-link" aria-hidden="true"></i></a>Stop Scanning</h2>
 <p>Stop scanning devices, such as exiting the activation page</p>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">stopLeScan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopLeScan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleOperator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopLeScan</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="single-ble-device-activation"><a name="single-ble-device-activation" class="plugin-anchor" href="#single-ble-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Single BLE Device Activation</h2>
+<h2 id="single-ble-device-activation"><a name="single-ble-device-activation" class="anchor-navigation-ex-anchor" href="#single-ble-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="single-ble-device-activation" class="plugin-anchor" href="#single-ble-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Single BLE Device Activation</h2>
 <p>Scanned devices <code>configType = config_type_single</code> represents a single BLE device. <code>config_type_wifi</code> is a dual-mode device.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String devUuid<span class="token punctuation">,</span> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> params<span class="token punctuation">,</span> ITuyaBleConfigListener configListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">String</span> devUuid<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> params<span class="token punctuation">,</span> <span class="token class-name">ITuyaBleConfigListener</span> configListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1530,22 +1554,22 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token number">123456</span><span class="token punctuation">,</span> <span class="token string">&quot;abc12345678&quot;</span><span class="token punctuation">,</span> null<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaBleConfigListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token number">123456</span><span class="token punctuation">,</span> <span class="token string">&quot;abc12345678&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaBleConfigListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>DeviceBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String msg<span class="token punctuation">,</span> Object handle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> msg<span class="token punctuation">,</span> <span class="token class-name">Object</span> handle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
                <span class="token comment">// code msg ,see #Error Code</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="cancel-activation"><a name="cancel-activation" class="plugin-anchor" href="#cancel-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Cancel Activation</h2>
+<h2 id="cancel-activation"><a name="cancel-activation" class="anchor-navigation-ex-anchor" href="#cancel-activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="cancel-activation" class="plugin-anchor" href="#cancel-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Cancel Activation</h2>
 <p>Stop it during Activation.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">stopBleConfig</span><span class="token punctuation">(</span>String devUuid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">stopBleConfig</span><span class="token punctuation">(</span><span class="token class-name">String</span> devUuid<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1563,12 +1587,12 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopBleConfig</span><span class="token punctuation">(</span><span class="token string">&quot;abc12345678&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopBleConfig</span><span class="token punctuation">(</span><span class="token string">&quot;abc12345678&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="dual-mode-device-activation"><a name="dual-mode-device-activation" class="plugin-anchor" href="#dual-mode-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Dual-mode Device Activation</h2>
+<h2 id="dual-mode-device-activation"><a name="dual-mode-device-activation" class="anchor-navigation-ex-anchor" href="#dual-mode-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="dual-mode-device-activation" class="plugin-anchor" href="#dual-mode-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Dual-mode Device Activation</h2>
 <p>Scanned devices <code>configType = config_type_single</code> represents a single BLE device. <code>config_type_wifi</code> is a dual-mode device.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> String devUuid<span class="token punctuation">,</span> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> params<span class="token punctuation">,</span> ITuyaBleConfigListener configListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token keyword">long</span> homeId<span class="token punctuation">,</span> <span class="token class-name">String</span> devUuid<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> params<span class="token punctuation">,</span> <span class="token class-name">ITuyaBleConfigListener</span> configListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1602,17 +1626,17 @@
 token: The way to obtain the token is the same as  the Wi-Fi device. <a href="Activator_wifi.html#get-network-configuration-token">Get Token</a></p>
 </blockquote>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"> Map<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token punctuation">&gt;</span></span> param <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> param <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   param<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;ssid&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Tuya-Wifi-2.4G&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//wifi ssid</span>
   param<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;12345678&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//wifi pwd</span>
   param<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;token&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;xxxxxxxxxxxxx&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// user token</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token number">123456</span><span class="token punctuation">,</span> <span class="token string">&quot;xyz12345678&quot;</span><span class="token punctuation">,</span> param<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaBleConfigListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleConfig</span><span class="token punctuation">(</span><span class="token number">123456</span><span class="token punctuation">,</span> <span class="token string">&quot;xyz12345678&quot;</span><span class="token punctuation">,</span> param<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaBleConfigListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>DeviceBean bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String msg<span class="token punctuation">,</span> Object handle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> msg<span class="token punctuation">,</span> <span class="token class-name">Object</span> handle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// code msg ,see #ErrorCode</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1620,10 +1644,10 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <p><strong>Callback Description</strong></p>
 <p><code>DeviceBean</code> Description
 See <a href="Device.html#device-information-acquisition">DeviceBean Data Model</a></p>
-<h2 id="cancel-dual-mode-device-activation"><a name="cancel-dual-mode-device-activation" class="plugin-anchor" href="#cancel-dual-mode-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Cancel Dual-mode Device Activation</h2>
+<h2 id="cancel-dual-mode-device-activation"><a name="cancel-dual-mode-device-activation" class="anchor-navigation-ex-anchor" href="#cancel-dual-mode-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="cancel-dual-mode-device-activation" class="plugin-anchor" href="#cancel-dual-mode-device-activation"><i class="fa fa-link" aria-hidden="true"></i></a>Cancel Dual-mode Device Activation</h2>
 <p>Stop it during Activation.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">stopBleConfig</span><span class="token punctuation">(</span>String devUuid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">stopBleConfig</span><span class="token punctuation">(</span><span class="token class-name">String</span> devUuid<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1641,9 +1665,9 @@ See <a href="Device.html#device-information-acquisition">DeviceBean Data Model</
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopBleConfig</span><span class="token punctuation">(</span><span class="token string">&quot;xyz12345678&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopBleConfig</span><span class="token punctuation">(</span><span class="token string">&quot;xyz12345678&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="error-code"><a name="error-code" class="plugin-anchor" href="#error-code"><i class="fa fa-link" aria-hidden="true"></i></a>Error Code</h2>
+<h2 id="error-code"><a name="error-code" class="anchor-navigation-ex-anchor" href="#error-code"><i class="fa fa-link" aria-hidden="true"></i></a><a name="error-code" class="plugin-anchor" href="#error-code"><i class="fa fa-link" aria-hidden="true"></i></a>Error Code</h2>
 <table>
 <thead>
 <tr>
@@ -1801,7 +1825,7 @@ See <a href="Device.html#device-information-acquisition">DeviceBean Data Model</
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scan Device","level":"1.18.1","depth":2,"next":{"title":"BLE Device Activation","level":"1.18.2","depth":2,"anchor":"#single-ble-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#single-ble-device-activation","articles":[]},"previous":{"title":"Bluetooth Low Energy","level":"1.18","depth":1,"path":"resource/BLE.md","ref":"./resource/BLE.md","articles":[{"title":"Scan Device","level":"1.18.1","depth":2,"anchor":"#scanning-device","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#scanning-device","articles":[]},{"title":"BLE Device Activation","level":"1.18.2","depth":2,"anchor":"#single-ble-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#single-ble-device-activation","articles":[]},{"title":"Dual-mode Device Activation","level":"1.18.3","depth":2,"anchor":"#dual-mode-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#dual-mode-device-activation","articles":[]},{"title":"BLE Device Function","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_Activator.md","mtime":"2020-03-19T13:16:27.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Scan Device","level":"1.18.1","depth":2,"next":{"title":"BLE Device Activation","level":"1.18.2","depth":2,"anchor":"#single-ble-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#single-ble-device-activation","articles":[]},"previous":{"title":"Bluetooth Low Energy","level":"1.18","depth":1,"path":"resource/BLE.md","ref":"./resource/BLE.md","articles":[{"title":"Scan Device","level":"1.18.1","depth":2,"anchor":"#scanning-device","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#scanning-device","articles":[]},{"title":"BLE Device Activation","level":"1.18.2","depth":2,"anchor":"#single-ble-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#single-ble-device-activation","articles":[]},{"title":"Dual-mode Device Activation","level":"1.18.3","depth":2,"anchor":"#dual-mode-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#dual-mode-device-activation","articles":[]},{"title":"BLE Device Function","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_Activator.md","mtime":"2020-03-19T13:16:27.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1816,6 +1840,26 @@ See <a href="Device.html#device-information-acquisition">DeviceBean Data Model</
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1836,10 +1880,6 @@ See <a href="Device.html#device-information-acquisition">DeviceBean Data Model</
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -64,6 +77,17 @@
     <link rel="next" href="resource/Preparation.html" />
     
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -149,7 +173,7 @@
                 <a href="resource/User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -209,9 +233,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="resource/User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="resource/User_update.html">
             
-                <a href="resource/User_Loginout.html">
+                <a href="resource/User_update.html">
             
                     
                     修改用户信息
@@ -222,12 +246,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="resource/User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="resource/User_logout.html">
             
-                <a href="resource/User_Loginout.html#退出登录接口">
+                <a href="resource/User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -235,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="resource/User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="resource/User_logout.html">
             
-                <a href="resource/User_Loginout.html#停用账户">
+                <a href="resource/User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -481,7 +505,7 @@
     
         <li class="chapter " data-level="1.9" data-path="resource/Device.html">
             
-                <a href="resource/Device.html">
+                <a href="resource/Device.html#设备控制">
             
                     
                     设备控制
@@ -641,7 +665,7 @@
                 <a href="resource/Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1384,18 +1408,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6D82;&#x9E26;&#x5168;&#x5C4B;&#x667A;&#x80FD;android-sdk-&#x63A5;&#x5165;&#x6307;&#x5357;"><a name="&#x6D82;&#x9E26;&#x5168;&#x5C4B;&#x667A;&#x80FD;android-sdk-&#x63A5;&#x5165;&#x6307;&#x5357;" class="plugin-anchor" href="#&#x6D82;&#x9E26;&#x5168;&#x5C4B;&#x667A;&#x80FD;android-sdk-&#x63A5;&#x5165;&#x6307;&#x5357;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D82;&#x9E26;&#x5168;&#x5C4B;&#x667A;&#x80FD;Android SDK &#x63A5;&#x5165;&#x6307;&#x5357;</h1>
-<h2 id="&#x529F;&#x80FD;&#x6982;&#x8FF0;"><a name="&#x529F;&#x80FD;&#x6982;&#x8FF0;" class="plugin-anchor" href="#&#x529F;&#x80FD;&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;&#x6982;&#x8FF0;</h2>
-<p>&#x6D82;&#x9E26;&#x5168;&#x5C4B;&#x667A;&#x80FD; SDK &#x63D0;&#x4F9B;&#x4E86;&#x4EE5;&#x5BB6;&#x5EAD;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;&#x5BF9;&#x786C;&#x4EF6;&#x8BBE;&#x5907;&#x3001;&#x6D82;&#x9E26;&#x4E91;&#x901A;&#x8BAF;&#x7684;&#x63A5;&#x53E3;&#x5C01;&#x88C5;&#xFF0C;&#x52A0;&#x901F;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4E86;&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#xFF1A;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#tuya-smart-android-home-sdk-&#x6982;&#x8FF0;"><b></b>Tuya Smart Android Home SDK &#x6982;&#x8FF0;</a></li></ul></div><a href="#tuya-smart-android-home-sdk-&#x6982;&#x8FF0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="tuya-smart-android-home-sdk-&#x6982;&#x8FF0;"><a name="tuya-smart-android-home-sdk-&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#tuya-smart-android-home-sdk-&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="tuya-smart-android-home-sdk-&#x6982;&#x8FF0;" class="plugin-anchor" href="#tuya-smart-android-home-sdk-&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>Tuya Smart Android Home SDK &#x6982;&#x8FF0;</h1>
+<p>Tuya Smart Android Home SDK &#x662F;&#x4E00;&#x5957;&#x9488;&#x5BF9;&#x5168;&#x5C4B;&#x667A;&#x80FD;&#x9886;&#x57DF;&#x800C;&#x63D0;&#x51FA;&#x7684;&#x5B89;&#x5353;&#x7AEF;&#x89E3;&#x51B3;&#x65B9;&#x6848; &#x3002;Android &#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E; SDK &#x5FEB;&#x901F;&#x7684;&#x5B9E;&#x73B0; APP &#x529F;&#x80FD;&#x5F00;&#x53D1;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x667A;&#x80FD;&#x8BBE;&#x5907;&#x7684;&#x914D;&#x7F51;&#xFF0C;&#x63A7;&#x5236;&#xFF0C;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#xFF0C;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x667A;&#x80FD;&#x573A;&#x666F;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>SDK  &#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#xFF1A;</p>
 <ul>
-<li>&#x8D26;&#x6237;&#x4F53;&#x7CFB;&#xFF08;&#x624B;&#x673A;&#x53F7;&#x3001;&#x90AE;&#x7BB1;&#x7684;&#x6CE8;&#x518C;&#x3001;&#x767B;&#x5F55;&#x3001;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;&#x7B49;&#x901A;&#x7528;&#x7684;&#x8D26;&#x6237;&#x529F;&#x80FD;&#xFF09;</li>
-<li>&#x786C;&#x4EF6;&#x8BBE;&#x5907;&#x76F8;&#x5173;&#xFF08;&#x914D;&#x7F51;&#x3001;&#x63A7;&#x5236;&#x3001;&#x72B6;&#x6001;&#x4E0A;&#x62A5;&#x3001;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x3001;&#x7FA4;&#x7EC4;&#x3001;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x3001;&#x5171;&#x4EAB;&#xFF09;</li>
-<li>&#x573A;&#x666F;&#x63A7;&#x5236;</li>
-<li>&#x5BB6;&#x5EAD;&#x7BA1;&#x7406;</li>
-<li>ZigBee&#x7F51;&#x5173;</li>
-<li>&#x6D88;&#x606F;&#x4E2D;&#x5FC3;</li>
-<li>&#x610F;&#x89C1;&#x53CD;&#x9988; </li>
-<li>&#x6D82;&#x9E26;&#x4E91;HTTP API&#x63A5;&#x53E3;&#x5C01;&#x88C5; (&#x53C2;&#x89C1;<a href="https://docs.tuya.com/cn/cloudapi/appAPI/index.html" target="_blank">&#x6D82;&#x9E26;&#x4E91;api&#x8C03;&#x7528;</a>&#xFF09;</li>
+<li>&#x8D26;&#x6237;&#x4F53;&#x7CFB;&#xFF08;&#x624B;&#x673A;&#x53F7;&#x3001;&#x90AE;&#x7BB1;&#x7684;&#x6CE8;&#x518C;&#x548C;&#x767B;&#x5F55;&#x3001;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;&#xFF0C;session &#x5931;&#x6548;&#x5904;&#x7406;&#x7B49;&#x7528;&#x6237;&#x4F53;&#x7CFB;&#x76F8;&#x5173;&#x7684;&#x529F;&#x80FD;&#xFF09;</li>
+<li>&#x5BB6;&#x5EAD;&#x4F53;&#x7CFB; &#xFF08;&#x5BB6;&#x5EAD;&#x7BA1;&#x7406;&#x3001;&#x623F;&#x95F4;&#x7BA1;&#x7406;&#x3001;&#x5BB6;&#x5EAD;&#x5171;&#x4EAB;&#x7B49;&#x529F;&#x80FD;&#xFF09;</li>
+<li>&#x786C;&#x4EF6;&#x8BBE;&#x5907;&#xFF08;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x3001;&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x3001;&#x8BBE;&#x5907;&#x7684;&#x72B6;&#x6001;&#x4E0A;&#x62A5;&#x3001;&#x7FA4;&#x7EC4;&#x3001;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x3001;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#xFF09;</li>
+<li>&#x4F9D;&#x8D56;&#x73AF;&#x5883;  &#x57FA;&#x4E8E; Android 5.0 &#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x7684;</li>
 </ul>
 
                                 
@@ -1436,7 +1456,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"前言","level":"1.1","depth":1,"next":{"title":"集成准备","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"README.md","mtime":"2020-03-19T13:17:02.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":".","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"前言","level":"1.1","depth":1,"next":{"title":"集成准备","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"README.md","mtime":"2020-03-20T03:17:16.495Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":".","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1451,6 +1471,26 @@
     
         
         <script src="../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1471,10 +1511,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

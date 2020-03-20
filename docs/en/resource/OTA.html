@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Device.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,13 +1416,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="firmware-upgrade"><a name="firmware-upgrade" class="plugin-anchor" href="#firmware-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a>Firmware upgrade</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#firmware-upgrade"><b></b>Firmware upgrade</a></li><ul><li><span class="title-icon "></span><a href="#query-firmware-upgrade-information"><b></b>Query firmware upgrade information</a></li><li><span class="title-icon "></span><a href="#set-upgrade-status-callback"><b></b>Set upgrade status callback</a></li><li><span class="title-icon "></span><a href="#start-the-upgrade"><b></b>Start the upgrade</a></li><li><span class="title-icon "></span><a href="#destroy"><b></b>Destroy</a></li></ul></ul></div><a href="#firmware-upgrade" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="firmware-upgrade"><a name="firmware-upgrade" class="anchor-navigation-ex-anchor" href="#firmware-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a><a name="firmware-upgrade" class="plugin-anchor" href="#firmware-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a>Firmware upgrade</h1>
 <p>Firmware upgrades are mainly used to repair device bugs and add new device features. There are two main types of firmware upgrades. The first is device upgrade and the second is MCU upgrade. The upgraded interface is located in ItuyaOta.
 Zigbe sub-device upgrades are supported from SDK version 2.9.1.</p>
-<h2 id="query-firmware-upgrade-information"><a name="query-firmware-upgrade-information" class="plugin-anchor" href="#query-firmware-upgrade-information"><i class="fa fa-link" aria-hidden="true"></i></a>Query firmware upgrade information</h2>
+<h2 id="query-firmware-upgrade-information"><a name="query-firmware-upgrade-information" class="anchor-navigation-ex-anchor" href="#query-firmware-upgrade-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="query-firmware-upgrade-information" class="plugin-anchor" href="#query-firmware-upgrade-information"><i class="fa fa-link" aria-hidden="true"></i></a>Query firmware upgrade information</h2>
 <p><strong>Declaration</strong></p>
 <p>wifi, zigbee gateway, camera and other equipment initialization interface</p>
-<pre class="language-"><code class="lang-java">ITuyaOta newOTAInstance <span class="token punctuation">(</span>String devId<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaOta</span> newOTAInstance <span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1417,7 +1441,7 @@ Zigbe sub-device upgrades are supported from SDK version 2.9.1.</p>
 </table>
 <p><strong>Declaration</strong></p>
 <p>Child device initialization interface</p>
-<pre class="language-"><code class="lang-java">ITuyaOta newOTAInstance <span class="token punctuation">(</span>String meshId<span class="token punctuation">,</span> String devId<span class="token punctuation">,</span> String nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaOta</span> newOTAInstance <span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1444,24 +1468,24 @@ Zigbe sub-device upgrades are supported from SDK version 2.9.1.</p>
 </table>
 <p><strong>Example</strong></p>
 <p>Obtaining Firmware Upgrade Information</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span>newOTAInstance <span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span> <span class="token punctuation">.</span>getOtaInfo <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span>newOTAInstance <span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span> <span class="token punctuation">.</span>getOtaInfo <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span>List <span class="token generics function"><span class="token punctuation">&lt;</span>UpgradeInfoBean<span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-Ranch
+<span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token class-name">List</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UpgradeInfoBean</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">Ranch</span>
 <span class="token punctuation">}</span>
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">void</span> onFailure <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span><span class="token punctuation">;</span>
-Ranch
+<span class="token keyword">void</span> onFailure <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Ranch</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-TuyaHomeSdk<span class="token punctuation">.</span>newOTAInstance <span class="token punctuation">(</span><span class="token string">&quot;xxxmeshId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;xxxdevId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;xxxmac address&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span> GetOtaInfo <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span>newOTAInstance <span class="token punctuation">(</span><span class="token string">&quot;xxxmeshId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;xxxdevId&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;xxxmac address&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span> <span class="token class-name">GetOtaInfo</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span>List <span class="token generics function"><span class="token punctuation">&lt;</span>UpgradeInfoBean<span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-Ranch
+<span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token class-name">List</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UpgradeInfoBean</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">Ranch</span>
 <span class="token punctuation">}</span>
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">void</span> onFailure <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span><span class="token punctuation">;</span>
-Ranch
+<span class="token keyword">void</span> onFailure <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Ranch</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><code>UpgradeInfoBean</code> returns firmware upgrade information, providing the following information</p>
@@ -1499,18 +1523,18 @@ upgradeType | int | 0: app reminder upgrade 2-app forced upgrade 3-detect upgrad
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">iTuyaOta<span class="token punctuation">.</span>getOtaInfo <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGetOtaInfoCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span>List <span class="token generics function"><span class="token punctuation">&lt;</span>UpgradeInfoBean<span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token class-name">List</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UpgradeInfoBean</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onFailure <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        L<span class="token punctuation">.</span>e <span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;check error&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;---- error =&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onFailure <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">L</span><span class="token punctuation">.</span>e <span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;check error&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;---- error =&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="set-upgrade-status-callback"><a name="set-upgrade-status-callback" class="plugin-anchor" href="#set-upgrade-status-callback"><i class="fa fa-link" aria-hidden="true"></i></a>Set upgrade status callback</h2>
+<h2 id="set-upgrade-status-callback"><a name="set-upgrade-status-callback" class="anchor-navigation-ex-anchor" href="#set-upgrade-status-callback"><i class="fa fa-link" aria-hidden="true"></i></a><a name="set-upgrade-status-callback" class="plugin-anchor" href="#set-upgrade-status-callback"><i class="fa fa-link" aria-hidden="true"></i></a>Set upgrade status callback</h2>
 <p>Before ota, you need to register for monitoring to get the upgrade status in real time</p>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// otaType The device type to be upgraded, the same as the type field of `UpgradeInfoBean`</span>
@@ -1521,7 +1545,7 @@ iTuyaOta<span class="token punctuation">.</span>setOtaListener <span class="toke
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onFailure <span class="token punctuation">(</span><span class="token keyword">int</span> otaType<span class="token punctuation">,</span> String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onFailure <span class="token punctuation">(</span><span class="token keyword">int</span> otaType<span class="token punctuation">,</span> <span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 
@@ -1531,12 +1555,12 @@ iTuyaOta<span class="token punctuation">.</span>setOtaListener <span class="toke
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="start-the-upgrade"><a name="start-the-upgrade" class="plugin-anchor" href="#start-the-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a>Start the upgrade</h2>
+<h2 id="start-the-upgrade"><a name="start-the-upgrade" class="anchor-navigation-ex-anchor" href="#start-the-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a><a name="start-the-upgrade" class="plugin-anchor" href="#start-the-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a>Start the upgrade</h2>
 <p> Call this method to start the upgrade. The ota listener registered after the call will return the upgrade status so that the developer can build the UI.</p>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">iTuyaOta<span class="token punctuation">.</span>startOta <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="destroy"><a name="destroy" class="plugin-anchor" href="#destroy"><i class="fa fa-link" aria-hidden="true"></i></a>Destroy</h2>
+<h2 id="destroy"><a name="destroy" class="anchor-navigation-ex-anchor" href="#destroy"><i class="fa fa-link" aria-hidden="true"></i></a><a name="destroy" class="plugin-anchor" href="#destroy"><i class="fa fa-link" aria-hidden="true"></i></a>Destroy</h2>
 <p>Destroy after leaving the upgrade page and reclaim memory.</p>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">iTuyaOta<span class="token punctuation">.</span>onDestroy <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1574,7 +1598,7 @@ iTuyaOta<span class="token punctuation">.</span>setOtaListener <span class="toke
                 </a>
                 
                 
-                <a href="Gateway.html" class="navigation navigation-next " aria-label="Next page: Gateway">
+                <a href="Gateway.html" class="navigation navigation-next " aria-label="Next page: ZigBee Gateway Control">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1585,7 +1609,7 @@ iTuyaOta<span class="token punctuation">.</span>setOtaListener <span class="toke
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Firmware Upgrade","level":"1.9.12","depth":2,"next":{"title":"Gateway","level":"1.9.13","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]},"previous":{"title":"Recycling Device Resources","level":"1.9.11","depth":2,"anchor":"#recycling-device-resources","path":"resource/Device.md","ref":"./resource/Device.md#recycling-device-resources","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/OTA.md","mtime":"2020-03-19T13:29:29.212Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Firmware Upgrade","level":"1.9.12","depth":2,"next":{"title":"ZigBee Gateway Control","level":"1.9.13","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]},"previous":{"title":"Recycling Device Resources","level":"1.9.11","depth":2,"anchor":"#recycling-device-resources","path":"resource/Device.md","ref":"./resource/Device.md#recycling-device-resources","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/OTA.md","mtime":"2020-03-19T13:29:29.212Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1600,6 +1624,26 @@ iTuyaOta<span class="token punctuation">.</span>setOtaListener <span class="toke
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1620,10 +1664,6 @@ iTuyaOta<span class="token punctuation">.</span>setOtaListener <span class="toke
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -1,4 +1,4 @@
-### Family member management
+### Family Member Management
 
 **MemberBean Field Information**
 
@@ -13,7 +13,7 @@
 | uid | String | Unique id of member |
 | memberStatus | int| The member status （1:to be accepted 2:accepted 3:reject）|
 
-#### Update member comment names and permissions
+#### Update Member Comment Names and Permissions
 
 **Declaration**
 
@@ -44,7 +44,7 @@ TuyaHomeSdk.getMemberInstance().updateMember(memberId, name, admin, new IResultC
     });
 ```
 
-#### Update member information
+#### Update Member Information
 
 **Declaration**
 
@@ -73,7 +73,7 @@ TuyaHomeSdk.getMemberInstance().updateMember(memberWrapperBean, new IResultCallb
     });
 ```
 
-#### Update member permissions
+#### Update Member Permissions
 
 **Declaration**
 
@@ -103,7 +103,7 @@ TuyaHomeSdk.getMemberInstance().updateMemberRole(memberId, admin, new IResultCal
     });
 ```
 
-#### New member
+#### New Member
 
 **Declaration**
 
@@ -132,7 +132,7 @@ TuyaHomeSdk.getMemberInstance().addMember(memberWrapperBean, new ITuyaDataCallba
     });
 ```
 
-#### Add members under home
+#### Add Members Under Home
 
 **Declaration**
 
@@ -165,7 +165,7 @@ TuyaHomeSdk.getMemberInstance().addMember(mHomeId, countryCode, userAccount, nam
     });
 ```
 
-#### Remove members under home
+#### Remove Members Under Home
 
 **Declaration**
 
@@ -194,7 +194,7 @@ TuyaHomeSdk.getMemberInstance().removeMember(memberId, new IResultCallback() {
     });
 ```
 
-#### Query the member list under home
+#### Query the Member List Under Home
 
 **Declaration**
 
@@ -223,7 +223,7 @@ TuyaHomeSdk.getMemberInstance().queryMemberList(mHomeId, new ITuyaGetMemberListC
     });
 ```
 
-#### Get devices that family members can associate with
+#### Get Devices That Family Members Can Associate With
 
 **Declaration**
 
@@ -252,7 +252,7 @@ TuyaHomeSdk.getMemberInstance().getMemberDeviceList(relationId, new ITuyaDataCal
     });
 ```
 
-#### Get authorization for designated family member rooms
+#### Get Authorization for Designated Family Member Rooms
 
 **Declaration**
 
@@ -283,7 +283,7 @@ TuyaHomeSdk.getMemberInstance().getAuthRoomList(homeId, memberId, new ITuyaDataC
     });
 ```
 
-#### Set room permissions for specified members of the specified family
+#### Set Room Permissions for Specified Members of the Specified Family
 
 **Declaration**
 
@@ -315,7 +315,7 @@ TuyaHomeSdk.getMemberInstance().saveAuthRoomList(homeId, memberId, rooms, new IR
     });
 ```
 
-#### Get the authorization list of scenarios for members under the specified family
+#### Get the Authorization List of Scenarios for Members Under the Specified Family
 
 **Declaration**
 
@@ -346,7 +346,7 @@ TuyaHomeSdk.getMemberInstance().getAuthSceneList(homeId, memberId, new ITuyaData
     });
 ```
 
-#### Set scene permissions for the specified members of the specified family
+#### Set Scene Permissions for the Specified Members of the Specified Family
 
 **Declaration**
 
@@ -378,7 +378,7 @@ TuyaHomeSdk.getMemberInstance().saveAuthSceneList(homeId, memberId, ruleIds, new
     });
 ```
 
-#### Family member binding associated account
+#### Family Member Binding Associated Account
 
 **Declaration**
 
@@ -411,7 +411,7 @@ TuyaHomeSdk.getMemberInstance().addMemberAccount(id, countryCode, userAccount, r
     });
 ```
 
-#### Family member binding associated account
+#### Family Member Binding Associated Account
 
 **Declaration**
 
@@ -443,7 +443,7 @@ TuyaHomeSdk.getMemberInstance().addMemberAccount(id, countryCode, userAccount, a
     });
 ```
 
-#### Upload member's Avatar
+#### Upload Member's Avatar
 
 **Declaration**
 
@@ -473,7 +473,7 @@ TuyaHomeSdk.getMemberInstance().uploadMemberAvatar(filename, file, new IBooleanC
     });
 ```
 
-#### Accept or refuse to join the family
+#### Accept or Refuse To Join the Family
 
 **Declaration**
 

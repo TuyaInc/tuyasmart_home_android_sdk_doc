@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="User_mobile.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,13 +1416,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="email-account"><a name="email-account" class="plugin-anchor" href="#email-account"><i class="fa fa-link" aria-hidden="true"></i></a>Email Account</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#email-account"><b></b>Email Account</a></li><ul><li><span class="title-icon "></span><a href="#email-registration"><b></b>Email Registration</a></li><li><span class="title-icon "></span><a href="#login-with-email"><b></b>Login with Email</a></li><li><span class="title-icon "></span><a href="#user-email-reset-password"><b></b>User Email Reset Password</a></li></ul></ul></div><a href="#email-account" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="email-account"><a name="email-account" class="anchor-navigation-ex-anchor" href="#email-account"><i class="fa fa-link" aria-hidden="true"></i></a><a name="email-account" class="plugin-anchor" href="#email-account"><i class="fa fa-link" aria-hidden="true"></i></a>Email Account</h1>
 <p>Tuya Smart provides a login system for email passwords.</p>
-<h2 id="email-registration"><a name="email-registration" class="plugin-anchor" href="#email-registration"><i class="fa fa-link" aria-hidden="true"></i></a>Email registration</h2>
+<h2 id="email-registration"><a name="email-registration" class="anchor-navigation-ex-anchor" href="#email-registration"><i class="fa fa-link" aria-hidden="true"></i></a><a name="email-registration" class="plugin-anchor" href="#email-registration"><i class="fa fa-link" aria-hidden="true"></i></a>Email Registration</h2>
 <p>There are two interfaces for email registration. First, get the verification code, and then use the verification code and password to register.</p>
 <p><strong>Declaration</strong></p>
 <p>Email registration to get verification code</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> getRegisterEmailValidateCode <span class="token punctuation">(</span>String countryCode<span class="token punctuation">,</span> String email<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> getRegisterEmailValidateCode <span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1425,7 +1449,7 @@
 </table>
 <p><strong>Declaration</strong></p>
 <p>Email registration to get verification code</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> registerAccountWithEmail <span class="token punctuation">(</span><span class="token keyword">final</span> String countryCode<span class="token punctuation">,</span> <span class="token keyword">final</span> String email<span class="token punctuation">,</span> <span class="token keyword">final</span> String passwd<span class="token punctuation">,</span> <span class="token keyword">final</span> String code<span class="token punctuation">,</span> <span class="token keyword">final</span> IRegisterCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> registerAccountWithEmail <span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> passwd<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IRegisterCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1460,9 +1484,9 @@
 </table>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// Sign up for email verification code</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getRegisterEmailValidateCode <span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getRegisterEmailValidateCode <span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
@@ -1471,15 +1495,15 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Email password registration</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span> registerAccountWithEmail <span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;5723&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IRegisterCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span> registerAccountWithEmail <span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;5723&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IRegisterCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span>User user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Registration succeeded&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Registration succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1487,10 +1511,10 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 <p>Note:</p>
 <p>Once the account is registered in one country, data cannot currently be migrated to other countries.</p>
 </blockquote>
-<h2 id="login-with-email"><a name="login-with-email" class="plugin-anchor" href="#login-with-email"><i class="fa fa-link" aria-hidden="true"></i></a>Login with Email</h2>
+<h2 id="login-with-email"><a name="login-with-email" class="anchor-navigation-ex-anchor" href="#login-with-email"><i class="fa fa-link" aria-hidden="true"></i></a><a name="login-with-email" class="plugin-anchor" href="#login-with-email"><i class="fa fa-link" aria-hidden="true"></i></a>Login with Email</h2>
 <p><strong>Declaration</strong></p>
 <p>User email password login</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginWithEmail</span><span class="token punctuation">(</span>String countryCode<span class="token punctuation">,</span> String email<span class="token punctuation">,</span> String passwd<span class="token punctuation">,</span> <span class="token keyword">final</span> ILoginCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginWithEmail</span><span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token class-name">String</span> passwd<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ILoginCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1521,23 +1545,23 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 </table>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// mail password login</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginWithEmail</span><span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123123&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ILoginCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginWithEmail</span><span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123123&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ILoginCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span>User user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Login succeeded, username:&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span> Show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Login succeeded, username:&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span> <span class="token class-name">Show</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="user-email-reset-password"><a name="user-email-reset-password" class="plugin-anchor" href="#user-email-reset-password"><i class="fa fa-link" aria-hidden="true"></i></a>User email reset password</h2>
+<h2 id="user-email-reset-password"><a name="user-email-reset-password" class="anchor-navigation-ex-anchor" href="#user-email-reset-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="user-email-reset-password" class="plugin-anchor" href="#user-email-reset-password"><i class="fa fa-link" aria-hidden="true"></i></a>User Email Reset Password</h2>
 <p>The user mailbox reset password function is divided into two interfaces, a verification code interface and a password reset interface.</p>
 <p><strong>Declaration</strong></p>
 <p>Email recovery password, get verification code</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getEmailValidateCode <span class="token punctuation">(</span>String countryCode<span class="token punctuation">,</span> <span class="token keyword">final</span> String email<span class="token punctuation">,</span> <span class="token keyword">final</span> IValidateCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getEmailValidateCode <span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IValidateCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1564,7 +1588,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 </table>
 <p><strong>Declaration</strong></p>
 <p>Email reset password</p>
-<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>resetEmailPassword <span class="token punctuation">(</span>String countryCode<span class="token punctuation">,</span> <span class="token keyword">final</span> String email<span class="token punctuation">,</span> <span class="token keyword">final</span> String emailCode<span class="token punctuation">,</span> <span class="token keyword">final</span> String passwd<span class="token punctuation">,</span> <span class="token keyword">final</span> IResetPasswordCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>resetEmailPassword <span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> emailCode<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> passwd<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResetPasswordCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1599,25 +1623,25 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
 </table>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// Get email verification code</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getEmailValidateCode</span><span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IValidateCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getEmailValidateCode</span><span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IValidateCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Success in obtaining verification code&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Success in obtaining verification code&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//reset Password</span>
-TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">resetEmailPassword</span><span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123123&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;a12345&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResetPasswordCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">resetEmailPassword</span><span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123123&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;a12345&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResetPasswordCallback</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> onSuccess <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Successfully retrieved password&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;Successfully retrieved password&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Toast<span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> onError <span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span>makeText <span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;code:&quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;error:&quot;</span> <span class="token operator">+</span> error<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span> <span class="token punctuation">.</span>show <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1664,7 +1688,7 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Use Email","level":"1.4.3","depth":2,"next":{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},"previous":{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_email.md","mtime":"2020-03-19T12:22:14.331Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Use Email","level":"1.4.3","depth":2,"next":{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},"previous":{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_email.md","mtime":"2020-03-20T03:00:47.586Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1679,6 +1703,26 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1699,10 +1743,6 @@ TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

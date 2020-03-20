@@ -1,4 +1,4 @@
-## Data model for data of users
+## User Data Model
 
 **User**
 

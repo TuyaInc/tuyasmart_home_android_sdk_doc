@@ -48,17 +48,17 @@ List<DeviceBean> deviceList = homeBean.getDeviceList();
 | time | Long |设备激活时间|
 | pv | String |网关协议版本|
 | bv | String |网关通用固件版本|
-| schemaMap | Map |Schema缓存数据|
+| schemaMap | Map |Schema 缓存数据|
 | dps | Map |设备当前数据信息。key 是 dpId ，value 是值|
 | isShare | boolean |是否是分享设备|
 | virtual|boolean |是否是虚拟设备|
-| lon、lat |String| 用来标示经纬度信息，需要用户使用sdk前，调用TuyaSdk.setLatAndLong 设置经纬度信息 |
+| lon、lat |String| 用来标示经纬度信息，需要用户使用 sdk 前，调用 TuyaSdk.setLatAndLong 设置经纬度信息 |
 | isLocalOnline|boolean|设备局域网在线状态|
-| nodeId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其短地址ID，一个网关下面的nodeId都唯一的|
+| nodeId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其短地址 ID，一个网关下面的 nodeId 都唯一的|
 | timezoneId |String|设备时区|
 | category | String |设备类型|
 | meshId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其网关ID|
-| isZigBeeWifi |boolean|是否是ZigBee网关设备|
+| isZigBeeWifi |boolean|是否是 ZigBee 网关设备|
 | hasZigBee |boolean|hasZigBee|
 
 
@@ -183,6 +183,23 @@ mDevice.registerDevListener(new IDevListener() {
 
     }
 });
+```
+
+## 取消设备监听
+
+当不需要监听设备时，注销设备监听器。
+
+**接口说明**
+
+```java
+ITuyaDevice.unRegisterDevListener()
+```
+
+**示例代码**
+
+
+```java
+mDevice.unRegisterDevListener();
 ```
 
 ## 设备控制方法
@@ -310,21 +327,6 @@ mDevice.publishDps(dps, new IControlCallback() {
  * 透传类型传输的 byte 数组是 16 进制字符串格式并且必须是偶数位。
 
 		比如正确的格式是: `{"105": "0110"}` 而不是 `{"105": "110"}`
-
-## 取消设备监听
-
-**接口说明**
-
-```java
-ITuyaDevice.unRegisterDevListener()
-```
-
-**示例代码**
-
-
-```java
-mDevice.unRegisterDevListener();
-```
 
 ## 设备信息查询
 

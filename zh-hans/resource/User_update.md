@@ -1,4 +1,7 @@
+# 修改用户信息
+
 ## 修改昵称
+
 **接口说明**
 
 修改昵称
@@ -95,67 +98,19 @@ TuyaHomeSdk.getUserInstance().uploadUserAvatar(
 
 设置温度单位是摄氏度还是华氏度
 
-TempUnitEnum.Celsius：摄氏度
-
-,TempUnitEnum.Fahrenheit：华摄度
-
 ```java
 void setTempUnit(TempUnitEnum unit, IResultCallback callback);
 ```
 
-| 参数     | 说明 |
-| -------- | ---- |
-| unit     | 单位 |
-| callback | 回调 |
+| 参数     | 说明                                                         |
+| -------- | ------------------------------------------------------------ |
+| unit     | 文档的单位。<br>TempUnitEnum.Celsius：摄氏度<br>TempUnitEnum.Fahrenheit：华摄度 |
+| callback | 回调                                                         |
 
-
-## 退出登录接口
-
-用户账号切换的时候需要调用退出登录接口
-
-**示例代码**
-
-```java
-TuyaHomeSdk.getUserInstance().logout(new ILogoutCallback() {
-  @Override
-  public void onSuccess() {
-    //退出登录成功
-  }
-
-  @Override
-  public void onError(String errorCode, String errorMsg) {
-  }
-});
-```
 ## 更新用户定位
 
 如果有需要的话，定位信息可以通过以下接口上报：
 
 ```java
 TuyaSdk.setLatAndLong(lat,lon);
-```
-
-## 停用账户
-
-**接口说明**
-
-调用注销账户接口后，账号在一周后才会永久停用并删除你账户下的所有信息。在此之前重新登录，则你的停用请求将被取消。
-
-```java
-void cancelAccount(IResultCallback callback);    
-```
-**示例代码**
-
-```java
-TuyaHomeSdk.getUserInstance().cancelAccount(new IResultCallback() {
-    @Override
-    public void onError(String code, String error) {
-
-    }
-    @Override
-    public void onSuccess() {
-
-    }
-});
-
 ```

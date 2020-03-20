@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="SigMesh_Prepare.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Loginout.html">
+                <a href="User_update.html">
             
                     
                     修改用户信息
@@ -224,12 +248,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#退出登录接口">
+                <a href="User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#停用账户">
+                <a href="User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#设备控制">
             
                     
                     设备控制
@@ -643,7 +667,7 @@
                 <a href="Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1386,26 +1410,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><a name="&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;" class="plugin-anchor" href="#&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;</h2>
-<h3 id="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><a name="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><b></b>&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><b></b>&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><b></b>Mesh &#x8282;&#x70B9; NodeId&#xFF0C; 2 &#x5B57;&#x8282;</a></li><li><span class="title-icon "></span><a href="#mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><b></b>Mesh &#x7FA4;&#x7EC4; localId&#xFF0C;2 &#x5B57;&#x8282;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><b></b>&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><b></b>&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><a name="&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;" class="plugin-anchor" href="#&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;</h2>
+<h3 id="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><a name="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;</h3>
 <p>&#x8BBE;&#x5907;&#x7C7B;&#x522B;&#x503C;&#x7531; &#x8BBE;&#x5907;&#x7C7B;&#x578B; + &#x5927;&#x7C7B; + &#x5C0F;&#x7C7B;&#x7EC4;&#x6210;&#x540E;&#x5C0F;&#x7AEF;&#x6392;&#x5217;&#x3002;</p>
-<h5 id="&#x8BBE;&#x5907;&#x7C7B;&#x578B;"><a name="&#x8BBE;&#x5907;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x7C7B;&#x578B;</h5>
-<pre class="language-"><code class="lang-java">&#x6807;&#x51C6;&#x578B; Tuya &#x8BBE;&#x5907; <span class="token operator">:</span> <span class="token number">1</span>
-&#x900F;&#x4F20;&#x578B; Tuya &#x8BBE;&#x5907; <span class="token operator">:</span> <span class="token number">2</span>
+<h5 id="&#x8BBE;&#x5907;&#x7C7B;&#x578B;"><a name="&#x8BBE;&#x5907;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x7C7B;&#x578B;</h5>
+<pre class="language-"><code class="lang-java">&#x6807;&#x51C6;&#x578B; <span class="token class-name">Tuya</span> &#x8BBE;&#x5907; <span class="token operator">:</span> <span class="token number">1</span>
+&#x900F;&#x4F20;&#x578B; <span class="token class-name">Tuya</span> &#x8BBE;&#x5907; <span class="token operator">:</span> <span class="token number">2</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 </code></pre>
-<h5 id="sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;"><a name="sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;" class="plugin-anchor" href="#sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>SigMesh &#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;</h5>
+<h5 id="sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;"><a name="sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;" class="plugin-anchor" href="#sigmesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>SigMesh &#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E09;&#x5927;&#x7C7B;</h5>
 <pre class="language-"><code class="lang-java">&#x706F;&#x5927;&#x7C7B;<span class="token punctuation">(</span><span class="token number">01</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">1</span><span class="token operator">-</span><span class="token number">5</span> &#x8DEF; RGBWC &#x5F69;&#x706F;
 &#x7535;&#x5DE5;&#x7C7B;<span class="token punctuation">(</span><span class="token number">02</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span> &#x8DEF;&#x63D2;&#x5EA7;
 &#x9065;&#x63A7;&#x5668;<span class="token punctuation">(</span><span class="token number">05</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span> &#x4E2A;&#x6309;&#x952E;
 </code></pre>
-<h5 id="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><a name="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;" class="plugin-anchor" href="#&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;</h5>
+<h5 id="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><a name="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;" class="plugin-anchor" href="#&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;</h5>
 <pre class="language-"><code class="lang-java"><span class="token number">1</span><span class="token operator">-</span><span class="token number">5</span>&#x8DEF;&#x706F;&#xFF08;<span class="token number">1</span><span class="token operator">-</span><span class="token number">5</span>&#xFF09;
 <span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span>&#x8DEF;&#x6392;&#x63D2;&#xFF08;<span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">)</span> 
 <span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span>&#x4E2A;&#x9065;&#x63A7;&#x5668;&#x6309;&#x952E;&#xFF08;<span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span>&#xFF09;
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 </code></pre>
-<h5 id="&#x4E3E;&#x4F8B;"><a name="&#x4E3E;&#x4F8B;" class="plugin-anchor" href="#&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3E;&#x4F8B;</h5>
+<h5 id="&#x4E3E;&#x4F8B;"><a name="&#x4E3E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E3E;&#x4F8B;" class="plugin-anchor" href="#&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3E;&#x4F8B;</h5>
 <table>
 <thead>
 <tr>
@@ -1432,13 +1456,13 @@
 </tr>
 </tbody>
 </table>
-<h3 id="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><a name="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;" class="plugin-anchor" href="#mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh &#x8282;&#x70B9; NodeId&#xFF0C; 2 &#x5B57;&#x8282;</h3>
+<h3 id="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><a name="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;" class="anchor-navigation-ex-anchor" href="#mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;" class="plugin-anchor" href="#mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh &#x8282;&#x70B9; NodeId&#xFF0C; 2 &#x5B57;&#x8282;</h3>
 <p>NodeId &#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A; Mesh &#x8BBE;&#x5907;&#x5728; Mesh &#x7F51;&#x4E2D;&#x7684;&#x300C;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x300D;&#xFF0C;&#x6BD4;&#x5982;&#x60F3;&#x63A7;&#x5236;&#x67D0;&#x4E2A;&#x8BBE;&#x5907;&#x5C31;&#x5411; Mesh &#x7F51;&#x53D1;&#x6B64;&#x8BBE;&#x5907;&#x5BF9;&#x5E94;&#x7684; NodeId &#x547D;&#x4EE4;&#x5373;&#x53EF;&#x3002;</p>
-<h3 id="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><a name="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;" class="plugin-anchor" href="#mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh &#x7FA4;&#x7EC4; localId&#xFF0C;2 &#x5B57;&#x8282;</h3>
+<h3 id="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><a name="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;" class="anchor-navigation-ex-anchor" href="#mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;" class="plugin-anchor" href="#mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh &#x7FA4;&#x7EC4; localId&#xFF0C;2 &#x5B57;&#x8282;</h3>
 <p>LocalId &#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A; Mesh &#x7FA4;&#x7EC4;&#x5728; Mesh &#x7F51;&#x4E2D;&#x7684;&#x300C;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x300D;&#xFF0C;&#x6BD4;&#x5982;&#x60F3;&#x63A7;&#x5236;&#x67D0;&#x4E2A;&#x7FA4;&#x7EC4;&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#x5C31;&#x5411; Mesh &#x7F51;&#x53D1;&#x6B64;&#x7FA4;&#x7EC4;&#x5BF9;&#x5E94;&#x7684; LocalId &#x547D;&#x4EE4;&#x5373;&#x53EF;&#x3002;</p>
-<h3 id="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;</h3>
+<h3 id="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;</h3>
 <p>&#x56E0;&#x4E3A;&#x8BBE;&#x5907;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x589E;&#x5220;&#x64CD;&#x4F5C;&#x3001;&#x7FA4;&#x7EC4;&#x64CD;&#x4F5C;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x672C;&#x5730;&#x84DD;&#x7259;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3001;&#x4E91;&#x7AEF;&#x8BB0;&#x5F55;&#x4E00;&#x6B21; &#x5411;&#x672C;&#x5730; Mesh &#x7F51;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x4FE1;&#x606F;&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x9700;&#x8981;&#x5411;&#x4E91;&#x7AEF;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x4FE1;&#x606F;&#x3002;</p>
-<h3 id="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><a name="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;" class="plugin-anchor" href="#&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;</h3>
+<h3 id="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><a name="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;" class="plugin-anchor" href="#&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;</h3>
 <p>&#x672C;&#x5730;&#x8FDE;&#x63A5;&#xFF1A;&#x5DF2;&#x914D;&#x7F51;&#x8BBE;&#x5907;&#x901A;&#x8FC7;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#xFF0C;&#x6765;&#x63A7;&#x5236; Mesh &#x548C;&#x6307;&#x4EE4;&#x64CD;&#x4F5C;&#x3002;</p>
 <p>&#x7F51;&#x5173;&#x8FDE;&#x63A5;&#xFF1A;&#x5DF2;&#x914D;&#x7F51;&#x8BBE;&#x5907;&#x901A;&#x8FC7;&#x7F51;&#x5173;&#x8FDE;&#x63A5;&#xFF08;&#x7F51;&#x5173;&#x9700;&#x548C;&#x8BBE;&#x5907;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x8DDD;&#x79BB;&#x4E0D;&#x80FD;&#x592A;&#x8FDC;&#xFF09;&#xFF0C;&#x6765;&#x63A7;&#x5236; Mesh &#x548C;&#x6307;&#x4EE4;&#x64CD;&#x4F5C;&#x3002;</p>
 
@@ -1484,7 +1508,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"部分基础概念","level":"1.19.2","depth":2,"next":{"title":"管理","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},"previous":{"title":"准备","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/SigMesh_IDEA.md","mtime":"2020-03-19T13:58:01.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"部分基础概念","level":"1.19.2","depth":2,"next":{"title":"管理","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},"previous":{"title":"准备","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/SigMesh_IDEA.md","mtime":"2020-03-19T13:58:01.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1499,6 +1523,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1519,10 +1563,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

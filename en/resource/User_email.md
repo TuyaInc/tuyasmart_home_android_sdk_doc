@@ -1,6 +1,6 @@
 # Email Account
 Tuya Smart provides a login system for email passwords.
-## Email registration
+## Email Registration
 There are two interfaces for email registration. First, get the verification code, and then use the verification code and password to register.
 
 **Declaration**
@@ -102,7 +102,7 @@ TuyaHomeSdk.getUserInstance().loginWithEmail("86", "123456@123.com", "123123", n
     }
 });
 ```
-## User email reset password
+## User Email Reset Password
 The user mailbox reset password function is divided into two interfaces, a verification code interface and a password reset interface.
 
 **Declaration**

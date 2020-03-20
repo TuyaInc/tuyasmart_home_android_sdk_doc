@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="BLE_OTA.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,8 +1416,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mesh"><a name="mesh" class="plugin-anchor" href="#mesh"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh</h1>
-<h2 id="tuya-bluetooth"><a name="tuya-bluetooth" class="plugin-anchor" href="#tuya-bluetooth"><i class="fa fa-link" aria-hidden="true"></i></a>Tuya Bluetooth</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mesh"><b></b>Mesh</a></li><ul><li><span class="title-icon "></span><a href="#tuya-bluetooth"><b></b>Tuya Bluetooth</a></li><li><span class="title-icon "></span><a href="#tips"><b></b>Tips</a></li></ul></ul></div><a href="#mesh" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mesh"><a name="mesh" class="anchor-navigation-ex-anchor" href="#mesh"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh" class="plugin-anchor" href="#mesh"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh</h1>
+<h2 id="tuya-bluetooth"><a name="tuya-bluetooth" class="anchor-navigation-ex-anchor" href="#tuya-bluetooth"><i class="fa fa-link" aria-hidden="true"></i></a><a name="tuya-bluetooth" class="plugin-anchor" href="#tuya-bluetooth"><i class="fa fa-link" aria-hidden="true"></i></a>Tuya Bluetooth</h2>
 <p>Tuya Bluetooth has 3 technology lines.</p>
 <ul>
 <li><strong>SingleBLE</strong>: Bluetooth single point device, one-to-one connection between Bluetooth device and phone;</li>
@@ -1430,7 +1454,7 @@ In addition to the above three, there are some multi-protocol devices, such as <
 <blockquote>
 <p>Dual-mode&apos;s Bluetooth distribution network part, Use SingleBLE technology to network the device, Will be explained in the SingleBLE chapter.</p>
 </blockquote>
-<h2 id="tips"><a name="tips" class="plugin-anchor" href="#tips"><i class="fa fa-link" aria-hidden="true"></i></a>Tips</h2>
+<h2 id="tips"><a name="tips" class="anchor-navigation-ex-anchor" href="#tips"><i class="fa fa-link" aria-hidden="true"></i></a><a name="tips" class="plugin-anchor" href="#tips"><i class="fa fa-link" aria-hidden="true"></i></a>Tips</h2>
 <p>Please familiar with TuyaHomeSdk first and develop Bluetooth Mesh. All operations of Mesh are based on the initialization of family data.
 A family can has multiple Meshs (recommend one family create one).</p>
 
@@ -1476,7 +1500,7 @@ A family can has multiple Meshs (recommend one family create one).</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bluetooth Mesh (SIG)","level":"1.19","depth":1,"next":{"title":"Prepare","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},"previous":{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh.md","mtime":"2020-03-19T12:42:11.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Bluetooth Mesh (SIG)","level":"1.19","depth":1,"next":{"title":"Prepare","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},"previous":{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh.md","mtime":"2020-03-19T12:42:11.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1491,6 +1515,26 @@ A family can has multiple Meshs (recommend one family create one).</p>
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1511,10 +1555,6 @@ A family can has multiple Meshs (recommend one family create one).</p>
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

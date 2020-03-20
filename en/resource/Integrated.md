@@ -32,7 +32,7 @@ repositories {
 ```
 
 
-> **[Note]**
+> **[info] Note**
 >
 > * The Tuya Smart sdk solely supports the platform of armeabi-v7a architecture by default. Developer may refer to the [GitHub](https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs) if you need other platforms. 
 > * After version 3.11.0, the so libraries of armeabi-v7a, arm64-v8a, armeabi platforms have been integrated into sdk. Please remove the relevant so-banks of sdk manually placed in the local, and use the default provided by sdk.
@@ -157,7 +157,7 @@ public class TuyaSmartApp extends Application {
     });
 ```
 
-> [**Note**]
+> **[info] Note**
 >
 > - In case of this kind of callback, please go to the login page and require the user to log in again. 
 

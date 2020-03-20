@@ -1,4 +1,4 @@
-# Mobile account system
+# Mobile Account System
 
 Tutu Smart provides a mobile phone verification code login system.
 ## Mobile Verification Code Login
@@ -66,10 +66,10 @@ TuyaHomeSdk.getUserInstance().loginWithPhone("86", "13355555555", "123456", new 
     }
 });
 ```
-## User mobile password login
+## User Mobile Password Login
 
 Tuyao provides mobile phone password login system.
-### Phone password registration
+### Phone Password Registration
 Mobile phone password registration, including obtaining a verification code interface and a registration interface
 
 **Declaration**
@@ -133,7 +133,7 @@ TuyaHomeSdk.getUserInstance().registerAccountWithPhone("86", "13666666666", "123
     }
 });
 ```
-### Phone password login
+### Phone Password Login
 **Declaration**
 
 Sign in with your mobile number and password.
@@ -167,7 +167,7 @@ TuyaHomeSdk.getUserInstance().loginWithPhonePassword ("86", "13666666666", "1234
     }
 });
 ```
-### Phone reset password
+### Phone Reset Password
 
 Phone reset password function, including two interfaces: send verification code interface and reset password interface
 

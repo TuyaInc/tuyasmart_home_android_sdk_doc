@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>SDK Account Upgrade · GitBook</title>
+        <title>Migration from 1.x SDK · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -22,6 +22,18 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
                 
             
                 
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="User.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1377,7 +1401,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >SDK Account Upgrade</a>
+        <a href=".." >Migration from 1.x SDK</a>
     </h1>
 </div>
 
@@ -1392,21 +1416,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="migration-of-one-series-of-sdk-accounts"><a name="migration-of-one-series-of-sdk-accounts" class="plugin-anchor" href="#migration-of-one-series-of-sdk-accounts"><i class="fa fa-link" aria-hidden="true"></i></a>Migration of One Series of SDK Accounts</h1>
-<p>If it is a 1 series SDK, users need to upgrade when accessing the latest version</p>
-<h3 id="check-if-you-want-to-upgrade-user-data"><a name="check-if-you-want-to-upgrade-user-data" class="plugin-anchor" href="#check-if-you-want-to-upgrade-user-data"><i class="fa fa-link" aria-hidden="true"></i></a>Check if you want to upgrade user data</h3>
-<p>   <strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">    <span class="token keyword">boolean</span> <span class="token function">checkVersionUpgrade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#migration-from-1x-sdk"><b></b>Migration from 1.x SDK</a></li><ul><li><span class="title-icon "></span><a href="#check-user-upgrade"><b></b>Check User Upgrade</a></li><li><span class="title-icon "></span><a href="#upgrade-account"><b></b>Upgrade Account</a></li></ul></ul></div><a href="#migration-from-1x-sdk" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="migration-from-1x-sdk"><a name="migration-from-1x-sdk" class="anchor-navigation-ex-anchor" href="#migration-from-1x-sdk"><i class="fa fa-link" aria-hidden="true"></i></a><a name="migration-from-1x-sdk" class="plugin-anchor" href="#migration-from-1x-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>Migration from 1.x SDK</h1>
+<p>If you are using 1.x SDK, you need to migrate user accounts. If not, please ignore this section.</p>
+<h2 id="check-user-upgrade"><a name="check-user-upgrade" class="anchor-navigation-ex-anchor" href="#check-user-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a><a name="check-user-upgrade" class="plugin-anchor" href="#check-user-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a>Check User Upgrade</h2>
+<p>Check if you need to upgrade user.</p>
+<p><strong>Declaration</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">boolean</span> <span class="token function">checkVersionUpgrade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>   <strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">    TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkVersionUpgrade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkVersionUpgrade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="upgrade-account"><a name="upgrade-account" class="plugin-anchor" href="#upgrade-account"><i class="fa fa-link" aria-hidden="true"></i></a>Upgrade account</h3>
-<p>   <strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java">   <span class="token keyword">void</span> <span class="token function">upgradeVersion</span><span class="token punctuation">(</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="upgrade-account"><a name="upgrade-account" class="anchor-navigation-ex-anchor" href="#upgrade-account"><i class="fa fa-link" aria-hidden="true"></i></a><a name="upgrade-account" class="plugin-anchor" href="#upgrade-account"><i class="fa fa-link" aria-hidden="true"></i></a>Upgrade Account</h2>
+<p><strong>Declaration</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">upgradeVersion</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>   <strong>Example</strong></p>
-<pre class="language-"><code class="lang-java">   TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>upgradeVersion <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>upgradeVersion <span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 
                                 
@@ -1451,7 +1476,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SDK Account Upgrade","level":"1.4.1","depth":2,"next":{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},"previous":{"title":"User Management","level":"1.4","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"SDK Account Upgrade","level":"1.4.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.4.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.4.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Modify User Information","level":"1.4.6","depth":2,"anchor":"#change-nickname","path":"resource/User_Logout.md","ref":"./resource/User_Logout.md#change-nickname","articles":[]},{"title":"Sign Out","level":"1.4.7","depth":2,"anchor":"#logout-interface","path":"resource/User_Logout.md","ref":"./resource/User_Logout.md#logout-interface","articles":[]},{"title":"Disable Account","level":"1.4.8","depth":2,"anchor":"#disable-account","path":"resource/User_Logout.md","ref":"./resource/User_Logout.md#disable-account","articles":[]},{"title":"Data Model","level":"1.4.9","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]},{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_Sdk_Update.md","mtime":"2020-03-19T12:22:14.330Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Migration from 1.x SDK","level":"1.4.1","depth":2,"next":{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},"previous":{"title":"User Management","level":"1.4","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"Migration from 1.x SDK","level":"1.4.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.4.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.4.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Modify User Information","level":"1.4.6","depth":2,"path":"resource/User_update.md","ref":"./resource/User_update.md","articles":[]},{"title":"Sign Out","level":"1.4.7","depth":2,"anchor":"#logout-interface","path":"resource/User_logout.md","ref":"./resource/User_logout.md#logout-interface","articles":[]},{"title":"Disable Account","level":"1.4.8","depth":2,"anchor":"#disable-account","path":"resource/User_logout.md","ref":"./resource/User_logout.md#disable-account","articles":[]},{"title":"Data Model","level":"1.4.9","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]},{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_Sdk_Update.md","mtime":"2020-03-20T03:00:47.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1466,6 +1491,26 @@
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1486,10 +1531,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

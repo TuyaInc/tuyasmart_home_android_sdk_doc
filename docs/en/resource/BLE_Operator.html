@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="BLE_Activator.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_Sdk_Update.html">
             
                     
-                    SDK Account Upgrade
+                    Migration from 1.x SDK
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Logout.html#change-nickname">
+                <a href="User_update.html">
             
                     
                     Modify User Information
@@ -224,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Logout.html#logout-interface">
+                <a href="User_logout.html#logout-interface">
             
                     
                     Sign Out
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Logout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Logout.html#disable-account">
+                <a href="User_logout.html#disable-account">
             
                     
                     Disable Account
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#device-control">
             
                     
                     Device Control
@@ -656,7 +680,7 @@
                 <a href="Gateway.html">
             
                     
-                    Gateway
+                    ZigBee Gateway Control
             
                 </a>
             
@@ -1392,7 +1416,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="section-iii&#x2014;&#x2014;single-ble-function"><a name="section-iii&#x2014;&#x2014;single-ble-function" class="plugin-anchor" href="#section-iii&#x2014;&#x2014;single-ble-function"><i class="fa fa-link" aria-hidden="true"></i></a>Section III&#x2014;&#x2014;Single BLE Function</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#section-iii&#x2014;&#x2014;single-ble-function"><b></b>Section III&#x2014;&#x2014;Single BLE Function</a></li><ul><li><span class="title-icon "></span><a href="#prepare"><b></b>Prepare</a></li><li><span class="title-icon "></span><a href="#device-status-query"><b></b>Device Status Query</a></li><li><span class="title-icon "></span><a href="#connect-device"><b></b>Connect Device</a></li><li><span class="title-icon "></span><a href="#device-function"><b></b>Device Function</a></li></ul></ul></div><a href="#section-iii&#x2014;&#x2014;single-ble-function" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="section-iii&#x2014;&#x2014;single-ble-function"><a name="section-iii&#x2014;&#x2014;single-ble-function" class="anchor-navigation-ex-anchor" href="#section-iii&#x2014;&#x2014;single-ble-function"><i class="fa fa-link" aria-hidden="true"></i></a><a name="section-iii&#x2014;&#x2014;single-ble-function" class="plugin-anchor" href="#section-iii&#x2014;&#x2014;single-ble-function"><i class="fa fa-link" aria-hidden="true"></i></a>Section III&#x2014;&#x2014;Single BLE Function</h1>
 <p>This section will introduce activated single-point devices, how to perform status query, connection, unbinding, etc. It is recommended to read Bluetooth  <a href="BLE.html">Section 1</a> and <a href="BLE_Activator.html">Section 2</a>.</p>
 <p><strong>Summary</strong></p>
 <ol>
@@ -1402,27 +1426,27 @@
 <li>Modify the device</li>
 <li>Unbind the device</li>
 </ol>
-<h2 id="prepare"><a name="prepare" class="plugin-anchor" href="#prepare"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare</h2>
+<h2 id="prepare"><a name="prepare" class="anchor-navigation-ex-anchor" href="#prepare"><i class="fa fa-link" aria-hidden="true"></i></a><a name="prepare" class="plugin-anchor" href="#prepare"><i class="fa fa-link" aria-hidden="true"></i></a>Prepare</h2>
 <ol>
 <li>Before developing BLE, you need to understand the basic logic of TuyaHomeSDK. You must already use TuyaHomeSdk to complete the basic operations such as initialization, login, and home creation.</li>
 <li>After successful activation, you will get <code>deviceBean</code> and<code>devId</code>, and subsequent operations are mainly based on devId.</li>
 </ol>
-<h2 id="device-status-query"><a name="device-status-query" class="plugin-anchor" href="#device-status-query"><i class="fa fa-link" aria-hidden="true"></i></a>Device Status Query</h2>
+<h2 id="device-status-query"><a name="device-status-query" class="anchor-navigation-ex-anchor" href="#device-status-query"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-status-query" class="plugin-anchor" href="#device-status-query"><i class="fa fa-link" aria-hidden="true"></i></a>Device Status Query</h2>
 <ul>
-<li>The general query is the same as the Wi-Fi device (this status is a comprehensive status, if the Bluetooth device is added under the gateway, the Bluetooth device can be online in the cloud)<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<li>The general query is the same as the Wi-Fi device (this status is a comprehensive status, if the Bluetooth device is added under the gateway, the Bluetooth device can be online in the cloud)<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
-<li>Query if the device is locally connected<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBleLocalOnline</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<li>Query if the device is locally connected<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBleLocalOnline</span><span class="token punctuation">(</span>devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <blockquote>
 <p>Usually only the local state needs to be considered. Only Bluetooth devices that join the gateway need to consider whether the cloud is online.</p>
 </blockquote>
 </li>
 </ul>
-<h2 id="connect-device"><a name="connect-device" class="plugin-anchor" href="#connect-device"><i class="fa fa-link" aria-hidden="true"></i></a>Connect Device</h2>
+<h2 id="connect-device"><a name="connect-device" class="anchor-navigation-ex-anchor" href="#connect-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="connect-device" class="plugin-anchor" href="#connect-device"><i class="fa fa-link" aria-hidden="true"></i></a>Connect Device</h2>
 <p>If the device is offline, you can call the connection method to connect the device.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span>String idJsonString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span><span class="token class-name">String</span> idJsonString<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1442,29 +1466,29 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> devIdList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> devIdList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
  devIdList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>devId1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//devId1</span>
  devIdList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>devId2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//devId2</span>
 
- String ids <span class="token operator">=</span> JSONObject<span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>devIdList<span class="token punctuation">)</span><span class="token punctuation">;</span>
- TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span>ids<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token class-name">String</span> ids <span class="token operator">=</span> <span class="token class-name">JSONObject</span><span class="token punctuation">.</span><span class="token function">toJSONString</span><span class="token punctuation">(</span>devIdList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addScanLinkTaskIds</span><span class="token punctuation">(</span>ids<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="device-function"><a name="device-function" class="plugin-anchor" href="#device-function"><i class="fa fa-link" aria-hidden="true"></i></a>Device Function</h2>
+<h2 id="device-function"><a name="device-function" class="anchor-navigation-ex-anchor" href="#device-function"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-function" class="plugin-anchor" href="#device-function"><i class="fa fa-link" aria-hidden="true"></i></a>Device Function</h2>
 <p>Can monitor device status. This section is similar to Wi-Fi devices, please refer to it for more information <a href="Device.html">WIFI Function</a></p>
-<h4 id="device-information-acquisition"><a name="device-information-acquisition" class="plugin-anchor" href="#device-information-acquisition"><i class="fa fa-link" aria-hidden="true"></i></a>Device Information Acquisition</h4>
+<h4 id="device-information-acquisition"><a name="device-information-acquisition" class="anchor-navigation-ex-anchor" href="#device-information-acquisition"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-information-acquisition" class="plugin-anchor" href="#device-information-acquisition"><i class="fa fa-link" aria-hidden="true"></i></a>Device Information Acquisition</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#device-%20information-acquisition">Device Information Acquisition</a></p>
-<h4 id="initial-device-control"><a name="initial-device-control" class="plugin-anchor" href="#initial-device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Initial Device Control</h4>
+<h4 id="initial-device-control"><a name="initial-device-control" class="anchor-navigation-ex-anchor" href="#initial-device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="initial-device-control" class="plugin-anchor" href="#initial-device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Initial Device Control</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#initial-device-control">Initial Device Control</a></p>
-<h4 id="register-device-listener"><a name="register-device-listener" class="plugin-anchor" href="#register-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a>Register Device Listener</h4>
+<h4 id="register-device-listener"><a name="register-device-listener" class="anchor-navigation-ex-anchor" href="#register-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a><a name="register-device-listener" class="plugin-anchor" href="#register-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a>Register Device Listener</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#register-device-listener">Register Device Listener</a></p>
-<h4 id="unregister-device-listener"><a name="unregister-device-listener" class="plugin-anchor" href="#unregister-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a>Unregister Device Listener</h4>
+<h4 id="unregister-device-listener"><a name="unregister-device-listener" class="anchor-navigation-ex-anchor" href="#unregister-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a><a name="unregister-device-listener" class="plugin-anchor" href="#unregister-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a>Unregister Device Listener</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#unregister-device-listener">Unregister Device Listener</a></p>
-<h4 id="function-points-of-device"><a name="function-points-of-device" class="plugin-anchor" href="#function-points-of-device"><i class="fa fa-link" aria-hidden="true"></i></a>Function Points of Device</h4>
+<h4 id="function-points-of-device"><a name="function-points-of-device" class="anchor-navigation-ex-anchor" href="#function-points-of-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="function-points-of-device" class="plugin-anchor" href="#function-points-of-device"><i class="fa fa-link" aria-hidden="true"></i></a>Function Points of Device</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#function-points-of-device">Function Points of Device</a></p>
-<h4 id="device-control-method"><a name="device-control-method" class="plugin-anchor" href="#device-control-method"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control Method</h4>
+<h4 id="device-control-method"><a name="device-control-method" class="anchor-navigation-ex-anchor" href="#device-control-method"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-control-method" class="plugin-anchor" href="#device-control-method"><i class="fa fa-link" aria-hidden="true"></i></a>Device Control Method</h4>
 <p>Unlike Wi-Fi devices, it does not have the LAN delivery function. Only some delivery functions are supported.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span>String dps<span class="token punctuation">,</span> IControlCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span><span class="token class-name">String</span> dps<span class="token punctuation">,</span> <span class="token class-name">IControlCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1492,7 +1516,7 @@
 <p>Assuming that the device function point of the light is 101, the control code of the light is as follows:</p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span><span class="token string">&quot;{\&quot;101\&quot;: true}&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IControlCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
@@ -1501,16 +1525,16 @@
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="rename-device"><a name="rename-device" class="plugin-anchor" href="#rename-device"><i class="fa fa-link" aria-hidden="true"></i></a>Rename Device</h4>
+<h4 id="rename-device"><a name="rename-device" class="anchor-navigation-ex-anchor" href="#rename-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="rename-device" class="plugin-anchor" href="#rename-device"><i class="fa fa-link" aria-hidden="true"></i></a>Rename Device</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#rename-device">Rename Device</a></p>
-<h4 id="remove-device"><a name="remove-device" class="plugin-anchor" href="#remove-device"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Device</h4>
+<h4 id="remove-device"><a name="remove-device" class="anchor-navigation-ex-anchor" href="#remove-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remove-device" class="plugin-anchor" href="#remove-device"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Device</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#remove-device">Remove Device</a></p>
 <blockquote>
 <p>The unbinding of Bluetooth devices is consistent with the Wi-Fi device.
 <code>TuyaHomeSdk.newDeviceInstance(&quot;devId&quot;).removeDevice()</code> or <code>resetFactory()</code> 
 But in addition to BLE cloud removal. If the device is locally connected at this time, the device will be automatically removed. If the device is offline at this time, only the cloud will be removed.</p>
 </blockquote>
-<h4 id="recycling-device-resources"><a name="recycling-device-resources" class="plugin-anchor" href="#recycling-device-resources"><i class="fa fa-link" aria-hidden="true"></i></a>Recycling Device Resources</h4>
+<h4 id="recycling-device-resources"><a name="recycling-device-resources" class="anchor-navigation-ex-anchor" href="#recycling-device-resources"><i class="fa fa-link" aria-hidden="true"></i></a><a name="recycling-device-resources" class="plugin-anchor" href="#recycling-device-resources"><i class="fa fa-link" aria-hidden="true"></i></a>Recycling Device Resources</h4>
 <p>Consistent with Wi-Fi device  <a href="Device.html#recycling-device-resources">Recycling Device Resources</a></p>
 
                                 
@@ -1555,7 +1579,7 @@ But in addition to BLE cloud removal. If the device is locally connected at this
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"BLE Device Function","level":"1.18.4","depth":2,"next":{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]},"previous":{"title":"Dual-mode Device Activation","level":"1.18.3","depth":2,"anchor":"#dual-mode-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#dual-mode-device-activation","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_Operator.md","mtime":"2020-03-19T13:58:01.704Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"BLE Device Function","level":"1.18.4","depth":2,"next":{"title":"BLE OTA","level":"1.18.5","depth":2,"path":"resource/BLE_OTA.md","ref":"./resource/BLE_OTA.md","articles":[]},"previous":{"title":"Dual-mode Device Activation","level":"1.18.3","depth":2,"anchor":"#dual-mode-device-activation","path":"resource/BLE_Activator.md","ref":"./resource/BLE_Activator.md#dual-mode-device-activation","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_Operator.md","mtime":"2020-03-19T13:58:01.704Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1570,6 +1594,26 @@ But in addition to BLE cloud removal. If the device is locally connected at this
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1590,10 +1634,6 @@ But in addition to BLE cloud removal. If the device is locally connected at this
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

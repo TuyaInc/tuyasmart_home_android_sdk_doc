@@ -25,6 +25,18 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -53,6 +65,7 @@
         
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,6 +79,17 @@
     
     <link rel="prev" href="Activator_zigbee_subdevice.html" />
     
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+    </script>
 
     </head>
     <body>
@@ -151,7 +175,7 @@
                 <a href="User_sdk_update.html">
             
                     
-                    SDK 账户升级
+                    1.x 版本 SDK 用户迁移
             
                 </a>
             
@@ -211,9 +235,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.6" data-path="User_update.html">
             
-                <a href="User_Loginout.html">
+                <a href="User_update.html">
             
                     
                     修改用户信息
@@ -224,12 +248,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.7" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#退出登录接口">
+                <a href="User_logout.html#退出登录">
             
                     
-                    登出
+                    退出登录
             
                 </a>
             
@@ -237,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="User_Loginout.html">
+        <li class="chapter " data-level="1.4.8" data-path="User_logout.html">
             
-                <a href="User_Loginout.html#停用账户">
+                <a href="User_logout.html#停用账户">
             
                     
                     停用帐号
@@ -483,7 +507,7 @@
     
         <li class="chapter " data-level="1.9" data-path="Device.html">
             
-                <a href="Device.html">
+                <a href="Device.html#设备控制">
             
                     
                     设备控制
@@ -643,7 +667,7 @@
                 <a href="Gateway.html">
             
                     
-                    网关
+                    ZigBee 网关控制
             
                 </a>
             
@@ -1386,8 +1410,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x626B;&#x7801;&#x914D;&#x7F51;"><a name="&#x626B;&#x7801;&#x914D;&#x7F51;" class="plugin-anchor" href="#&#x626B;&#x7801;&#x914D;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x626B;&#x7801;&#x914D;&#x7F51;</h3>
-<h4 id="&#x63CF;&#x8FF0;"><a name="&#x63CF;&#x8FF0;" class="plugin-anchor" href="#&#x63CF;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63CF;&#x8FF0;</h4>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x626B;&#x7801;&#x914D;&#x7F51;"><b></b>&#x626B;&#x7801;&#x914D;&#x7F51;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="&#x626B;&#x7801;&#x914D;&#x7F51;"><a name="&#x626B;&#x7801;&#x914D;&#x7F51;" class="anchor-navigation-ex-anchor" href="#&#x626B;&#x7801;&#x914D;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x626B;&#x7801;&#x914D;&#x7F51;" class="plugin-anchor" href="#&#x626B;&#x7801;&#x914D;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x626B;&#x7801;&#x914D;&#x7F51;</h3>
+<h4 id="&#x63CF;&#x8FF0;"><a name="&#x63CF;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#&#x63CF;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63CF;&#x8FF0;" class="plugin-anchor" href="#&#x63CF;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63CF;&#x8FF0;</h4>
 <p>&#x8BE5;&#x529F;&#x80FD;&#x53EA;&#x9002;&#x7528;&#x4E8E;&#x5DF2;&#x8FDE;&#x63A5;&#x4E92;&#x8054;&#x7F51;&#x7684;&#x8BBE;&#x5907;</p>
 <pre class="language-"><code class="lang-sequence">
 Title: &#x626B;&#x8BBE;&#x5907;&#x4E8C;&#x7EF4;&#x7801;&#x914D;&#x7F51;
@@ -1417,8 +1441,8 @@ cloud -&gt; Device: &#x6FC0;&#x6D3B;&#x6210;&#x529F;
 
 cloud--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x8BBE;&#x5907;&#x5217;&#x8868;
 </code></pre>
-<h4 id="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><a name="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;</h4>
-<pre class="language-"><code class="lang-java">TuyaQRCodeActivatorBuilder builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaQRCodeActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<h4 id="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><a name="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F51;&#x53C2;&#x6570;</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaQRCodeActivatorBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaQRCodeActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setUuid</span><span class="token punctuation">(</span>uuid<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setHomeId</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">)</span>
@@ -1426,17 +1450,17 @@ cloud--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210;
         <span class="token punctuation">.</span><span class="token function">setListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSmartActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span>DeviceBean devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
 
                 <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span>String step<span class="token punctuation">,</span> Object data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span><span class="token class-name">String</span> step<span class="token punctuation">,</span> <span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span>
@@ -1465,8 +1489,8 @@ cloud--&gt;APP: &#x6FC0;&#x6D3B;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;&#x6210;
 </tr>
 </tbody>
 </table>
-<h4 id="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><a name="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;" class="plugin-anchor" href="#&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;</h4>
-<pre class="language-"><code class="lang-java">ITuyaActivator mTuyaActivator <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newQRCodeDevActivator</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h4 id="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><a name="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;" class="plugin-anchor" href="#&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F51;&#x65B9;&#x6CD5;&#x8C03;&#x7528;</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaActivator</span> mTuyaActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newQRCodeDevActivator</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//&#x5F00;&#x59CB;&#x914D;&#x7F51;</span>
 mTuyaActivator<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//&#x505C;&#x6B62;&#x914D;&#x7F51;</span>
@@ -1506,7 +1530,7 @@ mTuyaActivator<span class="token punctuation">.</span><span class="token functio
                 </a>
                 
                 
-                <a href="Device.html" class="navigation navigation-next " aria-label="Next page: 设备控制">
+                <a href="Device.html#设备控制" class="navigation navigation-next " aria-label="Next page: 设备控制">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1517,7 +1541,7 @@ mTuyaActivator<span class="token punctuation">.</span><span class="token functio
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"扫码配网","level":"1.8","depth":1,"next":{"title":"设备控制","level":"1.9","depth":1,"path":"resource/Device.md","ref":"./resource/Device.md","articles":[{"title":"设备信息获取","level":"1.9.1","depth":2,"anchor":"#设备信息获取","path":"resource/Device.md","ref":"./resource/Device.md#设备信息获取","articles":[]},{"title":"初始化设备控制","level":"1.9.2","depth":2,"anchor":"#初始化设备控制","path":"resource/Device.md","ref":"./resource/Device.md#初始化设备控制","articles":[]},{"title":"注册设备监听","level":"1.9.3","depth":2,"anchor":"#注册设备监听","path":"resource/Device.md","ref":"./resource/Device.md#注册设备监听","articles":[]},{"title":"取消设备监听","level":"1.9.4","depth":2,"anchor":"#取消设备监听","path":"resource/Device.md","ref":"./resource/Device.md#取消设备监听","articles":[]},{"title":"设备控制方法","level":"1.9.5","depth":2,"anchor":"#设备控制方法","path":"resource/Device.md","ref":"./resource/Device.md#设备控制方法","articles":[]},{"title":"设备功能点说明","level":"1.9.6","depth":2,"anchor":"#设备功能点说明","path":"resource/Device.md","ref":"./resource/Device.md#设备功能点说明","articles":[]},{"title":"修改设备名称","level":"1.9.7","depth":2,"anchor":"#设备重命名","path":"resource/Device.md","ref":"./resource/Device.md#设备重命名","articles":[]},{"title":"回收设备资源","level":"1.9.8","depth":2,"anchor":"#回收设备资源","path":"resource/Device.md","ref":"./resource/Device.md#回收设备资源","articles":[]},{"title":"移除设备","level":"1.9.9","depth":2,"anchor":"#移除设备","path":"resource/Device.md","ref":"./resource/Device.md#移除设备","articles":[]},{"title":"查询 Wi-Fi 信号强度","level":"1.9.10","depth":2,"anchor":"#查询-wi-fi-信号强度","path":"resource/Device.md","ref":"./resource/Device.md#查询-wi-fi-信号强度","articles":[]},{"title":"固件升级","level":"1.9.11","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"网关","level":"1.9.12","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]}]},"previous":{"title":"ZigBee 子设备配网","level":"1.7.2","depth":2,"path":"resource/Activator_zigbee_subdevice.md","ref":"resource/Activator_zigbee_subdevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Activator_qrcode.md","mtime":"2020-03-19T13:58:01.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-19T15:45:42.455Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"扫码配网","level":"1.8","depth":1,"next":{"title":"设备控制","level":"1.9","depth":1,"anchor":"#设备控制","path":"resource/Device.md","ref":"./resource/Device.md#设备控制","articles":[{"title":"设备信息获取","level":"1.9.1","depth":2,"anchor":"#设备信息获取","path":"resource/Device.md","ref":"./resource/Device.md#设备信息获取","articles":[]},{"title":"初始化设备控制","level":"1.9.2","depth":2,"anchor":"#初始化设备控制","path":"resource/Device.md","ref":"./resource/Device.md#初始化设备控制","articles":[]},{"title":"注册设备监听","level":"1.9.3","depth":2,"anchor":"#注册设备监听","path":"resource/Device.md","ref":"./resource/Device.md#注册设备监听","articles":[]},{"title":"取消设备监听","level":"1.9.4","depth":2,"anchor":"#取消设备监听","path":"resource/Device.md","ref":"./resource/Device.md#取消设备监听","articles":[]},{"title":"设备控制方法","level":"1.9.5","depth":2,"anchor":"#设备控制方法","path":"resource/Device.md","ref":"./resource/Device.md#设备控制方法","articles":[]},{"title":"设备功能点说明","level":"1.9.6","depth":2,"anchor":"#设备功能点说明","path":"resource/Device.md","ref":"./resource/Device.md#设备功能点说明","articles":[]},{"title":"修改设备名称","level":"1.9.7","depth":2,"anchor":"#设备重命名","path":"resource/Device.md","ref":"./resource/Device.md#设备重命名","articles":[]},{"title":"回收设备资源","level":"1.9.8","depth":2,"anchor":"#回收设备资源","path":"resource/Device.md","ref":"./resource/Device.md#回收设备资源","articles":[]},{"title":"移除设备","level":"1.9.9","depth":2,"anchor":"#移除设备","path":"resource/Device.md","ref":"./resource/Device.md#移除设备","articles":[]},{"title":"查询 Wi-Fi 信号强度","level":"1.9.10","depth":2,"anchor":"#查询-wi-fi-信号强度","path":"resource/Device.md","ref":"./resource/Device.md#查询-wi-fi-信号强度","articles":[]},{"title":"固件升级","level":"1.9.11","depth":2,"path":"resource/OTA.md","ref":"./resource/OTA.md","articles":[]},{"title":"ZigBee 网关控制","level":"1.9.12","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]}]},"previous":{"title":"ZigBee 子设备配网","level":"1.7.2","depth":2,"path":"resource/Activator_zigbee_subdevice.md","ref":"resource/Activator_zigbee_subdevice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Activator_qrcode.md","mtime":"2020-03-19T13:58:01.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -1532,6 +1556,26 @@ mTuyaActivator<span class="token punctuation">.</span><span class="token functio
     
         
         <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
         
     
         
@@ -1552,10 +1596,6 @@ mTuyaActivator<span class="token punctuation">.</span><span class="token functio
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
