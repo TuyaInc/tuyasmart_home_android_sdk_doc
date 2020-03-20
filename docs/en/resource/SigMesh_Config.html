@@ -37,6 +37,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -66,6 +74,7 @@
     
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,6 +89,13 @@
     <link rel="prev" href="SigMesh_Admin.html" />
     
 
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
     <style>
     @media only screen and (max-width: 640px) {
         .book-header .hidden-mobile {
@@ -88,7 +104,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
     </script>
 
     </head>
@@ -1426,9 +1442,9 @@
 <span class="token keyword">void</span> <span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaBlueMeshSearchListener</span> iTuyaBlueMeshSearchListener<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshSearchListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">ITuyaBlueMeshSearchListener iTuyaBlueMeshSearchListener<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshSearchListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSearched</span><span class="token punctuation">(</span><span class="token class-name">SearchDeviceBean</span> deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSearched</span><span class="token punctuation">(</span>SearchDeviceBean deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 
@@ -1439,12 +1455,12 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token comment">// SigMesh&apos;s UUID</span>
 UUID<span class="token punctuation">[</span><span class="token punctuation">]</span> MESH_PROVISIONING_UUID <span class="token operator">=</span> <span class="token punctuation">{</span>UUID<span class="token punctuation">.</span><span class="token function">fromString</span><span class="token punctuation">(</span><span class="token string">&quot;00001827-0000-1000-8000-00805f9b34fb&quot;</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token class-name">SearchBuilder</span> searchBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SearchBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+SearchBuilder searchBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SearchBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
                                 <span class="token punctuation">.</span><span class="token function">setServiceUUIDs</span><span class="token punctuation">(</span>MESH_PROVISIONING_UUID<span class="token punctuation">)</span>
                 <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>      
                 <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshSearchListener</span><span class="token punctuation">(</span>iTuyaBlueMeshSearchListener<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token class-name">ITuyaBlueMeshSearch</span> mMeshSearch <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newTuyaBlueMeshSearch</span><span class="token punctuation">(</span>searchBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ITuyaBlueMeshSearch mMeshSearch <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newTuyaBlueMeshSearch</span><span class="token punctuation">(</span>searchBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//start</span>
 mMeshSearch<span class="token punctuation">.</span><span class="token function">startSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1461,22 +1477,22 @@ mMeshSearch<span class="token punctuation">.</span><span class="token function">
 <span class="token keyword">void</span> <span class="token function">stopActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaSigMeshActivatorBuilder</span> tuyaSigMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaSigMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java">TuyaSigMeshActivatorBuilder tuyaSigMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaSigMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
             <span class="token punctuation">.</span><span class="token function">setSearchDeviceBeans</span><span class="token punctuation">(</span>mSearchDeviceBeanList<span class="token punctuation">)</span>
             <span class="token punctuation">.</span><span class="token function">setSigMeshBean</span><span class="token punctuation">(</span>sigMeshBean<span class="token punctuation">)</span> 
             <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span> 
             <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> mac<span class="token punctuation">,</span> <span class="token class-name">DeviceBean</span> deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>String mac<span class="token punctuation">,</span> DeviceBean deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> mac<span class="token punctuation">,</span> <span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String mac<span class="token punctuation">,</span> String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span>
      <span class="token annotation punctuation">@Override</span>
      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFinish</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token class-name">ITuyaBlueMeshActivator</span> iTuyaBlueMeshActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ITuyaBlueMeshActivator iTuyaBlueMeshActivator <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">//start</span>
 iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1631,7 +1647,7 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configuration","level":"1.19.4","depth":2,"next":{"title":"Device","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},"previous":{"title":"Management","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SigMesh_Config.md","mtime":"2020-03-19T14:09:22.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Configuration","level":"1.19.4","depth":2,"next":{"title":"Device","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},"previous":{"title":"Management","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SigMesh_Config.md","mtime":"2020-03-19T14:09:22.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T10:47:05.456Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1669,6 +1685,14 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
         
     
         
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
@@ -1686,6 +1710,10 @@ iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

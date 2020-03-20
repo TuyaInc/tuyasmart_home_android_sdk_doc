@@ -16,7 +16,7 @@ Server-->APP: 返回 token
 Note over APP: 开始配网，通过广播、组播循环发 ssid/pwd/token
 Device->Device: 捕捉到 ssid/password/token
 
-APP-->Server: 根据 token 2秒钟轮询一次入网激活设备列表(总时长默认100s)
+APP-->Server: 根据 token 2 秒钟轮询一次入网激活设备列表(总时长默认 100s)
 
 Device-->Server: 去激活设备
 Server-->Device: 激活成功
@@ -62,7 +62,7 @@ ActivatorBuilder builder = new ActivatorBuilder()
 | ssid            | 配网之后，设备工作WiFi的名称（家庭网络）|
 | password        | 配网之后，设备工作WiFi的密码（家庭网络）|
 | activatorModel  | 配网模式，EZ 模式请传入：ActivatorModelEnum.TY_EZ |
-| timeout         | 配网的超时时间设置，默认是100s，单位是秒|
+| timeout         | 配网的超时时间设置，默认是 100s，单位是秒 |
 
 **获取配网 token**
 

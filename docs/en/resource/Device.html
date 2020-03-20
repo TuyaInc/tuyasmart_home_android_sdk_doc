@@ -37,6 +37,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -66,6 +74,7 @@
     
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,6 +89,13 @@
     <link rel="prev" href="Activator_qrcode.html" />
     
 
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
     <style>
     @media only screen and (max-width: 640px) {
         .book-header .hidden-mobile {
@@ -88,7 +104,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
     </script>
 
     </head>
@@ -1434,20 +1450,20 @@
 </table>
 <h2 id="device-information-acquisition"><a name="device-information-acquisition" class="anchor-navigation-ex-anchor" href="#device-information-acquisition"><i class="fa fa-link" aria-hidden="true"></i></a><a name="device-information-acquisition" class="plugin-anchor" href="#device-information-acquisition"><i class="fa fa-link" aria-hidden="true"></i></a>Device Information Acquisition</h2>
 <p>The device control must first initialize the data, and call the following method to get the device information in the home&#xFF1A;</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeDetail</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaHomeResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getHomeDetail</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaHomeResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">HomeBean</span> homeBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>HomeBean homeBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The <code>onSuccess</code> method of this interface will return <code>HomeBean</code>, and then call <code>getDeviceList</code> of <code>HomeBean</code> to get the device list:</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> deviceList <span class="token operator">=</span> homeBean<span class="token punctuation">.</span><span class="token function">getDeviceList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">List<span class="token generics function"><span class="token punctuation">&lt;</span>DeviceBean<span class="token punctuation">&gt;</span></span> deviceList <span class="token operator">=</span> homeBean<span class="token punctuation">.</span><span class="token function">getDeviceList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The fields in <code>DeviceBean</code> are as follows:</p>
 <p><strong>DeviceBean Data Model</strong></p>
@@ -1574,12 +1590,12 @@
 </table>
 <p><strong>Notes</strong></p>
 <p> If device control need to use the latitude and longitude, you need to call the method to set the latitude and longitude:</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaSdk</span><span class="token punctuation">.</span><span class="token function">setLatAndLong</span><span class="token punctuation">(</span><span class="token class-name">String</span> latitude<span class="token punctuation">,</span> <span class="token class-name">String</span> longitude<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java">TuyaSdk<span class="token punctuation">.</span><span class="token function">setLatAndLong</span><span class="token punctuation">(</span>String latitude<span class="token punctuation">,</span> String longitude<span class="token punctuation">)</span>
 </code></pre>
 <h2 id="initial-device-control"><a name="initial-device-control" class="anchor-navigation-ex-anchor" href="#initial-device-control"><i class="fa fa-link" aria-hidden="true"></i></a><a name="initial-device-control" class="plugin-anchor" href="#initial-device-control"><i class="fa fa-link" aria-hidden="true"></i></a>Initial Device Control</h2>
 <p><strong>Declaration</strong></p>
 <p>Initialize the device control class based on the device id</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newDeviceInstance</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newDeviceInstance</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1597,12 +1613,12 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDevice</span> mDevice <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newDeviceInstance</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">ITuyaDevice mDevice <span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newDeviceInstance</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="register-device-listener"><a name="register-device-listener" class="anchor-navigation-ex-anchor" href="#register-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a><a name="register-device-listener" class="plugin-anchor" href="#register-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a>Register Device Listener</h2>
 <p><strong>Declaration</strong></p>
 <p>TuyaHomeDevice provide monitoring of device related information (dp data, device name, device online status and device removal), which will be synchronized here in real time.</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDevice</span><span class="token punctuation">.</span><span class="token function">registerDevListener</span><span class="token punctuation">(</span><span class="token class-name">IDevListener</span> listener<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java">ITuyaDevice<span class="token punctuation">.</span><span class="token function">registerDevListener</span><span class="token punctuation">(</span>IDevListener listener<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1628,14 +1644,14 @@
      * @param devId device id
      * @param dpStr the function point of the device change. It is a json string with the data format: {&quot;101&quot;: true}
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> dpStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> String dpStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Device removal callback
      *
      * @param devId device id
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onRemoved</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onRemoved</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Device online and offline callback
@@ -1643,7 +1659,7 @@
      * @param devId  device id
      * @param online Whether online, online is true
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> online<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> online<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * network status changes
@@ -1651,14 +1667,14 @@
      * @param devId  device id
      *  @param status Whether the network status is available, true is available
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onNetworkStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onNetworkStatusChanged</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> status<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">/**
      * Device information update callback
      *
      * @param devId  device id
      */</span>
-    <span class="token keyword">void</span> <span class="token function">onDevInfoUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">onDevInfoUpdate</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token punctuation">}</span>
 </code></pre>
@@ -1666,23 +1682,23 @@
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">registerDevListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IDevListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> dpStr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> String dpStr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRemoved</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRemoved</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> online<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> online<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNetworkStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNetworkStatusChanged</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDevInfoUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDevInfoUpdate</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1690,7 +1706,7 @@
 <h2 id="unregister-device-listener"><a name="unregister-device-listener" class="anchor-navigation-ex-anchor" href="#unregister-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a><a name="unregister-device-listener" class="plugin-anchor" href="#unregister-device-listener"><i class="fa fa-link" aria-hidden="true"></i></a>Unregister Device Listener</h2>
 <p>When you do not need to listen to the device, you can unregister the device listener.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDevice</span><span class="token punctuation">.</span><span class="token function">unRegisterDevListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java">ITuyaDevice<span class="token punctuation">.</span><span class="token function">unRegisterDevListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">unRegisterDevListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1701,18 +1717,18 @@
 <p>Device control supports three kinds of channel control, LAN control, cloud control, and automatic mode (if LAN is online, first go LAN control, LAN is not online, go cloud control)</p>
 <ul>
 <li><p>control by local area network</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDevice</span><span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> <span class="token class-name">TYDevicePublishModeEnum</span><span class="token punctuation">.</span><span class="token class-name">TYDevicePublishModeLocal</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">ITuyaDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> TYDevicePublishModeEnum<span class="token punctuation">.</span>TYDevicePublishModeLocal<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>control by internet</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDevice</span><span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> <span class="token class-name">TYDevicePublishModeEnum</span><span class="token punctuation">.</span><span class="token class-name">TYDevicePublishModeInternet</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">ITuyaDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> TYDevicePublishModeEnum<span class="token punctuation">.</span>TYDevicePublishModeInternet<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 <li><p>automatic control mode selection</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDevice</span><span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> <span class="token class-name">TYDevicePublishModeEnum</span><span class="token punctuation">.</span><span class="token class-name">TYDevicePublishModeAuto</span><span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">ITuyaDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> TYDevicePublishModeEnum<span class="token punctuation">.</span>TYDevicePublishModeAuto<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>or</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDevice</span><span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">ITuyaDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
@@ -1744,12 +1760,12 @@
 <p>Assuming that the function point of the device that turns on the light is 101, the control code for turning on the light is as follows:</p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span><span class="token string">&quot;{\&quot;101\&quot;: true}&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IControlCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token annotation punctuation">@Override</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;turn on the light failure&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;turn on the light failure&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
   <span class="token annotation punctuation">@Override</span>
   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;turn on the light success&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;turn on the light success&quot;</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1794,7 +1810,7 @@ dps <span class="token operator">=</span> <span class="token punctuation">{</spa
 
 mDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>dps<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IControlCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
                         <span class="token comment">//Error code 11001</span>
         <span class="token comment">//In the following cases:</span>
         <span class="token comment">//1. Type error send to, for example, string type format, being        sent to boolean type data</span>
@@ -1817,12 +1833,12 @@ mDevice<span class="token punctuation">.</span><span class="token function">publ
 <p><strong>Declaration</strong></p>
 <p>Query single dp data.</p>
 <p>Query the latest data of the dp from the device; those data will be called back via the IDevicePanelCallback onDpUpdate interface.</p>
-<pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">getDp</span><span class="token punctuation">(</span><span class="token class-name">String</span> dpId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">getDp</span><span class="token punctuation">(</span>String dpId<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">getDp</span><span class="token punctuation">(</span>dpId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 
@@ -1840,12 +1856,12 @@ mDevice<span class="token punctuation">.</span><span class="token function">publ
 <p><strong>Declaration</strong></p>
 <p>Device renaming can be conducted in multiple devices synchronously.</p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// Rename</span>
-mDevice<span class="token punctuation">.</span><span class="token function">renameDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+mDevice<span class="token punctuation">.</span><span class="token function">renameDevice</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">renameDevice</span><span class="token punctuation">(</span><span class="token string">&quot;device name&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String code<span class="token punctuation">,</span> String error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// Renaming failed</span>
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
@@ -1856,7 +1872,7 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
 </code></pre>
 <p>After renaming succeeded, IDevListener.onDevInfoUpdate() will be notified.</p>
 <p>Invoke the following method to get the latest data, and then refresh the device information.</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeDataManager</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">TuyaHomeDataManager<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="remove-device"><a name="remove-device" class="anchor-navigation-ex-anchor" href="#remove-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="remove-device" class="plugin-anchor" href="#remove-device"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Device</h2>
 <p><strong>Declaration</strong></p>
@@ -1867,12 +1883,12 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
 * @param callback
 */</span>
 
-<span class="token keyword">void</span> <span class="token function">removeDevice</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">removeDevice</span><span class="token punctuation">(</span>IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">removeDevice</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1883,18 +1899,18 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
 <h2 id="query-wi-fi-signal-strength"><a name="query-wi-fi-signal-strength" class="anchor-navigation-ex-anchor" href="#query-wi-fi-signal-strength"><i class="fa fa-link" aria-hidden="true"></i></a><a name="query-wi-fi-signal-strength" class="plugin-anchor" href="#query-wi-fi-signal-strength"><i class="fa fa-link" aria-hidden="true"></i></a>Query Wi-Fi Signal Strength</h2>
 <p><strong>Declaration</strong></p>
 <p>Query the signal strength of the current device&apos;s Wi-Fi</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">requestWifiSignal</span><span class="token punctuation">(</span><span class="token class-name">WifiSignalListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">requestWifiSignal</span><span class="token punctuation">(</span>WifiSignalListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mDevice<span class="token punctuation">.</span><span class="token function">requestWifiSignal</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">WifiSignalListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSignalValueFind</span><span class="token punctuation">(</span><span class="token class-name">String</span> signal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSignalValueFind</span><span class="token punctuation">(</span>String signal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
      <span class="token punctuation">}</span>
 
      <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
      <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1950,7 +1966,7 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.9","depth":1,"next":{"title":"Device Information Acquisition","level":"1.9.1","depth":2,"anchor":"#device-information-acquisition","path":"resource/Device.md","ref":"./resource/Device.md#device-information-acquisition","articles":[]},"previous":{"title":"Scan QRCode Configuration","level":"1.8","depth":1,"path":"resource/Activator_qrcode.md","ref":"./resource/Activator_qrcode.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Device.md","mtime":"2020-03-20T03:00:47.581Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Control","level":"1.9","depth":1,"next":{"title":"Device Information Acquisition","level":"1.9.1","depth":2,"anchor":"#device-information-acquisition","path":"resource/Device.md","ref":"./resource/Device.md#device-information-acquisition","articles":[]},"previous":{"title":"Scan QRCode Configuration","level":"1.8","depth":1,"path":"resource/Activator_qrcode.md","ref":"./resource/Activator_qrcode.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Device.md","mtime":"2020-03-20T03:00:47.581Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T10:47:05.456Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1988,6 +2004,14 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
         
     
         
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
@@ -2005,6 +2029,10 @@ mDevice<span class="token punctuation">.</span><span class="token function">rena
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

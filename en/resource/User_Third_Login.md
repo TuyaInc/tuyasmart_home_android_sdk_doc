@@ -10,7 +10,7 @@ TuyaHomeSdk.getUserInstance().loginByFacebook(String phoneCode, String token, IL
 
 **Parameters**
 
-|  Parameter        | Description                        |
+|  Parameters        | Description                        |
 | ----------- | --------------------------- |
 | phoneCode | phone code,such as：86           |
 | token       |The Token that authorizes login on Facebook. |

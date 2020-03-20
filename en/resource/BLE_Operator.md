@@ -52,7 +52,7 @@ void addScanLinkTaskIds(String idJsonString);
 ```
 
 ## Device Function
-Can monitor device status. This section is similar to Wi-Fi devices, please refer to it for more information [WIFI Function](./Device.md)
+Can monitor device status. This section is similar to Wi-Fi devices, please refer to it for more information [Wi-Fi Function](./Device.md)
 
 #### Device Information Acquisition
 

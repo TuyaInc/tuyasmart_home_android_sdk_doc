@@ -69,7 +69,7 @@ TuyaQRCodeActivatorBuilder builder = new TuyaQRCodeActivatorBuilder()
 | ------------ | -------------------------- |
 | uuid            | 设备 UUID ，可通过扫设备二维码获取 |
 | homeId          | 家庭 id，详情参考家庭管理章节 |
-| timeout         | 配网的超时时间设置，默认是100s ，单位是秒|
+| timeout         | 配网的超时时间设置，默认是100s ，单位: 秒 |
 
 #### 配网方法调用
 

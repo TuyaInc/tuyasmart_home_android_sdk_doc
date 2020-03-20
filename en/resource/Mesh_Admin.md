@@ -8,7 +8,7 @@ void createBlueMesh(String meshName, ITuyaResultCallback<BlueMeshBean> callback)
 ```
 **Parameters**
 
-|field|type|describe|
+|Field|Type|Describe|
 |--|--|--|
 |meshName|String|mesh's name（limit 16）|
 |callback|ITuyaResultCallback|callback|
@@ -36,7 +36,7 @@ void removeMesh(IResultCallback callback);
 ```
 **Parameters**
 
-|field|type|describe|
+|Field|Type|Describe|
 |--|--|--|
 |callback|IResultCallback|callback|
 

@@ -3,7 +3,7 @@
 The ITuyaHomeMember provides the family member management interfaces including adding member, removing member, update the control permission of member and obtaining home member list ,etc. The invocation method is `TuyaHomeSdk.getMemberInstance()`.  
 
 ## MemberBean Field Information
-| field | type | describe |
+| Field | Type | Describe |
 | --- | --- | --- |
 | homeId | long  | Unique id of Home |
 | nickName | String |The member nickName  |

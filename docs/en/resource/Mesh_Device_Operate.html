@@ -37,6 +37,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -66,6 +74,7 @@
     
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,6 +89,13 @@
     <link rel="prev" href="Mesh_Group_Operate.html" />
     
 
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
     <style>
     @media only screen and (max-width: 640px) {
         .book-header .hidden-mobile {
@@ -88,7 +104,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
     </script>
 
     </head>
@@ -1423,7 +1439,7 @@
 <pre class="language-"><code class="lang-java"><span class="token punctuation">{</span><span class="token string">&quot;(dpId)&quot;</span><span class="token operator">:</span><span class="token string">&quot;(dpValue)&quot;</span><span class="token punctuation">}</span>
 </code></pre>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span><span class="token class-name">String</span> nodeId<span class="token punctuation">,</span> <span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> dps<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span>String nodeId<span class="token punctuation">,</span> String pcc<span class="token punctuation">,</span> String dps<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1453,11 +1469,11 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> dps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;1&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token class-name">ITuyaBlueMeshDevice</span> mTuyaBlueMeshDevice<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">String dps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;1&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+ITuyaBlueMeshDevice mTuyaBlueMeshDevice<span class="token operator">=</span>TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getNodeId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> devBean<span class="token punctuation">.</span><span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dps<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String s<span class="token punctuation">,</span> String s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
@@ -1470,7 +1486,7 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
 <pre class="language-"><code class="lang-java"><span class="token punctuation">{</span><span class="token string">&quot;(dpId)&quot;</span><span class="token operator">:</span><span class="token string">&quot;(dpValue)&quot;</span><span class="token punctuation">}</span>
 </code></pre>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">multicastDps</span><span class="token punctuation">(</span><span class="token class-name">String</span> localId<span class="token punctuation">,</span> <span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> dps<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">multicastDps</span><span class="token punctuation">(</span>String localId<span class="token punctuation">,</span> String pcc<span class="token punctuation">,</span> String dps<span class="token punctuation">,</span> IResultCallback callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1500,11 +1516,11 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> dps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;1&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token class-name">ITuyaBlueMeshDevice</span> mTuyaBlueMeshDevice<span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">String dps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;1&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+ITuyaBlueMeshDevice mTuyaBlueMeshDevice<span class="token operator">=</span> TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">multicastDps</span><span class="token punctuation">(</span>groupBean<span class="token punctuation">.</span><span class="token function">getLocalId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> devBean<span class="token punctuation">.</span><span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dps<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>
 
             <span class="token annotation punctuation">@Override</span>
@@ -1518,16 +1534,16 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
 <pre class="language-"><code class="lang-java">mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">registerMeshDevListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IMeshDevListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
  <span class="token annotation punctuation">@Override</span>
- <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> nodeId<span class="token punctuation">,</span> <span class="token class-name">String</span> dps<span class="token punctuation">,</span><span class="token keyword">boolean</span> isFromLocal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token class-name">DeviceBean</span> deviceBean <span class="token operator">=</span> mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">getMeshSubDevBeanByNodeId</span><span class="token punctuation">(</span>nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span>String nodeId<span class="token punctuation">,</span> String dps<span class="token punctuation">,</span><span class="token keyword">boolean</span> isFromLocal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     DeviceBean deviceBean <span class="token operator">=</span> mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">getMeshSubDevBeanByNodeId</span><span class="token punctuation">(</span>nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
  <span class="token punctuation">}</span>
 
  <span class="token annotation punctuation">@Override</span>
- <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> online<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> offline<span class="token punctuation">,</span><span class="token class-name">String</span> gwId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span>List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> online<span class="token punctuation">,</span> List<span class="token generics function"><span class="token punctuation">&lt;</span>String<span class="token punctuation">&gt;</span></span> offline<span class="token punctuation">,</span>String gwId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
 
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNetworkStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNetworkStatusChanged</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
 <span class="token punctuation">}</span>
 
@@ -1537,17 +1553,17 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
 <span class="token punctuation">}</span>
 
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDevInfoUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDevInfoUpdate</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span>
 
 <span class="token annotation punctuation">@Override</span>
-<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRemoved</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRemoved</span><span class="token punctuation">(</span>String devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="create-group"><a name="create-group" class="anchor-navigation-ex-anchor" href="#create-group"><i class="fa fa-link" aria-hidden="true"></i></a><a name="create-group" class="plugin-anchor" href="#create-group"><i class="fa fa-link" aria-hidden="true"></i></a>Create Group</h2>
 <p>Mesh can create 28672 groups, id in [8000 ~ EFFF]  (Hexadecimal)  and locally maintained.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> localId<span class="token punctuation">,</span><span class="token class-name">IAddGroupCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addGroup</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> String pcc<span class="token punctuation">,</span> String localId<span class="token punctuation">,</span>IAddGroupCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1579,7 +1595,7 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java">mITuyaBlueMesh<span class="token punctuation">.</span><span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token string">&quot;group name&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;device size&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;8001&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IAddGroupCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token punctuation">}</span>   
 
             <span class="token annotation punctuation">@Override</span>
@@ -1631,7 +1647,7 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Control","level":"1.20.7","depth":2,"next":{"title":"Firmware Upgrade","level":"1.20.8","depth":2,"path":"resource/Mesh_OTA.md","ref":"./resource/Mesh_OTA.md","articles":[]},"previous":{"title":"Group","level":"1.20.6","depth":2,"path":"resource/Mesh_Group_Operate.md","ref":"./resource/Mesh_Group_Operate.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh_Device_Operate.md","mtime":"2020-03-19T12:42:11.294Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Control","level":"1.20.7","depth":2,"next":{"title":"Firmware Upgrade","level":"1.20.8","depth":2,"path":"resource/Mesh_OTA.md","ref":"./resource/Mesh_OTA.md","articles":[]},"previous":{"title":"Group","level":"1.20.6","depth":2,"path":"resource/Mesh_Group_Operate.md","ref":"./resource/Mesh_Group_Operate.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Mesh_Device_Operate.md","mtime":"2020-03-19T12:42:11.294Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T10:47:05.456Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1669,6 +1685,14 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
         
     
         
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
@@ -1686,6 +1710,10 @@ mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token fu
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

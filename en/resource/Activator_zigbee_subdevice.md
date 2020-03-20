@@ -51,9 +51,9 @@ TuyaGwSubDevActivatorBuilder builder = new TuyaGwSubDevActivatorBuilder()
             }
         ));
 ```
-**Parameter Description**
+**Parameters**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | mDevId           | Setting the gateway ID |
 | timeout         | Setting the time-out period for network configuration |

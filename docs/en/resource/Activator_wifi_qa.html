@@ -37,6 +37,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -66,6 +74,7 @@
     
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,6 +89,13 @@
     <link rel="prev" href="Activator_wifi_ap.html" />
     
 
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
     <style>
     @media only screen and (max-width: 640px) {
         .book-header .hidden-mobile {
@@ -88,7 +104,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
     </script>
 
     </head>
@@ -1419,11 +1435,11 @@
                                 <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#summary-of-problems-for-wi-fi-configuration"><b></b>Summary of Problems for Wi-Fi Configuration</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="summary-of-problems-for-wi-fi-configuration"><a name="summary-of-problems-for-wi-fi-configuration" class="anchor-navigation-ex-anchor" href="#summary-of-problems-for-wi-fi-configuration"><i class="fa fa-link" aria-hidden="true"></i></a><a name="summary-of-problems-for-wi-fi-configuration" class="plugin-anchor" href="#summary-of-problems-for-wi-fi-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>Summary of Problems for Wi-Fi Configuration</h3>
 <p>Timeout in network configuration. The device cannot be connected to the network. The causes may be:</p>
 <ul>
-<li>The obtained WiFi Ssid is incorrect. The ssid obtained in the Android system usually has &#x201C;&#x201D; in the front or back of it.  It is recommended to use the WiFiUtil.getCurrentSSID() in the Tuya Sdk to obtain the WiFi Ssid. </li>
-<li>The WiFi password has space. User may accidentally enter the space because of the predictive typing function. It is recommended that users enable the displaying password option when entering password. Or prop-up windows shall be displayed if the password entered includes spaces. </li>
-<li>Users have not entered the WiFi password. User may forget to enter the password when they use the smart device for the first time. It is recommended that prop-up windows be displayed if no password is entered and the WiFi encryption type is not set to NONE.</li>
+<li>The obtained Wi-Fi Ssid is incorrect. The ssid obtained in the Android system usually has &#x201C;&#x201D; in the front or back of it.  It is recommended to use the WiFiUtil.getCurrentSSID() in the Tuya Sdk to obtain the Wi-Fi Ssid. </li>
+<li>The Wi-Fi password has space. User may accidentally enter the space because of the predictive typing function. It is recommended that users enable the displaying password option when entering password. Or prop-up windows shall be displayed if the password entered includes spaces. </li>
+<li>Users have not entered the Wi-Fi password. User may forget to enter the password when they use the smart device for the first time. It is recommended that prop-up windows be displayed if no password is entered and the Wi-Fi encryption type is not set to NONE.</li>
 <li>Users select the hotspot name of device in the AP mode network configuration. This problem is prevalent when users use the smart device for the first time. It is recommended that prop-up windows be displayed if users selected the hotspot name of devices in the AP mode network configuration. </li>
-<li>The Ssid of the obtained WiFi is &#x201C;0x&#x201D; and <unknown ssid="">. Currently, this problem may occur in Chinese mobile phones, and this problem is not caused by WiFi but the permission to locate. It is recommended that user enter the Ssid of WiFi manually or the prop-up windows be displayed to ask users to authorize permissions.</unknown></li>
+<li>The Ssid of the obtained Wi-Fi is &#x201C;0x&#x201D; and <unknown ssid="">. Currently, this problem may occur in Chinese mobile phones, and this problem is not caused by Wi-Fi but the permission to locate. It is recommended that user enter the Ssid of Wi-Fi manually or the prop-up windows be displayed to ask users to authorize permissions.</unknown></li>
 </ul>
 <p>Timeout in network configuration, but the device has been successfully activated. The possible cause is:</p>
 <ul>
@@ -1472,7 +1488,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Wi-Fi Common Problem","level":"1.6.3","depth":2,"next":{"title":"ZigBee Configuration","level":"1.7","depth":1,"path":"resource/Activator_zigbee.md","ref":"./resource/Activator_zigbee.md","articles":[{"title":"ZigBee Gateway Configuration","level":"1.7.1","depth":2,"path":"resource/Activator_zigbee_gateway.md","ref":"resource/Activator_zigbee_gateway.md","articles":[]},{"title":"ZigBee Sub-device Configuration","level":"1.7.2","depth":2,"path":"resource/Activator_zigbee_subdevice.md","ref":"resource/Activator_zigbee_subdevice.md","articles":[]}]},"previous":{"title":"AP Mode Configuration","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"resource/Activator_wifi_ap.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_wifi_qa.md","mtime":"2020-03-19T14:06:07.268Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Wi-Fi Common Problem","level":"1.6.3","depth":2,"next":{"title":"ZigBee Configuration","level":"1.7","depth":1,"path":"resource/Activator_zigbee.md","ref":"./resource/Activator_zigbee.md","articles":[{"title":"ZigBee Gateway Configuration","level":"1.7.1","depth":2,"path":"resource/Activator_zigbee_gateway.md","ref":"resource/Activator_zigbee_gateway.md","articles":[]},{"title":"ZigBee Sub-device Configuration","level":"1.7.2","depth":2,"path":"resource/Activator_zigbee_subdevice.md","ref":"resource/Activator_zigbee_subdevice.md","articles":[]}]},"previous":{"title":"AP Mode Configuration","level":"1.6.2","depth":2,"path":"resource/Activator_wifi_ap.md","ref":"resource/Activator_wifi_ap.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_wifi_qa.md","mtime":"2020-03-20T06:27:31.834Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T10:47:05.456Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1510,6 +1526,14 @@
         
     
         
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
@@ -1527,6 +1551,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

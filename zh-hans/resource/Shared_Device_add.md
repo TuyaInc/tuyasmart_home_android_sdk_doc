@@ -62,7 +62,7 @@ void addShareWithMemberId (memberId, devIds, new IResultCallback() {
 
 ## 单个设备取消共享
 
-通过用户关系id取消单个设备分享。
+通过用户关系 id 取消单个设备分享。
 
 **接口说明**
 
@@ -83,9 +83,13 @@ void disableDevShare(String devId, long memberId, IResultCallback callback);
 ```java
 void disableDevShare (devId, memberId, new IResultCallback() {
     @Override
-    public void onError(String code, String error) {}
+    public void onError(String code, String error) {
+      
+    }
     @Override
-    public void onSuccess() {}
+    public void onSuccess() {
+      
+    }
 });
 ```
 
@@ -112,8 +116,12 @@ void enableDevShare(String devId, long memberId, IResultCallback callback);
 ```java
 void enableDevShare (devId, memberId, new IResultCallback() {
     @Override
-    public void onError(String code, String error) {}
+    public void onError(String code, String error) {
+      
+    }
     @Override
-    public void onSuccess() {}
+    public void onSuccess() {
+      
+    }
 });
 ```

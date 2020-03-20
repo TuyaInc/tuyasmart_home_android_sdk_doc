@@ -7,10 +7,12 @@
     "splitter",
     "github",
     "github-buttons",
-    "-sharing",
     "anchor-navigation-ex",
     "alerts",
-    "ga"
+    "ga",
+    "expandable-chapters-small",
+    "favicon",
+    "pageview-count"
   ],
   "pluginsConfig": {
     "prism": {
@@ -33,18 +35,35 @@
         "repo": "tuyasmart_home_android_sdk",
         "type": "star",
         "size": "small"
+      },{
+        "user": "TuyaInc",
+        "repo": "tuyasmart_home_android_sdk",
+        "type": "watch",
+        "size": "small"
+      },{
+        "user": "TuyaInc",
+        "type": "follow",
+        "size": "small",
+        "count": true
       }]
     },
     "sharing": {
-      "all": []
+      "facebook": true,
+      "google": true,
+      "twitter": true,
+      "weibo": true,
+      "all": ["facebook", "google", "twitter", "weibo"]
     },
     "anchor-navigation-ex": {
       "showLevel": false,
       "associatedWithSummary": false,
-      "showGoTop": true    
+      "showGoTop": true
     },
     "ga": {
-        "token": "UA-161421048-1"
-    }
+      "token": "UA-161421048-1"
+    },
+    "favicon": {
+            "shortcut": "zh-hans/resource/images/bitbug_favicon.ico"
+        }
   }
 }

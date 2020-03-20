@@ -38,12 +38,12 @@ List<DeviceBean> deviceList = homeBean.getDeviceList();
 
 | 字段|类型|描述|
 | :--| :--| :--|
-| devId |String|设备唯一标示id|
+| devId |String|设备唯一标示 id|
 | name |String|设备名称|
 | iconUrl |String|图标地址|
 | isOnline |Boolean|设备是否在线（局域网或者云端在线）|
 | schema |String|设备控制数据点的类型信息|
-| productId |String|产品ID，同一个产品ID，Schema信息一致|
+| productId |String|产品ID，同一个产品 ID，Schema 信息一致|
 | supportGroup |Boolean|设备是否支持群组，如果不支持请到开放平台开启此项功能|
 | time | Long |设备激活时间|
 | pv | String |网关协议版本|
@@ -57,7 +57,7 @@ List<DeviceBean> deviceList = homeBean.getDeviceList();
 | nodeId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其短地址 ID，一个网关下面的 nodeId 都唯一的|
 | timezoneId |String|设备时区|
 | category | String |设备类型|
-| meshId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其网关ID|
+| meshId |String|用于网关和子设备类型的设备，属于子设备的一个属性，标识其网关 ID|
 | isZigBeeWifi |boolean|是否是 ZigBee 网关设备|
 | hasZigBee |boolean|hasZigBee|
 
@@ -262,11 +262,15 @@ mDevice.publishDps("{\"101\": true}", new IControlCallback() {
 ```
 
 
-> 注意事项
+> **[warning] 注意事项**
 >
 > * 指令下发成功并不是指设备真正操作成功，只是意味着指令成功发送出去。操作成功会有 dp 数据信息上报上来 ，且通过 `IDevListener onDpUpdate` 接口返回。
-> * command 命令字符串 是以 `Map<String,Object>`(dpId和dpValue键值对)数据格式转成 json 字符串。
+>
+> * command 命令字符串 是以 `Map<String,Object>`(dpId 和 dpValue 键值对)数据格式转成 json 字符串。
+>
 > * command 命令可以一次发送多个 dp 数据。
+>
+> 	
 
 ## 设备功能点说明
 
@@ -319,14 +323,16 @@ mDevice.publishDps(dps, new IControlCallback() {
     });
 ```
 
-注意事项
-
- * 控制命令的发送需要特别注意数据类型.
-
-		比如功能点的数据类型是数值型（ value ），那控制命令发送的应该是 `{"104": 25}`  而不是  `{"104": "25"}`
- * 透传类型传输的 byte 数组是 16 进制字符串格式并且必须是偶数位。
-
-		比如正确的格式是: `{"105": "0110"}` 而不是 `{"105": "110"}`
+> **[warning] 注意事项**
+>
+> * 控制命令的发送需要特别注意数据类型.
+>
+> 	比如功能点的数据类型是数值型（ value ），那控制命令发送的应该是 `{"104": 25}`  而不是  `{"104": "25"}`
+>
+> * 透传类型传输的 byte 数组是 16 进制字符串格式并且必须是偶数位
+>  比如正确的格式是: `{"105": "0110"}` 而不是 `{"105": "110"}`
+> 
+  
 
 ## 设备信息查询
 
@@ -357,7 +363,7 @@ mDevice.getDp(dpId, new IResultCallback() {
 ```
 
 
-> 注意事项
+> **[warning] 注意事项**
 >
 > 该接口主要是针对那些数据不主动去上报的 dp 点。 常规查询 dp 数据值可以通过 DeviceBean 里面 getDps() 去获取。
 

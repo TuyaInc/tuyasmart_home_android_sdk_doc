@@ -37,6 +37,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -66,6 +74,7 @@
     
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,6 +89,13 @@
     <link rel="prev" href="Preparation.html" />
     
 
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
     <style>
     @media only screen and (max-width: 640px) {
         .book-header .hidden-mobile {
@@ -88,7 +104,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
     </script>
 
     </head>
@@ -1492,26 +1508,26 @@ repositories <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p><strong>Note:</strong></p>
 <p>The appId and appSecret need to be configured in the AndroidManifest.xml file or the build environment or the codes. </p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">Application</span> application<span class="token punctuation">,</span> <span class="token class-name">String</span> appkey<span class="token punctuation">,</span> <span class="token class-name">String</span> appSerect<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>Application application<span class="token punctuation">,</span> String appkey<span class="token punctuation">,</span> String appSerect<span class="token punctuation">)</span>
 </code></pre>
 <h3 id="logout-of-the-tuya-smart-cloud-connection"><a name="logout-of-the-tuya-smart-cloud-connection" class="anchor-navigation-ex-anchor" href="#logout-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a><a name="logout-of-the-tuya-smart-cloud-connection" class="plugin-anchor" href="#logout-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a>Logout of the Tuya Smart Cloud connection</h3>
 <p>The following interface needs to be invoked to log out of the App. </p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="monitor-the-invalidity-of-registered-session"><a name="monitor-the-invalidity-of-registered-session" class="anchor-navigation-ex-anchor" href="#monitor-the-invalidity-of-registered-session"><i class="fa fa-link" aria-hidden="true"></i></a><a name="monitor-the-invalidity-of-registered-session" class="plugin-anchor" href="#monitor-the-invalidity-of-registered-session"><i class="fa fa-link" aria-hidden="true"></i></a>Monitor the invalidity of registered session</h3>
 <p><strong>Description</strong></p>
 <p>Because of abnormality or long-time absence of operation for 45 or more days, the session will become invalid, and user has to log out of the App and log in again to obtain the session. </p>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token comment">// Monitor the invalidity of session.</span>
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token class-name">INeedLoginListener</span> needLoginListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span>INeedLoginListener needLoginListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-needLoginListener<span class="token punctuation">.</span><span class="token function">onNeedLogin</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+needLoginListener<span class="token punctuation">.</span><span class="token function">onNeedLogin</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TuyaSmartApp</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
@@ -1520,9 +1536,9 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment">// Register in the App.</span>
-                <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">INeedLoginListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">INeedLoginListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
                <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNeedLogin</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNeedLogin</span><span class="token punctuation">(</span>Context context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
                 <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1535,7 +1551,7 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
 </blockquote>
 <h3 id="debug-mode"><a name="debug-mode" class="anchor-navigation-ex-anchor" href="#debug-mode"><i class="fa fa-link" aria-hidden="true"></i></a><a name="debug-mode" class="plugin-anchor" href="#debug-mode"><i class="fa fa-link" aria-hidden="true"></i></a>Debug mode</h3>
 <p>In the debug mode, you can enable the sdk log switch to view more log information and help you locate the problem quickly. It is recommended to turn off the log switch in release mode.</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setDebugMode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">setDebugMode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 
                                 
@@ -1580,7 +1596,7 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.3","depth":1,"next":{"title":"User Management","level":"1.4","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"Migration from 1.x SDK","level":"1.4.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.4.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.4.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Modify User Information","level":"1.4.6","depth":2,"path":"resource/User_update.md","ref":"./resource/User_update.md","articles":[]},{"title":"Sign Out","level":"1.4.7","depth":2,"anchor":"#logout-interface","path":"resource/User_logout.md","ref":"./resource/User_logout.md#logout-interface","articles":[]},{"title":"Disable Account","level":"1.4.8","depth":2,"anchor":"#disable-account","path":"resource/User_logout.md","ref":"./resource/User_logout.md#disable-account","articles":[]},{"title":"Data Model","level":"1.4.9","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]},{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]}]},"previous":{"title":"Preparation for Integration","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Integrated.md","mtime":"2020-03-20T03:42:46.128Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.3","depth":1,"next":{"title":"User Management","level":"1.4","depth":1,"path":"resource/User.md","ref":"./resource/User.md","articles":[{"title":"Migration from 1.x SDK","level":"1.4.1","depth":2,"path":"resource/User_Sdk_Update.md","ref":"./resource/User_Sdk_Update.md","articles":[]},{"title":"Use Mobile Phone","level":"1.4.2","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},{"title":"Use Email","level":"1.4.3","depth":2,"path":"resource/User_email.md","ref":"./resource/User_email.md","articles":[]},{"title":"User Uid Login System","level":"1.4.4","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},{"title":"Third Party Login","level":"1.4.5","depth":2,"path":"resource/User_Third_Login.md","ref":"./resource/User_Third_Login.md","articles":[]},{"title":"Modify User Information","level":"1.4.6","depth":2,"path":"resource/User_update.md","ref":"./resource/User_update.md","articles":[]},{"title":"Sign Out","level":"1.4.7","depth":2,"anchor":"#logout-interface","path":"resource/User_logout.md","ref":"./resource/User_logout.md#logout-interface","articles":[]},{"title":"Disable Account","level":"1.4.8","depth":2,"anchor":"#disable-account","path":"resource/User_logout.md","ref":"./resource/User_logout.md#disable-account","articles":[]},{"title":"Data Model","level":"1.4.9","depth":2,"path":"resource/User_Data_Model.md","ref":"./resource/User_Data_Model.md","articles":[]},{"title":"Handling of Expired Session","level":"1.4.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]}]},"previous":{"title":"Preparation for Integration","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Integrated.md","mtime":"2020-03-20T03:42:46.128Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T10:47:05.456Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1618,6 +1634,14 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
         
     
         
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
@@ -1635,6 +1659,10 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -63,7 +63,7 @@ TuyaQRCodeActivatorBuilder builder = new TuyaQRCodeActivatorBuilder()
 ```
 **Parameter Description**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | uuid            | UUID of the device, which can be obtained by scanning the QR code of the device |
 | homeId          | Family ID, please refer to the family management section for details |

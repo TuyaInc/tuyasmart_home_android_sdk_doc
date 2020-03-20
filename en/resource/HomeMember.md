@@ -2,7 +2,7 @@
 
 **MemberBean Field Information**
 
-| field | type | describe |
+| Field | Type | Description |
 | --- | --- | --- |
 | homeId | long  | Unique id of Home |
 | nickName | String |The member nickName  |

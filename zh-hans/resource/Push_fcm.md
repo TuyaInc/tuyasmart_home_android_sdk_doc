@@ -6,7 +6,9 @@
 
 请将参照文档 [**FCM注册流程**](https://docs.tuya.com/docDetail?code=K8uhkijtdvosi) 将 Sender ID、Server Key、google-services.json 文件配置到 iot 平台的“ App 工作台”-“APP SDK”  对应应用的配置的 "Push（谷歌）"中。
 
-> ⚠️：请复制内容填写到对应的输入框中，不要配置错误，或者将 Sender ID、Server Key 配置反了
+> [warning] 注意事项
+>
+> 请复制内容填写到对应的输入框中，不要配置错误，或者将 Sender ID、Server Key 配置反了
 
 ![](images/push_fcm_iot_cn.png)
 

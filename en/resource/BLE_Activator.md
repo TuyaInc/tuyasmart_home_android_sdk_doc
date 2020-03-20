@@ -141,8 +141,8 @@ void startBleConfig(long homeId, String devUuid, Map<String, Object> params, ITu
 
 ```java
  Map<String, Object> param = new HashMap<>();
-  param.put("ssid", "Tuya-Wifi-2.4G"); //wifi ssid
-  param.put("password", "12345678"); //wifi pwd
+  param.put("ssid", "Tuya-Wi-Fi-2.4G"); //Wi-Fi ssid
+  param.put("password", "12345678"); //Wi-Fi pwd
   param.put("token", "xxxxxxxxxxxxx"); // user token
 TuyaHomeSdk.getBleManager().startBleConfig(123456, "xyz12345678", param, new ITuyaBleConfigListener() {
             @Override
@@ -187,7 +187,7 @@ TuyaHomeSdk.getBleManager().stopBleConfig("xyz12345678");
 |--|--|
 |1|Format of the packet received by the device is incorrect |
 |2|The device cannot find the router|
-|3|Wifi password error|
+|3|Wi-Fi password error|
 |4|Device cannot connect to router|
 |5|Device DHCP failed|
 |6|The device fails to connect to the cloud|

@@ -53,9 +53,9 @@ ActivatorBuilder builder = new ActivatorBuilder()
             }
         ));
 ```
-**Parameter Description**
+**Parameters**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | token           | Activation key required for Configuration |
 | context         | context |
@@ -85,9 +85,9 @@ TuyaHomeSdk.getActivatorInstance().getActivatorToken(homeId,
             }
         });
 ```
-**Parameter Description**
+**Parameters**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | homeId          | Family ID, please refer to the family management section for details |
 

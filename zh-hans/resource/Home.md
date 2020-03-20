@@ -1,4 +1,4 @@
-### 家庭管理
+# 家庭管理
 
 获取家庭列表，家庭管理，家庭下面的房间和设备管理以及信息监听等
 
@@ -20,7 +20,7 @@
 | sharedGroupList | List&lt;GroupBean&gt; |收到的共享群组|
 | homeStatus | int | 家庭状态（1:等待接受 2:接受 3:拒绝）|
 
-#### 获取本地缓存中的数据信息
+## 获取本地缓存中的数据信息
 
 **接口说明**
 
@@ -49,7 +49,7 @@ TuyaHomeSdk.newHomeInstance(10000).getHomeLocalCache(new ITuyaHomeResultCallback
     });
 ```
 
-#### 更新家庭信息
+## 更新家庭信息
 
 **接口说明**
 
@@ -82,7 +82,7 @@ TuyaHomeSdk.newHomeInstance(10000).updateHome(name, lon, lat, geoName, new IResu
     });
 ```
 
-#### 更新家庭信息
+## 更新家庭信息
 
 **接口说明**
 
@@ -117,7 +117,7 @@ TuyaHomeSdk.newHomeInstance(10000).updateHome(name, lon, lat, geoName, rooms, ov
     });
 ```
 
-#### 解散家庭
+## 解散家庭
 
 **接口说明**
 
@@ -146,7 +146,7 @@ TuyaHomeSdk.newHomeInstance(10000).dismissHome(new IResultCallback() {
     });
 ```
 
-#### 获取家庭列表
+## 获取家庭列表
 
 获取家庭下的所有数据，包括设备、群组、房间等
 
@@ -177,7 +177,7 @@ TuyaHomeSdk.newHomeInstance(10000).getHomeDetail(new ITuyaHomeResultCallback() {
     });
 ```
 
-#### 家庭排序
+## 家庭排序
 
 **接口说明**
 
@@ -207,7 +207,7 @@ TuyaHomeSdk.newHomeInstance(10000).sortHome(idList, new IResultCallback() {
     });
 ```
 
-#### 添加房间
+## 添加房间
 
 **接口说明**
 
@@ -237,7 +237,7 @@ TuyaHomeSdk.newHomeInstance(10000).addRoom("房间名称", new ITuyaRoomResultCa
     });
 ```
 
-#### 移除房间
+## 移除房间
 
 **接口说明**
 
@@ -267,7 +267,7 @@ TuyaHomeSdk.newHomeInstance(10000).removeRoom(roomId, new IResultCallback() {
     });
 ```
 
-#### 排序房间
+## 排序房间
 
 **接口说明**
 
@@ -297,7 +297,7 @@ TuyaHomeSdk.newHomeInstance(10000).sortRoom(idList, new IResultCallback() {
     });
 ```
 
-#### 查询房间列表
+## 查询房间列表
 
 **接口说明**
 
@@ -326,7 +326,7 @@ TuyaHomeSdk.newHomeInstance(10000).queryRoomList(new ITuyaGetRoomListCallback() 
     });
 ```
 
-#### 获取家庭实例的信息
+## 获取家庭实例的信息
 
 **接口说明**
 
@@ -340,7 +340,7 @@ HomeBean getHomeBean()
 TuyaHomeSdk.newHomeInstance(10000).getHomeBean();
 ```
 
-#### 创建群组
+## 创建群组
 
 **接口说明**
 
@@ -372,7 +372,7 @@ TuyaHomeSdk.newHomeInstance(10000).createGroup(productId, name, devIdList, new I
     });
 ```
 
-#### 根据设备查询房间信息
+## 根据设备查询房间信息
 
 **接口说明**
 
@@ -392,7 +392,7 @@ List<RoomBean> queryRoomInfoByDevice(List<DeviceBean> deviceList)
 TuyaHomeSdk.newHomeInstance(10000).queryRoomInfoByDevice(deviceList);
 ```
 
-#### 监听家庭下面信息变更的监听
+## 监听家庭下面信息变更的监听
 
 **接口说明**
 
@@ -433,7 +433,7 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(new ITuyaHomeStatu
     });
 ```
 
-#### 注销家庭下面信息变更的监听
+## 注销家庭下面信息变更的监听
 
 **接口说明**
 
@@ -474,7 +474,7 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(new ITuyaHomeSta
     });
 ```
 
-#### 监听家庭下面设备信息变更的监听
+## 监听家庭下面设备信息变更的监听
 
 **接口说明**
 
@@ -507,7 +507,7 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(new ITuyaHom
     });
 ```
 
-#### 注销家庭下面设备信息变更的监听
+## 注销家庭下面设备信息变更的监听
 
 **接口说明**
 
@@ -540,7 +540,7 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(new ITuyaH
     });
 ```
 
-#### 创建蓝牙 Mesh
+## 创建蓝牙 Mesh
 
 **接口说明**
 
@@ -570,7 +570,7 @@ TuyaHomeSdk.newHomeInstance(10000).createBlueMesh(meshName, new ITuyaResultCallb
     });
 ```
 
-#### 创建蓝牙 Sig Mesh
+## 创建蓝牙 SigMesh
 
 **接口说明**
 
@@ -599,7 +599,7 @@ TuyaHomeSdk.newHomeInstance(10000).createSigMesh(new ITuyaResultCallback<SigMesh
     });
 ```
 
-#### 查询添加到群组的设备列表
+## 查询添加到群组的设备列表
 
 **接口说明**
 
@@ -630,7 +630,7 @@ TuyaHomeSdk.newHomeInstance(10000).queryDeviceListToAddGroup(groupId, productId,
     });
 ```
 
-#### 查询添加到群组的 Zigbee 设备列表
+## 查询添加到群组的 ZigBee 设备列表
 
 **接口说明**
 
@@ -662,7 +662,7 @@ TuyaHomeSdk.newHomeInstance(10000).queryZigbeeDeviceListToAddGroup(groupId, prod
     });
 ```
 
-#### 销毁
+## 销毁
 
 **接口说明**
 
@@ -676,7 +676,7 @@ void onDestroy()
 TuyaHomeSdk.newHomeInstance(10000).onDestroy();
 ```
 
-#### 创建 Zigbee 群组
+## 创建 Zigbee 群组
 
 **接口说明**
 
@@ -709,7 +709,7 @@ TuyaHomeSdk.newHomeInstance(10000).createZigbeeGroup(productId, parentId, parent
     });
 ```
 
-#### 创建 Zigbee 群组
+## 创建 Zigbee 群组
 
 **接口说明**
 
@@ -741,7 +741,7 @@ TuyaHomeSdk.newHomeInstance(10000).createZigbeeGroup(productId, parentId, name, 
     });
 ```
 
-#### 使用群组查询房间信息
+## 使用群组查询房间信息
 
 **接口说明**
 
@@ -761,7 +761,7 @@ List<RoomBean> queryRoomInfoByGroup(List<GroupBean> groupList)
 TuyaHomeSdk.newHomeInstance(10000).queryRoomInfoByGroup(groupList);
 ```
 
-#### 绑定新设备
+## 绑定新设备
 
 **接口说明**
 
@@ -791,7 +791,7 @@ TuyaHomeSdk.newHomeInstance(10000).bindNewConfigDevs(devIds, new IResultCallback
     });
 ```
 
-#### 注册产品告警监听
+## 注册产品告警监听
 
 **接口说明**
 
@@ -816,7 +816,7 @@ TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(new IWarningMsgLi
     });
 ```
 
-#### 取消注册产品告警监听
+## 取消注册产品告警监听
 
 **接口说明**
 
@@ -841,7 +841,7 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterProductWarnListener(new IWarningMsg
     });
 ```
 
-#### 对家庭里的群组或者设备进行排序
+## 对家庭里的群组或者设备进行排序
 
 **接口说明**
 
@@ -873,7 +873,7 @@ TuyaHomeSdk.newHomeInstance(10000).sortDevInHome(homeId, list, new IResultCallba
     });
 ```
 
-#### 监听设备更新状态
+## 监听设备更新状态
 
 **接口说明**
 

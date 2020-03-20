@@ -5,14 +5,14 @@
 ZigBee 子设备配网需要 ZigBee 网关设备云在线的情况下才能发起,且子设备处于配网状态。
 
 ```sequence
-Title: Zigbee 子设备激活
+Title: ZigBee 子设备激活
 
 participant APP
 participant SDK
 participant Zigbee 网关
 participant Service
 
-Note over Zigbee 网关: 将 Zigbee 子设备重置
+Note over Zigbee 网关: 将 ZigBee 子设备重置
 APP->SDK: 发送子设备激活指令
 SDK->Zigbee 网关: 发送子设备激活指令
 
@@ -55,8 +55,8 @@ TuyaGwSubDevActivatorBuilder builder = new TuyaGwSubDevActivatorBuilder()
 
 | 参数         | 说明 |
 | ------------ | -------------------------- |
-| mDevId          | 设置网关ID |
-| timeout         | 配网的超时时间设置，默认是100s ，单位是秒 |
+| mDevId          | 设置网关 ID |
+| timeout         | 配网的超时时间设置，默认是 100s ，单位是秒 |
 
 #### 配网方法调用
 

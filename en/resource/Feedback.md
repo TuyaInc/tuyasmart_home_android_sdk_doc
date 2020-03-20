@@ -39,7 +39,7 @@ void setPushStatus(boolean isOpen, ITuyaDataCallback<Boolean> callback);
 
 **Parameters**
 
-| parameters    | description                       |
+| Parameters    | description                       |
 | -------- | --------------------------- |
 | isOpen   | Whether to open                    |
 | callback | Callbacks, including setting success and failure             |
@@ -67,7 +67,7 @@ void getPushStatusByType(PushType type, ITuyaDataCallback<Boolean> callback);
 
 **Parameters**
 
-| parameters     | description                     |
+| Parameters     | description                     |
 | -------- | ------------------------ |
 | type     | Message type                |
 | callback | Callbacks, including success and failure |
@@ -95,7 +95,7 @@ void setPushStatusByType(PushType type, isOpen, ITuyaDataCallback<Boolean> callb
 
 **Parameter**
 
-| parameters     | description                     |
+| Parameters     | description                     |
 | -------- | ------------------------ |
 | type     | Message type                 |
 | isOpen     | Whether to open                 |

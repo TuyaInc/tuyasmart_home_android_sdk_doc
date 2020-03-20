@@ -16,7 +16,7 @@ void requestUpgradeInfo(String devId, IRequestUpgradeInfoCallback callback);
 
 **Parameters**
 
-|param|type|description|
+| Parameters |type|description|
 |--|--|--|
 |devId|String|devId|
 |callback|IRequestUpgradeInfoCallback|callback|
@@ -38,7 +38,7 @@ TuyaHomeSdk.getMeshInstance().requestUpgradeInfo(mDevID, new IRequestUpgradeInfo
 
 `BLEUpgradeBean`  data model
 
-|param|type|description|
+| Parameters |type|description|
 |------|------|-------|
 |upgradeStatus|int|0: No new version 1: New version available 2: In upgrade|
 |version| String|Latest version|
@@ -64,7 +64,7 @@ void startBleOta(String uuid, int type, String version, String binPackagePath, O
 
 **Parameters**
 
-|param|type|description|
+| Parameters |type|description|
 |--|--|--|
 |uuid|String| `deviceBean.getUuid()`|
 |type|int|0: means `BLEUpgradeBean.type` = 1; 1: means` BLEUpgradeBean.type` = 9|

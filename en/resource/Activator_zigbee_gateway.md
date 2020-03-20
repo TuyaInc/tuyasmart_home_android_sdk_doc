@@ -5,7 +5,7 @@
 The ZigBee Gateway distribution network here refers to the ZigBee Wired Gateway.
 Before the ZigBee Gateway is configured, please ensure that the ZigBee Gateway device is connected to the router on the network, and the ZigBee gateway device is in the network configuration state.
 
-Please use WiFi Configuration for ZigBee Wireless Gateway
+Please use Wi-Fi Configuration for ZigBee Wireless Gateway
 
 ```sequence
 Title: Zigbee Gateway Configuration
@@ -62,9 +62,9 @@ ITuyaActivator mITuyaActivator = TuyaHomeSdk.getActivatorInstance().newGwActivat
             }
         ));    
 ```
-**Parameter Description**
+**Parameters**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | token           | Activation key required for Configuration |
 | timeout         | Configuration timeout, default setting is 100s, unit is second|
@@ -72,7 +72,7 @@ ITuyaActivator mITuyaActivator = TuyaHomeSdk.getActivatorInstance().newGwActivat
 
 **Get Network Configuration Token**
 
-Before the WiFi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
+Before the Wi-Fi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
 The term of validity of Token is 5 minutes, and the Token become invalid once the network configuration succeeds.
 A new Token has to be obtained if you have to reconfigure network.
 
@@ -91,9 +91,9 @@ TuyaHomeSdk.getActivatorInstance().getActivatorToken(homeId,
             }
         });
 ```
-**Parameter Description**
+**Parameters**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | homeId          | Family ID, please refer to the family management section for details |
 

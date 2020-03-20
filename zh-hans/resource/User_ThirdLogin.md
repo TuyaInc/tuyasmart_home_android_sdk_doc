@@ -13,12 +13,12 @@ TuyaHomeSdk.getUserInstance().loginByQQ(String countryCode, String userId, Strin
 
 **参数说明**
 
-| 参数        | 说明                        |
-| ----------- | --------------------------- |
-| countryCode | 国家区号,例如：86           |
-| userId      | QQ授权登录获取的userId      |
-| accessToken | QQ授权登录获取的accessToken |
-| callback    | 回调                        |
+| 参数        | 说明                         |
+| ----------- | ---------------------------- |
+| countryCode | 国家区号,例如：86            |
+| userId      | QQ授权登录获取的 userId      |
+| accessToken | QQ授权登录获取的 accessToken |
+| callback    | 回调                         |
 
 ## 微信登陆
 
@@ -30,11 +30,11 @@ TuyaHomeSdk.getUserInstance().loginByWechat(String countryCode, String code, ILo
 
 **参数说明**
 
-| 参数        | 说明                   |
-| ----------- | ---------------------- |
-| phoneCode | 手机区号,例如：86      |
-| code        | 微信授权登录获取的code |
-| callback    | 回调                   |
+| 参数      | 说明                    |
+| --------- | ----------------------- |
+| phoneCode | 手机区号,例如：86       |
+| code      | 微信授权登录获取的 code |
+| callback  | 回调                    |
 
 ## Facebook 登陆
 
@@ -47,7 +47,7 @@ TuyaHomeSdk.getUserInstance().loginByFacebook(String phoneCode, String token, IL
 
 **参数说明**
 
-| 参数        | 说明                        |
-| ----------- | --------------------------- |
-| countryCode | 手机区号,例如：86           |
-| token       | facebook授权登录获取的token |
+| 参数        | 说明                          |
+| ----------- | ----------------------------- |
+| countryCode | 手机区号,例如：86             |
+| token       | facebook 授权登录获取的 token |

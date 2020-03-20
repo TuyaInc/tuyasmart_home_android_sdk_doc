@@ -144,7 +144,7 @@ TuyaHomeSdk.getUserInstance().loginWithPhonePassword(String phoneCode, String ph
 
 **Parameters**
 
-| Parameter | Description |
+| Parameters | Description |
 | ----------- | ----------------- |
 | phoneCode | Mobile Area Code: Such as "86" |
 | phone | mobile number |
@@ -181,7 +181,7 @@ TuyaHomeSdk.getUserInstance().getValidateCode (String phoneCode, String phoneNum
 
 **Parameters**
 
-| Parameter | Description |
+| Parameters | Description |
 | ----------- | ----------------- |
 |phoneCode | Mobile Area Code: Such as "86" |
 | phoneNumber | mobile number |
@@ -196,7 +196,7 @@ TuyaHomeSdk.getUserInstance().resetPhonePassword (final String phoneCode, final 
 
 **Parameters**
 
-| Parameter | Description |
+| Parameters | Description |
 | ----------- | ----------------- |
 | phoneCode | Mobile Area Code: Such as "86" |
 | phone | mobile number |

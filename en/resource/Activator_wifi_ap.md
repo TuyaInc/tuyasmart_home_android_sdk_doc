@@ -19,7 +19,7 @@ APP->Device: Start network configuration (send configuration data), send configu
 APP-->Server: Use the token to poll the list of network activation devices every 2 seconds (the total duration is 100s by default)
 
 Note over Device: Device turns off hotspot automatically
-Note over Device: The device is connected to the WiFi of router
+Note over Device: The device is connected to the Wi-Fi of router
 
 Device->Service: Activate the device
 Service-->Device: Network configuration succeeds
@@ -57,14 +57,14 @@ ActivatorBuilder builder = new ActivatorBuilder()
             }
         ));
 ```
-**Parameter Description**
+**Parameters**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | token           | Activation key required for Configuration |
 | context         | context |
-| ssid            | WiFi ssid|
-| password        | WiFi password|
+| ssid            | Wi-Fi ssid|
+| password        | Wi-Fi password|
 | activatorModel  | Configuration Mode，AP Mode：ActivatorModelEnum.TY_AP |
 | timeout         | Configuration timeout, default setting is 100s, unit is second|
 
@@ -89,9 +89,9 @@ TuyaHomeSdk.getActivatorInstance().getActivatorToken(homeId,
             }
         });
 ```
-**Parameter Description**
+**Parameters**
 
-| Parameter         | Description |
+| Parameters         | Description |
 | ------------ | -------------------------- |
 | homeId          | Family ID, please refer to the family management section for details |
 

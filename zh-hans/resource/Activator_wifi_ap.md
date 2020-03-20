@@ -16,10 +16,10 @@ Note over APP: 连上设备的热点
 APP-->Device: 开始配网，发送配置信息 ssid/pwd/token
 
 Note over Device: 自动关闭热点
-Note over Device: 连上路由器 WiFi
+Note over Device: 连上路由器 Wi-Fi
 
 Note over APP: 自动重新连上路由器
-APP-->Server: 根据 token 2秒钟轮询一次入网激活设备列表(总时长默认100s)
+APP-->Server: 根据 token 2 秒钟轮询一次入网激活设备列表(总时长默认 100s)
 
 Device-->Server: 去激活设备
 Server-->Device: 激活成功
@@ -63,10 +63,10 @@ ActivatorBuilder builder = new ActivatorBuilder()
 | ------------ | -------------------------- |
 | token           | 配网所需要的激活 key |
 | context         | 需要传入 activity 的 context |
-| ssid            | 配网之后，设备工作Wi-Fi的名称（家庭网络） |
-| password        | 配网之后，设备工作Wi-Fi的密码（家庭网络） |
+| ssid            | 配网之后，设备工作 Wi-Fi 的名称（家庭网络） |
+| password        | 配网之后，设备工作 Wi-Fi 的密码（家庭网络） |
 | activatorModel  | 配网模式，AP 模式请传入：ActivatorModelEnum.TY_AP |
-| timeout         | 配网的超时时间设置，默认是100s ，单位是秒|
+| timeout         | 配网的超时时间设置，默认是 100s ，单位是秒 |
 
 **获取配网 token**
 

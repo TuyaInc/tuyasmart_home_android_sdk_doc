@@ -37,6 +37,14 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -66,6 +74,7 @@
     
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,6 +89,13 @@
     <link rel="prev" href="BLE_Operator.html" />
     
 
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
     <style>
     @media only screen and (max-width: 640px) {
         .book-header .hidden-mobile {
@@ -88,7 +104,7 @@
     }
     </style>
     <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]};
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
     </script>
 
     </head>
@@ -1425,13 +1441,13 @@
 </ul>
 <h2 id="checking-firmware-information"><a name="checking-firmware-information" class="anchor-navigation-ex-anchor" href="#checking-firmware-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="checking-firmware-information" class="plugin-anchor" href="#checking-firmware-information"><i class="fa fa-link" aria-hidden="true"></i></a>Checking Firmware Information</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">IRequestUpgradeInfoCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span>String devId<span class="token punctuation">,</span> IRequestUpgradeInfoCallback callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
 <thead>
 <tr>
-<th>param</th>
+<th>Parameters</th>
 <th>type</th>
 <th>description</th>
 </tr>
@@ -1450,14 +1466,14 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getMeshInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span>mDevID<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IRequestUpgradeInfoCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getMeshInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestUpgradeInfo</span><span class="token punctuation">(</span>mDevID<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IRequestUpgradeInfoCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BLEUpgradeBean</span><span class="token punctuation">&gt;</span></span> bleUpgradeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span>ArrayList<span class="token generics function"><span class="token punctuation">&lt;</span>BLEUpgradeBean<span class="token punctuation">&gt;</span></span> bleUpgradeBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1465,7 +1481,7 @@
 <table>
 <thead>
 <tr>
-<th>param</th>
+<th>Parameters</th>
 <th>type</th>
 <th>description</th>
 </tr>
@@ -1531,13 +1547,13 @@
 <h2 id="ota-upgrade"><a name="ota-upgrade" class="anchor-navigation-ex-anchor" href="#ota-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ota-upgrade" class="plugin-anchor" href="#ota-upgrade"><i class="fa fa-link" aria-hidden="true"></i></a>OTA Upgrade</h2>
 <p>You need to download the  new firmware to the local, in the previous step, and then perform OTA upgrade.</p>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleOta</span><span class="token punctuation">(</span><span class="token class-name">String</span> uuid<span class="token punctuation">,</span> <span class="token keyword">int</span> type<span class="token punctuation">,</span> <span class="token class-name">String</span> version<span class="token punctuation">,</span> <span class="token class-name">String</span> binPackagePath<span class="token punctuation">,</span> <span class="token class-name">OnBleUpgradeListener</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">startBleOta</span><span class="token punctuation">(</span>String uuid<span class="token punctuation">,</span> <span class="token keyword">int</span> type<span class="token punctuation">,</span> String version<span class="token punctuation">,</span> String binPackagePath<span class="token punctuation">,</span> OnBleUpgradeListener listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
 <thead>
 <tr>
-<th>param</th>
+<th>Parameters</th>
 <th>type</th>
 <th>description</th>
 </tr>
@@ -1570,7 +1586,7 @@
 </tr>
 </tbody>
 </table>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleOta</span><span class="token punctuation">(</span>uuid<span class="token punctuation">,</span> type<span class="token punctuation">,</span> version<span class="token punctuation">,</span> binPackagePath<span class="token punctuation">,</span> <span class="token keyword">new</span>  <span class="token class-name">OnBleUpgradeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java">TuyaHomeSdk<span class="token punctuation">.</span><span class="token function">getBleManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startBleOta</span><span class="token punctuation">(</span>uuid<span class="token punctuation">,</span> type<span class="token punctuation">,</span> version<span class="token punctuation">,</span> binPackagePath<span class="token punctuation">,</span> <span class="token keyword">new</span>  <span class="token class-name">OnBleUpgradeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onUpgrade</span><span class="token punctuation">(</span><span class="token keyword">int</span> percent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
@@ -1582,7 +1598,7 @@
         <span class="token punctuation">}</span>
 
         <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFail</span><span class="token punctuation">(</span>String errorCode<span class="token punctuation">,</span> String errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1632,7 +1648,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"BLE OTA","level":"1.18.5","depth":2,"next":{"title":"Bluetooth Mesh (SIG)","level":"1.19","depth":1,"path":"resource/Mesh.md","ref":"./resource/Mesh.md","articles":[{"title":"Prepare","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},{"title":"Basic Notion","level":"1.19.2","depth":2,"path":"resource/SigMesh_IDEA.md","ref":"./resource/SigMesh_IDEA.md","articles":[]},{"title":"Management","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},{"title":"Configuration","level":"1.19.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},{"title":"Device","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},{"title":"Group","level":"1.19.6","depth":2,"path":"resource/SigMesh_Group_Operate.md","ref":"./resource/SigMesh_Group_Operate.md","articles":[]},{"title":"Control","level":"1.19.7","depth":2,"path":"resource/SigMesh_Device_Operate.md","ref":"./resource/SigMesh_Device_Operate.md","articles":[]},{"title":"Firmware Upgrade","level":"1.19.8","depth":2,"path":"resource/SigMesh_OTA.md","ref":"./resource/SigMesh_OTA.md","articles":[]}]},"previous":{"title":"BLE Device Function","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","-sharing","anchor-navigation-ex","alerts","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"}]},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_OTA.md","mtime":"2020-03-19T13:16:27.804Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T06:20:29.720Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"BLE OTA","level":"1.18.5","depth":2,"next":{"title":"Bluetooth Mesh (SIG)","level":"1.19","depth":1,"path":"resource/Mesh.md","ref":"./resource/Mesh.md","articles":[{"title":"Prepare","level":"1.19.1","depth":2,"path":"resource/SigMesh_Prepare.md","ref":"./resource/SigMesh_Prepare.md","articles":[]},{"title":"Basic Notion","level":"1.19.2","depth":2,"path":"resource/SigMesh_IDEA.md","ref":"./resource/SigMesh_IDEA.md","articles":[]},{"title":"Management","level":"1.19.3","depth":2,"path":"resource/SigMesh_Admin.md","ref":"./resource/SigMesh_Admin.md","articles":[]},{"title":"Configuration","level":"1.19.4","depth":2,"path":"resource/SigMesh_Config.md","ref":"./resource/SigMesh_Config.md","articles":[]},{"title":"Device","level":"1.19.5","depth":2,"path":"resource/SigMesh_Device.md","ref":"./resource/SigMesh_Device.md","articles":[]},{"title":"Group","level":"1.19.6","depth":2,"path":"resource/SigMesh_Group_Operate.md","ref":"./resource/SigMesh_Group_Operate.md","articles":[]},{"title":"Control","level":"1.19.7","depth":2,"path":"resource/SigMesh_Device_Operate.md","ref":"./resource/SigMesh_Device_Operate.md","articles":[]},{"title":"Firmware Upgrade","level":"1.19.8","depth":2,"path":"resource/SigMesh_OTA.md","ref":"./resource/SigMesh_OTA.md","articles":[]}]},"previous":{"title":"BLE Device Function","level":"1.18.4","depth":2,"path":"resource/BLE_Operator.md","ref":"./resource/BLE_Operator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/BLE_OTA.md","mtime":"2020-03-20T06:27:31.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-20T10:47:05.456Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1670,6 +1686,14 @@
         
     
         
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
@@ -1687,6 +1711,10 @@
     
         
         <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
