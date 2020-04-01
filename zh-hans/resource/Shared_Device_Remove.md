@@ -92,7 +92,7 @@ void disableDevShare(devId, memberId, new IResultCallback() {
 **接口说明**
 
 ```java
-void disableDevShare(String devId, long memberId, IResultCallback callback);
+void removeReceivedDevShare(String devId, IResultCallback callback);
 ```
 
 **参数说明**
@@ -100,16 +100,16 @@ void disableDevShare(String devId, long memberId, IResultCallback callback);
 | 参数     | 说明                                  |
 | -------- | ------------------------------------- |
 | devId    | 待删除的设备 id                        |
-| memberId | 待删除分享的用户 id                    |
 | callback | 回调，包括删除成功或失败，不能为 null |
 
 **示例代码**
 
 ```java
-void disableDevShare(devId, memberId, new IResultCallback() {
+TuyaHomeSdk.getDeviceShareInstance().removeReceivedDevShare(devId,new IResultCallback() {
     @Override
     public void onError(String code, String error) {}
     @Override
     public void onSuccess() {}
 })
+
 ```

@@ -92,7 +92,7 @@ The sharer deletes a shared device under the specified relationship user.
 **Declaration**
 
 ```java
-void disableDevShare(String devId, long memberId, IResultCallback callback);
+void removeReceivedDevShare(String devId, IResultCallback callback);
 ```
 
 **Parameters**
@@ -100,16 +100,16 @@ void disableDevShare(String devId, long memberId, IResultCallback callback);
 | Parameters     | Description                                  |
 | -------- | ------------------------------------- |
 | devId    | Device ID to be deleted                        |
-| memberId | User ID to be deleted                    |
 | callback | Callback, including delete success or failure, cannot be null |
 
 **Example**
 
 ```java
-void disableDevShare(devId, memberId, new IResultCallback() {
+TuyaHomeSdk.getDeviceShareInstance().removeReceivedDevShare(devId,new IResultCallback() {
     @Override
     public void onError(String code, String error) {}
     @Override
     public void onSuccess() {}
 })
+
 ```

@@ -10,7 +10,7 @@
 	implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
 	```
 
-![image-20200113142931719](images/image-20200113142931719.png)
+	![image-20200113142931719](images/image-20200113142931719.png)
 
 2. 移除 paho 库的混淆规则
 

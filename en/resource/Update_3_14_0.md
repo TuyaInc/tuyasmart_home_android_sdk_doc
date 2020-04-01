@@ -10,7 +10,7 @@ Update the version of the tuyasmart library to the version corresponding to 3.14
 	implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
 	```
 
-![image-20200113142931719](images/image-20200113142931719.png)
+	![image-20200113142931719](images/image-20200113142931719.png)
 
 2. Remove proguard rules from paho library
 

@@ -34,7 +34,6 @@ TuyaHomeSdk.newHomeInstance(homeId).createZigbeeGroup(productId, meshId, name,
         
             @Override
             public void onSuccess(CloudZigbeeGroupCreateBean cloudZigbeeGroupCreateBean) {
-                //输出结果
                 long mGroupId = cloudZigbeeGroupCreateBean.getGroupId();
                 String mGId = cloudZigbeeGroupCreateBean.getLocalId();
             }
@@ -66,12 +65,10 @@ mITuyaZigbeeGroup.addDeviceToGroup(meshId, selectedDeviceIds, gid,
             @Override
             public void onSuccess(ZigbeeGroupCreateResultBean zigbeeGroupCreateResultBean) {
                 if (zigbeeGroupCreateResultBean != null) {
-                    //新增设备成功的列表
                     if (zigbeeGroupCreateResultBean.getSuccess() != null && zigbeeGroupCreateResultBean.getSuccess().size() > 0) {
                         List<String> mAddSuccessDeviceIds = new ArrayList<>();
                         mAddSuccessDeviceIds.addAll(zigbeeGroupCreateResultBean.getSuccess());
                     }
-                    //新增设备失败的列表
                     if (zigbeeGroupCreateResultBean.getFailure() != null && zigbeeGroupCreateResultBean.getFailure().size() > 0) {
                         List<String>mAddFailDeviceIds = new ArrayList<>();
                         mAddFailDeviceIds.addAll(zigbeeGroupCreateResultBean.getFailure());
@@ -105,12 +102,10 @@ mITuyaZigbeeGroup.delDeviceToGroup(meshId, selectedDeviceIds, gid,
             @Override
             public void onSuccess(ZigbeeGroupCreateResultBean zigbeeGroupCreateResultBean) {
                 if (zigbeeGroupCreateResultBean != null) {
-                    //删除设备成功的列表
                     if (zigbeeGroupCreateResultBean.getSuccess() != null && zigbeeGroupCreateResultBean.getSuccess().size() > 0) {
                         List<String> mDelSuccessDeviceIds = new ArrayList<>();
                         mDelSuccessDeviceIds.addAll(zigbeeGroupCreateResultBean.getSuccess());
                     }
-                    //删除设备失败的列表
                     if (zigbeeGroupCreateResultBean.getFailure() != null && zigbeeGroupCreateResultBean.getFailure().size() > 0) {
                         List<String> mDelFailDeviceIds = new ArrayList<>();
                         mDelFailDeviceIds.addAll(zigbeeGroupCreateResultBean.getFailure());

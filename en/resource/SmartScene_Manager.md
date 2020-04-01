@@ -1,12 +1,12 @@
 # <span id ="Smart">Smart</span>
 
-Smart are divided into "one-click execution scenarios" and "automated scenarios", hereinafter referred to as "scenarios" and "automation", respectively.
+Smart are divided into "one-click execution scene" and "automated scene", hereinafter referred to as "scene" and "automation", respectively.
 
-Scenarios are user-added actions that are triggered manually; automation is that the user sets conditions and automatically executes the set actions when the conditions trigger.
+Scene is user-added actions that is triggered manually; automation is that the user sets conditions and automatically executes the set actions when the conditions trigger.
 
-Tuya Cloud supports users to set weather or equipment conditions according to actual life scenarios, and when the conditions are met, let one or more devices perform the corresponding tasks.
+Tuya Cloud supports users to set weather or equipment conditions according to actual life scene, and when the conditions are met, let one or more devices perform the corresponding tasks.
 
-| Scene management | Description | 
+| Scene Management | Description | 
 | -------------- | ---------- |
 |  TuyaHomeSdk.newSceneInstance(String sceneId)   |   Provides editing, deletion, and execution of a single scene, which needs to be initialized with the scene id. The scene id refers to the id field of SceneBean, which can be obtained from the return result of the [Get Scene List interface](#GetSceneList). |
 |TuyaHomeSdk.getSceneManagerInstance()| It mainly provides all the data related to the conditions, tasks, equipment, and cities in the scene, and the scene list data acquisition.|
