@@ -83,7 +83,7 @@ void addScanLinkTaskIds(String idJsonString);
 **接口说明**
 
 ```java
-void publishDps(String dps, IControlCallback callback);
+void publishDps(String dps, IResultCallback callback);
 ```
 
 **参数说明**
@@ -91,7 +91,7 @@ void publishDps(String dps, IControlCallback callback);
 | 参数|类型|说明|
 | ---- |--|--- |
 | dps |String|data points， 设备功能点，格式为 json 字符串|
-| callback|IControlCallback|发送控制指令是否成功的回调|
+| callback|IResultCallback|发送控制指令是否成功的回调|
 
 **示例代码**
 
@@ -99,7 +99,7 @@ void publishDps(String dps, IControlCallback callback);
 ```java
 HashMap<String, Object> hashMap = new HashMap<>();
 hashMap.put("101", true);
-mDevice.publishDps(JSONObject.toJSONString(hashMap), new IControlCallback() {
+mDevice.publishDps(JSONObject.toJSONString(hashMap), new IResultCallback() {
 	@Override
 	public void onError(String code, String error) {
 		Toast.makeText(mContext, "开灯失败", Toast.LENGTH_SHORT).show();

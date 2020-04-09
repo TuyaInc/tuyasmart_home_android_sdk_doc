@@ -2,7 +2,7 @@
 
 Tuya Smart provides a lot of interfaces for developers to realize the acquisition of device information and management capabilities (removal, and so on). Receivers shall be informed of the device-related return data by means of asynchronous messages.
 
-|  className  | description                                                  |
+|  ClassName  | Description                                                  |
 | ---------| ----------------------------------------------------------- |
 | ITuyaDevice | The ITuyaDevice class provides the device status notification capability. By registering callback functions, developers can easily obtain notifications on device data reception, device removal, online/offline status of device, and mobile network changes. In addition, it also provides an interface for controlling command issuing and device firmware upgrade. |
 
@@ -246,7 +246,7 @@ Recommended use `ITuyaDevice.publishDps(dps, callback)`
 Assuming that the function point of the device that turns on the light is 101, the control code for turning on the light is as follows:
 
 ```java
-mDevice.publishDps("{\"101\": true}", new IControlCallback() {
+mDevice.publishDps("{\"101\": true}", new IResultCallback() {
   @Override
   public void onError(String code, String error) {
   	Toast.makeText(mContext, "turn on the light failure", Toast.LENGTH_SHORT).show();
@@ -302,7 +302,7 @@ dps = {"105": "1122"};
 
 dps = {"101": true, "102": "ff5500"};
 
-mDevice.publishDps(dps, new IControlCallback() {
+mDevice.publishDps(dps, new IResultCallback() {
         @Override
         public void onError(String code, String error) {
 				        //Error code 11001

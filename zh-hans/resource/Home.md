@@ -146,7 +146,7 @@ TuyaHomeSdk.newHomeInstance(10000).dismissHome(new IResultCallback() {
     });
 ```
 
-## 获取家庭列表
+## 获取家庭详情
 
 获取家庭下的所有数据，包括设备、群组、房间等
 

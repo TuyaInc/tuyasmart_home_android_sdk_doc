@@ -88,7 +88,7 @@ mITuyaGroup.unRegisterGroupListener();
 #### Sending group control command
 
 ```java
-mTuyaGroup.publishDps(String command, IControlCallback listener);
+mTuyaGroup.publishDps(String command, IResultCallback listener);
 ```
 
 **Parameters**

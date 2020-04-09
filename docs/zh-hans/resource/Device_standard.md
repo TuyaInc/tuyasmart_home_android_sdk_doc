@@ -194,7 +194,7 @@ TuyaHomeDevice 提供设备相关信息（dp数据、设备名称、设备在线
 	
 	HashMap<String, Object> hashMap = new HashMap<>();
 	hashMap.put("switch_led", true);
-	mDevice.publishDps(JSONObject.toJSONString(hashMap), new IControlCallback() {
+	mDevice.publishDps(JSONObject.toJSONString(hashMap), new IResultCallback() {
 	    @Override
 	    public void onError(String code, String error) {
 	        Toast.makeText(mContext, "开灯失败", Toast.LENGTH_SHORT).show();

@@ -92,7 +92,7 @@ mITuyaGroup.unRegisterGroupListener();
 #### 发送群组控制命令
 
 ```java
-mTuyaGroup.publishDps(String command, IControlCallback listener);
+mTuyaGroup.publishDps(String command, IResultCallback listener);
 ```
 **参数说明**
 

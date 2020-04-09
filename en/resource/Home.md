@@ -112,7 +112,7 @@ TuyaHomeSdk.newHomeInstance(10000).sortHome(idList, new IResultCallback() {
     });
 ```
 
-#### Get Family List
+#### Get Family Details
 
 Obtain all data under the family, including equipment, groups, rooms, etc
 

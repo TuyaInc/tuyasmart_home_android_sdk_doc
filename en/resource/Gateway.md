@@ -4,7 +4,7 @@ The gateway itself is also a device. If you want to control the gateway itself, 
 
 This section describes the sub-devices under the control gateway.
 
-|  ClassName   | description                                                  |
+|  ClassName   | Description                                                  |
 | :----------: | :----------------------------------------------------------- |
 | ITuyaGateway | The gateway class encapsulates the related operations of the Zigbee gateway, including controlling, querying sub-devices, and monitoring the status of the sub-devices. |
 

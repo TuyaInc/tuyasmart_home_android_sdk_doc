@@ -248,7 +248,7 @@ mDevice.unRegisterDevListener();
 
 假设开灯的设备功能点是 101，那么开灯的控制代码如下所示：
 ```java
-mDevice.publishDps("{\"101\": true}", new IControlCallback() {
+mDevice.publishDps("{\"101\": true}", new IResultCallback() {
     @Override
     public void onError(String code, String error) {
         Toast.makeText(mContext, "开灯失败", Toast.LENGTH_SHORT).show();
@@ -308,7 +308,7 @@ dps = {"105": "1122"};
 //多个功能合并发送
 dps = {"101": true, "102": "ff5500"};
 
-mDevice.publishDps(dps, new IControlCallback() {
+mDevice.publishDps(dps, new IResultCallback() {
         @Override
         public void onError(String code, String error) {
         //错误码11001

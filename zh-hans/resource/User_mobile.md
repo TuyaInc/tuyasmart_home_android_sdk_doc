@@ -1,71 +1,5 @@
 # 手机账号体系
 
-涂鸦智能提供手机验证码登陆体系。
-## 手机验证码登陆
-
-手机验证码登录功能，需要先调用验证码发送接口，发送验证码。再调用手机验证码验证接口。将收到的验证码填入对应的参数中。
-
-**接口说明**
-
-获取手机验证码
-
-```java
-TuyaHomeSdk.getUserInstance().getValidateCode(String countryCode, String phoneNumber, final IValidateCallback callback);
-```
-
-**参数说明**
-
-| 参数        | 说明              |
-| ----------- | ----------------- |
-| countryCode | 手机区号：如 "86" |
-| phoneNumber | 手机号码          |
-| callback    | 回调              |
-
-**接口说明** 
-
-手机验证码登陆
-
-
-```java
-TuyaHomeSdk.getUserInstance().loginWithPhone(String countryCode, String phone, String code, final ILoginCallback callback)
-```
-
-**参数说明**
-
-| 参数        | 说明              |
-| ----------- | ----------------- |
-| countryCode | 手机区号：如 "86" |
-| phone       | 电话号码          |
-| code        | 验证码            |
-| callback    | 登陆回调接口      |
-
-**示例代码**
-
-```java
-//获取手机验证码
-TuyaHomeSdk.getUserInstance().getValidateCode("86","13666666666", new IValidateCallback(){
-    @Override
-    public void onSuccess() {
-        Toast.makeText(mContext, "获取验证码成功", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
-    }
-});
-//手机验证码登陆
-TuyaHomeSdk.getUserInstance().loginWithPhone("86", "13355555555", "123456", new ILoginCallback() {
-    @Override
-    public void onSuccess(User user) {
-        Toast.makeText(mContext, "登录成功，用户名：" +TuyaHomeSdk.getUserInstance().getUser().getUsername(), Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onError(String code, String error) {
-        Toast.makeText(mContext, error, Toast.LENGTH_SHORT).show();
-    }
-});
-```
 ## 用户手机密码登陆
 
 涂鸦智能提供手机密码登陆体系。
@@ -166,6 +100,76 @@ TuyaHomeSdk.getUserInstance().loginWithPhonePassword("86", "13666666666", "12345
     }
 });
 ```
+涂鸦智能提供手机验证码登陆体系。
+
+### 手机验证码登陆
+
+手机验证码登录功能，需要先调用验证码发送接口，发送验证码。再调用手机验证码验证接口。将收到的验证码填入对应的参数中。
+
+**接口说明**
+
+获取手机验证码
+
+```java
+TuyaHomeSdk.getUserInstance().getValidateCode(String countryCode, String phoneNumber, final IValidateCallback callback);
+```
+
+**参数说明**
+
+| 参数        | 说明              |
+| ----------- | ----------------- |
+| countryCode | 手机区号：如 "86" |
+| phoneNumber | 手机号码          |
+| callback    | 回调              |
+
+**接口说明** 
+
+手机验证码登陆
+
+
+```java
+TuyaHomeSdk.getUserInstance().loginWithPhone(String countryCode, String phone, String code, final ILoginCallback callback)
+```
+
+**参数说明**
+
+| 参数        | 说明              |
+| ----------- | ----------------- |
+| countryCode | 手机区号：如 "86" |
+| phone       | 电话号码          |
+| code        | 验证码            |
+| callback    | 登陆回调接口      |
+
+**示例代码**
+
+```java
+//获取手机验证码
+TuyaHomeSdk.getUserInstance().getValidateCode("86","13666666666", new IValidateCallback(){
+    @Override
+    public void onSuccess() {
+        Toast.makeText(mContext, "获取验证码成功", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onError(String code, String error) {
+        Toast.makeText(mContext, "code: " + code + "error:" + error, Toast.LENGTH_SHORT).show();
+    }
+});
+//手机验证码登陆
+TuyaHomeSdk.getUserInstance().loginWithPhone("86", "13355555555", "123456", new ILoginCallback() {
+    @Override
+    public void onSuccess(User user) {
+        Toast.makeText(mContext, "登录成功，用户名：" +TuyaHomeSdk.getUserInstance().getUser().getUsername(), Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onError(String code, String error) {
+        Toast.makeText(mContext, error, Toast.LENGTH_SHORT).show();
+    }
+});
+```
+
+
+
 ### 手机重置密码
 
 手机重置密码功能，包含两个接口：发送验证码接口和重置密码接口

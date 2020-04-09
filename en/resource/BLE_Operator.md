@@ -80,7 +80,7 @@ Unlike Wi-Fi devices, it does not have the LAN delivery function. Only some deli
 **Declaration**
 
 ```java
-void publishDps(String dps, IControlCallback callback);
+void publishDps(String dps, IResultCallback callback);
 ```
 
 **Parameters**
@@ -88,14 +88,14 @@ void publishDps(String dps, IControlCallback callback);
 |param|type|description|
 | ---- |--|--- |
 | dps |String|data points|
-| callback|IControlCallback|callback|
+| callback|IResultCallback|callback|
 
 **Example**
 
 Assuming that the device function point of the light is 101, the control code of the light is as follows:
 	
 ```java
-mDevice.publishDps("{\"101\": true}", new IControlCallback() {
+mDevice.publishDps("{\"101\": true}", new IResultCallback() {
     @Override
     public void onError(String code, String error) {
     }

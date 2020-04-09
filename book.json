@@ -12,7 +12,8 @@
     "ga",
     "expandable-chapters-small",
     "favicon",
-    "pageview-count"
+    "pageview-count",
+    "gtalk"
   ],
   "pluginsConfig": {
     "prism": {
@@ -30,29 +31,38 @@
       "url": "https://github.com/TuyaInc/tuyasmart_home_android_sdk"
     },
     "github-buttons": {
-      "buttons": [{
-        "user": "TuyaInc",
-        "repo": "tuyasmart_home_android_sdk",
-        "type": "star",
-        "size": "small"
-      },{
-        "user": "TuyaInc",
-        "repo": "tuyasmart_home_android_sdk",
-        "type": "watch",
-        "size": "small"
-      },{
-        "user": "TuyaInc",
-        "type": "follow",
-        "size": "small",
-        "count": true
-      }]
+      "buttons": [
+        {
+          "user": "TuyaInc",
+          "repo": "tuyasmart_home_android_sdk",
+          "type": "star",
+          "size": "small"
+        },
+        {
+          "user": "TuyaInc",
+          "repo": "tuyasmart_home_android_sdk",
+          "type": "watch",
+          "size": "small"
+        },
+        {
+          "user": "TuyaInc",
+          "type": "follow",
+          "size": "small",
+          "count": true
+        }
+      ]
     },
     "sharing": {
       "facebook": true,
       "google": true,
       "twitter": true,
       "weibo": true,
-      "all": ["facebook", "google", "twitter", "weibo"]
+      "all": [
+        "facebook",
+        "google",
+        "twitter",
+        "weibo"
+      ]
     },
     "anchor-navigation-ex": {
       "showLevel": false,
@@ -63,7 +73,14 @@
       "token": "UA-161421048-1"
     },
     "favicon": {
-            "shortcut": "zh-hans/resource/images/bitbug_favicon.ico"
-        }
+      "shortcut": "zh-hans/resource/images/bitbug_favicon.ico"
+    },
+    "gtalk": {
+      "clientID": "1e739f11784288e253ba",
+      "clientSecret": "08d9a7ebeec2f5dbb9965c2521f66daf34eddd59",
+      "repo": "tuyasmart_home_android_sdk",
+      "owner": "TuyaInc",
+      "admin": ["mimimumu","TuyaInc"]
+    }
   }
 }
