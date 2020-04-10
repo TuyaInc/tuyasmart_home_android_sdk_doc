@@ -1,8 +1,8 @@
-### 3.14.5-beta2（2020.02.28）
-### 3.14.5-beta1（2020.01.13）
+### 3.14.5
 
+#### 3.14.5 (2020.04.10)
 
-feature version
+release version
 
 [3.13.0 Upgrade 3.14.x Guide](./Update_3_14_0.md)
 
@@ -10,6 +10,13 @@ feature version
 * Improve the stability of communication within the LAN
 * Data encryption for network request response
 * Internal optimization and bugfix
+
+#### 3.14.5-beta2（2020.02.28）
+
+#### 3.14.5-beta1（2020.01.13）
+
+
+feature version
 
 ### 3.13.0(2020.01.08)
 

@@ -182,12 +182,6 @@ public interface ITuyaHomeStatusListener {
     void unRegisterHomeStatusListener(ITuyaHomeStatusListener listener);
 ```
 
-#### 查询用户下面相同产品且支持群组的设备列表
-
-```java
-    void queryDeviceListToAddGroup(String productId, final ITuyaResultCallback<List<GroupDeviceBean>> callback);
-```
-
 #### 销毁
 ```java
     void onDestroy();

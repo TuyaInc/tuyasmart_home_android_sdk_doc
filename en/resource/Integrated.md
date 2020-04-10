@@ -19,8 +19,7 @@ defaultConfig {
     dependencies {
         implementation 'com.alibaba:fastjson:1.1.67.android'
         implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.3'
-        implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-        implementation 'com.tuya.smart:tuyasmart:3.13.0'
+        implementation 'com.tuya.smart:tuyasmart:3.14.5'
     }
     
 repositories {
@@ -69,8 +68,8 @@ please add this proguard configuration to proguard-rules.pro files.
 -dontwarn com.alibaba.fastjson.**
 
 #mqtt
--keep class org.eclipse.paho.client.mqttv3.** { *; }
--dontwarn org.eclipse.paho.client.mqttv3.**
+-keep class com.tuya.smart.mqttclient.mqttv3.** { *; }
+-dontwarn com.tuya.smart.mqttclient.mqttv3.**
 
 -dontwarn okio.**
 -dontwarn rx.**
