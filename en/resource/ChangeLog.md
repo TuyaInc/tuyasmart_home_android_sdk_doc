@@ -1,10 +1,20 @@
+## Feature version
+
+### 3.15.0-beta1 (2020.04.11)
+
+[Upgrade guide before 3.13.0 to version after 3.14.x](./Update_3_14_0.md)
+
+* Internal optimization and bugfix
+
+## Release version
+
 ### 3.14.5
 
 #### 3.14.5 (2020.04.10)
 
 release version
 
-[3.13.0 Upgrade 3.14.x Guide](./Update_3_14_0.md)
+[Upgrade guide before 3.13.0 to version after 3.14.x](./Update_3_14_0.md)
 
 * Update the dependency of mqtt library
 * Improve the stability of communication within the LAN

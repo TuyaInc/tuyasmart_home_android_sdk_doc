@@ -12,5 +12,15 @@
 	```groovy
 	implementation 'com.squareup.okhttp3: okhttp-urlconnection: 3.12.3'
 	```
+	
+<<<<<<< HEAD
+## Configuration Network FAQ
+
+1. [Summary of Problems for Wi-Fi Configuration](Activator_wifi_qa.md)
+=======
+## 配网常见问题
+
+1. [Summary of Problems for Wi-Fi Configuration](Activator_wifi_faq.md)
+>>>>>>> feature/doc_standard
 
 	
