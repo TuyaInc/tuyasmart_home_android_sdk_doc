@@ -787,20 +787,42 @@ void sortDevInHome(String homeId, List<DeviceAndGroupInHomeBean> list, IResultCa
 | Parameters | Description |
 | :--- | :--- |
 | homeId | Room ID |
-| list | Room or group list |
-| callback | Result callback |
+| list | Room or group liist. The list element DeviceAndGroupInHomeBean here contains two fields. The one is `bizType`, which is the target type to sort. You can refer to BizParentTypeEnum for details. Another is `bizId`, which is the id of target, for example, group id or device id. |
+| callback | result callback |
+
+Meanings of the enum BizParentTypeEnum：
+
+- LOCATION
+- MESH
+- ROOM
+- GROUP
+- DEVICE
 
 **Example**
 
 ```java
 List<DeviceAndGroupInHomeBean> list = new ArrayList<>();
+List<DeviceBean> deviceList = homeBean.getDeviceList();
+List<GroupBean> groupList = homeBean.getGroupList();
+for (GroupBean bean : groupList) {
+    DeviceAndGroupInHomeBean deviceInRoomBean = new DeviceAndGroupInHomeBean();
+    deviceInRoomBean.setBizId(bean.getDevId());
+    deviceInRoomBean.setBizType(BizParentTypeEnum.GROUP.getType());
+    list.add(deviceInRoomBean);
+}
+for (DeviceBean bean : deviceList) {
+    DeviceAndGroupInHomeBean deviceInRoomBean = new DeviceAndGroupInHomeBean();
+    deviceInRoomBean.setBizId(bean.getDevId());
+    deviceInRoomBean.setBizType(BizParentTypeEnum.DEVICE.getType());
+    list.add();
+}
 TuyaHomeSdk.newHomeInstance(10000).sortDevInHome(homeId, list, new IResultCallback() {
         @Override
-        public void onError(String code, String error) {
+        public void onSuccess() {
             // do something
         }
         @Override
-        public void onSuccess() {
+        public void onError(String code, String error) {
             // do something
         }
     });

@@ -854,13 +854,35 @@ void sortDevInHome(String homeId, List<DeviceAndGroupInHomeBean> list, IResultCa
 | 参数 | 说明 |
 | :--- | :--- |
 | homeId | 房间 ID |
-| list | 房间或者群组列表 |
+| list | 房间或者群组列表，这里元素 DeviceAndGroupInHomeBean 包含两个字段。一个是 `bizType` 表示被排序的对象的类型，比如是群组还是设备，是一个整数类型的枚举，参考 BizParentTypeEnum 对象；另一个是 `bizId` 表示被排序的对象的 id，比如群组 id 或者设备 id. |
 | callback | 结果回调 |
+
+BizParentTypeEnum 对象的枚举值：
+
+- LOCATION
+- MESH
+- ROOM
+- GROUP
+- DEVICE
 
 **示例代码**
 
 ```java
 List<DeviceAndGroupInHomeBean> list = new ArrayList<>();
+List<DeviceBean> deviceList = homeBean.getDeviceList();
+List<GroupBean> groupList = homeBean.getGroupList();
+for (GroupBean bean : groupList) {
+    DeviceAndGroupInHomeBean deviceInRoomBean = new DeviceAndGroupInHomeBean();
+    deviceInRoomBean.setBizId(bean.getDevId());
+    deviceInRoomBean.setBizType(BizParentTypeEnum.GROUP.getType());
+    list.add(deviceInRoomBean);
+}
+for (DeviceBean bean : deviceList) {
+    DeviceAndGroupInHomeBean deviceInRoomBean = new DeviceAndGroupInHomeBean();
+    deviceInRoomBean.setBizId(bean.getDevId());
+    deviceInRoomBean.setBizType(BizParentTypeEnum.DEVICE.getType());
+    list.add();
+}
 TuyaHomeSdk.newHomeInstance(10000).sortDevInHome(homeId, list, new IResultCallback() {
         @Override
         public void onSuccess() {
