@@ -39,6 +39,7 @@
   * [设备功能点说明](./resource/Device.md#设备功能点说明)
   * [修改设备名称](./resource/Device.md#设备重命名)
   * [回收设备资源](./resource/Device.md#回收设备资源)
+  * [重置设备（恢复出厂设置）](./resource/Device.md#重置设备（恢复出厂设置）)
   * [移除设备](./resource/Device.md#移除设备)
   * [查询 Wi-Fi 信号强度](./resource/Device.md#查询-wi-fi-信号强度)
   * [固件升级](./resource/OTA.md)

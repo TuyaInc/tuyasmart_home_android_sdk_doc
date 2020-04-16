@@ -37,6 +37,7 @@
   * [Function Points of Device](./resource/Device.md#function-points-of-device)
   * [Querying Device Information](./resource/Device.md#querying-device-information)
   * [Rename Device](./resource/Device.md#rename-device)
+  * [Reset The Device (Restore Factory Settings)](./resource/Device.md#reset-the-device-restore-factory-settings) 
   * [Remove Device](./resource/Device.md#remove-device)
   * [Query Wi-Fi Signal Strength](./resource/Device.md#query-wi-fi-signal-strength)
   * [Recycling Device Resources](./resource/Device.md#recycling-device-resources)

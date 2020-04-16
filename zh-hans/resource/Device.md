@@ -332,7 +332,7 @@ mDevice.publishDps(dps, new IResultCallback() {
 > * 透传类型传输的 byte 数组是 16 进制字符串格式并且必须是偶数位
 >  比如正确的格式是: `{"105": "0110"}` 而不是 `{"105": "110"}`
 > 
-  
+
 
 ## 设备信息查询
 
@@ -399,6 +399,32 @@ mDevice.renameDevice("设备名称", new IResultCallback() {
 
 ```java
 TuyaHomeSdk.getDataInstance().getDeviceBean(String devId);
+```
+
+
+
+## 重置设备（恢复出厂设置）
+
+**接口说明**
+
+用于将设备重置，恢复出厂设置状态
+
+```java
+void resetFactory(IResultCallback callback)；
+```
+
+**示例代码**
+
+```java
+mDevice.resetFactory(new IResultCallback() {
+    @Override
+    public void onError(String errorCode, String errorMsg) {
+    }
+
+    @Override
+    public void onSuccess() {
+    }
+});
 ```
 
 ## 移除设备

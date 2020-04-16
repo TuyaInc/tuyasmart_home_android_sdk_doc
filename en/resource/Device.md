@@ -387,6 +387,30 @@ Invoke the following method to get the latest data, and then refresh the device 
 TuyaHomeDataManager.getInstance().getDeviceBean(String devId);
 ```
 
+## Reset The Device (Restore Factory Settings)
+
+**Declaration**
+
+Used to reset the device and restore the factory settings
+
+```java
+void resetFactory(IResultCallback callback)；
+```
+
+**Example**
+
+```java
+mDevice.resetFactory(new IResultCallback() {
+    @Override
+    public void onError(String errorCode, String errorMsg) {
+    }
+
+    @Override
+    public void onSuccess() {
+    }
+});
+```
+
 ## Remove Device
 
 **Declaration**
