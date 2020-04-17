@@ -391,7 +391,7 @@ TuyaHomeDataManager.getInstance().getDeviceBean(String devId);
 
 **Declaration**
 
-Used to reset the device and restore the factory settings
+Used to reset the device and restore the factory settings, After the device is restored to the factory settings, it will re-enter the network to be distributed state (smart config mode), and the relevant data of the device will be cleared.[]()
 
 ```java
 void resetFactory(IResultCallback callback)；

@@ -407,7 +407,7 @@ TuyaHomeSdk.getDataInstance().getDeviceBean(String devId);
 
 **接口说明**
 
-用于将设备重置，恢复出厂设置状态
+用于将设备重置，恢复到出厂状态，设备恢复出厂设置后，会重新进入待配网状态（快连模式），设备的相关数据会被清除掉。
 
 ```java
 void resetFactory(IResultCallback callback)；
