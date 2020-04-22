@@ -107,6 +107,8 @@ TuyaHomeSdk.getMemberInstance().updateMemberRole(memberId, admin, new IResultCal
 
 **接口说明**
 
+`MemberWrapperBean` 对象中的 autoAccept 字段用于控制是否需要受邀者同意，若为 false 则需要受邀者调用 `processInvitation()` 方法接受或者同意邀请后才能加入家庭。
+
 ```java
 void addMember(MemberWrapperBean memberWrapperBean, ITuyaDataCallback<MemberBean> callback)
 ```

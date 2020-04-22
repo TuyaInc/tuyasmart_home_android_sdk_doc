@@ -922,4 +922,3 @@ TuyaHomeSdk.newHomeInstance(10000).registerUpgradeStatusListener(new ITuyaDevice
 
 
 
-

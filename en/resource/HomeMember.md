@@ -107,6 +107,8 @@ TuyaHomeSdk.getMemberInstance().updateMemberRole(memberId, admin, new IResultCal
 
 **Declaration**
 
+The field autoAccept in `MemberWrapperBean` was used to control if the member added should accept the invaitation. If the value was false, the added member shuold call `processInvitation()` and then he/she can join the family.
+
 ```java
 void addMember(MemberWrapperBean memberWrapperBean, ITuyaDataCallback<MemberBean> callback)
 ```

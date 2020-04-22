@@ -1,5 +1,7 @@
 ## Feature version
 
+### 3.15.0-beta2 (2020.04.22)
+
 ### 3.15.0-beta1 (2020.04.11)
 
 [Upgrade guide before 3.13.0 to version after 3.14.x](./Update_3_14_0.md)
