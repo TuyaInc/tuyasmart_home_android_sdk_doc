@@ -2,6 +2,7 @@
 
 * [Introduction](/README.md)
 * [Preparation for Integration](./resource/Preparation.md)
+* [Demo App](./resource/Demo.md)
 * [Integrate SDK](./resource/Integrated.md)
 * [User Management](./resource/User.md)
   * [Migration from 1.x SDK](./resource/User_Sdk_Update.md)
@@ -59,7 +60,6 @@
    * [Message List](./resource/Message.md)
    * [Message Push Switch](./resource/MessagePush.md)
 * [Feedback](./resource/Feedback.md)
-
 * [Integrate Push](./resource/Push.md)
    * [FCM Push](./resource/Push_fcm.md)
    * [Umeng](./resource/Push_umeng.md)

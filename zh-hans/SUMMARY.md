@@ -2,6 +2,7 @@
 
 * [前言](/README.md)
 * [集成准备](./resource/Preparation.md)
+* [Demo App](./resource/Demo.md)
 * [集成 SDK](./resource/Integrated.md)
 * [用户管理](./resource/User.md)
   * [1.x 版本 SDK 用户迁移](./resource/User_sdk_update.md)
@@ -20,7 +21,6 @@
   * [家庭缓存操作](./resource/HomeDataManager.md)
   * [家庭成员管理](./resource/HomeMember.md)
   * [家庭房间管理](./resource/Room.md)
-
 * [设备配网](./resource/Activator_wifi.md)
   * [Wi-Fi 设备配网](./resource/Activator_wifi.md)
     * [快连 (EZ) 模式](./resource/Activator_wifi_ez.md)
