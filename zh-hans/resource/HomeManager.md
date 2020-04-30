@@ -45,7 +45,7 @@ TuyaHomeSdk.getHomeManagerInstance().queryHomeList(new ITuyaGetHomeListCallback(
     });
 ```
 
-## 获取家庭列表
+## 创建家庭
 
 **接口说明**
 

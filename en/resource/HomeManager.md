@@ -16,7 +16,7 @@ void onDestroy()
 TuyaHomeSdk.getHomeManagerInstance().onDestroy();
 ```
 
-#### Get Family List
+#### Create family
 
 **Declaration**
 

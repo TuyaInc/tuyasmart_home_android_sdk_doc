@@ -235,3 +235,26 @@ TuyaHomeSdk.getUserInstance().resetPhonePassword("86", "13555555555", "123456", 
     }
 });
 ```
+
+### 验证码验证功能
+
+验证码验证接口
+
+**接口说明**
+
+验证验证码，用于注册、登录、重设密码 时验证的校验
+
+```java
+TuyaHomeSdk.getUserInstance().checkCodeWithUserName(String userName, String region, String countryCode, String code, int type, IResultCallback callback)
+```
+
+**参数说明**
+
+| 参数        | 说明                                                         |
+| ----------- | ------------------------------------------------------------ |
+| userName    | 用户名                                                       |
+| region      | 区域，默认填写：""  即可                                     |
+| countryCode | 国家码                                                       |
+| code        | 验证码                                                       |
+| type        | 类型: <br>1: 注册时验证码验证用<br>2: 验证码登录时用<br>3: 重置密码时用 |
+| callback    | 回调                                                         |

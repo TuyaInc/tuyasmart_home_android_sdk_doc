@@ -169,10 +169,6 @@ TuyaHomeSdk.getUserInstance().loginWithPhone("86", "13355555555", "123456", new 
 });
 ```
 
-## 
-
-
-
 ### Phone Reset Password
 
 Phone reset password function, including two interfaces: send verification code interface and reset password interface
@@ -209,3 +205,23 @@ TuyaHomeSdk.getUserInstance().resetPhonePassword (final String phoneCode, final 
 | code | Verification Code |
 | newPasswd | new password |
 | callback |
+
+### Verification code verification
+
+**Declaration**
+
+Verification verification code, used for verification verification during registration, login, and password reset
+
+```java
+TuyaHomeSdk.getUserInstance().checkCodeWithUserName(String userName, String region, String countryCode, String code, int type, IResultCallback callback)
+```
+
+**Parameters**
+
+| Parameters  | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| userName    | User name                                                    |
+| region      | region，Fill in the default: ""                              |
+| countryCode | Country code                                                 |
+| code        | Verification code                                            |
+| type        | Type: <br/>1: For verification code verification during registration <br/>2: Use the verification code to log in <br/>3: Used when resetting the password |
