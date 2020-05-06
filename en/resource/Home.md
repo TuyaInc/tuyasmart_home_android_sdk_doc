@@ -24,6 +24,8 @@ Get the family list, family management, room and equipment management under the 
 
 **Declaration**
 
+Get home data from local cache. If you hasn't request for home info before, it will return a empty HomeBean object.
+
 ```java
 void getHomeLocalCache(ITuyaHomeResultCallback callback)
 ```
@@ -374,7 +376,8 @@ void registerHomeStatusListener(ITuyaHomeStatusListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(new ITuyaHomeStatusListener() {
+// define a listener
+ITuyaHomeStatusListener listener = new ITuyaHomeStatusListener() {
         @Override
         public void onDeviceAdded(String devId) {
             // do something
@@ -395,7 +398,9 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(new ITuyaHomeStatu
         public void onMeshAdded(String meshId) {
             // do something
         }
-    });
+    };
+// register a listener somewhere
+TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(listener);
 ```
 
 #### Log Off Monitoring of Information Changes Below Home
@@ -415,7 +420,8 @@ void unRegisterHomeStatusListener(ITuyaHomeStatusListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(new ITuyaHomeStatusListener() {
+// define a listener
+ITuyaHomeStatusListener listener = new ITuyaHomeStatusListener() {
         @Override
         public void onDeviceAdded(String devId) {
             // do something
@@ -436,7 +442,12 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(new ITuyaHomeSta
         public void onMeshAdded(String meshId) {
             // do something
         }
-    });
+    };
+// register a listener somewhere
+TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(listener);
+// ...
+// unregister a listener
+TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(listener);
 ```
 
 #### Monitor the Change of Device Information Under the Home
@@ -456,7 +467,12 @@ void registerHomeDeviceStatusListener(ITuyaHomeDeviceStatusListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(new ITuyaHomeDeviceStatusListener() {
+// define a listener
+ITuyaHomeDeviceStatusListener listener = new ITuyaHomeDeviceStatusListener() {
+        @Override
+        public void onDeviceDpUpdate(String devId, String dpStr) {
+            // do something
+        }
         @Override
         public void onDeviceStatusChanged(String devId, boolean online) {
             // do something
@@ -465,11 +481,9 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(new ITuyaHom
         public void onDeviceInfoUpdate(String devId) {
             // do something
         }
-        @Override
-        public void onDeviceDpUpdate(String devId, String dpStr) {
-            // do something
-        }
-    });
+    };
+// register a listener somewhere
+TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(listener);
 ```
 
 #### Log Off Monitoring of Device Information Changes Under Home
@@ -489,7 +503,12 @@ void unRegisterHomeDeviceStatusListener(ITuyaHomeDeviceStatusListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(new ITuyaHomeDeviceStatusListener() {
+// define a listener
+ITuyaHomeDeviceStatusListener listener = new ITuyaHomeDeviceStatusListener() {
+        @Override
+        public void onDeviceDpUpdate(String devId, String dpStr) {
+            // do something
+        }
         @Override
         public void onDeviceStatusChanged(String devId, boolean online) {
             // do something
@@ -498,11 +517,12 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(new ITuyaH
         public void onDeviceInfoUpdate(String devId) {
             // do something
         }
-        @Override
-        public void onDeviceDpUpdate(String devId, String dpStr) {
-            // do something
-        }
-    });
+    };
+// register a listener somewhere
+TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(listener);
+// ...
+// unregister a listener
+TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(listener);
 ```
 
 #### Create Bluetooth Mesh
@@ -741,12 +761,15 @@ void registerProductWarnListener(IWarningMsgListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(new IWarningMsgListener() {
+// define a listener
+IWarningMsgListener listener = new IWarningMsgListener() {
         @Override
         public void onWarnMessageArrived(WarnMessageBean warnMessageBean) {
             // do something
         }
-    });
+    };
+// register a listener somewhere
+TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(listener);
 ```
 
 #### Unregister Product Alarm Monitoring
@@ -766,12 +789,18 @@ void unRegisterProductWarnListener(IWarningMsgListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).unRegisterProductWarnListener(new IWarningMsgListener() {
+// define a listener
+IWarningMsgListener listener = new IWarningMsgListener() {
         @Override
         public void onWarnMessageArrived(WarnMessageBean warnMessageBean) {
             // do something
         }
-    });
+    };
+// register a listener somewhere
+TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(listener);
+// ...
+// unregister a listener
+TuyaHomeSdk.newHomeInstance(10000).unRegisterProductWarnListener(listener);
 ```
 
 #### Sort Groups or Devices in Your Home

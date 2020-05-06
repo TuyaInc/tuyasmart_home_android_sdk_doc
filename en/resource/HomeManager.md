@@ -98,17 +98,14 @@ void registerTuyaHomeChangeListener(ITuyaHomeChangeListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(new ITuyaHomeChangeListener() {
+// define a listener
+ITuyaHomeChangeListener listener = new ITuyaHomeChangeListener() {
         @Override
         public void onHomeInvite(long homeId, String homeName) {
             // do something
         }
         @Override
         public void onHomeRemoved(long homeId) {
-            // do something
-        }
-        @Override
-        public void onHomeAdded(long homeId) {
             // do something
         }
         @Override
@@ -127,7 +124,13 @@ TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(new ITuyaHom
         public void onServerConnectSuccess() {
             // do something
         }
-    });
+        @Override
+        public void onHomeAdded(long homeId) {
+            // do something
+        }
+    };
+// register a listener
+TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(listener);
 ```
 
 #### Change of Cancellation Family Information
@@ -147,17 +150,14 @@ void unRegisterTuyaHomeChangeListener(ITuyaHomeChangeListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(new ITuyaHomeChangeListener() {
+// define a listener
+ITuyaHomeChangeListener listener = new ITuyaHomeChangeListener() {
         @Override
         public void onHomeInvite(long homeId, String homeName) {
             // do something
         }
         @Override
         public void onHomeRemoved(long homeId) {
-            // do something
-        }
-        @Override
-        public void onHomeAdded(long homeId) {
             // do something
         }
         @Override
@@ -176,7 +176,16 @@ TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(new ITuyaH
         public void onServerConnectSuccess() {
             // do something
         }
-    });
+        @Override
+        public void onHomeAdded(long homeId) {
+            // do something
+        }
+    };
+// register a listener
+TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(listener);
+// ...
+// unregister a listener
+TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(listener);
 ```
 
 

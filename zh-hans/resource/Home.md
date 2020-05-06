@@ -24,6 +24,8 @@
 
 **接口说明**
 
+读取缓存的家庭数据信息，如果之前没有请求过该家庭的数据则返回一个空的 HomeBean。
+
 ```java
 void getHomeLocalCache(ITuyaHomeResultCallback callback)
 ```
@@ -409,7 +411,8 @@ void registerHomeStatusListener(ITuyaHomeStatusListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(new ITuyaHomeStatusListener() {
+// 定义监听
+ITuyaHomeStatusListener listener = new ITuyaHomeStatusListener() {
         @Override
         public void onDeviceAdded(String devId) {
             // do something
@@ -430,7 +433,9 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(new ITuyaHomeStatu
         public void onMeshAdded(String meshId) {
             // do something
         }
-    });
+    };
+// 在某个地方注册了监听
+TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(listener);
 ```
 
 ## 注销家庭下面信息变更的监听
@@ -450,7 +455,8 @@ void unRegisterHomeStatusListener(ITuyaHomeStatusListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(new ITuyaHomeStatusListener() {
+// 定义监听
+ITuyaHomeStatusListener listener = new ITuyaHomeStatusListener() {
         @Override
         public void onDeviceAdded(String devId) {
             // do something
@@ -471,7 +477,12 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(new ITuyaHomeSta
         public void onMeshAdded(String meshId) {
             // do something
         }
-    });
+    };
+// 在某个地方注册了监听
+TuyaHomeSdk.newHomeInstance(10000).registerHomeStatusListener(listener);
+// ...
+// 取消注册监听
+TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeStatusListener(listener);
 ```
 
 ## 监听家庭下面设备信息变更的监听
@@ -491,7 +502,8 @@ void registerHomeDeviceStatusListener(ITuyaHomeDeviceStatusListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(new ITuyaHomeDeviceStatusListener() {
+// 定义一个监听
+ITuyaHomeDeviceStatusListener listener = new ITuyaHomeDeviceStatusListener() {
         @Override
         public void onDeviceDpUpdate(String devId, String dpStr) {
             // do something
@@ -504,7 +516,9 @@ TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(new ITuyaHom
         public void onDeviceInfoUpdate(String devId) {
             // do something
         }
-    });
+    };
+// 在某个地方注册监听
+TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(listener);
 ```
 
 ## 注销家庭下面设备信息变更的监听
@@ -524,7 +538,8 @@ void unRegisterHomeDeviceStatusListener(ITuyaHomeDeviceStatusListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(new ITuyaHomeDeviceStatusListener() {
+// 定义一个监听
+ITuyaHomeDeviceStatusListener listener = new ITuyaHomeDeviceStatusListener() {
         @Override
         public void onDeviceDpUpdate(String devId, String dpStr) {
             // do something
@@ -537,7 +552,12 @@ TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(new ITuyaH
         public void onDeviceInfoUpdate(String devId) {
             // do something
         }
-    });
+    };
+// 在某个地方注册监听
+TuyaHomeSdk.newHomeInstance(10000).registerHomeDeviceStatusListener(listener);
+// ...
+// 取消注册监听
+TuyaHomeSdk.newHomeInstance(10000).unRegisterHomeDeviceStatusListener(listener);
 ```
 
 ## 创建蓝牙 Mesh
@@ -808,12 +828,15 @@ void registerProductWarnListener(IWarningMsgListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(new IWarningMsgListener() {
+// 定义监听
+IWarningMsgListener listener = new IWarningMsgListener() {
         @Override
         public void onWarnMessageArrived(WarnMessageBean warnMessageBean) {
             // do something
         }
-    });
+    };
+// 在某个地方注册了监听
+TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(listener);
 ```
 
 ## 取消注册产品告警监听
@@ -833,12 +856,18 @@ void unRegisterProductWarnListener(IWarningMsgListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.newHomeInstance(10000).unRegisterProductWarnListener(new IWarningMsgListener() {
+// 定义监听
+IWarningMsgListener listener = new IWarningMsgListener() {
         @Override
         public void onWarnMessageArrived(WarnMessageBean warnMessageBean) {
             // do something
         }
-    });
+    };
+// 在某个地方注册了监听
+TuyaHomeSdk.newHomeInstance(10000).registerProductWarnListener(listener);
+// ...
+// 取消注册监听
+TuyaHomeSdk.newHomeInstance(10000).unRegisterProductWarnListener(listener);
 ```
 
 ## 对家庭里的群组或者设备进行排序

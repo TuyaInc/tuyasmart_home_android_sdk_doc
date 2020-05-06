@@ -1,16 +1,29 @@
 ## Feature version
 
-### 3.15.0-beta3 (2020.04.28)
-
-### 3.15.0-beta2 (2020.04.22)
-
-### 3.15.0-beta1 (2020.04.11)
+### 3.17.0-beta1 (2020.05.06)
 
 [Upgrade guide before 3.13.0 to version after 3.14.x](./Update_3_14_0.md)
 
-* Internal optimization and bugfix
+- New Feature
+	- Smart scene support for geofence condition trigger
+	- Firmware upgrade status prompt
+	- Mesh support fast active
+	- Support Wi-Fi sub-device group
+	- Bug fixed
 
 ## Release version
+
+### 3.15.0
+
+Internal optimization and bugfix
+
+[Upgrade guide before 3.13.0 to version after 3.14.x](./Update_3_14_0.md)
+
+#### 3.15.0-beta3 (2020.04.28)
+
+#### 3.15.0-beta2 (2020.04.22)
+
+#### 3.15.0-beta1 (2020.04.11)
 
 ### 3.14.5
 

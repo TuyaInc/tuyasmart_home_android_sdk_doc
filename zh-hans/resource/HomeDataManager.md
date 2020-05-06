@@ -451,12 +451,15 @@ void discoveredLanDevice(ITuyaSearchDeviceListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.getDataInstance().discoveredLanDevice(new ITuyaSearchDeviceListener() {
+// 定义一个监听
+ITuyaSearchDeviceListener listener = new ITuyaSearchDeviceListener() {
         @Override
         public void onDeviceFind(String devId, DeviceActiveEnum activeEnum) {
             // do something
         }
-    });
+    };
+// 注册监听
+TuyaHomeSdk.getDataInstance().discoveredLanDevice(listener);
 ```
 
 ## 取消注册设备查询监听
@@ -476,12 +479,18 @@ void unRegisterDiscoveredLanDeviceListener(ITuyaSearchDeviceListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.getDataInstance().unRegisterDiscoveredLanDeviceListener(new ITuyaSearchDeviceListener() {
+// 定义一个监听
+ITuyaSearchDeviceListener listener = new ITuyaSearchDeviceListener() {
         @Override
         public void onDeviceFind(String devId, DeviceActiveEnum activeEnum) {
             // do something
         }
-    });
+    };
+// 注册监听
+TuyaHomeSdk.getDataInstance().discoveredLanDevice(listener);
+// ...
+// 取消注册监听
+TuyaHomeSdk.getDataInstance().unRegisterDiscoveredLanDeviceListener(listener);
 ```
 
 ## 查询子设备

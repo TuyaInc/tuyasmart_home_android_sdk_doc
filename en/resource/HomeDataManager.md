@@ -451,12 +451,15 @@ void discoveredLanDevice(ITuyaSearchDeviceListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.getDataInstance().discoveredLanDevice(new ITuyaSearchDeviceListener() {
+// define a listener
+ITuyaSearchDeviceListener listener = new ITuyaSearchDeviceListener() {
         @Override
         public void onDeviceFind(String devId, DeviceActiveEnum activeEnum) {
             // do something
         }
-    });
+    };
+// register a listener
+TuyaHomeSdk.getDataInstance().discoveredLanDevice(listener);
 ```
 
 #### Unregister Device Query Listening
@@ -476,12 +479,18 @@ void unRegisterDiscoveredLanDeviceListener(ITuyaSearchDeviceListener listener)
 **Example**
 
 ```java
-TuyaHomeSdk.getDataInstance().unRegisterDiscoveredLanDeviceListener(new ITuyaSearchDeviceListener() {
+// define a listener
+ITuyaSearchDeviceListener listener = new ITuyaSearchDeviceListener() {
         @Override
         public void onDeviceFind(String devId, DeviceActiveEnum activeEnum) {
             // do something
         }
-    });
+    };
+// register a listener
+TuyaHomeSdk.getDataInstance().discoveredLanDevice(listener);
+// ...
+// unregister a listener
+TuyaHomeSdk.getDataInstance().unRegisterDiscoveredLanDeviceListener(listener);
 ```
 
 #### Query Sub Devices

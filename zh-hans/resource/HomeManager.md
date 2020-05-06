@@ -98,7 +98,8 @@ void registerTuyaHomeChangeListener(ITuyaHomeChangeListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(new ITuyaHomeChangeListener() {
+// 定义监听
+ITuyaHomeChangeListener listener = new ITuyaHomeChangeListener() {
         @Override
         public void onHomeInvite(long homeId, String homeName) {
             // do something
@@ -127,7 +128,9 @@ TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(new ITuyaHom
         public void onHomeAdded(long homeId) {
             // do something
         }
-    });
+    };
+// 注册监听
+TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(listener);
 ```
 
 ## 注销家庭信息的变更
@@ -147,7 +150,8 @@ void unRegisterTuyaHomeChangeListener(ITuyaHomeChangeListener listener)
 **示例代码**
 
 ```java
-TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(new ITuyaHomeChangeListener() {
+// 定义监听
+ITuyaHomeChangeListener listener = new ITuyaHomeChangeListener() {
         @Override
         public void onHomeInvite(long homeId, String homeName) {
             // do something
@@ -176,7 +180,12 @@ TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(new ITuyaH
         public void onHomeAdded(long homeId) {
             // do something
         }
-    });
+    };
+// 在某个地方注册监听
+TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(listener);
+// ...
+// 取消注册监听
+TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(listener);
 ```
 
 
