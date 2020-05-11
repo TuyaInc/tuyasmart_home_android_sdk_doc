@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Data Model · GitBook</title>
+        <title>Frequently Asked Questions · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -91,10 +91,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="User_Session.html" />
+    <link rel="next" href="ChangeLog.html" />
     
     
-    <link rel="prev" href="User_logout.html" />
+    <link rel="prev" href="ErrorCode.html" />
     
 
     
@@ -259,9 +259,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="User_Third_Login.html">
+        <li class="chapter " data-level="1.5.5" data-path="User_ThirdLogin.html">
             
-                <a href="User_Third_Login.html">
+                <a href="User_ThirdLogin.html">
             
                     
                     Third Party Login
@@ -311,9 +311,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.9" data-path="User_Data_Model.html">
+        <li class="chapter " data-level="1.5.9" data-path="User_model.html">
             
-                <a href="User_Data_Model.html">
+                <a href="User_model.html">
             
                     
                     Data Model
@@ -1376,9 +1376,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.22" data-path="Problems.html">
+        <li class="chapter active" data-level="1.22" data-path="FAQ.html">
             
-                <a href="Problems.html">
+                <a href="FAQ.html">
             
                     
                     Frequently Asked Questions
@@ -1451,7 +1451,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Data Model</a>
+        <a href=".." >Frequently Asked Questions</a>
     </h1>
 </div>
 
@@ -1466,51 +1466,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#user-data-model"><b></b>User Data Model</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="user-data-model"><a name="user-data-model" class="anchor-navigation-ex-anchor" href="#user-data-model"><i class="fa fa-link" aria-hidden="true"></i></a><a name="user-data-model" class="plugin-anchor" href="#user-data-model"><i class="fa fa-link" aria-hidden="true"></i></a>User Data Model</h2>
-<p><strong>User</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>nickName</td>
-<td>Nickname</td>
-</tr>
-<tr>
-<td>phoneCode</td>
-<td>Country code</td>
-</tr>
-<tr>
-<td>mobile</td>
-<td>Mobile phone number</td>
-</tr>
-<tr>
-<td>username</td>
-<td>User name</td>
-</tr>
-<tr>
-<td>email</td>
-<td>Email</td>
-</tr>
-<tr>
-<td>uid</td>
-<td>Unique user identifier</td>
-</tr>
-<tr>
-<td>sid</td>
-<td>Login generates the unique identification id</td>
-</tr>
-<tr>
-<td>headPic</td>
-<td>Url of the User Account Picture</td>
-</tr>
-</tbody>
-</table>
-<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/User_Data_Model.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/User_Data_Model.html"});gitalk.render("gitalk-container");</script></p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#faq"><b></b>FAQ</a></li><ul><li><span class="title-icon "></span><a href="#configuration-network-faq"><b></b>Configuration Network FAQ</a></li></ul><li><span class="title-icon "></span><a href="#1-summary-of-problems-for-wi-fi-configuration"><b></b>1. Summary of Problems for Wi-Fi Configuration</a></li><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;"><b></b>&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;</a></li></ul></ul></div><a href="#faq" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="faq"><a name="faq" class="anchor-navigation-ex-anchor" href="#faq"><i class="fa fa-link" aria-hidden="true"></i></a><a name="faq" class="plugin-anchor" href="#faq"><i class="fa fa-link" aria-hidden="true"></i></a>FAQ</h1>
+<ol>
+<li><p>Permission Verification Failed
+Please check the <code>appKey</code>&#x3001;<code>appSecret</code>&#x3001;<code>Security img</code>(t_s.bmp), any one of the mismatches will fail the verification. Please refer to <a href="https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/en/resource/Preparation.html" target="_blank">Preparation for integration</a> and <a href="https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/en/resource/Integrated.html" target="_blank">Integrate SDK</a> section.</p>
+</li>
+<li><p>After upgrading the SDK, the following problems occur:</p>
+<pre class="language-"><code>  java.lang.IllegalAccessError: Class okhttp3.EventListener extended by class com.tuya.smart.android.network.http.HttpEventListener is inaccessible (declaration of &apos;com.tuya.smart.android.network.http.HttpEventListener&apos; ***)
+</code></pre><p> Please upgrade the okhttp version </p>
+<pre class="language-"><code class="lang-groovy"> implementation <span class="token string">&apos;com.squareup.okhttp3: okhttp-urlconnection: 3.12.3&apos;</span>
+</code></pre>
+</li>
+</ol>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="configuration-network-faq"><a name="configuration-network-faq" class="anchor-navigation-ex-anchor" href="#configuration-network-faq"><i class="fa fa-link" aria-hidden="true"></i></a><a name="configuration-network-faq" class="plugin-anchor" href="#configuration-network-faq"><i class="fa fa-link" aria-hidden="true"></i></a>Configuration Network FAQ</h2>
+<h1 id="1-summary-of-problems-for-wi-fi-configuration"><a name="1-summary-of-problems-for-wi-fi-configuration" class="anchor-navigation-ex-anchor" href="#1-summary-of-problems-for-wi-fi-configuration"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1-summary-of-problems-for-wi-fi-configuration" class="plugin-anchor" href="#1-summary-of-problems-for-wi-fi-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>1. <a href="Activator_wifi_qa.md">Summary of Problems for Wi-Fi Configuration</a></h1>
+<h2 id="&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;"><a name="&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;" class="plugin-anchor" href="#&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F51;&#x5E38;&#x89C1;&#x95EE;&#x9898;</h2>
+<ol>
+<li><a href="Activator_wifi_faq.html">Summary of Problems for Wi-Fi Configuration</a><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>feature/doc_standard</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/FAQ.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/FAQ.html"});gitalk.render("gitalk-container");</script></p>
 
                                 
                                 </section>
@@ -1538,12 +1528,12 @@
 
             
                 
-                <a href="User_logout.html#disable-account" class="navigation navigation-prev " aria-label="Previous page: Disable Account">
+                <a href="ErrorCode.html" class="navigation navigation-prev " aria-label="Previous page: Error Code">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="User_Session.html" class="navigation navigation-next " aria-label="Next page: Handling of Expired Session">
+                <a href="ChangeLog.html" class="navigation navigation-next " aria-label="Next page: Change Log">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1554,7 +1544,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Data Model","level":"1.5.9","depth":2,"next":{"title":"Handling of Expired Session","level":"1.5.10","depth":2,"path":"resource/User_Session.md","ref":"./resource/User_Session.md","articles":[]},"previous":{"title":"Disable Account","level":"1.5.8","depth":2,"anchor":"#disable-account","path":"resource/User_logout.md","ref":"./resource/User_logout.md#disable-account","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_Data_Model.md","mtime":"2020-04-11T10:36:58.076Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T08:16:45.089Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Frequently Asked Questions","level":"1.22","depth":1,"next":{"title":"Change Log","level":"1.23","depth":1,"path":"resource/ChangeLog.md","ref":"./resource/ChangeLog.md","articles":[{"title":"Upgrade guide before 3.13.0 to version after 3.14.x","level":"1.23.1","depth":2,"path":"resource/Update_3_14_0.md","ref":"./resource/Update_3_14_0.md","articles":[]}]},"previous":{"title":"Error Code","level":"1.21","depth":1,"path":"resource/ErrorCode.md","ref":"./resource/ErrorCode.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/FAQ.md","mtime":"2020-04-15T11:53:28.723Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-11T11:48:48.228Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1601,10 +1591,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
