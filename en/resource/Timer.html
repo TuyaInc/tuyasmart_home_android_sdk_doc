@@ -207,20 +207,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="User_Sdk_Update.html">
-            
-                <a href="User_Sdk_Update.html">
-            
-                    
-                    Migration from 1.x SDK
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.2" data-path="User_mobile.html">
+        <li class="chapter " data-level="1.5.1" data-path="User_mobile.html">
             
                 <a href="User_mobile.html">
             
@@ -233,7 +220,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="User_email.html">
+        <li class="chapter " data-level="1.5.2" data-path="User_email.html">
             
                 <a href="User_email.html">
             
@@ -246,7 +233,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="User_uid.html">
+        <li class="chapter " data-level="1.5.3" data-path="User_uid.html">
             
                 <a href="User_uid.html">
             
@@ -259,7 +246,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="User_ThirdLogin.html">
+        <li class="chapter " data-level="1.5.4" data-path="User_ThirdLogin.html">
             
                 <a href="User_ThirdLogin.html">
             
@@ -272,7 +259,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="User_update.html">
+        <li class="chapter " data-level="1.5.5" data-path="User_update.html">
             
                 <a href="User_update.html">
             
@@ -285,7 +272,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="User_logout.html">
+        <li class="chapter " data-level="1.5.6" data-path="User_logout.html">
             
                 <a href="User_logout.html#logout-interface">
             
@@ -298,7 +285,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="User_logout.html">
+        <li class="chapter " data-level="1.5.7" data-path="User_logout.html">
             
                 <a href="User_logout.html#disable-account">
             
@@ -311,7 +298,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="User_model.html">
+        <li class="chapter " data-level="1.5.8" data-path="User_model.html">
             
                 <a href="User_model.html">
             
@@ -324,7 +311,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.10" data-path="User_Session.html">
+        <li class="chapter " data-level="1.5.9" data-path="User_Session.html">
             
                 <a href="User_Session.html">
             
@@ -1476,6 +1463,8 @@
 <p><strong>Declaration</strong></p>
 <p>Add one timer.</p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> dpId<span class="token punctuation">,</span> <span class="token class-name">String</span> time<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">addTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> dps<span class="token punctuation">,</span> <span class="token class-name">String</span> time<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isAppPush<span class="token punctuation">,</span> <span class="token class-name">String</span> remark<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1509,6 +1498,14 @@
 <tr>
 <td>callback</td>
 <td>callback not null</td>
+</tr>
+<tr>
+<td>isAppPush</td>
+<td>Whether to support regular execution result push</td>
+</tr>
+<tr>
+<td>remark</td>
+<td>Set timer note name</td>
 </tr>
 </tbody>
 </table>
@@ -1711,6 +1708,8 @@
 <p><strong>Declaration</strong></p>
 <p>Updating timer status (this interface can modify all attributes of a timer).</p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> timerId<span class="token punctuation">,</span> <span class="token class-name">String</span> dpId<span class="token punctuation">,</span> <span class="token class-name">String</span> time<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isOpen<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> timerId<span class="token punctuation">,</span> <span class="token class-name">String</span> instruct<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isAppPush<span class="token punctuation">,</span> <span class="token class-name">String</span> remark<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -1753,10 +1752,33 @@
 <td>callback</td>
 <td>callback not null</td>
 </tr>
+<tr>
+<td>instruct</td>
+<td>Dps task, json format:[{&quot;time&quot;: &quot;20:00&quot;,&quot;dps&quot;: {&quot;1&quot;: true}]</td>
+</tr>
+<tr>
+<td>isAppPush</td>
+<td>Whether to support regular execution result push</td>
+</tr>
+<tr>
+<td>remark</td>
+<td>Set timer note name</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span>taskName<span class="token punctuation">,</span><span class="token string">&quot;0011001&quot;</span><span class="token punctuation">,</span> mDevId<span class="token punctuation">,</span> timeId<span class="token punctuation">,</span>  <span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;14:00&quot;</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">IResultStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;updating timer attribute succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;updating timer attribute failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span>taskName<span class="token punctuation">,</span><span class="token string">&quot;0011001&quot;</span><span class="token punctuation">,</span> mDevId<span class="token punctuation">,</span> timeId<span class="token punctuation">,</span>  instruct<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token string">&quot;&#x8D77;&#x5E8A;&#x5B9A;&#x65F6;&#x5668;&quot;</span>  <span class="token keyword">new</span> <span class="token class-name">IResultStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;updating timer attribute succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1942,7 +1964,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Timer Task","level":"1.11","depth":1,"next":{"title":"Group Management","level":"1.12","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[{"title":"Wi-Fi Group","level":"1.12.1","depth":2,"path":"resource/Group_wifi.md","ref":"./resource/Group_wifi.md","articles":[]},{"title":"Zigbee Group","level":"1.12.2","depth":2,"path":"resource/Group_zigbee.md","ref":"./resource/Group_zigbee.md","articles":[]},{"title":"Group Control","level":"1.12.3","depth":2,"path":"resource/Group_control.md","ref":"./resource/Group_control.md","articles":[]}]},"previous":{"title":"Modifying Remark Name","level":"1.10.3","depth":2,"path":"resource/Shared_Device_Rename.md","ref":"./resource/Shared_Device_Rename.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Timer.md","mtime":"2020-04-11T10:36:58.074Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-18T08:30:04.166Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Timer Task","level":"1.11","depth":1,"next":{"title":"Group Management","level":"1.12","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[{"title":"Wi-Fi Group","level":"1.12.1","depth":2,"path":"resource/Group_wifi.md","ref":"./resource/Group_wifi.md","articles":[]},{"title":"Zigbee Group","level":"1.12.2","depth":2,"path":"resource/Group_zigbee.md","ref":"./resource/Group_zigbee.md","articles":[]},{"title":"Group Control","level":"1.12.3","depth":2,"path":"resource/Group_control.md","ref":"./resource/Group_control.md","articles":[]}]},"previous":{"title":"Modifying Remark Name","level":"1.10.3","depth":2,"path":"resource/Shared_Device_Rename.md","ref":"./resource/Shared_Device_Rename.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Timer.md","mtime":"2020-05-19T07:33:04.114Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-19T07:35:52.778Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1993,10 +2015,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
