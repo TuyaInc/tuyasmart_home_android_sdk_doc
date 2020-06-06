@@ -1,0 +1,2685 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title> Wi-Fi Lock · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-gtalk/gtalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sf-score/style/scorePlugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="BLELockDoc.html" />
+    
+    
+    <link rel="prev" href="Lock.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Features Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Preparation.html">
+            
+                <a href="Preparation.html">
+            
+                    
+                    Preparation for Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Integrated.html">
+            
+                <a href="Integrated.html">
+            
+                    
+                    Integrate SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Demo.html">
+            
+                <a href="Demo.html">
+            
+                    
+                    Demo App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="User.html">
+            
+                <a href="User.html">
+            
+                    
+                    User Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="User_mobile.html">
+            
+                <a href="User_mobile.html">
+            
+                    
+                    Use Mobile Phone for Login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="User_email.html">
+            
+                <a href="User_email.html">
+            
+                    
+                    Use Email for Login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="User_uid.html">
+            
+                <a href="User_uid.html">
+            
+                    
+                    Use Uid for Login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="User_ThirdLogin.html">
+            
+                <a href="User_ThirdLogin.html">
+            
+                    
+                    Third Party Login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="User_update.html">
+            
+                <a href="User_update.html">
+            
+                    
+                    Modify User Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="User_logout.html">
+            
+                <a href="User_logout.html">
+            
+                    
+                    Logout, Disable Account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="User_model.html">
+            
+                <a href="User_model.html">
+            
+                    
+                    User Data Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="User_Session.html">
+            
+                <a href="User_Session.html">
+            
+                    
+                    Handling of Expired Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="HomeManager.html">
+            
+                <a href="HomeManager.html">
+            
+                    
+                    Home Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="Home.html">
+            
+                <a href="Home.html">
+            
+                    
+                    Home Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="HomeManager.html">
+            
+                <a href="HomeManager.html">
+            
+                    
+                    Home Operations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="HomeDataManager.html">
+            
+                <a href="HomeDataManager.html">
+            
+                    
+                    Home Data Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="HomeMember.html">
+            
+                <a href="HomeMember.html">
+            
+                    
+                    Home Member Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="Room.html">
+            
+                <a href="Room.html">
+            
+                    
+                    Room Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Activator_wifi.html">
+            
+                <a href="Activator_wifi.html">
+            
+                    
+                    Wi-Fi Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="Activator_wifi_ez.html">
+            
+                <a href="Activator_wifi_ez.html">
+            
+                    
+                    EZ Mode Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="Activator_wifi_ap.html">
+            
+                <a href="Activator_wifi_ap.html">
+            
+                    
+                    AP Mode Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="Activator_camera_scan.html">
+            
+                <a href="Activator_camera_scan.html">
+            
+                    
+                    Camera scan code Network Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="Activator_wifi_faq.html">
+            
+                <a href="Activator_wifi_faq.html">
+            
+                    
+                    Wi-Fi Common Problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Activator_zigbee.html">
+            
+                <a href="Activator_zigbee.html">
+            
+                    
+                    ZigBee Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="Activator_zigbee_gateway.html">
+            
+                <a href="Activator_zigbee_gateway.html">
+            
+                    
+                    ZigBee Gateway Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="Activator_zigbee_subdevice.html">
+            
+                <a href="Activator_zigbee_subdevice.html">
+            
+                    
+                    ZigBee Sub-device Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Device.html">
+            
+                <a href="Device.html#device-management">
+            
+                    
+                    Device Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="Device.html">
+            
+                <a href="Device.html#initialize-device">
+            
+                    
+                    Initialize Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="Device.html">
+            
+                <a href="Device.html#device-data-listener">
+            
+                    
+                    Device Data Listener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="Device.html">
+            
+                <a href="Device.html#device-control">
+            
+                    
+                    Device Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="Device.html">
+            
+                <a href="Device.html#functions-of-device">
+            
+                    
+                    Functions of Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="Device.html">
+            
+                <a href="Device.html#querying-device-information">
+            
+                    
+                    Querying Device Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="Device.html">
+            
+                <a href="Device.html#modify-the-device-name">
+            
+                    
+                    Modify the Device Name
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="Device.html">
+            
+                <a href="Device.html#remove-device">
+            
+                    
+                    Remove Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="Device.html">
+            
+                <a href="Device.html#restore-factory-settings">
+            
+                    
+                    Restore Factory Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="Device.html">
+            
+                <a href="Device.html#obtain-wi-fi-signal-strength">
+            
+                    
+                    Obtain Wi-Fi Signal Strength
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="Device.html">
+            
+                <a href="Device.html#recycling-device-resources">
+            
+                    
+                    Recycling Device Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="OTA.html">
+            
+                <a href="OTA.html">
+            
+                    
+                    Firmware Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="Gateway.html">
+            
+                <a href="Gateway.html">
+            
+                    
+                    ZigBee Gateway Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Shared.html">
+            
+                <a href="Shared.html#Shared devices">
+            
+                    
+                    Shared Devices
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="Shared_Device_add.html">
+            
+                <a href="Shared_Device_add.html#Add Device Share">
+            
+                    
+                    Add Device Share
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="Shared_Device_Relation.html">
+            
+                <a href="Shared_Device_Relation.html#Getting Shared Relationships">
+            
+                    
+                    Getting Shared RelationShips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="Shared_Device_Remove.html">
+            
+                <a href="Shared_Device_Remove.html#Remove Sharing">
+            
+                    
+                    Remove Sharing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="Shared_Device_Rename.html">
+            
+                <a href="Shared_Device_Rename.html#Modify Note Name">
+            
+                    
+                    Modifying Note Name
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="Timer.html">
+            
+                <a href="Timer.html">
+            
+                    
+                    Timer Task
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Group.html">
+            
+                <a href="Group.html">
+            
+                    
+                    Group Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="Group_wifi.html">
+            
+                <a href="Group_wifi.html">
+            
+                    
+                    Wi-Fi Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="Group_zigbee.html">
+            
+                <a href="Group_zigbee.html">
+            
+                    
+                    Zigbee Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="Group_control.html">
+            
+                <a href="Group_control.html">
+            
+                    
+                    Group Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html">
+            
+                    
+                    Smart Scene
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#Smart">
+            
+                    
+                    Smart Scene
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#Single_Scene_Operation">
+            
+                    
+                    Scene Operation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Message.html">
+            
+                <a href="Message.html#Message Center">
+            
+                    
+                    Message Center
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="Message.html">
+            
+                <a href="Message.html#Message">
+            
+                    
+                    Message
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="MessagePush.html">
+            
+                <a href="MessagePush.html#Push Notification">
+            
+                    
+                    Push Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="Feedback.html">
+            
+                <a href="Feedback.html">
+            
+                    
+                    Feedback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    Integrate Push
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="Push_fcm.html">
+            
+                <a href="Push_fcm.html">
+            
+                    
+                    FCM Push
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="Push_umeng.html">
+            
+                <a href="Push_umeng.html">
+            
+                    
+                    Umeng
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="CommonInterface.html">
+            
+                <a href="CommonInterface.html">
+            
+                    
+                    Common Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="BLE.html">
+            
+                <a href="BLE.html">
+            
+                    
+                    Bluetooth Low Energy
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="BLE_Activator.html">
+            
+                <a href="BLE_Activator.html#scanning-device">
+            
+                    
+                    Scan Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="BLE_Activator.html">
+            
+                <a href="BLE_Activator.html#single-ble-device-activation">
+            
+                    
+                    BLE Device Activation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="BLE_Activator.html">
+            
+                <a href="BLE_Activator.html#dual-mode-device-activation">
+            
+                    
+                    Dual-mode Device Activation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="BLE_Operator.html">
+            
+                <a href="BLE_Operator.html">
+            
+                    
+                    BLE Device Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="BLE_OTA.html">
+            
+                <a href="BLE_OTA.html">
+            
+                    
+                    BLE OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Mesh.html">
+            
+                <a href="Mesh.html">
+            
+                    
+                    Bluetooth Mesh (SIG)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="SigMesh_Prepare.html">
+            
+                <a href="SigMesh_Prepare.html">
+            
+                    
+                    Prepare
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="SigMesh_IDEA.html">
+            
+                <a href="SigMesh_IDEA.html">
+            
+                    
+                    Basic Notion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="SigMesh_Admin.html">
+            
+                <a href="SigMesh_Admin.html">
+            
+                    
+                    Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="SigMesh_Config.html">
+            
+                <a href="SigMesh_Config.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="SigMesh_Device.html">
+            
+                <a href="SigMesh_Device.html">
+            
+                    
+                    Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="SigMesh_Group_Operate.html">
+            
+                <a href="SigMesh_Group_Operate.html">
+            
+                    
+                    Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.7" data-path="SigMesh_Device_Operate.html">
+            
+                <a href="SigMesh_Device_Operate.html">
+            
+                    
+                    Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.8" data-path="SigMesh_OTA.html">
+            
+                <a href="SigMesh_OTA.html">
+            
+                    
+                    Firmware Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Mesh.html">
+            
+                <a href="Mesh.html">
+            
+                    
+                    Bluetooth Mesh (TUYA)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="Mesh_Prepare.html">
+            
+                <a href="Mesh_Prepare.html">
+            
+                    
+                    Prepare
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="Mesh_IDEA.html">
+            
+                <a href="Mesh_IDEA.html">
+            
+                    
+                    Basic Notion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="Mesh_Admin.html">
+            
+                <a href="Mesh_Admin.html">
+            
+                    
+                    Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="Mesh_Config.html">
+            
+                <a href="Mesh_Config.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="Mesh_Device.html">
+            
+                <a href="Mesh_Device.html">
+            
+                    
+                    Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.6" data-path="Mesh_Group_Operate.html">
+            
+                <a href="Mesh_Group_Operate.html">
+            
+                    
+                    Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.7" data-path="Mesh_Device_Operate.html">
+            
+                <a href="Mesh_Device_Operate.html">
+            
+                    
+                    Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.8" data-path="Mesh_OTA.html">
+            
+                <a href="Mesh_OTA.html">
+            
+                    
+                    Firmware Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="ExtensionAbout.html">
+            
+                <a href="ExtensionAbout.html">
+            
+                    
+                    Extension SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="Extension.html">
+            
+                <a href="Extension.html#ipc-sdk">
+            
+                    
+                    IPC SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="Extension.html">
+            
+                <a href="Extension.html#sweeper-sdk">
+            
+                    
+                    Sweeper SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="Lock.html">
+            
+                <a href="Lock.html#">
+            
+                    
+                    Smart Lock SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="WiFiLockDoc.html">
+            
+                <a href="WiFiLockDoc.html#">
+            
+                    
+                     Wi-Fi Lock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="BLELockDoc.html">
+            
+                <a href="BLELockDoc.html#">
+            
+                    
+                    BLE Lock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="ErrorCode.html">
+            
+                <a href="ErrorCode.html">
+            
+                    
+                    Error Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="FAQ.html">
+            
+                <a href="FAQ.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ChangeLog.html">
+            
+                <a href="ChangeLog.html">
+            
+                    
+                    Change Log
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="Update_3_14_0.html">
+            
+                <a href="Update_3_14_0.html">
+            
+                    
+                    Upgrade guide before 3.13.0 to version after 3.14.x
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." > Wi-Fi Lock</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#tuya-wi-fi-lock-instructions"><b></b>Tuya Wi-Fi Lock Instructions</a></li><ul><li><span class="title-icon "></span><a href="#term-explanation"><b></b>Term Explanation</a></li><li><span class="title-icon "></span><a href="#description"><b></b>Description</a></li><li><span class="title-icon "></span><a href="#member-management"><b></b>Member Management</a></li><ul><li><span class="title-icon "></span><a href="#get-door-lock-members"><b></b>Get Door Lock Members</a></li><li><span class="title-icon "></span><a href="#create-a-door-lock-member"><b></b>Create a Door Lock Member</a></li><li><span class="title-icon "></span><a href="#update-a-door-lock-member-information"><b></b>Update a Door Lock Member Information</a></li><li><span class="title-icon "></span><a href="#delete-a-door-lock-member"><b></b>Delete a Door Lock Member</a></li></ul><li><span class="title-icon "></span><a href="#temporary-password"><b></b>Temporary Password</a></li><ul><li><span class="title-icon "></span><a href="#create-temporary-password"><b></b>Create Temporary Password</a></li><li><span class="title-icon "></span><a href="#get-temporary-passwords"><b></b>Get Temporary Passwords</a></li><li><span class="title-icon "></span><a href="#delete-temporary-password"><b></b>Delete Temporary Password</a></li></ul><li><span class="title-icon "></span><a href="#dynamic-password"><b></b>Dynamic Password</a></li><ul><li><span class="title-icon "></span><a href="#get-dynamic-password"><b></b>Get Dynamic Password</a></li></ul><li><span class="title-icon "></span><a href="#open-the-door-remotely"><b></b>Open the Door Remotely</a></li><ul><li><span class="title-icon "></span><a href="#register-remote-unlock-listener"><b></b>Register Remote Unlock Listener</a></li><li><span class="title-icon "></span><a href="#request-remote-unlock"><b></b>Request Remote Unlock</a></li></ul><li><span class="title-icon "></span><a href="#lock-records"><b></b>Lock Records</a></li><ul><li><span class="title-icon "></span><a href="#get-lock-records"><b></b>Get Lock Records</a></li><li><span class="title-icon "></span><a href="#get-door-lock-unlock-records"><b></b>Get Door Lock Unlock Records</a></li><li><span class="title-icon "></span><a href="#get-door-lock-hijacking-record"><b></b>Get Door Lock Hijacking Record</a></li></ul><li><span class="title-icon "></span><a href="#wi-fi-door-lock-function-points"><b></b>Wi-Fi Door Lock Function Points</a></li></ul></ul></div><a href="#tuya-wi-fi-lock-instructions" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="tuya-wi-fi-lock-instructions"><a name="tuya-wi-fi-lock-instructions" class="anchor-navigation-ex-anchor" href="#tuya-wi-fi-lock-instructions"><i class="fa fa-link" aria-hidden="true"></i></a><a name="tuya-wi-fi-lock-instructions" class="plugin-anchor" href="#tuya-wi-fi-lock-instructions"><i class="fa fa-link" aria-hidden="true"></i></a>Tuya Wi-Fi Lock Instructions</h1>
+<h2 id="term-explanation"><a name="term-explanation" class="anchor-navigation-ex-anchor" href="#term-explanation"><i class="fa fa-link" aria-hidden="true"></i></a><a name="term-explanation" class="plugin-anchor" href="#term-explanation"><i class="fa fa-link" aria-hidden="true"></i></a>Term Explanation</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dpCode</td>
+<td>The identifier of the device function point. Each function point in the device has a name and number. Please refer to <a href="#wi-fi-door-lock-function-points">Wi-Fi Door Lock Function Points</a></td>
+</tr>
+<tr>
+<td>hijack</td>
+<td>Door lock hijacking refers to setting a specific password (fingerprint, password, etc.) as the hijacking password. <br> When the user enters this password to open the door, the door lock considers the user to open the door involuntarily, and sends the alarm information to the family&apos;s mobile phone or property management system.</td>
+</tr>
+<tr>
+<td>door lock member</td>
+<td>Door lock members are divided into family members and non-family members. <br> Family members are members who are added to the user&apos;s family. The door lock can be used to manage family members and set the unlock mode. <br> Non-family members are members created in door locks and can be managed through door lock related interfaces.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="description"><a name="description" class="anchor-navigation-ex-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h2>
+<table>
+<thead>
+<tr>
+<th>Class Name</th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TuyaOptimusSdk</code></td>
+<td>SDK init class, used to create <code>ITuyaLockManager</code></td>
+</tr>
+<tr>
+<td><code>ITuyaLockManager</code></td>
+<td>Lock manager class, used to create <code>ITuyaWifiLock</code></td>
+</tr>
+<tr>
+<td><code>ITuyaWifiLock</code></td>
+<td>Wi-Fi door lock class, all Wi-Fi door lock APIs are in it</td>
+</tr>
+</tbody>
+</table>
+<p>Create <code>ITuyaWifiLock</code> by device id:</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// init sdk</span>
+<span class="token class-name">TuyaOptimusSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token function">getApplicationContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// get ITuyaLockManager</span>
+<span class="token class-name">ITuyaLockManager</span> tuyaLockManager <span class="token operator">=</span> <span class="token class-name">TuyaOptimusSdk</span><span class="token punctuation">.</span><span class="token function">getManager</span><span class="token punctuation">(</span><span class="token class-name">ITuyaLockManager</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// create ITuyaWifiLock</span>
+<span class="token class-name">ITuyaWifiLock</span> tuyaLockDevice <span class="token operator">=</span> tuyaLockManager<span class="token punctuation">.</span><span class="token function">getWifiLock</span><span class="token punctuation">(</span><span class="token string">&quot;your_lock_device_id&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="member-management"><a name="member-management" class="anchor-navigation-ex-anchor" href="#member-management"><i class="fa fa-link" aria-hidden="true"></i></a><a name="member-management" class="plugin-anchor" href="#member-management"><i class="fa fa-link" aria-hidden="true"></i></a>Member Management</h2>
+<p>The door lock can be divided into family members and non-family members. Family members are Tuya home family members. For details, please refer to <a href="https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/en/resource/HomeManager.html" target="_blank">Family Management</a>.</p>
+<p>The following describes non-family member management operations in door locks:</p>
+<h3 id="get-door-lock-members"><a name="get-door-lock-members" class="anchor-navigation-ex-anchor" href="#get-door-lock-members"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-door-lock-members" class="plugin-anchor" href="#get-door-lock-members"><i class="fa fa-link" aria-hidden="true"></i></a>Get Door Lock Members</h3>
+<p><strong>Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getLockUsers</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">WifiLockUser</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<p><strong><code>WifiWifiLockUser</code> Description</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>String</td>
+<td>user id</td>
+</tr>
+<tr>
+<td>userName</td>
+<td>String</td>
+<td>user name</td>
+</tr>
+<tr>
+<td>avatarUrl</td>
+<td>String</td>
+<td>avatar url</td>
+</tr>
+<tr>
+<td>contact</td>
+<td>String</td>
+<td>user&apos;s contact, email or phone number</td>
+</tr>
+<tr>
+<td>unlockRelations</td>
+<td>List<unlockrelationbean></unlockrelationbean></td>
+<td>unlock type and password sequenceNumber</td>
+</tr>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>door lock device id</td>
+</tr>
+<tr>
+<td>ownerId</td>
+<td>String</td>
+<td>user&apos;s home id</td>
+</tr>
+<tr>
+<td>userType</td>
+<td>int</td>
+<td>door lock member type, 1: Family member 2: Non-family member</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getLockUsers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">WifiLockUser</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock users failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">WifiLockUser</span><span class="token punctuation">&gt;</span></span> wifiLockUser<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock users success: wifiLockUser = &quot;</span> <span class="token operator">+</span> wifiLockUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="create-a-door-lock-member"><a name="create-a-door-lock-member" class="anchor-navigation-ex-anchor" href="#create-a-door-lock-member"><i class="fa fa-link" aria-hidden="true"></i></a><a name="create-a-door-lock-member" class="plugin-anchor" href="#create-a-door-lock-member"><i class="fa fa-link" aria-hidden="true"></i></a>Create a Door Lock Member</h3>
+<p><strong>Description</strong></p>
+<p>Create non-family members. </p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addLockUser</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token class-name">File</span> avatarFile<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UnlockRelation</span><span class="token punctuation">&gt;</span></span> unlockRelations<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userName</td>
+<td>No</td>
+<td>user name</td>
+</tr>
+<tr>
+<td>avatarFile</td>
+<td>Yes</td>
+<td>file of avatar</td>
+</tr>
+<tr>
+<td>unlockRelations</td>
+<td>No</td>
+<td>list of UnlockRelationBean</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>UnlockRelationBean</code> Description</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TuyaUnlockType</td>
+<td>enum</td>
+<td>unlock type</td>
+</tr>
+<tr>
+<td>passwordNumber</td>
+<td>int</td>
+<td>password sequence number, 0 - 999</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UnlockRelation</span><span class="token punctuation">&gt;</span></span> unlockRelations <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">UnlockRelation</span> unlockRelation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UnlockRelation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+unlockRelation<span class="token punctuation">.</span>unlockType <span class="token operator">=</span> <span class="token class-name">TuyaUnlockType</span><span class="token punctuation">.</span>PASSWORD<span class="token punctuation">;</span>
+unlockRelation<span class="token punctuation">.</span>passwordNumber <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+unlockRelations<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>unlockRelation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">File</span> avatarFile <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token function">getFilesDir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;1.png&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tuyaLockDevice<span class="token punctuation">.</span><span class="token function">addLockUser</span><span class="token punctuation">(</span><span class="token string">&quot;Pan&quot;</span><span class="token punctuation">,</span> avatarFile <span class="token punctuation">,</span> unlockRelations<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;add lock user failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> userId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;add lock user success: &quot;</span> <span class="token operator">+</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Tips</strong></p>
+<p><code>UnlockRelation</code> can be obtained from the <a href="#get-door-lock-records">Get Door Lock Records</a> section.</p>
+<p>When the door lock uses a password or other unlocking method, the unlocking record can be obtained, and then the unlocking method in the unlocking record can be assigned to a user.</p>
+<h3 id="update-a-door-lock-member-information"><a name="update-a-door-lock-member-information" class="anchor-navigation-ex-anchor" href="#update-a-door-lock-member-information"><i class="fa fa-link" aria-hidden="true"></i></a><a name="update-a-door-lock-member-information" class="plugin-anchor" href="#update-a-door-lock-member-information"><i class="fa fa-link" aria-hidden="true"></i></a>Update a Door Lock Member Information</h3>
+<p><strong>Description</strong></p>
+<p>Use SDK to update door lock member information, including username, avatar, unlock password correspondence, etc.</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">updateLockUser</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> userId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token class-name">File</span> avatarFile<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UnlockRelation</span><span class="token punctuation">&gt;</span></span> unlockRelations<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>No</td>
+<td>user id</td>
+</tr>
+<tr>
+<td>userName</td>
+<td>Yes</td>
+<td>Member user name, optional, not modified if null</td>
+</tr>
+<tr>
+<td>avatarImage</td>
+<td>Yes</td>
+<td>Member user avatar, optional, not modified if null</td>
+</tr>
+<tr>
+<td>unlockRelations</td>
+<td>No</td>
+<td>Association between member unlocking method and password sequence number. If not modified, fill in the original value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UnlockRelation</span><span class="token punctuation">&gt;</span></span> unlockRelations <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">UnlockRelation</span> unlockRelation <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UnlockRelation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+unlockRelation<span class="token punctuation">.</span>unlockType <span class="token operator">=</span> <span class="token class-name">TuyaUnlockType</span><span class="token punctuation">.</span>PASSWORD<span class="token punctuation">;</span>
+unlockRelation<span class="token punctuation">.</span>passwordNumber <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+unlockRelations<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>unlockRelation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+tuyaLockDevice<span class="token punctuation">.</span><span class="token function">updateLockUser</span><span class="token punctuation">(</span><span class="token string">&quot;0000005f1g&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;pan&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> unlockRelations<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;update lock user failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> aBoolean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;update lock user success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="delete-a-door-lock-member"><a name="delete-a-door-lock-member" class="anchor-navigation-ex-anchor" href="#delete-a-door-lock-member"><i class="fa fa-link" aria-hidden="true"></i></a><a name="delete-a-door-lock-member" class="plugin-anchor" href="#delete-a-door-lock-member"><i class="fa fa-link" aria-hidden="true"></i></a>Delete a Door Lock Member</h3>
+<p><strong>Description</strong></p>
+<p>Use the SDK to delete door lock member information. Deleting members does not delete existing passwords</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteLockUser</span><span class="token punctuation">(</span><span class="token class-name">String</span> userId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>user id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">deleteLockUser</span><span class="token punctuation">(</span><span class="token string">&quot;0000004pnk&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;delete lock user failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;delete lock user failed success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="temporary-password"><a name="temporary-password" class="anchor-navigation-ex-anchor" href="#temporary-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="temporary-password" class="plugin-anchor" href="#temporary-password"><i class="fa fa-link" aria-hidden="true"></i></a>Temporary Password</h2>
+<p>Use the SDK to create a temporary password and enter it on the door lock to unlock it.</p>
+<pre class="language-"><code class="lang-sequence">title: Unlock with temporary password
+participant lock
+participant user
+participant app
+participant server
+
+note over user: enter a 7-digit, numeric-only temporary password
+app -&gt; server: create temporary password
+server --&gt; app: return result
+user -&gt; lock: enter the password on the door lock, \nand the device trigger the update of the password list
+note over lock: update of the password list
+user -&gt; lock: enter password 
+note over lock: execute
+</code></pre>
+<h3 id="create-temporary-password"><a name="create-temporary-password" class="anchor-navigation-ex-anchor" href="#create-temporary-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="create-temporary-password" class="plugin-anchor" href="#create-temporary-password"><i class="fa fa-link" aria-hidden="true"></i></a>Create Temporary Password</h3>
+<p><strong>Description</strong></p>
+<p>The temporary password can customize the validity period of the password. When the password is created, it needs to be synchronized on the door lock device.</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">createTempPassword</span><span class="token punctuation">(</span><span class="token class-name">TempPassword</span> tempPassword<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<p><code>TempPassword</code> created by <code>TempPassword.Builder</code>, for details, refer to the following code example.</p>
+<p>The following is a description of the fields of this class:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>No</td>
+<td>password name</td>
+</tr>
+<tr>
+<td>password</td>
+<td>No</td>
+<td>temporary password</td>
+</tr>
+<tr>
+<td>effectiveDate</td>
+<td>No</td>
+<td>Password effective timestamp, unit ms</td>
+</tr>
+<tr>
+<td>invalidDate</td>
+<td>No</td>
+<td>Password expiration timestamp, unit ms</td>
+</tr>
+<tr>
+<td>countryCode</td>
+<td>Yes</td>
+<td>country code&#xFF0C;for example 86</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Yes</td>
+<td>phone number, when the creation is successful, the mobile phone user will be notified</td>
+</tr>
+</tbody>
+</table>
+<p>The mobile phone number and country code can be omitted, and the SMS service must be purchased to take effect.</p>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TempPasswordBuilder</span> tempPasswordBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TempPasswordBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token string">&quot;Liam&apos;s password&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">password</span><span class="token punctuation">(</span><span class="token string">&quot;1231231&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">effectiveTime</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">invalidTime</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tuyaLockDevice<span class="token punctuation">.</span><span class="token function">createTempPassword</span><span class="token punctuation">(</span>tempPasswordBuilder<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;create lock temp password: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;add lock user success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="get-temporary-passwords"><a name="get-temporary-passwords" class="anchor-navigation-ex-anchor" href="#get-temporary-passwords"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-temporary-passwords" class="plugin-anchor" href="#get-temporary-passwords"><i class="fa fa-link" aria-hidden="true"></i></a>Get Temporary Passwords</h3>
+<p><strong>Description</strong></p>
+<p>Use the SDK to get a list of temporary passwords, you can view the status of the use of temporary passwords</p>
+<pre class="language-"><code>public void getTempPasswords(final ITuyaResultCallback&lt;List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TempPassword</span><span class="token punctuation">&gt;</span></span>&gt; callback)
+</code></pre><p><strong>Parameters</strong></p>
+<p><strong><code>TuyaSmartLockTempPwdModel</code> Data Model</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>phone</td>
+<td>String</td>
+<td>phone number</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>password name</td>
+</tr>
+<tr>
+<td>countryCode</td>
+<td>String</td>
+<td>country code</td>
+</tr>
+<tr>
+<td>effectiveDate</td>
+<td>long</td>
+<td>Password effective timestamp, unit ms</td>
+</tr>
+<tr>
+<td>invalidDate</td>
+<td>long</td>
+<td>Password expiration timestamp, unit ms</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>long</td>
+<td>create timestamp&#xFF0C;unit ms</td>
+</tr>
+<tr>
+<td>id</td>
+<td>int</td>
+<td>password id</td>
+</tr>
+<tr>
+<td>sequenceNumber</td>
+<td>int</td>
+<td>password sequence number</td>
+</tr>
+<tr>
+<td>status</td>
+<td>int</td>
+<td>password status</td>
+</tr>
+</tbody>
+</table>
+<p>The password status includes the following types:</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">int</span> REMOVED <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> INVALID <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> TO_BE_PUBILSH <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> WORKING <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> TO_BE_DELETED <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> EXPIRED <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getTempPasswords</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">TempPassword</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock temp passwords failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TempPassword</span><span class="token punctuation">&gt;</span></span> tempPasswords<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock temp passwords success: tempPasswords&quot;</span> <span class="token operator">+</span> tempPasswords<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="delete-temporary-password"><a name="delete-temporary-password" class="anchor-navigation-ex-anchor" href="#delete-temporary-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="delete-temporary-password" class="plugin-anchor" href="#delete-temporary-password"><i class="fa fa-link" aria-hidden="true"></i></a>Delete Temporary Password</h3>
+<p><strong>Description</strong></p>
+<p>Use the SDK to delete the temporary password. After the deletion, the door lock device needs to be updated.</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteTempPassword</span><span class="token punctuation">(</span><span class="token keyword">int</span> passwordId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>passwordId</td>
+<td>Door lock temporary password unique id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">deleteTempPassword</span><span class="token punctuation">(</span><span class="token number">1111</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;delete lock temp password failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;delete lock temp password success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="dynamic-password"><a name="dynamic-password" class="anchor-navigation-ex-anchor" href="#dynamic-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="dynamic-password" class="plugin-anchor" href="#dynamic-password"><i class="fa fa-link" aria-hidden="true"></i></a>Dynamic Password</h2>
+<p>Use the SDK to get a dynamic password and enter it on the door lock to unlock. The dynamic password is valid for 5 minutes.</p>
+<pre class="language-"><code class="lang-sequence">title: Unlock with dynamic password
+participant lock
+participant user
+participant app
+participant server
+
+app -&gt; server: Request for dynamic password
+server --&gt; app: Returns dynamic password results
+app --&gt; user: Send password
+note over user: Get dynamic password
+user -&gt; lock: Input dynamic password
+note over lock: Execute
+</code></pre>
+<h3 id="get-dynamic-password"><a name="get-dynamic-password" class="anchor-navigation-ex-anchor" href="#get-dynamic-password"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-dynamic-password" class="plugin-anchor" href="#get-dynamic-password"><i class="fa fa-link" aria-hidden="true"></i></a>Get Dynamic Password</h3>
+<p><strong>Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getDynamicPassword</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getDynamicPassword</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock dynamic password failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> dynamicPassword<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock dynamic password success: dynamicPassword = &quot;</span> <span class="token operator">+</span> dynamicPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="open-the-door-remotely"><a name="open-the-door-remotely" class="anchor-navigation-ex-anchor" href="#open-the-door-remotely"><i class="fa fa-link" aria-hidden="true"></i></a><a name="open-the-door-remotely" class="plugin-anchor" href="#open-the-door-remotely"><i class="fa fa-link" aria-hidden="true"></i></a>Open the Door Remotely</h2>
+<p>After triggering a remote door open request on the door lock, you can use the SDK to remotely open the door</p>
+<pre class="language-"><code class="lang-sequence">Title: Remote Open
+
+participant User
+participant Lock
+participant app
+
+User-&gt;Lock: operate lock (4+#)
+Lock-&gt;app: send open request
+note over app: receive open request
+app--&gt;Lock: send open result
+note over Lock: handle result
+</code></pre>
+<p>To open a door remotely, you need to register for remote door opening monitoring. After receiving the remote door opening request for the door lock, you can call the remote door opening interface.</p>
+<h3 id="register-remote-unlock-listener"><a name="register-remote-unlock-listener" class="anchor-navigation-ex-anchor" href="#register-remote-unlock-listener"><i class="fa fa-link" aria-hidden="true"></i></a><a name="register-remote-unlock-listener" class="plugin-anchor" href="#register-remote-unlock-listener"><i class="fa fa-link" aria-hidden="true"></i></a>Register Remote Unlock Listener</h3>
+<p><strong>Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setRemoteUnlockListener</span><span class="token punctuation">(</span><span class="token class-name">RemoteUnlockListener</span> remoteUnlockListener<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<p>RemoteUnlockListener has a method in the interface&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">onReceive</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">int</span> second<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The method parameters are as follows&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>device id</td>
+</tr>
+<tr>
+<td>second</td>
+<td>int</td>
+<td>How many seconds do you need to process</td>
+</tr>
+</tbody>
+</table>
+<h3 id="request-remote-unlock"><a name="request-remote-unlock" class="anchor-navigation-ex-anchor" href="#request-remote-unlock"><i class="fa fa-link" aria-hidden="true"></i></a><a name="request-remote-unlock" class="plugin-anchor" href="#request-remote-unlock"><i class="fa fa-link" aria-hidden="true"></i></a>Request Remote Unlock</h3>
+<p><strong>Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">replyRemoteUnlock</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> allow<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allow</td>
+<td>boolean</td>
+<td>Whether to allow unlocking</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token class-name">Bundle</span> savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setContentView</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_lock_device<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+    <span class="token comment">// Register for remote unlock listener</span>
+    tuyaLockDevice<span class="token punctuation">.</span><span class="token function">setRemoteUnlockListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">RemoteUnlockListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onReceive</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">int</span> second<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>second <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>dialogShowing<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                dialogShowing <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;remote unlock request onReceive&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">onCreateDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Create remote unlock confirmation dialog
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreateDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Use the Builder class for convenient dialog construction</span>
+    <span class="token class-name">AlertDialog</span><span class="token punctuation">.</span><span class="token class-name">Builder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AlertDialog</span><span class="token punctuation">.</span><span class="token class-name">Builder</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    builder<span class="token punctuation">.</span><span class="token function">setMessage</span><span class="token punctuation">(</span><span class="token string">&quot;Whether to allow remote unlocking?&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setPositiveButton</span><span class="token punctuation">(</span><span class="token string">&quot;YES&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DialogInterface</span><span class="token punctuation">.</span><span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span><span class="token class-name">DialogInterface</span> dialog<span class="token punctuation">,</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">replyRemoteUnlockRequest</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;remote unlock request access&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    dialog<span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    dialogShowing <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setNegativeButton</span><span class="token punctuation">(</span><span class="token string">&quot;NO&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">DialogInterface</span><span class="token punctuation">.</span><span class="token class-name">OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span><span class="token class-name">DialogInterface</span> dialog<span class="token punctuation">,</span> <span class="token keyword">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">replyRemoteUnlockRequest</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    dialog<span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;remote unlock request deny&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    dialogShowing <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setCancelable</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">AlertDialog</span> alertDialog <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    alertDialog<span class="token punctuation">.</span><span class="token function">setCanceledOnTouchOutside</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    alertDialog<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Request remote unlock interface
+ *
+ * @param allow
+ */</span>
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">replyRemoteUnlockRequest</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> allow<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    tuyaLockDevice<span class="token punctuation">.</span><span class="token function">replyRemoteUnlock</span><span class="token punctuation">(</span>allow<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;reply remote unlock failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token annotation punctuation">@Override</span>
+        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;reply remote unlock success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="lock-records"><a name="lock-records" class="anchor-navigation-ex-anchor" href="#lock-records"><i class="fa fa-link" aria-hidden="true"></i></a><a name="lock-records" class="plugin-anchor" href="#lock-records"><i class="fa fa-link" aria-hidden="true"></i></a>Lock Records</h2>
+<p>Use SDK to obtain door lock records, including unlock records, doorbell records, alarm records, etc.</p>
+<h3 id="get-lock-records"><a name="get-lock-records" class="anchor-navigation-ex-anchor" href="#get-lock-records"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-lock-records" class="plugin-anchor" href="#get-lock-records"><i class="fa fa-link" aria-hidden="true"></i></a>Get Lock Records</h3>
+<p><strong>Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getRecords</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> dpCodes<span class="token punctuation">,</span> <span class="token keyword">int</span> offset<span class="token punctuation">,</span> <span class="token keyword">int</span> limit<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dpCodes</td>
+<td>Need to query the unlocking method dp codes. For details, refer to <a href="#wi-fi-door-lock-function-points">Wi-Fi Door Lock Function Points</a></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>page offset</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>item count in one page</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parameters in callback</strong></p>
+<p><code>Record</code>  Description</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>totalCount</td>
+<td>int</td>
+<td>total count of records</td>
+</tr>
+<tr>
+<td>hasNext</td>
+<td>boolean</td>
+<td>has next page</td>
+</tr>
+<tr>
+<td>datas</td>
+<td>List<databean></databean></td>
+<td>the list of records</td>
+</tr>
+</tbody>
+</table>
+<p><code>DataBean</code> Description</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>String</td>
+<td>user id</td>
+</tr>
+<tr>
+<td>avatarUrl</td>
+<td>String</td>
+<td>user avatar url</td>
+</tr>
+<tr>
+<td>userName</td>
+<td>String</td>
+<td>user name</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>long</td>
+<td>create timestamp, unit ms</td>
+</tr>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>device id</td>
+</tr>
+<tr>
+<td>dpCodesMap</td>
+<td>HashMap<string, object=""></string,></td>
+<td>dp data of this record</td>
+</tr>
+<tr>
+<td>unlockRelation</td>
+<td>UnlockRelation</td>
+<td>The relationship between the unlock type and the unlock password number, if it is not the unlock record, it can be empty</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>int</td>
+<td>record tag&#xFF0C;0 means other, 1 means hijack alarm</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tips</strong></p>
+<p>You can query the unlocking records, get the <code>unlockRelation</code>, and assign it to the created user.</p>
+<p>For example, if you create a password on the door lock, and then use the password to unlock, a lock unlocking record is generated. The app can query this unlocking record and assign the password to the user you want to assign.</p>
+<p><strong>Example</strong></p>
+<p>You can enter the function points to obtain the door record.</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> dpCodes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dpCodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;alarm_lock&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dpCodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;hijack&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dpCodes<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">&quot;doorbell&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getRecords</span><span class="token punctuation">(</span>dpCodes<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get unlock records failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Record</span> recordBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get unlock records success: recordBean = &quot;</span> <span class="token operator">+</span> recordBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="get-door-lock-unlock-records"><a name="get-door-lock-unlock-records" class="anchor-navigation-ex-anchor" href="#get-door-lock-unlock-records"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-door-lock-unlock-records" class="plugin-anchor" href="#get-door-lock-unlock-records"><i class="fa fa-link" aria-hidden="true"></i></a>Get Door Lock Unlock Records</h3>
+<p>Use SDK to obtain door lock records, including unlock records, doorbell records, alarm records, etc.</p>
+<p><strong>Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * get unlock records
+ * @param unlockTypes unlock type list 
+ * @param offset page number
+ * @param limit item count
+ * @param callback callback
+ */</span>
+<span class="token keyword">void</span> <span class="token function">getUnlockRecords</span><span class="token punctuation">(</span><span class="token keyword">int</span> offset<span class="token punctuation">,</span> <span class="token keyword">int</span> limit<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>offset</td>
+<td>page offset</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>item count in one page</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getUnlockRecords</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get unlock records failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Record</span> recordBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get unlock records success: recordBean = &quot;</span> <span class="token operator">+</span> recordBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="get-door-lock-hijacking-record"><a name="get-door-lock-hijacking-record" class="anchor-navigation-ex-anchor" href="#get-door-lock-hijacking-record"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-door-lock-hijacking-record" class="plugin-anchor" href="#get-door-lock-hijacking-record"><i class="fa fa-link" aria-hidden="true"></i></a>Get Door Lock Hijacking Record</h3>
+<p>Use the SDK to obtain the door lock hijacking record. You can query it based on the unlocking function definition point.</p>
+<p><strong>Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getHijackRecords</span><span class="token punctuation">(</span><span class="token keyword">int</span> offset<span class="token punctuation">,</span> <span class="token keyword">int</span> limit<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getHijackRecords</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock hijack records failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Record</span> hijackingRecord<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock hijack records success: hijackingRecord = &quot;</span> <span class="token operator">+</span> hijackingRecord<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="wi-fi-door-lock-function-points"><a name="wi-fi-door-lock-function-points" class="anchor-navigation-ex-anchor" href="#wi-fi-door-lock-function-points"><i class="fa fa-link" aria-hidden="true"></i></a><a name="wi-fi-door-lock-function-points" class="plugin-anchor" href="#wi-fi-door-lock-function-points"><i class="fa fa-link" aria-hidden="true"></i></a>Wi-Fi Door Lock Function Points</h2>
+<table>
+<thead>
+<tr>
+<th>dp name</th>
+<th>dp code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unlock by fingerprint</td>
+<td>unlock_fingerprint</td>
+</tr>
+<tr>
+<td>unlock by password</td>
+<td>unlock_password</td>
+</tr>
+<tr>
+<td>unlock by temporary password</td>
+<td>unlock_temporary</td>
+</tr>
+<tr>
+<td>unlock by dynamic password</td>
+<td>unlock_dynamic</td>
+</tr>
+<tr>
+<td>unlock by card</td>
+<td>unlock_card</td>
+</tr>
+<tr>
+<td>unlock by face</td>
+<td>unlock_face</td>
+</tr>
+<tr>
+<td>unlock by key</td>
+<td>unlock_key</td>
+</tr>
+<tr>
+<td>alarm record</td>
+<td>alarm_lock</td>
+</tr>
+<tr>
+<td>apply remote unlock</td>
+<td>unlock_request</td>
+</tr>
+<tr>
+<td>reply remote unlock</td>
+<td>reply_unlock_request</td>
+</tr>
+<tr>
+<td>battery status</td>
+<td>battery_state</td>
+</tr>
+<tr>
+<td>residual electricity</td>
+<td>residual_electricity</td>
+</tr>
+<tr>
+<td>lock from inside</td>
+<td>reverse_lock</td>
+</tr>
+<tr>
+<td>child lock status</td>
+<td>child_lock</td>
+</tr>
+<tr>
+<td>unlock by app</td>
+<td>unlock_app</td>
+</tr>
+<tr>
+<td>hijack alarm record</td>
+<td>hijack</td>
+</tr>
+<tr>
+<td>open the door from inside</td>
+<td>open_inside</td>
+</tr>
+<tr>
+<td>door opening and closing status</td>
+<td>closed_opened</td>
+</tr>
+<tr>
+<td>doorbell alarm record</td>
+<td>doorbell</td>
+</tr>
+<tr>
+<td>SMS notifacation</td>
+<td>message</td>
+</tr>
+<tr>
+<td>lock from outside</td>
+<td>anti_lock_outside</td>
+</tr>
+<tr>
+<td>unlock by eye</td>
+<td>unlock_eye</td>
+</tr>
+<tr>
+<td>unlock by hand</td>
+<td>unlock_hand</td>
+</tr>
+<tr>
+<td>unlock by finger vein</td>
+<td>unlock_finger_vein</td>
+</tr>
+<tr>
+<td>update all finger record</td>
+<td>update_all_finger</td>
+</tr>
+<tr>
+<td>update all password record</td>
+<td>update_all_password</td>
+</tr>
+<tr>
+<td>update all card record</td>
+<td>update_all_card</td>
+</tr>
+<tr>
+<td>update all face record</td>
+<td>update_all_face</td>
+</tr>
+<tr>
+<td>update all eye record</td>
+<td>update_all_eye</td>
+</tr>
+<tr>
+<td>update all hand record</td>
+<td>update_all_hand</td>
+</tr>
+<tr>
+<td>update all finger vein record</td>
+<td>update_all_fin_vein</td>
+</tr>
+<tr>
+<td>offline password unlock report</td>
+<td>unlock_offline_pd</td>
+</tr>
+<tr>
+<td>offline password clear report</td>
+<td>unlock_offline_clear</td>
+</tr>
+<tr>
+<td>single offline password clear report</td>
+<td>unlock_offline_clear_single</td>
+</tr>
+</tbody>
+</table>
+<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/WiFiLockDoc.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/WiFiLockDoc.html"});gitalk.render("gitalk-container");</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lock.html#" class="navigation navigation-prev " aria-label="Previous page: Smart Lock SDK">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="BLELockDoc.html#" class="navigation navigation-next " aria-label="Next page: BLE Lock">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":" Wi-Fi Lock","level":"3.1.3.1","depth":3,"next":{"title":"BLE Lock","level":"3.1.3.2","depth":3,"anchor":"#","path":"resource/BLELockDoc.md","ref":"./resource/BLELockDoc.md#","articles":[]},"previous":{"title":"Smart Lock SDK","level":"3.1.3","depth":2,"anchor":"#","path":"resource/Lock.md","ref":"./resource/Lock.md#","articles":[{"title":" Wi-Fi Lock","level":"3.1.3.1","depth":3,"anchor":"#","path":"resource/WiFiLockDoc.md","ref":"./resource/WiFiLockDoc.md#","articles":[]},{"title":"BLE Lock","level":"3.1.3.2","depth":3,"anchor":"#","path":"resource/BLELockDoc.md","ref":"./resource/BLELockDoc.md#","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/WiFiLockDoc.md","mtime":"2020-06-06T07:27:41.781Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-06T07:36:12.668Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sf-score/lib/scorePlugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

@@ -1,0 +1,3116 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>蓝牙门锁 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-gtalk/gtalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sf-score/style/scorePlugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CommonInterface.html" />
+    
+    
+    <link rel="prev" href="WiFiLockDoc.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    功能概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Preparation.html">
+            
+                <a href="Preparation.html">
+            
+                    
+                    准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Integrated.html">
+            
+                <a href="Integrated.html">
+            
+                    
+                    集成 SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Demo.html">
+            
+                <a href="Demo.html">
+            
+                    
+                    Demo App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="User.html">
+            
+                <a href="User.html">
+            
+                    
+                    用户管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="User_mobile.html">
+            
+                <a href="User_mobile.html">
+            
+                    
+                    手机帐号体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="User_email.html">
+            
+                <a href="User_email.html">
+            
+                    
+                    邮箱帐号体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="User_uid.html">
+            
+                <a href="User_uid.html">
+            
+                    
+                    用户 UID 登陆体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="User_ThirdLogin.html">
+            
+                <a href="User_ThirdLogin.html">
+            
+                    
+                    第三方登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="User_update.html">
+            
+                <a href="User_update.html">
+            
+                    
+                    修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="User_logout.html">
+            
+                <a href="User_logout.html#退出登录">
+            
+                    
+                    退出登录、注销账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="User_model.html">
+            
+                <a href="User_model.html">
+            
+                    
+                    用户数据模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="User_Session.html">
+            
+                <a href="User_Session.html">
+            
+                    
+                    Session 过期的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="HomeManager.html">
+            
+                <a href="HomeManager.html">
+            
+                    
+                    家庭管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="Home.html">
+            
+                <a href="Home.html">
+            
+                    
+                    家庭管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="HomeManager.html">
+            
+                <a href="HomeManager.html">
+            
+                    
+                    家庭操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="HomeDataManager.html">
+            
+                <a href="HomeDataManager.html">
+            
+                    
+                    家庭缓存操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="HomeMember.html">
+            
+                <a href="HomeMember.html">
+            
+                    
+                    家庭成员管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="Room.html">
+            
+                <a href="Room.html">
+            
+                    
+                    家庭房间管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Activator_wifi.html">
+            
+                <a href="Activator_wifi.html">
+            
+                    
+                    设备配网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="Activator_wifi.html">
+            
+                <a href="Activator_wifi.html">
+            
+                    
+                    Wi-Fi 设备配网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="Activator_wifi_ez.html">
+            
+                <a href="Activator_wifi_ez.html">
+            
+                    
+                    快连 (EZ) 模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="Activator_wifi_ap.html">
+            
+                <a href="Activator_wifi_ap.html">
+            
+                    
+                    热点 (AP) 模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="Activator_camera_scan.html">
+            
+                <a href="Activator_camera_scan.html">
+            
+                    
+                    摄像头二维码配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="Activator_wifi_faq.html">
+            
+                <a href="Activator_wifi_faq.html">
+            
+                    
+                    Wi-Fi 设备配网常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="Activator_zigbee.html">
+            
+                <a href="Activator_zigbee.html">
+            
+                    
+                    ZigBee 设备配网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="Activator_zigbee_gateway.html">
+            
+                <a href="Activator_zigbee_gateway.html">
+            
+                    
+                    ZigBee 网关配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="Activator_zigbee_subdevice.html">
+            
+                <a href="Activator_zigbee_subdevice.html">
+            
+                    
+                    ZigBee 子设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Device.html">
+            
+                <a href="Device.html#设备管理">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="Device.html">
+            
+                <a href="Device.html#初始化设备控制">
+            
+                    
+                    设备初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="Device.html">
+            
+                <a href="Device.html#设备监听">
+            
+                    
+                    设备监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="Device.html">
+            
+                <a href="Device.html#设备控制">
+            
+                    
+                    设备控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Device.html">
+            
+                <a href="Device.html#设备功能点说明">
+            
+                    
+                    设备功能点说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="Device.html">
+            
+                <a href="Device.html#设备信息查询">
+            
+                    
+                    设备信息查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Device.html">
+            
+                <a href="Device.html#修改设备名称">
+            
+                    
+                    修改设备名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="Device.html">
+            
+                <a href="Device.html#移除设备">
+            
+                    
+                    移除设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Device.html">
+            
+                <a href="Device.html#恢复出厂设置">
+            
+                    
+                    恢复出厂设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="Device.html">
+            
+                <a href="Device.html#查询-wi-fi-信号强度">
+            
+                    
+                    查询 Wi-Fi 信号强度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="Device.html">
+            
+                <a href="Device.html#回收设备资源">
+            
+                    
+                    回收设备资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="OTA.html">
+            
+                <a href="OTA.html">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="Gateway.html">
+            
+                <a href="Gateway.html">
+            
+                    
+                    ZigBee 网关控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html">
+            
+                    
+                    设备多控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Shared.html">
+            
+                <a href="Shared.html#共享设备">
+            
+                    
+                    共享设备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="Shared_Device_add.html">
+            
+                <a href="Shared_Device_add.html#添加共享">
+            
+                    
+                    添加共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="Shared_Device_Relation.html">
+            
+                <a href="Shared_Device_Relation.html#分享关系获取">
+            
+                    
+                    分享关系获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="Shared_Device_Remove.html">
+            
+                <a href="Shared_Device_Remove.html#移除共享">
+            
+                    
+                    移除共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="Shared_Device_Rename.html">
+            
+                <a href="Shared_Device_Rename.html#修改备注名">
+            
+                    
+                    修改备注名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="Timer.html">
+            
+                <a href="Timer.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Group.html">
+            
+                <a href="Group.html">
+            
+                    
+                    群组管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="Group_wifi.html">
+            
+                <a href="Group_wifi.html">
+            
+                    
+                    Wi-Fi 群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="Group_zigbee.html">
+            
+                <a href="Group_zigbee.html">
+            
+                    
+                    ZigBee 群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="Group_control.html">
+            
+                <a href="Group_control.html">
+            
+                    
+                    群组控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html">
+            
+                    
+                    智能场景
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#智能场景">
+            
+                    
+                    智能场景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#单个场景操作">
+            
+                    
+                    单个场景操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Message.html">
+            
+                <a href="Message.html#消息中心">
+            
+                    
+                    消息中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="Message.html">
+            
+                <a href="Message.html#消息相关功能">
+            
+                    
+                    消息相关功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="MessagePush.html">
+            
+                <a href="MessagePush.html#消息推送设置">
+            
+                    
+                    消息推送设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="Feedback.html">
+            
+                <a href="Feedback.html">
+            
+                    
+                    意见反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    集成 Push
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="Push_umeng.html">
+            
+                <a href="Push_umeng.html">
+            
+                    
+                    友盟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="Push_fcm.html">
+            
+                <a href="Push_fcm.html">
+            
+                    
+                    Firebase Cloud Messaging (FCM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="BLE.html">
+            
+                <a href="BLE.html">
+            
+                    
+                    涂鸦蓝牙体系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="BLE.html">
+            
+                <a href="BLE.html">
+            
+                    
+                    蓝牙
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="BLE_Activator.html">
+            
+                <a href="BLE_Activator.html#扫描设备">
+            
+                    
+                    扫描设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="BLE_Activator.html">
+            
+                <a href="BLE_Activator.html#单点设备入网激活">
+            
+                    
+                    单点设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="BLE_Activator.html">
+            
+                <a href="BLE_Activator.html#双模设备入网激活">
+            
+                    
+                    双模设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="BLE_Operator.html">
+            
+                <a href="BLE_Operator.html">
+            
+                    
+                    蓝牙设备操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="BLE_OTA.html">
+            
+                <a href="BLE_OTA.html">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="Mesh.html">
+            
+                <a href="Mesh.html">
+            
+                    
+                    蓝牙 Mesh (SIG)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="SigMesh_Prepare.html">
+            
+                <a href="SigMesh_Prepare.html">
+            
+                    
+                    准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="SigMesh_IDEA.html">
+            
+                <a href="SigMesh_IDEA.html">
+            
+                    
+                    部分基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="SigMesh_Admin.html">
+            
+                <a href="SigMesh_Admin.html">
+            
+                    
+                    管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="SigMesh_Config.html">
+            
+                <a href="SigMesh_Config.html">
+            
+                    
+                    配网与入网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" data-path="SigMesh_Device.html">
+            
+                <a href="SigMesh_Device.html">
+            
+                    
+                    设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.6" data-path="SigMesh_Group_Operate.html">
+            
+                <a href="SigMesh_Group_Operate.html">
+            
+                    
+                    群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.7" data-path="SigMesh_Device_Operate.html">
+            
+                <a href="SigMesh_Device_Operate.html">
+            
+                    
+                    控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.8" data-path="SigMesh_OTA.html">
+            
+                <a href="SigMesh_OTA.html">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="Mesh.html">
+            
+                <a href="Mesh.html">
+            
+                    
+                    蓝牙 Mesh (涂鸦)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="Mesh_Prepare.html">
+            
+                <a href="Mesh_Prepare.html">
+            
+                    
+                    准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.2" data-path="Mesh_IDEA.html">
+            
+                <a href="Mesh_IDEA.html">
+            
+                    
+                    部分基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.3" data-path="Mesh_Admin.html">
+            
+                <a href="Mesh_Admin.html">
+            
+                    
+                    管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.4" data-path="Mesh_Config.html">
+            
+                <a href="Mesh_Config.html">
+            
+                    
+                    配网与入网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.5" data-path="Mesh_Device.html">
+            
+                <a href="Mesh_Device.html">
+            
+                    
+                    设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.6" data-path="Mesh_Group_Operate.html">
+            
+                <a href="Mesh_Group_Operate.html">
+            
+                    
+                    群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.7" data-path="Mesh_Device_Operate.html">
+            
+                <a href="Mesh_Device_Operate.html">
+            
+                    
+                    控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.8" data-path="Mesh_OTA.html">
+            
+                <a href="Mesh_OTA.html">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="ExtensionAbout.html">
+            
+                <a href="ExtensionAbout.html">
+            
+                    
+                    垂直品类 SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="Extension.html">
+            
+                <a href="Extension.html#ipc-sdk">
+            
+                    
+                    IPC SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="Extension.html">
+            
+                <a href="Extension.html#扫地机-sdk">
+            
+                    
+                    扫地机 SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="Lock.html">
+            
+                <a href="Lock.html#">
+            
+                    
+                    智能门锁 SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="WiFiLockDoc.html">
+            
+                <a href="WiFiLockDoc.html#">
+            
+                    
+                     Wi-Fi 门锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="BLELockDoc.html">
+            
+                <a href="BLELockDoc.html#">
+            
+                    
+                    蓝牙门锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="CommonInterface.html">
+            
+                <a href="CommonInterface.html">
+            
+                    
+                    通用接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ErrorCode.html">
+            
+                <a href="ErrorCode.html">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="FAQ.html">
+            
+                <a href="FAQ.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ChangeLog.html">
+            
+                <a href="ChangeLog.html">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="Update_3_14_0.html">
+            
+                <a href="Update_3_14_0.html">
+            
+                    
+                    3.13.0 之前版本升级到 3.14.x 之后的版本的升级指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="join_us.html">
+            
+                <a href="join_us.html">
+            
+                    
+                    加入我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >蓝牙门锁</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;"><b></b>&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><b></b>&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x8BF4;&#x660E;"><b></b>&#x4F7F;&#x7528;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;"><b></b>&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;"><b></b>&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;"><b></b>&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;"><b></b>&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;"><b></b>&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;"><b></b>&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;"><b></b>&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;"><b></b>&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;</a></li></ul><li><span class="title-icon "></span><a href="#&#x52A8;&#x6001;&#x5BC6;&#x7801;"><b></b>&#x52A8;&#x6001;&#x5BC6;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;"><b></b>&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;</a></li></ul><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;&#x89E3;&#x9501;--&#x843D;&#x9501;"><b></b>&#x84DD;&#x7259;&#x89E3;&#x9501; &amp; &#x843D;&#x9501;</a></li><ul><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;&#x89E3;&#x9501;"><b></b>&#x84DD;&#x7259;&#x89E3;&#x9501;</a></li><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;&#x843D;&#x9501;"><b></b>&#x84DD;&#x7259;&#x843D;&#x9501;</a></li></ul><li><span class="title-icon "></span><a href="#&#x95E8;&#x9501;&#x8BB0;&#x5F55;"><b></b>&#x95E8;&#x9501;&#x8BB0;&#x5F55;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;"><b></b>&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;"><b></b>&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;</a></li></ul><li><span class="title-icon "></span><a href="#&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;"><b></b>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;"><b></b>&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;"><b></b>&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><b></b>&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;"><b></b>&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><b></b>&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;"><b></b>&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;</a></li><li><span class="title-icon "></span><a href="#&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;"><b></b>&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;</a></li></ul><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;"><b></b>&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;</a></li></ul></ul></div><a href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;"><a name="&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x8BF4;&#x660E;</h1>
+<h2 id="&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><a name="&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="anchor-navigation-ex-anchor" href="#&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="plugin-anchor" href="#&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E13;&#x6709;&#x540D;&#x8BCD;&#x89E3;&#x91CA;</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x4ECB;&#x7ECD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dpCode</td>
+<td>&#x8BBE;&#x5907;&#x529F;&#x80FD;&#x70B9;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;&#x8BBE;&#x5907;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x529F;&#x80FD;&#x70B9;&#x90FD;&#x6709;&#x540D;&#x79F0;&#x548C;&#x7F16;&#x53F7;&#xFF0C;&#x53EF;&#x53C2;&#x8003;<a href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;">&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;</a></td>
+</tr>
+<tr>
+<td>&#x52AB;&#x6301;</td>
+<td>&#x95E8;&#x9501;&#x52AB;&#x6301;&#x662F;&#x6307;&#x5C06;&#x5F55;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x5BC6;&#x7801;&#xFF08;&#x6307;&#x7EB9;&#x3001;&#x5BC6;&#x7801;&#x7B49;&#xFF09;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;&#x52AB;&#x6301;&#x5BC6;&#x7801;&#xFF0C;&#x5F53;&#x53D7;&#x5230;&#x52AB;&#x6301;&#x4F7F;&#x7528;&#x8BE5;&#x5BC6;&#x7801;&#x8FDB;&#x884C;&#x5F00;&#x9501;&#x65F6;&#xFF0C;&#x88AB;&#x8FEB;&#x5F00;&#x95E8;&#xFF0C;&#x95E8;&#x9501;&#x5C06;&#x9632;&#x52AB;&#x6301;&#x7279;&#x6B8A;&#x5F00;&#x95E8;&#x62A5;&#x8B66;&#x4FE1;&#x606F;&#x53D1;&#x9001;&#x81F3;&#x5BB6;&#x4EBA;&#x624B;&#x673A;&#x6216;&#x7269;&#x4E1A;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x95E8;&#x9501;&#x6210;&#x5458;</td>
+<td>&#x95E8;&#x9501;&#x6210;&#x5458;&#x5206;&#x4E3A;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x4E0E;&#x975E;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x3002;<br>&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x5373;&#x4E3A;&#x6D82;&#x9E26;&#x5168;&#x5C4B;&#x667A;&#x80FD;&#x7684;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x6982;&#x5FF5;&#xFF0C;&#x95E8;&#x9501;&#x5185;&#x53EF;&#x5C06;&#x5BF9;&#x5E94;&#x7684;&#x95E8;&#x9501;&#x5BC6;&#x7801;&#x7F16;&#x53F7;&#x4E0E;&#x8BE5;&#x8D26;&#x53F7;&#x5173;&#x8054;&#x8D77;&#x6765;&#xFF1B;<br>&#x975E;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x5373;&#x4E3A;&#x95E8;&#x9501;&#x5185;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x8DDF;&#x968F;&#x8BBE;&#x5907;&#x5173;&#x8054;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x5E76;&#x5206;&#x914D;&#xFF0C;&#x95E8;&#x9501;&#x5185;&#x53EF;&#x5C06;&#x5BF9;&#x5E94;&#x7684;&#x95E8;&#x9501;&#x5BC6;&#x7801;&#x7F16;&#x53F7;&#x4E0E;&#x8BE5;&#x6210;&#x5458;&#x5173;&#x8054;&#x8D77;&#x6765;&#x3002;</td>
+</tr>
+<tr>
+<td>lockUserId  &#x548C; userId</td>
+<td>lockUserId &#x662F;&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;&#x65F6;&#xFF0C;&#x4E91;&#x7AEF;&#x4E3A;&#x8BBE;&#x5907;&#x5206;&#x914D;&#x7684;&#x56FA;&#x4EF6;&#x6210;&#x5458; id&#xFF0C;&#x4EE3;&#x8868;&#x7740;&#x56FA;&#x4EF6;&#x5185;&#x8BB0;&#x5F55;&#x7684;&#x7528;&#x6237; id &#x53F7;<br>userId &#x662F;&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;&#x65F6;&#xFF0C;&#x4E91;&#x7AEF;&#x5206;&#x914D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55; id&#xFF0C;&#x4EE3;&#x8868;&#x7740;&#x7528;&#x6237;&#x7684;&#x552F;&#x4E00; id</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x4F7F;&#x7528;&#x8BF4;&#x660E;"><a name="&#x4F7F;&#x7528;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F7F;&#x7528;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x4F7F;&#x7528;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x8BF4;&#x660E;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;&#x540D;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TuyaOptimusSdk</code></td>
+<td>&#x521D;&#x59CB;&#x5316;SDK&#x5165;&#x53E3;&#xFF0C;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x7BA1;&#x7406;&#x7C7B;</td>
+</tr>
+<tr>
+<td><code>ITuyaLockManager</code></td>
+<td>&#x95E8;&#x9501;&#x7BA1;&#x7406;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x95E8;&#x9501;&#x7C7B;</td>
+</tr>
+<tr>
+<td><code>ITuyaBleLock</code></td>
+<td>&#x84DD;&#x7259;&#x95E8;&#x9501;&#x7C7B;&#xFF0C;&#x6240;&#x6709;&#x84DD;&#x7259;&#x95E8;&#x9501;&#x76F8;&#x5173;&#x65B9;&#x6CD5;&#x90FD;&#x5728;&#x5176;&#x4E2D;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<p>&#x901A;&#x8FC7;&#x8BBE;&#x5907;id&#x521B;&#x5EFA;&#x84DD;&#x7259;&#x95E8;&#x9501;&#x7C7B;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x521D;&#x59CB;&#x5316;SDK&#xFF0C;&#x4EC5;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E00;&#x6B21;</span>
+<span class="token class-name">TuyaOptimusSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token function">getApplicationContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x83B7;&#x53D6;ITuyaLockManager</span>
+<span class="token class-name">ITuyaLockManager</span> tuyaLockManager <span class="token operator">=</span> <span class="token class-name">TuyaOptimusSdk</span><span class="token punctuation">.</span><span class="token function">getManager</span><span class="token punctuation">(</span><span class="token class-name">ITuyaLockManager</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x521B;&#x5EFA; ITuyaBleLock</span>
+<span class="token class-name">ITuyaBleLock</span> tuyaLockDevice <span class="token operator">=</span> tuyaLockManager<span class="token punctuation">.</span><span class="token function">getBleLock</span><span class="token punctuation">(</span>your_device_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;"><a name="&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95E8;&#x9501;&#x6210;&#x5458;&#x7BA1;&#x7406;</h2>
+<p>&#x95E8;&#x9501;&#x5185;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x548C;&#x95E8;&#x9501;&#x6210;&#x5458;&#xFF0C;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x4E3A;&#x5168;&#x5C4B;&#x667A;&#x80FD;&#x4E2D;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x67E5;&#x9605;<a href="https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/zh-hans/resource/HomeMember.html" target="_blank">&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x7BA1;&#x7406;</a></p>
+<h3 id="&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;"><a name="&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x95E8;&#x9501;&#x6210;&#x5458;&#x5217;&#x8868;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * get lock users
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getLockUsers</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">BLELockUser</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<p><strong><code>BLELockUser</code> &#x6570;&#x636E;&#x6A21;&#x578B;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>String</td>
+<td>&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td>lockUserId</td>
+<td>int</td>
+<td>&#x95E8;&#x9501;&#x4E2D;&#x7684;&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td>userContact</td>
+<td>String</td>
+<td>&#x8054;&#x7CFB;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>nickName</td>
+<td>String</td>
+<td>&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td>avatarUrl</td>
+<td>String</td>
+<td>&#x5934;&#x50CF;url</td>
+</tr>
+<tr>
+<td>userType</td>
+<td>int</td>
+<td>&#x7528;&#x6237;&#x7C7B;&#x578B;&#xFF0C;10&#x4E3A;&#x7BA1;&#x7406;&#x5458;&#xFF0C;20&#x4E3A;&#x666E;&#x901A;&#x5BB6;&#x5EAD;&#x7528;&#x6237;&#xFF0C;30&#x4E3A;&#x95E8;&#x9501;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>supportUnlockTypes</td>
+<td>List<string></string></td>
+<td>&#x652F;&#x6301;&#x7684;&#x89E3;&#x9501;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;TuyaUnlockType&#x4E2D;&#x7684;&#x89E3;&#x9501;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>effectiveTimestamp</td>
+<td>long</td>
+<td>&#x7528;&#x6237;&#x751F;&#x6548;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D; ms</td>
+</tr>
+<tr>
+<td>invalidTimestamp</td>
+<td>long</td>
+<td>&#x7528;&#x6237;&#x5931;&#x6548;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D; ms</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getLockUsers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">BLELockUser</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock users failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BLELockUser</span><span class="token punctuation">&gt;</span></span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock users success: lockUserBean = &quot;</span> <span class="token operator">+</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;"><a name="&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;</h3>
+<p>SDK &#x652F;&#x6301;&#x5F80;&#x95E8;&#x9501;&#x91CC;&#x6DFB;&#x52A0;&#x6210;&#x5458;&#xFF0C;&#x540E;&#x7EED;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x4E3A;&#x8BE5;&#x6210;&#x5458;&#x8FDB;&#x884C;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7ED1;&#x5B9A;</p>
+<pre class="language-"><code class="lang-sequence">Title: &#x521B;&#x5EFA;&#x95E8;&#x9501;&#x6210;&#x5458;&#x6D41;&#x7A0B;
+
+participant app
+participant &#x4E91;&#x7AEF;
+
+note over app: &#x7528;&#x6237;&#x586B;&#x5199;&#x6210;&#x5458;&#x4FE1;&#x606F;
+app-&gt;&#x4E91;&#x7AEF;: &#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x521B;&#x5EFA;&#x7528;&#x6237;
+&#x4E91;&#x7AEF;--&gt;app: &#x751F;&#x6210;&#x95E8;&#x9501;&#x7528;&#x6237; id&#x3001;&#x786C;&#x4EF6;&#x6210;&#x5458;id&#xFF0C;&#x8FD4;&#x56DE;&#x521B;&#x5EFA;&#x7ED3;&#x679C;
+note over app: &#x5904;&#x7406;&#x3001;&#x663E;&#x793A;&#x7ED3;&#x679C;
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x521B;&#x5EFA;&#x7684;&#x975E;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#xFF0C;&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x7684;&#x7BA1;&#x7406;&#x9700;&#x8981;&#x53C2;&#x8003;&#x6587;&#x6863;<a href="https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/zh-hans/resource/HomeMember.html" target="_blank">&#x5BB6;&#x5EAD;&#x6210;&#x5458;&#x7BA1;&#x7406;</a></p>
+</blockquote>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * add lock user
+ *
+ * @param userName           userName
+ * @param allowedUnlock      Whether allowed unlock with bluetooth
+ * @param permanent          Whether the user is permanent
+ * @param effectiveTimestamp User effective time
+ * @param invalidTimestamp   User invalid time
+ * @param avatarFile         avatar
+ * @param callback           callback
+ */</span>
+<span class="token keyword">void</span> <span class="token function">addLockUser</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token keyword">boolean</span> allowedUnlock<span class="token punctuation">,</span> <span class="token keyword">boolean</span> permanent<span class="token punctuation">,</span> <span class="token keyword">long</span> effectiveTimestamp<span class="token punctuation">,</span> <span class="token keyword">long</span> invalidTimestamp<span class="token punctuation">,</span> <span class="token class-name">File</span> avatarFile<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userName</td>
+<td>&#x7528;&#x6237;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>allowedUnlock</td>
+<td>&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x5F00;&#x9501;</td>
+</tr>
+<tr>
+<td>unlockType</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x67E5;&#x770B;TuyaUnlockType&#x7C7B;</td>
+</tr>
+<tr>
+<td>permanent</td>
+<td>&#x662F;&#x5426;&#x662F;&#x6C38;&#x4E45;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>effectiveTimestamp</td>
+<td>&#x7528;&#x6237;&#x751F;&#x6548;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;ms, &#x5982;&#x679C;permanent &#x503C;&#x4E3A;true&#xFF0C;&#x5219;&#x8BE5;&#x503C;&#x53EF;&#x5FFD;&#x7565;</td>
+</tr>
+<tr>
+<td>invalidTimestamp</td>
+<td>&#x7528;&#x6237;&#x5931;&#x6548;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;ms, &#x5982;&#x679C;permanent &#x503C;&#x4E3A;true&#xFF0C;&#x5219;&#x8BE5;&#x503C;&#x53EF;&#x5FFD;&#x7565;</td>
+</tr>
+<tr>
+<td>avatarFile</td>
+<td>&#x7528;&#x6237;&#x5934;&#x50CF;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">addLockUser</span><span class="token punctuation">(</span><span class="token string">&quot;your_user_name&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;add lock user failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;add lock user success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;"><a name="&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;" class="plugin-anchor" href="#&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;</h3>
+<p>SDK &#x63D0;&#x4F9B;&#x4E86;&#x4FEE;&#x6539;&#x95E8;&#x9501;&#x6210;&#x5458;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4FEE;&#x6539;&#x95E8;&#x9501;&#x6210;&#x5458;&#x4F1A;&#x548C;&#x786C;&#x4EF6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4FDD;&#x6301;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</p>
+<pre class="language-"><code class="lang-sequence">Title: &#x66F4;&#x65B0;&#x95E8;&#x9501;&#x6210;&#x5458;&#x6D41;&#x7A0B;
+
+participant &#x4E91;&#x7AEF;
+participant app
+participant &#x95E8;&#x9501;
+
+note over app: &#x7528;&#x6237;&#x586B;&#x5199;&#x65B0;&#x7684;&#x6210;&#x5458;&#x4FE1;&#x606F;
+app-&gt;&#x95E8;&#x9501;: &#x5EFA;&#x7ACB;&#x84DD;&#x7259;&#x8FDE;&#x63A5;
+app-&gt;&#x95E8;&#x9501;: &#x53D1;&#x9001;&#x66F4;&#x65B0;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x6307;&#x4EE4;
+&#x95E8;&#x9501;--&gt;app: &#x56DE;&#x590D;&#x66F4;&#x65B0;&#x7ED3;&#x679C;
+app-&gt;&#x4E91;&#x7AEF;: &#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x66F4;&#x65B0;&#x7528;&#x6237;
+&#x4E91;&#x7AEF;--&gt;app: &#x8FD4;&#x56DE;&#x66F4;&#x65B0;&#x7ED3;&#x679C;
+note over app: &#x5904;&#x7406;&#x3001;&#x663E;&#x793A;&#x7ED3;&#x679C;
+</code></pre>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * update lock user
+ *
+ * @param userId             userId
+ * @param userName           userName
+ * @param allowedUnlock      Whether allowed unlock with bluetooth
+ * @param permanent          Whether the user is permanent
+ * @param effectiveTimestamp User effective time
+ * @param invalidTimestamp   User invalid time
+ * @param avatarFile         avatar
+ * @param callback           callback
+ */</span>
+<span class="token keyword">void</span> <span class="token function">updateLockUser</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> userId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> allowedUnlock<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token keyword">boolean</span> permanent<span class="token punctuation">,</span> <span class="token keyword">long</span> effectiveTimestamp<span class="token punctuation">,</span> <span class="token keyword">long</span> invalidTimestamp<span class="token punctuation">,</span> <span class="token class-name">File</span> avatarFile<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td>allowedUnlock</td>
+<td>&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x5F00;&#x9501;</td>
+</tr>
+<tr>
+<td>userName</td>
+<td>&#x7528;&#x6237;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>permanent</td>
+<td>&#x662F;&#x5426;&#x662F;&#x6C38;&#x4E45;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>effectiveTimestamp</td>
+<td>&#x7528;&#x6237;&#x751F;&#x6548;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;ms, &#x5982;&#x679C;permanent &#x503C;&#x4E3A;true&#xFF0C;&#x5219;&#x8BE5;&#x503C;&#x53EF;&#x5FFD;&#x7565;</td>
+</tr>
+<tr>
+<td>invalidTimestamp</td>
+<td>&#x7528;&#x6237;&#x5931;&#x6548;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;ms, &#x5982;&#x679C;permanent &#x503C;&#x4E3A;true&#xFF0C;&#x5219;&#x8BE5;&#x503C;&#x53EF;&#x5FFD;&#x7565;</td>
+</tr>
+<tr>
+<td>avatarFile</td>
+<td>&#x7528;&#x6237;&#x5934;&#x50CF;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">updateLockUser</span><span class="token punctuation">(</span><span class="token string">&quot;your_user_id&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">&quot;your_user_name&quot;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;update lock user failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> aBoolean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;update lock user success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;"><a name="&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;</h3>
+<p>SDK &#x63D0;&#x4F9B;&#x4E86;&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;&#x7684;&#x529F;&#x80FD;&#xFF0C;<strong>&#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;&#x4F1A;&#x548C;&#x786C;&#x4EF6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x4F1A;&#x5220;&#x9664;&#x8BE5;&#x7528;&#x6237;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x3001;&#x5BC6;&#x7801;&#x7B49;&#xFF0C;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4FDD;&#x6301;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</strong></p>
+<pre class="language-"><code class="lang-sequence">Title: &#x5220;&#x9664;&#x95E8;&#x9501;&#x6210;&#x5458;&#x6D41;&#x7A0B;
+
+participant &#x4E91;&#x7AEF;
+participant app
+participant &#x95E8;&#x9501;
+
+note over app: &#x7528;&#x6237;&#x786E;&#x8BA4;&#x5220;&#x9664;&#x6210;&#x5458;
+app-&gt;&#x95E8;&#x9501;: &#x5EFA;&#x7ACB;&#x84DD;&#x7259;&#x8FDE;&#x63A5;
+app-&gt;&#x95E8;&#x9501;: &#x53D1;&#x9001;&#x5220;&#x9664;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x6307;&#x4EE4;
+&#x95E8;&#x9501;--&gt;app: &#x56DE;&#x590D;&#x5220;&#x9664;&#x7ED3;&#x679C;
+app-&gt;&#x4E91;&#x7AEF;: &#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x5220;&#x9664;&#x7528;&#x6237;
+&#x4E91;&#x7AEF;--&gt;app: &#x8FD4;&#x56DE;&#x5220;&#x9664;&#x7ED3;&#x679C;
+note over app: &#x5904;&#x7406;&#x3001;&#x663E;&#x793A;&#x7ED3;&#x679C;
+</code></pre>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * delete lock user
+ * @param user user bean
+ * @param callback  callback
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteLockUser</span><span class="token punctuation">(</span><span class="token class-name">BLELockUser</span> user<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;"><a name="&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x72B6;&#x6001;</h2>
+<p>&#x84DD;&#x7259;&#x95E8;&#x9501;&#x9700;&#x8981; App &#x5F00;&#x542F;&#x84DD;&#x7259;&#x540E;&#xFF0C;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x624D;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;"><a name="&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;" class="plugin-anchor" href="#&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5224;&#x65AD;&#x95E8;&#x9501;&#x84DD;&#x7259;&#x662F;&#x5426;&#x8FDE;&#x63A5;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x5224;&#x65AD;&#x84DD;&#x7259;&#x95E8;&#x9501;&#x662F;&#x5426;&#x548C;&#x624B;&#x673A;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x95E8;&#x9501;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x57FA;&#x672C;&#x90FD;&#x9700;&#x8981;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x5224;&#x65AD;&#xFF0C;&#x5FC5;&#x987B;&#x95E8;&#x9501;&#x662F;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x624D;&#x80FD;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ *  @return if lock online, return true
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isBLEConnected</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">boolean</span> online <span class="token operator">=</span> tuyaLockDevice<span class="token punctuation">.</span><span class="token function">isBLEConnected</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;"><a name="&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;" class="anchor-navigation-ex-anchor" href="#&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;" class="plugin-anchor" href="#&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDE;&#x63A5;&#x84DD;&#x7259;&#x95E8;&#x9501;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x5982;&#x679C;&#x5224;&#x65AD;&#x95E8;&#x9501;&#x672A;&#x8FDE;&#x63A5;&#xFF0C;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x8FDE;&#x63A5;&#x5230;&#x95E8;&#x9501;</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * connect to lock
+ *
+ * @param connectListener callback BLE lock connect status
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token class-name">ConnectListener</span> connectListener<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<p>ConnectListener&#x4E3A;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x56DE;&#x8C03;&#xFF0C;&#x5176;&#x4E2D;&#x7684;onStatusChanged&#x5C06;&#x8FD4;&#x56DE;&#x5728;&#x7EBF;&#x72B6;&#x6001;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ConnectListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> online<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;onStatusChanged  online: &quot;</span> <span class="token operator">+</span> online<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x52A8;&#x6001;&#x5BC6;&#x7801;"><a name="&#x52A8;&#x6001;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x6001;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x52A8;&#x6001;&#x5BC6;&#x7801;" class="plugin-anchor" href="#&#x52A8;&#x6001;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A8;&#x6001;&#x5BC6;&#x7801;</h2>
+<p>&#x4F7F;&#x7528; SDK &#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;&#x5E76;&#x5728;&#x95E8;&#x9501;&#x4E0A;&#x8FDB;&#x884C;&#x8F93;&#x5165;&#x540E;&#x5373;&#x53EF;&#x5F00;&#x9501;&#xFF0C;&#x52A8;&#x6001;&#x5BC6;&#x7801;&#x6709;&#x6548;&#x65F6;&#x95F4;&#x4E3A; 5 &#x5206;&#x949F;</p>
+<h3 id="&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;"><a name="&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x5BC6;&#x7801;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getDynamicPassword</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>&#x63A5;&#x53E3;&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getDynamicPassword</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock dynamic password failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> dynamicPassword<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock dynamic password success: dynamicPassword = &quot;</span> <span class="token operator">+</span> dynamicPassword<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x84DD;&#x7259;&#x89E3;&#x9501;--&#x843D;&#x9501;"><a name="&#x84DD;&#x7259;&#x89E3;&#x9501;--&#x843D;&#x9501;" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;&#x89E3;&#x9501;--&#x843D;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x84DD;&#x7259;&#x89E3;&#x9501;--&#x843D;&#x9501;" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x89E3;&#x9501;--&#x843D;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x89E3;&#x9501; &amp; &#x843D;&#x9501;</h2>
+<h3 id="&#x84DD;&#x7259;&#x89E3;&#x9501;"><a name="&#x84DD;&#x7259;&#x89E3;&#x9501;" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;&#x89E3;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x84DD;&#x7259;&#x89E3;&#x9501;" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x89E3;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x89E3;&#x9501;</h3>
+<pre class="language-"><code class="lang-sequence">Title: &#x84DD;&#x7259;&#x89E3;&#x9501;&#x5F00;&#x95E8;&#x6D41;&#x7A0B;
+
+participant &#x7528;&#x6237;
+participant app
+participant &#x95E8;&#x9501;
+
+note over app: &#x84DD;&#x7259;&#x5F00;&#x542F;&#xFF0C;&#x8FDE;&#x63A5;&#x4E0A;&#x95E8;&#x9501;
+&#x7528;&#x6237;-&gt;app: &#x70B9;&#x51FB;&#x5F00;&#x9501;
+app-&gt;&#x95E8;&#x9501;: &#x53D1;&#x9001;&#x84DD;&#x7259;&#x5F00;&#x9501;&#x6307;&#x4EE4;
+note over &#x95E8;&#x9501;: &#x6536;&#x5230;&#x84DD;&#x7259;&#x5F00;&#x9501;&#x6307;&#x4EE4;&#xFF0C;&#x5F00;&#x9501;
+&#x95E8;&#x9501;--&gt;app: &#x8FD4;&#x56DE;&#x5F00;&#x9501;&#x7ED3;&#x679C;
+note over app: &#x5904;&#x7406;&#x3001;&#x663E;&#x793A;&#x7ED3;&#x679C;
+</code></pre>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * unlock the door
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">unlock</span><span class="token punctuation">(</span><span class="token class-name">String</span> lockUserId<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lockUserId</td>
+<td>&#x95E8;&#x9501;&#x8BBE;&#x5907;&#x4E2D;&#x7684;&#x7528;&#x6237;id</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6240;&#x6709;&#x7528;&#x6237;&#x5728;&#x95E8;&#x9501;&#x4E2D;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;id&#xFF0C;id&#x4ECE;1&#x5F00;&#x59CB;&#xFF0C;&#x6BCF;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7528;&#x6237;&#x6570;&#x5B57;&#x52A0;&#x4E00;&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &quot;1&quot;&#x662F;&#x5F53;&#x524D;&#x7528;&#x6237;&#x5728;&#x95E8;&#x9501;&#x8BBE;&#x5907;&#x4E2D;&#x7684;id</span>
+tuyaLockDevice<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x84DD;&#x7259;&#x843D;&#x9501;"><a name="&#x84DD;&#x7259;&#x843D;&#x9501;" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;&#x843D;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x84DD;&#x7259;&#x843D;&#x9501;" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x843D;&#x9501;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x843D;&#x9501;</h3>
+<pre class="language-"><code class="lang-sequence">Title: &#x84DD;&#x7259;&#x843D;&#x9501;&#x6D41;&#x7A0B;
+
+participant &#x7528;&#x6237;
+participant app
+participant &#x95E8;&#x9501;
+
+note over app: &#x84DD;&#x7259;&#x5F00;&#x542F;&#xFF0C;&#x8FDE;&#x63A5;&#x4E0A;&#x95E8;&#x9501;
+&#x7528;&#x6237;-&gt;app: &#x70B9;&#x51FB;&#x843D;&#x9501;
+app-&gt;&#x95E8;&#x9501;: &#x53D1;&#x9001;&#x84DD;&#x7259;&#x843D;&#x9501;&#x6307;&#x4EE4;
+note over &#x95E8;&#x9501;: &#x6536;&#x5230;&#x84DD;&#x7259;&#x843D;&#x9501;&#x6307;&#x4EE4;&#xFF0C;&#x5F00;&#x9501;
+&#x95E8;&#x9501;--&gt;app: &#x8FD4;&#x56DE;&#x843D;&#x9501;&#x7ED3;&#x679C;
+note over app: &#x5904;&#x7406;&#x3001;&#x663E;&#x793A;&#x7ED3;&#x679C;
+</code></pre>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x95E8;&#x9501;&#x4E0E;app&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x53EF;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x4E0A;&#x9501;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * lock the door
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x95E8;&#x9501;&#x8BB0;&#x5F55;"><a name="&#x95E8;&#x9501;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x95E8;&#x9501;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x95E8;&#x9501;&#x8BB0;&#x5F55;" class="plugin-anchor" href="#&#x95E8;&#x9501;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95E8;&#x9501;&#x8BB0;&#x5F55;</h2>
+<h3 id="&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;"><a name="&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x544A;&#x8B66;&#x8BB0;&#x5F55;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * get alarm records
+ * @param offset page number
+ * @param limit item count
+ * @param callback callback
+ */</span>
+<span class="token keyword">void</span> <span class="token function">getAlarmRecords</span><span class="token punctuation">(</span><span class="token keyword">int</span> offset<span class="token punctuation">,</span> <span class="token keyword">int</span> limit<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>offset</td>
+<td>&#x8BB0;&#x5F55;&#x9875;&#x7801;</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>&#x8FD4;&#x56DE;&#x7684;&#x8BB0;&#x5F55;&#x6761;&#x76EE;&#x6570;&#x91CF;</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>Record</code> &#x6570;&#x636E;&#x6A21;&#x578B;</strong></p>
+<p><code>Record</code>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>totalCount</td>
+<td>int</td>
+<td>&#x603B;&#x6761;&#x76EE;</td>
+</tr>
+<tr>
+<td>hasNext</td>
+<td>boolean</td>
+<td>&#x662F;&#x5426;&#x6709;&#x4E0B;&#x4E00;&#x9875;</td>
+</tr>
+<tr>
+<td>datas</td>
+<td>List<databean></databean></td>
+<td>&#x8BB0;&#x5F55;&#x6570;&#x636E;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5176;&#x4E2D;<code>DataBean</code>&#x5B57;&#x6BB5;&#x8BF4;&#x660E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>String</td>
+<td>&#x6210;&#x5458; id</td>
+</tr>
+<tr>
+<td>userName</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td>unlockType</td>
+<td>String</td>
+<td>&#x89E3;&#x9501;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907; id</td>
+</tr>
+<tr>
+<td>createTime</td>
+<td>long</td>
+<td>&#x8BE5;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x95F4;&#x6233;</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>int</td>
+<td>&#x6807;&#x4F4D;&#xFF0C;0&#x8868;&#x793A;&#x5176;&#x4ED6;&#xFF0C;1&#x8868;&#x793A;&#x52AB;&#x6301;&#x62A5;&#x8B66;</td>
+</tr>
+<tr>
+<td>unlockRelation</td>
+<td>UnlockRelation</td>
+<td>&#x89E3;&#x9501;&#x7C7B;&#x578B;&#x548C;&#x89E3;&#x9501;&#x5BC6;&#x7801;&#x7F16;&#x53F7;&#x7684;&#x5173;&#x7CFB;&#x5B9E;&#x4F8B;&#xFF0C;&#x5982;&#x4E0D;&#x662F;&#x5F00;&#x9501;&#x8BB0;&#x5F55;&#xFF0C;&#x53EF;&#x4E3A;&#x7A7A;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span> <span class="token function">getAlarmRecords</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock records failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Record</span> recordBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get lock records success: recordBean = &quot;</span> <span class="token operator">+</span> recordBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;"><a name="&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x8BB0;&#x5F55;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * get unlock records
+ * @param unlockTypes unlock type list 
+ * @param offset page number
+ * @param limit item count
+ * @param callback callback
+ */</span>
+<span class="token keyword">void</span> <span class="token function">getUnlockRecords</span><span class="token punctuation">(</span><span class="token keyword">int</span> offset<span class="token punctuation">,</span> <span class="token keyword">int</span> limit<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>offset</td>
+<td>&#x8BB0;&#x5F55;&#x9875;&#x7801;</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>&#x8FD4;&#x56DE;&#x7684;&#x8BB0;&#x5F55;&#x6761;&#x76EE;&#x6570;&#x91CF;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getUnlockRecords</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Record</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get unlock records failed: code = &quot;</span> <span class="token operator">+</span> code <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Record</span> recordBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;get unlock records success: recordBean = &quot;</span> <span class="token operator">+</span> recordBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;"><a name="&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7BA1;&#x7406;</h2>
+<p>&#x672C;&#x8282;&#x63D0;&#x4F9B;&#x6DFB;&#x52A0;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x4E3A;&#x6DFB;&#x52A0;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7684;&#x4EA4;&#x4E92;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<div class="mermaid">
+sequenceDiagram
+SDK-&gt;&gt;Lock: Connect
+Note left of Lock: Connect via Bluetooth
+Lock--&gt;&gt;SDK: Connect success
+SDK-&gt;&gt;Lock: Add unloack mode
+Lock--&gt;&gt;SDK: Success
+SDK-&gt;&gt;Server: Notify to server
+loop save info
+    Server-&gt;&gt;Server: 
+end
+Server--&gt;&gt;SDK: Success
+</div>
+
+<h3 id="&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;"><a name="&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5217;&#x8868;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * get unlock mode by unlockType
+ *
+ * @param unlockType unlock type {@link com.tuya.smart.optimus.lock.api.TuyaUnlockType}
+ * @param callback callback
+ */</span>
+<span class="token keyword">void</span> <span class="token function">getUnlockModeList</span><span class="token punctuation">(</span><span class="token class-name">String</span> unlockType<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">UnlockMode</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<p><strong><code>UnlockMode</code> &#x6570;&#x636E;&#x6A21;&#x578B;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>String</td>
+<td>&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td>lockUserId</td>
+<td>int</td>
+<td>&#x95E8;&#x9501;&#x4E2D;&#x7684;&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td>userName</td>
+<td>String</td>
+<td>&#x7528;&#x6237;&#x6635;&#x79F0;</td>
+</tr>
+<tr>
+<td>unlockAttr</td>
+<td>int</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5C5E;&#x6027;&#xFF0C;0&#x662F;&#x666E;&#x901A;&#x5BC6;&#x7801;&#xFF0C;1&#x662F;&#x52AB;&#x6301;&#x5BC6;&#x7801;</td>
+</tr>
+<tr>
+<td>userType</td>
+<td>int</td>
+<td>&#x7528;&#x6237;&#x7C7B;&#x578B;&#xFF0C;10&#x4E3A;&#x7BA1;&#x7406;&#x5458;&#xFF0C;20&#x662F;&#x666E;&#x901A;&#x7528;&#x6237;&#xFF0C;30&#x662F;&#x95E8;&#x9501;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td>unlockModeId</td>
+<td>String</td>
+<td>&#x5F53;&#x524D;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x7684;id</td>
+</tr>
+<tr>
+<td>unlockId</td>
+<td>String</td>
+<td>&#x5F53;&#x524D;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5728;&#x95E8;&#x9501;&#x4E2D;&#x7684;id</td>
+</tr>
+<tr>
+<td>unlockName</td>
+<td>String</td>
+<td>&#x5F53;&#x524D;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7684;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>unlockType</td>
+<td>String</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7C7B;&#x578B;&#xFF0C;&#x53C2;&#x89C1;TuyaUnlockType</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getUnlockModeList</span><span class="token punctuation">(</span><span class="token class-name">TuyaUnlockType</span><span class="token punctuation">.</span>PASSWORD<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">UnlockMode</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UnlockMode</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getUnlockModeList  onSuccess: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getUnlockModeList failed: code = &quot;</span> <span class="token operator">+</span> errorCode <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;"><a name="&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;" class="plugin-anchor" href="#&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;</h3>
+<p>&#x6DFB;&#x52A0;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x7684;&#x63A5;&#x53E3;&#x5747;&#x4E3A;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#xFF0C;&#x90FD;&#x662F;&#x4ECE;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x6CE8;&#x518C;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x76D1;&#x542C;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">setUnlockModeListener</span><span class="token punctuation">(</span><span class="token class-name">UnlockModeListener</span> unlockModeListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;<code>UnlockModeListener</code>&#x4E2D;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UnlockModeListener</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/**
+     * &#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x53C2;&#x6570;&#x4E22;&#x5931;
+     */</span>
+    <span class="token keyword">int</span> FAILED_STATUS_ILLEGAL_ARGUMENT <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * &#x5F53;&#x524D;&#x64CD;&#x4F5C;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x5F00;&#x9501;&#x65B9;&#x5F0F;
+     */</span>
+    <span class="token keyword">int</span> FAILED_STATUS_NOT_SUPPORT_UNLOCK_TYPE <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * &#x63A7;&#x5236;&#x6307;&#x4EE4;&#x53D1;&#x9001;&#x5931;&#x8D25;
+     */</span>
+    <span class="token keyword">int</span> FAILED_STATUS_SEND_ERROR <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * &#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x7AEF;&#x5931;&#x8D25;
+     */</span>
+    <span class="token keyword">int</span> FAILED_STATUS_REQUEST_SERVER_ERROR <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * &#x6307;&#x7EB9;&#x4E0D;&#x5B8C;&#x6574;
+     */</span>
+    <span class="token keyword">int</span> FAILED_STATUS_FINGERPRINT_INCOMPLETE <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * &#x670D;&#x52A1;&#x7AEF;&#x54CD;&#x5E94;&#x5931;&#x8D25;
+     */</span>
+    <span class="token keyword">int</span> FAILED_STATUS_SERVER_RESPONSE_FAILED <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * &#x95E8;&#x9501;&#x54CD;&#x5E94;&#x5931;&#x8D25;
+     */</span>
+    <span class="token keyword">int</span> FAILED_STATUS_LOCK_RESPONSE_FAILED <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment">/*-----&#x4EE5;&#x4E0B;&#x72B6;&#x6001;&#x4E3A;&#x95E8;&#x9501;&#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x521B;&#x5EFA;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x5931;&#x8D25;&#x7684;&#x8FD4;&#x56DE;&#x7801;-------*/</span>
+    <span class="token keyword">int</span> FAILED_STATUS_TIMEOUT <span class="token operator">=</span> <span class="token number">0x00</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_FAILED <span class="token operator">=</span> <span class="token number">0x01</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_REPEAT <span class="token operator">=</span> <span class="token number">0x02</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_LOCK_ID_EXHAUSTED <span class="token operator">=</span> <span class="token number">0x03</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_PASSWORD_NOT_NUMBER <span class="token operator">=</span> <span class="token number">0x04</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_PASSWORD_WRONG_LENGTH <span class="token operator">=</span> <span class="token number">0x05</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_NOT_SUPPORT <span class="token operator">=</span> <span class="token number">0x06</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_ALREADY_ENTERED <span class="token operator">=</span> <span class="token number">0x07</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_ALREADY_BOUND_CARD <span class="token operator">=</span> <span class="token number">0x08</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_ALREADY_BOUND_FACE <span class="token operator">=</span> <span class="token number">0x09</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_PASSWORD_TOO_SIMPLE <span class="token operator">=</span> <span class="token number">0x0A</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> FAILED_STATUS_WRONG_LOCK_ID <span class="token operator">=</span> <span class="token number">0xFE</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * &#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#x6DFB;&#x52A0;&#x3001;&#x5220;&#x9664;&#x3001;&#x4FEE;&#x6539;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;
+     *
+     * @param devId              &#x8BBE;&#x5907;id
+     * @param userId             &#x7528;&#x6237;id
+     * @param unlockModeResponse &#x54CD;&#x5E94;&#x6570;&#x636E;
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">onResult</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> userId<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span> unlockModeResponse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unlockMethod</td>
+<td>String</td>
+<td>&#x5F53;&#x524D;&#x64CD;&#x4F5C;&#x95E8;&#x9501;&#x7684;&#x65B9;&#x6CD5;&#x7C7B;&#x578B;&#xFF0C;&#x5176;&#x503C;&#x6709;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A;&#xFF1A;<br>/<strong> &#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;  */ <br>public static final String UNLOCK_METHOD_CREATE = &quot;unlock_method_create&quot;; <br>/</strong> &#x4FEE;&#x6539;&#x5F00;&#x9501;&#x65B9;&#x5F0F;  */ <br>public static final String UNLOCK_METHOD_MODIFY = &quot;unlock_method_modify&quot;;<br> /<em>* &#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;  \</em>/ <br>public static final String UNLOCK_METHOD_DELETE = &quot;unlock_method_delete&quot;;</td>
+</tr>
+<tr>
+<td>unlockType</td>
+<td>String</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7C7B;&#x578B;&#xFF0C;&#x53C2;&#x89C1;TuyaUnlockType</td>
+</tr>
+<tr>
+<td>stage</td>
+<td>int</td>
+<td>&#x5F53;&#x524D;&#x64CD;&#x4F5C;&#x95E8;&#x9501;&#x6240;&#x5904;&#x7684;&#x9636;&#x6BB5;&#xFF0C;&#x5176;&#x503C;&#x5B9A;&#x4E49;&#x5728;<code>BleLockConstant</code>&#x4E2D;&#xFF0C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;<br>int STAGE_AFTER = -2; // &#x64CD;&#x4F5C;&#x95E8;&#x9501;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x540C;&#x6B65;&#x6570;&#x636E;<br>int STAGE_BEFORE = -1;// &#x4E0E;&#x95E8;&#x9501;&#x4EA4;&#x4E92;&#x4E4B;&#x524D;&#xFF0C;&#x5982;&#x53D1;&#x9001;&#x547D;&#x4EE4;&#x3001;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x4EA4;&#x4E92;<br> int STAGE_START = 0x00; // &#x5F00;&#x59CB;&#x5F55;&#x5165;&#x89E3;&#x9501;&#x65B9;&#x5F0F;<br>int STAGE_CANCEL = 0xFE;// &#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5F55;&#x5165;&#x53D6;&#x6D88;<br> int STAGE_FAILED = 0xFD;// &#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5F55;&#x5165;&#x5931;&#x8D25; <br>int STAGE_ENTERING = 0xFC;// &#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5F55;&#x5165;&#x4E2D;<br> int STAGE_SUCCESS = 0xFF;// &#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5F55;&#x5165;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td>lockUserId</td>
+<td>int</td>
+<td>&#x5728;&#x95E8;&#x9501;&#x4E2D;&#x7684;&#x7528;&#x6237;id</td>
+</tr>
+<tr>
+<td>unlockId</td>
+<td>int</td>
+<td>&#x5F53;&#x524D;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5728;&#x95E8;&#x9501;&#x4E2D;&#x7684;id</td>
+</tr>
+<tr>
+<td>unlockModeId</td>
+<td>String</td>
+<td>&#x5F53;&#x524D;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x7684;id</td>
+</tr>
+<tr>
+<td>admin</td>
+<td>boolean</td>
+<td>&#x662F;&#x5426;&#x662F;&#x7BA1;&#x7406;&#x5458;</td>
+</tr>
+<tr>
+<td>times</td>
+<td>int</td>
+<td>0&#x8868;&#x793A;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;1~254&#x8868;&#x793A;&#x5B9E;&#x9645;&#x6709;&#x6548;&#x6B21;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x6570;&#x5B57;&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>status</td>
+<td>int</td>
+<td>&#x5931;&#x8D25;&#x7684;&#x72B6;&#x6001;&#x7801;&#xFF0C;&#x8BE6;&#x60C5;&#x67E5;&#x770B;UnlockModeListener</td>
+</tr>
+<tr>
+<td>failedStage</td>
+<td>int</td>
+<td>&#x5931;&#x8D25;&#x53D1;&#x751F;&#x7684;&#x9636;&#x6BB5;&#x3002;stage=STAGE_FAILED&#x65F6;&#x624D;&#x6709;&#x610F;&#x4E49;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">setUnlockModeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">UnlockModeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onResult</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> userId<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span> unlockModeResponse<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;UnlockModeListener devId: &quot;</span> <span class="token operator">+</span> devId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;UnlockModeListener userId: &quot;</span> <span class="token operator">+</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;UnlockModeListener unlockType: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">.</span>unlockType<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;UnlockModeListener: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>unlockMethod<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span><span class="token punctuation">.</span>UNLOCK_METHOD_CREATE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Create unlock mode success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>unlockMethod<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span><span class="token punctuation">.</span>UNLOCK_METHOD_MODIFY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Modify unlock mode success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>unlockMethod<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span><span class="token punctuation">.</span>UNLOCK_METHOD_DELETE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Delete unlock mode success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>stage <span class="token operator">==</span> <span class="token class-name">BleLockConstant</span><span class="token punctuation">.</span>STAGE_FAILED<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>unlockMethod<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span><span class="token punctuation">.</span>UNLOCK_METHOD_CREATE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Create unlock mode failed.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Create unlock mode failed reason: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">.</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Create unlock mode failed stage: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">.</span>failedStage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>unlockMethod<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span><span class="token punctuation">.</span>UNLOCK_METHOD_MODIFY<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Modify unlock mode failed.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Modify unlock mode failed reason: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">.</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Modify unlock mode failed stage: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">.</span>failedStage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockModeResponse<span class="token punctuation">.</span>unlockMethod<span class="token punctuation">,</span> <span class="token class-name">UnlockModeResponse</span><span class="token punctuation">.</span>UNLOCK_METHOD_DELETE<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Delete unlock mode failed.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Delete unlock mode failed reason: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">.</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;Delete unlock mode failed stage: &quot;</span> <span class="token operator">+</span> unlockModeResponse<span class="token punctuation">.</span>failedStage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><a name="&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DFB;&#x52A0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x6309;&#x89E3;&#x9501;&#x7C7B;&#x578B;&#x7ED9;&#x7528;&#x6237;&#x6DFB;&#x52A0;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x3002;<strong>&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4FDD;&#x6301;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * Add unlock method.
+ *
+ * @param unlockType TuyaUnlockType {@link com.tuya.smart.optimus.lock.api.TuyaUnlockType}
+ * @param user       BLELockUser {@link com.tuya.smart.sdk.optimus.lock.bean.ble.BLELockUser}
+ * @param name       Unlock mode name.
+ * @param password   Unlock mode password. If it is not the password unlock method, this field can be null
+ * @param times      Number of times the unlock mode can be used. The value range is 0 to 254, 0 means unlimited times, and 1 ~ 254 is the actual number of times.
+ * @param isHijack   Hijack flag. If it is true, a hijacking alarm will be triggered when unlocking with this unlock mode.
+ */</span>
+<span class="token keyword">void</span> <span class="token function">addUnlockMode</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> unlockType<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">BLELockUser</span> user<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">,</span> <span class="token keyword">int</span> times<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isHijack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unlockType</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x7C7B;&#x578B;&#xFF0C;&#x53C2;&#x89C1;TuyaUnlockType</td>
+</tr>
+<tr>
+<td>user</td>
+<td>BLELockUser&#xFF0C;&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;</td>
+</tr>
+<tr>
+<td>name</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>password</td>
+<td>&#x89E3;&#x9501;&#x5BC6;&#x7801;&#xFF0C;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x4E3A;&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x5FC5;&#x586B;&#xFF0C;&#x5176;&#x4ED6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x53EF;&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr>
+<td>times</td>
+<td>&#x5BC6;&#x7801;&#x6709;&#x6548;&#x6B21;&#x6570;&#x3002;0&#x8868;&#x793A;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;1~254&#x8868;&#x793A;&#x5B9E;&#x9645;&#x6709;&#x6548;&#x6B21;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x6570;&#x5B57;&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>isHijack</td>
+<td>&#x52AB;&#x6301;&#x6807;&#x8BB0;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;true&#x65F6;&#x4F7F;&#x7528;&#x8BE5;&#x5BC6;&#x7801;&#x89E3;&#x9501;&#x5C06;&#x89E6;&#x53D1;&#x52AB;&#x6301;&#x544A;&#x8B66;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<p>&#x7ED9;&#x5BB6;&#x5EAD;&#x7528;&#x6237;&#x6DFB;&#x52A0;&#x5BC6;&#x7801;</p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getHomeUsers</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">BLELockUser</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BLELockUser</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getHomeUsers  onSuccess: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// add password unlock mode</span>
+        tuyaLockDevice<span class="token punctuation">.</span><span class="token function">addUnlockMode</span><span class="token punctuation">(</span><span class="token class-name">TuyaUnlockType</span><span class="token punctuation">.</span>PASSWORD<span class="token punctuation">,</span> result<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;test_unlock_mode1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;431232&quot;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getHomeUsers failed: code = &quot;</span> <span class="token operator">+</span> errorCode <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;"><a name="&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x4FE1;&#x606F;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x66F4;&#x65B0;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4FEE;&#x6539;&#x52AB;&#x6301;&#x6807;&#x8BB0;&#x3002;<strong>&#x4E0D;&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4FDD;&#x6301;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</strong></p>
+<p>&#x6B64;&#x63A5;&#x53E3;&#x4E0D;&#x4E0E;&#x95E8;&#x9501;&#x4EA4;&#x4E92;&#xFF0C;&#x4EC5;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x901A;&#x4FE1;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * Update name and hijack flag of the unlocking method. Only update server information, not communicate with door lock device
+ *
+ * @param unlockMode UnlockMode bean {@link com.tuya.smart.sdk.optimus.lock.bean.ble.UnlockMode}
+ * @param name       Unlock mode name
+ * @param isHijack   Hijack flag. If it is true, a hijacking alarm will be triggered when unlocking with this unlock mode.
+ */</span>
+<span class="token keyword">void</span> <span class="token function">updateUnlockModeServerInfo</span><span class="token punctuation">(</span><span class="token class-name">UnlockMode</span> unlockMode<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isHijack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unlockMode</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x6570;&#x636E;&#x6A21;&#x578B;</td>
+</tr>
+<tr>
+<td>name</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>isHijack</td>
+<td>&#x52AB;&#x6301;&#x6807;&#x8BB0;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;true&#x65F6;&#x4F7F;&#x7528;&#x8BE5;&#x5BC6;&#x7801;&#x89E3;&#x9501;&#x5C06;&#x89E6;&#x53D1;&#x52AB;&#x6301;&#x544A;&#x8B66;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getUnlockModeList</span><span class="token punctuation">(</span><span class="token class-name">TuyaUnlockType</span><span class="token punctuation">.</span>FINGERPRINT<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">UnlockMode</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UnlockMode</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getUnlockModeList  onSuccess: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">UnlockMode</span> unlockMode <span class="token operator">:</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockMode<span class="token punctuation">.</span>unlockName<span class="token punctuation">,</span> <span class="token string">&quot;test_unlock_mode1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                tuyaLockDevice<span class="token punctuation">.</span><span class="token function">updateUnlockModeServerInfo</span><span class="token punctuation">(</span>unlockMode<span class="token punctuation">,</span> <span class="token string">&quot;test_unlock2&quot;</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// rename unlock mode</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getUnlockModeList failed: code = &quot;</span> <span class="token operator">+</span> errorCode <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><a name="&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5F00;&#x9501;&#x65B9;&#x5F0F;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5F00;&#x9501;&#x65B9;&#x5F0F;&#x3002;<strong>&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4FDD;&#x6301;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * Delete unlockMode.
+ *
+ * @param unlockMode unlockMode
+ */</span>
+<span class="token keyword">void</span> <span class="token function">deleteUnlockMode</span><span class="token punctuation">(</span><span class="token class-name">UnlockMode</span> unlockMode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">deleteUnlockMode</span><span class="token punctuation">(</span>unlockMode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;"><a name="&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;" class="plugin-anchor" href="#&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x53D6;&#x6D88;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x6307;&#x7EB9;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x4E00;&#x822C;&#x9700;&#x8981;&#x5F55;&#x5165;4&#x5230;5&#x6B21;&#x6307;&#x7EB9;&#xFF0C;&#x5982;&#x679C;&#x5F55;&#x5165;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x53D6;&#x6D88;&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x3002;<strong>&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4FDD;&#x6301;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * Cancel fingerprint entry.
+ * &lt;p&gt;
+ * The fingerprint entry process will be repeated multiple times and can be cancelled during the entry process.
+ *
+ * @param user BLELockUser {@link com.tuya.smart.sdk.optimus.lock.bean.ble.BLELockUser}
+ */</span>
+<span class="token keyword">void</span> <span class="token function">cancelFingerprintUnlockMode</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">BLELockUser</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;"><a name="&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;" class="plugin-anchor" href="#&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x66F4;&#x65B0;&#x5BC6;&#x7801;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x7684;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x5BC6;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x4FEE;&#x6539;&#x5BC6;&#x7801;&#x540D;&#x79F0;&#x3001;&#x5BC6;&#x7801;&#x3001;&#x89E3;&#x9501;&#x6B21;&#x6570;&#x548C;&#x52AB;&#x6301;&#x6807;&#x8BB0;&#x3002;<strong>&#x9700;&#x8981;&#x8BBE;&#x5907;&#x4FDD;&#x6301;&#x84DD;&#x7259;&#x8FDE;&#x63A5;</strong></p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4EC5;&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x7684;&#x652F;&#x6301;&#x8C03;&#x7528;&#x6B64;&#x63A5;&#x53E3;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token comment">/**
+ * Update the name, password, validity period and other information of the unlocking method
+ *
+ * @param unlockMode UnlockMode bean {@link com.tuya.smart.sdk.optimus.lock.bean.ble.UnlockMode}
+ * @param name       Unlock mode name
+ * @param password   Unlock mode password. If it is not the password unlock method, this field can be null
+ * @param times      Number of times the unlock mode can be used. The value range is 0 to 254, 0 means unlimited times, and 1 ~ 254 is the actual number of times.
+ * @param isHijack   Hijack flag. If it is true, a hijacking alarm will be triggered when unlocking with this unlock mode.
+ */</span>
+<span class="token keyword">void</span> <span class="token function">updatePasswordUnlockMode</span><span class="token punctuation">(</span><span class="token class-name">UnlockMode</span> unlockMode<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">,</span> <span class="token keyword">int</span> times<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isHijack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unlockMode</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x6570;&#x636E;&#x6A21;&#x578B;</td>
+</tr>
+<tr>
+<td>name</td>
+<td>&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>password</td>
+<td>&#x89E3;&#x9501;&#x5BC6;&#x7801;&#xFF0C;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x4E3A;&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x5FC5;&#x586B;&#xFF0C;&#x5176;&#x4ED6;&#x89E3;&#x9501;&#x65B9;&#x5F0F;&#x53EF;&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr>
+<td>times</td>
+<td>&#x5BC6;&#x7801;&#x6709;&#x6548;&#x6B21;&#x6570;&#x3002;0&#x8868;&#x793A;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;1~254&#x8868;&#x793A;&#x5B9E;&#x9645;&#x6709;&#x6548;&#x6B21;&#x6570;&#xFF0C;&#x5176;&#x4ED6;&#x6570;&#x5B57;&#x65E0;&#x6548;</td>
+</tr>
+<tr>
+<td>isHijack</td>
+<td>&#x52AB;&#x6301;&#x6807;&#x8BB0;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;true&#x65F6;&#x4F7F;&#x7528;&#x8BE5;&#x5BC6;&#x7801;&#x89E3;&#x9501;&#x5C06;&#x89E6;&#x53D1;&#x52AB;&#x6301;&#x544A;&#x8B66;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">tuyaLockDevice<span class="token punctuation">.</span><span class="token function">getUnlockModeList</span><span class="token punctuation">(</span><span class="token class-name">TuyaUnlockType</span><span class="token punctuation">.</span>PASSWORD<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">UnlockMode</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UnlockMode</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getUnlockModeList  onSuccess: &quot;</span> <span class="token operator">+</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">UnlockMode</span> unlockMode <span class="token operator">:</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>unlockMode<span class="token punctuation">.</span>unlockName<span class="token punctuation">,</span> <span class="token string">&quot;test_password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                tuyaLockDevice<span class="token punctuation">.</span><span class="token function">updatePasswordUnlockMode</span><span class="token punctuation">(</span>unlockMode<span class="token punctuation">,</span> <span class="token string">&quot;test_password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;131232&quot;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// modify password</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;getUnlockModeList failed: code = &quot;</span> <span class="token operator">+</span> errorCode <span class="token operator">+</span> <span class="token string">&quot;  message = &quot;</span> <span class="token operator">+</span> errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;"><a name="&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;" class="plugin-anchor" href="#&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x84DD;&#x7259;&#x95E8;&#x9501;&#x529F;&#x80FD;&#x70B9;&#x5217;&#x8868;</h2>
+<table>
+<thead>
+<tr>
+<th>dp name</th>
+<th>dp code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6DFB;&#x52A0;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;</td>
+<td>unlock_method_create</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;</td>
+<td>unlock_method_delete</td>
+</tr>
+<tr>
+<td>&#x4FEE;&#x6539;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;</td>
+<td>unlock_method_modify</td>
+</tr>
+<tr>
+<td>&#x51BB;&#x7ED3;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;</td>
+<td>unlock_method_freeze</td>
+</tr>
+<tr>
+<td>&#x89E3;&#x51BB;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;</td>
+<td>unlock_method_enable</td>
+</tr>
+<tr>
+<td>&#x84DD;&#x7259;&#x89E3;&#x9501;</td>
+<td>bluetooth_unlock</td>
+</tr>
+<tr>
+<td>&#x84DD;&#x7259;&#x89E3;&#x9501;&#x53CD;&#x9988;</td>
+<td>bluetooth_unlock_fb</td>
+</tr>
+<tr>
+<td>&#x5269;&#x4F59;&#x7535;&#x91CF;</td>
+<td>residual_electricity</td>
+</tr>
+<tr>
+<td>&#x7535;&#x91CF;&#x72B6;&#x6001;</td>
+<td>battery_state</td>
+</tr>
+<tr>
+<td>&#x7AE5;&#x9501;&#x72B6;&#x6001;</td>
+<td>child_lock</td>
+</tr>
+<tr>
+<td>&#x4E0A;&#x63D0;&#x53CD;&#x9501;</td>
+<td>anti_lock_outside</td>
+</tr>
+<tr>
+<td>&#x6307;&#x7EB9;&#x89E3;&#x9501;</td>
+<td>unlock_fingerprint</td>
+</tr>
+<tr>
+<td>&#x666E;&#x901A;&#x5BC6;&#x7801;&#x89E3;&#x9501;</td>
+<td>unlock_password</td>
+</tr>
+<tr>
+<td>&#x52A8;&#x6001;&#x5BC6;&#x7801;&#x89E3;&#x9501;</td>
+<td>unlock_dynamic</td>
+</tr>
+<tr>
+<td>&#x5361;&#x7247;&#x89E3;&#x9501;</td>
+<td>unlock_card</td>
+</tr>
+<tr>
+<td>&#x94A5;&#x5319;&#x89E3;&#x9501;</td>
+<td>unlock_key</td>
+</tr>
+<tr>
+<td>&#x5F00;&#x5173;&#x95E8;&#x4E8B;&#x4EF6;</td>
+<td>open_close</td>
+</tr>
+<tr>
+<td>&#x4ECE;&#x95E8;&#x5185;&#x4FA7;&#x6253;&#x5F00;&#x95E8;&#x9501;</td>
+<td>open_inside</td>
+</tr>
+<tr>
+<td>&#x84DD;&#x7259;&#x89E3;&#x9501;&#x8BB0;&#x5F55;</td>
+<td>unlock_ble</td>
+</tr>
+<tr>
+<td>&#x95E8;&#x88AB;&#x6253;&#x5F00;</td>
+<td>door_opened</td>
+</tr>
+<tr>
+<td>&#x544A;&#x8B66;</td>
+<td>alarm_lock</td>
+</tr>
+<tr>
+<td>&#x52AB;&#x6301;&#x62A5;&#x8B66;</td>
+<td>hijack</td>
+</tr>
+<tr>
+<td>&#x95E8;&#x94C3;&#x547C;&#x53EB;</td>
+<td>doorbell</td>
+</tr>
+<tr>
+<td>&#x77ED;&#x4FE1;&#x901A;&#x77E5;</td>
+<td>message</td>
+</tr>
+<tr>
+<td>&#x95E8;&#x94C3;&#x9009;&#x62E9;</td>
+<td>doorbell_song</td>
+</tr>
+<tr>
+<td>&#x95E8;&#x94C3;&#x97F3;&#x91CF;</td>
+<td>doorbell_volume</td>
+</tr>
+<tr>
+<td>&#x95E8;&#x9501;&#x8BED;&#x8A00;&#x5207;&#x6362;</td>
+<td>language</td>
+</tr>
+<tr>
+<td>&#x663E;&#x793A;&#x5C4F;&#x6B22;&#x8FCE;&#x8BCD;&#x7BA1;&#x7406;</td>
+<td>welcome_words</td>
+</tr>
+<tr>
+<td>&#x6309;&#x952E;&#x97F3;&#x91CF;</td>
+<td>key_tone</td>
+</tr>
+<tr>
+<td>&#x95E8;&#x9501;&#x672C;&#x5730;&#x5BFC;&#x822A;&#x97F3;&#x91CF;</td>
+<td>beep_volume</td>
+</tr>
+<tr>
+<td>&#x53CD;&#x9501;&#x72B6;&#x6001;</td>
+<td>reverse_lock</td>
+</tr>
+<tr>
+<td>&#x81EA;&#x52A8;&#x843D;&#x9501;&#x5F00;&#x5173;</td>
+<td>automatic_lock</td>
+</tr>
+<tr>
+<td>&#x5355;&#x4E00;&#x89E3;&#x9501;&#x4E0E;&#x7EC4;&#x5408;&#x89E3;&#x9501;&#x5207;&#x6362;</td>
+<td>unlock_switch</td>
+</tr>
+<tr>
+<td>&#x540C;&#x6B65;&#x6210;&#x5458;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;</td>
+<td>synch_member</td>
+</tr>
+<tr>
+<td>&#x81EA;&#x52A8;&#x843D;&#x9501;&#x5EF6;&#x65F6;&#x8BBE;&#x7F6E;</td>
+<td>auto_lock_time</td>
+</tr>
+<tr>
+<td>&#x5B9A;&#x65F6;&#x81EA;&#x52A8;&#x843D;&#x9501;</td>
+<td>auto_lock_timer</td>
+</tr>
+<tr>
+<td>&#x6307;&#x7EB9;&#x5F55;&#x5165;&#x6B21;&#x6570;</td>
+<td>finger_input_times</td>
+</tr>
+<tr>
+<td>&#x4EBA;&#x8138;&#x8BC6;&#x522B;&#x89E3;&#x9501;</td>
+<td>unlock_face</td>
+</tr>
+<tr>
+<td>&#x5F00;&#x5408;&#x72B6;&#x6001;</td>
+<td>closed_opened</td>
+</tr>
+<tr>
+<td>&#x8679;&#x819C;&#x89E3;&#x9501;</td>
+<td>unlock_eye</td>
+</tr>
+<tr>
+<td>&#x638C;&#x7EB9;&#x89E3;&#x9501;</td>
+<td>unlock_hand</td>
+</tr>
+<tr>
+<td>&#x6307;&#x9759;&#x8109;&#x89E3;&#x9501;</td>
+<td>unlock_finger_vein</td>
+</tr>
+<tr>
+<td>&#x786C;&#x4EF6;&#x65F6;&#x949F;RTC</td>
+<td>rtc_lock</td>
+</tr>
+<tr>
+<td>&#x81EA;&#x52A8;&#x843D;&#x9501;&#x5012;&#x8BA1;&#x65F6;&#x4E0A;&#x62A5;</td>
+<td>auto_lock_countdown</td>
+</tr>
+<tr>
+<td>&#x624B;&#x52A8;&#x843D;&#x9501;</td>
+<td>manual_lock</td>
+</tr>
+<tr>
+<td>&#x843D;&#x9501;&#x72B6;&#x6001;</td>
+<td>lock_motor_state</td>
+</tr>
+<tr>
+<td>&#x9501;&#x5E16;&#x7535;&#x673A;&#x8F6C;&#x52A8;&#x65B9;&#x5411;</td>
+<td>lock_motor_direction</td>
+</tr>
+<tr>
+<td>&#x51BB;&#x7ED3;&#x7528;&#x6237;</td>
+<td>unlock_user_freeze</td>
+</tr>
+<tr>
+<td>&#x89E3;&#x51BB;&#x7528;&#x6237;</td>
+<td>unlock_user_enable</td>
+</tr>
+<tr>
+<td>&#x84DD;&#x7259;&#x9501;&#x4E34;&#x65F6;&#x5BC6;&#x7801;&#x6DFB;&#x52A0;</td>
+<td>temporary password_creat</td>
+</tr>
+<tr>
+<td>&#x84DD;&#x7259;&#x9501;&#x4E34;&#x65F6;&#x5BC6;&#x7801;&#x5220;&#x9664;</td>
+<td>temporary password_delete</td>
+</tr>
+<tr>
+<td>&#x84DD;&#x7259;&#x9501;&#x4E34;&#x65F6;&#x5BC6;&#x7801;&#x4FEE;&#x6539;</td>
+<td>temporary password_modify</td>
+</tr>
+<tr>
+<td>&#x540C;&#x6B65;&#x5F00;&#x95E8;&#x65B9;&#x5F0F;&#xFF08;&#x6570;&#x636E;&#x91CF;&#x5927;&#xFF09;</td>
+<td>synch_method</td>
+</tr>
+<tr>
+<td>&#x4E34;&#x65F6;&#x5BC6;&#x7801;&#x89E3;&#x9501;</td>
+<td>unlock_temporary</td>
+</tr>
+<tr>
+<td>&#x7535;&#x673A;&#x626D;&#x529B;</td>
+<td>motor_torque</td>
+</tr>
+<tr>
+<td>&#x7EC4;&#x5408;&#x5F00;&#x9501;&#x8BB0;&#x5F55;</td>
+<td>unlock_double</td>
+</tr>
+<tr>
+<td>&#x79BB;&#x5BB6;&#x5E03;&#x9632;&#x5F00;&#x5173;</td>
+<td>arming_mode</td>
+</tr>
+<tr>
+<td>&#x914D;&#x7F6E;&#x65B0;&#x514D;&#x5BC6;&#x8FDC;&#x7A0B;&#x89E3;&#x9501;</td>
+<td>remote_no_pd_setkey</td>
+</tr>
+<tr>
+<td>&#x65B0;&#x514D;&#x5BC6;&#x8FDC;&#x7A0B;&#x5F00;&#x95E8;-&#x5E26;&#x5BC6;&#x94A5;</td>
+<td>remote_no_dp_key</td>
+</tr>
+<tr>
+<td>&#x8FDC;&#x7A0B;&#x624B;&#x673A;&#x89E3;&#x9501;&#x4E0A;&#x62A5;</td>
+<td>unlock_phone_remote</td>
+</tr>
+<tr>
+<td>&#x8FDC;&#x7A0B;&#x8BED;&#x97F3;&#x89E3;&#x9501;&#x4E0A;&#x62A5;</td>
+<td>unlock_voice_remote</td>
+</tr>
+<tr>
+<td>&#x79BB;&#x7EBF;&#x5BC6;&#x7801;T0&#x65F6;&#x95F4;&#x4E0B;&#x53D1;</td>
+<td>password_offline_time</td>
+</tr>
+<tr>
+<td>&#x5355;&#x6761;&#x79BB;&#x7EBF;&#x5BC6;&#x7801;&#x6E05;&#x7A7A;&#x4E0A;&#x62A5;</td>
+<td>unlock_offline_clear_single</td>
+</tr>
+<tr>
+<td>&#x79BB;&#x7EBF;&#x5BC6;&#x7801;&#x6E05;&#x7A7A;&#x4E0A;&#x62A5;</td>
+<td>unlock_offline_clear</td>
+</tr>
+<tr>
+<td>&#x79BB;&#x7EBF;&#x5BC6;&#x7801;&#x89E3;&#x9501;&#x4E0A;&#x62A5;</td>
+<td>unlock_offline_pd</td>
+</tr>
+</tbody>
+</table>
+<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/BLELockDoc.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/BLELockDoc.html"});gitalk.render("gitalk-container");</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="WiFiLockDoc.html#" class="navigation navigation-prev " aria-label="Previous page:  Wi-Fi 门锁">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CommonInterface.html" class="navigation navigation-next " aria-label="Next page: 通用接口">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"蓝牙门锁","level":"3.1.3.2","depth":3,"next":{"title":"通用接口","level":"4.1","depth":1,"path":"resource/CommonInterface.md","ref":"./resource/CommonInterface.md","articles":[]},"previous":{"title":" Wi-Fi 门锁","level":"3.1.3.1","depth":3,"anchor":"#","path":"resource/WiFiLockDoc.md","ref":"./resource/WiFiLockDoc.md#","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/BLELockDoc.md","mtime":"2020-06-06T07:27:41.783Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-06T07:36:12.668Z"},"basePath":"..","book":{"language":"zh-hans"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sf-score/lib/scorePlugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

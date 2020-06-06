@@ -4,13 +4,14 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>邮箱帐号 · GitBook</title>
+        <title>邮箱帐号体系 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
         
         
         
+    
     
     <link rel="stylesheet" href="../../gitbook/style.css">
 
@@ -57,6 +58,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
                 
             
@@ -80,6 +85,9 @@
         
     
         
+    
+
+
     
 
         
@@ -216,7 +224,7 @@
                 <a href="User_mobile.html">
             
                     
-                    手机帐号
+                    手机帐号体系
             
                 </a>
             
@@ -229,7 +237,7 @@
                 <a href="User_email.html">
             
                     
-                    邮箱帐号
+                    邮箱帐号体系
             
                 </a>
             
@@ -242,7 +250,7 @@
                 <a href="User_uid.html">
             
                     
-                    用户 uid 登陆体系
+                    用户 UID 登陆体系
             
                 </a>
             
@@ -281,7 +289,7 @@
                 <a href="User_logout.html#退出登录">
             
                     
-                    退出登录
+                    退出登录、注销账号
             
                 </a>
             
@@ -289,20 +297,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="User_logout.html">
-            
-                <a href="User_logout.html#停用账户">
-            
-                    
-                    停用帐号
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.8" data-path="User_model.html">
+        <li class="chapter " data-level="1.5.7" data-path="User_model.html">
             
                 <a href="User_model.html">
             
@@ -315,12 +310,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="User_Session.html">
+        <li class="chapter " data-level="1.5.8" data-path="User_Session.html">
             
                 <a href="User_Session.html">
             
                     
-                    Session 失效监听
+                    Session 过期的处理
             
                 </a>
             
@@ -742,7 +737,7 @@
     
         <li class="chapter " data-level="1.10" data-path="Shared.html">
             
-                <a href="Shared.html">
+                <a href="Shared.html#共享设备">
             
                     
                     共享设备
@@ -756,7 +751,7 @@
     
         <li class="chapter " data-level="1.10.1" data-path="Shared_Device_add.html">
             
-                <a href="Shared_Device_add.html">
+                <a href="Shared_Device_add.html#添加共享">
             
                     
                     添加共享
@@ -767,12 +762,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="Shared_Device_Remove.html">
+        <li class="chapter " data-level="1.10.2" data-path="Shared_Device_Relation.html">
             
-                <a href="Shared_Device_Remove.html">
+                <a href="Shared_Device_Relation.html#分享关系获取">
             
                     
-                    移除分享
+                    分享关系获取
             
                 </a>
             
@@ -780,9 +775,22 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="Shared_Device_Rename.html">
+        <li class="chapter " data-level="1.10.3" data-path="Shared_Device_Remove.html">
             
-                <a href="Shared_Device_Rename.html">
+                <a href="Shared_Device_Remove.html#移除共享">
+            
+                    
+                    移除共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="Shared_Device_Rename.html">
+            
+                <a href="Shared_Device_Rename.html#修改备注名">
             
                     
                     修改备注名
@@ -916,10 +924,10 @@
     
         <li class="chapter " data-level="1.14" data-path="Message.html">
             
-                <a href="Message.html">
+                <a href="Message.html#消息中心">
             
                     
-                    消息列表
+                    消息中心
             
                 </a>
             
@@ -930,10 +938,10 @@
     
         <li class="chapter " data-level="1.14.1" data-path="Message.html">
             
-                <a href="Message.html">
+                <a href="Message.html#消息相关功能">
             
                     
-                    消息列表
+                    消息相关功能
             
                 </a>
             
@@ -943,7 +951,7 @@
     
         <li class="chapter " data-level="1.14.2" data-path="MessagePush.html">
             
-                <a href="MessagePush.html">
+                <a href="MessagePush.html#消息推送设置">
             
                     
                     消息推送设置
@@ -1420,16 +1428,48 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.3" data-path="Extension.html">
+        <li class="chapter " data-level="3.1.3" data-path="Lock.html">
             
-                <a href="Extension.html#门锁-sdk-beta">
+                <a href="Lock.html#">
             
                     
-                    门锁 SDK
+                    智能门锁 SDK
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="WiFiLockDoc.html">
+            
+                <a href="WiFiLockDoc.html#">
+            
+                    
+                     Wi-Fi 门锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="BLELockDoc.html">
+            
+                <a href="BLELockDoc.html#">
+            
+                    
+                    蓝牙门锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1566,7 +1606,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >邮箱帐号</a>
+        <a href=".." >邮箱帐号体系</a>
     </h1>
 </div>
 
@@ -1581,9 +1621,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><b></b>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><b></b>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;"><b></b>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><b></b>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;</a></li></ul></ul></div><a href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;" class="plugin-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;</h1>
-<p>&#x6D82;&#x9E26;&#x667A;&#x80FD;&#x63D0;&#x4F9B;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;&#x4F53;&#x7CFB;&#x3002;</p>
-<h2 id="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;" class="plugin-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><b></b>&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;</a></li><ul><li><span class="title-icon "></span><a href="#&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><b></b>&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;</a></li><li><span class="title-icon "></span><a href="#&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;"><b></b>&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><b></b>&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;"><b></b>&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;</a></li></ul></ul></div><a href="#&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><a name="&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;" class="plugin-anchor" href="#&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90AE;&#x7BB1;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;</h1>
+<p>&#x6D82;&#x9E26;&#x667A;&#x80FD;&#x63D0;&#x4F9B;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x4F53;&#x7CFB;&#x3002;</p>
+<h2 id="&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><a name="&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;" class="anchor-navigation-ex-anchor" href="#&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;" class="plugin-anchor" href="#&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x6CE8;&#x518C;</h2>
 <p>&#x90AE;&#x7BB1;&#x6CE8;&#x518C;&#x5206;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5148;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x9A8C;&#x8BC1;&#x7801;&#x3001;&#x5BC6;&#x7801;&#x6CE8;&#x518C;&#x3002;</p>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
 <p>&#x90AE;&#x7BB1;&#x6CE8;&#x518C;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;</p>
@@ -1676,9 +1716,9 @@
 <p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;:</p>
 <p> &#x8D26;&#x6237;&#x4E00;&#x65E6;&#x6CE8;&#x518C;&#x5230;&#x4E00;&#x4E2A;&#x56FD;&#x5BB6;&#xFF0C;&#x76EE;&#x524D;&#x6570;&#x636E;&#x65E0;&#x6CD5;&#x8FC1;&#x79FB;&#x5176;&#x4ED6;&#x56FD;&#x5BB6;&#x3002;</p>
 </blockquote>
-<h2 id="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;"><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;" class="plugin-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;</h2>
+<h2 id="&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;"><a name="&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;" class="plugin-anchor" href="#&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;</h2>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
-<p>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;</p>
+<p>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;</p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginWithEmail</span><span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> email<span class="token punctuation">,</span> <span class="token class-name">String</span> passwd<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ILoginCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <table>
@@ -1708,7 +1748,7 @@
 </tbody>
 </table>
 <p><strong>&#x4EE3;&#x7801;&#x8303;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token comment">//&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x9646;</span>
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x90AE;&#x7BB1;&#x5BC6;&#x7801;&#x767B;&#x5F55;</span>
 <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginWithEmail</span><span class="token punctuation">(</span><span class="token string">&quot;86&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123456@123.com&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;123123&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ILoginCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1721,7 +1761,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;" class="plugin-anchor" href="#&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;</h2>
+<h2 id="&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><a name="&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;" class="plugin-anchor" href="#&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;</h2>
 <p>&#x7528;&#x6237;&#x90AE;&#x7BB1;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;&#x529F;&#x80FD;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x53D1;&#x9001;&#x9A8C;&#x8BC1;&#x7801;&#x63A5;&#x53E3;&#x548C;&#x91CD;&#x7F6E;&#x5BC6;&#x7801;&#x63A5;&#x53E3;&#x3002;</p>
 <p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
 <p>&#x90AE;&#x7BB1;&#x627E;&#x56DE;&#x5BC6;&#x7801;&#xFF0C;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;</p>
@@ -1809,6 +1849,47 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<h2 id="&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;"><a name="&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;" class="plugin-anchor" href="#&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;</h2>
+<p>&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x63A5;&#x53E3;</p>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<p>&#x9A8C;&#x8BC1;&#x9A8C;&#x8BC1;&#x7801;&#xFF0C;&#x7528;&#x4E8E;&#x6CE8;&#x518C;&#x3001;&#x767B;&#x5F55;&#x3001;&#x91CD;&#x8BBE;&#x5BC6;&#x7801; &#x65F6;&#x9A8C;&#x8BC1;&#x7684;&#x6821;&#x9A8C;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkCodeWithUserName</span><span class="token punctuation">(</span><span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token class-name">String</span> region<span class="token punctuation">,</span> <span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token keyword">int</span> type<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userName</td>
+<td>&#x7528;&#x6237;&#x540D;</td>
+</tr>
+<tr>
+<td>region</td>
+<td>&#x533A;&#x57DF;&#xFF0C;&#x9ED8;&#x8BA4;&#x586B;&#x5199;&#xFF1A;&quot;&quot;  &#x5373;&#x53EF;</td>
+</tr>
+<tr>
+<td>countryCode</td>
+<td>&#x56FD;&#x5BB6;&#x7801;</td>
+</tr>
+<tr>
+<td>code</td>
+<td>&#x9A8C;&#x8BC1;&#x7801;</td>
+</tr>
+<tr>
+<td>type</td>
+<td>&#x7C7B;&#x578B;: <br>1: &#x6CE8;&#x518C;&#x65F6;&#x9A8C;&#x8BC1;&#x7801;&#x9A8C;&#x8BC1;&#x7528;<br>2: &#x9A8C;&#x8BC1;&#x7801;&#x767B;&#x5F55;&#x65F6;&#x7528;<br>3: &#x91CD;&#x7F6E;&#x5BC6;&#x7801;&#x65F6;&#x7528;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
 <p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/User_email.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/User_email.html"});gitalk.render("gitalk-container");</script></p>
 
                                 
@@ -1837,12 +1918,12 @@
 
             
                 
-                <a href="User_mobile.html" class="navigation navigation-prev " aria-label="Previous page: 手机帐号">
+                <a href="User_mobile.html" class="navigation navigation-prev " aria-label="Previous page: 手机帐号体系">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="User_uid.html" class="navigation navigation-next " aria-label="Next page: 用户 uid 登陆体系">
+                <a href="User_uid.html" class="navigation navigation-next " aria-label="Next page: 用户 UID 登陆体系">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1853,12 +1934,13 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"邮箱帐号","level":"1.5.2","depth":2,"next":{"title":"用户 uid 登陆体系","level":"1.5.3","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},"previous":{"title":"手机帐号","level":"1.5.1","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/User_email.md","mtime":"2020-04-10T09:04:47.798Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-04T02:46:04.036Z"},"basePath":"..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"邮箱帐号体系","level":"1.5.2","depth":2,"next":{"title":"用户 UID 登陆体系","level":"1.5.3","depth":2,"path":"resource/User_uid.md","ref":"./resource/User_uid.md","articles":[]},"previous":{"title":"手机帐号体系","level":"1.5.1","depth":2,"path":"resource/User_mobile.md","ref":"./resource/User_mobile.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/User_email.md","mtime":"2020-06-06T06:55:41.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-06T07:36:12.668Z"},"basePath":"..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
 
         
+    
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
@@ -1911,6 +1993,10 @@
         
     
         
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
@@ -1934,6 +2020,8 @@
         <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
