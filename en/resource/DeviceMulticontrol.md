@@ -1,4 +1,4 @@
-# Multi-control Device
+# Multi-control Association
 
 ## Overview
 
@@ -24,7 +24,7 @@ ITuyaDeviceMultiControl iTuyaDeviceMultiControl = TuyaHomeSdk.getDeviceMultiCont
 
 ![multi_control](./images/multi_control.png)
 
-## Get All Dp Information of the Device
+## Get Device Dp Information
 
 **Interface Description**
 
@@ -59,7 +59,7 @@ iTuyaDeviceMultiControl.getDeviceDpInfoList(mDevId, new ITuyaDataCallback<ArrayL
 
 ```
 
-## Query the Multi-control and Automation Associated with a Dp under the Device
+## Query Related Information of a Dp 
 
 **Interface Description**
 
@@ -150,95 +150,7 @@ iTuyaDeviceMultiControl.queryLinkInfoByDp(mDevId, dpId, new ITuyaDataCallback<Mu
 | name | String| Automation name |
 
 
-## Get a List of Devices that Support Multi-control under the Family
-
-**Interface Description**
-
-```java
-void getMultiControlDeviceList(long mHomeId,  ITuyaDataCallback<ArrayList<MultiControlDevInfoBean>> callback);
-
-```
-
-**Parameter Description**
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| mHomeId| long| home id|
-| callback| Object | Callback for getting results|
-
-**Sample Code**
-
-```java
-iTuyaDeviceMultiControl.getMultiControlDeviceList(Constant.HOME_ID, new ITuyaDataCallback<ArrayList<MultiControlDevInfoBean>>() {
-    @Override
-    public void onSuccess(ArrayList<MultiControlDevInfoBean> result) {
-        iMultiControlDeviceView.setData(result);
-    }
-
-    @Override
-    public void onError(String errorCode, String errorMessage) {
-        ToastUtil.shortToast(mContext,errorMessage);
-    }
-});
-
-```
-
-**MultiControlDevInfoBean Information**
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| productId | String | Product id|
-| devId | String | Device id|
-| iconUrl | String | Device icon url |
-| name | String | Device name|
-| roomName | String | Room name |
-| inRule | boolean | Whether it has already been connected |
-| datapoints | List<MultiControlDataPointsBean> | dp point information|
-
-## Obtain the Dp Point Information of the Attached Device, the Associated Multi-controller, and Scene Automation Information
-
-**Interface Description**
-
-```java
-void getDeviceDpLinkRelation(String devId, ITuyaDataCallback<DeviceMultiControlRelationBean> callback);
-```
-
-**Parameter Description**
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| devId | String|Device id |
-| callback |Object|Callback for getting results |
-
-
-**Sample Code**
-
-```java
-
-iTuyaDeviceMultiControl.getDeviceDpLinkRelation(devId, new ITuyaDataCallback<DeviceMultiControlRelationBean>() {
-    @Override
-    public void onSuccess(DeviceMultiControlRelationBean result) {
-        L.d("MultiControlDeviceListPresenter",result.toString());
-    }
-
-    @Override
-    public void onError(String errorCode, String errorMessage) {
-        ToastUtil.shortToast(mContext,errorMessage);
-    }
-});
-
-```
-
-**DeviceMultiControlRelationBean Information**
-
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| datapoints | List<MultiControlDataPointsBean> | dp point information|
-| mcGroups | List<McGroupsBean> | Related multi-controller information|
-| parentRules |List<ParentRulesBean> | Associated scene automation information|
-
-## Add, Update, Delete Multi-controll Groups
+##Add,Update,Delete Multi-controll Groups
 
 **Interface Description**
 
@@ -352,3 +264,92 @@ iTuyaDeviceMultiControl.disableMultiControl( id, new ITuyaResultCallback<Boolean
 });
 
 ```
+
+## Query Devices that Support Multi-control
+
+**Interface Description**
+
+```java
+void getMultiControlDeviceList(long mHomeId,  ITuyaDataCallback<ArrayList<MultiControlDevInfoBean>> callback);
+
+```
+
+**Parameter Description**
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| mHomeId| long| home id|
+| callback| Object | Callback for getting results|
+
+**Sample Code**
+
+```java
+iTuyaDeviceMultiControl.getMultiControlDeviceList(Constant.HOME_ID, new ITuyaDataCallback<ArrayList<MultiControlDevInfoBean>>() {
+    @Override
+    public void onSuccess(ArrayList<MultiControlDevInfoBean> result) {
+        iMultiControlDeviceView.setData(result);
+    }
+
+    @Override
+    public void onError(String errorCode, String errorMessage) {
+        ToastUtil.shortToast(mContext,errorMessage);
+    }
+});
+
+```
+
+**MultiControlDevInfoBean Information**
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| productId | String | Product id|
+| devId | String | Device id|
+| iconUrl | String | Device icon url |
+| name | String | Device name|
+| roomName | String | Room name |
+| inRule | boolean | Whether it has already been connected |
+| datapoints | List<MultiControlDataPointsBean> | dp point information|
+
+## Get Affiliate Device Details
+
+**Interface Description**
+
+```java
+void getDeviceDpLinkRelation(String devId, ITuyaDataCallback<DeviceMultiControlRelationBean> callback);
+```
+
+**Parameter Description**
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| devId | String|Device id |
+| callback |Object|Callback for getting results |
+
+
+**Sample Code**
+
+```java
+
+iTuyaDeviceMultiControl.getDeviceDpLinkRelation(devId, new ITuyaDataCallback<DeviceMultiControlRelationBean>() {
+    @Override
+    public void onSuccess(DeviceMultiControlRelationBean result) {
+        L.d("MultiControlDeviceListPresenter",result.toString());
+    }
+
+    @Override
+    public void onError(String errorCode, String errorMessage) {
+        ToastUtil.shortToast(mContext,errorMessage);
+    }
+});
+
+```
+
+**DeviceMultiControlRelationBean Information**
+
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| datapoints | List<MultiControlDataPointsBean> | dp point information|
+| mcGroups | List<McGroupsBean> | Related multi-controller information|
+| parentRules |List<ParentRulesBean> | Associated scene automation information|
+

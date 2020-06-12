@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Integrate SDK · GitBook</title>
+        <title>Device Multi-control · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -103,10 +103,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Demo.html" />
+    <link rel="next" href="DeviceMultiControl.html" />
     
     
-    <link rel="prev" href="Preparation.html" />
+    <link rel="prev" href="Gateway.html" />
     
 
     
@@ -179,7 +179,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="Integrated.html">
+        <li class="chapter " data-level="1.3" data-path="Integrated.html">
             
                 <a href="Integrated.html">
             
@@ -742,7 +742,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="DeviceMultiControl.html">
+        <li class="chapter active" data-level="1.9" data-path="DeviceMultiControl.html">
             
                 <a href="DeviceMultiControl.html">
             
@@ -1955,7 +1955,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Integrate SDK</a>
+        <a href=".." >Device Multi-control</a>
     </h1>
 </div>
 
@@ -1970,126 +1970,578 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#integrate-sdk"><b>1. </b>Integrate SDK</a></li><ul><ul><li><span class="title-icon "></span><a href="#create-project"><b>1.1.1. </b>Create Project</a></li><li><span class="title-icon "></span><a href="#configure-the-buildgradle"><b>1.1.2. </b>Configure the build.gradle</a></li><li><span class="title-icon "></span><a href="#integrated-security-image"><b>1.1.3. </b>Integrated security image</a></li><li><span class="title-icon "></span><a href="#set-the-androidmanifestxml"><b>1.1.4. </b>Set the AndroidManifest.xml</a></li><li><span class="title-icon "></span><a href="#proguard-configuration"><b>1.1.5. </b>Proguard Configuration</a></li></ul><li><span class="title-icon "></span><a href="#use-the-sdk-function-in-codes"><b>1.2. </b>Use the SDK function in codes</a></li><ul><li><span class="title-icon "></span><a href="#initiate-sdk-in-the-application"><b>1.2.1. </b>Initiate SDK in the Application</a></li><li><span class="title-icon "></span><a href="#logout-of-the-tuya-smart-cloud-connection"><b>1.2.2. </b>Logout of the Tuya Smart Cloud connection</a></li><li><span class="title-icon "></span><a href="#monitor-the-invalidity-of-registered-session"><b>1.2.3. </b>Monitor the invalidity of registered session</a></li><li><span class="title-icon "></span><a href="#debug-mode"><b>1.2.4. </b>Debug mode</a></li></ul></ul></ul></div><a href="#integrate-sdk" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="integrate-sdk"><a name="integrate-sdk" class="anchor-navigation-ex-anchor" href="#integrate-sdk"><i class="fa fa-link" aria-hidden="true"></i></a>1. Integrate SDK</h1>
-<h3 id="create-project"><a name="create-project" class="anchor-navigation-ex-anchor" href="#create-project"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Create Project</h3>
-<p>Build your project in the Android Studio.</p>
-<h3 id="configure-the-buildgradle"><a name="configure-the-buildgradle" class="anchor-navigation-ex-anchor" href="#configure-the-buildgradle"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Configure the build.gradle</h3>
-<p>Add the following codes to the build.gradle file.</p>
-<pre class="language-"><code class="lang-groovy">defaultConfig <span class="token punctuation">{</span>
-    ndk <span class="token punctuation">{</span>
-        abiFilters <span class="token string">&quot;armeabi-v7a&quot;</span>
-    <span class="token punctuation">}</span>
-   <span class="token punctuation">}</span>
-    dependencies <span class="token punctuation">{</span>
-        implementation <span class="token string">&apos;com.alibaba:fastjson:1.1.67.android&apos;</span>
-        implementation <span class="token string">&apos;com.squareup.okhttp3:okhttp-urlconnection:3.12.3&apos;</span>
-        implementation <span class="token string">&apos;com.tuya.smart:tuyasmart:3.17.0&apos;</span>
-    <span class="token punctuation">}</span>
-
-repositories <span class="token punctuation">{</span>
-    <span class="token function">mavenLocal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">jcenter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">google</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#multi-control-association"><b>1. </b>Multi-control Association</a></li><ul><li><span class="title-icon "></span><a href="#overview"><b>1.1. </b>Overview</a></li><li><span class="title-icon "></span><a href="#function-entrance"><b>1.2. </b>Function Entrance</a></li><li><span class="title-icon "></span><a href="#business-flowchart"><b>1.3. </b>Business Flowchart</a></li><li><span class="title-icon "></span><a href="#get-device-dp-information"><b>1.4. </b>Get Device Dp Information</a></li><li><span class="title-icon "></span><a href="#query-related-information-of-a-dp"><b>1.5. </b>Query Related Information of a Dp</a></li><li><span class="title-icon "></span><a href="#addupdatedelete-multi-controll-groups"><b>1.6. </b>Add,Update,Delete Multi-controll Groups</a></li><li><span class="title-icon "></span><a href="#enable-or-disable-multi-control-group"><b>1.7. </b>Enable or Disable Multi-control Group</a></li><li><span class="title-icon "></span><a href="#query-devices-that-support-multi-control"><b>1.8. </b>Query Devices that Support Multi-control</a></li><li><span class="title-icon "></span><a href="#get-affiliate-device-details"><b>1.9. </b>Get Affiliate Device Details</a></li></ul></ul></div><a href="#multi-control-association" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="multi-control-association"><a name="multi-control-association" class="anchor-navigation-ex-anchor" href="#multi-control-association"><i class="fa fa-link" aria-hidden="true"></i></a>1. Multi-control Association</h1>
+<h2 id="overview"><a name="overview" class="anchor-navigation-ex-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Overview</h2>
+<p>Multi-device control refers to the establishment of an association between the device dp and the device dp to generate a multi-control group. When controlling a device that establishes a dp association in the multi-control group, the status of the dp points associated with other devices in the group is synchronized.</p>
+<p>For example: three two-way zigbee sub-device switches, the first dp point of each switch and the first dp point of the other two switches establish a multi-control group, when the first dp state of one of the switches is closed , The first dp of the other two switches are closed synchronously.</p>
+<p><strong>Currently supports zigbee sub-device, mesh sub-device type switches</strong></p>
+<p><strong>Support cross pid</strong></p>
+<p><strong>Attention:</strong>  The current restriction on dpCode is switch_number, sub_switch_number type dp</p>
+<h2 id="function-entrance"><a name="function-entrance" class="anchor-navigation-ex-anchor" href="#function-entrance"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Function Entrance</h2>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDeviceMultiControl</span> iTuyaDeviceMultiControl <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDeviceMultiControlInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<blockquote>
-<p><strong>[!TIP]</strong></p>
-<ul>
-<li>The Tuya Smart sdk solely supports the platform of armeabi-v7a architecture by default. Developer may refer to the <a href="https://github.com/TuyaInc/tuyasmart_home_android_sdk/tree/master/so_libs" target="_blank">GitHub</a> if you need other platforms. </li>
-<li>After version 3.11.0, the so libraries of armeabi-v7a, arm64-v8a, armeabi platforms have been integrated into sdk. Please remove the relevant so-banks of sdk manually placed in the local, and use the default provided by sdk.</li>
-</ul>
-</blockquote>
-<h3 id="integrated-security-image"><a name="integrated-security-image" class="anchor-navigation-ex-anchor" href="#integrated-security-image"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. Integrated security image</h3>
-<p>Click the download button to download the security image.</p>
-<p><img src="images/download_t_s.png" alt=""></p>
-<p>Rename the downloaded security image to &quot;t_s.bmp&quot; and move it to the assets/ folder in the project directory.</p>
-<p><img src="images/addt_s.png" alt=""></p>
-<h3 id="set-the-androidmanifestxml"><a name="set-the-androidmanifestxml" class="anchor-navigation-ex-anchor" href="#set-the-androidmanifestxml"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. Set the AndroidManifest.xml</h3>
-<p>Set appkey and appSecret in the AndroidManifest.xml file, and configure corresponding permissions, etc.</p>
-<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta-data</span>
-    <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>TUYA_SMART_APPKEY<span class="token punctuation">&quot;</span></span>
-    <span class="token attr-name"><span class="token namespace">android:</span>value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Appkey<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta-data</span>
-    <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>TUYA_SMART_SECRET<span class="token punctuation">&quot;</span></span>
-    <span class="token attr-name"><span class="token namespace">android:</span>value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>AppSecret<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<h2 id="business-flowchart"><a name="business-flowchart" class="anchor-navigation-ex-anchor" href="#business-flowchart"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Business Flowchart</h2>
+<p><img src="images/multi_control.png" alt="multi_control"></p>
+<h2 id="get-device-dp-information"><a name="get-device-dp-information" class="anchor-navigation-ex-anchor" href="#get-device-dp-information"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Get Device Dp Information</h2>
+<p><strong>Interface Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getDeviceDpInfoList</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">DeviceDpInfoBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="proguard-configuration"><a name="proguard-configuration" class="anchor-navigation-ex-anchor" href="#proguard-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. Proguard Configuration</h3>
-<p>please add this proguard configuration to proguard-rules.pro files. </p>
-<pre class="language-"><code class="lang-bash"><span class="token comment">#fastJson</span>
--keep class com.alibaba.fastjson.**<span class="token punctuation">{</span>*<span class="token punctuation">;</span><span class="token punctuation">}</span>
--dontwarn com.alibaba.fastjson.**
-
-<span class="token comment">#mqtt</span>
--keep class com.tuya.smart.mqttclient.mqttv3.** <span class="token punctuation">{</span> *<span class="token punctuation">;</span> <span class="token punctuation">}</span>
--dontwarn com.tuya.smart.mqttclient.mqttv3.**
-
--dontwarn okio.**
--dontwarn rx.**
--dontwarn javax.annotation.**
--keep class com.squareup.okhttp.** <span class="token punctuation">{</span> *<span class="token punctuation">;</span> <span class="token punctuation">}</span>
--keep interface com.squareup.okhttp.** <span class="token punctuation">{</span> *<span class="token punctuation">;</span> <span class="token punctuation">}</span>
--keep class okio.** <span class="token punctuation">{</span> *<span class="token punctuation">;</span> <span class="token punctuation">}</span>
--dontwarn com.squareup.okhttp.**
-
--keep class com.tuya.**<span class="token punctuation">{</span>*<span class="token punctuation">;</span><span class="token punctuation">}</span>
--dontwarn com.tuya.**
-</code></pre>
-<h2 id="use-the-sdk-function-in-codes"><a name="use-the-sdk-function-in-codes" class="anchor-navigation-ex-anchor" href="#use-the-sdk-function-in-codes"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Use the SDK function in codes</h2>
-<p>The TuyaHomeSdk is the outbound interface of the Smart Home, and the operations include network configuration, initiation, control, room, group and ZigBee.</p>
-<h3 id="initiate-sdk-in-the-application"><a name="initiate-sdk-in-the-application" class="anchor-navigation-ex-anchor" href="#initiate-sdk-in-the-application"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. Initiate SDK in the Application</h3>
-<p><strong>Description</strong></p>
-<p>It is used to initiate components of communication services, etc.</p>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TuyaSmartApp</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">devId</td>
+<td style="text-align:left">Device id</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Callback for getting results</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Code</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaDeviceMultiControl</span> iTuyaDeviceMultiControl <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDeviceMultiControlInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+iTuyaDeviceMultiControl<span class="token punctuation">.</span><span class="token function">getDeviceDpInfoList</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">DeviceDpInfoBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceDpInfoBean</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
     <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="query-related-information-of-a-dp"><a name="query-related-information-of-a-dp" class="anchor-navigation-ex-anchor" href="#query-related-information-of-a-dp"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Query Related Information of a Dp</h2>
+<p><strong>Interface Description</strong></p>
+<p>We call the multi-control and automation main device related to querying the current device dp, and other devices related to the returned data are auxiliary devices</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">queryLinkInfoByDp</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> dpId<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlLinkBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">devId</td>
+<td style="text-align:left">Device id</td>
+</tr>
+<tr>
+<td style="text-align:left">dpId</td>
+<td style="text-align:left">Device dp id</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Callback for getting results</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Code</strong></p>
+<pre class="language-"><code class="lang-java">
+iTuyaDeviceMultiControl<span class="token punctuation">.</span><span class="token function">queryLinkInfoByDp</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">,</span> dpId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlLinkBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">MultiControlLinkBean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>MultiControlLinkBean Information</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">multiGroup</td>
+<td style="text-align:left">MultiControlLinkBean.MultiGroupBean</td>
+<td style="text-align:left">Associated multi-control group data structure</td>
+</tr>
+<tr>
+<td style="text-align:left">parentRules</td>
+<td style="text-align:left">List<multicontrollinkbean.parentrulesbean></multicontrollinkbean.parentrulesbean></td>
+<td style="text-align:left">Associated scene automation data structure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MultiControlLinkBean.MultiGroupBean Information</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">uid</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">User id</td>
+</tr>
+<tr>
+<td style="text-align:left">groupName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Multi-control group name</td>
+</tr>
+<tr>
+<td style="text-align:left">groupType</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Multi-control group type (Fixed is 1)</td>
+</tr>
+<tr>
+<td style="text-align:left">multiRuleId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">ownerId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Family id</td>
+</tr>
+<tr>
+<td style="text-align:left">enabled</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">Whether to open the multi-control group</td>
+</tr>
+<tr>
+<td style="text-align:left">status</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">groupDetail</td>
+<td style="text-align:left">List<groupdetailbean></groupdetailbean></td>
+<td style="text-align:left">Multi-control group information</td>
+</tr>
+</tbody>
+</table>
+<p><strong>GroupDetailBean Information</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">devId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Accessory device id</td>
+</tr>
+<tr>
+<td style="text-align:left">dpName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Dp name of the associated auxiliary device</td>
+</tr>
+<tr>
+<td style="text-align:left">multiControlId</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Multi-control group id</td>
+</tr>
+<tr>
+<td style="text-align:left">dpId</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Dp id of the associated attached device</td>
+</tr>
+<tr>
+<td style="text-align:left">devName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">The name of the associated accessory device</td>
+</tr>
+<tr>
+<td style="text-align:left">enabled</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">Whether the associated auxiliary equipment can be controlled by the multi-control function</td>
+</tr>
+<tr>
+<td style="text-align:left">status</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">datapoints</td>
+<td style="text-align:left">List<multicontroldatapointsbean></multicontroldatapointsbean></td>
+<td style="text-align:left">dp information</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MultiControlDataPointsBean Information</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">code</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">dp point standard name&#xFF08;dpCode&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">dpId</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">dp id</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">dp name</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ParentRulesBean Information</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Automation id</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Automation name</td>
+</tr>
+</tbody>
+</table>
+<h2 id="addupdatedelete-multi-controll-groups"><a name="addupdatedelete-multi-controll-groups" class="anchor-navigation-ex-anchor" href="#addupdatedelete-multi-controll-groups"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Add,Update,Delete Multi-controll Groups</h2>
+<p><strong>Interface Description</strong></p>
+<ul>
+<li>Two overloading methods are provided, and the multi-control group can be updated through json format data, or MultiControlBean can also be used. Through this interface, you can add other devices to the master device to enter the multi-control group. You can update the name of the multi-control group, update the devices of the multi-control group, and delete the devices of the multi-control group.</li>
+<li>Add a new multi-control group without sending multi-control group id</li>
+<li>Adding a new multi-control group is to associate the dp of the auxiliary device with the main device dp, so the GroupDetail must contain the device information of the main device</li>
+<li>Deleting a multi-control group requires GroupDetail to be empty</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">saveDeviceMultiControl</span><span class="token punctuation">(</span><span class="token keyword">long</span> mHomeId<span class="token punctuation">,</span> <span class="token class-name">MultiControlBean</span> multiControlBean<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">saveDeviceMultiControl</span><span class="token punctuation">(</span><span class="token keyword">long</span> mHomeId<span class="token punctuation">,</span> <span class="token class-name">String</span> json<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">mHomeId</td>
+<td style="text-align:left">Home id</td>
+</tr>
+<tr>
+<td style="text-align:left">MultiControlBean</td>
+<td style="text-align:left">Multi-control group data structure</td>
+</tr>
+<tr>
+<td style="text-align:left">json</td>
+<td style="text-align:left">Multi-control group data structure</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Callback for getting results</td>
+</tr>
+</tbody>
+</table>
+<p>The complete data structure of json is as follows:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;groupName&quot;</span><span class="token operator">:</span><span class="token string">&quot;Mulit-control 1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;groupType&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;groupDetail&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token property">&quot;devId&quot;</span><span class="token operator">:</span><span class="token string">&quot;adadwfw3e234ferf41&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;dpId&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token number">22</span><span class="token punctuation">,</span> <span class="token property">&quot;enable&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token number">22</span>         <span class="token comment">//  Mulit-control Id</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>Note:</strong></p>
-<p>The appId and appSecret need to be configured in the AndroidManifest.xml file or the build environment or the codes. </p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">Application</span> application<span class="token punctuation">,</span> <span class="token class-name">String</span> appkey<span class="token punctuation">,</span> <span class="token class-name">String</span> appSerect<span class="token punctuation">)</span>
-</code></pre>
-<h3 id="logout-of-the-tuya-smart-cloud-connection"><a name="logout-of-the-tuya-smart-cloud-connection" class="anchor-navigation-ex-anchor" href="#logout-of-the-tuya-smart-cloud-connection"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. Logout of the Tuya Smart Cloud connection</h3>
-<p>The following interface needs to be invoked to log out of the App. </p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="monitor-the-invalidity-of-registered-session"><a name="monitor-the-invalidity-of-registered-session" class="anchor-navigation-ex-anchor" href="#monitor-the-invalidity-of-registered-session"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. Monitor the invalidity of registered session</h3>
-<p><strong>Description</strong></p>
-<p>Because of abnormality or long-time absence of operation for 45 or more days, the session will become invalid, and user has to log out of the App and log in again to obtain the session. </p>
-<p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token comment">// Monitor the invalidity of session.</span>
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token class-name">INeedLoginListener</span> needLoginListener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p><strong>Sample Code</strong></p>
+<pre class="language-"><code class="lang-java">
+iTuyaDeviceMultiControl<span class="token punctuation">.</span><span class="token function">saveDeviceMultiControl</span><span class="token punctuation">(</span><span class="token class-name">Constant</span><span class="token punctuation">.</span>HOME_ID<span class="token punctuation">,</span> multiControlBean<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">MultiControlBean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span><span class="token string">&quot;success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-needLoginListener<span class="token punctuation">.</span><span class="token function">onNeedLogin</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TuyaSmartApp</span> <span class="token keyword">extends</span> <span class="token class-name">Application</span> <span class="token punctuation">{</span>
+<p><strong>MultiControlBean Information</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Optional</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">groupName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Multi-control group name</td>
+</tr>
+<tr>
+<td style="text-align:left">groupType</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">No</td>
+<td style="text-align:left">Multi-control group type&#xFF0C;must pass 1</td>
+</tr>
+<tr>
+<td style="text-align:left">groupDetail</td>
+<td style="text-align:left">List<groupdetailbean></groupdetailbean></td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Multi-control group equipment information</td>
+</tr>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">Yes</td>
+<td style="text-align:left">Multi-control group id</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enable-or-disable-multi-control-group"><a name="enable-or-disable-multi-control-group" class="anchor-navigation-ex-anchor" href="#enable-or-disable-multi-control-group"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. Enable or Disable Multi-control Group</h2>
+<p><strong>Interface Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">enableMultiControl</span><span class="token punctuation">(</span><span class="token keyword">long</span> multiControlId<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment">// Register in the App.</span>
-                <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setOnNeedLoginListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">INeedLoginListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-               <span class="token annotation punctuation">@Override</span>
-                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNeedLogin</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">void</span> <span class="token function">disableMultiControl</span><span class="token punctuation">(</span><span class="token keyword">long</span> multiControlId<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">multiControlId</td>
+<td style="text-align:left">Multi-control group id</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Code</strong></p>
+<pre class="language-"><code class="lang-java">iTuyaDeviceMultiControl<span class="token punctuation">.</span><span class="token function">enableMultiControl</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span><span class="token string">&quot;success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-                <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+iTuyaDeviceMultiControl<span class="token punctuation">.</span><span class="token function">disableMultiControl</span><span class="token punctuation">(</span> id<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span><span class="token string">&quot;success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<blockquote>
-<p><strong>[info] Note</strong></p>
-<ul>
-<li>In case of this kind of callback, please go to the login page and require the user to log in again. </li>
-</ul>
-</blockquote>
-<h3 id="debug-mode"><a name="debug-mode" class="anchor-navigation-ex-anchor" href="#debug-mode"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. Debug mode</h3>
-<p>In the debug mode, you can enable the sdk log switch to view more log information and help you locate the problem quickly. It is recommended to turn off the log switch in release mode.</p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">setDebugMode</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="query-devices-that-support-multi-control"><a name="query-devices-that-support-multi-control" class="anchor-navigation-ex-anchor" href="#query-devices-that-support-multi-control"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. Query Devices that Support Multi-control</h2>
+<p><strong>Interface Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getMultiControlDeviceList</span><span class="token punctuation">(</span><span class="token keyword">long</span> mHomeId<span class="token punctuation">,</span>  <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlDevInfoBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Integrated.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Integrated.html"});gitalk.render("gitalk-container");</script></p>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">mHomeId</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">home id</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Callback for getting results</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Code</strong></p>
+<pre class="language-"><code class="lang-java">iTuyaDeviceMultiControl<span class="token punctuation">.</span><span class="token function">getMultiControlDeviceList</span><span class="token punctuation">(</span><span class="token class-name">Constant</span><span class="token punctuation">.</span>HOME_ID<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ArrayList</span><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlDevInfoBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MultiControlDevInfoBean</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        iMultiControlDeviceView<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>MultiControlDevInfoBean Information</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">productId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Product id</td>
+</tr>
+<tr>
+<td style="text-align:left">devId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Device id</td>
+</tr>
+<tr>
+<td style="text-align:left">iconUrl</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Device icon url</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Device name</td>
+</tr>
+<tr>
+<td style="text-align:left">roomName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Room name</td>
+</tr>
+<tr>
+<td style="text-align:left">inRule</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">Whether it has already been connected</td>
+</tr>
+<tr>
+<td style="text-align:left">datapoints</td>
+<td style="text-align:left">List<multicontroldatapointsbean></multicontroldatapointsbean></td>
+<td style="text-align:left">dp point information</td>
+</tr>
+</tbody>
+</table>
+<h2 id="get-affiliate-device-details"><a name="get-affiliate-device-details" class="anchor-navigation-ex-anchor" href="#get-affiliate-device-details"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. Get Affiliate Device Details</h2>
+<p><strong>Interface Description</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getDeviceDpLinkRelation</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceMultiControlRelationBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameter Description</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">devId</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Device id</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Object</td>
+<td style="text-align:left">Callback for getting results</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sample Code</strong></p>
+<pre class="language-"><code class="lang-java">
+iTuyaDeviceMultiControl<span class="token punctuation">.</span><span class="token function">getDeviceDpLinkRelation</span><span class="token punctuation">(</span>devId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceMultiControlRelationBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceMultiControlRelationBean</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span><span class="token string">&quot;MultiControlDeviceListPresenter&quot;</span><span class="token punctuation">,</span>result<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ToastUtil</span><span class="token punctuation">.</span><span class="token function">shortToast</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span>errorMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>DeviceMultiControlRelationBean Information</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">datapoints</td>
+<td style="text-align:left">List<multicontroldatapointsbean></multicontroldatapointsbean></td>
+<td style="text-align:left">dp point information</td>
+</tr>
+<tr>
+<td style="text-align:left">mcGroups</td>
+<td style="text-align:left">List<mcgroupsbean></mcgroupsbean></td>
+<td style="text-align:left">Related multi-controller information</td>
+</tr>
+<tr>
+<td style="text-align:left">parentRules</td>
+<td style="text-align:left">List<parentrulesbean></parentrulesbean></td>
+<td style="text-align:left">Associated scene automation information</td>
+</tr>
+</tbody>
+</table>
+<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/DeviceMultiControl.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/DeviceMultiControl.html"});gitalk.render("gitalk-container");</script></p>
 
                                 
                                 </section>
@@ -2117,12 +2569,12 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
 
             
                 
-                <a href="Preparation.html" class="navigation navigation-prev " aria-label="Previous page: Preparation for Integration">
+                <a href="Gateway.html" class="navigation navigation-prev " aria-label="Previous page: ZigBee Gateway Control">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Demo.html" class="navigation navigation-next " aria-label="Next page: Demo App">
+                <a href="DeviceMultiControl.html#Overview" class="navigation navigation-next " aria-label="Next page: Overview">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2133,7 +2585,7 @@ needLoginListener<span class="token punctuation">.</span><span class="token func
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Integrate SDK","level":"1.3","depth":1,"next":{"title":"Demo App","level":"1.4","depth":1,"path":"resource/Demo.md","ref":"./resource/Demo.md","articles":[]},"previous":{"title":"Preparation for Integration","level":"1.2","depth":1,"path":"resource/Preparation.md","ref":"./resource/Preparation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Integrated.md","mtime":"2020-06-08T08:21:12.310Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T11:46:35.021Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Multi-control","level":"1.9","depth":1,"next":{"title":"Overview","level":"1.9.1","depth":2,"anchor":"#Overview","path":"resource/DeviceMultiControl.md","ref":"./resource/DeviceMultiControl.md#Overview","articles":[]},"previous":{"title":"ZigBee Gateway Control","level":"1.8.12","depth":2,"path":"resource/Gateway.md","ref":"./resource/Gateway.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/DeviceMultiControl.md","mtime":"2020-06-12T11:18:18.744Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T11:46:35.021Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
