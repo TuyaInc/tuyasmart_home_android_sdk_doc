@@ -1957,7 +1957,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#message-center"><b>1. </b>Message Center</a></li><ul><li><span class="title-icon "></span><a href="#message"><b>1.1. </b>Message</a></li><ul><li><span class="title-icon "></span><a href="#get-message-list"><b>1.1.1. </b>Get Message List</a></li><li><span class="title-icon "></span><a href="#get-a-list-of-paged-messages"><b>1.1.2. </b>Get A List Of Paged Messages</a></li><li><span class="title-icon "></span><a href="#gets-a-list-of-messages-by-paging-by-message-type"><b>1.1.3. </b>Gets A List Of Messages By Paging By Message Type</a></li><li><span class="title-icon "></span><a href="#get-a-list-of-detail-messages-by-paging-by-msgsrcid"><b>1.1.4. </b>Get A List Of Detail Messages By Paging By MsgSrcId</a></li><li><span class="title-icon "></span><a href="#delete-message"><b>1.1.5. </b>Delete message</a></li></ul><li><span class="title-icon "></span><a href="#push-notification"><b>1.2. </b>Push Notification</a></li><ul><li><span class="title-icon "></span><a href="#get-push-notification-status"><b>1.2.1. </b>Get Push Notification Status</a></li><li><span class="title-icon "></span><a href="#set-push-notification-status"><b>1.2.2. </b>Set Push Notification Status</a></li><li><span class="title-icon "></span><a href="#get-or-set-the-switch-status-of-the-message-according-to-the-message-type"><b>1.2.3. </b>Get Or Set The Switch Status Of The Message According To The Message Type</a></li></ul></ul></ul></div><a href="#message-center" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="message-center"><a name="message-center" class="anchor-navigation-ex-anchor" href="#message-center"><i class="fa fa-link" aria-hidden="true"></i></a>1. Message Center</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#message-center"><b>1. </b>Message Center</a></li><ul><li><span class="title-icon "></span><a href="#message"><b>1.1. </b>Message</a></li><ul><li><span class="title-icon "></span><a href="#get-message-list"><b>1.1.1. </b>Get Message List</a></li><li><span class="title-icon "></span><a href="#get-a-list-of-paged-messages"><b>1.1.2. </b>Get A List Of Paged Messages</a></li><li><span class="title-icon "></span><a href="#gets-a-list-of-messages-by-paging-by-message-type"><b>1.1.3. </b>Gets A List Of Messages By Paging By Message Type</a></li><li><span class="title-icon "></span><a href="#get-a-list-of-detail-messages-by-paging-by-msgsrcid"><b>1.1.4. </b>Get A List Of Detail Messages By Paging By MsgSrcId</a></li><li><span class="title-icon "></span><a href="#delete-message"><b>1.1.5. </b>Delete message</a></li><li><span class="title-icon "></span><a href="#check-new-message"><b>1.1.6. </b>Check New Message</a></li></ul><li><span class="title-icon "></span><a href="#push-notification"><b>1.2. </b>Push Notification</a></li><ul><li><span class="title-icon "></span><a href="#get-push-notification-status"><b>1.2.1. </b>Get Push Notification Status</a></li><li><span class="title-icon "></span><a href="#set-push-notification-status"><b>1.2.2. </b>Set Push Notification Status</a></li><li><span class="title-icon "></span><a href="#get-or-set-the-switch-status-of-the-message-according-to-the-message-type"><b>1.2.3. </b>Get Or Set The Switch Status Of The Message According To The Message Type</a></li></ul></ul></ul></div><a href="#message-center" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="message-center"><a name="message-center" class="anchor-navigation-ex-anchor" href="#message-center"><i class="fa fa-link" aria-hidden="true"></i></a>1. Message Center</h1>
 <p>The message management module contains message center and push  functions. Its messages have three categories: alarm, home, and notification, and each category supports turn on or turn off respectively.</p>
 <table>
 <thead>
@@ -2195,13 +2195,110 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaMessage</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteMessages</span><span class="token punctuation">(</span>
-    deleteList<span class="token punctuation">,</span> 
-    <span class="token keyword">new</span> <span class="token class-name">IBooleanCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getMessageInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteMessages</span><span class="token punctuation">(</span>mIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IBooleanCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="batch-deletion-of-specific-types-of-message"><a name="batch-deletion-of-specific-types-of-message" class="anchor-navigation-ex-anchor" href="#batch-deletion-of-specific-types-of-message"><i class="fa fa-link" aria-hidden="true"></i></a><a name="batch-deletion-of-specific-types-of-message" class="plugin-anchor" href="#batch-deletion-of-specific-types-of-message"><i class="fa fa-link" aria-hidden="true"></i></a>Batch Deletion Of Specific Types Of Message</h4>
+<p><strong>Declaration</strong></p>
+<pre class="language-"><code class="lang-objc">void deleteMessageWithType(int msgType, List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>String</span><span class="token punctuation">&gt;</span></span> mIds, List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>String</span><span class="token punctuation">&gt;</span></span> mSrcIds, final IBooleanCallback callback);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">msgType</td>
+<td style="text-align:left">Message type&#xFF08;1 - alarm&#xFF0C;2 - family&#xFF0C;3 - notifiction&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">mIds</td>
+<td style="text-align:left">Delete messageId list</td>
+</tr>
+<tr>
+<td style="text-align:left">mSrcIds</td>
+<td style="text-align:left">Delete alarm messageId list&#xFF0C;null or empty mean don&apos;t delete alarm message</td>
+</tr>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Callbacks, including delete success and failure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getMessageInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">deleteMessageWithType</span><span class="token punctuation">(</span>msgType<span class="token punctuation">,</span> mIds<span class="token punctuation">,</span> mSrcIds<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IBooleanCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="check-new-message"><a name="check-new-message" class="anchor-navigation-ex-anchor" href="#check-new-message"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. Check New Message</h3>
+<p><strong>Declaration</strong></p>
+<pre class="language-"><code class="lang-objc">void requestMessageNew(final ITuyaDataCallback<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MessageHasNew</span><span class="token punctuation">&gt;</span></span> callback);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Parameter</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">callback</td>
+<td style="text-align:left">Get the latest news type</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MessageHasNew data model</strong></p>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alarm</td>
+<td>boolean</td>
+<td>Is there an alarm message</td>
+</tr>
+<tr>
+<td>family</td>
+<td>boolean</td>
+<td>Is there an family message</td>
+</tr>
+<tr>
+<td>notification</td>
+<td>boolean</td>
+<td>Is there an notification message</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getMessageInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestMessageNew</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MessageHasNew</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">MessageHasNew</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>     
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="push-notification"><a name="push-notification" class="anchor-navigation-ex-anchor" href="#push-notification"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Push Notification</h2>
@@ -2381,7 +2478,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Message Center","level":"1.14","depth":1,"next":{"title":"Message","level":"1.14.1","depth":2,"anchor":"#message","path":"resource/Message.md","ref":"./resource/Message.md#message","articles":[]},"previous":{"title":"Scene Operation","level":"1.13.4","depth":2,"anchor":"#scene-operation","path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md#scene-operation","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Message.md","mtime":"2020-06-09T09:12:30.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-13T15:03:24.085Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Message Center","level":"1.14","depth":1,"next":{"title":"Message","level":"1.14.1","depth":2,"anchor":"#message","path":"resource/Message.md","ref":"./resource/Message.md#message","articles":[]},"previous":{"title":"Scene Operation","level":"1.13.4","depth":2,"anchor":"#scene-operation","path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md#scene-operation","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","ga","expandable-chapters-small","favicon","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Message.md","mtime":"2020-06-16T09:49:04.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-16T09:49:28.241Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
