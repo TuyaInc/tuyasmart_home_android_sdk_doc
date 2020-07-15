@@ -2498,7 +2498,7 @@ Server--&gt;APP: Network configuration succeeds
 </table>
 <p><strong>Get Network Configuration Token</strong></p>
 <p>Before the Wi-Fi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
-The term of validity of Token is 5 minutes, and the Token become invalid once the network configuration succeeds.
+The term of validity of Token is 10 minutes, and the Token become invalid once the network configuration succeeds.
 A new Token has to be obtained if you have to reconfigure network.</p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getActivatorToken</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> 
         <span class="token keyword">new</span> <span class="token class-name">ITuyaActivatorGetToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2628,7 +2628,7 @@ Server--&gt;APP: Network configuration succeeds
 </table>
 <p><strong>Get Network Configuration Token</strong></p>
 <p>Before the Wi-Fi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
-The term of validity of Token is 5 minutes, and the Token become invalid once the network configuration succeeds.
+The term of validity of Token is 10 minutes, and the Token become invalid once the network configuration succeeds.
 A new Token has to be obtained if you have to reconfigure network.</p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getActivatorToken</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> 
         <span class="token keyword">new</span> <span class="token class-name">ITuyaActivatorGetToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2749,7 +2749,7 @@ Server--&gt;APP: Network configuration succeeds
 </table>
 <p><strong>Get Network Configuration Token</strong></p>
 <p>Before the Wi-Fi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
-The term of validity of Token is 5 minutes, and the Token become invalid once the network configuration succeeds.
+The term of validity of Token is 10 minutes, and the Token become invalid once the network configuration succeeds.
 A new Token has to be obtained if you have to reconfigure network.</p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getActivatorToken</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> 
         <span class="token keyword">new</span> <span class="token class-name">ITuyaActivatorGetToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2864,7 +2864,90 @@ Service--&gt;ZigBee Gateway: network configuration succeeds
 
 Server--&gt;APP: Network configuration succeeds
 </code></pre>
+<h4 id="discovery-device"><a name="discovery-device" class="anchor-navigation-ex-anchor" href="#discovery-device"><i class="fa fa-link" aria-hidden="true"></i></a><a name="discovery-device" class="plugin-anchor" href="#discovery-device"><i class="fa fa-link" aria-hidden="true"></i></a>Discovery Device</h4>
+<p>Tuya SDK provides the function of discovering the wired devices. You should register the notification of the wired device to get device infomation. Before obtaining the device, the phone must be connected to the same network as the device.</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGwSearcher</span> mTuyaGwSearcher <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newTuyaGwActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newSearcher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mTuyaGwSearcher<span class="token punctuation">.</span><span class="token function">registerGwSearchListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IGwSearchListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDevFind</span><span class="token punctuation">(</span><span class="token class-name">HgwBean</span> hgwBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hgwBean</td>
+<td>gateway data entity discovered</td>
+</tr>
+</tbody>
+</table>
 <h4 id="initialize-parameters_3"><a name="initialize-parameters_3" class="anchor-navigation-ex-anchor" href="#initialize-parameters_3"><i class="fa fa-link" aria-hidden="true"></i></a><a name="initialize-parameters" class="plugin-anchor" href="#initialize-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Initialize Parameters</h4>
+<ul>
+<li>Used device discovery function</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaActivator</span> mITuyaActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newGwActivator</span><span class="token punctuation">(</span>
+        <span class="token keyword">new</span> <span class="token class-name">TuyaGwActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setToken</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setHgwBean</span><span class="token punctuation">(</span>hgwBean<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">setListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSmartActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                    <span class="token annotation punctuation">@Override</span>
+                    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                    <span class="token punctuation">}</span>
+
+                    <span class="token annotation punctuation">@Override</span>
+                    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                    <span class="token punctuation">}</span>
+
+                    <span class="token annotation punctuation">@Override</span>
+                    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span><span class="token class-name">String</span> step<span class="token punctuation">,</span> <span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                    <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>Activation key required for Configuration</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Configuration timeout, default setting is 100s, unit is second</td>
+</tr>
+<tr>
+<td>context</td>
+<td>context</td>
+</tr>
+<tr>
+<td>hgwBean</td>
+<td>the discovered gateway data entity</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Unused device discovery function</li>
+</ul>
 <pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaActivator</span> mITuyaActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newGwActivator</span><span class="token punctuation">(</span>
         <span class="token keyword">new</span> <span class="token class-name">TuyaGwActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
             <span class="token punctuation">.</span><span class="token function">setToken</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span>
@@ -2914,7 +2997,7 @@ Server--&gt;APP: Network configuration succeeds
 </table>
 <p><strong>Get Network Configuration Token</strong></p>
 <p>Before the Wi-Fi network configuration, the SDK needs to obtain the network configuration Token from the Tuya Cloud.
-The term of validity of Token is 5 minutes, and the Token become invalid once the network configuration succeeds.
+The term of validity of Token is 10 minutes, and the Token become invalid once the network configuration succeeds.
 A new Token has to be obtained if you have to reconfigure network.</p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getActivatorToken</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> 
         <span class="token keyword">new</span> <span class="token class-name">ITuyaActivatorGetToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -3073,7 +3156,7 @@ mTuyaGWActivator<span class="token punctuation">.</span><span class="token funct
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Configuration","level":"1.7","depth":1,"next":{"title":"Functional Overview","level":"1.7.1","depth":2,"anchor":"#functional-overview","path":"resource/Activator_device.md","ref":"./resource/Activator_device.md#functional-overview","articles":[]},"previous":{"title":"Home's Weather","level":"1.6.5","depth":2,"anchor":"#home-weather","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-weather","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_device.md","mtime":"2020-06-08T11:59:55.727Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-13T02:57:20.284Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Configuration","level":"1.7","depth":1,"next":{"title":"Functional Overview","level":"1.7.1","depth":2,"anchor":"#functional-overview","path":"resource/Activator_device.md","ref":"./resource/Activator_device.md#functional-overview","articles":[]},"previous":{"title":"Home's Weather","level":"1.6.5","depth":2,"anchor":"#home-weather","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-weather","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_device.md","mtime":"2020-07-15T08:08:50.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-15T08:09:08.693Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
