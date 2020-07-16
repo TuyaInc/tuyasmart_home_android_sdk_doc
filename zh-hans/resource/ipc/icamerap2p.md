@@ -4,7 +4,7 @@
 
 ## 描述
 
-**ICameraP2P** 是 **Tuya Smart Camera Android SDK** 核心功能接口，主要提供了音视频通信和指令集交互接口。
+**ICameraP2P** 是 **Tuya Smart IPC SDK** 核心功能接口，主要提供了音视频通信和指令集交互接口。
 
 
 

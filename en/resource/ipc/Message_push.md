@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**Tuya Smart Camera Android SDK** message push uses **Tuya Smart Home SDK** for message push configuration and reception. For details, please [refer to](https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/en/resource/MessagePush.html).
+**Tuya Smart IPC SDK** message push uses **Tuya Smart Home SDK** for message push configuration and reception. For details, please [refer to](https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/en/resource/MessagePush.html).
 
 
 

@@ -4,7 +4,7 @@
 
 ## Introduction
 
-ICameraP2P is the core functional interface of **Tuya Smart Camera Android SDK**, which mainly provides audio and video communication and instruction set interaction interface.
+ICameraP2P is the core functional interface of **Tuya Smart IPC SDK**, which mainly provides audio and video communication and instruction set interaction interface.
 
 
 

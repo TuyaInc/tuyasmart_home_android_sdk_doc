@@ -1,4 +1,4 @@
-# IPC Camera SDK预览功能方法调用及生命周期
+# IPC SDK预览功能方法调用及生命周期
 
 
 
@@ -10,7 +10,7 @@
 
 1. 初始化
 
-   IPC Camera SDK 需要绑定 Monitor，使用者首先要创建 Monitor，并在初始化的时候给绑定到 camera sdk中，同时要把 OnP2PCameraListener 注入。如下所示：
+   IPC SDK 需要绑定 Monitor，使用者首先要创建 Monitor，并在初始化的时候给绑定到 IPC SDK 中，同时要把 OnP2PCameraListener 注入。如下所示：
 
    ```java
    private static final int ASPECT_RATIO_WIDTH = 9;

@@ -2,7 +2,7 @@
 
 ### 1.initialize
 
-Because android camera sdk is bound with TuyaMonitorView, the user need to create TuyaMonitorView, and bound it with TuyaSmartCameraSDK when you initialize it, in the meantime registor the OnP2PCameraListener. please check below：
+Because IPC SDK is bound with TuyaMonitorView, the user need to create TuyaMonitorView, and bound it with TuyaSmartIPCSDK when you initialize it, in the meantime registor the OnP2PCameraListener. please check below：
 
 ```java
 	private static final int ASPECT_RATIO_WIDTH = 9;

@@ -4,7 +4,7 @@
 
 ## 简介
 
-**Tuya Smart Camera Android SDK **消息推送使用的是 **涂鸦智能全屋SDK** 的消息推送配置和接收，具体请 [参阅](https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/zh-hans/resource/MessagePush.html)
+**Tuya Smart IPC SDK** 消息推送使用的是 **涂鸦智能全屋SDK** 的消息推送配置和接收，具体请 [参阅](https://tuyainc.github.io/tuyasmart_home_android_sdk_doc/zh-hans/resource/MessagePush.html)
 
 
 
