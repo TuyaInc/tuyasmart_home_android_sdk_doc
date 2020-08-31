@@ -1,0 +1,3533 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>蓝牙 Mesh (涂鸦) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-gtalk/gtalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sf-score/style/scorePlugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Mesh_Tuya.html" />
+    
+    
+    <link rel="prev" href="Mesh_SIG.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../zh-hans/resource/images/bitbug_favicon.ico' type="image/x-icon">
+    
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    功能概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Preparation.html">
+            
+                <a href="Preparation.html">
+            
+                    
+                    准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Integrated.html">
+            
+                <a href="Integrated.html">
+            
+                    
+                    集成 SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Demo.html">
+            
+                <a href="Demo.html">
+            
+                    
+                    Demo App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="User.html">
+            
+                <a href="User.html">
+            
+                    
+                    用户管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="User_mobile.html">
+            
+                <a href="User_mobile.html">
+            
+                    
+                    手机帐号体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="User_email.html">
+            
+                <a href="User_email.html">
+            
+                    
+                    邮箱帐号体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="User_uid.html">
+            
+                <a href="User_uid.html">
+            
+                    
+                    用户 UID 登陆体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="User_ThirdLogin.html">
+            
+                <a href="User_ThirdLogin.html">
+            
+                    
+                    第三方登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="User_qrlogin.html">
+            
+                <a href="User_qrlogin.html">
+            
+                    
+                    二维码授权登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="User_update.html">
+            
+                <a href="User_update.html">
+            
+                    
+                    修改用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="User_logout.html">
+            
+                <a href="User_logout.html#退出登录">
+            
+                    
+                    退出登录、注销账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="User_model.html">
+            
+                <a href="User_model.html">
+            
+                    
+                    用户数据模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="User_Session.html">
+            
+                <a href="User_Session.html">
+            
+                    
+                    Session 过期的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="HomeManagerMenu.html">
+            
+                <a href="HomeManagerMenu.html">
+            
+                    
+                    家庭管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="FamilyManager.html">
+            
+                <a href="FamilyManager.html#家庭关系管理">
+            
+                    
+                    家庭关系管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="FamilyManager.html">
+            
+                <a href="FamilyManager.html#家庭信息管理">
+            
+                    
+                    家庭信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="FamilyManager.html">
+            
+                <a href="FamilyManager.html#家庭成员管理">
+            
+                    
+                    家庭成员管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="FamilyManager.html">
+            
+                <a href="FamilyManager.html#房间信息管理">
+            
+                    
+                    房间信息管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="FamilyManager.html">
+            
+                <a href="FamilyManager.html#家庭天气">
+            
+                    
+                    家庭天气
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html">
+            
+                    
+                    设备配网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#功能概述">
+            
+                    
+                    功能概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#使用须知">
+            
+                    
+                    使用须知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#配网实现">
+            
+                    
+                    配网实现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#快连模式">
+            
+                    
+                    快连 (EZ) 模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#热点模式">
+            
+                    
+                    热点 (AP) 模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#摄像头二维码配网">
+            
+                    
+                    摄像头二维码配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.4" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#有线设备配网">
+            
+                    
+                    有线设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.5" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#子设备配网">
+            
+                    
+                    子设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.6" data-path="Activator_device.html">
+            
+                <a href="Activator_device.html#蓝牙设备配网">
+            
+                    
+                    蓝牙设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Device.html">
+            
+                <a href="Device.html#设备管理">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="Device.html">
+            
+                <a href="Device.html#初始化设备控制">
+            
+                    
+                    设备初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="Device.html">
+            
+                <a href="Device.html#设备监听">
+            
+                    
+                    设备监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="Device.html">
+            
+                <a href="Device.html#设备控制">
+            
+                    
+                    设备控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Device.html">
+            
+                <a href="Device.html#设备功能点说明">
+            
+                    
+                    设备功能点说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="Device.html">
+            
+                <a href="Device.html#设备信息查询">
+            
+                    
+                    设备信息查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="Device.html">
+            
+                <a href="Device.html#修改设备名称">
+            
+                    
+                    修改设备名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="Device.html">
+            
+                <a href="Device.html#移除设备">
+            
+                    
+                    移除设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="Device.html">
+            
+                <a href="Device.html#恢复出厂设置">
+            
+                    
+                    恢复出厂设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="Device.html">
+            
+                <a href="Device.html#查询-wi-fi-信号强度">
+            
+                    
+                    查询 Wi-Fi 信号强度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="Device.html">
+            
+                <a href="Device.html#回收设备资源">
+            
+                    
+                    回收设备资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="OTA.html">
+            
+                <a href="OTA.html">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="Gateway.html">
+            
+                <a href="Gateway.html">
+            
+                    
+                    ZigBee 网关控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html">
+            
+                    
+                    多控关联
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#概述">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#业务流程图">
+            
+                    
+                    业务流程图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#获取设备-dp-信息">
+            
+                    
+                    获取设备 dp 信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#查询设备下某个-dp-关联信息">
+            
+                    
+                    查询设备下某个 dp 关联信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#添加、更新、删除多控组">
+            
+                    
+                    新增多控组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#添加、更新、删除多控组">
+            
+                    
+                    更新多控组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#启用或禁用多控组">
+            
+                    
+                    启用或禁用多控组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#查询支持多控的设备列表">
+            
+                    
+                    查询支持多控的设备列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="DeviceMultiControl.html">
+            
+                <a href="DeviceMultiControl.html#获取附属设备关联详情">
+            
+                    
+                    获取附属设备关联详情
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Shared.html">
+            
+                <a href="Shared.html#共享设备">
+            
+                    
+                    共享设备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="Shared.html">
+            
+                <a href="Shared.html#添加共享">
+            
+                    
+                    添加共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="Shared.html">
+            
+                <a href="Shared.html#分享关系获取">
+            
+                    
+                    分享关系获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="Shared.html">
+            
+                <a href="Shared.html#移除共享">
+            
+                    
+                    移除共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="Shared.html">
+            
+                <a href="Shared.html#修改备注名">
+            
+                    
+                    修改备注名
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="Timer.html">
+            
+                <a href="Timer.html">
+            
+                    
+                    定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Group.html">
+            
+                <a href="Group.html">
+            
+                    
+                    群组管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="Group.html">
+            
+                <a href="Group.html#功能概述">
+            
+                    
+                    功能概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="Group.html">
+            
+                <a href="Group.html#群组创建">
+            
+                    
+                    群组创建
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.2.1" data-path="Group.html">
+            
+                <a href="Group.html#创建-wi-fi-群组">
+            
+                    
+                    创建 Wi-Fi 群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.2" data-path="Group.html">
+            
+                <a href="Group.html#创建-zigbee-群组">
+            
+                    
+                    创建 ZigBee 群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="Group.html">
+            
+                <a href="Group.html#群组操控">
+            
+                    
+                    群组控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" data-path="Group.html">
+            
+                <a href="Group.html#群组初始化">
+            
+                    
+                    群组初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.2" data-path="Group.html">
+            
+                <a href="Group.html#修改名称">
+            
+                    
+                    修改名称
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.3" data-path="Group.html">
+            
+                <a href="Group.html#解散群组">
+            
+                    
+                    解散群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.4" data-path="Group.html">
+            
+                <a href="Group.html#控制发送">
+            
+                    
+                    控制发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.5" data-path="Group.html">
+            
+                <a href="Group.html#控制回调">
+            
+                    
+                    控制回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.6" data-path="Group.html">
+            
+                <a href="Group.html#查询群组">
+            
+                    
+                    查询群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#智能场景">
+            
+                    
+                    智能场景
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#场景条件">
+            
+                    
+                    场景条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#场景任务">
+            
+                    
+                    场景任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#智能场景管理">
+            
+                    
+                    智能场景管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="SmartScene_Manager.html">
+            
+                <a href="SmartScene_Manager.html#单个场景操作">
+            
+                    
+                    单个场景操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Message.html">
+            
+                <a href="Message.html#消息中心">
+            
+                    
+                    消息中心
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="Message.html">
+            
+                <a href="Message.html#消息相关功能">
+            
+                    
+                    消息相关功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="Message.html">
+            
+                <a href="Message.html#消息推送设置">
+            
+                    
+                    消息推送设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="Feedback.html">
+            
+                <a href="Feedback.html#意见反馈">
+            
+                    
+                    意见反馈
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="Feedback.html">
+            
+                <a href="Feedback.html#获取反馈会话列表">
+            
+                    
+                    获取反馈会话列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="Feedback.html">
+            
+                <a href="Feedback.html#获取反馈列表">
+            
+                    
+                    获取反馈列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="Feedback.html">
+            
+                <a href="Feedback.html#获取反馈类型列表">
+            
+                    
+                    获取反馈类型列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="Feedback.html">
+            
+                <a href="Feedback.html#添加反馈">
+            
+                    
+                    添加反馈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Push.html">
+            
+                <a href="Push.html">
+            
+                    
+                    集成 Push
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="Push_umeng.html">
+            
+                <a href="Push_umeng.html">
+            
+                    
+                    友盟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="Push_fcm.html">
+            
+                <a href="Push_fcm.html">
+            
+                    
+                    Firebase Cloud Messaging (FCM)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="BLE.html">
+            
+                <a href="BLE.html">
+            
+                    
+                    涂鸦蓝牙体系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="BLE.html">
+            
+                <a href="BLE.html#蓝牙-ble">
+            
+                    
+                    蓝牙 BLE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="BLE.html">
+            
+                <a href="BLE.html#准备工作">
+            
+                    
+                    准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="BLE.html">
+            
+                <a href="BLE.html#扫描设备">
+            
+                    
+                    扫描设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="BLE.html">
+            
+                <a href="BLE.html#单点设备配网">
+            
+                    
+                    单点设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="BLE.html">
+            
+                <a href="BLE.html#双模设备配网">
+            
+                    
+                    双模设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="BLE.html">
+            
+                <a href="BLE.html#蓝牙设备操作">
+            
+                    
+                    蓝牙设备操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="BLE.html">
+            
+                <a href="BLE.html#固件升级">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="BLE.html">
+            
+                <a href="BLE.html#错误码">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#蓝牙-mesh-sig">
+            
+                    
+                    蓝牙 Mesh (SIG)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#准备">
+            
+                    
+                    准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#部分基础概念">
+            
+                    
+                    部分基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#管理">
+            
+                    
+                    管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#配网">
+            
+                    
+                    配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#设备">
+            
+                    
+                    设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.6" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#群组">
+            
+                    
+                    群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.7" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#控制">
+            
+                    
+                    控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.8" data-path="Mesh_SIG.html">
+            
+                <a href="Mesh_SIG.html#固件升级">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#蓝牙-mesh-涂鸦">
+            
+                    
+                    蓝牙 Mesh (涂鸦)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#准备">
+            
+                    
+                    准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.2" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#部分基础概念">
+            
+                    
+                    部分基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.3" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#管理">
+            
+                    
+                    管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.4" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#配网">
+            
+                    
+                    配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.5" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#设备">
+            
+                    
+                    设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.6" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#群组">
+            
+                    
+                    群组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.7" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#控制">
+            
+                    
+                    控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.8" data-path="Mesh_Tuya.html">
+            
+                <a href="Mesh_Tuya.html#固件升级">
+            
+                    
+                    固件升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="ExtensionAbout.html">
+            
+                <a href="ExtensionAbout.html">
+            
+                    
+                    垂直品类 SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="ipc/">
+            
+                <a href="ipc/">
+            
+                    
+                    IPC SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="ipc/Preparation.html">
+            
+                <a href="ipc/Preparation.html">
+            
+                    
+                    集成SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="ipc/ProgramArchitecure.html">
+            
+                <a href="ipc/ProgramArchitecure.html">
+            
+                    
+                    架构说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="ipc/home_device.html">
+            
+                <a href="ipc/home_device.html#摄像机">
+            
+                    
+                    摄像机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="ipc/wifi_config.html">
+            
+                <a href="ipc/wifi_config.html">
+            
+                    
+                    设备配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="ipc/LiveProcess.html">
+            
+                <a href="ipc/LiveProcess.html#摄像机功能">
+            
+                    
+                    摄像机功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.5.1" data-path="ipc/LiveProcess.html">
+            
+                <a href="ipc/LiveProcess.html#视频直播">
+            
+                    
+                    视频直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5.2" data-path="ipc/PlaybackProcess.html">
+            
+                <a href="ipc/PlaybackProcess.html">
+            
+                    
+                    存储卡回放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5.3" data-path="ipc/av_function.html">
+            
+                <a href="ipc/av_function.html">
+            
+                    
+                    音视频功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="ipc/cloud_video.html">
+            
+                <a href="ipc/cloud_video.html#云存储">
+            
+                    
+                    云存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.6.1" data-path="ipc/cloud_video.html">
+            
+                <a href="ipc/cloud_video.html#流程图">
+            
+                    
+                    流程图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6.2" data-path="ipc/cloud_video.html">
+            
+                <a href="ipc/cloud_video.html#服务购买">
+            
+                    
+                    服务购买
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6.3" data-path="ipc/cloud_video.html">
+            
+                <a href="ipc/cloud_video.html#云视频">
+            
+                    
+                    云视频
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="ipc/camera_device_points.html">
+            
+                <a href="ipc/camera_device_points.html#设备功能点">
+            
+                    
+                    设备功能点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.7.1" data-path="ipc/camera_device_points.html">
+            
+                <a href="ipc/camera_device_points.html#功能点常量">
+            
+                    
+                    功能点常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7.2" data-path="ipc/doorbell.html">
+            
+                <a href="ipc/doorbell.html">
+            
+                    
+                    低功耗门铃
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7.3" data-path="ipc/sd_card.html">
+            
+                <a href="ipc/sd_card.html">
+            
+                    
+                    存储卡管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7.4" data-path="ipc/ptz.html">
+            
+                <a href="ipc/ptz.html">
+            
+                    
+                    云台控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="ipc/message_center_list.html">
+            
+                <a href="ipc/message_center_list.html#侦测报警">
+            
+                    
+                    侦测报警
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.8.1" data-path="ipc/message_center_list.html">
+            
+                <a href="ipc/message_center_list.html#消息列表">
+            
+                    
+                    消息列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8.2" data-path="ipc/message_center_list.html">
+            
+                <a href="ipc/message_center_list.html#视频消息">
+            
+                    
+                    视频消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="ipc/statusCode.html">
+            
+                <a href="ipc/statusCode.html">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="ipc/doc_update_log.html">
+            
+                <a href="ipc/doc_update_log.html">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="sweeper/Overview.html">
+            
+                <a href="sweeper/Overview.html">
+            
+                    
+                    扫地机 SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="sweeper/Gyro_Sweeper.html">
+            
+                <a href="sweeper/Gyro_Sweeper.html">
+            
+                    
+                    陀螺仪和视觉扫地机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="sweeper/Laser_Sweeper.html">
+            
+                <a href="sweeper/Laser_Sweeper.html">
+            
+                    
+                    激光扫地机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="sweeper/Voice_Download.html">
+            
+                <a href="sweeper/Voice_Download.html">
+            
+                    
+                    语音包下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="sweeper/Word_Introduction.html">
+            
+                <a href="sweeper/Word_Introduction.html">
+            
+                    
+                    名词解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="sweeper/Update_Log.html">
+            
+                <a href="sweeper/Update_Log.html">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="Lock.html">
+            
+                <a href="Lock.html">
+            
+                    
+                    智能门锁 SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="WiFiLockDoc.html">
+            
+                <a href="WiFiLockDoc.html">
+            
+                    
+                    Wi-Fi 门锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="BLELockDoc.html">
+            
+                <a href="BLELockDoc.html">
+            
+                    
+                    蓝牙门锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="Device_.shortcut_control.html">
+            
+                <a href="Device_.shortcut_control.html">
+            
+                    
+                    设备快捷控制 SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="centrol_control/center_control.html">
+            
+                <a href="centrol_control/center_control.html">
+            
+                    
+                    Android 设备 SDK ( Beta 功能)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="CommonInterface.html">
+            
+                <a href="CommonInterface.html">
+            
+                    
+                    通用接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ErrorCode.html">
+            
+                <a href="ErrorCode.html">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="FAQ.html">
+            
+                <a href="FAQ.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ChangeLog.html">
+            
+                <a href="ChangeLog.html">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="Update_3_14_0.html">
+            
+                <a href="Update_3_14_0.html">
+            
+                    
+                    3.13.0 之前版本升级到 3.14.x 之后的版本的升级指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="join_us.html">
+            
+                <a href="join_us.html">
+            
+                    
+                    加入我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >蓝牙 Mesh (涂鸦)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x84DD;&#x7259;-mesh-&#x6D82;&#x9E26;"><b>1. </b>&#x84DD;&#x7259; Mesh (&#x6D82;&#x9E26;)</a></li><ul><li><span class="title-icon "></span><a href="#&#x51C6;&#x5907;"><b>1.1. </b>&#x51C6;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><b>1.2. </b>&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#&#x7BA1;&#x7406;"><b>1.3. </b>&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;-mesh"><b>1.3.1. </b>&#x521B;&#x5EFA; Mesh</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;-mesh"><b>1.3.2. </b>&#x5220;&#x9664; Mesh</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;--mesh-&#x5217;&#x8868;"><b>1.3.3. </b>&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;  Mesh &#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;--mesh-&#x4E0B;&#x7684;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;"><b>1.3.4. </b>&#x83B7;&#x53D6;  Mesh &#x4E0B;&#x7684;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;-mesh-&#x5B9E;&#x4F8B;&#x548C;&#x9500;&#x6BC1;"><b>1.3.5. </b>&#x83B7;&#x53D6; Mesh &#x5B9E;&#x4F8B;&#x548C;&#x9500;&#x6BC1;</a></li><li><span class="title-icon "></span><a href="#mesh-&#x5B50;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x548C;&#x65AD;&#x5F00;"><b>1.3.6. </b>Mesh &#x5B50;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x548C;&#x65AD;&#x5F00;</a></li></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F51;"><b>1.4. </b>&#x914D;&#x7F51;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;&#x91CD;&#x7F6E;"><b>1.4.1. </b>&#x8BBE;&#x5907;&#x91CD;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x626B;&#x63CF;&#x5F85;&#x914D;&#x7F51;&#x5B50;&#x8BBE;&#x5907;"><b>1.4.2. </b>&#x626B;&#x63CF;&#x5F85;&#x914D;&#x7F51;&#x5B50;&#x8BBE;&#x5907;</a></li><li><span class="title-icon "></span><a href="#mesh-&#x5B50;&#x8BBE;&#x5907;&#x914D;&#x7F51;"><b>1.4.3. </b>Mesh &#x5B50;&#x8BBE;&#x5907;&#x914D;&#x7F51;</a></li><li><span class="title-icon "></span><a href="#mesh-&#x7F51;&#x5173;&#x914D;&#x7F51;"><b>1.4.4. </b>Mesh &#x7F51;&#x5173;&#x914D;&#x7F51;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F51;&#x9519;&#x8BEF;&#x7801;"><b>1.4.5. </b>&#x914D;&#x7F51;&#x9519;&#x8BEF;&#x7801;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8BBE;&#x5907;"><b>1.5. </b>&#x8BBE;&#x5907;</a></li><ul><li><span class="title-icon "></span><a href="#mesh-&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><b>1.5.1. </b>Mesh &#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><b>1.5.2. </b>&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</a></li><li><span class="title-icon "></span><a href="#mesh-&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><b>1.5.3. </b>Mesh &#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#&#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;"><b>1.5.4. </b>&#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;</a></li><li><span class="title-icon "></span><a href="#&#x5B50;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x67E5;&#x8BE2;"><b>1.5.5. </b>&#x5B50;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x67E5;&#x8BE2;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7FA4;&#x7EC4;"><b>1.6. </b>&#x7FA4;&#x7EC4;</a></li><ul><li><span class="title-icon "></span><a href="#mesh-&#x7FA4;&#x7EC4;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><b>1.6.1. </b>Mesh &#x7FA4;&#x7EC4;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;"><b>1.6.2. </b>&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x5B50;&#x8BBE;&#x5907;&#x5230;&#x7FA4;&#x7EC4;"><b>1.6.3. </b>&#x6DFB;&#x52A0;&#x5B50;&#x8BBE;&#x5907;&#x5230;&#x7FA4;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x4ECE;&#x7FA4;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x5B50;&#x8BBE;&#x5907;"><b>1.6.4. </b>&#x4ECE;&#x7FA4;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x5B50;&#x8BBE;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x7FA4;&#x7EC4;"><b>1.6.5. </b>&#x5220;&#x9664;&#x7FA4;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x91CD;&#x547D;&#x540D;&#x7FA4;&#x7EC4;"><b>1.6.6. </b>&#x91CD;&#x547D;&#x540D;&#x7FA4;&#x7EC4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x63A7;&#x5236;"><b>1.7. </b>&#x63A7;&#x5236;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x8BBE;&#x5907;"><b>1.7.1. </b>&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x8BBE;&#x5907;</a></li><li><span class="title-icon "></span><a href="#&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x7FA4;&#x7EC4;"><b>1.7.2. </b>&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x7FA4;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x76D1;&#x542C;"><b>1.7.3. </b>&#x6570;&#x636E;&#x76D1;&#x542C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x56FA;&#x4EF6;&#x5347;&#x7EA7;"><b>1.8. </b>&#x56FA;&#x4EF6;&#x5347;&#x7EA7;</a></li></ul></ul></div><a href="#&#x84DD;&#x7259;-mesh-&#x6D82;&#x9E26;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x84DD;&#x7259;-mesh-&#x6D82;&#x9E26;"><a name="&#x84DD;&#x7259;-mesh-&#x6D82;&#x9E26;" class="anchor-navigation-ex-anchor" href="#&#x84DD;&#x7259;-mesh-&#x6D82;&#x9E26;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x84DD;&#x7259; Mesh (&#x6D82;&#x9E26;)</h1>
+<p>&#x6D82;&#x9E26;&#x84DD;&#x7259;&#x6709;&#x4E09;&#x6761;&#x6280;&#x672F;&#x7EBF;&#x8DEF;&#x3002;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#x4E0E;&#x624B;&#x673A;&#x4E00;&#x5BF9;&#x4E00;&#x76F8;&#x8FDE;&#x7684;&#x84DD;&#x7259;&#x5355;&#x70B9;&#x8BBE;&#x5907; <strong>SingleBLE</strong>&#xFF0C;&#x6D82;&#x9E26;&#x81EA;&#x7814;&#x7684;&#x84DD;&#x7259;&#x62D3;&#x6251;&#x901A;&#x4FE1; <strong>TuyaMesh</strong> &#x548C;&#x84DD;&#x7259;&#x6280;&#x672F;&#x8054;&#x76DF;&#x53D1;&#x5E03;&#x7684;&#x84DD;&#x7259;&#x62D3;&#x6251;&#x901A;&#x4FE1; <strong>SigMesh</strong>&#x3002;&#x9664;&#x4E86;&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x591A;&#x534F;&#x8BAE;&#x8BBE;&#x5907;&#x4E5F;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x84DD;&#x7259;&#x6280;&#x672F;&#xFF0C;&#x6BD4;&#x5982;&#x540C;&#x65F6;&#x5177;&#x5907; Wi-Fi &#x80FD;&#x529B;&#x548C; BLE &#x80FD;&#x529B;&#x7684; <strong>&#x53CC;&#x6A21;&#x8BBE;&#x5907;</strong>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x8FDB;&#x884C;&#x914D;&#x7F51;&#xFF0C;&#x5F53;&#x7136; Wi-Fi &#x8BBE;&#x5907;&#x539F;&#x672C;&#x7684;&#x914D;&#x7F51;&#x4ECD;&#x7136;&#x53EF;&#x7528;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x84DD;&#x7259;&#x6280;&#x672F;&#x5206;&#x7C7B;</th>
+<th>&#x4EA7;&#x54C1;&#x4E3E;&#x4F8B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SingleBLE</td>
+<td>&#x4F53;&#x8102;&#x79E4;&#x3001;&#x624B;&#x73AF;&#x3001;&#x6E29;&#x63A7;&#x5668;&#x3001;&#x7535;&#x52A8;&#x7259;&#x5237;&#x3001;&#x95E8;&#x9501;&#x7B49;</td>
+</tr>
+<tr>
+<td>SigMesh</td>
+<td>&#x4E00;&#x8DEF;&#x3001;&#x4E8C;&#x8DEF;&#x3001;&#x4E94;&#x8DEF;&#x7B49;&#x706F;&#x6CE1;&#x3001;&#x63D2;&#x5EA7;&#x3001;&#x4F20;&#x611F;&#x5668;&#x7B49; Sigmesh &#x5B50;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td>TuyaMesh</td>
+<td>&#x4E0E; Sigmesh &#x4EA7;&#x54C1;&#x7C7B;&#x4F3C;&#xFF0C;&#x534F;&#x8BAE;&#x4E3A; Tuya &#x81EA;&#x7814;</td>
+</tr>
+<tr>
+<td>&#x53CC;&#x6A21;&#x8BBE;&#x5907;</td>
+<td>Sigmesh &#x7F51;&#x5173;&#x3001;IPC &#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x65B0;&#x7248;&#x591A;&#x534F;&#x8BAE; Wi-Fi &#x8BBE;&#x5907;&#x7B49;&#x5747;&#x6709;&#x53EF;&#x80FD;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x53CC;&#x6A21;&#x914D;&#x7F51;&#x7684;&#x84DD;&#x7259;&#x914D;&#x7F51;&#x90E8;&#x5206;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F; SingleBLE &#x6280;&#x672F;&#x4E3A;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#xFF0C;&#x5C06;&#x653E;&#x5230; SingleBLE &#x7AE0;&#x8282;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;</p>
+</blockquote>
+<h4 id="&#x63D0;&#x793A;"><a name="&#x63D0;&#x793A;" class="anchor-navigation-ex-anchor" href="#&#x63D0;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63D0;&#x793A;" class="plugin-anchor" href="#&#x63D0;&#x793A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D0;&#x793A;</h4>
+<p>&#x5F00;&#x53D1;&#x84DD;&#x7259; Mesh &#x65F6;&#xFF0C;&#x8BF7;&#x5148;&#x719F;&#x6089; TuyaHomeSdk&#x3002;Mesh &#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x5EFA;&#x7ACB;&#x5728;&#x5BB6;&#x5EAD;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x521D;&#x59CB;&#x5316;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x3002;
+&#x4E00;&#x4E2A;&#x5BB6;&#x5EAD;&#x91CC;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x591A;&#x4E2A; Mesh&#xFF08;&#x5EFA;&#x8BAE;&#x4E00;&#x4E2A;&#x5BB6;&#x5EAD;&#x53EA;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#xFF09;</p>
+<h2 id="&#x51C6;&#x5907;"><a name="&#x51C6;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x51C6;&#x5907;</h2>
+<p><strong>&#x624B;&#x673A;&#x7CFB;&#x7EDF;&#x8981;&#x6C42;</strong></p>
+<p>BLE &#x4F7F;&#x7528;&#x9700;&#x8981; Android 4.3 &#x4EE5;&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;TuyaHomesdk &#x4ECE; Android 4.4 &#x5F00;&#x59CB;&#x652F;&#x6301;&#x3002;</p>
+<p><strong>Manifest &#x7684;&#x6743;&#x9650;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.ACCESS_COARSE_LOCATION&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.ACCESS_FINE_LOCATION&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.BLUETOOTH&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token keyword">uses</span><span class="token operator">-</span>permission android<span class="token operator">:</span>name<span class="token operator">=</span><span class="token string">&quot;android.permission.BLUETOOTH_ADMIN&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre>
+<p><strong>&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x524D;&#x9700;&#x8981;&#x68C0;&#x6D4B;&#x6743;&#x9650;&#x5DF2;&#x88AB;&#x6388;&#x4E88;</strong></p>
+<ul>
+<li>APP &#x5728;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x6216;&#x8005;&#x626B;&#x63CF;&#x64CD;&#x4F5C;&#x524D; &#x9700;&#x8981;&#x68C0;&#x67E5; APP &#x5B9A;&#x4F4D;&#x6743;&#x9650;&#x662F;&#x5426;&#x88AB;&#x5141;&#x8BB8;&#x3002;</li>
+<li>&#x68C0;&#x67E5;&#x84DD;&#x7259;&#x72B6;&#x6001;&#x662F;&#x5426;&#x4E3A;&#x5F00;&#x542F;&#x3002;<blockquote>
+<p>&#x8BE5;&#x90E8;&#x5206;&#x68C0;&#x67E5;&#x903B;&#x8F91;&#xFF0C;TuyaHomeSdk &#x672A;&#x63D0;&#x4F9B; API&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x81EA;&#x884C;&#x68C0;&#x6D4B;&#x3002;&#x6BCF;&#x6B21;&#x626B;&#x63CF;&#x548C;&#x8FDE;&#x63A5;&#x524D;&#x90FD;&#x8981;&#x8FDB;&#x884C;&#x68C0;&#x6D4B;&#xFF0C;&#x5426;&#x5219; APP &#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x84DD;&#x7259;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><a name="&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x90E8;&#x5206;&#x57FA;&#x7840;&#x6982;&#x5FF5;</h2>
+<h4 id="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><a name="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5927;&#x5C0F;&#x7C7B;&#x4ECB;&#x7ECD;</h4>
+<h4 id="mesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E94;&#x5927;&#x7C7B;"><a name="mesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E94;&#x5927;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#mesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E94;&#x5927;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E94;&#x5927;&#x7C7B;" class="plugin-anchor" href="#mesh-&#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E94;&#x5927;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh &#x4EA7;&#x54C1;&#x76EE;&#x524D;&#x5206;&#x4E3A;&#x4E94;&#x5927;&#x7C7B;</h4>
+<pre class="language-"><code class="lang-java">&#x706F;&#x5927;&#x7C7B;<span class="token punctuation">(</span><span class="token number">01</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">1</span><span class="token operator">-</span><span class="token number">5</span>&#x8DEF;RGBWC&#x5F69;&#x706F;
+&#x7535;&#x5DE5;&#x7C7B;<span class="token punctuation">(</span><span class="token number">02</span><span class="token punctuation">)</span>&#xFF1A;<span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span>&#x8DEF;&#x63D2;&#x5EA7;
+&#x4F20;&#x611F;&#x5668;&#x7C7B;<span class="token punctuation">(</span><span class="token number">04</span><span class="token punctuation">)</span>&#xFF1A;&#x95E8;&#x78C1;&#x3001;PIR&#xFF08;&#x4F20;&#x611F;&#x7C7B;&#x4E3B;&#x8981;&#x662F;&#x4E00;&#x4E9B;&#x5468;&#x671F;&#x6027;&#x4E0A;&#x62A5;&#x7684;&#x4F20;&#x611F;&#x6570;&#x636E;&#xFF09;
+&#x6267;&#x884C;&#x5668;&#x7C7B;<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>&#xFF1A;&#x9A6C;&#x8FBE;&#x3001;&#x62A5;&#x8B66;&#x5668;&#x4E4B;&#x7C7B;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x7684;&#x8BBE;&#x5907;
+&#x9002;&#x914D;&#x5668;<span class="token punctuation">(</span><span class="token number">08</span><span class="token punctuation">)</span>&#xFF1A;&#x7F51;&#x5173;&#xFF08;&#x5E26;&#x6709;mesh&#x53CA;&#x5176;&#x4ED6;&#x901A;&#x4FE1;&#x8282;&#x70B9;&#x7684;&#x9002;&#x914D;&#x5668;&#xFF09;
+</code></pre>
+<h4 id="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><a name="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;" class="plugin-anchor" href="#&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7C7B;&#x7F16;&#x53F7;</h4>
+<pre class="language-"><code class="lang-java"><span class="token number">1</span><span class="token operator">-</span><span class="token number">5</span>&#x8DEF;&#x706F;&#xFF08;<span class="token number">01</span><span class="token operator">-</span><span class="token number">05</span>&#xFF09;
+<span class="token number">1</span><span class="token operator">-</span><span class="token number">6</span>&#x8DEF;&#x6392;&#x63D2;&#xFF08;<span class="token number">01</span><span class="token operator">-</span><span class="token number">06</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<h4 id="&#x4E3E;&#x4F8B;"><a name="&#x4E3E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E3E;&#x4F8B;" class="plugin-anchor" href="#&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3E;&#x4F8B;</h4>
+<pre class="language-"><code class="lang-java">&#x56DB;&#x8DEF;&#x706F;          <span class="token number">0401</span>
+&#x4E94;&#x8DEF;&#x63D2;&#x5EA7;        <span class="token number">0502</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<h4 id="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><a name="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;" class="anchor-navigation-ex-anchor" href="#mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;" class="plugin-anchor" href="#mesh-&#x8282;&#x70B9;-nodeid&#xFF0C;-2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh &#x8282;&#x70B9; NodeId&#xFF0C; 2 &#x5B57;&#x8282;</h4>
+<p>NodeId &#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A; Mesh &#x8BBE;&#x5907;&#x5728; Mesh &#x7F51;&#x4E2D;&#x7684;&#x300C;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x300D;&#xFF0C;&#x6BD4;&#x5982;&#x60F3;&#x63A7;&#x5236;&#x67D0;&#x4E2A;&#x8BBE;&#x5907;&#x5C31;&#x5411; Mesh &#x7F51;&#x53D1;&#x6B64;&#x8BBE;&#x5907;&#x5BF9;&#x5E94;&#x7684; NodeId &#x547D;&#x4EE4;&#x5373;&#x53EF;</p>
+<h4 id="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><a name="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;" class="anchor-navigation-ex-anchor" href="#mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;" class="plugin-anchor" href="#mesh-&#x7FA4;&#x7EC4;-localid&#xFF0C;2-&#x5B57;&#x8282;"><i class="fa fa-link" aria-hidden="true"></i></a>Mesh &#x7FA4;&#x7EC4; localId&#xFF0C;2 &#x5B57;&#x8282;</h4>
+<p>LocalId &#x7528;&#x4E8E;&#x533A;&#x5206;&#x6BCF;&#x4E2A; Mesh &#x7FA4;&#x7EC4;&#x5728; Mesh &#x7F51;&#x4E2D;&#x7684;&#x300C;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x300D;&#xFF0C;&#x6BD4;&#x5982;&#x60F3;&#x63A7;&#x5236;&#x67D0;&#x4E2A;&#x7FA4;&#x7EC4;&#x4E2D;&#x7684;&#x8BBE;&#x5907;&#x5C31;&#x5411; Mesh &#x7F51;&#x53D1;&#x6B64;&#x7FA4;&#x7EC4;&#x5BF9;&#x5E94;&#x7684; LocalId &#x547D;&#x4EE4;&#x5373;&#x53EF;</p>
+<h4 id="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x5907;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x591A;&#x6B65;&#x64CD;&#x4F5C;</h4>
+<p>&#x56E0;&#x4E3A;&#x8BBE;&#x5907;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x589E;&#x5220;&#x64CD;&#x4F5C;&#x3001;&#x7FA4;&#x7EC4;&#x64CD;&#x4F5C;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x672C;&#x5730;&#x84DD;&#x7259;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3001;&#x4E91;&#x7AEF;&#x8BB0;&#x5F55;&#x4E00;&#x6B21; &#x5411;&#x672C;&#x5730; Mesh &#x7F51;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x4FE1;&#x606F;&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x9700;&#x8981;&#x5411;&#x4E91;&#x7AEF;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x4FE1;&#x606F;</p>
+<h4 id="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><a name="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;" class="plugin-anchor" href="#&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;</h4>
+<p>&#x672C;&#x5730;&#x8FDE;&#x63A5;&#xFF1A;&#x5DF2;&#x914D;&#x7F51;&#x8BBE;&#x5907;&#x901A;&#x8FC7;&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#xFF0C;&#x6765;&#x63A7;&#x5236; Mesh &#x548C;&#x6307;&#x4EE4;&#x64CD;&#x4F5C;</p>
+<p>&#x7F51;&#x5173;&#x8FDE;&#x63A5;&#xFF1A;&#x5DF2;&#x914D;&#x7F51;&#x8BBE;&#x5907;&#x901A;&#x8FC7;&#x7F51;&#x5173;&#x8FDE;&#x63A5;&#xFF08;&#x7F51;&#x5173;&#x9700;&#x548C;&#x8BBE;&#x5907;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x8DDD;&#x79BB;&#x4E0D;&#x80FD;&#x592A;&#x8FDC;&#xFF09;&#xFF0C;&#x6765;&#x63A7;&#x5236; Mesh &#x548C;&#x6307;&#x4EE4;&#x64CD;&#x4F5C;</p>
+<h2 id="&#x7BA1;&#x7406;"><a name="&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7BA1;&#x7406;</h2>
+<h3 id="&#x521B;&#x5EFA;-mesh"><a name="&#x521B;&#x5EFA;-mesh" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;-mesh"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x521B;&#x5EFA; Mesh</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">createBlueMesh</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshName<span class="token punctuation">,</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BlueMeshBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>meshName</td>
+<td>String</td>
+<td>mesh &#x7684;&#x540D;&#x79F0;&#xFF08;&#x4E0D;&#x8D85;&#x8FC7; 16 &#x5B57;&#x8282;&#xFF09;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>ITuyaResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token string">&quot;homeId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">createBlueMesh</span><span class="token punctuation">(</span><span class="token string">&quot;meshName&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BlueMeshBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">BlueMeshBean</span> blueMeshBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x5220;&#x9664;-mesh"><a name="&#x5220;&#x9664;-mesh" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;-mesh"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x5220;&#x9664; Mesh</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeMesh</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span>meshId<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeMesh</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;--mesh-&#x5217;&#x8868;"><a name="&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;--mesh-&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;--mesh-&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. &#x83B7;&#x53D6;&#x5BB6;&#x5EAD;&#x4E0B;&#x7684;  Mesh &#x5217;&#x8868;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BlueMeshBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaHome</span> mTuyaHome <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token string">&quot;homeId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>mTuyaHome<span class="token punctuation">.</span><span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">BlueMeshBean</span><span class="token punctuation">&gt;</span></span> meshList <span class="token operator">=</span> mTuyaHome<span class="token punctuation">.</span><span class="token function">getHomeBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">BlueMeshBean</span> meshBean<span class="token operator">=</span> meshList<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;--mesh-&#x4E0B;&#x7684;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;"><a name="&#x83B7;&#x53D6;--mesh-&#x4E0B;&#x7684;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;--mesh-&#x4E0B;&#x7684;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. &#x83B7;&#x53D6;  Mesh &#x4E0B;&#x7684;&#x5B50;&#x8BBE;&#x5907;&#x5217;&#x8868;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> <span class="token function">getMeshSubDevList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">DeviceBean</span><span class="token punctuation">&gt;</span></span> meshSubDevList <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMeshSubDevList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;-mesh-&#x5B9E;&#x4F8B;&#x548C;&#x9500;&#x6BC1;"><a name="&#x83B7;&#x53D6;-mesh-&#x5B9E;&#x4F8B;&#x548C;&#x9500;&#x6BC1;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;-mesh-&#x5B9E;&#x4F8B;&#x548C;&#x9500;&#x6BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.5. &#x83B7;&#x53D6; Mesh &#x5B9E;&#x4F8B;&#x548C;&#x9500;&#x6BC1;</h3>
+<p>&#x5EFA;&#x8BAE;&#x5728;&#x5BB6;&#x5EAD;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019; &#x9500;&#x6BC1;&#x5F53; Mesh  &#x7136;&#x540E;&#x91CD;&#x65B0;&#x521D;&#x59CB;&#x5316;&#x5BB6;&#x5EAD;&#x4E2D;&#x7684; Mesh</p>
+<p><strong>&#x63A5;&#x53E3;&#x8C03;&#x7528;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x521D;&#x59CB;&#x5316;mesh</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">initMesh</span><span class="token punctuation">(</span><span class="token class-name">String</span> meshId<span class="token punctuation">)</span><span class="token punctuation">;</span>       
+
+<span class="token comment">//&#x9500;&#x6BC1;&#x5F53;&#x524D;mesh</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">destroyMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="mesh-&#x5B50;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x548C;&#x65AD;&#x5F00;"><a name="mesh-&#x5B50;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x548C;&#x65AD;&#x5F00;" class="anchor-navigation-ex-anchor" href="#mesh-&#x5B50;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x548C;&#x65AD;&#x5F00;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6. Mesh &#x5B50;&#x8BBE;&#x5907;&#x8FDE;&#x63A5;&#x548C;&#x65AD;&#x5F00;</h3>
+<p>ITuyaBlueMeshClient &#x63D0;&#x4F9B; &#x5F00;&#x59CB;&#x8FDE;&#x63A5;&#x3001;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#x3001;&#x5F00;&#x542F;&#x626B;&#x63CF;&#x3001;&#x505C;&#x6B62;&#x626B;&#x63CF;</p>
+<p><strong>&#x63A5;&#x53E3;&#x8C03;&#x7528;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">// &#x5F00;&#x542F;&#x8FDE;&#x63A5;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startClient</span><span class="token punctuation">(</span>mBlueMeshBean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x65AD;&#x5F00;&#x8FDE;&#x63A5;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x5F00;&#x542F;&#x626B;&#x63CF;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">//&#x505C;&#x6B62;&#x626B;&#x63CF;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#x4E8B;&#x9879;</strong> </p>
+<ul>
+<li>&#x5F00;&#x542F;&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x4F1A;&#x5728;&#x540E;&#x53F0;&#x4E0D;&#x65AD;&#x7684;&#x53BB;&#x626B;&#x63CF;&#x5468;&#x56F4;&#x53EF;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#xFF0C;&#x76F4;&#x5230;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x4E3A;&#x6B62;&#x3002;</li>
+<li>&#x540E;&#x53F0;&#x4E00;&#x76F4;&#x626B;&#x63CF;&#x4F1A;&#x6D88;&#x8017;&#x8D44;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x901A;&#x8FC7;&#x5F00;&#x542F;&#x626B;&#x63CF;&#x548C;&#x505C;&#x6B62;&#x626B;&#x63CF;&#x6765;&#x63A7;&#x5236;&#x540E;&#x53F0;&#x7684;&#x626B;&#x63CF;</li>
+<li>&#x5F53;&#x672A; <code>startClient()</code> &#x65F6;&#x5019;&#xFF0C;&#x8C03;&#x7528; <code>startSearch()</code> &#x548C; <code>stopSearch()</code> &#x662F;&#x6CA1;&#x6709;&#x6548;&#x679C;&#x7684;</li>
+<li>&#x5F53;&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#x5230; Mesh &#x7F51;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8C03;&#x7528; <code>startSearch()</code> &#x548C; <code>stopSearch()</code> &#x662F;&#x6CA1;&#x6709;&#x6548;&#x679C;&#x7684;</li>
+</ul>
+<h2 id="&#x914D;&#x7F51;"><a name="&#x914D;&#x7F51;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x914D;&#x7F51;</h2>
+<p>mesh &#x914D;&#x7F51;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x9488;&#x5BF9;&#x666E;&#x901A;&#x84DD;&#x7259; mesh &#x8BBE;&#x5907;&#xFF08;&#x53C8;&#x79F0; mesh &#x5B50;&#x8BBE;&#x5907;&#xFF09;&#xFF0C;&#x4F8B;&#x5982;&#x706F;&#x3001;&#x63D2;&#x5EA7;&#x3001;&#x4F4E;&#x529F;&#x8017;&#x7B49;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x53EA;&#x8981;&#x4E0D;&#x5E26;&#x7F51;&#x5173;&#xFF0C;&#x5C31;&#x662F;&#x666E;&#x901A;&#x84DD;&#x7259;&#x8BBE;&#x5907;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x5BF9; mesh &#x7F51;&#x5173;&#x914D;&#x7F51;</p>
+<h3 id="&#x8BBE;&#x5907;&#x91CD;&#x7F6E;"><a name="&#x8BBE;&#x5907;&#x91CD;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;&#x91CD;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. &#x8BBE;&#x5907;&#x91CD;&#x7F6E;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x4EA7;&#x54C1;&#x7C7B;&#x578B;</th>
+<th>&#x91CD;&#x7F6E;&#x64CD;&#x4F5C;</th>
+<th>&#x53EF;&#x914D;&#x7F51;&#x73B0;&#x8C61;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x706F;</td>
+<td>&#x8FDE;&#x7EED;&#x5F00;&#x5173;&#x4E09;&#x6B21;</td>
+<td>&#x706F;&#x5FEB;&#x95EA;</td>
+</tr>
+<tr>
+<td>&#x63D2;&#x5EA7;</td>
+<td>&#x957F;&#x6309;&#x5F00;&#x5173; 3s</td>
+<td>&#x63D2;&#x5EA7;&#x6307;&#x793A;&#x706F;&#x5FEB;&#x95EA;</td>
+</tr>
+<tr>
+<td>&#x7F51;&#x5173;</td>
+<td>&#x957F;&#x6309;&#x5F00;&#x5173; 3s</td>
+<td>&#x7EA2;&#x706F;&#x548C;&#x84DD;&#x706F;&#x5FEB;&#x95EA;</td>
+</tr>
+<tr>
+<td>&#x4F4E;&#x529F;&#x8017;&#x8BBE;&#x5907;</td>
+<td>&#x957F;&#x6309;&#x5F00;&#x5173; 3s</td>
+<td>&#x518D;&#x6309;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x957F;&#x4EAE;&#x5373;&#x53EF;&#x914D;&#x7F51;&#xFF0C;&#x4E14;&#x914D;&#x7F51;&#x9700;&#x5728;&#x706F;&#x4EAE;&#x671F;&#x95F4;&#x5B8C;&#x6210;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8B66;&#x5668;</td>
+<td>&#x957F;&#x6309;&#x5F00;&#x5173; 3s</td>
+<td>&#x706F;&#x5FEB;&#x95EA;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5904;&#x4E8E;&#x91CD;&#x7F6E;&#x72B6;&#x6001;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x9ED8;&#x8BA4;&#x540D;&#x5B57;&#x4E3A; <code>out_of_mesh</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;&#x4E3A; <code>123456</code></p>
+<h3 id="&#x626B;&#x63CF;&#x5F85;&#x914D;&#x7F51;&#x5B50;&#x8BBE;&#x5907;"><a name="&#x626B;&#x63CF;&#x5F85;&#x914D;&#x7F51;&#x5B50;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x626B;&#x63CF;&#x5F85;&#x914D;&#x7F51;&#x5B50;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. &#x626B;&#x63CF;&#x5F85;&#x914D;&#x7F51;&#x5B50;&#x8BBE;&#x5907;</h3>
+<p>&#x626B;&#x63CF;&#x524D;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x84DD;&#x7259;&#x548C;&#x4F4D;&#x7F6E;&#x6743;&#x9650;;&#x626B;&#x63CF;&#x9644;&#x8FD1;&#x7684;&#x5F85;&#x914D;&#x7F51; Mesh &#x8BBE;&#x5907;</p>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x5F00;&#x542F;&#x626B;&#x63CF;</span>
+<span class="token keyword">void</span> <span class="token function">startSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x505C;&#x6B62;&#x626B;&#x63CF;</span>
+<span class="token keyword">void</span> <span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaBlueMeshSearchListener</span> iTuyaBlueMeshSearchListener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshSearchListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSearched</span><span class="token punctuation">(</span><span class="token class-name">SearchDeviceBean</span> deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSearchFinish</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">SearchBuilder</span> searchBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SearchBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token comment">//&#x8981;&#x626B;&#x63CF;&#x8BBE;&#x5907;&#x7684;&#x540D;&#x79F0;&#xFF08;&#x9ED8;&#x8BA4;&#x4F1A;&#x662F;out_of_mesh&#xFF0C;&#x8BBE;&#x5907;&#x5904;&#x4E8E;&#x914D;&#x7F51;&#x72B6;&#x6001;&#x4E0B;&#x7684;&#x540D;&#x79F0;&#xFF09;</span>
+                <span class="token punctuation">.</span><span class="token function">setMeshName</span><span class="token punctuation">(</span><span class="token string">&quot;out_of_mesh&quot;</span><span class="token punctuation">)</span> 
+                <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token comment">//&#x626B;&#x63CF;&#x65F6;&#x957F; &#x5355;&#x4F4D;&#x79D2;</span>
+                <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshSearchListener</span><span class="token punctuation">(</span>iTuyaBlueMeshSearchListener<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">ITuyaBlueMeshSearch</span> mMeshSearch <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newTuyaBlueMeshSearch</span><span class="token punctuation">(</span>searchBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x5F00;&#x542F;&#x626B;&#x63CF;</span>
+mMeshSearch<span class="token punctuation">.</span><span class="token function">startSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x505C;&#x6B62;&#x626B;&#x63CF;</span>
+mMeshSearch<span class="token punctuation">.</span><span class="token function">stopSearch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="mesh-&#x5B50;&#x8BBE;&#x5907;&#x914D;&#x7F51;"><a name="mesh-&#x5B50;&#x8BBE;&#x5907;&#x914D;&#x7F51;" class="anchor-navigation-ex-anchor" href="#mesh-&#x5B50;&#x8BBE;&#x5907;&#x914D;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. Mesh &#x5B50;&#x8BBE;&#x5907;&#x914D;&#x7F51;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x5F00;&#x542F;&#x914D;&#x7F51;</span>
+<span class="token keyword">void</span> <span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x505C;&#x6B62;&#x914D;&#x7F51;</span>
+<span class="token keyword">void</span> <span class="token function">stopActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>String</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mSearchDeviceBeans</td>
+<td>List</td>
+<td>&#x5F85;&#x914D;&#x7F51;&#x7684;&#x8BBE;&#x5907;&#x96C6;&#x5408;</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Int</td>
+<td>&#x914D;&#x7F51;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x8BBE;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; 100s.</td>
+</tr>
+<tr>
+<td>ssid</td>
+<td>String</td>
+<td>&#x914D;&#x7F51;&#x4E4B;&#x540E;&#xFF0C;&#x8BBE;&#x5907;&#x5DE5;&#x4F5C; Wi-Fi &#x7684;&#x540D;&#x79F0;&#x3002;&#xFF08;&#x5BB6;&#x5EAD;&#x7F51;&#x7EDC;&#xFF09;</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>&#x914D;&#x7F51;&#x4E4B;&#x540E;&#xFF0C;&#x8BBE;&#x5907;&#x5DE5;&#x4F5C; Wi-Fi &#x7684;&#x5BC6;&#x7801;&#x3002;&#xFF08;&#x5BB6;&#x5EAD;&#x7F51;&#x7EDC;&#xFF09;</td>
+</tr>
+<tr>
+<td>mMeshBean</td>
+<td>MeshBean</td>
+<td>MeshBean</td>
+</tr>
+<tr>
+<td>homeId</td>
+<td>Long</td>
+<td>&#x8BBE;&#x5907;&#x8981;&#x52A0;&#x5165;&#x7684; Mesh &#x7F51; &#x6240;&#x5C5E;&#x5BB6;&#x5EAD;&#x7684; HomeId</td>
+</tr>
+<tr>
+<td>version</td>
+<td>String</td>
+<td>&#x666E;&#x901A;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x662F; 1.0    &#x7F51;&#x5173;&#x914D;&#x7F51;&#x662F; 2.2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x666E;&#x901A;&#x8BBE;&#x5907;&#x5165;&#x7F51;</span>
+<span class="token class-name">TuyaBlueMeshActivatorBuilder</span> tuyaBlueMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaBlueMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setSearchDeviceBeans</span><span class="token punctuation">(</span>foundDevices<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setVersion</span><span class="token punctuation">(</span><span class="token string">&quot;1.0&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setBlueMeshBean</span><span class="token punctuation">(</span>mMeshBean<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span>timeOut<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token annotation punctuation">@Override</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> deviceBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token punctuation">}</span>
+
+     <span class="token annotation punctuation">@Override</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token punctuation">}</span>
+
+     <span class="token annotation punctuation">@Override</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFinish</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">ITuyaBlueMeshActivator</span> iTuyaBlueMeshActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x5F00;&#x59CB;&#x5165;&#x7F51;</span>
+iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x505C;&#x6B62;&#x5165;&#x7F51;</span>
+iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">stopActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="mesh-&#x7F51;&#x5173;&#x914D;&#x7F51;"><a name="mesh-&#x7F51;&#x5173;&#x914D;&#x7F51;" class="anchor-navigation-ex-anchor" href="#mesh-&#x7F51;&#x5173;&#x914D;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. Mesh &#x7F51;&#x5173;&#x914D;&#x7F51;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x5F00;&#x542F;&#x914D;&#x7F51;</span>
+<span class="token keyword">void</span> <span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x505C;&#x6B62;&#x914D;&#x7F51;</span>
+<span class="token keyword">void</span> <span class="token function">stopActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>String</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mSearchDeviceBeans</td>
+<td>List</td>
+<td>&#x5F85;&#x914D;&#x7F51;&#x7684;&#x8BBE;&#x5907;&#x96C6;&#x5408;</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Int</td>
+<td>&#x914D;&#x7F51;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x8BBE;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; 100s.</td>
+</tr>
+<tr>
+<td>ssid</td>
+<td>String</td>
+<td>&#x914D;&#x7F51;&#x4E4B;&#x540E;&#xFF0C;&#x8BBE;&#x5907;&#x5DE5;&#x4F5C; Wi-Fi &#x7684;&#x540D;&#x79F0;&#x3002;&#xFF08;&#x5BB6;&#x5EAD;&#x7F51;&#x7EDC;&#xFF09;</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>&#x914D;&#x7F51;&#x4E4B;&#x540E;&#xFF0C;&#x8BBE;&#x5907;&#x5DE5;&#x4F5C; Wi-Fi &#x7684;&#x5BC6;&#x7801;&#x3002;&#xFF08;&#x5BB6;&#x5EAD;&#x7F51;&#x7EDC;&#xFF09;</td>
+</tr>
+<tr>
+<td>mMeshBean</td>
+<td>MeshBean</td>
+<td>MeshBean</td>
+</tr>
+<tr>
+<td>homeId</td>
+<td>Long</td>
+<td>&#x8BBE;&#x5907;&#x8981;&#x52A0;&#x5165;&#x7684; Mesh &#x7F51; &#x6240;&#x5C5E;&#x5BB6;&#x5EAD;&#x7684; HomeId</td>
+</tr>
+<tr>
+<td>version</td>
+<td>String</td>
+<td>&#x666E;&#x901A;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x662F; 1.0    &#x7F51;&#x5173;&#x914D;&#x7F51;&#x662F; 2.2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token comment">//&#x7F51;&#x5173;&#x5165;&#x7F51;</span>
+<span class="token class-name">TuyaBlueMeshActivatorBuilder</span> tuyaBlueMeshActivatorBuilder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaBlueMeshActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setWifiSsid</span><span class="token punctuation">(</span>mSsid<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setWifiPassword</span><span class="token punctuation">(</span>mPassword<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setSearchDeviceBeans</span><span class="token punctuation">(</span>foundDevices<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setVersion</span><span class="token punctuation">(</span><span class="token string">&quot;2.2  &quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setBlueMeshBean</span><span class="token punctuation">(</span>mMeshBean<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setHomeId</span><span class="token punctuation">(</span><span class="token string">&quot;homeId&quot;</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setTuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaBlueMeshActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token annotation punctuation">@Override</span>
+                  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> devBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//&#x5355;&#x4E2A;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x6210;&#x529F;&#x56DE;&#x8C03;</span>
+                    <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;startConfig  success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+
+                  <span class="token annotation punctuation">@Override</span>
+                  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//&#x5355;&#x4E2A;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x5931;&#x8D25;&#x56DE;&#x8C03;</span>
+                    <span class="token comment">//errorCode &#x89C1;&#x9519;&#x8BEF;&#x7801;</span>
+                  <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;errorCode: &quot;</span> <span class="token operator">+</span> errorCode <span class="token operator">+</span> <span class="token string">&quot; errorMsg: &quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+
+                  <span class="token annotation punctuation">@Override</span>
+                  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onFinish</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment">//&#x6240;&#x6709;&#x8BBE;&#x5907;&#x914D;&#x7F51;&#x7ED3;&#x675F;&#x56DE;&#x8C03;          </span>
+                  <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">ITuyaBlueMeshActivator</span> iTuyaBlueMeshActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaBlueMeshConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newWifiActivator</span><span class="token punctuation">(</span>tuyaBlueMeshActivatorBuilder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x5F00;&#x59CB;&#x5165;&#x7F51;</span>
+iTuyaBlueMeshActivator<span class="token punctuation">.</span><span class="token function">startActivator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x505C;&#x6B62;&#x5165;&#x7F51;</span>
+<span class="token comment">//iTuyaBlueMeshActivator.stopActivator();</span>
+</code></pre>
+<h3 id="&#x914D;&#x7F51;&#x9519;&#x8BEF;&#x7801;"><a name="&#x914D;&#x7F51;&#x9519;&#x8BEF;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F51;&#x9519;&#x8BEF;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. &#x914D;&#x7F51;&#x9519;&#x8BEF;&#x7801;</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13007</td>
+<td>&#x767B;&#x5F55;&#x8BBE;&#x5907;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>13004</td>
+<td>&#x91CD;&#x7F6E;&#x8BBE;&#x5907;&#x5730;&#x5740;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>13005</td>
+<td>&#x8BBE;&#x5907;&#x5730;&#x5740;&#x5DF2;&#x6EE1;</td>
+</tr>
+<tr>
+<td>13007</td>
+<td>ssid&#x4E3A;&#x7A7A;</td>
+</tr>
+<tr>
+<td>13011</td>
+<td>&#x914D;&#x7F51;&#x8D85;&#x65F6;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8BBE;&#x5907;"><a name="&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x8BBE;&#x5907;</h2>
+<h3 id="mesh-&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><a name="mesh-&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#mesh-&#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. Mesh &#x8BBE;&#x5907;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</h3>
+<p><strong>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DeviceBean</span> deviceBean<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// blue mesh &#x8BBE;&#x5907;&#x5224;&#x65AD; &#xFF08;&#x5B50;&#x8BBE;&#x5907;+&#x7F51;&#x5173;&#xFF09;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isBlueMesh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+
+<span class="token comment">// blue mesh &#x7F51;&#x5173;&#x8BBE;&#x5907;&#x5224;&#x65AD;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">isBlueMeshWifi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This device is blue mesh wifi device&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><a name="&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.2. &#x5B50;&#x8BBE;&#x5907;&#x91CD;&#x547D;&#x540D;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameMeshSubDev</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907; Id</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>&#x91CD;&#x547D;&#x540D;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-java">mTuyaBlueMesh<span class="token punctuation">.</span><span class="token function">renameMeshSubDev</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">&quot;&#x8BBE;&#x5907;&#x540D;&#x79F0;&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="mesh-&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><a name="mesh-&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;" class="anchor-navigation-ex-anchor" href="#mesh-&#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.3. Mesh &#x672C;&#x5730;&#x8FDE;&#x63A5;&#x548C;&#x7F51;&#x5173;&#x8FDE;&#x63A5;</h3>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">DeviceBean</span> deviceBean<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">DeviceBean</span> gwBean<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDeviceBean</span><span class="token punctuation">(</span>deviceBean<span class="token punctuation">.</span><span class="token function">getParentId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">//&#x7EFC;&#x5408;&#x5728;&#x7EBF;&#x72B6;&#x6001;  (&#x5305;&#x62EC;&#x672C;&#x5730;&#x5728;&#x7EBF;&#x548C;&#x7F51;&#x5173;&#x5728;&#x7EBF;)</span>
+<span class="token keyword">boolean</span> online<span class="token operator">=</span>deviceBean<span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//&#x8BBE;&#x5907;&#x672C;&#x5730;&#x84DD;&#x7259;&#x5728;&#x7EBF;&#x72B6;&#x6001;</span>
+<span class="token keyword">boolean</span> localOnline<span class="token operator">=</span>deviceBean<span class="token punctuation">.</span><span class="token function">getIsLocalOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">//&#x8BBE;&#x5907;&#x7F51;&#x5173;&#x5728;&#x7EBF;&#x72B6;&#x6001;  (&#x9700;&#x8981;&#x7F51;&#x5173;&#x5728;&#x7EBF;&#x4E14;&#x5B50;&#x8BBE;&#x5907;&#x5728;&#x7EBF; &#x624D;&#x8BA4;&#x4E3A;&#x7F51;&#x5173;&#x771F;&#x5B9E;&#x5728;&#x7EBF;)</span>
+<span class="token keyword">boolean</span> wifiOnline<span class="token operator">=</span>deviceBean<span class="token punctuation">.</span><span class="token function">isCloudOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> gwBean<span class="token punctuation">.</span><span class="token function">getIsOnline</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;"><a name="&#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.4. &#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeMeshSubDev</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907; Id</td>
+</tr>
+<tr>
+<td>pcc</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907;&#x5927;&#x5C0F;&#x7C7B;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-java">mTuyaBlueMesh<span class="token punctuation">.</span><span class="token function">removeMeshSubDev</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getDevId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;&#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;&#x5931;&#x8D25; &quot;</span><span class="token operator">+</span> errorMsg<span class="token punctuation">,</span>     <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;&#x5B50;&#x8BBE;&#x5907;&#x79FB;&#x9664;&#x6210;&#x529F;&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x5B50;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x67E5;&#x8BE2;"><a name="&#x5B50;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.5. &#x5B50;&#x8BBE;&#x5907;&#x72B6;&#x6001;&#x67E5;&#x8BE2;</h3>
+<p>&#x4E91;&#x7AEF;&#x83B7;&#x53D6;&#x5230;&#x7684; dp &#x70B9;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x5B9E;&#x65F6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5;&#x547D;&#x4EE4;&#x53BB;&#x67E5;&#x8BE2;&#x8BBE;&#x5907;&#x7684;&#x5F53;&#x524D;&#x6570;&#x636E;&#x503C;&#xFF0C;&#x7ED3;&#x679C;&#x901A;&#x8FC7; <code>IMeshDevListener</code> &#x7684; <code>onDpUpdate</code> &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;</p>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">querySubDevStatusByLocal</span><span class="token punctuation">(</span><span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> nodeId<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcc</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907;&#x5927;&#x5C0F;&#x7C7B;</td>
+</tr>
+<tr>
+<td>nodeId</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907; nodeId</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x4EE3;&#x7801;&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-java">mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">querySubDevStatusByLocal</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> devBean<span class="token punctuation">.</span><span class="token function">getNodeId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x7FA4;&#x7EC4;"><a name="&#x7FA4;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x7FA4;&#x7EC4;</h2>
+<p><code>ITuyaGroup</code> &#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9; Mesh &#x7FA4;&#x7EC4;&#x7684;&#x64CD;&#x4F5C;</p>
+<h3 id="mesh-&#x7FA4;&#x7EC4;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><a name="mesh-&#x7FA4;&#x7EC4;&#x5224;&#x65AD;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#mesh-&#x7FA4;&#x7EC4;&#x5224;&#x65AD;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1. Mesh &#x7FA4;&#x7EC4;&#x5224;&#x65AD;&#x65B9;&#x6CD5;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7FA4;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x5177;&#x5907; MeshId &#x6765;&#x533A;&#x5206; Mesh &#x7FA4;&#x7EC4;&#x548C;&#x666E;&#x901A; Wi-Fi &#x7FA4;&#x7EC4;</p>
+<p><strong>&#x4EE3;&#x7801;&#x8C03;&#x7528;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">GroupBean</span> groupBean<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDataInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getGroupBean</span><span class="token punctuation">(</span><span class="token string">&quot;groupId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">TextUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>groupBean<span class="token punctuation">.</span><span class="token function">getMeshId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    
+    <span class="token class-name">L</span><span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">&quot;This group is mesh group&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;"><a name="&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.2. &#x521B;&#x5EFA;&#x7FA4;&#x7EC4;</h3>
+<p>Mesh &#x7F51;&#x5185;&#x652F;&#x6301;&#x521B;&#x5EFA; 28672 &#x4E2A;&#x7FA4;&#x7EC4;  &#x8FD4;&#x56DE;&#x65F6; id &#x8303;&#x56F4; 8000 ~ EFFF  &#xFF08; 16 &#x8FDB;&#x5236;&#xFF09;  &#x7531;&#x672C;&#x5730;&#x8FDB;&#x884C;&#x7EF4;&#x62A4;</p>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> localId<span class="token punctuation">,</span><span class="token class-name">IAddGroupCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>&#x7FA4;&#x7EC4;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>pcc</td>
+<td>&#x7FA4;&#x7EC4;&#x4E2D;&#x8BBE;&#x5907;&#x7684;&#x5927;&#x5C0F;&#x7C7B;  (&#x652F;&#x6301;&#x8DE8;&#x5C0F;&#x7C7B;&#x521B;&#x5EFA;  FF01 &#x8868;&#x793A;&#x8986;&#x76D6;&#x706F;&#x5927;&#x7C7B;)</td>
+</tr>
+<tr>
+<td>localId</td>
+<td>&#x7FA4;&#x7EC4;&#x7684; localId  (&#x8303;&#x56F4; 8000 ~ EFFF 16 &#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;)</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">mITuyaBlueMesh<span class="token punctuation">.</span><span class="token function">addGroup</span><span class="token punctuation">(</span><span class="token string">&quot;&#x7FA4;&#x7EC4;&#x540D;&#x79F0;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x5927;&#x5C0F;&#x7C7B;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;8001&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IAddGroupCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>   
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token keyword">long</span> groupId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x6DFB;&#x52A0;&#x5B50;&#x8BBE;&#x5907;&#x5230;&#x7FA4;&#x7EC4;"><a name="&#x6DFB;&#x52A0;&#x5B50;&#x8BBE;&#x5907;&#x5230;&#x7FA4;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x5B50;&#x8BBE;&#x5907;&#x5230;&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.3. &#x6DFB;&#x52A0;&#x5B50;&#x8BBE;&#x5907;&#x5230;&#x7FA4;&#x7EC4;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907; Id</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+mGroup<span class="token punctuation">.</span><span class="token function">addDevice</span><span class="token punctuation">(</span><span class="token string">&quot;devId&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x4ECE;&#x7FA4;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x5B50;&#x8BBE;&#x5907;"><a name="&#x4ECE;&#x7FA4;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x5B50;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x4ECE;&#x7FA4;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x5B50;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.4. &#x4ECE;&#x7FA4;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x5B50;&#x8BBE;&#x5907;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>String</td>
+<td>&#x8BBE;&#x5907; Id</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+mGroup<span class="token punctuation">.</span><span class="token function">removeDevice</span><span class="token punctuation">(</span><span class="token string">&quot;devId&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x5220;&#x9664;&#x7FA4;&#x7EC4;"><a name="&#x5220;&#x9664;&#x7FA4;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.5. &#x5220;&#x9664;&#x7FA4;&#x7EC4;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">dismissGroup</span><span class="token punctuation">(</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+mGroup<span class="token punctuation">.</span><span class="token function">dismissGroup</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x91CD;&#x547D;&#x540D;&#x7FA4;&#x7EC4;"><a name="&#x91CD;&#x547D;&#x540D;&#x7FA4;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x547D;&#x540D;&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.6. &#x91CD;&#x547D;&#x540D;&#x7FA4;&#x7EC4;</h3>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">renameGroup</span><span class="token punctuation">(</span><span class="token class-name">String</span> groupName<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>groupName</td>
+<td>String</td>
+<td>&#x91CD;&#x547D;&#x540D;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>IResultCallback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaGroup</span> mGroup <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshGroupInstance</span><span class="token punctuation">(</span>groupId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+mGroup<span class="token punctuation">.</span><span class="token function">renameGroup</span><span class="token punctuation">(</span><span class="token string">&quot;&#x7FA4;&#x7EC4;&#x540D;&#x79F0;&quot;</span><span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x63A7;&#x5236;"><a name="&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. &#x63A7;&#x5236;</h2>
+<p><code>ITuyaBlueMeshDevice</code> &#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9; Mesh &#x8BBE;&#x5907;&#x7684;&#x64CD;&#x4F5C;</p>
+<h3 id="&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x8BBE;&#x5907;"><a name="&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x8BBE;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x8BBE;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1. &#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x8BBE;&#x5907;</h3>
+<p>&#x53D1;&#x9001;&#x63A7;&#x5236;&#x6307;&#x4EE4;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#xFF1A; </p>
+<pre class="language-"><code class="lang-java"><span class="token punctuation">{</span><span class="token string">&quot;(dpId)&quot;</span><span class="token operator">:</span><span class="token string">&quot;(dpValue)&quot;</span><span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">publishDps</span><span class="token punctuation">(</span><span class="token class-name">String</span> nodeId<span class="token punctuation">,</span> <span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> dps<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodeId</td>
+<td>&#x5B50;&#x8BBE;&#x5907;&#x672C;&#x5730;&#x7F16;&#x53F7;</td>
+</tr>
+<tr>
+<td>pcc</td>
+<td>&#x8BBE;&#x5907;&#x4EA7;&#x54C1;&#x5927;&#x5C0F;&#x7C7B;</td>
+</tr>
+<tr>
+<td>dps</td>
+<td>&#x63A7;&#x5236;&#x6307;&#x4EE4;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> dps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;1&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">ITuyaBlueMeshDevice</span> mTuyaBlueMeshDevice<span class="token operator">=</span><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">publishDps</span><span class="token punctuation">(</span>devBean<span class="token punctuation">.</span><span class="token function">getNodeId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> devBean<span class="token punctuation">.</span><span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dps<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> s1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x7FA4;&#x7EC4;"><a name="&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x7FA4;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x7FA4;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.2. &#x6307;&#x4EE4;&#x4E0B;&#x53D1;-&#x63A7;&#x5236;&#x7FA4;&#x7EC4;</h3>
+<p>&#x53D1;&#x9001;&#x63A7;&#x5236;&#x6307;&#x4EE4;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x683C;&#x5F0F;&#xFF1A; </p>
+<pre class="language-"><code class="lang-java"><span class="token punctuation">{</span>
+  <span class="token string">&quot;(dpId)&quot;</span><span class="token operator">:</span><span class="token string">&quot;(dpValue)&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x63A5;&#x53E3;&#x8BF4;&#x660E;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">multicastDps</span><span class="token punctuation">(</span><span class="token class-name">String</span> localId<span class="token punctuation">,</span> <span class="token class-name">String</span> pcc<span class="token punctuation">,</span> <span class="token class-name">String</span> dps<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>localId</td>
+<td>&#x7FA4;&#x7EC4;&#x672C;&#x5730;&#x7F16;&#x53F7;</td>
+</tr>
+<tr>
+<td>pcc</td>
+<td>&#x8BBE;&#x5907;&#x4EA7;&#x54C1;&#x5927;&#x5C0F;&#x7C7B;</td>
+</tr>
+<tr>
+<td>dps</td>
+<td>&#x63A7;&#x5236;&#x6307;&#x4EE4;</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>&#x56DE;&#x8C03;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> dps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;1&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token class-name">ITuyaBlueMeshDevice</span> mTuyaBlueMeshDevice<span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newBlueMeshDeviceInstance</span><span class="token punctuation">(</span><span class="token string">&quot;meshId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">multicastDps</span><span class="token punctuation">(</span>groupBean<span class="token punctuation">.</span><span class="token function">getLocalId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> devBean<span class="token punctuation">.</span><span class="token function">getCategory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dps<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x6570;&#x636E;&#x76D1;&#x542C;"><a name="&#x6570;&#x636E;&#x76D1;&#x542C;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x76D1;&#x542C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.3. &#x6570;&#x636E;&#x76D1;&#x542C;</h3>
+<p>Mesh &#x7F51;&#x5185;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF08; dp &#x6570;&#x636E;&#x3001;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#x3001;&#x8BBE;&#x5907;&#x540D;&#x79F0;&#x3001;&#x8BBE;&#x5907;&#x79FB;&#x9664;&#xFF09;&#x4F1A;&#x5B9E;&#x65F6;&#x540C;&#x6B65;&#x5230; <code>IMeshDevListener</code> </p>
+<p><strong>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java">mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">registerMeshDevListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IMeshDevListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+   <span class="token comment">/**
+    * &#x6570;&#x636E;&#x66F4;&#x65B0;
+    * @param nodeId    &#x66F4;&#x65B0;&#x8BBE;&#x5907;&#x7684;nodeId
+    * @param dps       dp&#x6570;&#x636E;
+    * @param isFromLocal   &#x6570;&#x636E;&#x6765;&#x6E90; true&#x8868;&#x793A;&#x4ECE;&#x672C;&#x5730;&#x84DD;&#x7259;  false&#x8868;&#x793A;&#x4ECE;&#x4E91;&#x7AEF;
+    */</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDpUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> nodeId<span class="token punctuation">,</span> <span class="token class-name">String</span> dps<span class="token punctuation">,</span><span class="token keyword">boolean</span> isFromLocal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">//&#x53EF;&#x4EE5;&#x901A;&#x8FC7;node&#x6765;&#x627E;&#x5230;&#x76F8;&#x5BF9;&#x5E94;&#x7684;DeviceBean</span>
+   <span class="token class-name">DeviceBean</span> deviceBean <span class="token operator">=</span> mTuyaBlueMeshDevice<span class="token punctuation">.</span><span class="token function">getMeshSubDevBeanByNodeId</span><span class="token punctuation">(</span>nodeId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token comment">/**
+    * &#x8BBE;&#x5907;&#x72B6;&#x6001;&#x7684;&#x4E0A;&#x62A5;
+    * @param online    &#x5728;&#x7EBF;&#x8BBE;&#x5907;&#x5217;&#x8868;
+    * @param offline   &#x79BB;&#x7EBF;&#x8BBE;&#x5907;&#x5217;&#x8868;
+    * @param gwId      &#x72B6;&#x6001;&#x7684;&#x6765;&#x6E90; gwId&#x4E0D;&#x4E3A;&#x7A7A;&#x8868;&#x793A;&#x6765;&#x81EA;&#x4E91;&#x7AEF;&#xFF08;gwId&#x662F;&#x4E0A;&#x62A5;&#x6570;&#x636E;&#x7684;&#x7F51;&#x5173;Id&#xFF09;   &#x4E3A;&#x7A7A;&#x5219;&#x8868;&#x793A;&#x6765;&#x81EA;&#x672C;&#x5730;&#x84DD;&#x7259;
+    */</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> online<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> offline<span class="token punctuation">,</span><span class="token class-name">String</span> gwId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token comment">/**
+    * &#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x53D8;&#x5316;
+    * @param devId
+    * @param status
+    */</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onNetworkStatusChanged</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> status<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+   <span class="token punctuation">}</span>
+
+   <span class="token comment">/**
+    * raw&#x7C7B;&#x578B;&#x6570;&#x636E;&#x4E0A;&#x62A5;
+    * @param bytes
+    */</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRawDataUpdate</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+   <span class="token punctuation">}</span>
+
+   <span class="token comment">/**
+    * &#x8BBE;&#x5907;&#x4FE1;&#x606F;&#x53D8;&#x66F4;&#xFF08;&#x540D;&#x79F0;&#x7B49;&#xFF09;
+    * @param bytes
+    */</span>            
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onDevInfoUpdate</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
+   <span class="token comment">/**
+    * &#x8BBE;&#x5907;&#x79FB;&#x9664;
+    * @param devId
+    */</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onRemoved</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x56FA;&#x4EF6;&#x5347;&#x7EA7;"><a name="&#x56FA;&#x4EF6;&#x5347;&#x7EA7;" class="anchor-navigation-ex-anchor" href="#&#x56FA;&#x4EF6;&#x5347;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x56FA;&#x4EF6;&#x5347;&#x7EA7;</h2>
+<p>&#x4E0E; SIG Mesh &#x56FA;&#x4EF6;&#x5347;&#x7EA7;&#x903B;&#x8F91;&#x4E00;&#x81F4;&#x3002;
+<a href="Mesh_SIG.html#SIG_Mesh_&#x8BBE;&#x5907;&#x56FA;&#x4EF6;&#x5347;&#x7EA7;">SIG Mesh &#x56FA;&#x4EF6;&#x5347;&#x7EA7;</a></p>
+<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Mesh_Tuya.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Mesh_Tuya.html"});gitalk.render("gitalk-container");</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Mesh_SIG.html#固件升级" class="navigation navigation-prev " aria-label="Previous page: 固件升级">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Mesh_Tuya.html#准备" class="navigation navigation-next " aria-label="Next page: 准备">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"蓝牙 Mesh (涂鸦)","level":"2.1.3","depth":2,"next":{"title":"准备","level":"2.1.3.1","depth":3,"anchor":"#准备","path":"resource/Mesh_Tuya.md","ref":"./resource/Mesh_Tuya.md#准备","articles":[]},"previous":{"title":"固件升级","level":"2.1.2.8","depth":3,"anchor":"#固件升级","path":"resource/Mesh_SIG.md","ref":"./resource/Mesh_SIG.md#固件升级","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/Mesh_Tuya.md","mtime":"2020-07-13T02:37:11.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-31T03:21:27.970Z"},"basePath":"..","book":{"language":"zh-hans"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/sequence-diagram-min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-js-sequence-diagram-full/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sf-score/lib/scorePlugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
