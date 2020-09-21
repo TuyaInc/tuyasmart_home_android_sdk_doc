@@ -10,35 +10,6 @@
 | groupList | List &lt;GroupBean&gt;  | 房间下面的群组|
 | displayOrder | int | 房间顺序|
 
-## 添加群组
-
-**接口说明**
-
-```java
-void addGroup(long groupId, IResultCallback callback)
-```
-
-**参数说明**
-
-| 参数 | 说明 |
-| :--- | :--- |
-| groupId | 群组 ID |
-
-**示例代码**
-
-```java
-TuyaHomeSdk.newRoomInstance(10000).addGroup(groupId, new IResultCallback() {
-        @Override
-        public void onSuccess() {
-            // do something
-        }
-        @Override
-        public void onError(String code, String error) {
-            // do something
-        }
-    });
-```
-
 ## 更新房间名称
 
 **接口说明**
@@ -57,6 +28,38 @@ void updateRoom(String name, IResultCallback callback)
 
 ```java
 TuyaHomeSdk.newRoomInstance(10000).updateRoom(name, new IResultCallback() {
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+    });
+```
+
+## 自定义房间图片
+
+房间可支持自定义 image，成功后可通过 `RoomBean.iconUrl` 进行获取房间图片地址
+
+**接口说明**
+
+```java
+void updateIcon(File file, IResultCallback callback);
+```
+
+**参数说明**
+
+| 参数     | 说明     |
+| -------- | -------- |
+| file     | 房间图片 |
+| callback | 回调     |
+
+**示例代码**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).updateIcon(file, new IResultCallback() {
         @Override
         public void onSuccess() {
             // do something
@@ -115,6 +118,35 @@ void removeDevice(String devId, IResultCallback callback)
 
 ```java
 TuyaHomeSdk.newRoomInstance(10000).removeDevice(devId, new IResultCallback() {
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+    });
+```
+
+## 添加群组
+
+**接口说明**
+
+```java
+void addGroup(long groupId, IResultCallback callback)
+```
+
+**参数说明**
+
+| 参数 | 说明 |
+| :--- | :--- |
+| groupId | 群组 ID |
+
+**示例代码**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).addGroup(groupId, new IResultCallback() {
         @Override
         public void onSuccess() {
             // do something

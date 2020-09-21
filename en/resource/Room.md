@@ -10,35 +10,6 @@
 | groupList | List &lt;GroupBean&gt;  | Groups of room |
 | displayOrder | int | Room display order |
 
-#### Add Group
-
-**Declaration**
-
-```java
-void addGroup(long groupId, IResultCallback callback)
-```
-
-**Parameters**
-
-| Parameters | Description |
-| :--- | :--- |
-| groupId | Group ID |
-
-**Example**
-
-```java
-TuyaHomeSdk.newRoomInstance(10000).addGroup(groupId, new IResultCallback() {
-        @Override
-        public void onError(String code, String error) {
-            // do something
-        }
-        @Override
-        public void onSuccess() {
-            // do something
-        }
-    });
-```
-
 #### Update Room Name
 
 **Declaration**
@@ -63,6 +34,38 @@ TuyaHomeSdk.newRoomInstance(10000).updateRoom(name, new IResultCallback() {
         }
         @Override
         public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### Update Room Icon
+
+The room can support upload custom image, after success, you can get the room icon URL through `RoomBean.iconUrl`
+
+**Declaration**
+
+```java
+void updateIcon(File file, IResultCallback callback);
+```
+
+**Parameters**
+
+| Parameters | Description |
+| ---------- | ----------- |
+| file       | Room image  |
+| callback   | callback    |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).updateIcon(file, new IResultCallback() {
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+        @Override
+        public void onError(String code, String error) {
             // do something
         }
     });
@@ -125,6 +128,36 @@ TuyaHomeSdk.newRoomInstance(10000).removeDevice(devId, new IResultCallback() {
         }
     });
 ```
+#### Add Group
+
+**Declaration**
+
+```java
+void addGroup(long groupId, IResultCallback callback)
+```
+
+**Parameters**
+
+| Parameters | Description |
+| :--------- | :---------- |
+| groupId    | Group ID    |
+
+**Example**
+
+```java
+TuyaHomeSdk.newRoomInstance(10000).addGroup(groupId, new IResultCallback() {
+        @Override
+        public void onError(String code, String error) {
+            // do something
+        }
+        @Override
+        public void onSuccess() {
+            // do something
+        }
+    });
+```
+
+#### 
 
 #### Delete Group
 
