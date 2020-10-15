@@ -284,20 +284,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="User_Tourist.html">
-            
-                <a href="User_Tourist.html">
-            
-                    
-                    Anonymous registration
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.7" data-path="User_qrlogin.html">
+        <li class="chapter " data-level="1.5.6" data-path="User_qrlogin.html">
             
                 <a href="User_qrlogin.html">
             
@@ -310,7 +297,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="User_update.html">
+        <li class="chapter " data-level="1.5.7" data-path="User_update.html">
             
                 <a href="User_update.html">
             
@@ -323,7 +310,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="User_logout.html">
+        <li class="chapter " data-level="1.5.8" data-path="User_logout.html">
             
                 <a href="User_logout.html">
             
@@ -336,7 +323,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.10" data-path="User_model.html">
+        <li class="chapter " data-level="1.5.9" data-path="User_model.html">
             
                 <a href="User_model.html">
             
@@ -349,7 +336,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.11" data-path="User_Session.html">
+        <li class="chapter " data-level="1.5.10" data-path="User_Session.html">
             
                 <a href="User_Session.html">
             
@@ -2377,20 +2364,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#timer-task"><b>1. </b>Timer Task</a></li><ul><li><span class="title-icon "></span><a href="#add-timer-task"><b>1.1. </b>Add Timer Task</a></li><li><span class="title-icon "></span><a href="#obtain-status-of-timer-task"><b>1.2. </b>Obtain Status of Timer Task</a></li><li><span class="title-icon "></span><a href="#update-the-status-of-timer"><b>1.3. </b>Update the Status of Timer</a></li><li><span class="title-icon "></span><a href="#remove-timer"><b>1.4. </b>Remove Timer</a></li><li><span class="title-icon "></span><a href="#update-timer"><b>1.5. </b>Update Timer</a></li><li><span class="title-icon "></span><a href="#obtain-all-timers-of-timer-task"><b>1.6. </b>Obtain All Timers of Timer Task</a></li><li><span class="title-icon "></span><a href="#obtain-all-timers-of-all-timer-tasks"><b>1.7. </b>Obtain All Timers of All Timer Tasks</a></li></ul></ul></div><a href="#timer-task" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="timer-task"><a name="timer-task" class="anchor-navigation-ex-anchor" href="#timer-task"><i class="fa fa-link" aria-hidden="true"></i></a>1. Timer Task</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#timer-task"><b>1. </b>Timer Task</a></li><ul><li><span class="title-icon "></span><a href="#version-imprint"><b>1.1. </b>Version Imprint</a></li><li><span class="title-icon "></span><a href="#add-timer-task"><b>1.2. </b>Add Timer Task</a></li><li><span class="title-icon "></span><a href="#batch-modify-common-timers-status-or-delete-dimer"><b>1.3. </b>Batch Modify Common Timers Status or Delete Dimer</a></li><li><span class="title-icon "></span><a href="#update-timer"><b>1.4. </b>Update Timer</a></li><li><span class="title-icon "></span><a href="#obtain-all-timers-of-timer-task"><b>1.5. </b>Obtain All Timers of Timer Task</a></li><li><span class="title-icon "></span><a href="#modify-the-status-of-all-scheduled-tasks-under-the-category-or-delete-the-timer"><b>1.6. </b>Modify the Status of All Scheduled Tasks Under the Category or Delete the Timer</a></li></ul></ul></div><a href="#timer-task" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="timer-task"><a name="timer-task" class="anchor-navigation-ex-anchor" href="#timer-task"><i class="fa fa-link" aria-hidden="true"></i></a>1. Timer Task</h1>
 <p>Tuya Smart provides basic timing capabilities, and supports devices (including WiFi devices, Bluetooth mesh sub-devices and zigbee sub-devices) and groups. It is also provided with the interface for addition, deletion, change and querying of timer information for dp points of the device. After the APP sets the timer information through the timing interface, the hardware module automatically performs the scheduled operation according to the timing requirements. Multiple timers can be included in each timer task, as shown in the figure below:</p>
 <p><img src="images/android-sdk-timer.jpg" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>&#x7C7B;</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ITuyaCommonTimer</td>
+<td>Timer package class</td>
+</tr>
+</tbody>
+</table>
 <p>All methods related to timing are included in TuyaHomeSdk.getTimerManagerInstance().</p>
 <p>The taskName is used by multiple interfaces, which can be described as a group, and a group may include multiple timers. Each timer task belongs to or does not belong to a group, and the group is currently only used for presentation.</p>
-<h2 id="add-timer-task"><a name="add-timer-task" class="anchor-navigation-ex-anchor" href="#add-timer-task"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Add Timer Task</h2>
-<p>We provide two methods to implement adding a timer.The first one is only supports single dp point and the second supports HashMap as a parameter.</p>
+<h2 id="version-imprint"><a name="version-imprint" class="anchor-navigation-ex-anchor" href="#version-imprint"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Version Imprint</h2>
+<p>A new set of timing interfaces has been added from version 3.18.0 to solve the problems of the old interface, (see <a href="https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/blob/3.14.5/en/resource/Timer.md" target="_blank">Old version interface</a>)</p>
+<p>The new timer apis are all in <code>TuyaHomeSdk.getTimerInstance()</code>,</p>
+<p>The old timer apis are in <code>TuyaHomeSdk.getTimerManagerInstance()</code></p>
+<p>Compared with the old version of the interface, the new version of the interface has the following updates:</p>
+<ul>
+<li><p>Add or update the timer interface to set the timer switch state</p>
+</li>
+<li><p>Provide interface for batch modification of timer status</p>
+</li>
+<li>Fix the problem of the failure of the old version to close the timer categories</li>
+<li>Provide category timers delete function</li>
+</ul>
+<p><strong>Upgrade suggestion</strong></p>
+<p>The old interface is no longer maintained, and it is recommended to upgrade to the new interface. The upgrade needs to replace the entire set of timing interfaces. Using the old version of the interface to set the timing can still be obtained through the new version of the timer list.</p>
+<h2 id="add-timer-task"><a name="add-timer-task" class="anchor-navigation-ex-anchor" href="#add-timer-task"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Add Timer Task</h2>
+<p>Up to 30 timers per device or group</p>
+<p>Add a timer to the required task specified by a device or group.</p>
 <p><strong>Declaration</strong></p>
-<p>Add one timer.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> dps<span class="token punctuation">,</span> <span class="token class-name">String</span> time<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">addTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> dps<span class="token punctuation">,</span> <span class="token class-name">String</span> time<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isAppPush<span class="token punctuation">,</span> <span class="token class-name">String</span> remark<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addTimer</span><span class="token punctuation">(</span><span class="token class-name">TuyaTimerBuilder</span> builder<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
+<p>TuyaTimerBuilder and IResultCallback description</p>
 <table>
 <thead>
 <tr>
@@ -2412,102 +2427,24 @@
 <td>Execute the timer times of a week.number of loops: &quot;0000000&#x201D;; 0 denotes off, and 1 denotes on. Each 0 from the left to the right denotes: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday, respectively.&quot;0000000&quot; means execute once.&quot;1111111&quot; means execute everyday</td>
 </tr>
 <tr>
-<td>dps</td>
-<td>A key-value pair consisting of dpId and dpValue.For example: &quot;14:00&quot;</td>
-</tr>
-<tr>
-<td>time</td>
-<td>Time clock in a timer task.For example:&quot;14:00&quot;.Currently only supports 24-hour format</td>
-</tr>
-<tr>
-<td>isAppPush</td>
-<td>Is support push message after the timer executed (The app must be supported FCM)</td>
-</tr>
-<tr>
-<td>remark</td>
-<td>The timer remark name</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>callback not null</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addTimerWithTask</span><span class="token punctuation">(</span><span class="token string">&quot;task01&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1111111&quot;</span><span class="token punctuation">,</span>mDevId<span class="token punctuation">,</span>  <span class="token string">&quot;{&quot;</span><span class="token number">1</span><span class="token string">&quot;:true}&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;14:29&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;adding timer tasks succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;adding timer tasks failed &quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="obtain-status-of-timer-task"><a name="obtain-status-of-timer-task" class="anchor-navigation-ex-anchor" href="#obtain-status-of-timer-task"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Obtain Status of Timer Task</h2>
-<p><strong>Declaration</strong></p>
-<p>Obtain states of all timer tasks of a certain device.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getTimerTaskStatusWithDeviceId</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IGetDeviceTimerStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>devId</td>
-<td>Device Id or group Id</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>callback not null</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTimerTaskStatusWithDeviceId</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IGetDeviceTimerStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TimerTaskStatus</span><span class="token punctuation">&gt;</span></span> list<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> &#x201C;obtaining states of timer tasks of a device succeeded&quot;<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;obtaining states of timer tasks of a device failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="update-the-status-of-timer"><a name="update-the-status-of-timer" class="anchor-navigation-ex-anchor" href="#update-the-status-of-timer"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Update the Status of Timer</h2>
-<p><strong>Declaration</strong></p>
-<p>Control switch status of a timer.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateTimerStatusWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> timerId<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isOpen<span class="token punctuation">,</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>taskName</td>
-<td>Name of timer task</td>
-</tr>
-<tr>
-<td>devId</td>
-<td>Device Id or group Id</td>
+<td>actions</td>
+<td>dps task, json format: {/&quot;dps/&quot;:{},/&quot;time/&quot;:&quot;&quot;}</td>
 </tr>
 <tr>
 <td>status</td>
-<td>Status value 1: on; 0: off</td>
+<td>Initialize the timer switch state 0: off, 1: on</td>
+</tr>
+<tr>
+<td>appPush</td>
+<td>Is support push message after the timer executed (The app must be supported FCM)</td>
+</tr>
+<tr>
+<td>aliasName</td>
+<td>The timer remark name</td>
+</tr>
+<tr>
+<td>timerDeviceTypeEnum</td>
+<td>Enumeration, timing type: device timing or group timing</td>
 </tr>
 <tr>
 <td>callback</td>
@@ -2516,22 +2453,30 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateTimerStatusWithTask</span><span class="token punctuation">(</span>taskName<span class="token punctuation">,</span> mDevId<span class="token punctuation">,</span> timeId<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;controlling switch status of a timer succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaTimerBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaTimerBuilder</span><span class="token punctuation">.</span><span class="token class-name">Builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">taskName</span><span class="token punctuation">(</span>mTaskName<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">devId</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">deviceType</span><span class="token punctuation">(</span><span class="token class-name">TimerDeviceTypeEnum</span><span class="token punctuation">.</span>DEVICE<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">actions</span><span class="token punctuation">(</span>dps<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">loops</span><span class="token punctuation">(</span><span class="token string">&quot;1100011&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">aliasName</span><span class="token punctuation">(</span><span class="token string">&quot;Test&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">appPush</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addTimer</span><span class="token punctuation">(</span>builder<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
 
-        <span class="token annotation punctuation">@Override</span>
-        <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;controlling switch status of a timer failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="remove-timer"><a name="remove-timer" class="anchor-navigation-ex-anchor" href="#remove-timer"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Remove Timer</h2>
+<h2 id="batch-modify-common-timers-status-or-delete-dimer"><a name="batch-modify-common-timers-status-or-delete-dimer" class="anchor-navigation-ex-anchor" href="#batch-modify-common-timers-status-or-delete-dimer"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Batch Modify Common Timers Status or Delete Dimer</h2>
 <p><strong>Declaration</strong></p>
-<p>Remove a timer</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">removeTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> timerId<span class="token punctuation">,</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateTimerStatus</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">TimerDeviceTypeEnum</span> deviceTimerTypeEnum<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> ids<span class="token punctuation">,</span> <span class="token class-name">TimerUpdateEnum</span> timerUpdateEnum<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2543,16 +2488,20 @@
 </thead>
 <tbody>
 <tr>
-<td>taskName</td>
-<td>Name of timer task</td>
-</tr>
-<tr>
 <td>devId</td>
 <td>Device Id or group Id</td>
 </tr>
 <tr>
-<td>timerId</td>
-<td>Time clock Id</td>
+<td>TimerDeviceTypeEnum</td>
+<td>Enumeration, timing type: device timing or group timing</td>
+</tr>
+<tr>
+<td>ids</td>
+<td>Timer id list</td>
+</tr>
+<tr>
+<td>TimerUpdateEnum</td>
+<td>Enumeration, operation type: turn on timer, turn off timer, delete timer</td>
 </tr>
 <tr>
 <td>callback</td>
@@ -2561,27 +2510,23 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">removeTimerWithTask</span><span class="token punctuation">(</span>taskName<span class="token punctuation">,</span> mDevId<span class="token punctuation">,</span> timeId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateTimerStatus</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">,</span> <span class="token class-name">TimerDeviceTypeEnum</span><span class="token punctuation">.</span>DEVICE<span class="token punctuation">,</span> list<span class="token punctuation">,</span> <span class="token class-name">TimerUpdateEnum</span><span class="token punctuation">.</span>DELETE<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-       <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;removing timer succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;removing timer failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="update-timer"><a name="update-timer" class="anchor-navigation-ex-anchor" href="#update-timer"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Update Timer</h2>
-<p>We provide two methods to implement update a timer.The first is the old one ,only support single dp point,the other support multiply dp points.</p>
+<h2 id="update-timer"><a name="update-timer" class="anchor-navigation-ex-anchor" href="#update-timer"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Update Timer</h2>
+<p>Update the timer of a task specified by a device .</p>
 <p><strong>Declaration</strong></p>
 <p>Updating timer status (this interface can modify all attributes of a timer).</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> timerId<span class="token punctuation">,</span> <span class="token class-name">String</span> instruct<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> loops<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">String</span> timerId<span class="token punctuation">,</span> <span class="token class-name">String</span> instruct<span class="token punctuation">,</span> <span class="token keyword">boolean</span> isAppPush<span class="token punctuation">,</span> <span class="token class-name">String</span> remark<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultStatusCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateTimer</span><span class="token punctuation">(</span><span class="token class-name">TuyaTimerBuilder</span> builder<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2605,66 +2550,114 @@
 <td>Device Id or group Id</td>
 </tr>
 <tr>
-<td>timerId</td>
+<td>actions</td>
 <td>time clock Id</td>
 </tr>
 <tr>
-<td>dpId</td>
-<td>Id of dp point.</td>
+<td>actions</td>
+<td>dps task, json format: {/&quot;dps/&quot;:{},/&quot;time/&quot;:&quot;&quot;}</td>
 </tr>
 <tr>
-<td>time</td>
-<td>Time clock in a timer task.For example:&quot;14:00&quot;.Currently only supports 24-hour format</td>
-</tr>
-<tr>
-<td>isOpen</td>
-<td>switching on or off</td>
+<td>status</td>
+<td>Initialize the timer switch state 0: off, 1: on</td>
 </tr>
 <tr>
 <td>callback</td>
 <td>callback not null</td>
 </tr>
 <tr>
-<td>instruct</td>
-<td>Dps task, json format:[{&quot;time&quot;: &quot;20:00&quot;,&quot;dps&quot;: {&quot;1&quot;: true}]</td>
-</tr>
-<tr>
-<td>isAppPush</td>
+<td>appPush</td>
 <td>Whether to support regular execution result push</td>
 </tr>
 <tr>
-<td>remark</td>
+<td>aliasName</td>
 <td>Set timer note name</td>
+</tr>
+<tr>
+<td>TimerDeviceTypeEnum</td>
+<td>Enumeration, timing type: device timer or group timer</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span>taskName<span class="token punctuation">,</span><span class="token string">&quot;0011001&quot;</span><span class="token punctuation">,</span> mDevId<span class="token punctuation">,</span> timeId<span class="token punctuation">,</span>  <span class="token string">&quot;[{&quot;</span>time<span class="token string">&quot;: &quot;</span><span class="token number">20</span><span class="token operator">:</span><span class="token number">00</span><span class="token string">&quot;, &quot;</span>dps<span class="token string">&quot;: { &quot;</span><span class="token number">1</span><span class="token string">&quot;: true},{&quot;</span>time<span class="token string">&quot;: &quot;</span><span class="token number">22</span><span class="token operator">:</span><span class="token number">00</span><span class="token string">&quot;,&quot;</span>dps<span class="token string">&quot;: {&quot;</span><span class="token number">2</span><span class="token string">&quot;: true}]&quot;</span><span class="token punctuation">,</span>  <span class="token keyword">new</span> <span class="token class-name">IResultStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaTimerBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaTimerBuilder</span><span class="token punctuation">.</span><span class="token class-name">Builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">timerId</span><span class="token punctuation">(</span><span class="token class-name">Long</span><span class="token punctuation">.</span><span class="token function">parseLong</span><span class="token punctuation">(</span>alarmTimerBean<span class="token punctuation">.</span><span class="token function">getGroupId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">devId</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">deviceType</span><span class="token punctuation">(</span><span class="token class-name">TimerDeviceTypeEnum</span><span class="token punctuation">.</span>DEVICE<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">actions</span><span class="token punctuation">(</span>dps<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">loops</span><span class="token punctuation">(</span><span class="token string">&quot;1111111&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">aliasName</span><span class="token punctuation">(</span><span class="token string">&quot;test&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">appPush</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateTimer</span><span class="token punctuation">(</span>builder<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;updating timer attribute succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;updating timer attribute failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateTimerWithTask</span><span class="token punctuation">(</span>taskName<span class="token punctuation">,</span><span class="token string">&quot;0011001&quot;</span><span class="token punctuation">,</span> mDevId<span class="token punctuation">,</span> timeId<span class="token punctuation">,</span>  instruct<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token string">&quot;Go to Bed&quot;</span>  <span class="token keyword">new</span> <span class="token class-name">IResultStatusCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;updating timer attribute succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;updating timer attribute failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="obtain-all-timers-of-timer-task"><a name="obtain-all-timers-of-timer-task" class="anchor-navigation-ex-anchor" href="#obtain-all-timers-of-timer-task"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Obtain All Timers of Timer Task</h2>
+<h2 id="obtain-all-timers-of-timer-task"><a name="obtain-all-timers-of-timer-task" class="anchor-navigation-ex-anchor" href="#obtain-all-timers-of-timer-task"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Obtain All Timers of Timer Task</h2>
 <p><strong>Declaration</strong></p>
-<p>Obtain all timers of timer task.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getTimerWithTask</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IGetTimerWithTaskCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>Obtain all timer modules of task required by a device.</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getTimerList</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">TimerDeviceTypeEnum</span> deviceTimerTypeEnum<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TimerTask</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>taskName</td>
+<td>Name of timer task,Optional, empty means to get a list of common timers</td>
+</tr>
+<tr>
+<td>devId</td>
+<td>Device Id or group Id</td>
+</tr>
+<tr>
+<td>TimerDeviceTypeEnum</td>
+<td>Enumeration, timing type: device timing or group timing</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>callback not null</td>
+</tr>
+<tr>
+<td>TimerTaskStatus</td>
+<td>Timer switch status and name</td>
+</tr>
+<tr>
+<td>ArrayList<timer></timer></td>
+<td>Single timer list</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTimerList</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> mGwId<span class="token punctuation">,</span> <span class="token class-name">TimerDeviceTypeEnum</span><span class="token punctuation">.</span>DEVICE<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TimerTask</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">TimerTask</span> timerTask<span class="token punctuation">)</span>             <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="modify-the-status-of-all-scheduled-tasks-under-the-category-or-delete-the-timer"><a name="modify-the-status-of-all-scheduled-tasks-under-the-category-or-delete-the-timer" class="anchor-navigation-ex-anchor" href="#modify-the-status-of-all-scheduled-tasks-under-the-category-or-delete-the-timer"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Modify the Status of All Scheduled Tasks Under the Category or Delete the Timer</h2>
+<p><strong>Declaration</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateCategoryTimerStatus</span><span class="token punctuation">(</span><span class="token class-name">String</span> taskName<span class="token punctuation">,</span> <span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token class-name">TimerDeviceTypeEnum</span> deviceTimerTypeEnum<span class="token punctuation">,</span> <span class="token class-name">TimerUpdateEnum</span> timerUpdateEnum<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2684,40 +2677,12 @@
 <td>Device Id or group Id</td>
 </tr>
 <tr>
-<td>callback</td>
-<td>callback not null</td>
+<td>TimerDeviceTypeEnum</td>
+<td>Enumeration, timing type: device timing or group timing</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTimerWithTask</span><span class="token punctuation">(</span>taskName<span class="token punctuation">,</span> mDevId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IGetTimerWithTaskCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">TimerTask</span> timerTask<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;obtaining timers of timer tasks succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;obtaining timers of timer tasks failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="obtain-all-timers-of-all-timer-tasks"><a name="obtain-all-timers-of-all-timer-tasks" class="anchor-navigation-ex-anchor" href="#obtain-all-timers-of-all-timer-tasks"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. Obtain All Timers of All Timer Tasks</h2>
-<p><strong>Declaration</strong></p>
-<p>Obtain all timers of all timer tasks for a device.</p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getAllTimerWithDeviceId</span><span class="token punctuation">(</span><span class="token class-name">String</span> devId<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IGetAllTimerWithDevIdCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
 <tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>devId</td>
-<td>Device Id or group Id</td>
+<td>TimerUpdateEnum</td>
+<td>Enumeration, operation type: turn on timer, turn off timer, delete timer</td>
 </tr>
 <tr>
 <td>callback</td>
@@ -2726,14 +2691,15 @@
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerManagerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAllTimerWithDeviceId</span><span class="token punctuation">(</span>mDevId<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IGetAllTimerWithDevIdCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTimerInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateCategoryTimerStatus</span><span class="token punctuation">(</span>taskname <span class="token punctuation">,</span>mDevId<span class="token punctuation">,</span> <span class="token class-name">TimerDeviceTypeEnum</span><span class="token punctuation">.</span>DEVICE<span class="token punctuation">,</span> <span class="token class-name">TimerUpdateEnum</span><span class="token punctuation">.</span>CLOSE<span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TimerTask</span><span class="token punctuation">&gt;</span></span> taskArrayList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;obtaining timers for a device succeeded&quot;</span><span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
     <span class="token punctuation">}</span>
+
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Toast</span><span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span>mContext<span class="token punctuation">,</span> <span class="token string">&quot;obtaining timers for a device failed&quot;</span> <span class="token operator">+</span> errorMsg<span class="token punctuation">,</span> <span class="token class-name">Toast</span><span class="token punctuation">.</span>LENGTH_LONG<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -2781,7 +2747,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Timer Task","level":"1.11","depth":1,"next":{"title":"Group Management","level":"1.12","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[{"title":"Functional Overview","level":"1.12.1","depth":2,"anchor":"#functional-overview","path":"resource/Group.md","ref":"./resource/Group.md#functional-overview","articles":[]},{"title":"Create Group","level":"1.12.2","depth":2,"anchor":"#create-group","path":"resource/Group.md","ref":"./resource/Group.md#create-group","articles":[{"title":"Create Wi-Fi Group","level":"1.12.2.1","depth":3,"anchor":"#create-wi-fi-group","path":"resource/Group.md","ref":"./resource/Group.md#create-wi-fi-group","articles":[]},{"title":"Create ZigBee Group","level":"1.12.2.2","depth":3,"anchor":"#create-zigbee-group","path":"resource/Group.md","ref":"./resource/Group.md#create-zigbee-group","articles":[]}]},{"title":"Group Operation","level":"1.12.3","depth":2,"anchor":"#group-operation","path":"resource/Group.md","ref":"./resource/Group.md#group-operation","articles":[{"title":"Instantiation","level":"1.12.3.1","depth":3,"anchor":"#instantiation","path":"resource/Group.md","ref":"./resource/Group.md#instantiation","articles":[]},{"title":"Modifying group name","level":"1.12.3.2","depth":3,"anchor":"#modifying-group-name","path":"resource/Group.md","ref":"./resource/Group.md#modifying-group-name","articles":[]},{"title":"Dismiss Group","level":"1.12.3.3","depth":3,"anchor":"#dismiss-group","path":"resource/Group.md","ref":"./resource/Group.md#dismiss-group","articles":[]},{"title":"Sending group control command","level":"1.12.3.4","depth":3,"anchor":"#sending-group-control-command","path":"resource/Group.md","ref":"./resource/Group.md#sending-group-control-command","articles":[]},{"title":"Group callback event","level":"1.12.3.5","depth":3,"anchor":"#group-callback-event","path":"resource/Group.md","ref":"./resource/Group.md#group-callback-event","articles":[]},{"title":"Group data acquisition","level":"1.12.3.6","depth":3,"anchor":"#group-data-acquisition","path":"resource/Group.md","ref":"./resource/Group.md#group-data-acquisition","articles":[]}]}]},"previous":{"title":"Modify Note Name","level":"1.10.4","depth":2,"anchor":"#modify-note-name","path":"resource/Shared.md","ref":"./resource/Shared.md#modify-note-name","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Timer.md","mtime":"2020-07-27T14:05:35.966Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-24T09:08:00.847Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Timer Task","level":"1.11","depth":1,"next":{"title":"Group Management","level":"1.12","depth":1,"path":"resource/Group.md","ref":"./resource/Group.md","articles":[{"title":"Functional Overview","level":"1.12.1","depth":2,"anchor":"#functional-overview","path":"resource/Group.md","ref":"./resource/Group.md#functional-overview","articles":[]},{"title":"Create Group","level":"1.12.2","depth":2,"anchor":"#create-group","path":"resource/Group.md","ref":"./resource/Group.md#create-group","articles":[{"title":"Create Wi-Fi Group","level":"1.12.2.1","depth":3,"anchor":"#create-wi-fi-group","path":"resource/Group.md","ref":"./resource/Group.md#create-wi-fi-group","articles":[]},{"title":"Create ZigBee Group","level":"1.12.2.2","depth":3,"anchor":"#create-zigbee-group","path":"resource/Group.md","ref":"./resource/Group.md#create-zigbee-group","articles":[]}]},{"title":"Group Operation","level":"1.12.3","depth":2,"anchor":"#group-operation","path":"resource/Group.md","ref":"./resource/Group.md#group-operation","articles":[{"title":"Instantiation","level":"1.12.3.1","depth":3,"anchor":"#instantiation","path":"resource/Group.md","ref":"./resource/Group.md#instantiation","articles":[]},{"title":"Modifying group name","level":"1.12.3.2","depth":3,"anchor":"#modifying-group-name","path":"resource/Group.md","ref":"./resource/Group.md#modifying-group-name","articles":[]},{"title":"Dismiss Group","level":"1.12.3.3","depth":3,"anchor":"#dismiss-group","path":"resource/Group.md","ref":"./resource/Group.md#dismiss-group","articles":[]},{"title":"Sending group control command","level":"1.12.3.4","depth":3,"anchor":"#sending-group-control-command","path":"resource/Group.md","ref":"./resource/Group.md#sending-group-control-command","articles":[]},{"title":"Group callback event","level":"1.12.3.5","depth":3,"anchor":"#group-callback-event","path":"resource/Group.md","ref":"./resource/Group.md#group-callback-event","articles":[]},{"title":"Group data acquisition","level":"1.12.3.6","depth":3,"anchor":"#group-data-acquisition","path":"resource/Group.md","ref":"./resource/Group.md#group-data-acquisition","articles":[]}]}]},"previous":{"title":"Modify Note Name","level":"1.10.4","depth":2,"anchor":"#modify-note-name","path":"resource/Shared.md","ref":"./resource/Shared.md#modify-note-name","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Timer.md","mtime":"2020-09-27T13:06:22.863Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-15T12:28:46.282Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
