@@ -559,6 +559,19 @@
     
         <li class="chapter " data-level="1.7.3.6" data-path="Activator_device.html">
             
+                <a href="Activator_device.html#scan-the-qr-code-of-the-device-configuration">
+            
+                    
+                    Scan The QR Code Of The Device Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.7" data-path="Activator_device.html">
+            
                 <a href="Activator_device.html#bluetooth-configuration">
             
                     
@@ -2364,7 +2377,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#wi-fi-network-configuration"><b>1. </b>Wi-Fi Network Configuration</a></li><ul><li><span class="title-icon "></span><a href="#functional-overview"><b>1.1. </b>Functional Overview</a></li><li><span class="title-icon "></span><a href="#instructions"><b>1.2. </b>Instructions</a></li><li><span class="title-icon "></span><a href="#implementation"><b>1.3. </b>Implementation</a></li><ul><li><span class="title-icon "></span><a href="#quick-connection-mode"><b>1.3.1. </b>Quick Connection Mode</a></li><li><span class="title-icon "></span><a href="#hotspot-mode"><b>1.3.2. </b>Hotspot Mode</a></li><li><span class="title-icon "></span><a href="#camera-scan-code-network-configuration"><b>1.3.3. </b>Camera Scan Code Network Configuration</a></li><li><span class="title-icon "></span><a href="#wired-network-configuration"><b>1.3.4. </b>Wired Network Configuration</a></li><li><span class="title-icon "></span><a href="#sub-device-configuration"><b>1.3.5. </b>Sub-device Configuration</a></li><li><span class="title-icon "></span><a href="#bluetooth-configuration"><b>1.3.6. </b>Bluetooth Configuration</a></li></ul></ul></ul></div><a href="#wi-fi-network-configuration" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="wi-fi-network-configuration"><a name="wi-fi-network-configuration" class="anchor-navigation-ex-anchor" href="#wi-fi-network-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>1. Wi-Fi Network Configuration</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#wi-fi-network-configuration"><b>1. </b>Wi-Fi Network Configuration</a></li><ul><li><span class="title-icon "></span><a href="#functional-overview"><b>1.1. </b>Functional Overview</a></li><li><span class="title-icon "></span><a href="#instructions"><b>1.2. </b>Instructions</a></li><li><span class="title-icon "></span><a href="#implementation"><b>1.3. </b>Implementation</a></li><ul><li><span class="title-icon "></span><a href="#quick-connection-mode"><b>1.3.1. </b>Quick Connection Mode</a></li><li><span class="title-icon "></span><a href="#hotspot-mode"><b>1.3.2. </b>Hotspot Mode</a></li><li><span class="title-icon "></span><a href="#camera-scan-code-network-configuration"><b>1.3.3. </b>Camera Scan Code Network Configuration</a></li><li><span class="title-icon "></span><a href="#wired-network-configuration"><b>1.3.4. </b>Wired Network Configuration</a></li><li><span class="title-icon "></span><a href="#sub-device-configuration"><b>1.3.5. </b>Sub-device Configuration</a></li><li><span class="title-icon "></span><a href="#scan-the-qr-code-of-the-device-configuration"><b>1.3.6. </b>Scan The QR Code Of The Device Configuration</a></li><li><span class="title-icon "></span><a href="#bluetooth-configuration"><b>1.3.7. </b>Bluetooth Configuration</a></li></ul></ul></ul></div><a href="#wi-fi-network-configuration" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="wi-fi-network-configuration"><a name="wi-fi-network-configuration" class="anchor-navigation-ex-anchor" href="#wi-fi-network-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>1. Wi-Fi Network Configuration</h1>
 <h2 id="functional-overview"><a name="functional-overview" class="anchor-navigation-ex-anchor" href="#functional-overview"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Functional Overview</h2>
 <p>The network configuration modes supported by Tuya SDK including:</p>
 <ul>
@@ -2373,6 +2386,7 @@
 <li>Camera Scan Code Network Configuration</li>
 <li>Wired Network Configuration</li>
 <li>Sub-device Configuration </li>
+<li>Scan The QR Code Of The Device Configuration</li>
 <li>Bluetooth Configuration</li>
 </ul>
 <table>
@@ -3123,7 +3137,112 @@ mTuyaGWActivator<span class="token punctuation">.</span><span class="token funct
 <span class="token comment">// Destroy</span>
 mTuyaGWActivator<span class="token punctuation">.</span><span class="token function">onDestory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="bluetooth-configuration"><a name="bluetooth-configuration" class="anchor-navigation-ex-anchor" href="#bluetooth-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6. Bluetooth Configuration</h3>
+<h3 id="scan-the-qr-code-of-the-device-configuration"><a name="scan-the-qr-code-of-the-device-configuration" class="anchor-navigation-ex-anchor" href="#scan-the-qr-code-of-the-device-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6. Scan The QR Code Of The Device Configuration</h3>
+<h4 id="description_3"><a name="description_3" class="anchor-navigation-ex-anchor" href="#description_3"><i class="fa fa-link" aria-hidden="true"></i></a><a name="description" class="plugin-anchor" href="#description"><i class="fa fa-link" aria-hidden="true"></i></a>Description</h4>
+<p>This feature is only available for devices connected to the Internet</p>
+<pre class="language-"><code class="lang-sequence">Title: Scan The QR Code Of The Device Configuration
+
+participant Device
+participant httpdns
+participant mqtt
+participant APP
+participant cloud
+
+Note over Device: Device power on and network
+Note over Device: Reset the device to the state of waiting configuration
+
+Device -&gt; httpdns: choose httpdns&#xFF0C;get mqttsUrl domain
+httpdns -&gt; Device: callback mqttsUrl domain
+Device -&gt; mqtt: use to uuid connect to mqtt
+
+APP -&gt; Device: scan the QR code of device
+APP -&gt; cloud: APP get device uuid&#xFF0C;and create token
+APP -&gt; cloud: polling networked devices according to token
+
+cloud -&gt; mqtt: push token and region
+mqtt -&gt; Device: transparent transmission to the device
+
+Device -&gt; cloud: deactivate device
+cloud -&gt; Device: activated success
+
+cloud--&gt;APP: successful activation, return to the list of successful devices
+</code></pre>
+<h4 id="get-device-uuid"><a name="get-device-uuid" class="anchor-navigation-ex-anchor" href="#get-device-uuid"><i class="fa fa-link" aria-hidden="true"></i></a><a name="get-device-uuid" class="plugin-anchor" href="#get-device-uuid"><i class="fa fa-link" aria-hidden="true"></i></a>Get Device Uuid</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> postData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//get url by scanning the QR code</span>
+postData<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;code&quot;</span><span class="token punctuation">,</span> url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getRequestInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">requestWithApiNameWithoutSession</span><span class="token punctuation">(</span><span class="token string">&quot;tuya.m.qrcode.parse&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;4.0&quot;</span><span class="token punctuation">,</span> postData<span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">String</span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//get uuid from result  </span>
+      <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Log</span><span class="token punctuation">.</span><span class="token function">i</span><span class="token punctuation">(</span><span class="token string">&quot;TAG&quot;</span> <span class="token punctuation">,</span> errorCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="initialize-parameters_5"><a name="initialize-parameters_5" class="anchor-navigation-ex-anchor" href="#initialize-parameters_5"><i class="fa fa-link" aria-hidden="true"></i></a><a name="initialize-parameters" class="plugin-anchor" href="#initialize-parameters"><i class="fa fa-link" aria-hidden="true"></i></a>Initialize Parameters</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaQRCodeActivatorBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TuyaQRCodeActivatorBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setUuid</span><span class="token punctuation">(</span>uuid<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setHomeId</span><span class="token punctuation">(</span>homeId<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>mActivity<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setTimeOut</span><span class="token punctuation">(</span>timeout<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">setListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaSmartActivatorListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                <span class="token annotation punctuation">@Override</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                <span class="token punctuation">}</span>
+
+                <span class="token annotation punctuation">@Override</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onActiveSuccess</span><span class="token punctuation">(</span><span class="token class-name">DeviceBean</span> devResp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                <span class="token punctuation">}</span>
+
+                <span class="token annotation punctuation">@Override</span>
+                <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onStep</span><span class="token punctuation">(</span><span class="token class-name">String</span> step<span class="token punctuation">,</span> <span class="token class-name">Object</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uuid</td>
+<td>Device Uuid</td>
+</tr>
+<tr>
+<td>homeId</td>
+<td>Family ID, please refer to the family management section for details</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Setting the time-out period for network configuration, The default is 100s</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configuration-method-invocation_5"><a name="configuration-method-invocation_5" class="anchor-navigation-ex-anchor" href="#configuration-method-invocation_5"><i class="fa fa-link" aria-hidden="true"></i></a><a name="configuration-method-invocation" class="plugin-anchor" href="#configuration-method-invocation"><i class="fa fa-link" aria-hidden="true"></i></a>Configuration Method Invocation</h4>
+<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaActivator</span> mTuyaActivator <span class="token operator">=</span> <span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getActivatorInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">newQRCodeDevActivator</span><span class="token punctuation">(</span>builder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Start network configuration</span>
+mTuyaActivator<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Stop network configuration</span>
+mTuyaActivator<span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Destroy</span>
+mTuyaActivator<span class="token punctuation">.</span><span class="token function">onDestory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="bluetooth-configuration"><a name="bluetooth-configuration" class="anchor-navigation-ex-anchor" href="#bluetooth-configuration"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.7. Bluetooth Configuration</h3>
 <p>For Bluetooth device configuration, you can refer to <a href="BLE.html">the document BLE</a>.</p>
 <p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Activator_device.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Activator_device.html"});gitalk.render("gitalk-container");</script></p>
 
@@ -3169,7 +3288,7 @@ mTuyaGWActivator<span class="token punctuation">.</span><span class="token funct
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Device Configuration","level":"1.7","depth":1,"next":{"title":"Functional Overview","level":"1.7.1","depth":2,"anchor":"#functional-overview","path":"resource/Activator_device.md","ref":"./resource/Activator_device.md#functional-overview","articles":[]},"previous":{"title":"Home's Weather","level":"1.6.5","depth":2,"anchor":"#home-weather","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-weather","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_device.md","mtime":"2020-07-27T14:05:38.824Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-15T12:28:46.282Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Device Configuration","level":"1.7","depth":1,"next":{"title":"Functional Overview","level":"1.7.1","depth":2,"anchor":"#functional-overview","path":"resource/Activator_device.md","ref":"./resource/Activator_device.md#functional-overview","articles":[]},"previous":{"title":"Home's Weather","level":"1.6.5","depth":2,"anchor":"#home-weather","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-weather","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Activator_device.md","mtime":"2020-10-23T07:27:36.818Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-23T07:44:13.057Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
