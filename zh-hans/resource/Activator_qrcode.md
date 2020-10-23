@@ -1,4 +1,4 @@
-### 摄像头二维码配网
+### 扫设备二维码配网
 
 #### 描述
 
@@ -34,6 +34,27 @@ cloud -> Device: 激活成功
 
 cloud-->APP: 激活成功，返回成功设备列表
 
+```
+
+#### 获取设备uuid
+
+```java
+Map<String, Object> postData = new HashMap<>();
+//二维码扫码得到的url
+postData.put("code", url);
+
+TuyaHomeSdk.getRequestInstance().requestWithApiNameWithoutSession("tuya.m.qrcode.parse", "4.0", postData, String.class, new ITuyaDataCallback<String>() {
+    @Override
+    public void onSuccess(String result) {
+      //从result中得到uuid  
+      Log.i("TAG" , result);
+    }
+
+    @Override
+    public void onError(String errorCode, String errorMessage) {
+        Log.i("TAG" , errorCode);
+    }
+});
 ```
 
 #### 初始化配网参数
