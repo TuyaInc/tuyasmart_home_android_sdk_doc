@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Feedback · GitBook</title>
+        <title>Anonymous Registration · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -103,10 +103,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Feedback.html" />
+    <link rel="next" href="User_qrlogin.html" />
     
     
-    <link rel="prev" href="Message.html" />
+    <link rel="prev" href="User_Auth2.html" />
     
 
     
@@ -284,7 +284,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="User_Tourist.html">
+        <li class="chapter active" data-level="1.5.6" data-path="User_Tourist.html">
             
                 <a href="User_Tourist.html">
             
@@ -2375,7 +2375,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Feedback</a>
+        <a href=".." >Anonymous Registration</a>
     </h1>
 </div>
 
@@ -2390,260 +2390,147 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#feedback"><b>1.1. </b>Feedback</a></li><li><span class="title-icon "></span><a href="#obtain-feedback-talk-list"><b>1.2. </b>Obtain Feedback Talk List</a></li><li><span class="title-icon "></span><a href="#obtain-feedback-list"><b>1.3. </b>Obtain Feedback List</a></li><li><span class="title-icon "></span><a href="#obtain-feedback-type-list"><b>1.4. </b>Obtain Feedback Type List</a></li><li><span class="title-icon "></span><a href="#add-feedback"><b>1.5. </b>Add Feedback</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="feedback"><a name="feedback" class="anchor-navigation-ex-anchor" href="#feedback"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Feedback</h2>
-<p>If user intends to submit feedback, he has to select the type of feedback first and fill the feedback content. After submission, a feedback talk will be generated based on the selected type of feedback. User may continue to fill feedback in the session, and the feedback will be displayed in the feedback list of the session.</p>
-<p>All functions related to the feedback will be realized by using the ITuyaFeedbackManager Or ITuyaFeedbackMsg class. Obtaining feedback talk list, feedback content list in the session and feedback type list and adding feedback are supported.</p>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ITuyaFeedbackManager</td>
-<td>Feedback management class</td>
-</tr>
-<tr>
-<td>ITuyaFeedbackMsg</td>
-<td>A feedback management class for some conversation</td>
-</tr>
-</tbody>
-</table>
-<h2 id="obtain-feedback-talk-list"><a name="obtain-feedback-talk-list" class="anchor-navigation-ex-anchor" href="#obtain-feedback-talk-list"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Obtain Feedback Talk List</h2>
-<p>Obtain the feedback talk list submitted by user</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#anonymous-registration"><b>1. </b>Anonymous Registration</a></li><ul><li><span class="title-icon "></span><a href="#anonymous-registration_1"><b>1.1. </b>Anonymous Registration</a></li><li><span class="title-icon "></span><a href="#anonymous-user-logout"><b>1.2. </b>Anonymous User Logout</a></li><li><span class="title-icon "></span><a href="#anonymous-user-bind-account"><b>1.3. </b>Anonymous User Bind Account</a></li></ul></ul></div><a href="#anonymous-registration" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="anonymous-registration"><a name="anonymous-registration" class="anchor-navigation-ex-anchor" href="#anonymous-registration"><i class="fa fa-link" aria-hidden="true"></i></a>1. Anonymous Registration</h1>
+<h2 id="anonymous-registration_1"><a name="anonymous-registration_1" class="anchor-navigation-ex-anchor" href="#anonymous-registration_1"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Anonymous Registration</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getFeedbackList</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>SDK provides anonymous registration to log in, passing parameters: nickName, anonymous login nickname; countryCode, country code.</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">touristRegisterAndLogin</span><span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> nickName<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IRegisterCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
-<p><strong>Parameters</strong></p>
+<p> <strong>Parameters</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Params</th>
+<th style="text-align:left">Type</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left">countryCode</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Country code, 86: China, 1: USA</td>
+</tr>
+<tr>
+<td style="text-align:left">nickName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Nickname of anonymous login  (for example: device name)</td>
+</tr>
 <tr>
 <td style="text-align:left">callback</td>
-<td style="text-align:left">Callback, including obtain feedback list success or failure, cannot be null</td>
+<td style="text-align:left">IRegisterCallback</td>
+<td style="text-align:left">Callback</td>
 </tr>
 </tbody>
 </table>
-<p><strong>FeedbackBean data model</strong></p>
-<table>
-<thead>
-<tr>
-<th>field</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dateTime</td>
-<td>String</td>
-<td>Date and time</td>
-</tr>
-<tr>
-<td>content</td>
-<td>String</td>
-<td>Feedback content</td>
-</tr>
-<tr>
-<td>hdId</td>
-<td>String</td>
-<td>Feedback id</td>
-</tr>
-<tr>
-<td>hdType</td>
-<td>String</td>
-<td>Feedback Type</td>
-</tr>
-<tr>
-<td>title</td>
-<td>String</td>
-<td>Title (if it is equipment failure feedback, that is, equipment name)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackBean</span><span class="token punctuation">&gt;</span></span> feedbackTalkBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token punctuation">}</span>
-     <span class="token annotation punctuation">@Override</span>
-     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token punctuation">}</span>
+<p> <strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">touristRegisterAndLogin</span><span class="token punctuation">(</span>countryCode<span class="token punctuation">,</span> nickName<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IRegisterCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="obtain-feedback-list"><a name="obtain-feedback-list" class="anchor-navigation-ex-anchor" href="#obtain-feedback-list"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Obtain Feedback List</h2>
-<p>Obtain the feedback content list from the feedback talk. </p>
-<p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">ITuyaFeedbackMag</span> <span class="token function">getFeedbackMsg</span><span class="token punctuation">(</span><span class="token class-name">String</span> hdId<span class="token punctuation">,</span> <span class="token keyword">int</span> hdType<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">void</span> <span class="token function">getMsgList</span><span class="token punctuation">(</span><span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="anonymous-user-logout"><a name="anonymous-user-logout" class="anchor-navigation-ex-anchor" href="#anonymous-user-logout"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Anonymous User Logout</h2>
+<p> <strong>Declaration</strong></p>
+<p> Users who log in anonymously can log out through this interface. Anonymous accounts will be logged out immediately.</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">touristLogOut</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ILogoutCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
-<p><strong>Parameters</strong></p>
+<p> <strong>Parameters</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Params</th>
+<th style="text-align:left">Type</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">hdId</td>
-<td style="text-align:left">Feedback Id</td>
-</tr>
-<tr>
-<td style="text-align:left">hdType</td>
-<td style="text-align:left">Feedback type</td>
-</tr>
-<tr>
-<td style="text-align:left">ITuyaDataCallback</td>
-<td style="text-align:left">callback, including obtain feedback list success or failure, cannot be null</td>
+<td style="text-align:left">success</td>
+<td style="text-align:left">ILogoutCallback</td>
+<td style="text-align:left">Callback</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackMsg</span><span class="token punctuation">(</span>hdId<span class="token punctuation">,</span> hdType<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getMsgList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<p> <strong>Example</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">touristLogOut</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ILogoutCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span> result<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMessage<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="obtain-feedback-type-list"><a name="obtain-feedback-type-list" class="anchor-navigation-ex-anchor" href="#obtain-feedback-type-list"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Obtain Feedback Type List</h2>
-<p>The feedback type can be selected first when adding feedback.</p>
-<p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">getFeedbackType</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackTypeRespBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="anonymous-user-bind-account"><a name="anonymous-user-bind-account" class="anchor-navigation-ex-anchor" href="#anonymous-user-bind-account"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Anonymous User Bind Account</h2>
+<p> <strong>Declaration</strong></p>
+<p> Users who log in anonymously can further improve their mobile phone or email information and transform them into normal users.
+There are usually two steps to perfecting information:</p>
+<ul>
+<li><p>Verify email or mobile phone</p>
+</li>
+<li><p>Set account password</p>
+</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">touristBindWithUserName</span><span class="token punctuation">(</span><span class="token class-name">String</span> countryCode<span class="token punctuation">,</span> <span class="token class-name">String</span> userName<span class="token punctuation">,</span> <span class="token class-name">String</span> verifyCode<span class="token punctuation">,</span> <span class="token class-name">String</span> password<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">IBooleanCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
-<p><strong>Parameters</strong></p>
+<p> <strong>Parameters</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Parameters</th>
+<th style="text-align:left">Params</th>
+<th style="text-align:left">Type</th>
 <th style="text-align:left">Description</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left">countryCode</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Country code&#xFF08;For example: 1, USA; 86, China&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">userName</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">User&apos;s phone number or email</td>
+</tr>
+<tr>
+<td style="text-align:left">vefifyCode</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Verification code</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">Password</td>
+</tr>
 <tr>
 <td style="text-align:left">callback</td>
-<td style="text-align:left">callback, including obtain feedback list success or failure, cannot be null</td>
+<td style="text-align:left">IBooleanCallback</td>
+<td style="text-align:left">Callback</td>
 </tr>
 </tbody>
 </table>
-<p><strong>FeedbackTypeRespBean data model</strong></p>
-<table>
-<thead>
-<tr>
-<th>field</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>list</td>
-<td>List<feedbacktypebean></feedbacktypebean></td>
-<td>Feedback type list</td>
-</tr>
-<tr>
-<td>type</td>
-<td>String</td>
-<td>List categories (currently only devices and others)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>FeedbackTypeBean data model</strong></p>
-<table>
-<thead>
-<tr>
-<th>field</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>hdId</td>
-<td>String</td>
-<td>Feedback id</td>
-</tr>
-<tr>
-<td>hdType</td>
-<td>String</td>
-<td>feedback type</td>
-</tr>
-<tr>
-<td>title</td>
-<td>String</td>
-<td>Title (if it is equipment failure feedback, that is, equipment name)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackType</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackTypeRespBean</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<p> <strong>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</strong></p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getUserInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">touristBindWithUserName</span><span class="token punctuation">(</span>countryCode<span class="token punctuation">,</span> userName<span class="token punctuation">,</span> code<span class="token punctuation">,</span> password<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IBooleanCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackTypeRespBean</span><span class="token punctuation">&gt;</span></span> feedbackTypeRespBeans<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
     <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="add-feedback"><a name="add-feedback" class="anchor-navigation-ex-anchor" href="#add-feedback"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Add Feedback</h2>
-<p>Add and submit feedback.</p>
-<p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addFeedback</span><span class="token punctuation">(</span><span class="token keyword">final</span> <span class="token class-name">String</span> message<span class="token punctuation">,</span><span class="token class-name">String</span> contact<span class="token punctuation">,</span> <span class="token class-name">String</span> hdId<span class="token punctuation">,</span> <span class="token keyword">int</span> hdType<span class="token punctuation">,</span> <span class="token keyword">final</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>Parameters</strong></p>
-<table>
-<thead>
-<tr>
-<th>Parameters</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>message</td>
-<td>Feedback content</td>
-</tr>
-<tr>
-<td>contact</td>
-<td>Contact information (phone or email)</td>
-</tr>
-<tr>
-<td>hdId</td>
-<td>Feedback Id</td>
-</tr>
-<tr>
-<td>hdType</td>
-<td>Feedback type</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>Callback, including add success or failure, cannot be null</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getTuyaFeekback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getFeedbackManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addFeedback</span><span class="token punctuation">(</span>
-     &#x201C;<span class="token class-name">Thedevice</span> fails &quot;<span class="token punctuation">,</span> <span class="token comment">//feedback</span>
-     <span class="token string">&quot;abc@qq.com&quot;</span><span class="token punctuation">,</span>
-     feebackTypeBean<span class="token punctuation">.</span><span class="token function">getHdId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
-     feebackTypeBean<span class="token punctuation">.</span><span class="token function">getHdType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
-     <span class="token keyword">new</span> <span class="token class-name">ITuyaDataCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FeedbackMsgBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-         <span class="token annotation punctuation">@Override</span>
-         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onSuccess</span><span class="token punctuation">(</span><span class="token class-name">FeedbackMsgBean</span> feedbackMsgBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-         <span class="token punctuation">}</span>
-         <span class="token annotation punctuation">@Override</span>
-         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> errorCode<span class="token punctuation">,</span> <span class="token class-name">String</span> errorMsg<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-         <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Feedback.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/Feedback.html"});gitalk.render("gitalk-container");</script></p>
+<p><div id="gitalk-container"></div><script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><script>window.onload = function() {gitbook.events.on("page.change", function() {var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/User_Tourist.html"});gitalk.render("gitalk-container");});};var gitalk = new Gitalk({"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true,"id":"/resource/User_Tourist.html"});gitalk.render("gitalk-container");</script></p>
 
                                 
                                 </section>
@@ -2671,12 +2558,12 @@
 
             
                 
-                <a href="Message.html#push-notification" class="navigation navigation-prev " aria-label="Previous page: Push Notification">
+                <a href="User_Auth2.html" class="navigation navigation-prev " aria-label="Previous page: Login by Auth2">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Feedback.html#obtain-feedback-talk-list" class="navigation navigation-next " aria-label="Next page: Obtain Feedback Talk List">
+                <a href="User_qrlogin.html" class="navigation navigation-next " aria-label="Next page: QR code authorization login">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2687,7 +2574,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Feedback","level":"1.15","depth":1,"next":{"title":"Obtain Feedback Talk List","level":"1.15.1","depth":2,"anchor":"#obtain-feedback-talk-list","path":"resource/Feedback.md","ref":"./resource/Feedback.md#obtain-feedback-talk-list","articles":[]},"previous":{"title":"Push Notification","level":"1.14.2","depth":2,"anchor":"#push-notification","path":"resource/Message.md","ref":"./resource/Message.md#push-notification","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Feedback.md","mtime":"2020-07-27T14:05:35.962Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T10:46:46.342Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Anonymous Registration","level":"1.5.6","depth":2,"next":{"title":"QR code authorization login","level":"1.5.7","depth":2,"path":"resource/User_qrlogin.md","ref":"./resource/User_qrlogin.md","articles":[]},"previous":{"title":"Login by Auth2","level":"1.5.5","depth":2,"path":"resource/User_Auth2.md","ref":"./resource/User_Auth2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/User_Tourist.md","mtime":"2020-10-31T10:19:17.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-31T10:46:46.342Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
