@@ -399,7 +399,7 @@
                 <a href="FamilyManager.html#family-management">
             
                     
-                    Operation of Home
+                    Family Management
             
                 </a>
             
@@ -769,6 +769,19 @@
             
                     
                     ZigBee Gateway Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="Device_Get_Dps_History.html">
+            
+                <a href="Device_Get_Dps_History.html">
+            
+                    
+                    Fetch the Log of DP Report
             
                 </a>
             
@@ -2422,6 +2435,53 @@
 </ul>
 <h2 id="scene-task"><a name="scene-task" class="anchor-navigation-ex-anchor" href="#scene-task"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Scene Task</h2>
 <p>A scenario task refers to having one or more devices perform certain operations when the scenario meets the set weather or equipment conditions, corresponding to the <code>SceneTask</code> class. Or turn off and on an automation.</p>
+<p>The main properties of SceneTask are defined as follows</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Sting</td>
+<td>task id </td>
+</tr>
+<tr>
+<td>actionExecutor</td>
+<td>String</td>
+<td>Task type, enum as follows: <br>ruleTrigger: Trigger scene<br>ruleEnable: Enable scene<br>ruleDisable: Disable scene<br>appPushTrigger: Trigger app push<br>mobileVoiceSend: Mobile service<br>smsSend: SMS service<br>deviceGroupDpIssue: Trigger group device<br>irIssue: Trigger first generation IR device<br>dpIssue: Trigger device<br>delay: Delay<br>irIssueVii: Trigger second generation IR device<br>toggle: Trigger toggle task<br>dpStep: Trigger dpStep task</td>
+</tr>
+<tr>
+<td>entityId</td>
+<td>String</td>
+<td>Device id</td>
+</tr>
+<tr>
+<td>entityName</td>
+<td>String</td>
+<td>Device name</td>
+</tr>
+<tr>
+<td>actionDisplayNew</td>
+<td>Map&lt;String, List&lt;String&gt;&gt;</td>
+<td>Task display information</td>
+</tr>
+<tr>
+<td>executorProperty</td>
+<td>Map&lt;String, Object&gt;</td>
+<td>Task executor property</td>
+</tr>
+<tr>
+<td>extraProperty</td>
+<td>Map&lt;String, Object&gt;</td>
+<td>Task extra property</td>
+</tr>
+</tbody>
+</table>
 <h2 id="smart-scene-management"><a name="smart-scene-management" class="anchor-navigation-ex-anchor" href="#smart-scene-management"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Smart Scene Management</h2>
 <h3 id="scene-list-function"><a name="scene-list-function" class="anchor-navigation-ex-anchor" href="#scene-list-function"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. Scene List Function</h3>
 <p><strong>Declaration</strong></p>
@@ -2622,20 +2682,24 @@ The temperature in the conditions is divided into degrees Celsius and Fahrenheit
 <thead>
 <tr>
 <th>Parameter</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>place</td>
+<td>yes</td>
 <td>Corresponding city weather. PlaceFacadeBean objects can be obtained from <a href="#GetCityList">Get City List</a>, <a href="#GetCityInfoByLATLNG">Get cities based on latitude and longitude</a>, <a href="#GetCityByCityId">Get cities based on city id</a> interface. Currently, access to the city interface is only supported China.</td>
 </tr>
 <tr>
 <td>type</td>
+<td>yes</td>
 <td>Condition type.</td>
 </tr>
 <tr>
 <td>rule</td>
+<td>yes</td>
 <td>Conditional rules, see <a href="#rules">rule introduction</a></td>
 </tr>
 </tbody>
@@ -3451,7 +3515,7 @@ taskMap<span class="token punctuation">.</span><span class="token function">put<
 </code></pre>
 <h3 id="4create-delay-type-action"><a name="4create-delay-type-action" class="anchor-navigation-ex-anchor" href="#4create-delay-type-action"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.20. 4.Create Delay Type Action</h3>
 <p><strong>Declaration</strong></p>
-<p>Used to create a delay-type action. SDK version supports maximum delay time of 300 minutes after 3.13.3, and only supports 59 minutes and 59s before 3.13.3</p>
+<p>Used to create a delay-type action. SDK version supports maximum delay time of 300 minutes after 3.13.3, and only supports 59 minutes and 59s before 3.13.3. If the time with hours is used in business, it needs to be converted to minutes as a parameter.</p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">SceneTask</span> <span class="token function">createDelayTask</span><span class="token punctuation">(</span><span class="token keyword">int</span> minute<span class="token punctuation">,</span> <span class="token keyword">int</span> second<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
@@ -4040,7 +4104,7 @@ sceneBean<span class="token punctuation">.</span><span class="token function">se
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Smart Scene","level":"1.13","depth":1,"next":{"title":"Scene Condition","level":"1.13.1","depth":2,"anchor":"#scene-condition","path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md#scene-condition","articles":[]},"previous":{"title":"Group data acquisition","level":"1.12.3.6","depth":3,"anchor":"#group-data-acquisition","path":"resource/Group.md","ref":"./resource/Group.md#group-data-acquisition","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2020-07-27T14:05:38.827Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T08:41:01.743Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Smart Scene","level":"1.13","depth":1,"next":{"title":"Scene Condition","level":"1.13.1","depth":2,"anchor":"#scene-condition","path":"resource/SmartScene_Manager.md","ref":"./resource/SmartScene_Manager.md#scene-condition","articles":[]},"previous":{"title":"Group data acquisition","level":"1.12.3.6","depth":3,"anchor":"#group-data-acquisition","path":"resource/Group.md","ref":"./resource/Group.md#group-data-acquisition","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/SmartScene_Manager.md","mtime":"2020-11-06T09:05:57.764Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-10T01:22:48.826Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
