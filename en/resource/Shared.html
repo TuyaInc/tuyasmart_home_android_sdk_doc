@@ -399,7 +399,7 @@
                 <a href="FamilyManager.html#family-management">
             
                     
-                    Operation of Home
+                    Family Management
             
                 </a>
             
@@ -769,6 +769,19 @@
             
                     
                     ZigBee Gateway Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="Device_Get_Dps_History.html">
+            
+                <a href="Device_Get_Dps_History.html">
+            
+                    
+                    Fetch the Log of DP Report
             
                 </a>
             
@@ -2447,6 +2460,28 @@
 </tr>
 </tbody>
 </table>
+<p>What&apos;s more, the data structure of  <code>ShareIdBean</code>  is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devIds</td>
+<td>List&lt;String&gt;</td>
+<td>share device id list</td>
+</tr>
+<tr>
+<td>meshIds</td>
+<td>List&lt;String&gt;</td>
+<td>share mesh id list</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Example</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">getDeviceShareInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addShare</span><span class="token punctuation">(</span>homeId<span class="token punctuation">,</span> countryCode<span class="token punctuation">,</span> userAccount<span class="token punctuation">,</span>
                 shareIdBean<span class="token punctuation">,</span> autoSharing<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ITuyaResultCallback</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SharedUserInfoBean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -2457,7 +2492,7 @@
                 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="add-shares-new-not-overwriting-old-shares"><a name="add-shares-new-not-overwriting-old-shares" class="anchor-navigation-ex-anchor" href="#add-shares-new-not-overwriting-old-shares"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Add Shares (new, not overwriting old Shares)</h3>
-<p>Sharing multiple devices to users will add the devices to all user shareing</p>
+<p>Sharing multiple devices to users will add the devices to all user sharing. If you have previously shared the device with a specified user, you can obtain the target user id through the following <strong>getting Shared Relationships API</strong>, and then use this method to quickly share the device with the user.</p>
 <p><strong>Declaration</strong></p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">addShareWithMemberId</span><span class="token punctuation">(</span><span class="token keyword">long</span> memberId<span class="token punctuation">,</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> devIds<span class="token punctuation">,</span><span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -2983,7 +3018,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Shared Devices","level":"1.10","depth":1,"next":{"title":"Add Device Share","level":"1.10.1","depth":2,"anchor":"#add-device-share","path":"resource/Shared.md","ref":"./resource/Shared.md#add-device-share","articles":[]},"previous":{"title":"Get Affiliate Device Details","level":"1.9.9","depth":2,"anchor":"#Get-Affiliate-Device-Details","path":"resource/DeviceMultiControl.md","ref":"./resource/DeviceMultiControl.md#Get-Affiliate-Device-Details","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Shared.md","mtime":"2020-07-27T14:05:35.965Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-02T08:41:01.743Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Shared Devices","level":"1.10","depth":1,"next":{"title":"Add Device Share","level":"1.10.1","depth":2,"anchor":"#add-device-share","path":"resource/Shared.md","ref":"./resource/Shared.md#add-device-share","articles":[]},"previous":{"title":"Get Affiliate Device Details","level":"1.9.9","depth":2,"anchor":"#Get-Affiliate-Device-Details","path":"resource/DeviceMultiControl.md","ref":"./resource/DeviceMultiControl.md#Get-Affiliate-Device-Details","articles":[]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/Shared.md","mtime":"2020-11-06T09:05:57.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-13T02:03:40.431Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
