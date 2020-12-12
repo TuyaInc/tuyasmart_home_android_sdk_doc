@@ -2134,7 +2134,20 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.1.10" data-path="ipc/StatusCode.html">
+        <li class="chapter " data-level="3.1.1.10" data-path="ipc/Timeline.html">
+            
+                <a href="ipc/Timeline.html">
+            
+                    
+                    Timeline View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="ipc/StatusCode.html">
             
                 <a href="ipc/StatusCode.html">
             
@@ -2147,7 +2160,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.1.11" data-path="ipc/DocUpdateLog.html">
+        <li class="chapter " data-level="3.1.1.12" data-path="ipc/DocUpdateLog.html">
             
                 <a href="ipc/DocUpdateLog.html">
             
@@ -2877,7 +2890,7 @@ inviting home, adding home and removing home, change of home information, change
 </code></pre>
 <h2 id="update-family-information"><a name="update-family-information" class="anchor-navigation-ex-anchor" href="#update-family-information"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. Update Family Information</h2>
 <p><strong>Declaration</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateHome</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> <span class="token class-name">String</span> geoName<span class="token punctuation">,</span> <span class="token class-name">List</span> rooms<span class="token punctuation">,</span> <span class="token keyword">boolean</span> overWriteRoom<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">updateHome</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">double</span> lon<span class="token punctuation">,</span> <span class="token keyword">double</span> lat<span class="token punctuation">,</span> <span class="token class-name">String</span> geoName<span class="token punctuation">,</span> <span class="token class-name">List</span> rooms<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
 <table>
@@ -2909,17 +2922,13 @@ inviting home, adding home and removing home, change of home information, change
 <td style="text-align:left">Room information</td>
 </tr>
 <tr>
-<td style="text-align:left">overWriteRoom</td>
-<td style="text-align:left">Whether to overwrite the existing room</td>
-</tr>
-<tr>
 <td style="text-align:left">callback</td>
 <td style="text-align:left">Result callback</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Example</strong></p>
-<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateHome</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> lon<span class="token punctuation">,</span> lat<span class="token punctuation">,</span> geoName<span class="token punctuation">,</span> rooms<span class="token punctuation">,</span> overWriteRoom<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-java"><span class="token class-name">TuyaHomeSdk</span><span class="token punctuation">.</span><span class="token function">newHomeInstance</span><span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">updateHome</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> lon<span class="token punctuation">,</span> lat<span class="token punctuation">,</span> geoName<span class="token punctuation">,</span> rooms<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">IResultCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token annotation punctuation">@Override</span>
         <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token class-name">String</span> code<span class="token punctuation">,</span> <span class="token class-name">String</span> error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment">// do something</span>
@@ -3605,6 +3614,7 @@ inviting home, adding home and removing home, change of home information, change
 </code></pre>
 <h2 id="remove-group-or-device-from-room"><a name="remove-group-or-device-from-room" class="anchor-navigation-ex-anchor" href="#remove-group-or-device-from-room"><i class="fa fa-link" aria-hidden="true"></i></a>4.7. Remove Group or Device From Room</h2>
 <p><strong>Declaration</strong></p>
+<p>This method can be used to move devices and groups into or out of the room in batches.</p>
 <pre class="language-"><code class="lang-java"><span class="token keyword">void</span> <span class="token function">moveDevGroupListFromRoom</span><span class="token punctuation">(</span><span class="token class-name">List</span> list<span class="token punctuation">,</span> <span class="token class-name">IResultCallback</span> callback<span class="token punctuation">)</span>
 </code></pre>
 <p><strong>Parameters</strong></p>
@@ -3619,6 +3629,28 @@ inviting home, adding home and removing home, change of home information, change
 <tr>
 <td style="text-align:left">list</td>
 <td style="text-align:left">Group or device</td>
+</tr>
+</tbody>
+</table>
+<p>The data format of <strong>DeviceAndGroupInRoomBean</strong> is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Device or group ID</td>
+</tr>
+<tr>
+<td>type</td>
+<td>int</td>
+<td>Type ( device type returns <strong>6</strong>, group type returns <strong>5</strong> )</td>
 </tr>
 </tbody>
 </table>
@@ -3883,7 +3915,7 @@ units<span class="token punctuation">.</span><span class="token function">put</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Home Relationship Management","level":"1.6.1","depth":2,"next":{"title":"Family Management","level":"1.6.2","depth":2,"anchor":"#family-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#family-management","articles":[]},"previous":{"title":"Home Management","level":"1.6","depth":1,"path":"resource/HomeAbout.md","ref":"./resource/HomeAbout.md","articles":[{"title":"Home Relationship Management","level":"1.6.1","depth":2,"anchor":"#home-relationship-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-relationship-management","articles":[]},{"title":"Family Management","level":"1.6.2","depth":2,"anchor":"#family-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#family-management","articles":[]},{"title":"Home Member Management","level":"1.6.3","depth":2,"anchor":"#family-member-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#family-member-management","articles":[]},{"title":"Room Management","level":"1.6.4","depth":2,"anchor":"#room-information-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#room-information-management","articles":[]},{"title":"Home's Weather","level":"1.6.5","depth":2,"anchor":"#home-weather","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-weather","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/FamilyManager.md","mtime":"2020-11-19T11:20:06.977Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-24T03:33:54.453Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Home Relationship Management","level":"1.6.1","depth":2,"next":{"title":"Family Management","level":"1.6.2","depth":2,"anchor":"#family-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#family-management","articles":[]},"previous":{"title":"Home Management","level":"1.6","depth":1,"path":"resource/HomeAbout.md","ref":"./resource/HomeAbout.md","articles":[{"title":"Home Relationship Management","level":"1.6.1","depth":2,"anchor":"#home-relationship-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-relationship-management","articles":[]},{"title":"Family Management","level":"1.6.2","depth":2,"anchor":"#family-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#family-management","articles":[]},{"title":"Home Member Management","level":"1.6.3","depth":2,"anchor":"#family-member-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#family-member-management","articles":[]},{"title":"Room Management","level":"1.6.4","depth":2,"anchor":"#room-information-management","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#room-information-management","articles":[]},{"title":"Home's Weather","level":"1.6.5","depth":2,"anchor":"#home-weather","path":"resource/FamilyManager.md","ref":"./resource/FamilyManager.md#home-weather","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","gitbook":"*"},"file":{"path":"resource/FamilyManager.md","mtime":"2020-12-03T11:55:25.855Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-12T02:37:24.259Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -3943,10 +3975,6 @@ units<span class="token punctuation">.</span><span class="token function">put</s
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
