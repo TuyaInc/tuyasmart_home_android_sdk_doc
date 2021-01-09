@@ -2613,16 +2613,9 @@
 </code></pre>
 <h3 id="2&#x83B7;&#x53D6;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x5217;&#x8868;"><a name="2&#x83B7;&#x53D6;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#2&#x83B7;&#x53D6;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. 2.&#x83B7;&#x53D6;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x5217;&#x8868;</h3>
 <p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF1A;</p>
-<p>apiName&#xFF1A;m.smart.scale.history.get.list</p>
+<p>apiName&#xFF1A;tuya.m.sweeper.cleaning.history.get</p>
 <p>version&#xFF1A;1.0</p>
 <p>postData:</p>
-<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
-  <span class="token property">&quot;devId&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;xxx&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;dpIds&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;offset&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;limit&quot;</span> <span class="token operator">:</span> <span class="token number">10</span>
-<span class="token punctuation">}</span>
-</code></pre>
 <table>
 <thead>
 <tr>
@@ -2638,11 +2631,6 @@
 <td>&#x8BBE;&#x5907;ID</td>
 </tr>
 <tr>
-<td>dpIds</td>
-<td>String</td>
-<td>&#x5728;&#x6D82;&#x9E26;&#x5E73;&#x53F0;&#x914D;&#x7F6E;&#x7684;&#x6E05;&#x626B;&#x8BB0;&#x5F55;&#x7684;dpId</td>
-</tr>
-<tr>
 <td>offset</td>
 <td>int</td>
 <td>&#x504F;&#x79FB;&#x503C;</td>
@@ -2651,6 +2639,16 @@
 <td>limit</td>
 <td>int</td>
 <td>&#x5206;&#x9875;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>Long</td>
+<td>&#x5F00;&#x59CB;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>endTime</td>
+<td>Long</td>
+<td>&#x7ED3;&#x675F;&#x65F6;&#x95F4;</td>
 </tr>
 </tbody>
 </table>
@@ -2692,6 +2690,11 @@
 <td>&#x5220;&#x9664;&#x8BB0;&#x5F55;&#x65F6;&#x5019;&#x7528;&#x7684; UUID</td>
 </tr>
 <tr>
+<td>dps</td>
+<td>Array</td>
+<td></td>
+</tr>
+<tr>
 <td>15</td>
 <td>String</td>
 <td>&#x5728;&#x6D82;&#x9E26;&#x5E73;&#x53F0;&#x4E0A;&#x914D;&#x7F6E;&#x7684;&#x6E05;&#x626B;&#x8BB0;&#x5F55;&#x7684; dpId</td>
@@ -2702,7 +2705,7 @@
 <td>&#x8BBE;&#x5907;&#x5728; dpId &#x4E0B;&#x4E0A;&#x62A5;&#x7684;&#x503C;&#x3010;2019&#x5E74;06&#x6708;17&#x53F7;&#xFF0C;17&#x70B9;21&#x5206;&#xFF0C;&#x6E05;&#x626B;&#x65F6;&#x95F4;009&#xFF0C;&#x6E05;&#x626B;&#x9762;&#x79EF;007&#x3011;&#x5177;&#x4F53;&#x6570;&#x636E;&#x548C;&#x8BBE;&#x5907;&#x62DF;&#x5B9A;</td>
 </tr>
 <tr>
-<td>total</td>
+<td>totalCount</td>
 <td>int</td>
 <td>&#x603B;&#x5171;&#x6761;&#x6570;</td>
 </tr>
@@ -2806,17 +2809,22 @@
 </table>
 <h3 id="4&#x5220;&#x9664;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF08;&#x6700;&#x591A;100&#x6761;&#xFF09;"><a name="4&#x5220;&#x9664;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF08;&#x6700;&#x591A;100&#x6761;&#xFF09;" class="anchor-navigation-ex-anchor" href="#4&#x5220;&#x9664;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF08;&#x6700;&#x591A;100&#x6761;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. 4.&#x5220;&#x9664;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF08;&#x6700;&#x591A;100&#x6761;&#xFF09;</h3>
 <p>&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#xFF1A;</p>
-<p>apiName&#xFF1A;m.smart.scale.history.delete</p>
+<p>apiName&#xFF1A;tuya.m.sweeper.cleaning.history.delete</p>
 <p>version&#xFF1A;1.0</p>
 <p>postData:</p>
 <pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
   <span class="token property">&quot;devId&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;xxx&quot;</span><span class="token punctuation">,</span>
-  <span class="token property">&quot;uuid&quot;</span><span class="token operator">:</span>&quot;15607600058B81A6C4A0273FDD61091D0B02403848501<span class="token punctuation">,</span>
-  15607600058B81A6C4A0273FDD61091D0B0240384850&quot;&#x3001;
+  <span class="token property">&quot;uuid&quot;</span><span class="token operator">:</span>&quot;<span class="token number">15607600058</span>B<span class="token number">81</span>A<span class="token number">6</span>C<span class="token number">4</span>A<span class="token number">0273</span>FDD<span class="token number">61091</span>D<span class="token number">0</span>B<span class="token number">02403848501</span><span class="token punctuation">,</span>
+  <span class="token number">15607600058</span>B<span class="token number">81</span>A<span class="token number">6</span>C<span class="token number">4</span>A<span class="token number">0273</span>FDD<span class="token number">61091</span>D<span class="token number">0</span>B<span class="token number">0240384850</span>&quot;&#x3001;
 <span class="token punctuation">}</span>
 </code></pre>
 <p><strong>&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x793A;&#x4F8B;</strong></p>
-<pre class="language-"><code class="lang-json"> ture / <span class="token boolean">false</span>
+<pre class="language-"><code class="lang-json"> <span class="token punctuation">{</span>
+     <span class="token property">&quot;result&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+     <span class="token property">&quot;success&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+     <span class="token property">&quot;status&quot;</span><span class="token operator">:</span><span class="token string">&quot;ok&quot;</span><span class="token punctuation">,</span>
+     <span class="token property">&quot;t&quot;</span><span class="token operator">:</span><span class="token number">1557740732829</span>
+ <span class="token punctuation">}</span>
 </code></pre>
 <h2 id="&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x901A;&#x9053;"><a name="&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x901A;&#x9053;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x65F6;&#x6570;&#x636E;&#x901A;&#x9053;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5B9E;&#x65F6;&#x6570;&#x636E;&#x901A;&#x9053;</h2>
 <h3 id="&#x529F;&#x80FD;&#x7B80;&#x4ECB;"><a name="&#x529F;&#x80FD;&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x529F;&#x80FD;&#x7B80;&#x4ECB;</h3>
@@ -2891,7 +2899,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"陀螺仪和视觉扫地机","level":"3.1.2.1","depth":3,"next":{"title":"激光扫地机","level":"3.1.2.2","depth":3,"path":"resource/sweeper/Laser_Sweeper.md","ref":"./resource/sweeper/Laser_Sweeper.md","articles":[]},"previous":{"title":"扫地机 SDK","level":"3.1.2","depth":2,"path":"resource/sweeper/Overview.md","ref":"./resource/sweeper/Overview.md","articles":[{"title":"陀螺仪和视觉扫地机","level":"3.1.2.1","depth":3,"path":"resource/sweeper/Gyro_Sweeper.md","ref":"./resource/sweeper/Gyro_Sweeper.md","articles":[]},{"title":"激光扫地机","level":"3.1.2.2","depth":3,"path":"resource/sweeper/Laser_Sweeper.md","ref":"./resource/sweeper/Laser_Sweeper.md","articles":[]},{"title":"语音包下载","level":"3.1.2.3","depth":3,"path":"resource/sweeper/Voice_Download.md","ref":"./resource/sweeper/Voice_Download.md","articles":[]},{"title":"名词解释","level":"3.1.2.4","depth":3,"path":"resource/sweeper/Word_Introduction.md","ref":"./resource/sweeper/Word_Introduction.md","articles":[]},{"title":"更新日志","level":"3.1.2.5","depth":3,"path":"resource/sweeper/Update_Log.md","ref":"./resource/sweeper/Update_Log.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/sweeper/Gyro_Sweeper.md","mtime":"2020-07-27T14:05:38.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-31T08:07:52.721Z"},"basePath":"../..","book":{"language":"zh-hans"}});
+            gitbook.page.hasChanged({"page":{"title":"陀螺仪和视觉扫地机","level":"3.1.2.1","depth":3,"next":{"title":"激光扫地机","level":"3.1.2.2","depth":3,"path":"resource/sweeper/Laser_Sweeper.md","ref":"./resource/sweeper/Laser_Sweeper.md","articles":[]},"previous":{"title":"扫地机 SDK","level":"3.1.2","depth":2,"path":"resource/sweeper/Overview.md","ref":"./resource/sweeper/Overview.md","articles":[{"title":"陀螺仪和视觉扫地机","level":"3.1.2.1","depth":3,"path":"resource/sweeper/Gyro_Sweeper.md","ref":"./resource/sweeper/Gyro_Sweeper.md","articles":[]},{"title":"激光扫地机","level":"3.1.2.2","depth":3,"path":"resource/sweeper/Laser_Sweeper.md","ref":"./resource/sweeper/Laser_Sweeper.md","articles":[]},{"title":"语音包下载","level":"3.1.2.3","depth":3,"path":"resource/sweeper/Voice_Download.md","ref":"./resource/sweeper/Voice_Download.md","articles":[]},{"title":"名词解释","level":"3.1.2.4","depth":3,"path":"resource/sweeper/Word_Introduction.md","ref":"./resource/sweeper/Word_Introduction.md","articles":[]},{"title":"更新日志","level":"3.1.2.5","depth":3,"path":"resource/sweeper/Update_Log.md","ref":"./resource/sweeper/Update_Log.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["js-sequence-diagram-full@>=0.3.1","prism","-highlight","anchors","splitter","github","github-buttons","anchor-navigation-ex","flexible-alerts","expandable-chapters-small","favicon","ga","pageview-count","gtalk","language-picker","hide-element","sf-score","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"java":"java"},"ignore":["sequence"]},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/TuyaInc/tuyasmart_home_android_sdk"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"js-sequence-diagram-full":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"gtalk":{"clientID":"1e739f11784288e253ba","clientSecret":"08d9a7ebeec2f5dbb9965c2521f66daf34eddd59","repo":"tuyasmart_home_android_sdk","owner":"TuyaInc","admin":["mimimumu","TuyaInc"],"labels":[],"distractionFreeMode":true},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"zh-hans/resource/images/bitbug_favicon.ico"},"pageview-count":{},"github-buttons":{"buttons":[{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"star","size":"small"},{"user":"TuyaInc","repo":"tuyasmart_home_android_sdk","type":"watch","size":"small"},{"user":"TuyaInc","type":"follow","size":"small","count":true}]},"sf-score":{},"expandable-chapters-small":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":{"zh-hans":"注意","en":"Attention"}},"note":{"className":"info","icon":"fa fa-info-circle","label":{"zh-hans":"提示","en":"Note"}},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":{"zh-hans":"Tips","en":"Tip"}},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":{"zh-hans":"警告","en":"Warning"}}},"ga":{"configuration":"auto","token":"UA-161421048-1"},"versions":{"options":[{"text":"Version 3.19.x"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.17.6","text":"Version 3.17.6"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.14.5","text":"Version 3.14.5"},{"value":"https://github.com/TuyaInc/tuyasmart_home_android_sdk_doc/tree/3.13.0","text":"Version 3.13.0"}]},"sharing":{"facebook":true,"twitter":true,"google":true,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"resource/sweeper/Gyro_Sweeper.md","mtime":"2021-01-09T09:07:43.366Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-09T09:40:13.655Z"},"basePath":"../..","book":{"language":"zh-hans"}});
         });
     </script>
 </div>
@@ -2951,10 +2959,6 @@
     
         
         <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
